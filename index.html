@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>David Konstantinov — Telegram bots &amp; automations</title>
-<meta name="description" content="Telegram bots and business automations, turnkey. Videos and live demos of finished work.">
+<title>Davyd Konstantinov — remote support, testing and AI automation</title>
+<meta name="description" content="Looking for a remote job: customer and technical support in 4 languages, manual testing, AI automation. Projects on video and CVs in PDF.">
 <style>
 /* unslop pass 2026-11-09 (unslop by @heydamir, CC BY 4.0): ink-tinted ramp, one accent, Telegram chat as the one bright moment */
 :root{
@@ -83,14 +83,11 @@ header{display:flex;justify-content:space-between;align-items:center;height:64px
 .steps li:last-child{padding-bottom:0}
 .steps h3{margin-bottom:4px}
 .steps p{color:var(--sec);max-width:56ch}
-/* packages */
-.pk{display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(196px,1fr))}
-.price{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:24px;display:grid;gap:8px;align-content:start}
-.price .n{font-size:2rem;font-weight:500;letter-spacing:-.02em;line-height:1;font-variant-numeric:tabular-nums;margin-top:8px}
-.price .n small{font-size:.9375rem;font-weight:400;letter-spacing:0;color:var(--mute);margin-right:6px}
-.price .t{font:400 .8125rem/1.4 var(--mono);color:var(--mute)}
-.price p{color:var(--sec);font-size:.9375rem}
-.fine{margin-top:20px;color:var(--mute);font-size:.875rem}
+/* cv links */
+.cvs{display:grid;gap:12px}
+.cvl{display:flex;justify-content:space-between;align-items:center;gap:16px;min-height:56px;padding:0 20px;background:var(--card);border:1px solid var(--line);border-radius:12px;text-decoration:none;transition:background-color .15s var(--ease),transform .15s var(--ease)}
+.cvl:hover{background:var(--raised)}.cvl:active{transform:scale(.98)}
+.cvl b{font-weight:600}.cvl span{font:400 .8125rem/1 var(--mono);color:var(--accent)}
 /* extra blocks */
 .band{background:var(--raised);border-radius:20px;padding:32px 24px}
 .band h2{margin-bottom:12px}.band p{max-width:52ch;color:var(--sec);font-size:1.0625rem}
@@ -111,7 +108,7 @@ footer{padding:0 0 40px;color:var(--mute);font-size:.8125rem}
  .hero{grid-template-columns:1.15fr 1fr;align-items:center;gap:64px;padding:64px 0 80px}
  .chat{justify-self:end}
  .cards{grid-template-columns:1fr 1fr}
- .trio{grid-template-columns:repeat(3,1fr)}
+ .trio,.cvs{grid-template-columns:repeat(3,1fr)}
  .band{padding:48px}
  .contact{padding:56px}
 }
@@ -121,7 +118,7 @@ footer{padding:0 0 40px;color:var(--mute);font-size:.8125rem}
 <body>
 <div class="wrap">
 <header>
-  <span class="name">David Konstantinov</span>
+  <span class="name">Davyd Konstantinov</span>
   <div class="lang" role="group" aria-label="Language">
     <button type="button" data-set="sk" aria-pressed="true">SK</button>
     <button type="button" data-set="en" aria-pressed="false">EN</button>
@@ -135,8 +132,8 @@ footer{padding:0 0 40px;color:var(--mute);font-size:.8125rem}
     <p class="lead" data-i="lead"></p>
     <ul class="gets"><li data-i="g1"></li><li data-i="g2"></li><li data-i="g3"></li></ul>
     <div class="btns">
-      <a class="btn main" href="https://t.me/+421910392871" rel="noopener noreferrer" data-i="tg"></a>
-      <a class="btn" href="mailto:davidcoolld@gmail.com" data-i="mail"></a>
+      <a class="btn main" href="mailto:davidcoolld@gmail.com" data-i="mail"></a>
+      <a class="btn" href="#cv" data-i="cvb"></a>
     </div>
   </div>
   <div class="chat" aria-hidden="true">
@@ -150,6 +147,15 @@ footer{padding:0 0 40px;color:var(--mute);font-size:.8125rem}
     <div class="note" data-i="cn"></div>
   </div>
 </div>
+
+<section id="roles">
+  <h2 data-i="rh"></h2>
+  <div class="trio">
+    <div class="box"><h3 data-i="r1t"></h3><p data-i="r1p"></p></div>
+    <div class="box"><h3 data-i="r2t"></h3><p data-i="r2p"></p></div>
+    <div class="box"><h3 data-i="r3t"></h3><p data-i="r3p"></p></div>
+  </div>
+</section>
 
 <section id="work">
   <h2 data-i="work"></h2>
@@ -168,25 +174,8 @@ footer{padding:0 0 40px;color:var(--mute);font-size:.8125rem}
   </div>
 </section>
 
-<section id="packages">
-  <h2 data-i="pkh"></h2>
-  <div class="pk">
-    <div class="price"><h3 data-i="p1t"></h3><div class="n"><small data-i="from"></small>80 €</div><div class="t" data-i="p1d"></div><p data-i="p1p"></p></div>
-    <div class="price"><h3 data-i="p2t"></h3><div class="n"><small data-i="from"></small>120 €</div><div class="t" data-i="p2d"></div><p data-i="p2p"></p></div>
-    <div class="price"><h3 data-i="p3t"></h3><div class="n"><small data-i="from"></small>200 €</div><div class="t" data-i="p3d"></div><p data-i="p3p"></p></div>
-    <div class="price"><h3 data-i="p4t"></h3><div class="n"><small data-i="from"></small>400 €</div><div class="t" data-i="p4d"></div><p data-i="p4p"></p></div>
-    <div class="price"><h3 data-i="p5t"></h3><div class="n">20 €<small data-i="mo" style="margin:0 0 0 4px"></small></div><div class="t" data-i="p5d"></div><p data-i="p5p"></p></div>
-  </div>
-  <p class="fine" data-i="pkfine"></p>
-</section>
-
 <section>
-  <div class="band"><h2 data-i="prh"></h2><p data-i="prp"></p></div>
-</section>
-
-<section id="handover">
-  <h2 data-i="hoh"></h2>
-  <ul class="gets"><li data-i="ho1"></li><li data-i="ho2"></li><li data-i="ho3"></li><li data-i="ho4"></li><li data-i="ho5"></li></ul>
+  <div class="band"><h2 data-i="lgh"></h2><p data-i="lgp"></p></div>
 </section>
 
 <section id="process">
@@ -199,11 +188,12 @@ footer{padding:0 0 40px;color:var(--mute);font-size:.8125rem}
   </ol>
 </section>
 
-<section>
-  <div class="trio">
-    <div class="box"><h3 data-i="eut"></h3><p data-i="eup"></p></div>
-    <div class="box"><h3 data-i="fct"></h3><p data-i="fcp"></p></div>
-    <div class="box"><h3 data-i="ait"></h3><p data-i="aip"></p></div>
+<section id="cv">
+  <h2 data-i="cvh"></h2>
+  <div class="cvs">
+    <a class="cvl" data-cv="Support" target="_blank" rel="noopener"><b data-i="r1t"></b><span>PDF</span></a>
+    <a class="cvl" data-cv="QA" target="_blank" rel="noopener"><b data-i="r2t"></b><span>PDF</span></a>
+    <a class="cvl" data-cv="Automation" target="_blank" rel="noopener"><b data-i="r3t"></b><span>PDF</span></a>
   </div>
 </section>
 
@@ -212,129 +202,109 @@ footer{padding:0 0 40px;color:var(--mute);font-size:.8125rem}
     <h2 data-i="ch"></h2>
     <p data-i="cp"></p>
     <div class="btns">
-      <a class="btn main" href="https://t.me/+421910392871" rel="noopener noreferrer" data-i="tg"></a>
-      <a class="btn" href="mailto:davidcoolld@gmail.com">davidcoolld@gmail.com</a>
+      <a class="btn main" href="mailto:davidcoolld@gmail.com">davidcoolld@gmail.com</a>
+      <a class="btn" href="https://t.me/+421910392871" rel="noopener noreferrer" data-i="tg"></a>
     </div>
   </div>
 </section>
 </main>
-<footer>© David Konstantinov</footer>
+<footer>© Davyd Konstantinov</footer>
 </div>
 <script>
 const T={
 sk:{
-title:"David Konstantinov — Telegram boty a automatizácie na kľúč",
-desc:"Telegram boty a automatizácie pre malé firmy na kľúč. Videá hotových riešení, pevné ceny, dáta v EÚ.",
-h1:"Telegram boty a automatizácie na kľúč",
-lead:"Poviete, čo potrebujete. Ja to postavím, spustím a ukážem, ako to funguje.",
-g1:"Menej rutiny: hodiny ručnej práce sa vám vrátia",
-g2:"Žiadna stratená požiadavka: každá správa skončí v tabuľke alebo v Telegrame",
-g3:"Objednávanie klientov 24/7, aj keď spíte",
-tg:"Napísať na Telegram",mail:"Napísať e-mail",
+title:"Davyd Konstantinov — podpora, testovanie a AI automatizácia (remote)",
+desc:"Hľadám prácu z domu: zákaznícka a technická podpora v 4 jazykoch, manuálne testovanie, AI automatizácia. Projekty na videu a životopisy v PDF.",
+h1:"Podpora, testovanie a AI automatizácia na diaľku",
+lead:"Hľadám prácu z domu na plný alebo čiastočný úväzok. Hovorím štyrmi jazykmi a to, čo postavím, aj sám otestujem.",
+g1:"Ukrajinčina, ruština, angličtina a slovenčina",
+g2:"Chybu zopakujem, nájdem príčinu a opíšem ju tak, aby ju vývojár hneď opravil",
+g3:"S AI stavám Telegram boty a automatizácie, ktoré fungujú a sú na videu",
+mail:"Napísať e-mail",cvb:"Životopis (PDF)",tg:"Telegram",
 c0:"Rezervačný bot",c1:"Ahoj! Strih zajtra po piatej?",c2:"Voľné: 17:00, 18:30, 19:00. Ktorý termín?",c3:"18:30",c4:"Zarezervované. Pripomeniem 2 hodiny vopred.",
-cn:"Ukážkový dialóg, nie skutočná konverzácia",
-work:"Práce",soon:"Video už čoskoro",demo:"Vyskúšať živé demo v Telegrame",
-w1t:"Rezervačný bot pre salóny",w1p:"Zákazník len napíše „máte voľno v piatok po 17?“ — AI asistent ponúkne voľné časy a objedná ho (alebo tlačidlá). Majiteľ potvrdí jedným klikom, bot pripomenie návštevu. 4 jazyky.",
+cn:"Ukážka z môjho projektu, nie skutočná konverzácia",
+rh:"Na aké pozície sa hlásim",
+r1t:"Zákaznícka a technická podpora",r1p:"Chat, e-mail a telefón v štyroch jazykoch. Trpezlivo zistím, čo sa stalo, a riešenie vysvetlím jednoducho.",
+r2t:"Tester / QA junior",r2p:"Manuálne testovanie botov, formulárov a prepojení. Hlásenia chýb s krokmi, očakávaným výsledkom a logmi.",
+r3t:"AI automatizácia",r3p:"Telegram boty, n8n workflowy a Python skripty, ktoré berú rutinu z rúk tímu. AI je môj hlavný nástroj.",
+work:"Moje projekty",soon:"Video už čoskoro",demo:"Vyskúšať živé demo v Telegrame",
+w1t:"Rezervačný bot pre salón",w1p:"Zákazník napíše „máte voľno v piatok po 17?“ a AI asistent ponúkne voľné časy a zapíše ho. Majiteľ potvrdí jedným klikom, bot pripomenie návštevu. 4 jazyky.",
 w2t:"Monitor inzerátov a cien",w2p:"Sleduje bazos.sk, nové inzeráty ukladá do Google Sheets a hneď pošle upozornenie do Telegramu.",
 w3t:"Telegram e-shop",w3p:"Katalóg, košík a objednávka priamo v chate.",
-w4t:"Automatizácia dopytov v n8n",w4p:"Dopyt z webu alebo formulára sa automaticky uloží do tabuľky a vám príde správa.",
-w5p:"Ovládanie hudby v počítači z telefónu: pauza, ďalšia skladba, hlasitosť.",
-pkh:"Balíky",from:"od",mo:"/ mes.",
-p1t:"Dopyty z webu do Telegramu/WhatsAppu",p1d:"1–2 dni",p1p:"Každý dopyt z formulára príde vám do správ a zároveň do tabuľky.",
-p2t:"Monitoring webov a inzerátov",p2d:"2–3 dni",p2p:"Sleduje stránky a inzeráty, upozorní vás a ukladá do tabuľky.",
-p3t:"Rezervačný bot (salón, servis, doučovanie)",p3d:"3–5 dní",p3p:"Klienti sa objednávajú sami, vy vidíte rozvrh, bot pripomína termíny.",
-p4t:"AI asistent pre zákazníkov",p4d:"5–7 dní",p4p:"Odpovedá vlastnými slovami podľa vášho cenníka a FAQ a zapíše zákazníka.",
-p5t:"Starostlivosť po 30 dňoch",p5d:"po 30 dňoch zadarmo",p5p:"Opravy, drobné úpravy a dohľad nad chodom.",
-pkfine:"Ceny sú od. Presnú cenu a termín poviem pred začiatkom práce, bez prekvapení.",
-prh:"Najprv prototyp, potom platba",prp:"Pri zaujímavej zákazke do 1–2 hodín urobím miniprototyp na vašich údajoch a pošlem krátke video. Platíte, až keď vidíte, že to funguje.",
-hoh:"Ako odovzdávam prácu",
-ho1:"Videonávod na 2 minúty",ho2:"Stránka „čo to robí a ako to reštartovať“",ho3:"30 dní bezplatných opráv",ho4:"Upozornenie majiteľovi, ak niečo spadne",ho5:"Všetko na vašich účtoch, bez viazanosti na mňa",
+w4t:"Dopyty z webu v n8n",w4p:"Dopyt z formulára sa uloží do tabuľky a majiteľovi príde správa do Telegramu. Webhook je chránený tajnou hlavičkou.",
+w5p:"Ovládanie hudby a hlasitosti v počítači z hodiniek alebo telefónu cez domácu sieť.",
+lgh:"Jazyky",lgp:"Ukrajinčina a ruština sú moje materinské jazyky. Angličtina na úrovni B2, písomne sa dohovorím isto. Slovenčine dobre rozumiem a bežne sa dohovorím.",
 prch:"Ako pracujem",
-s1t:"Zadanie",s1p:"Poviete, čo potrebujete. Opýtam sa na detaily a pred začiatkom poviem termín a cenu.",
-s2t:"Stavba a ukážka",s2p:"Urobím funkčnú verziu a vy si ju sami vyskúšate v Telegrame.",
-s3t:"Spustenie",s3p:"Nasadím ju, pripojím tabuľky a služby a vysvetlím, ako s tým pracovať.",
-s4t:"Podpora",s4p:"Po spustení odpovedám na otázky a robím úpravy podľa dohody.",
-eut:"EÚ a GDPR",eup:"Dáta ostávajú v EÚ a spracúvam ich poctivo, len na účel, na ktorý ich potrebujete.",
-fct:"Prví klienti",fcp:"Prvé 2–3 zákazky robím so zľavou výmenou za recenziu a súhlas ukázať video.",
-ait:"Úprimne o AI",aip:"AI mi prácu urýchľuje, každé rozhodnutie však kontrolujem a riešenie potom sprevádzam ja.",
-ch:"Poďme sa porozprávať o vašej úlohe",cp:"Napíšte pár riadkov o tom, čo chcete zautomatizovať. Odpoviem a poviem, ako dlho to potrvá."},
+s1t:"Pochopím úlohu",s1p:"Opýtam sa, čo presne má fungovať a pre koho, a zapíšem to ako jasné zadanie.",
+s2t:"Postavím s AI",s2p:"Riešenie robím s AI asistentmi (Claude Code). Rozhodnutia a výsledok kontrolujem sám.",
+s3t:"Otestujem",s3p:"Bežný postup, nesprávny vstup, duplicity, reštart a výpadky. Až potom je hotovo.",
+s4t:"Odovzdám a opíšem",s4p:"Krátky návod, čo to robí a ako to reštartovať, aby to zvládol aj niekto iný.",
+cvh:"Životopisy",
+ch:"Hľadám prácu na diaľku",cp:"Podpora, testovanie alebo AI automatizácia, plný alebo čiastočný úväzok. Mám právo pracovať na Slovensku. Napíšte, rád ukážem demo naživo."},
 en:{
-title:"David Konstantinov — Telegram bots & automations",
-desc:"Turnkey Telegram bots and automations for small businesses. Videos of finished work, fixed prices, data in the EU.",
-h1:"Telegram bots and automations, turnkey",
-lead:"You describe the task. I build it, launch it and show you how it works.",
-g1:"Saved hours: routine work done by the bot, not by you",
-g2:"No lost leads: every request lands in a sheet or in Telegram",
-g3:"Customers can book 24/7, even while you sleep",
-tg:"Message on Telegram",mail:"Send an email",
+title:"Davyd Konstantinov — support, testing and AI automation (remote)",
+desc:"Looking for a remote job: customer and technical support in 4 languages, manual testing, AI automation. Projects on video and CVs in PDF.",
+h1:"Remote support, testing and AI automation",
+lead:"Looking for a remote job, full-time or part-time. I speak four languages and I test what I build myself.",
+g1:"Ukrainian, Russian, English and Slovak",
+g2:"I reproduce a bug, find the cause and describe it so a developer can fix it right away",
+g3:"I build Telegram bots and automations with AI; they work and are shown on video",
+mail:"Send an email",cvb:"CV (PDF)",tg:"Telegram",
 c0:"Booking bot",c1:"Hi! Haircut tomorrow after 5pm?",c2:"Free: 17:00, 18:30, 19:00. Which one?",c3:"18:30",c4:"Booked. I'll remind you 2 hours before.",
-cn:"Illustrative dialogue, not a real chat",
-work:"Work",soon:"Video coming soon",demo:"Try the live demo in Telegram",
-w1t:"Booking bot for salons",w1p:"Customers just type “any slot on Friday after 5?” — the AI assistant offers free times and books them (or use buttons). The owner confirms in one tap, the bot sends a reminder. 4 languages.",
+cn:"From one of my projects, not a real chat",
+rh:"Roles I'm applying for",
+r1t:"Customer & technical support",r1p:"Chat, email and phone in four languages. I patiently find out what happened and explain the fix in plain words.",
+r2t:"Junior QA tester",r2p:"Manual testing of bots, forms and integrations. Bug reports with steps, expected result and logs.",
+r3t:"AI automation",r3p:"Telegram bots, n8n workflows and Python scripts that take routine work off a team. AI is my main tool.",
+work:"My projects",soon:"Video coming soon",demo:"Try the live demo in Telegram",
+w1t:"Booking bot for a salon",w1p:"A customer types “any slot on Friday after 5?” and the AI assistant offers free times and books it. The owner confirms in one tap, the bot sends a reminder. 4 languages.",
 w2t:"Listing and price monitor",w2p:"Watches bazos.sk, saves new listings to Google Sheets and sends an instant Telegram alert.",
 w3t:"Telegram shop bot",w3p:"Catalog, cart and checkout right inside the chat.",
-w4t:"Lead automation in n8n",w4p:"A lead from your site or form goes into a sheet automatically and you get a message.",
-w5p:"Control the music on your PC from your phone: pause, next track, volume.",
-pkh:"Packages",from:"from",mo:"/ month",
-p1t:"Website leads → Telegram/WhatsApp + sheet",p1d:"1–2 days",p1p:"Every form request reaches you as a message and is saved to a spreadsheet.",
-p2t:"Site and listing monitoring",p2d:"2–3 days",p2p:"Watches pages and listings, alerts you and logs everything to a sheet.",
-p3t:"Booking bot (salon, service, tutor)",p3d:"3–5 days",p3p:"Customers book themselves, you see the schedule, the bot sends reminders.",
-p4t:"AI assistant for customers",p4d:"5–7 days",p4p:"Answers in its own words from your price list and FAQ, and takes the booking.",
-p5t:"Support after the free 30 days",p5d:"after 30 free days",p5p:"Fixes, small changes and keeping an eye on it.",
-pkfine:"Prices are starting prices. I name the exact cost and deadline before I start, no surprises.",
-prh:"Prototype first, payment after",prp:"For a project that fits, I build a mini-prototype on your data within 1–2 hours and send a short video. You pay only once you've seen it work.",
-hoh:"How I hand over the work",
-ho1:"A 2-minute video guide",ho2:"A “what it does and how to restart it” page",ho3:"30 days of free fixes",ho4:"An alert to the owner if something goes down",ho5:"Everything on your own accounts, no lock-in to me",
+w4t:"Website leads in n8n",w4p:"A form request is saved to a sheet and the owner gets a Telegram message. The webhook is protected by a secret header.",
+w5p:"Control music and volume on a PC from a watch or phone over the home network.",
+lgh:"Languages",lgp:"Ukrainian and Russian are my native languages. English at B2, confident in writing. I understand Slovak well and handle everyday conversation.",
 prch:"How I work",
-s1t:"Brief",s1p:"You tell me what you need. I ask clarifying questions and name the deadline and price before I start.",
-s2t:"Build and preview",s2p:"I build a working version and you try it yourself in Telegram.",
-s3t:"Launch",s3p:"I deploy it, connect your sheets and services, and explain how to use everything.",
-s4t:"Support",s4p:"After launch I answer questions and make changes as agreed.",
-eut:"EU and GDPR",eup:"Your data stays in the EU and is handled fairly, only for the purpose you need.",
-fct:"First clients",fcp:"My first 2–3 projects come at a discount in exchange for a review and permission to show the video.",
-ait:"Honest about AI",aip:"AI speeds up my work, but I check every decision and I support the result myself.",
-ch:"Let's talk about your task",cp:"Send a few lines about what you want to automate. I'll reply with a plan and a timeline."},
+s1t:"Understand the task",s1p:"I ask what exactly has to work and for whom, and write it down as a clear brief.",
+s2t:"Build with AI",s2p:"I build with AI assistants (Claude Code). I check the decisions and the result myself.",
+s3t:"Test",s3p:"Normal path, wrong input, duplicates, restarts and outages. Only then is it done.",
+s4t:"Hand over and document",s4p:"A short guide on what it does and how to restart it, so someone else can run it too.",
+cvh:"CVs",
+ch:"Looking for a remote job",cp:"Support, testing or AI automation, full-time or part-time. I have the right to work in Slovakia. Write to me, I'm happy to show a live demo."},
 ru:{
-title:"David Konstantinov — Telegram-боты и автоматизации",
-desc:"Telegram-боты и автоматизации для малого бизнеса под ключ. Видео готовых работ, фиксированные цены, данные в ЕС.",
-h1:"Telegram-боты и автоматизации под ключ",
-lead:"Вы описываете задачу — я делаю, запускаю и объясняю, как это работает.",
-g1:"Меньше рутины: часы, которые уходили на ручную работу, возвращаются вам",
-g2:"Ни одной потерянной заявки: каждое обращение попадает в таблицу или в Telegram",
-g3:"Запись клиентов 24/7, даже когда вы спите",
-tg:"Написать в Telegram",mail:"Написать на почту",
+title:"Davyd Konstantinov — поддержка, тестирование и AI-автоматизация (удалённо)",
+desc:"Ищу удалённую работу: поддержка клиентов и техподдержка на 4 языках, ручное тестирование, AI-автоматизация. Проекты на видео и резюме в PDF.",
+h1:"Поддержка, тестирование и AI-автоматизация удалённо",
+lead:"Ищу удалённую работу, полный или неполный день. Говорю на четырёх языках и сам тестирую то, что делаю.",
+g1:"Украинский, русский, английский и словацкий",
+g2:"Воспроизвожу ошибку, нахожу причину и описываю так, чтобы разработчик сразу исправил",
+g3:"С AI делаю Telegram-боты и автоматизации, которые работают и показаны на видео",
+mail:"Написать на почту",cvb:"Резюме (PDF)",tg:"Telegram",
 c0:"Бот записи",c1:"Привет! Стрижка завтра после 17:00?",c2:"Свободно: 17:00, 18:30, 19:00. Какое время?",c3:"18:30",c4:"Записал. Напомню за 2 часа.",
-cn:"Пример диалога, не реальная переписка",
-work:"Работы",soon:"Видео скоро будет",demo:"Открыть живое демо в Telegram",
-w1t:"Бот записи для салонов",w1p:"Клиент просто пишет «есть окно в пятницу после 5?» — ИИ-ассистент предлагает свободное время и записывает (или кнопками). Владелец подтверждает в один клик, бот напоминает о визите. 4 языка.",
+cn:"Пример из моего проекта, не реальная переписка",
+rh:"На какие позиции я откликаюсь",
+r1t:"Поддержка клиентов и техподдержка",r1p:"Чат, почта и телефон на четырёх языках. Спокойно выясню, что случилось, и объясню решение простыми словами.",
+r2t:"Тестировщик (junior QA)",r2p:"Ручное тестирование ботов, форм и интеграций. Баг-репорты с шагами, ожидаемым результатом и логами.",
+r3t:"AI-автоматизация",r3p:"Telegram-боты, сценарии n8n и Python-скрипты, которые снимают с команды рутину. AI — мой основной инструмент.",
+work:"Мои проекты",soon:"Видео скоро будет",demo:"Открыть живое демо в Telegram",
+w1t:"Бот записи для салона",w1p:"Клиент пишет «есть окно в пятницу после 5?», ИИ-ассистент предлагает свободное время и записывает. Владелец подтверждает в один клик, бот напоминает о визите. 4 языка.",
 w2t:"Монитор объявлений и цен",w2p:"Следит за bazos.sk, складывает новые объявления в Google Sheets и сразу присылает уведомление в Telegram.",
 w3t:"Telegram-магазин",w3p:"Каталог, корзина и оформление заказа прямо в чате.",
-w4t:"Автоматизация заявок в n8n",w4p:"Заявка с сайта или формы автоматически попадает в таблицу, а вам приходит сообщение.",
-w5p:"Управление музыкой на компьютере с телефона: пауза, следующий трек, громкость.",
-pkh:"Пакеты",from:"от",mo:"/ мес.",
-p1t:"Заявки с сайта → Telegram/WhatsApp + таблица",p1d:"1–2 дня",p1p:"Каждая заявка из формы приходит вам сообщением и сохраняется в таблицу.",
-p2t:"Мониторинг сайтов и объявлений",p2d:"2–3 дня",p2p:"Следит за страницами и объявлениями, шлёт уведомления и ведёт таблицу.",
-p3t:"Бот записи (салон, сервис, репетитор)",p3d:"3–5 дней",p3p:"Клиенты записываются сами, вы видите расписание, бот напоминает о визите.",
-p4t:"ИИ-ассистент для клиентов",p4d:"5–7 дней",p4p:"Отвечает своими словами по вашему прайсу и FAQ и записывает клиента.",
-p5t:"Сопровождение после 30 бесплатных дней",p5d:"после 30 бесплатных дней",p5p:"Исправления, мелкие правки и присмотр за работой.",
-pkfine:"Цены — «от». Точную стоимость и срок называю до начала работы, без сюрпризов.",
-prh:"Сначала прототип, потом оплата",prp:"Если задача интересная, за 1–2 часа делаю мини-прототип на ваших данных и присылаю короткое видео. Платите, только когда увидели, что это работает.",
-hoh:"Как я сдаю работу",
-ho1:"Видеоинструкция на 2 минуты",ho2:"Страница «что делает и как перезапустить»",ho3:"30 дней бесплатных исправлений",ho4:"Алерт владельцу, если что-то упало",ho5:"Всё на ваших аккаунтах, без привязки ко мне",
+w4t:"Заявки с сайта в n8n",w4p:"Заявка из формы сохраняется в таблицу, а владельцу приходит сообщение в Telegram. Вебхук защищён секретным заголовком.",
+w5p:"Управление музыкой и громкостью на компьютере с часов или телефона по домашней сети.",
+lgh:"Языки",lgp:"Украинский и русский — родные. Английский B2, уверенно пишу. Словацкий хорошо понимаю и спокойно общаюсь в быту.",
 prch:"Как я работаю",
-s1t:"Бриф",s1p:"Вы рассказываете, что нужно. Я задаю уточняющие вопросы и называю срок и цену до начала работы.",
-s2t:"Сборка и показ",s2p:"Делаю рабочую версию и показываю её в Telegram, чтобы вы сами всё попробовали.",
-s3t:"Запуск",s3p:"Разворачиваю на сервере, подключаю таблицы и сервисы, объясняю, как всем пользоваться.",
-s4t:"Поддержка",s4p:"После запуска отвечаю на вопросы и вношу правки по договорённости.",
-eut:"ЕС и GDPR",eup:"Данные остаются в ЕС и обрабатываются честно, только для нужной вам цели.",
-fct:"Первые клиенты",fcp:"Первые 2–3 проекта делаю со скидкой в обмен на отзыв и разрешение показать видео.",
-ait:"Честно про ИИ",aip:"ИИ ускоряет работу, каждое решение проверяю и сопровождаю.",
-ch:"Давайте обсудим вашу задачу",cp:"Напишите пару строк о том, что хотите автоматизировать. Отвечу и скажу, сколько это займёт."}
+s1t:"Разбираюсь в задаче",s1p:"Спрашиваю, что именно должно работать и для кого, и записываю это как понятное ТЗ.",
+s2t:"Делаю с AI",s2p:"Собираю решение с AI-ассистентами (Claude Code). Решения и результат проверяю сам.",
+s3t:"Тестирую",s3p:"Обычный путь, неверный ввод, дубли, перезапуск и сбои. Только потом — готово.",
+s4t:"Сдаю и описываю",s4p:"Короткая инструкция: что делает и как перезапустить, чтобы справился и другой человек.",
+cvh:"Резюме",
+ch:"Ищу удалённую работу",cp:"Поддержка, тестирование или AI-автоматизация, полный или неполный день. Имею право работать в Словакии. Пишите, с радостью покажу демо вживую."}
 };
 const els=[...document.querySelectorAll('[data-i]')];
 function setLang(l){
   if(!Object.hasOwn(T,l))l='sk';
   els.forEach(e=>e.textContent=T[l][e.dataset.i]);
+  document.querySelectorAll('[data-cv]').forEach(a=>a.href='cv/Davyd_Konstantinov_'+a.dataset.cv+'_'+(l=='sk'?'SK':'EN')+'.pdf');
   document.documentElement.lang=l;
   document.title=T[l].title;
   document.querySelector('meta[name=description]').content=T[l].desc;
