@@ -1,0 +1,334 @@
+<!doctype html>
+<html lang="sk">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>David Konstantinov — Telegram bots &amp; automations</title>
+<meta name="description" content="Telegram bots and business automations, turnkey. Videos and live demos of finished work.">
+<style>
+:root{--paper:#E9EFF2;--ink:#11202B;--blue:#1C6EE8;--mint:#CBEBDD;--sun:#FFC94D;--mute:#53636F;--card:#fff}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth}
+body{background:var(--paper);color:var(--ink);font:17px/1.55 "Segoe UI Variable Text","Segoe UI",system-ui,-apple-system,Roboto,sans-serif;-webkit-font-smoothing:antialiased}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--blue);outline-offset:3px}
+.wrap{max-width:1080px;margin:0 auto;padding:0 20px}
+h1,h2,h3{font-family:"Segoe UI Variable Display","Segoe UI",system-ui,sans-serif;letter-spacing:-.03em;line-height:1.05}
+h1{font-size:clamp(2.4rem,9vw,4.8rem);font-weight:800}
+h2{font-size:clamp(1.8rem,5vw,2.6rem);font-weight:800;margin-bottom:28px}
+h3{font-size:1.25rem;font-weight:700;letter-spacing:-.01em;line-height:1.2}
+section{padding:64px 0}
+/* top bar */
+header{display:flex;justify-content:space-between;align-items:center;padding:16px 0}
+.name{font-weight:700}
+.lang{display:flex;border:2px solid var(--ink);border-radius:99px;overflow:hidden}
+.lang button{font:inherit;font-size:.85rem;font-weight:700;border:0;background:none;padding:6px 14px;cursor:pointer;color:var(--ink)}
+.lang button[aria-pressed=true]{background:var(--ink);color:var(--paper)}
+/* hero */
+.hero{display:grid;gap:36px;padding:28px 0 64px}
+.hero p.lead{font-size:1.15rem;max-width:34ch;margin:20px 0 26px}
+.gets{list-style:none;padding:0;display:grid;gap:10px;margin-bottom:28px}
+.gets li{padding-left:30px;position:relative;font-weight:600}
+.gets li::before{content:"";position:absolute;left:0;top:.35em;width:18px;height:18px;border-radius:50%;background:var(--blue)}
+.gets li::after{content:"";position:absolute;left:6px;top:.5em;width:5px;height:9px;border:solid #fff;border-width:0 2px 2px 0;transform:rotate(45deg)}
+.btns{display:flex;flex-wrap:wrap;gap:12px}
+.btn{display:inline-block;padding:14px 24px;border-radius:99px;font-weight:700;text-decoration:none;border:2px solid var(--ink)}
+.btn.main{background:var(--blue);border-color:var(--blue);color:#fff}
+.btn:hover{transform:translateY(-2px)}
+/* chat — the one memorable thing */
+.chat{background:#fff;border-radius:28px;padding:22px 18px;display:grid;gap:10px;box-shadow:0 0 0 2px var(--ink),10px 10px 0 var(--ink);align-self:start}
+.chat .top{font-size:.8rem;color:var(--mute);font-weight:600;text-align:center;padding-bottom:6px}
+.b{max-width:82%;padding:10px 14px;border-radius:18px;font-size:.95rem;line-height:1.35;opacity:0;animation:pop .4s forwards}
+.b.me{justify-self:end;background:var(--blue);color:#fff;border-bottom-right-radius:4px}
+.b.bot{background:var(--mint);border-bottom-left-radius:4px}
+.b.bot b{display:block;font-size:.75rem;color:#2c6a4f}
+.b:nth-child(2){animation-delay:.3s}.b:nth-child(3){animation-delay:1.1s}.b:nth-child(4){animation-delay:1.9s}.b:nth-child(5){animation-delay:2.7s}
+.chat .note{font-size:.72rem;color:var(--mute);text-align:center;padding-top:4px}
+@keyframes pop{from{opacity:0;transform:translateY(8px) scale(.97)}to{opacity:1;transform:none}}
+/* work */
+.cards{display:grid;gap:22px}
+.card{background:var(--card);border-radius:22px;overflow:hidden;display:flex;flex-direction:column}
+.slot{position:relative;aspect-ratio:16/9;background:var(--ink);color:var(--paper);display:grid;place-items:center;text-align:center;font-size:.9rem}
+.slot .ph{padding:12px;opacity:.85}
+.slot .ph i{display:block;width:46px;height:46px;border-radius:50%;background:var(--sun);margin:0 auto 8px;position:relative}
+.slot .ph i::after{content:"";position:absolute;left:18px;top:13px;border-left:15px solid var(--ink);border-top:10px solid transparent;border-bottom:10px solid transparent}
+.slot video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;background:var(--ink);display:none}
+.slot.ok video{display:block}
+.card .body{padding:20px;display:grid;gap:10px;flex:1;align-content:start}
+.card p{color:var(--mute);font-size:.97rem}
+.tag{justify-self:start;font-size:.8rem;font-weight:700;background:var(--sun);padding:3px 10px;border-radius:99px}
+.tag.soon{background:#dde5ea;color:var(--mute)}
+.demo{font-weight:700;color:var(--blue)}
+/* steps */
+.steps{list-style:none;padding:0;display:grid;gap:0;counter-reset:s;border-left:3px solid var(--ink);margin-left:14px}
+.steps li{counter-increment:s;position:relative;padding:0 0 28px 30px}
+.steps li::before{content:counter(s);position:absolute;left:-17px;top:-2px;width:31px;height:31px;border-radius:50%;background:var(--ink);color:var(--paper);font-weight:700;display:grid;place-items:center;font-size:.9rem}
+.steps li:last-child{padding-bottom:0}
+.steps p{color:var(--mute);max-width:56ch}
+/* prices */
+.prices{display:grid;gap:16px}
+.price{background:var(--card);border-radius:22px;padding:24px;display:grid;gap:6px}
+.price .n{font-size:2.6rem;font-weight:800;letter-spacing:-.04em;line-height:1}
+.price .n small{font-size:1rem;font-weight:600;letter-spacing:0;color:var(--mute);margin-right:6px}
+.price p{color:var(--mute);font-size:.95rem}
+.fine{margin-top:18px;color:var(--mute);font-size:.92rem}
+/* extra blocks */
+.pk{display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(230px,1fr))}
+.price .t{font-weight:700;font-size:.9rem}
+.band{background:var(--sun);border-radius:28px;padding:32px 24px}
+.band h2{margin-bottom:10px}.band p{max-width:52ch}
+.trio{display:grid;gap:16px}
+.box{background:var(--card);border-radius:22px;padding:24px;display:grid;gap:8px;align-content:start}
+.box p{color:var(--mute);font-size:.97rem}
+@media(min-width:760px){.trio{grid-template-columns:repeat(3,1fr)}.band{padding:44px}}
+/* contacts */
+.contact{background:var(--ink);color:var(--paper);border-radius:28px;padding:40px 24px;margin-bottom:40px}
+.contact h2{margin-bottom:12px}
+.contact p{max-width:44ch;margin-bottom:24px;opacity:.85}
+.contact .btn{border-color:var(--paper)}
+.contact .btn.main{border-color:var(--blue)}
+footer{padding:0 0 40px;color:var(--mute);font-size:.85rem}
+@media(min-width:760px){
+ .hero{grid-template-columns:1.25fr 1fr;align-items:center;gap:56px}
+ .cards{grid-template-columns:1fr 1fr}
+ .prices{grid-template-columns:repeat(3,1fr)}
+ .contact{padding:56px}
+}
+@media(prefers-reduced-motion:reduce){.b{animation:none;opacity:1}html{scroll-behavior:auto}.btn:hover{transform:none}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header>
+  <span class="name">David Konstantinov</span>
+  <div class="lang" role="group" aria-label="Language">
+    <button type="button" data-set="sk" aria-pressed="true">SK</button>
+    <button type="button" data-set="en" aria-pressed="false">EN</button>
+    <button type="button" data-set="ru" aria-pressed="false">RU</button>
+  </div>
+</header>
+<main>
+<div class="hero">
+  <div>
+    <h1 data-i="h1"></h1>
+    <p class="lead" data-i="lead"></p>
+    <ul class="gets"><li data-i="g1"></li><li data-i="g2"></li><li data-i="g3"></li></ul>
+    <div class="btns">
+      <a class="btn main" href="https://t.me/+421910392871" rel="noopener noreferrer" data-i="tg"></a>
+      <a class="btn" href="mailto:davidcoolld@gmail.com" data-i="mail"></a>
+    </div>
+  </div>
+  <div class="chat" aria-hidden="true">
+    <div class="top" data-i="c0"></div>
+    <div class="b me" data-i="c1"></div>
+    <div class="b bot"><b>Bot</b><span data-i="c2"></span></div>
+    <div class="b me" data-i="c3"></div>
+    <div class="b bot"><b>Bot</b><span data-i="c4"></span></div>
+    <div class="note" data-i="cn"></div>
+  </div>
+</div>
+
+<section id="work">
+  <h2 data-i="work"></h2>
+  <div class="cards">
+    <article class="card"><div class="slot" data-video="media/salon.mp4"><div class="ph"><i></i><span data-i="soon"></span></div></div>
+      <div class="body"><h3 data-i="w1t"></h3><p data-i="w1p"></p>
+      <a class="demo" href="https://t.me/StudioBellaBookingBot" target="_blank" rel="noopener noreferrer" data-i="demo"></a></div></article>
+    <article class="card"><div class="slot" data-video="media/monitor.mp4"><div class="ph"><i></i><span data-i="soon"></span></div></div>
+      <div class="body"><h3 data-i="w2t"></h3><p data-i="w2p"></p></div></article>
+    <article class="card"><div class="slot" data-video="media/shop.mp4"><div class="ph"><i></i><span data-i="soon"></span></div></div>
+      <div class="body"><h3 data-i="w3t"></h3><p data-i="w3p"></p></div></article>
+    <article class="card"><div class="slot" data-video="media/n8n.mp4"><div class="ph"><i></i><span data-i="soon"></span></div></div>
+      <div class="body"><h3 data-i="w4t"></h3><p data-i="w4p"></p></div></article>
+    <article class="card"><div class="slot" data-video="media/pcmusic.mp4"><div class="ph"><i></i><span data-i="soon"></span></div></div>
+      <div class="body"><h3>PC Music Remote</h3><p data-i="w5p"></p></div></article>
+  </div>
+</section>
+
+<section id="packages">
+  <h2 data-i="pkh"></h2>
+  <div class="pk">
+    <div class="price"><h3 data-i="p1t"></h3><div class="n"><small data-i="from"></small>80 €</div><div class="t" data-i="p1d"></div><p data-i="p1p"></p></div>
+    <div class="price"><h3 data-i="p2t"></h3><div class="n"><small data-i="from"></small>120 €</div><div class="t" data-i="p2d"></div><p data-i="p2p"></p></div>
+    <div class="price"><h3 data-i="p3t"></h3><div class="n"><small data-i="from"></small>200 €</div><div class="t" data-i="p3d"></div><p data-i="p3p"></p></div>
+    <div class="price"><h3 data-i="p4t"></h3><div class="n"><small data-i="from"></small>400 €</div><div class="t" data-i="p4d"></div><p data-i="p4p"></p></div>
+    <div class="price"><h3 data-i="p5t"></h3><div class="n">20 €<small data-i="mo" style="margin:0 0 0 4px"></small></div><div class="t" data-i="p5d"></div><p data-i="p5p"></p></div>
+  </div>
+  <p class="fine" data-i="pkfine"></p>
+</section>
+
+<section>
+  <div class="band"><h2 data-i="prh"></h2><p data-i="prp"></p></div>
+</section>
+
+<section id="handover">
+  <h2 data-i="hoh"></h2>
+  <ul class="gets"><li data-i="ho1"></li><li data-i="ho2"></li><li data-i="ho3"></li><li data-i="ho4"></li><li data-i="ho5"></li></ul>
+</section>
+
+<section id="process">
+  <h2 data-i="prch"></h2>
+  <ol class="steps">
+    <li><h3 data-i="s1t"></h3><p data-i="s1p"></p></li>
+    <li><h3 data-i="s2t"></h3><p data-i="s2p"></p></li>
+    <li><h3 data-i="s3t"></h3><p data-i="s3p"></p></li>
+    <li><h3 data-i="s4t"></h3><p data-i="s4p"></p></li>
+  </ol>
+</section>
+
+<section>
+  <div class="trio">
+    <div class="box"><h3 data-i="eut"></h3><p data-i="eup"></p></div>
+    <div class="box"><h3 data-i="fct"></h3><p data-i="fcp"></p></div>
+    <div class="box"><h3 data-i="ait"></h3><p data-i="aip"></p></div>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="contact">
+    <h2 data-i="ch"></h2>
+    <p data-i="cp"></p>
+    <div class="btns">
+      <a class="btn main" href="https://t.me/+421910392871" rel="noopener noreferrer" data-i="tg"></a>
+      <a class="btn" href="mailto:davidcoolld@gmail.com">davidcoolld@gmail.com</a>
+    </div>
+  </div>
+</section>
+</main>
+<footer>© David Konstantinov</footer>
+</div>
+<script>
+const T={
+sk:{
+title:"David Konstantinov — Telegram boty a automatizácie na kľúč",
+desc:"Telegram boty a automatizácie pre malé firmy na kľúč. Videá hotových riešení, pevné ceny, dáta v EÚ.",
+h1:"Telegram boty a automatizácie na kľúč",
+lead:"Poviete, čo potrebujete. Ja to postavím, spustím a ukážem, ako to funguje.",
+g1:"Menej rutiny: hodiny ručnej práce sa vám vrátia",
+g2:"Žiadna stratená požiadavka: každá správa skončí v tabuľke alebo v Telegrame",
+g3:"Objednávanie klientov 24/7, aj keď spíte",
+tg:"Napísať na Telegram",mail:"Napísať e-mail",
+c0:"Rezervačný bot",c1:"Ahoj! Strih zajtra po piatej?",c2:"Voľné: 17:00, 18:30, 19:00. Ktorý termín?",c3:"18:30",c4:"Zarezervované. Pripomeniem 2 hodiny vopred.",
+cn:"Ukážkový dialóg, nie skutočná konverzácia",
+work:"Práce",soon:"Video už čoskoro",demo:"Vyskúšať živé demo v Telegrame",
+w1t:"Rezervačný bot pre salóny",w1p:"Zákazník si vyberie službu, majstra a čas. Majiteľ vidí rozvrh, zákazník dostane pripomienku. 4 jazyky.",
+w2t:"Monitor inzerátov a cien",w2p:"Sleduje bazos.sk, nové inzeráty ukladá do Google Sheets a hneď pošle upozornenie do Telegramu.",
+w3t:"Telegram e-shop",w3p:"Katalóg, košík a objednávka priamo v chate.",
+w4t:"Automatizácia dopytov v n8n",w4p:"Dopyt z webu alebo formulára sa automaticky uloží do tabuľky a vám príde správa.",
+w5p:"Ovládanie hudby v počítači z telefónu: pauza, ďalšia skladba, hlasitosť.",
+pkh:"Balíky",from:"od",mo:"/ mes.",
+p1t:"Dopyty z webu do Telegramu/WhatsAppu",p1d:"1–2 dni",p1p:"Každý dopyt z formulára príde vám do správ a zároveň do tabuľky.",
+p2t:"Monitoring webov a inzerátov",p2d:"2–3 dni",p2p:"Sleduje stránky a inzeráty, upozorní vás a ukladá do tabuľky.",
+p3t:"Rezervačný bot (salón, servis, doučovanie)",p3d:"3–5 dní",p3p:"Klienti sa objednávajú sami, vy vidíte rozvrh, bot pripomína termíny.",
+p4t:"AI asistent pre zákazníkov",p4d:"5–7 dní",p4p:"Odpovedá vlastnými slovami podľa vášho cenníka a FAQ a zapíše zákazníka.",
+p5t:"Starostlivosť po 30 dňoch",p5d:"po 30 dňoch zadarmo",p5p:"Opravy, drobné úpravy a dohľad nad chodom.",
+pkfine:"Ceny sú od. Presnú cenu a termín poviem pred začiatkom práce, bez prekvapení.",
+prh:"Najprv prototyp, potom platba",prp:"Pri zaujímavej zákazke do 1–2 hodín urobím miniprototyp na vašich údajoch a pošlem krátke video. Platíte, až keď vidíte, že to funguje.",
+hoh:"Ako odovzdávam prácu",
+ho1:"Videonávod na 2 minúty",ho2:"Stránka „čo to robí a ako to reštartovať“",ho3:"30 dní bezplatných opráv",ho4:"Upozornenie majiteľovi, ak niečo spadne",ho5:"Všetko na vašich účtoch, bez viazanosti na mňa",
+prch:"Ako pracujem",
+s1t:"Zadanie",s1p:"Poviete, čo potrebujete. Opýtam sa na detaily a pred začiatkom poviem termín a cenu.",
+s2t:"Stavba a ukážka",s2p:"Urobím funkčnú verziu a vy si ju sami vyskúšate v Telegrame.",
+s3t:"Spustenie",s3p:"Nasadím ju, pripojím tabuľky a služby a vysvetlím, ako s tým pracovať.",
+s4t:"Podpora",s4p:"Po spustení odpovedám na otázky a robím úpravy podľa dohody.",
+eut:"EÚ a GDPR",eup:"Dáta ostávajú v EÚ a spracúvam ich poctivo, len na účel, na ktorý ich potrebujete.",
+fct:"Prví klienti",fcp:"Prvé 2–3 zákazky robím so zľavou výmenou za recenziu a súhlas ukázať video.",
+ait:"Úprimne o AI",aip:"AI mi prácu urýchľuje, každé rozhodnutie však kontrolujem a riešenie potom sprevádzam ja.",
+ch:"Poďme sa porozprávať o vašej úlohe",cp:"Napíšte pár riadkov o tom, čo chcete zautomatizovať. Odpoviem a poviem, ako dlho to potrvá."},
+en:{
+title:"David Konstantinov — Telegram bots & automations",
+desc:"Turnkey Telegram bots and automations for small businesses. Videos of finished work, fixed prices, data in the EU.",
+h1:"Telegram bots and automations, turnkey",
+lead:"You describe the task. I build it, launch it and show you how it works.",
+g1:"Saved hours: routine work done by the bot, not by you",
+g2:"No lost leads: every request lands in a sheet or in Telegram",
+g3:"Customers can book 24/7, even while you sleep",
+tg:"Message on Telegram",mail:"Send an email",
+c0:"Booking bot",c1:"Hi! Haircut tomorrow after 5pm?",c2:"Free: 17:00, 18:30, 19:00. Which one?",c3:"18:30",c4:"Booked. I'll remind you 2 hours before.",
+cn:"Illustrative dialogue, not a real chat",
+work:"Work",soon:"Video coming soon",demo:"Try the live demo in Telegram",
+w1t:"Booking bot for salons",w1p:"Customers pick a service, a specialist and a time. The owner sees the schedule, the customer gets a reminder. 4 languages.",
+w2t:"Listing and price monitor",w2p:"Watches bazos.sk, saves new listings to Google Sheets and sends an instant Telegram alert.",
+w3t:"Telegram shop bot",w3p:"Catalog, cart and checkout right inside the chat.",
+w4t:"Lead automation in n8n",w4p:"A lead from your site or form goes into a sheet automatically and you get a message.",
+w5p:"Control the music on your PC from your phone: pause, next track, volume.",
+pkh:"Packages",from:"from",mo:"/ month",
+p1t:"Website leads → Telegram/WhatsApp + sheet",p1d:"1–2 days",p1p:"Every form request reaches you as a message and is saved to a spreadsheet.",
+p2t:"Site and listing monitoring",p2d:"2–3 days",p2p:"Watches pages and listings, alerts you and logs everything to a sheet.",
+p3t:"Booking bot (salon, service, tutor)",p3d:"3–5 days",p3p:"Customers book themselves, you see the schedule, the bot sends reminders.",
+p4t:"AI assistant for customers",p4d:"5–7 days",p4p:"Answers in its own words from your price list and FAQ, and takes the booking.",
+p5t:"Support after the free 30 days",p5d:"after 30 free days",p5p:"Fixes, small changes and keeping an eye on it.",
+pkfine:"Prices are starting prices. I name the exact cost and deadline before I start, no surprises.",
+prh:"Prototype first, payment after",prp:"For a project that fits, I build a mini-prototype on your data within 1–2 hours and send a short video. You pay only once you've seen it work.",
+hoh:"How I hand over the work",
+ho1:"A 2-minute video guide",ho2:"A “what it does and how to restart it” page",ho3:"30 days of free fixes",ho4:"An alert to the owner if something goes down",ho5:"Everything on your own accounts, no lock-in to me",
+prch:"How I work",
+s1t:"Brief",s1p:"You tell me what you need. I ask clarifying questions and name the deadline and price before I start.",
+s2t:"Build and preview",s2p:"I build a working version and you try it yourself in Telegram.",
+s3t:"Launch",s3p:"I deploy it, connect your sheets and services, and explain how to use everything.",
+s4t:"Support",s4p:"After launch I answer questions and make changes as agreed.",
+eut:"EU and GDPR",eup:"Your data stays in the EU and is handled fairly, only for the purpose you need.",
+fct:"First clients",fcp:"My first 2–3 projects come at a discount in exchange for a review and permission to show the video.",
+ait:"Honest about AI",aip:"AI speeds up my work, but I check every decision and I support the result myself.",
+ch:"Let's talk about your task",cp:"Send a few lines about what you want to automate. I'll reply with a plan and a timeline."},
+ru:{
+title:"David Konstantinov — Telegram-боты и автоматизации",
+desc:"Telegram-боты и автоматизации для малого бизнеса под ключ. Видео готовых работ, фиксированные цены, данные в ЕС.",
+h1:"Telegram-боты и автоматизации под ключ",
+lead:"Вы описываете задачу — я делаю, запускаю и объясняю, как это работает.",
+g1:"Меньше рутины: часы, которые уходили на ручную работу, возвращаются вам",
+g2:"Ни одной потерянной заявки: каждое обращение попадает в таблицу или в Telegram",
+g3:"Запись клиентов 24/7, даже когда вы спите",
+tg:"Написать в Telegram",mail:"Написать на почту",
+c0:"Бот записи",c1:"Привет! Стрижка завтра после 17:00?",c2:"Свободно: 17:00, 18:30, 19:00. Какое время?",c3:"18:30",c4:"Записал. Напомню за 2 часа.",
+cn:"Пример диалога, не реальная переписка",
+work:"Работы",soon:"Видео скоро будет",demo:"Открыть живое демо в Telegram",
+w1t:"Бот записи для салонов",w1p:"Клиент выбирает услугу, мастера и время. Мастер видит расписание, клиент получает напоминание. 4 языка.",
+w2t:"Монитор объявлений и цен",w2p:"Следит за bazos.sk, складывает новые объявления в Google Sheets и сразу присылает уведомление в Telegram.",
+w3t:"Telegram-магазин",w3p:"Каталог, корзина и оформление заказа прямо в чате.",
+w4t:"Автоматизация заявок в n8n",w4p:"Заявка с сайта или формы автоматически попадает в таблицу, а вам приходит сообщение.",
+w5p:"Управление музыкой на компьютере с телефона: пауза, следующий трек, громкость.",
+pkh:"Пакеты",from:"от",mo:"/ мес.",
+p1t:"Заявки с сайта → Telegram/WhatsApp + таблица",p1d:"1–2 дня",p1p:"Каждая заявка из формы приходит вам сообщением и сохраняется в таблицу.",
+p2t:"Мониторинг сайтов и объявлений",p2d:"2–3 дня",p2p:"Следит за страницами и объявлениями, шлёт уведомления и ведёт таблицу.",
+p3t:"Бот записи (салон, сервис, репетитор)",p3d:"3–5 дней",p3p:"Клиенты записываются сами, вы видите расписание, бот напоминает о визите.",
+p4t:"ИИ-ассистент для клиентов",p4d:"5–7 дней",p4p:"Отвечает своими словами по вашему прайсу и FAQ и записывает клиента.",
+p5t:"Сопровождение после 30 бесплатных дней",p5d:"после 30 бесплатных дней",p5p:"Исправления, мелкие правки и присмотр за работой.",
+pkfine:"Цены — «от». Точную стоимость и срок называю до начала работы, без сюрпризов.",
+prh:"Сначала прототип, потом оплата",prp:"Если задача интересная, за 1–2 часа делаю мини-прототип на ваших данных и присылаю короткое видео. Платите, только когда увидели, что это работает.",
+hoh:"Как я сдаю работу",
+ho1:"Видеоинструкция на 2 минуты",ho2:"Страница «что делает и как перезапустить»",ho3:"30 дней бесплатных исправлений",ho4:"Алерт владельцу, если что-то упало",ho5:"Всё на ваших аккаунтах, без привязки ко мне",
+prch:"Как я работаю",
+s1t:"Бриф",s1p:"Вы рассказываете, что нужно. Я задаю уточняющие вопросы и называю срок и цену до начала работы.",
+s2t:"Сборка и показ",s2p:"Делаю рабочую версию и показываю её в Telegram, чтобы вы сами всё попробовали.",
+s3t:"Запуск",s3p:"Разворачиваю на сервере, подключаю таблицы и сервисы, объясняю, как всем пользоваться.",
+s4t:"Поддержка",s4p:"После запуска отвечаю на вопросы и вношу правки по договорённости.",
+eut:"ЕС и GDPR",eup:"Данные остаются в ЕС и обрабатываются честно, только для нужной вам цели.",
+fct:"Первые клиенты",fcp:"Первые 2–3 проекта делаю со скидкой в обмен на отзыв и разрешение показать видео.",
+ait:"Честно про ИИ",aip:"ИИ ускоряет работу, каждое решение проверяю и сопровождаю.",
+ch:"Давайте обсудим вашу задачу",cp:"Напишите пару строк о том, что хотите автоматизировать. Отвечу и скажу, сколько это займёт."}
+};
+const els=[...document.querySelectorAll('[data-i]')];
+function setLang(l){
+  if(!Object.hasOwn(T,l))l='sk';
+  els.forEach(e=>e.textContent=T[l][e.dataset.i]);
+  document.documentElement.lang=l;
+  document.title=T[l].title;
+  document.querySelector('meta[name=description]').content=T[l].desc;
+  document.querySelectorAll('[data-set]').forEach(b=>b.setAttribute('aria-pressed',b.dataset.set===l));
+  try{localStorage.lang=l}catch(e){}
+}
+document.querySelectorAll('[data-set]').forEach(b=>b.onclick=()=>setLang(b.dataset.set));
+let saved='';try{saved=localStorage.lang}catch(e){}
+const bl=(navigator.language||'').slice(0,2);
+setLang(new URLSearchParams(location.search).get('lang')||saved||(bl=='ru'||bl=='uk'?'ru':bl=='en'?'en':'sk'));
+// video slots: show the player only if the file exists
+document.querySelectorAll('.slot').forEach(s=>{
+  const v=document.createElement('video');
+  v.controls=true;v.preload='metadata';v.playsInline=true;v.src=s.dataset.video;
+  v.onloadedmetadata=()=>{s.classList.add('ok');s.querySelector('.ph').hidden=true};
+  s.appendChild(v);
+});
+</script>
+</body>
+</html>
