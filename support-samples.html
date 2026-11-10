@@ -1,0 +1,246 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Support writing samples — Davyd Konstantinov</title>
+<meta name="description" content="Five writing samples for customer support and QA: three ticket replies, a help-center article and a bug report. Invented product, real working style.">
+<meta property="og:title" content="How I write to customers and to developers">
+<meta property="og:description" content="Five support and QA samples: three ticket replies, a help-center article and a bug report. Invented product, real working style.">
+<meta property="og:type" content="article">
+<style>
+@font-face{font-family:"Plex";src:url(fonts/ibm-plex-sans-latin-400-normal.woff2) format("woff2");font-weight:400;font-display:swap;unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+@font-face{font-family:"Plex";src:url(fonts/ibm-plex-sans-latin-600-normal.woff2) format("woff2");font-weight:600;font-display:swap;unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+@font-face{font-family:"Plex Mono";src:url(fonts/ibm-plex-mono-latin-400-normal.woff2) format("woff2");font-weight:400;font-display:swap}
+@font-face{font-family:"Plex Mono";src:url(fonts/ibm-plex-mono-latin-500-normal.woff2) format("woff2");font-weight:500;font-display:swap}
+:root{--paper:#f3f4f4;--ink:#161818;--sec:#454c4c;--mute:#68706f;--line:rgba(22,24,24,.14);--panel:#1a1d1d;--on-panel:#eef1f1;--panel-mute:#9ba5a5;--accent:#1c5fd0;--sans:"Plex","Segoe UI",system-ui,-apple-system,Roboto,sans-serif;--mono:"Plex Mono",ui-monospace,"Cascadia Mono",Consolas,monospace}
+*{box-sizing:border-box;margin:0}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+body{background:var(--paper);color:var(--ink);font:400 1.0625rem/1.65 var(--sans);-webkit-font-smoothing:antialiased}
+a{color:var(--accent);text-underline-offset:3px}
+:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:3px}
+.wrap{max-width:880px;margin:0 auto;padding:0 24px}
+header{display:flex;justify-content:space-between;align-items:center;height:64px;font-size:.9375rem}
+header a{color:var(--sec);text-decoration:none}
+header a:hover{color:var(--ink)}
+h1{font:600 clamp(2.125rem,5.4vw,3.375rem)/1.06 var(--sans);letter-spacing:-.025em;max-width:14em;text-wrap:balance;margin:40px 0 20px}
+h2{font:600 1.5rem/1.25 var(--sans);letter-spacing:-.01em;max-width:24em;text-wrap:balance;margin-bottom:12px}
+.lead{max-width:34rem;color:var(--sec);font-size:1.1875rem;line-height:1.6}
+.note{max-width:34rem;color:var(--mute);font-size:.9375rem;margin-top:12px}
+p{max-width:34rem}
+p+p,p+ol,p+ul,ol+p,ul+p{margin-top:12px}
+ol,ul{padding-left:22px;max-width:34rem}
+li+li{margin-top:4px}
+
+/* the index: the one loud thing on the page */
+.index{background:var(--panel);color:var(--on-panel);border-radius:14px;padding:26px 28px 22px;margin:36px 0 0}
+.index-head{display:flex;flex-wrap:wrap;justify-content:space-between;gap:6px 24px;align-items:baseline;margin-bottom:14px}
+.index-head b{font-weight:600;font-size:1rem}
+.index-head span{font-size:.8125rem;color:var(--panel-mute)}
+.index ol{list-style:none;padding:0;max-width:none}
+.index li+li{margin-top:0}
+.index a{display:grid;grid-template-columns:2rem 1fr auto;gap:12px;align-items:baseline;padding:12px 0;border-top:1px solid rgba(255,255,255,.12);color:inherit;text-decoration:none}
+.index a:hover .t{text-decoration:underline;text-underline-offset:4px}
+.index a:focus-visible{outline-color:#fff}
+.index .n{font:500 .875rem var(--mono);color:var(--panel-mute)}
+.index .t{font-size:1.0625rem}
+.index .k{font-size:.875rem;color:var(--panel-mute)}
+.index .foot{margin:14px 0 0;padding-top:14px;border-top:1px solid rgba(255,255,255,.12);max-width:none;font-size:.8125rem;color:var(--panel-mute)}
+
+/* samples: plain document, label in the margin, no cards */
+section{margin-top:72px;display:grid;grid-template-columns:11.5rem minmax(0,1fr);gap:0 32px;scroll-margin-top:16px}
+.tag{font-size:.875rem;line-height:1.45;color:var(--mute);border-left:3px solid var(--ink);padding:2px 0 2px 12px;align-self:start;margin-top:8px}
+.tag b{display:block;font-weight:600;color:var(--ink);margin-bottom:2px}
+.ask{color:var(--sec);margin:0 0 4px}
+.quote,.reply,.doc{border-radius:10px;padding:18px 22px;margin-top:16px;font-size:1rem;line-height:1.6}
+.quote{background:#e6e8e8;color:var(--sec)}
+.reply,.doc{background:#fff;border:1px solid var(--line)}
+.quote small,.reply small{display:block;font:500 .75rem/1 var(--mono);margin-bottom:12px}
+.quote small{color:var(--sec)}
+.reply small{color:var(--mute)}
+.why{border-left:3px solid var(--accent);padding-left:16px;margin-top:20px;color:var(--sec);font-size:.9375rem}
+table{border-collapse:collapse;width:100%;font-size:.9375rem;margin:12px 0}
+td{padding:8px 0;border-top:1px solid var(--line);vertical-align:top}
+tr:last-child td{border-bottom:1px solid var(--line)}
+td:first-child{width:9.5rem;color:var(--mute);font:400 .8125rem/1.8 var(--mono)}
+
+.close{margin:88px 0 0;padding:32px 0 0;border-top:1px solid var(--ink)}
+.close h2{max-width:none}
+.close p{font-size:1.125rem;max-width:36rem;margin-bottom:20px}
+.btn{display:inline-flex;align-items:center;height:46px;padding:0 20px;border-radius:8px;font-weight:600;text-decoration:none;background:var(--ink);color:var(--paper);border:1px solid var(--ink);margin:0 8px 8px 0}
+.btn:hover{background:#2f3535}
+.btn.alt{background:transparent;color:var(--ink)}
+.btn.alt:hover{background:rgba(22,24,24,.06)}
+footer{padding:48px 0 56px;color:var(--mute);font-size:.8125rem}
+
+@media (max-width:640px){
+ .wrap{padding:0 18px}
+ .index{padding:22px 16px 18px;border-radius:12px}
+ .index a{grid-template-columns:1.6rem 1fr}
+ .index .k{grid-column:2}
+ section{margin-top:56px;grid-template-columns:1fr}
+ .tag{margin:0 0 14px}
+ .quote,.reply,.doc{padding:16px}
+ td:first-child{width:7rem}
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header><a href="index.html">← Davyd Konstantinov</a><a href="mailto:davidcoolld@gmail.com">davidcoolld@gmail.com</a></header>
+<main>
+<h1>How I write to customers and to developers</h1>
+<p class="lead">Five samples: three ticket replies, a help-center article and a bug report. Samples 2 and 5 are one story. A customer can't export a CSV, and the problem travels from the inbox to the developers.</p>
+<p class="note">The product (Tidyflow, an invoicing app), the customers and the numbers are invented, so nobody's data is involved. I draft with AI and check every line before it goes out, the same way I work on a real queue.</p>
+
+<nav class="index" aria-label="The five samples">
+<div class="index-head"><b>Five samples</b><span>Tidyflow, an invented invoicing app</span></div>
+<ol>
+<li><a href="#s1"><span class="n">1</span><span class="t">Charged twice</span><span class="k">Angry customer</span></a></li>
+<li><a href="#s2"><span class="n">2</span><span class="t">The CSV export is empty</span><span class="k">A bug seen by a customer</span></a></li>
+<li><a href="#s3"><span class="n">3</span><span class="t">A ticket with no details</span><span class="k">"It doesn't work"</span></a></li>
+<li><a href="#s4"><span class="n">4</span><span class="t">I didn't get the password reset email</span><span class="k">Help-center article</span></a></li>
+<li><a href="#s5"><span class="n">5</span><span class="t">CSV export empty across a year boundary</span><span class="k">Bug report</span></a></li>
+</ol>
+<p class="foot">Sample 2 is the ticket. Sample 5 is the bug report it became.</p>
+</nav>
+
+<section id="s1">
+<div class="tag"><b>Sample 1</b>Angry customer</div>
+<div class="body">
+<h2>Charged twice</h2>
+<p class="ask">The customer is upset and has already named the bank. The reply fixes the money first, then asks about the earlier case.</p>
+<div class="quote"><small>Ticket from Maria K. · Subject: YOU CHARGED ME TWICE!!!</small>
+<p>I paid for the Pro plan on Monday and my bank shows two charges of €19. This is not the first time something like this happens with you. Refund me today or I'm disputing it with the bank.</p></div>
+<div class="reply"><small>Reply</small>
+<p><b>Subject: Re: Charged twice, refund started</b></p>
+<p>Hi Maria,</p>
+<p>You were charged €19 twice on Monday, and that shouldn't have happened. I checked your account: the second charge is a duplicate from a payment retry. I've just started the refund.</p>
+<ul>
+<li>The €19 goes back to the card you paid with.</li>
+<li>Banks usually show it within 5–7 business days. I can't speed up their side, but I'll send you the refund reference (RF-20481), which helps them find it.</li>
+<li>Your Pro plan stays active. Nothing else changes.</li>
+</ul>
+<p>You wrote that this has happened before. Could you tell me roughly when? I'll look up that case, and if the cause is the same, it goes into the report I'm sending to our payments team. Then the bug gets fixed and we stop refunding the same mistake.</p>
+<p>I'll check on Friday that the refund has gone through and write to you either way.</p>
+<p>Davyd<br>Tidyflow Support</p></div>
+<p class="why">Order of the reply: what went wrong, what I did, what the customer can expect and when. The apology is one short sentence, with no stock phrases.</p>
+</div>
+</section>
+
+<section id="s2">
+<div class="tag"><b>Sample 2</b>A bug seen by a customer</div>
+<div class="body">
+<h2>The CSV export is empty</h2>
+<p class="ask">A deadline, little information. The reply gives a workaround today and asks only for what is needed to reproduce the bug.</p>
+<div class="quote"><small>Ticket from Tom R. · Subject: export broken</small>
+<p>Export to CSV gives me an empty file. It worked last week. Chrome on Mac. I need it for my accountant by tomorrow.</p></div>
+<div class="reply"><small>Reply</small>
+<p><b>Subject: Re: export broken</b></p>
+<p>Hi Tom,</p>
+<p>Sorry about the timing. An export that worked last week and is empty now looks like a problem on our side, so I'm treating it as urgent.</p>
+<p>Two quick questions, so I can reproduce it:</p>
+<ol>
+<li>Which report are you exporting (Invoices, Payments or Clients), and for which dates?</li>
+<li>Do you get an empty file with a shorter range too, for example "Last 30 days"?</li>
+</ol>
+<p>To get your data to the accountant today: open Invoices, press Print and choose "Save as PDF". It isn't a CSV, but every line is there.</p>
+<p>I'll write back before 17:00 your time with what I found. If it's a bug, you'll get the ticket number and a date for the fix.</p>
+<p>Davyd<br>Tidyflow Support</p></div>
+<p class="why">Sample 5 shows what happened next: the answer to question 2 turned the ticket into a bug report.</p>
+</div>
+</section>
+
+<section id="s3">
+<div class="tag"><b>Sample 3</b>"It doesn't work"</div>
+<div class="body">
+<h2>A ticket with no details</h2>
+<p class="ask">There is nothing to reproduce yet. The reply asks four short questions and gives the two fixes that solve most browser cases.</p>
+<div class="quote"><small>Ticket from Alex · Subject: (no subject)</small>
+<p>app doesnt work. fix it</p></div>
+<div class="reply"><small>Reply</small>
+<p><b>Subject: Re: your message to Tidyflow Support</b></p>
+<p>Hi Alex,</p>
+<p>Let's get this working. I can't tell yet what's going wrong, so a few details would help. Short answers are fine:</p>
+<ol>
+<li>What were you trying to do (for example, send an invoice)?</li>
+<li>What happened instead: an error message, a blank screen, a loading wheel? A screenshot is ideal, or copy the message text.</li>
+<li>Are you using the web app (which browser?) or the phone app?</li>
+<li>Did it work before? If yes, when did it stop?</li>
+</ol>
+<p>In the meantime, two things fix a lot of cases: reload the page with Ctrl+F5 (Cmd+Shift+R on Mac), and try an incognito window. If it works there, an extension or the cache is the cause, and I'll walk you through the fix.</p>
+<p>Reply to this email and I'll continue from your answers.</p>
+<p>Davyd<br>Tidyflow Support</p></div>
+<p class="why">Four questions at most, each one answerable in a few words. The customer gets something to try while they answer.</p>
+</div>
+</section>
+
+<section id="s4">
+<div class="tag"><b>Sample 4</b>Help-center article</div>
+<div class="body">
+<h2>I didn't get the password reset email</h2>
+<p class="ask">The kind of article a support team links in a reply. Written so that someone in a hurry can fix it in one minute.</p>
+<div class="doc">
+<p><b>I didn't get the password reset email</b></p>
+<p>Applies to: Tidyflow web app, all plans. Takes about 2 minutes.</p>
+<p><b>Try this first</b></p>
+<ol>
+<li>Wait 10 minutes. The email can be slow when many people request one at the same time.</li>
+<li>Check Spam, Junk and "Promotions". Look for a message from <i>no-reply@tidyflow.example</i>.</li>
+<li>Check the address. Open the reset page again and make sure it is the same address you signed up with, with no typo and no extra space.</li>
+</ol>
+<p><b>Still nothing?</b></p>
+<ul>
+<li>Several addresses: if you have more than one, try each of them. We only send the email to an address that has an account.</li>
+<li>Company mailbox: some company filters block automatic emails. Ask your IT team to allow <i>tidyflow.example</i>, then request the reset again.</li>
+<li>Too many attempts: after 5 requests in an hour we pause the reset for 60 minutes. Wait, then try once more.</li>
+</ul>
+<p><b>Good to know</b></p>
+<p>The reset link works for 60 minutes and only once. If you request several emails, use the latest one, because the older links stop working.</p>
+<p><b>Contact support if</b> none of this helps. Send us the email address on the account and the time of your last attempt, and we'll check it from our side. We never ask for your password.</p></div>
+</div>
+</section>
+
+<section id="s5">
+<div class="tag"><b>Sample 5</b>Bug report</div>
+<div class="body">
+<h2>The CSV export is empty across a year boundary</h2>
+<p class="ask">What Sample 2 turned into after reproducing it. It is written so a developer can reproduce it without asking me anything.</p>
+<div class="doc">
+<p><b>[Invoices] CSV export returns a file with only the header row when the date range spans two years</b></p>
+<table>
+<tr><td>Environment</td><td>Web app v2.14.3, Chrome 126, macOS 14.5, Pro plan</td></tr>
+<tr><td>Linked ticket</td><td>#10482 (customer Tom R.)</td></tr>
+<tr><td>Severity</td><td>Major. Data is not lost, but year-end reports can't be exported. Priority: high, because year-end is close.</td></tr>
+<tr><td>Reproducible</td><td>5 out of 5 attempts</td></tr>
+</table>
+<p><b>Steps</b></p>
+<ol>
+<li>Log in and open Invoices → Export → CSV.</li>
+<li>Set the range to 15 Dec 2025 – 15 Jan 2026.</li>
+<li>Click Export.</li>
+</ol>
+<p><b>Expected:</b> a CSV with all 42 invoices from the range.</p>
+<p><b>Actual:</b> the file downloads and contains the header row only. No error message is shown.</p>
+<p><b>What I checked</b></p>
+<ul>
+<li>15 Nov – 15 Dec 2025 works (38 rows). 1 Jan – 31 Jan 2026 works (31 rows). Only ranges across 31 Dec / 1 Jan fail.</li>
+<li>The browser console shows a failed request to <i>/api/export</i> (HTTP 500). Request ID: <i>7f3a-91c2</i>.</li>
+<li>Other browsers: Firefox 127 behaves the same, so it is not Chrome specific.</li>
+</ul>
+<p><b>Workaround for customers:</b> export the two years as two separate ranges, or use Print → Save as PDF.</p>
+<p><b>Attachments:</b> screenshot of the empty file, HAR file, the test range as a link.</p></div>
+<p class="why">Everything a developer needs is above the fold: environment, exact steps, expected against actual result and the boundary that narrows down the cause. The workaround goes back into the customer's ticket.</p>
+</div>
+</section>
+
+<div class="close">
+<h2>Need someone for a support or QA queue?</h2>
+<p>I write in English, speak Slovak, work by email and tickets, and have an approved residence permit for employment in Slovakia.</p>
+<a class="btn" href="mailto:davidcoolld@gmail.com">Write to me</a><a class="btn alt" href="index.html#cv">CV (PDF)</a>
+</div>
+</main>
+<footer>© Davyd Konstantinov. The page uses IBM Plex (SIL Open Font License).</footer>
+</div>
+</body>
+</html>

@@ -1,0 +1,176 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex">
+<title>The docs have 441 pages. I couldn't find one about AI Compute · Davyd Konstantinov</title>
+<meta name="description" content="A short note for the Servers.com support team: what I found when I used servers.com like a new customer, and how sure I am about each point.">
+<meta property="og:title" content="The docs have 441 pages. I couldn't find one about AI Compute.">
+<meta property="og:description" content="A short note for the Servers.com support team, with how sure I am about each point.">
+<meta property="og:type" content="article">
+<style>
+@font-face{font-family:"Plex";src:url(../fonts/ibm-plex-sans-latin-400-normal.woff2) format("woff2");font-weight:400;font-display:swap}
+@font-face{font-family:"Plex";src:url(../fonts/ibm-plex-sans-latin-600-normal.woff2) format("woff2");font-weight:600;font-display:swap}
+@font-face{font-family:"Plex Mono";src:url(../fonts/ibm-plex-mono-latin-400-normal.woff2) format("woff2");font-weight:400;font-display:swap}
+@font-face{font-family:"Plex Mono";src:url(../fonts/ibm-plex-mono-latin-500-normal.woff2) format("woff2");font-weight:500;font-display:swap}
+:root{--paper:#f3f4f4;--ink:#161818;--sec:#454c4c;--mute:#68706f;--line:rgba(22,24,24,.14);--panel:#1a1d1d;--on-panel:#eef1f1;--panel-mute:#9ba5a5;--gap:#ff7566;--gap-ink:#b8261a;--ok:#1d7a4a;--accent:#1c5fd0;--sans:"Plex","Segoe UI",system-ui,-apple-system,Roboto,sans-serif;--mono:"Plex Mono",ui-monospace,"Cascadia Mono",Consolas,monospace;--ease:cubic-bezier(.22,1,.36,1)}
+*{box-sizing:border-box;margin:0}
+html{-webkit-text-size-adjust:100%}
+body{background:var(--paper);color:var(--ink);font:400 1.0625rem/1.65 var(--sans);-webkit-font-smoothing:antialiased}
+a{color:var(--accent);text-underline-offset:3px}
+:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:3px}
+.wrap{max-width:880px;margin:0 auto;padding:0 24px}
+header{display:flex;justify-content:space-between;align-items:center;height:64px;font-size:.9375rem;color:var(--mute)}
+header a{color:var(--sec);text-decoration:none}
+header a:hover{color:var(--ink)}
+h1{font:600 clamp(2.125rem,5.4vw,3.375rem)/1.06 var(--sans);letter-spacing:-.025em;max-width:17em;text-wrap:balance;margin:40px 0 20px}
+h2{font:600 1.5rem/1.25 var(--sans);letter-spacing:-.01em;max-width:24em;text-wrap:balance;margin-bottom:12px}
+.lead{max-width:34rem;color:var(--sec);font-size:1.1875rem;line-height:1.6}
+.note{max-width:34rem;color:var(--mute);font-size:.9375rem;margin-top:12px}
+p{max-width:34rem}
+p+p{margin-top:12px}
+code,.mono{font-family:var(--mono);font-size:.875em}
+
+/* the chart: the one loud thing on the page */
+.chart{background:var(--panel);color:var(--on-panel);border-radius:14px;padding:28px 28px 24px;margin:36px 0 0}
+.chart-head{display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px 24px;align-items:baseline;margin-bottom:22px}
+.chart-head b{font-weight:600;font-size:1rem}
+.legend{display:flex;gap:18px;font-size:.8125rem;color:var(--panel-mute)}
+.legend i{display:inline-block;width:10px;height:10px;border-radius:2px;margin-right:7px;vertical-align:-1px}
+.rows{list-style:none;padding:0}
+.rows li{display:grid;grid-template-columns:11rem 1fr 2.5rem;gap:16px;align-items:center;min-height:42px}
+.rows .name{font-size:.9375rem}
+.track{height:26px;position:relative}
+.bar{height:100%;border-radius:3px;background:#6c7676;transform-origin:left center;animation:grow .9s var(--ease) both;animation-delay:calc(var(--i)*90ms + 250ms)}
+.bar.home{background:#f1f4f4}
+.none{height:100%;border:1px dashed var(--gap);border-radius:3px;display:flex;align-items:center;padding-left:12px;font:500 .8125rem var(--mono);color:var(--gap);animation:fade .6s ease both;animation-delay:1.3s}
+.count{font:500 .9375rem var(--mono);text-align:right}
+.count.zero{color:var(--gap)}
+.src{margin:20px 0 0;max-width:none;font-size:.8125rem;line-height:1.55;color:var(--panel-mute)}
+@keyframes grow{from{transform:scaleX(0)}}
+@keyframes fade{from{opacity:0}}
+
+/* findings: plain document, no cards */
+section{margin-top:72px;display:grid;grid-template-columns:11.5rem minmax(0,1fr);gap:0 32px}
+.say{max-width:36rem}
+.say p,.idea,.check,dl{max-width:36rem}
+.idea{border-left:3px solid var(--accent);padding-left:16px;margin-top:20px;max-width:34rem;color:var(--sec)}
+.check{font:400 .875rem/1.6 var(--mono);background:#e6e8e8;border-radius:8px;padding:12px 14px;margin-top:20px;max-width:34rem;color:var(--sec)}
+.conf{font-size:.875rem;line-height:1.45;color:var(--mute);border-left:3px solid var(--ok);padding:2px 0 2px 12px;align-self:start;margin-top:8px}
+.conf b{display:block;font-weight:600;color:var(--ink);margin-bottom:2px}
+.conf.lo{border-left-color:#c98a1b}
+
+.pair{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:24px 0 0;max-width:620px}
+.snap{border:1px solid var(--line);border-radius:10px;padding:14px;background:#fafbfb;position:relative}
+.snap .l{display:block;height:6px;border-radius:3px;background:#c9cfcf;margin-bottom:6px}
+.snap .l:nth-child(2){width:60%}
+.tip{display:inline-block;background:var(--ink);color:#fff;font-size:.6875rem;line-height:1;padding:6px 8px;border-radius:4px;margin:6px 0 10px}
+.void{height:64px;border-radius:6px;background:repeating-linear-gradient(135deg,#eceeee 0 6px,#f6f7f7 6px 12px)}
+.form{display:grid;grid-template-columns:1fr 1fr;gap:6px}
+.form i{height:16px;border-radius:3px;background:#e1e5e5}
+.form i.w{grid-column:span 2;height:26px}
+.snap figcaption{font-size:.8125rem;color:var(--mute);margin-top:10px}
+.pairnote{font-size:.8125rem;color:var(--mute);margin-top:10px}
+dl{display:grid;grid-template-columns:11rem 1fr;gap:0;margin-top:24px;max-width:34rem;font-size:.9375rem}
+dt,dd{padding:9px 0;border-top:1px solid var(--line)}
+dt{font:400 .8125rem/1.8 var(--mono);color:var(--mute)}
+dl>:nth-last-child(-n+2){border-bottom:1px solid var(--line)}
+
+.close{margin:80px 0 0;padding:32px 0 0;border-top:1px solid var(--ink)}
+.close p{font-size:1.125rem;max-width:36rem}
+.close .small{font-size:.9375rem;color:var(--sec);margin-top:16px}
+footer{padding:48px 0 56px;color:var(--mute);font-size:.8125rem}
+
+@media (max-width:640px){
+ .wrap{padding:0 18px}
+ .chart{padding:22px 16px 20px;border-radius:12px}
+ .rows li{grid-template-columns:1fr 2.5rem;gap:2px 12px;padding:6px 0}
+ .rows .name{grid-column:1/-1;font-size:.875rem}
+ .pair{grid-template-columns:1fr}
+ dl{grid-template-columns:1fr}
+ dt{border-bottom:0;padding-bottom:0}
+ dd{border-top:0;padding-top:0}
+ dt{border-top:1px solid var(--line);padding-top:9px}
+ section{margin-top:56px;grid-template-columns:1fr}
+ .conf{margin:0 0 14px}
+}
+@media (prefers-reduced-motion:reduce){.bar,.none{animation:none}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header><a href="../index.html">← Davyd Konstantinov</a><span>10 November 2026</span></header>
+
+<main>
+<h1>The docs have 441 pages. I couldn't find one about AI Compute.</h1>
+<p class="lead">I'm applying for the Junior Support Engineer role. Before writing to you, I used servers.com like a new customer and looked at what a customer reads when they come for help. Below is what I found, and how sure I am about each point.</p>
+<p class="note">I have no account and no inside view, only Chrome on Windows. If something here is intentional, ignore it.</p>
+
+<div class="chart" role="group" aria-labelledby="ct">
+<div class="chart-head"><b id="ct">Docs pages per product</b>
+<span class="legend"><span><i style="background:#f1f4f4"></i>on the homepage</span><span><i style="background:#6c7676"></i>not on the homepage</span></span></div>
+<ul class="rows">
+<li><span class="name">Enterprise Bare Metal</span><div class="track"><div class="bar home" style="--i:0;width:100%"></div></div><span class="count">19</span></li>
+<li><span class="name">Managed Kubernetes</span><div class="track"><div class="bar" style="--i:1;width:84.2%"></div></div><span class="count">16</span></li>
+<li><span class="name">Cloud Servers</span><div class="track"><div class="bar" style="--i:2;width:73.7%"></div></div><span class="count">14</span></li>
+<li><span class="name">Forex VPS</span><div class="track"><div class="bar" style="--i:3;width:26.3%"></div></div><span class="count">5</span></li>
+<li><span class="name">Scalable Bare Metal</span><div class="track"><div class="bar home" style="--i:4;width:15.8%"></div></div><span class="count">3</span></li>
+<li><span class="name">AI Compute</span><div class="track"><div class="none">no page found</div></div><span class="count zero">0</span></li>
+</ul>
+<p class="src">My count of URLs per product in <span class="mono">servers.com/docs/sitemap.xml</span> (441 URLs in total), 10 Nov 2026. The API reference (222) and the tutorials (75) are not counted.</p>
+</div>
+
+<section>
+<div class="conf"><b>High confidence</b>Anyone can check it in a minute.</div>
+<div class="body">
+<h2>AI Compute is a headline product on the homepage and has nothing in the docs</h2>
+<div class="say">
+<p>AI Compute is one of the three products at the top of the homepage, and it has its own product page. In the documentation I found no page for it. The product list in the docs sidebar names Enterprise Bare Metal, Scalable Bare Metal, Cloud Servers, Managed Kubernetes and Forex VPS. The docs sitemap has no AI Compute URL, and <span class="mono">docs/llms.txt</span> mentions neither AI Compute nor GPUs.</p>
+<p>A customer who clicks through from the homepage to learn how to start has nowhere to land, and may open a ticket instead. The same gap affects an AI assistant that answers from <span class="mono">llms.txt</span>.</p>
+</div>
+<p class="idea">A one-page quick start for AI Compute, or at least a link to its product page at the top of the docs sidebar.</p>
+<div class="check">To check: open servers.com/docs/llms.txt and search for "AI Compute" and "GPU".</div>
+</div>
+</section>
+
+<section>
+<div class="conf lo"><b>Lower confidence</b>Seen twice, not repeated.</div>
+<div class="body">
+<h2>A contact form replaced by a cookie message</h2>
+<div class="say">
+<p>On two visits in my browser, the "Get in touch" page showed an empty block where the form should be, with a tooltip over the intro text: "Please accept the cookie consent". I had rejected cookies.</p>
+<p>I couldn't make it happen again. I cleared the consent cookie and tried again with "Reject All", with the banner's close button and with reloads. The form showed up every time. So I can't tell you what triggers it. I'm mentioning it because a visitor in that state can't write to you, and it may depend on a consent saved by an earlier visit.</p>
+</div>
+<figure class="pair">
+<div class="snap"><span class="l"></span><span class="l"></span><span class="tip">Please accept the cookie consent</span><div class="void"></div><figcaption>What I saw</figcaption></div>
+<div class="snap"><span class="l"></span><span class="l"></span><div class="form" style="margin-top:22px"><i></i><i></i><i class="w"></i><i class="w"></i></div><figcaption>What it shows when it works</figcaption></div>
+</figure>
+<p class="pairnote">Redrawn by me, not a screenshot. I can send the screenshot I took.</p>
+<dl>
+<dt>Page</dt><dd>servers.com/contact-us</dd>
+<dt>Browser</dt><dd>Chrome 157, Windows</dd>
+<dt>Seen</dt><dd>Twice, in the same browser profile</dd>
+<dt>Repeated from a clean state</dt><dd>No</dd>
+</dl>
+<p class="idea">If real visitors ever hit it, a line like "Prefer email? support@servers.com" next to the form block would cover them whatever the cookie choice is.</p>
+</div>
+</section>
+
+<section>
+<div class="conf"><b>Works well</b>Checked on the same visit.</div>
+<div class="body">
+<h2>Easy to start from the docs front page and the contact page</h2>
+<div class="say"><p>The docs front page puts the quick start, the API, the CLI and the Terraform provider in one place. The contact page shows the knowledge base, a ticket link and support@servers.com side by side. A new customer can find where to go without guessing.</p></div>
+</div>
+</section>
+
+<div class="close">
+<p>This is how I'd write on a ticket: what I saw, how sure I am, what I tried. I write support replies and help-center articles in English, and the samples are <a href="../support-samples.html">here</a>.</p>
+<p class="small">If a short written test would help, send it and I'll do it. <a href="mailto:davidcoolld@gmail.com">davidcoolld@gmail.com</a> · <a href="../index.html#cv">CV and site</a></p>
+</div>
+</main>
+<footer>© Davyd Konstantinov. The page uses IBM Plex (SIL Open Font License).</footer>
+</div>
+</body>
+</html>

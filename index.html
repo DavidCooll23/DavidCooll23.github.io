@@ -4,31 +4,49 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Davyd Konstantinov — remote support, testing and AI automation</title>
-<meta name="description" content="Looking for a remote job: customer and technical support in 4 languages, manual testing, AI automation. Projects on video and CVs in PDF.">
+<meta name="description" content="Looking for a remote job: customer and technical support in English and Slovak, manual testing, AI automation. Projects on video and CVs in PDF.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://davidcooll23.github.io/">
+<meta property="og:title" content="Davyd Konstantinov — remote support, testing and AI automation">
+<meta property="og:description" content="Customer and technical support, manual testing and AI automation. 100% remote, English and Slovak. Projects on video, CVs in PDF.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%231c6ee8'/%3E%3Ctext x='16' y='22' font-family='Segoe UI,Arial' font-weight='700' font-size='16' text-anchor='middle' fill='white'%3EDK%3C/text%3E%3C/svg%3E">
+<meta name="theme-color" content="#f5f7fa">
+<link rel="preload" href="fonts/ibm-plex-sans-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/ibm-plex-sans-latin-600-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/ibm-plex-sans-latin-ext-600-normal.woff2" as="font" type="font/woff2" crossorigin>
 <style>
+@font-face{font-family:"Plex";src:url(fonts/ibm-plex-sans-latin-400-normal.woff2) format("woff2");font-weight:400;font-display:swap;unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+@font-face{font-family:"Plex";src:url(fonts/ibm-plex-sans-latin-ext-400-normal.woff2) format("woff2");font-weight:400;font-display:swap;unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF}
+@font-face{font-family:"Plex";src:url(fonts/ibm-plex-sans-latin-600-normal.woff2) format("woff2");font-weight:600;font-display:swap;unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+@font-face{font-family:"Plex";src:url(fonts/ibm-plex-sans-latin-ext-600-normal.woff2) format("woff2");font-weight:600;font-display:swap;unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF}
+@font-face{font-family:"Plex Mono";src:url(fonts/ibm-plex-mono-latin-400-normal.woff2) format("woff2");font-weight:400;font-display:swap}
 /* unslop pass 2026-11-09 (unslop by @heydamir, CC BY 4.0): ink-tinted ramp, one accent, Telegram chat as the one bright moment */
 :root{
  --bg:#f5f7fa;--card:#fff;--raised:#eaeef4;--line:rgba(17,24,39,.09);
  --ink:#111827;--sec:#4b5565;--mute:#6b7487;
  --accent:#1c6ee8;--accent-press:#155ac2;
  --wall:#dfe8f0;
- --mono:ui-monospace,"Cascadia Mono",Consolas,monospace;
+ --mono:"Plex Mono",ui-monospace,"Cascadia Mono",Consolas,monospace;
+ --font:"Plex","Segoe UI",system-ui,-apple-system,Roboto,sans-serif;
  --ease:cubic-bezier(.22,1,.36,1);
  --tick:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 12' fill='none' stroke='black' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M1.5 6.5l3.5 3.5L12.5 2.5'/%3E%3Cpath d='M9 10l7.5-7.5'/%3E%3C/svg%3E");
 }
 *{box-sizing:border-box;margin:0}
 html{scroll-behavior:smooth}
-body{background:var(--bg);color:var(--ink);font:16px/1.6 "Segoe UI Variable Text","Segoe UI",system-ui,-apple-system,Roboto,sans-serif;-webkit-font-smoothing:antialiased}
+body{background:radial-gradient(60rem 28rem at 88% -8%,rgba(28,110,232,.11),transparent 62%) no-repeat,var(--bg);color:var(--ink);font:16px/1.6 var(--font);-webkit-font-smoothing:antialiased;overflow-x:clip}
 a{color:inherit}
 :focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:4px}
 .wrap{max-width:1120px;margin:0 auto;padding:0 24px}
-h1,h2,h3{font-family:"Segoe UI Variable Display","Segoe UI",system-ui,sans-serif;font-weight:500}
+h1,h2,h3{font-weight:600}
+h1,h2{text-wrap:balance}
 h1{font-size:clamp(2.5rem,6.4vw,4.25rem);line-height:1.04;letter-spacing:-.03em;font-weight:600;max-width:14ch}
 h2{font-size:clamp(1.75rem,3.6vw,2.25rem);line-height:1.15;letter-spacing:-.02em;margin-bottom:32px}
 h3{font-size:1.125rem;line-height:1.35;font-weight:600}
 section{padding:48px 0}
 /* top bar */
-header{display:flex;justify-content:space-between;align-items:center;height:64px}
+header{display:flex;align-items:center;height:64px;position:sticky;top:0;z-index:20;isolation:isolate}
+header::before{content:"";position:absolute;inset:0 calc(50% - 50vw);z-index:-1;background:rgba(245,247,250,.78);-webkit-backdrop-filter:blur(14px) saturate(1.5);backdrop-filter:blur(14px) saturate(1.5);border-bottom:1px solid var(--line);opacity:0;transition:opacity .3s var(--ease)}
+header.stuck::before{opacity:1}
 .name{font-weight:600;font-size:1rem}
 .lang{display:flex;gap:4px;padding:4px;border:1px solid var(--line);border-radius:10px;background:var(--card)}
 .lang button{font:inherit;font-size:.8125rem;font-weight:500;border:0;background:none;height:28px;padding:0 12px;border-radius:6px;cursor:pointer;color:var(--sec);transition:background-color .15s var(--ease),color .15s var(--ease)}
@@ -63,6 +81,10 @@ header{display:flex;justify-content:space-between;align-items:center;height:64px
 .msgs .b:nth-child(1){animation-delay:.3s}.msgs .b:nth-child(2){animation-delay:1.1s}.msgs .b:nth-child(3){animation-delay:1.9s}.msgs .b:nth-child(4){animation-delay:2.7s}
 .chat .note{font-size:.75rem;color:var(--mute);text-align:center;padding:12px 16px}
 @keyframes rise{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+/* facts a recruiter asks first */
+.facts{list-style:none;padding:20px 0 0;display:grid;grid-template-columns:1fr 1fr;gap:16px 24px;border-top:1px solid var(--line);margin-top:-24px}
+.facts li{font-size:.9375rem;font-weight:500;line-height:1.4;padding-left:14px;border-left:2px solid var(--accent)}
+@media(min-width:760px){.facts{grid-template-columns:repeat(4,1fr);margin-top:-32px}}
 /* work */
 .cards{display:grid;gap:24px}
 .card{background:var(--card);border:1px solid var(--line);border-radius:16px;overflow:hidden;display:flex;flex-direction:column}
@@ -113,16 +135,50 @@ footer{padding:0 0 40px;color:var(--mute);font-size:.8125rem}
  .contact{padding:56px}
 }
 @media(prefers-reduced-motion:reduce){.b{animation:none;opacity:1}html{scroll-behavior:auto}.btn{transition:none}}
+/* premium layer: motion that answers scroll and hover, nothing decorative */
+:root{interpolate-size:allow-keywords}
+::selection{background:var(--accent);color:#fff}
+html{scroll-padding-top:84px}
+.name{margin-right:auto}
+.mini{height:36px;padding:0 14px;font-size:.875rem;margin-right:12px;opacity:0;transform:translateY(-4px);pointer-events:none;transition:opacity .3s var(--ease),transform .3s var(--ease),background-color .15s var(--ease)}
+header.stuck .mini{opacity:1;transform:none;pointer-events:auto}
+.progress{position:fixed;left:0;top:0;height:2px;width:100%;background:var(--accent);transform:scaleX(0);transform-origin:0 50%;z-index:30}
+@supports (animation-timeline:scroll()){.progress{animation:grow linear both;animation-timeline:scroll(root)}}
+@keyframes grow{to{transform:scaleX(1)}}
+.hero h1,.hero .lead,.hero .gets,.hero .btns{animation:rise .8s var(--ease) both}
+.hero .lead{animation-delay:.08s}.hero .gets{animation-delay:.16s}.hero .btns{animation-delay:.24s}
+.js .rv{opacity:0;transform:translateY(18px);transition:opacity .7s var(--ease),transform .7s var(--ease)}
+.js .rv.in{opacity:1;transform:none}
+#work,#process,#faq,#cv{content-visibility:auto;contain-intrinsic-size:auto 640px}
+@media(hover:hover){
+ .card,.box{transition:transform .4s var(--ease),box-shadow .4s var(--ease),border-color .4s var(--ease)}
+ .js .card.rv.in,.js .box.rv.in{transition:transform .4s var(--ease),box-shadow .4s var(--ease),border-color .4s var(--ease),opacity .7s var(--ease)}
+ .card:hover,.box:hover{transform:translateY(-4px);box-shadow:0 1px 2px rgba(17,24,39,.06),0 14px 34px rgba(17,24,39,.10);border-color:rgba(28,110,232,.28)}
+}
+.faq{display:grid;border-top:1px solid var(--line);max-width:760px}
+.faq details{border-bottom:1px solid var(--line)}
+.faq summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:16px;padding:20px 0;font-weight:600;font-size:1.0625rem}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"";flex:none;width:20px;height:20px;background:linear-gradient(var(--accent),var(--accent)) center/100% 2px no-repeat,linear-gradient(var(--accent),var(--accent)) center/2px 100% no-repeat;transition:transform .4s var(--ease)}
+.faq details[open] summary::after{transform:rotate(135deg)}
+.faq summary:hover{color:var(--accent)}
+.faq details::details-content{block-size:0;overflow:clip;transition:block-size .4s var(--ease),content-visibility .4s allow-discrete}
+.faq details[open]::details-content{block-size:auto}
+.faq details p{color:var(--sec);max-width:60ch;padding-bottom:22px}
+.slot video{opacity:0;transition:opacity .5s var(--ease)}
+.slot.ok video{opacity:1}
+@media(prefers-reduced-motion:reduce){.progress{display:none}.hero h1,.hero .lead,.hero .gets,.hero .btns{animation:none}.js .rv{opacity:1;transform:none;transition:none}.card:hover,.box:hover{transform:none}.faq details::details-content,.faq summary::after,.mini{transition:none}}
 </style>
 </head>
 <body>
+<div class="progress" aria-hidden="true"></div>
 <div class="wrap">
 <header>
   <span class="name">Davyd Konstantinov</span>
+  <a class="btn main mini" href="mailto:davidcoolld@gmail.com" data-i="mail"></a>
   <div class="lang" role="group" aria-label="Language">
     <button type="button" data-set="sk" aria-pressed="true">SK</button>
     <button type="button" data-set="en" aria-pressed="false">EN</button>
-    <button type="button" data-set="ru" aria-pressed="false">RU</button>
   </div>
 </header>
 <main>
@@ -134,6 +190,7 @@ footer{padding:0 0 40px;color:var(--mute);font-size:.8125rem}
     <div class="btns">
       <a class="btn main" href="mailto:davidcoolld@gmail.com" data-i="mail"></a>
       <a class="btn" href="#cv" data-i="cvb"></a>
+      <a class="btn" href="support-samples.html" data-i="smp"></a>
     </div>
   </div>
   <div class="chat" aria-hidden="true">
@@ -147,6 +204,7 @@ footer{padding:0 0 40px;color:var(--mute);font-size:.8125rem}
     <div class="note" data-i="cn"></div>
   </div>
 </div>
+<ul class="facts"><li data-i="f1"></li><li data-i="f2"></li><li data-i="f3"></li><li data-i="f4"></li></ul>
 
 <section id="roles">
   <h2 data-i="rh"></h2>
@@ -188,6 +246,16 @@ footer{padding:0 0 40px;color:var(--mute);font-size:.8125rem}
   </ol>
 </section>
 
+<section id="faq">
+  <h2 data-i="faqh"></h2>
+  <div class="faq">
+    <details><summary data-i="q1"></summary><p data-i="a1"></p></details>
+    <details><summary data-i="q2"></summary><p data-i="a2"></p></details>
+    <details><summary data-i="q3"></summary><p data-i="a3"></p></details>
+    <details><summary data-i="q4"></summary><p data-i="a4"></p></details>
+  </div>
+</section>
+
 <section id="cv">
   <h2 data-i="cvh"></h2>
   <div class="cvs">
@@ -214,17 +282,18 @@ footer{padding:0 0 40px;color:var(--mute);font-size:.8125rem}
 const T={
 sk:{
 title:"Davyd Konstantinov — podpora, testovanie a AI automatizácia (remote)",
-desc:"Hľadám prácu z domu: zákaznícka a technická podpora v 4 jazykoch, manuálne testovanie, AI automatizácia. Projekty na videu a životopisy v PDF.",
+desc:"Hľadám prácu z domu: zákaznícka a technická podpora v angličtine a slovenčine, manuálne testovanie, AI automatizácia. Projekty na videu a životopisy v PDF.",
 h1:"Podpora, testovanie a AI automatizácia na diaľku",
-lead:"Hľadám prácu z domu na plný alebo čiastočný úväzok. Hovorím štyrmi jazykmi a to, čo postavím, aj sám otestujem.",
-g1:"Ukrajinčina, ruština, angličtina a slovenčina",
+lead:"Hľadám prácu z domu na plný alebo čiastočný úväzok. Hovorím po anglicky a po slovensky a to, čo postavím, aj sám otestujem.",
+g1:"Angličtina a slovenčina",
+f1:"100 % práca z domu",f2:"Pracovná zmluva",f3:"Povolenie na pobyt za účelom zamestnania je schválené",f4:"Pásmo CET, Bratislava",
 g2:"Chybu zopakujem, nájdem príčinu a opíšem ju tak, aby ju vývojár hneď opravil",
 g3:"S AI stavám Telegram boty a automatizácie, ktoré fungujú a sú na videu",
-mail:"Napísať e-mail",cvb:"Životopis (PDF)",tg:"Telegram",
+mail:"Napísať e-mail",cvb:"Životopis (PDF)",smp:"Ukážky práce (EN)",tg:"Telegram",
 c0:"Rezervačný bot",c1:"Ahoj! Strih zajtra po piatej?",c2:"Voľné: 17:00, 18:30, 19:00. Ktorý termín?",c3:"18:30",c4:"Zarezervované. Pripomeniem 2 hodiny vopred.",
 cn:"Ukážka z môjho projektu, nie skutočná konverzácia",
 rh:"Na aké pozície sa hlásim",
-r1t:"Zákaznícka a technická podpora",r1p:"Chat, e-mail a telefón v štyroch jazykoch. Trpezlivo zistím, čo sa stalo, a riešenie vysvetlím jednoducho.",
+r1t:"Zákaznícka a technická podpora",r1p:"Chat a e-mail v angličtine a slovenčine. Trpezlivo zistím, čo sa stalo, a riešenie vysvetlím jednoducho.",
 r2t:"Tester / QA junior",r2p:"Manuálne testovanie botov, formulárov a prepojení. Hlásenia chýb s krokmi, očakávaným výsledkom a logmi.",
 r3t:"AI automatizácia",r3p:"Telegram boty, n8n workflowy a Python skripty, ktoré berú rutinu z rúk tímu. AI je môj hlavný nástroj.",
 work:"Moje projekty",soon:"Video už čoskoro",demo:"Vyskúšať živé demo v Telegrame",
@@ -233,7 +302,12 @@ w2t:"Monitor inzerátov a cien",w2p:"Sleduje bazos.sk, nové inzeráty ukladá d
 w3t:"Telegram e-shop",w3p:"Katalóg, košík a objednávka priamo v chate.",
 w4t:"Dopyty z webu v n8n",w4p:"Dopyt z formulára sa uloží do tabuľky a majiteľovi príde správa do Telegramu. Webhook je chránený tajnou hlavičkou.",
 w5p:"Ovládanie hudby a hlasitosti v počítači z hodiniek alebo telefónu cez domácu sieť.",
-lgh:"Jazyky",lgp:"Ukrajinčina a ruština sú moje materinské jazyky. Angličtina na úrovni B2, písomne sa dohovorím isto. Slovenčine dobre rozumiem a bežne sa dohovorím.",
+lgh:"Jazyky",lgp:"Angličtina na úrovni B2, písomne sa dohovorím isto. Slovenčine dobre rozumiem a bežne sa dohovorím.",
+faqh:"Čo sa ľudia pýtajú ako prvé",
+q1:"Používate AI?",a1:"Áno, otvorene. S AI asistentmi (Claude Code) stavám boty a automatizácie a píšem návrhy odpovedí. Každé rozhodnutie a výsledok kontrolujem sám a za výsledok zodpovedám.",
+q2:"Môžem vás zamestnať, keď ste cudzinec?",a2:"Mám schválené povolenie na pobyt za účelom zamestnania. Nový zamestnávateľ si vyžiada potvrdenie ÚPSVaR. Hľadám pracovnú zmluvu, nie živnosť.",
+q3:"Prečo sklad a prečo teraz IT?",a3:"Teraz pracujem v sklade. Podporu a testovanie robím vo svojich projektoch: boty som postavil, otestoval a zdokumentoval, ako je vidno na videách vyššie.",
+q4:"Aký formát práce hľadáte?",a4:"100 % z domu a hlavne písomná komunikácia: chat, e-mail, tikety. Na pohovory a porady s tímom sa rád pripojím.",
 prch:"Ako pracujem",
 s1t:"Pochopím úlohu",s1p:"Opýtam sa, čo presne má fungovať a pre koho, a zapíšem to ako jasné zadanie.",
 s2t:"Postavím s AI",s2p:"Riešenie robím s AI asistentmi (Claude Code). Rozhodnutia a výsledok kontrolujem sám.",
@@ -243,17 +317,18 @@ cvh:"Životopisy",
 ch:"Hľadám prácu na diaľku",cp:"Podpora, testovanie alebo AI automatizácia, plný alebo čiastočný úväzok. Mám schválený pobyt za účelom zamestnania; nový zamestnávateľ si vybaví potvrdenie ÚPSVaR. Napíšte, rád ukážem demo naživo."},
 en:{
 title:"Davyd Konstantinov — support, testing and AI automation (remote)",
-desc:"Looking for a remote job: customer and technical support in 4 languages, manual testing, AI automation. Projects on video and CVs in PDF.",
+desc:"Looking for a remote job: customer and technical support in English and Slovak, manual testing, AI automation. Projects on video and CVs in PDF.",
 h1:"Remote support, testing and AI automation",
-lead:"Looking for a remote job, full-time or part-time. I speak four languages and I test what I build myself.",
-g1:"Ukrainian, Russian, English and Slovak",
+lead:"Looking for a remote job, full-time or part-time. I speak English and Slovak, and I test what I build myself.",
+g1:"English and Slovak",
+f1:"100% remote",f2:"Employment contract",f3:"Residence permit for employment approved",f4:"CET time zone, Bratislava",
 g2:"I reproduce a bug, find the cause and describe it so a developer can fix it right away",
 g3:"I build Telegram bots and automations with AI; they work and are shown on video",
-mail:"Send an email",cvb:"CV (PDF)",tg:"Telegram",
+mail:"Send an email",cvb:"CV (PDF)",smp:"Support writing samples",tg:"Telegram",
 c0:"Booking bot",c1:"Hi! Haircut tomorrow after 5pm?",c2:"Free: 17:00, 18:30, 19:00. Which one?",c3:"18:30",c4:"Booked. I'll remind you 2 hours before.",
 cn:"From one of my projects, not a real chat",
 rh:"Roles I'm applying for",
-r1t:"Customer & technical support",r1p:"Chat, email and phone in four languages. I patiently find out what happened and explain the fix in plain words.",
+r1t:"Customer & technical support",r1p:"Chat and email in English and Slovak. I patiently find out what happened and explain the fix in plain words.",
 r2t:"Junior QA tester",r2p:"Manual testing of bots, forms and integrations. Bug reports with steps, expected result and logs.",
 r3t:"AI automation",r3p:"Telegram bots, n8n workflows and Python scripts that take routine work off a team. AI is my main tool.",
 work:"My projects",soon:"Video coming soon",demo:"Try the live demo in Telegram",
@@ -262,43 +337,19 @@ w2t:"Listing and price monitor",w2p:"Watches bazos.sk, saves new listings to Goo
 w3t:"Telegram shop bot",w3p:"Catalog, cart and checkout right inside the chat.",
 w4t:"Website leads in n8n",w4p:"A form request is saved to a sheet and the owner gets a Telegram message. The webhook is protected by a secret header.",
 w5p:"Control music and volume on a PC from a watch or phone over the home network.",
-lgh:"Languages",lgp:"Ukrainian and Russian are my native languages. English at B2, confident in writing. I understand Slovak well and handle everyday conversation.",
+lgh:"Languages",lgp:"English at B2, confident in writing. I understand Slovak well and handle everyday conversation.",
+faqh:"What people ask first",
+q1:"Do you use AI?",a1:"Yes, openly. I build bots and automations with AI assistants (Claude Code) and draft replies with them. I check every decision and result myself and I answer for the result.",
+q2:"Can you be hired as a foreigner?",a2:"I have an approved residence permit for employment. A new employer needs the labour office confirmation (ÚPSVaR). I am looking for an employment contract, not freelance.",
+q3:"Why a warehouse, and why IT now?",a3:"I work in a warehouse today. I do the support and testing work in my own projects: I built, tested and documented the bots, as the videos above show.",
+q4:"What kind of work are you after?",a4:"100% remote and mostly written: chat, email, tickets. I am happy to join interviews and team calls.",
 prch:"How I work",
 s1t:"Understand the task",s1p:"I ask what exactly has to work and for whom, and write it down as a clear brief.",
 s2t:"Build with AI",s2p:"I build with AI assistants (Claude Code). I check the decisions and the result myself.",
 s3t:"Test",s3p:"Normal path, wrong input, duplicates, restarts and outages. Only then is it done.",
 s4t:"Hand over and document",s4p:"A short guide on what it does and how to restart it, so someone else can run it too.",
 cvh:"CVs",
-ch:"Looking for a remote job",cp:"Support, testing or AI automation, full-time or part-time. I have a Slovak residence permit for employment; a new employer needs a labour office confirmation (ÚPSVaR). Write to me, I'm happy to show a live demo."},
-ru:{
-title:"Davyd Konstantinov — поддержка, тестирование и AI-автоматизация (удалённо)",
-desc:"Ищу удалённую работу: поддержка клиентов и техподдержка на 4 языках, ручное тестирование, AI-автоматизация. Проекты на видео и резюме в PDF.",
-h1:"Поддержка, тестирование и AI-автоматизация удалённо",
-lead:"Ищу удалённую работу, полный или неполный день. Говорю на четырёх языках и сам тестирую то, что делаю.",
-g1:"Украинский, русский, английский и словацкий",
-g2:"Воспроизвожу ошибку, нахожу причину и описываю так, чтобы разработчик сразу исправил",
-g3:"С AI делаю Telegram-боты и автоматизации, которые работают и показаны на видео",
-mail:"Написать на почту",cvb:"Резюме (PDF)",tg:"Telegram",
-c0:"Бот записи",c1:"Привет! Стрижка завтра после 17:00?",c2:"Свободно: 17:00, 18:30, 19:00. Какое время?",c3:"18:30",c4:"Записал. Напомню за 2 часа.",
-cn:"Пример из моего проекта, не реальная переписка",
-rh:"На какие позиции я откликаюсь",
-r1t:"Поддержка клиентов и техподдержка",r1p:"Чат, почта и телефон на четырёх языках. Спокойно выясню, что случилось, и объясню решение простыми словами.",
-r2t:"Тестировщик (junior QA)",r2p:"Ручное тестирование ботов, форм и интеграций. Баг-репорты с шагами, ожидаемым результатом и логами.",
-r3t:"AI-автоматизация",r3p:"Telegram-боты, сценарии n8n и Python-скрипты, которые снимают с команды рутину. AI — мой основной инструмент.",
-work:"Мои проекты",soon:"Видео скоро будет",demo:"Открыть живое демо в Telegram",
-w1t:"Бот записи для салона",w1p:"Клиент пишет «есть окно в пятницу после 5?», ИИ-ассистент предлагает свободное время и записывает. Владелец подтверждает в один клик, бот напоминает о визите. 4 языка.",
-w2t:"Монитор объявлений и цен",w2p:"Следит за bazos.sk, складывает новые объявления в Google Sheets и сразу присылает уведомление в Telegram.",
-w3t:"Telegram-магазин",w3p:"Каталог, корзина и оформление заказа прямо в чате.",
-w4t:"Заявки с сайта в n8n",w4p:"Заявка из формы сохраняется в таблицу, а владельцу приходит сообщение в Telegram. Вебхук защищён секретным заголовком.",
-w5p:"Управление музыкой и громкостью на компьютере с часов или телефона по домашней сети.",
-lgh:"Языки",lgp:"Украинский и русский — родные. Английский B2, уверенно пишу. Словацкий хорошо понимаю и спокойно общаюсь в быту.",
-prch:"Как я работаю",
-s1t:"Разбираюсь в задаче",s1p:"Спрашиваю, что именно должно работать и для кого, и записываю это как понятное ТЗ.",
-s2t:"Делаю с AI",s2p:"Собираю решение с AI-ассистентами (Claude Code). Решения и результат проверяю сам.",
-s3t:"Тестирую",s3p:"Обычный путь, неверный ввод, дубли, перезапуск и сбои. Только потом — готово.",
-s4t:"Сдаю и описываю",s4p:"Короткая инструкция: что делает и как перезапустить, чтобы справился и другой человек.",
-cvh:"Резюме",
-ch:"Ищу удалённую работу",cp:"Поддержка, тестирование или AI-автоматизация, полный или неполный день. ВНЖ на работу в Словакии одобрен; новому работодателю нужно potvrdenie ÚPSVaR. Пишите, с радостью покажу демо вживую."}
+ch:"Looking for a remote job",cp:"Support, testing or AI automation, full-time or part-time. I have a Slovak residence permit for employment; a new employer needs a labour office confirmation (ÚPSVaR). Write to me, I'm happy to show a live demo."}
 };
 const els=[...document.querySelectorAll('[data-i]')];
 function setLang(l){
@@ -314,14 +365,28 @@ function setLang(l){
 document.querySelectorAll('[data-set]').forEach(b=>b.onclick=()=>setLang(b.dataset.set));
 let saved='';try{saved=localStorage.lang}catch(e){}
 const bl=(navigator.language||'').slice(0,2);
-setLang(new URLSearchParams(location.search).get('lang')||saved||(bl=='ru'||bl=='uk'?'ru':bl=='en'?'en':'sk'));
-// video slots: show the player only if the file exists
-document.querySelectorAll('.slot').forEach(s=>{
+setLang(new URLSearchParams(location.search).get('lang')||saved||(bl=='en'?'en':'sk'));
+// video slots: attach the file only when the card is near the screen, show the player only if the file exists
+const lazy=new IntersectionObserver(es=>es.forEach(e=>{
+  if(!e.isIntersecting)return;
+  const s=e.target;lazy.unobserve(s);
   const v=document.createElement('video');
-  v.controls=true;v.preload='metadata';v.playsInline=true;v.src=s.dataset.video;
+  v.controls=true;v.preload='metadata';v.playsInline=true;v.src=s.dataset.video+'#t=0.1';
   v.onloadedmetadata=()=>{s.classList.add('ok');s.querySelector('.ph').hidden=true};
   s.appendChild(v);
+}),{rootMargin:'400px'});
+document.querySelectorAll('.slot').forEach(s=>lazy.observe(s));
+// reveal on scroll, staggered inside a row
+document.documentElement.classList.add('js');
+const rv=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');rv.unobserve(e.target)}}),{threshold:.12,rootMargin:'0px 0px -6% 0px'});
+document.querySelectorAll('.box,.card,.steps li,.faq details,.cvl').forEach(e=>{
+  e.style.transitionDelay=([...e.parentNode.children].indexOf(e)%3)*80+'ms';
+  e.classList.add('rv');rv.observe(e);
 });
+// header gets its glass background after the first scroll
+const hd=document.querySelector('header');
+const st=()=>hd.classList.toggle('stuck',scrollY>8);
+addEventListener('scroll',st,{passive:true});st();
 </script>
 </body>
 </html>
