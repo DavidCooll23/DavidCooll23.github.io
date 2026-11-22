@@ -79,7 +79,7 @@ header{min-height:80px;border-bottom:1px solid var(--rule);display:flex;align-it
 .btn.arrow::after,.btn.outward::after{content:none}
 
 /* First screen: text + the customer's booking card, then the salon's Friday as an hour scale */
-.hero{display:grid;grid-template-columns:minmax(0,1fr) minmax(300px,380px);grid-template-areas:"intro client" "cal cal";column-gap:clamp(32px,6vw,110px);row-gap:0;align-items:end;padding:clamp(40px,4.6vw,70px) 0 0}
+.hero{display:grid;grid-template-columns:minmax(0,1fr) minmax(320px,430px);grid-template-areas:"intro client" "cal cal";column-gap:clamp(32px,4vw,64px);row-gap:0;align-items:end;padding:clamp(40px,4.6vw,70px) 0 0}
 .intro{grid-area:intro;padding-bottom:clamp(30px,3.4vw,48px)}
 .location{font-size:14px;color:var(--muted);margin-bottom:16px}
 h1,h2,.thanks h3{font-family:var(--display);font-weight:500;letter-spacing:-.04em;text-wrap:balance}
@@ -99,15 +99,15 @@ h1 em{font-style:normal;padding:0 .06em;margin:0 -.06em;background:linear-gradie
 .minor-link{display:inline-block;padding:7px 0;margin-top:7px;color:var(--muted);font-size:14px}
 
 .hero .live-demo{display:contents}
-.ld-client{grid-area:client;background:var(--white);border:1px solid var(--rule);border-bottom:0;border-radius:10px 10px 0 0;padding:24px;box-shadow:0 34px 60px -42px rgba(20,26,99,.55)}
+.ld-client{grid-area:client;background:var(--white);border:1px solid var(--rule);border-bottom:0;border-radius:10px 10px 0 0;padding:30px 30px 26px;box-shadow:0 34px 60px -42px rgba(20,26,99,.55)}
 .ld-tag{display:block;font:600 13px/1.4 var(--sans);color:var(--blue);margin-bottom:10px}
-.ld-client b{display:block;font:500 21px/1.25 var(--display);letter-spacing:-.04em}
-.ld-day{color:var(--muted);font-size:14px;margin:4px 0 16px}
+.ld-client b{display:block;font:500 clamp(21px,2vw,28px)/1.2 var(--display);letter-spacing:-.04em}
+.ld-day{color:var(--muted);font-size:15px;margin:6px 0 22px}
 .ld-times{display:flex;gap:8px;margin-bottom:12px}
-.ld-times button{flex:1;min-height:46px;padding:6px 8px;border:1px solid var(--rule);border-radius:6px;background:var(--paper);font:15px var(--mono);color:var(--ink)}
+.ld-times button{flex:1;min-height:54px;padding:6px 8px;border:1px solid var(--rule);border-radius:6px;background:var(--paper);font:15px var(--mono);color:var(--ink)}
 .ld-times button:hover{border-color:var(--ink)}
 .ld-times button[aria-pressed=true]{background:var(--marker);border-color:#cdb51f}
-.ld-book{width:100%;min-height:48px;border:0;border-radius:6px;background:var(--ink);color:#fff;font:600 15px var(--sans)}
+.ld-book{width:100%;min-height:54px;border:0;border-radius:6px;background:var(--ink);color:#fff;font:600 15px var(--sans)}
 .ld-book:disabled{background:#1f6b45;cursor:default}
 .ld-hint{margin:12px 0 0;font-size:13px;color:var(--muted)}
 .ld-owner{grid-area:cal;border-top:2px solid var(--ink);padding-top:12px}
@@ -229,6 +229,8 @@ footer{display:flex;justify-content:space-between;align-items:center;gap:16px;pa
   .header-contact::after{width:17px;height:17px;transform:rotate(-40deg)}
   .hero{grid-template-columns:minmax(0,1fr);grid-template-areas:"intro" "client" "cal";row-gap:22px;padding-top:30px;align-items:start}
   .intro{padding-bottom:0}
+  .hero{row-gap:16px;padding-top:20px}.location{margin-bottom:10px}.lead{margin:16px 0 12px}.hero-price-line{margin-bottom:16px}.hero-risk{margin-top:12px}
+  .ld-client{padding:18px}.ld-client b{font-size:21px}.ld-day{margin:2px 0 12px}.ld-times{margin-bottom:10px}.ld-times button,.ld-book{min-height:46px}.ld-hint{margin-top:8px}
   .me{grid-template-columns:132px minmax(0,1fr);gap:14px}
   .ld-client{max-width:520px;border:1px solid var(--rule);border-radius:10px 10px 0 0;box-shadow:none}
   .ld-owner{max-width:520px;margin-top:-22px;background:var(--white);border:1px solid var(--rule);border-top:1px dashed var(--rule);border-radius:0 0 10px 10px;padding:14px 16px 16px;box-shadow:0 34px 60px -42px rgba(20,26,99,.55)}
