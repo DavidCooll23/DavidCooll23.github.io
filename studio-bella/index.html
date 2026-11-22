@@ -273,7 +273,8 @@ html,body{overflow-x:clip}
 footer .mel{margin-left:4px}footer .me{width:56px;height:56px}
 @media(min-width:900px){.galsec .track{display:grid;grid-template-columns:repeat(3,1fr);width:auto}.galsec .track figure{width:auto}}
 @media(min-width:900px){h1{max-width:15ch;font-size:clamp(3rem,5vw,6rem)}}
-.pcsec{--mo-hold:0.5 !important}
+.pcsec{--mo-hold:0.5 !important;min-height:0 !important}
+.dsh{display:none}@media(max-width:640px){.demo [data-i=demo]{display:none}.dsh{display:inline}.demo .wrap{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}}
 section:has(+.pcsec){padding-bottom:0}section:has(+.pcsec) .stmt{margin-bottom:0}
 </style>
 <link rel="stylesheet" href="book.css">
@@ -281,7 +282,7 @@ section:has(+.pcsec){padding-bottom:0}section:has(+.pcsec) .stmt{margin-bottom:0
 </head>
 <body data-progress data-grain>
 <div class="wow-loader" data-loader aria-hidden="true"><span class="ld-w">Studio <i>Bella</i></span><span class="ld-n" data-loader-n>0</span></div>
-<div class="demo"><div class="wrap"><span data-i="demo"></span><a data-back class="mel" href="../"><img class="me" src="../media/davyd-sunset-96.webp" width="96" height="96" alt=""><span data-i="back"></span></a></div></div>
+<div class="demo"><div class="wrap"><span data-i="demo"></span><span class="dsh" data-i="demos"></span><a data-back class="mel" href="../"><img class="me" src="../media/davyd-sunset-96.webp" width="96" height="96" alt=""><span data-i="back"></span></a></div></div>
 <header data-hide-header><div class="wrap">
   <a class="mark" href="#top">Studio Bella</a>
   <nav><a class="wow-line" href="#services" data-i="n1"></a><a class="wow-line" href="#team" data-i="n2"></a><a class="wow-line" href="#visit" data-i="n3"></a></nav>
@@ -332,7 +333,7 @@ section:has(+.pcsec){padding-bottom:0}section:has(+.pcsec) .stmt{margin-bottom:0
   <p class="stmt" data-highlight data-i="hs"></p>
 </div></section>
 
-<section class="pcsec" data-moment="pinned-chapters"><div class="wrap mo-pc__grid">
+<section class="pcsec" data-moment="pinned-chapters" data-moment-opts='{"static":true}'><div class="wrap mo-pc__grid">
   <div class="mo-pc__text">
     <ol class="mo-pc__steps">
       <li class="mo-pc__step"><h3><i>01</i> <span data-i="h1t"></span></h3><p><span data-i="h1p"></span></p><figure class="mo-pc__visual"><img src="work-color.jpg" width="640" height="800" loading="lazy" alt=""></figure></li>
@@ -446,7 +447,7 @@ section:has(+.pcsec){padding-bottom:0}section:has(+.pcsec) .stmt{margin-bottom:0
 <script>
 const T={
 sk:{title:"Studio Bella: kaderníctvo a manikúra v Bratislave",desc:"Ukážková stránka salónu: služby, ceny a online rezervácia priamo na webe.",
-demo:"Ukážka webu. Salón je vymyslený, ale rezervácia aj panel majiteľa naozaj fungujú.",back:"Web vytvoril Davyd Konstantinov",
+demos:"Ukážka webu.",demo:"Ukážka webu. Salón je vymyslený, ale rezervácia aj panel majiteľa naozaj fungujú.",back:"Web vytvoril Davyd Konstantinov",
 n1:"Služby a ceny",n2:"Kto vás obslúži",n3:"Kde nás nájdete",
 eye:"Salón krásy · Bratislava, Staré Mesto",h1:"Strih, farba, manikúra a obočie v centre Bratislavy",
 lead:"Termín si vyberiete sami za minútu, bez volania a bez registrácie. Rezervácia je potvrdená hneď.",
@@ -460,10 +461,10 @@ h3t:"Potvrdíme a pripomenieme",h3p:"Napíšete meno a telefón a rezervácia je
 th:"Kto vás obslúži",ts:"Sme dve. Ku komu pôjdete, závisí od služby.",
 m1:"Anna",m1p:"Strihy a farbenie",m2:"Oľga",m2p:"Manikúra a obočie",
 vh:"Kde nás nájdete",vs:"V Starom Meste, pár minút pešo od zastávky.",v1:"Adresa",v2:"Otvorené",v3:"Nedeľa",sun:"zatvorené",
-ch:"Voľný termín ešte tento týždeň",cp:"Pozrite si voľné časy a rezervujte sa bez volania.",
+ch:"Voľný termín ešte tento týždeň",cp:"Pozrite si voľné časy a rezervujte si termín bez volania.",
 foot:"Toto je ukážka webu pre malý salón. Salón, adresa a mená sú vymyslené."},
 uk:{title:"Studio Bella: стрижка, фарбування та манікюр у Братиславі",desc:"Приклад сайту салону: послуги, ціни та онлайн-запис прямо на сайті.",
-demo:"Приклад сайту. Салон вигаданий, але запис і панель власника справді працюють.",back:"Сайт зробив Давид Константінов",
+demos:"Приклад сайту.",demo:"Приклад сайту. Салон вигаданий, але запис і панель власника справді працюють.",back:"Сайт зробив Давид Константінов",
 n1:"Послуги та ціни",n2:"Майстри",n3:"Як нас знайти",
 eye:"Салон краси · Братислава, Старе Місто",h1:"Стрижка, фарбування, манікюр і брови в центрі Братислави",
 lead:"Час обираєте самі за хвилину, без дзвінків і без реєстрації. Запис підтверджується одразу.",
@@ -480,7 +481,7 @@ vh:"Як нас знайти",vs:"У Старому Місті, кілька х�
 ch:"Вільний час ще цього тижня",cp:"Подивіться вільні вікна та запишіться без дзвінка.",
 foot:"Це приклад сайту для невеликого салону. Салон, адреса та імена вигадані."},
 ru:{title:"Studio Bella: стрижка, окрашивание и маникюр в Братиславе",desc:"Пример сайта салона: услуги, цены и онлайн-запись прямо на сайте.",
-demo:"Пример сайта. Салон выдуманный, но запись и панель владельца работают по-настоящему.",back:"Сайт сделал Давид Константинов",
+demos:"Пример сайта.",demo:"Пример сайта. Салон выдуманный, но запись и панель владельца работают по-настоящему.",back:"Сайт сделал Давид Константинов",
 n1:"Услуги и цены",n2:"Мастера",n3:"Как нас найти",
 eye:"Салон красоты · Братислава, Старый город",h1:"Стрижка, окрашивание, маникюр и брови в центре Братиславы",
 lead:"Время выбираете сами за минуту, без звонков и регистрации. Запись подтверждается сразу.",
@@ -497,7 +498,7 @@ vh:"Как нас найти",vs:"В Старом городе, пара мин�
 ch:"Свободное время ещё на этой неделе",cp:"Посмотрите свободные окна и запишитесь без звонка.",
 foot:"Это пример сайта для небольшого салона. Салон, адрес и имена выдуманы."},
 en:{title:"Studio Bella: hair, nails and brows in Bratislava",desc:"A sample salon website: services, prices and online booking right on the site.",
-demo:"Sample website. The salon is made up, but the booking and the owner's panel really work.",back:"Website by Davyd Konstantinov",
+demos:"Sample website.",demo:"Sample website. The salon is made up, but the booking and the owner's panel really work.",back:"Website by Davyd Konstantinov",
 n1:"Services and prices",n2:"Who you'll see",n3:"Find us",
 eye:"Beauty salon · Bratislava Old Town",h1:"Haircuts, colour, manicure and brows in central Bratislava",
 lead:"Pick your own time in a minute, with no phone calls and no sign-up. Your booking is confirmed straight away.",
