@@ -1,0 +1,181 @@
+<!doctype html>
+<html lang="sk">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Pred a po</title>
+<meta name="description" content="">
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#f5f7fa">
+<style>
+:root{--bg:#f5f7fa;--card:#fff;--raised:#eaeef4;--line:rgba(17,24,39,.1);--ink:#111827;--sec:#4b5565;--accent:#1c6ee8;--accent-press:#155ac2;
+--font:"Segoe UI",system-ui,-apple-system,Roboto,Arial,sans-serif;--serif:Georgia,"Times New Roman",serif;--ease:cubic-bezier(.22,1,.36,1)}
+*{box-sizing:border-box;margin:0}
+body{background:var(--bg);color:var(--ink);font:16px/1.6 var(--font);-webkit-font-smoothing:antialiased}
+a{color:var(--accent)}
+:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
+.wrap{max-width:1080px;margin:0 auto;padding:0 24px}
+.top{display:flex;align-items:center;gap:16px;height:64px;border-bottom:1px solid var(--line)}
+.top a{font-size:.9375rem;text-decoration:none;font-weight:600}
+.lang{display:flex;gap:2px;margin-left:auto}
+.lang button{font:600 .8125rem/1 var(--font);color:var(--sec);background:none;border:0;padding:9px 8px;border-radius:8px;cursor:pointer}
+.lang button[aria-pressed=true]{background:var(--ink);color:#fff}
+.demo{font-size:.875rem;color:var(--sec);padding:12px 0 0}
+.stage{display:grid;grid-template-columns:1fr 380px;gap:64px;align-items:center;padding:48px 0 72px}
+h1{font-size:clamp(2rem,4.4vw,3rem);line-height:1.1;font-weight:600;max-width:16ch}
+.lead{color:var(--sec);font-size:1.125rem;margin:16px 0 28px;max-width:44ch}
+.ab{display:inline-grid;grid-template-columns:1fr 1fr;background:var(--raised);border-radius:12px;padding:4px;gap:4px}
+.ab button{border:0;background:none;border-radius:9px;padding:10px 18px;font:600 .9375rem/1.25 var(--font);color:var(--sec);cursor:pointer;text-align:left;transition:background-color .15s var(--ease)}
+.ab button small{display:block;font-weight:400;font-size:.8125rem}
+.ab button[aria-pressed=true]{background:var(--card);color:var(--ink);box-shadow:0 1px 3px rgba(17,24,39,.12)}
+.notes{list-style:none;padding:0;margin:28px 0 0;display:grid;gap:12px;max-width:46ch}
+.notes li{display:flex;gap:12px;align-items:flex-start}
+.notes li::before{content:"";flex:none;width:18px;height:18px;margin-top:3px;border-radius:50%;background:var(--accent) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 18 18' fill='none' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M5 9.5l2.5 2.5L13 6.5'/%3E%3C/svg%3E")}
+.before .notes li::before{background:#b4bcc8 url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 18 18' fill='none' stroke='white' stroke-width='2' stroke-linecap='round'%3E%3Cpath d='M6 6l6 6M12 6l-6 6'/%3E%3C/svg%3E")}
+.price{margin-top:28px;font-size:.9375rem;color:var(--sec)}
+/* phone with the client's page */
+.phone{background:#1b1f27;border-radius:40px;padding:12px;box-shadow:0 24px 48px rgba(17,24,39,.18)}
+.scr{background:#fbf8f3;border-radius:30px;overflow:hidden;height:640px;overflow-y:auto;color:#2b2420;scrollbar-width:none}
+.scr::-webkit-scrollbar{display:none}
+.bar{display:flex;align-items:center;justify-content:space-between;padding:18px 18px 10px}
+.logo{font:600 1.125rem/1 var(--serif)}
+.pl{display:flex;gap:2px}
+.pl button{border:0;background:none;font:600 .75rem/1 var(--font);color:#7a6d63;padding:7px 6px;border-radius:6px;cursor:pointer}
+.pl button[aria-pressed=true]{background:#2b2420;color:#fff}
+.before .pl{display:none}
+.ph-hero{padding:8px 18px 18px}
+.ph-hero h2{font:600 1.625rem/1.15 var(--serif)}
+.ph-hero p{font-size:.875rem;color:#6b5f56;margin-top:8px}
+.ph-sec{padding:16px 18px;border-top:1px solid rgba(43,36,32,.1)}
+.ph-sec h3{font:600 1rem var(--serif);margin-bottom:8px}
+.row{display:flex;justify-content:space-between;gap:12px;font-size:.875rem;padding:6px 0}
+.row b{white-space:nowrap;font-weight:600}
+.ph-sec p{font-size:.875rem}
+.pf{display:grid;gap:8px}
+.pf input{font:400 .875rem var(--font);padding:10px 12px;border:1px solid rgba(43,36,32,.2);border-radius:8px;background:#fff;width:100%;color:#2b2420}
+.pf button{font:600 .875rem var(--font);padding:12px;border:0;border-radius:8px;background:#8a4b2f;color:#fff;cursor:pointer}
+.pf .sent{display:none;font-size:.8125rem;background:#fff;border-radius:8px;padding:10px 12px;border-left:3px solid #2f8f4e}
+.pf.done .sent{display:block}
+.before .form{display:none}
+.call{font-size:.875rem}
+.after .call{display:none}
+.flash{animation:fl .5s var(--ease)}
+@keyframes fl{from{opacity:.25}to{opacity:1}}
+footer{padding:24px 0 48px;font-size:.875rem;color:var(--sec);border-top:1px solid var(--line)}
+@media(max-width:860px){.stage{grid-template-columns:1fr;gap:40px;padding:32px 0 56px}.phone{max-width:360px;margin:0 auto;width:100%}.scr{height:600px}}
+@media(max-width:480px){.wrap{padding:0 18px}.ab{display:grid}.ab button{padding:10px 12px}}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+</style>
+</head>
+<body class="before">
+<div class="wrap">
+  <div class="top"><a data-back href="../" data-i="back"></a>
+    <div class="lang" role="group" aria-label="Language"><button type="button" data-set="sk">SK</button><button type="button" data-set="uk">UA</button><button type="button" data-set="ru">RU</button><button type="button" data-set="en">EN</button></div>
+  </div>
+  <p class="demo" data-i="demo"></p>
+  <main class="stage">
+    <div>
+      <h1 data-i="h1"></h1>
+      <p class="lead" data-i="lead"></p>
+      <div class="ab" role="group" data-al="abl">
+        <button type="button" id="bBefore" aria-pressed="true"><span data-i="b0"></span><small data-i="b0s"></small></button>
+        <button type="button" id="bAfter" aria-pressed="false"><span data-i="b1"></span><small data-i="b1s"></small></button>
+      </div>
+      <ul class="notes" id="notes" aria-live="polite"></ul>
+      <p class="price"><span data-i="pr"></span> <a data-back href="../" data-i="prl"></a></p>
+    </div>
+    <div class="phone"><div class="scr" id="scr">
+      <div class="bar"><span class="logo">Krajčírstvo Hana</span>
+        <div class="pl" role="group" aria-label="Language"><button type="button" data-p="sk">SK</button><button type="button" data-p="uk">UA</button><button type="button" data-p="ru">RU</button><button type="button" data-p="en">EN</button></div>
+      </div>
+      <div class="ph-hero"><h2 data-q="h"></h2><p data-q="s"></p></div>
+      <div class="ph-sec"><h3 data-q="ph"></h3>
+        <div class="row"><span data-q="r1"></span><b>8 €</b></div>
+        <div class="row"><span data-q="r2"></span><b>12 €</b></div>
+        <div class="row"><span data-q="r3"></span><b data-q="r3v"></b></div>
+        <div class="row"><span data-q="r4"></span><b data-q="r4v"></b></div>
+      </div>
+      <div class="ph-sec"><h3 data-q="wh"></h3><p data-q="hrs"></p><p>Záhradnícka 18, Bratislava</p><p class="call" data-q="call"></p></div>
+      <div class="ph-sec form"><h3 data-q="fh"></h3>
+        <form class="pf" id="pf" novalidate><input name="n" data-qp="fn" autocomplete="off"><input name="t" data-qp="ft" autocomplete="off"><input name="w" data-qp="fw" autocomplete="off"><button data-q="fb"></button><p class="sent" data-q="ok"></p></form>
+      </div>
+    </div></div>
+  </main>
+</div>
+<footer><div class="wrap"><span data-i="foot"></span> <a data-back href="../" data-i="back"></a></div></footer>
+<script>
+const T={
+sk:{title:"Pred a po: stránka v štyroch jazykoch",desc:"Ukážka: stránka malej krajčírskej dielne pred prekladom a po ňom.",back:"Web vytvoril Davyd Konstantinov",
+demo:"Ukážka. Krajčírstvo je vymyslené, formulár nič neodosiela.",h1:"Rovnaká stránka, ktorej rozumie viac zákazníkov",
+lead:"Takto vyzerá služba „Ukrajinská alebo ruská verzia stránky“. Prepnite Pred a Po a pozrite sa na telefón.",
+abl:"Pred a po",b0:"Pred",b0s:"len po slovensky",b1:"Po",b1s:"4 jazyky a formulár",
+n0:["Kto nečíta po slovensky, nerozumie cenám ani adrese","Dá sa len zavolať, čo cudzinca odradí","Ľahko odíde ku konkurencii, ktorá má stránku v jeho jazyku"],
+n1:["Jazyk sa prepína hore na stránke a zostane zapamätaný","Zákazník pošle dopyt vo svojom jazyku, bez telefonovania","Ceny, adresa aj otváracie hodiny ostávajú rovnaké"],
+pr:"Cena a termín sú v cenníku.",prl:"Otvoriť cenník",foot:"Ukážka služby. Krajčírstvo, adresa a ceny sú vymyslené."},
+uk:{title:"До і після: сторінка чотирма мовами",desc:"Приклад: сторінка невеликого ательє до перекладу і після нього.",back:"Сайт зробив Давид Константінов",
+demo:"Приклад. Ательє вигадане, форма нічого не надсилає.",h1:"Та сама сторінка, яку розуміє більше клієнтів",
+lead:"Так виглядає послуга «Українська або російська версія сторінки». Перемкніть «До» і «Після» та подивіться на телефон.",
+abl:"До і після",b0:"До",b0s:"лише словацькою",b1:"Після",b1s:"4 мови і форма",
+n0:["Хто не читає словацькою, не зрозуміє ні цін, ні адреси","Єдиний контакт — дзвінок, а іноземця це відлякує","Він легко піде до конкурента, у якого сторінка його мовою"],
+n1:["Мова перемикається вгорі сторінки і запам’ятовується","Клієнт надсилає запит своєю мовою, без дзвінків","Ціни, адреса й години роботи лишаються ті самі"],
+pr:"Ціна й термін — у прайсі.",prl:"Відкрити прайс",foot:"Приклад послуги. Ательє, адреса та ціни вигадані."},
+ru:{title:"До и после: страница на четырёх языках",desc:"Пример: страница небольшого ателье до перевода и после.",back:"Сайт сделал Давид Константинов",
+demo:"Пример. Ателье выдуманное, форма ничего не отправляет.",h1:"Та же страница, которую понимает больше клиентов",
+lead:"Так выглядит услуга «Украинская или русская версия страницы». Переключите «До» и «После» и посмотрите на телефон.",
+abl:"До и после",b0:"До",b0s:"только по-словацки",b1:"После",b1s:"4 языка и форма",
+n0:["Кто не читает по-словацки, не поймёт ни цен, ни адреса","Единственный контакт — звонок, а иностранца это отпугивает","Он легко уйдёт к конкуренту, у которого страница на его языке"],
+n1:["Язык переключается вверху страницы и запоминается","Клиент отправляет заявку на своём языке, без звонков","Цены, адрес и часы работы остаются прежними"],
+pr:"Цена и срок — в прайсе.",prl:"Открыть прайс",foot:"Пример услуги. Ателье, адрес и цены выдуманы."},
+en:{title:"Before and after: one page in four languages",desc:"Example: a small tailor's page before and after translation.",back:"Website by Davyd Konstantinov",
+demo:"Example. The tailor's shop is fictional, and the form doesn't submit anything.",h1:"The same page, understood by more customers",
+lead:"This is what the “Ukrainian or Russian version of a page” service looks like. Switch between Before and After and watch the phone.",
+abl:"Before and after",b0:"Before",b0s:"Slovak only",b1:"After",b1s:"4 languages and a form",
+n0:["Anyone who can't read Slovak won't understand the prices or the address","The only way to get in touch is a phone call, which puts foreigners off","They can easily go to a competitor whose page is in their language"],
+n1:["The language switch sits at the top of the page and is remembered","Customers send an enquiry in their own language, no calls needed","The prices, address and opening hours stay the same"],
+pr:"Price and timing are in the price list.",prl:"Open the price list",foot:"Service example. The tailor's shop, address and prices are fictional."}};
+const P={
+sk:{h:"Úpravy oblečenia do dvoch dní",s:"Oblečenie skrátime, zúžime alebo vymeníme zips. Stačí prísť bez objednania.",ph:"Cenník",r1:"Skrátenie nohavíc",r2:"Výmena zipsu na bunde",r3:"Zúženie šiat",r3v:"od 15 €",r4:"Oprava podšívky",r4v:"od 10 €",
+wh:"Kde a kedy",hrs:"Po–Pi 9:00–18:00, So 9:00–12:00",call:"Volajte 0900 000 000",fh:"Napíšte nám",fn:"Meno",ft:"Telefón alebo e-mail",fw:"Čo treba upraviť",fb:"Odoslať",ok:"Ďakujeme, ozveme sa vám. (V tejto ukážke sa nič neodoslalo.)"},
+uk:{h:"Ремонт одягу за два дні",s:"Укоротимо, вшиємо, замінимо блискавку. Просто приходьте, без запису.",ph:"Ціни",r1:"Укорочення штанів",r2:"Заміна блискавки в куртці",r3:"Ушивання сукні",r3v:"від 15 €",r4:"Ремонт підкладки",r4v:"від 10 €",
+wh:"Де і коли",hrs:"пн–пт 9:00–18:00, сб 9:00–12:00",call:"Телефонуйте за номером 0900 000 000",fh:"Напишіть нам",fn:"Ім’я",ft:"Телефон або e-mail",fw:"Що потрібно змінити",fb:"Надіслати",ok:"Дякуємо, ми з вами зв’яжемося. (Приклад, нічого не надіслано.)"},
+ru:{h:"Ремонт одежды за два дня",s:"Укоротим, ушьём, заменим молнию. Просто приходите, без записи.",ph:"Цены",r1:"Укоротить брюки",r2:"Заменить молнию на куртке",r3:"Ушить платье",r3v:"от 15 €",r4:"Ремонт подкладки",r4v:"от 10 €",
+wh:"Где и когда",hrs:"Пн–Пт 9:00–18:00, Сб 9:00–12:00",call:"Звоните 0900 000 000",fh:"Напишите нам",fn:"Имя",ft:"Телефон или e-mail",fw:"Что нужно переделать",fb:"Отправить",ok:"Спасибо, мы с вами свяжемся. (Пример, ничего не отправлено.)"},
+en:{h:"Clothing alterations within two days",s:"We shorten clothes, take them in and replace zips. Just drop by, no appointment needed.",ph:"Prices",r1:"Shorten trousers",r2:"Replace a jacket zip",r3:"Take in a dress",r3v:"from €15",r4:"Repair a lining",r4v:"from €10",
+wh:"Where and when",hrs:"Mon–Fri 9:00–18:00, Sat 9:00–12:00",call:"Call 0900 000 000",fh:"Write to us",fn:"Name",ft:"Phone or email",fw:"What needs altering",fb:"Send",ok:"Thank you. We'll get back to you. (This is a demo. Nothing was sent.)"}};
+let cur='sk',after=false,pcur='sk';
+const $=id=>document.getElementById(id),pf=$('pf');
+function phone(l,flash){
+  pcur=l;const d=P[l];
+  document.querySelectorAll('[data-q]').forEach(e=>e.textContent=d[e.dataset.q]);
+  document.querySelectorAll('[data-qp]').forEach(e=>e.placeholder=d[e.dataset.qp]);
+  document.querySelectorAll('[data-p]').forEach(b=>b.setAttribute('aria-pressed',b.dataset.p===l));
+  $('scr').lang=l;
+  if(flash){const s=$('scr');s.classList.remove('flash');void s.offsetWidth;s.classList.add('flash')}
+}
+function mode(a){
+  after=a;document.body.className=a?'after':'before';
+  $('bBefore').setAttribute('aria-pressed',!a);$('bAfter').setAttribute('aria-pressed',a);
+  $('notes').replaceChildren(...T[cur][a?'n1':'n0'].map(t=>{const li=document.createElement('li');li.textContent=t;return li}));
+  pf.classList.remove('done');phone(a?cur:'sk',true);
+}
+$('bBefore').onclick=()=>mode(false);$('bAfter').onclick=()=>mode(true);
+document.querySelectorAll('[data-p]').forEach(b=>b.onclick=()=>{pf.classList.remove('done');phone(b.dataset.p,true)});
+pf.addEventListener('submit',e=>{e.preventDefault();pf.classList.add('done');pf.reset()});
+const els=[...document.querySelectorAll('[data-i]')];
+function setLang(l){
+  if(!Object.hasOwn(T,l))l='sk';cur=l;try{localStorage.lang=l}catch(e){}
+  els.forEach(e=>e.textContent=T[l][e.dataset.i]??'');
+  document.querySelectorAll('[data-al]').forEach(e=>e.setAttribute('aria-label',T[l][e.dataset.al]));
+  document.querySelectorAll('[data-back]').forEach(a=>a.href='../?lang='+l+(a.closest('.price')?'#prices':''));
+  document.documentElement.lang=l;document.title=T[l].title;document.querySelector('meta[name=description]').content=T[l].desc;
+  document.querySelectorAll('[data-set]').forEach(b=>b.setAttribute('aria-pressed',b.dataset.set===l));
+  mode(after);
+}
+document.querySelectorAll('[data-set]').forEach(b=>b.onclick=()=>setLang(b.dataset.set));
+let saved='';try{saved=localStorage.lang}catch(e){}
+const bl=(navigator.language||'').slice(0,2),qs=new URLSearchParams(location.search);
+if(qs.get('view')==='after')after=true;
+setLang(qs.get('lang')||saved||(['en','ru','uk'].includes(bl)?bl:'sk'));
+</script>
+</body>
+</html>
