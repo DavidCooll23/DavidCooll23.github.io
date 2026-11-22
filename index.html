@@ -1084,6 +1084,7 @@ function showThanks() {
   thanks.focus();
 }
 
+const GOOGLE_FORM_URL = 'https://script.google.com/macros/s/AKfycbyOsLmSV9Kj0ZYgOIxL0OS2LYzYCx1-_eLFF7OifK3jkyW1TxHpC3HDI0UPXZ1vk85K1g/exec';
 form.addEventListener('submit', async event => {
   event.preventDefault();
   if (sendButton.disabled) return;
@@ -1103,6 +1104,16 @@ form.addEventListener('submit', async event => {
   sendButton.textContent = T[l].sending;
   sendError.hidden = true;
   try {
+    // Основной путь: свой Google-скрипт (красивое письмо в Gmail). Запасной: FormSubmit.
+    try {
+      const g = await fetch(GOOGLE_FORM_URL, {
+        method: 'POST',
+        headers: { 'Content-Type': 'text/plain;charset=utf-8' },
+        body: JSON.stringify({ need: needField.value.trim(), contact: contactField.value.trim(), business: businessField.value.trim(), lang: l })
+      });
+      const gd = await g.json();
+      if (gd.ok === true) { showThanks(); return; }
+    } catch {}
     const res = await fetch('https://formsubmit.co/ajax/davyd@konstantinov.sk', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
