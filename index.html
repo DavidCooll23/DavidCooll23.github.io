@@ -81,6 +81,7 @@ h1 em{display:block;color:var(--wine);font-weight:400}
 .btn.main:hover{background:var(--deep)}
 .btn:disabled{opacity:.7;cursor:wait}
 .hero-prices{list-style:none;display:flex;flex-wrap:wrap;gap:8px;padding:0;margin:0 0 22px}
+.hero-price-line{display:none}
 .hero-prices li{padding:7px 13px;border:1px solid #cdb9ad;border-radius:999px;background:var(--white);font-size:15px;font-weight:600}
 .price-cta{margin:0 0 26px}.addons .plist{padding-bottom:10px}.addons .plist .prow:first-child{border-top:0}
 .me{display:flex;align-items:center;gap:16px;margin:0 0 28px;max-width:44ch}.me img{width:76px;height:76px;flex:none;border-radius:50%;object-fit:cover;border:2px solid #eddcdb}.me p{font:italic clamp(18px,1.4vw,21px)/1.35 var(--serif);color:#f6e8e6}
@@ -233,6 +234,7 @@ footer{display:flex;justify-content:space-between;align-items:center;gap:16px;pa
   .plist .eur{font-size:26px}.plist .term{align-self:center}.process-copy{padding:24px}
   #contact{padding:25px 16px 16px}.contact-intro{padding:0 4px}.form-panel{padding:18px}
   .hero-prices{gap:6px}.hero-prices li{padding:5px 10px;font-size:14px}
+  body .hero-prices{display:none}body .hero-price-line{display:block;margin:0 0 18px;font-size:15px;font-weight:600}.intro .btn.outward{display:none}
   .qf .btn{flex:1 1 auto}.qf .btns{gap:8px}footer{font-size:12px}
 }
 @media(prefers-reduced-motion:no-preference){
@@ -266,6 +268,7 @@ footer{display:flex;justify-content:space-between;align-items:center;gap:16px;pa
       <a class="btn" href="#cv" data-i="cvb">Životopis (PDF)</a>
       <a class="btn" href="support-samples.html" data-i="smp">Ukážky práce (EN)</a>
     </div>
+    <p class="hero-price-line biz" data-i="hpShort">Web od 250 €, s rezerváciou od 350 €</p>
     <ul class="hero-prices biz"><li data-i="hp1">Jednoduchý web od 250 €</li><li data-i="hp2">S online rezerváciou od 350 €</li></ul>
     <div class="btns biz">
       <a class="btn main arrow" href="#qf" data-write data-i="cta">Zistiť cenu a termín</a>
@@ -313,7 +316,7 @@ footer{display:flex;justify-content:space-between;align-items:center;gap:16px;pa
     <a class="project" href="garaz-4/" data-ex="garaz-4/">
       <div class="cover garage-cover"><img src="media/garage-headlamp.webp" width="960" height="640" alt="" loading="lazy"></div>
       <div class="project-title"><h3 data-i="garageName">Garáž 4</h3><span class="circle-arrow" aria-hidden="true"></span></div>
-      <p data-i="garageDesc">Web autoservisu so službami, cenníkom a formulárom na dopyt.</p>
+      <p data-i="garageDesc">Web autoservisu so službami a cenníkom. Cez formulár si zákazník vypýta cenovú ponuku.</p>
     </a>
     <a class="project" href="preklad/" data-ex="preklad/">
       <div class="cover type-cover" aria-hidden="true"><span lang="sk" data-i="helloSK">Dobrý deň.</span><em lang="uk" data-i="helloUA">Добрий день.</em></div>
@@ -321,7 +324,7 @@ footer{display:flex;justify-content:space-between;align-items:center;gap:16px;pa
       <p data-i="translationDesc">Porovnajte pôvodnú stránku s ukrajinskou a ruskou verziou.</p>
     </a>
   </div>
-  <details class="more-work"><summary data-i="moreWork">Rezervačný bot a ďalšie projekty</summary><div class="cards">
+  <details class="more-work"><summary data-i="moreWork">Ďalšie projekty vrátane rezervačného bota</summary><div class="cards">
     <article class="card"><div class="slot" data-video="media/salon.mp4"><div class="ph"><i></i><span data-i="soon">Video už čoskoro</span></div></div>
       <div class="body"><h3 id="project-1" data-i="w1t">Rezervačný bot pre salón</h3><p data-i="w1p">Zákazník napíše „máte voľno v piatok po 17?“, bot ponúkne voľné časy a zapíše ho. Majiteľ potvrdí jedným kliknutím, bot pripomenie návštevu. 4 jazyky.</p>
       <a class="demo" href="https://t.me/StudioBellaBookingBot" target="_blank" rel="noopener noreferrer" data-i="demo">Otvoriť ukážku v Telegrame</a></div></article>
@@ -591,10 +594,10 @@ const T = {
     "bookingDemo": "Web s online rezerváciou",
     "desktopAlt": "Web salónu Studio Bella na počítači",
     "mobileAlt": "Mobilná verzia webu Studio Bella",
-    "garageDesc": "Web autoservisu so službami, cenníkom a formulárom na dopyt.",
+    "garageDesc": "Web autoservisu so službami a cenníkom. Cez formulár si zákazník vypýta cenovú ponuku.",
     "translationName": "Pred a po",
     "translationDesc": "Porovnajte pôvodnú stránku s ukrajinskou a ruskou verziou.",
-    "moreWork": "Rezervačný bot a ďalšie projekty",
+    "moreWork": "Ďalšie projekty vrátane rezervačného bota",
     "sending": "Odosielam…",
     "contactError": "Zadajte telefón alebo e-mail, aby som vám mohol odpovedať.",
     "sendError": "Správu sa nepodarilo odoslať. Skúste to znova alebo mi napíšte cez WhatsApp.",
@@ -610,6 +613,7 @@ const T = {
     "cta": "Zistiť cenu a termín",
     "hp1": "Jednoduchý web od 250 €",
     "hp2": "S online rezerváciou od 350 €",
+    "hpShort": "Web od 250 €, s rezerváciou od 350 €",
     "legal": "Pracujem na dohodu o vykonaní práce",
     "q5": "Za ako dlho bude web hotový?",
     "a5": "Jednoduchý web do 5 dní, web s online rezerváciou do 10 dní. Počítam od chvíle, keď mi pošlete zoznam služieb, cenník a fotky.",
@@ -804,6 +808,7 @@ const T = {
     "cta": "Get a price and timeline",
     "hp1": "Simple website from €250",
     "hp2": "With online booking from €350",
+    "hpShort": "Website from €250, with booking from €350",
     "legal": "I work under a dohoda o vykonaní práce (Slovak work agreement)",
     "q5": "How long does it take?",
     "a5": "A simple website within 5 days, a website with online booking within 10 days, counted from when you send me your services, prices and photos.",
@@ -979,6 +984,7 @@ const T = {
     "cta": "Узнать цену и срок",
     "hp1": "Простой сайт от 250 €",
     "hp2": "С онлайн-записью от 350 €",
+    "hpShort": "Сайт от 250 €, с записью от 350 €",
     "legal": "Работаю по договору dohoda o vykonaní práce",
     "q5": "Сколько делается сайт?",
     "a5": "Простой сайт до 5 дней, сайт с онлайн-записью до 10 дней. Считаю с момента, когда вы пришлёте услуги, цены и фото.",
@@ -1154,6 +1160,7 @@ const T = {
     "cta": "Дізнатися ціну і термін",
     "hp1": "Простий сайт від 250 €",
     "hp2": "З онлайн-записом від 350 €",
+    "hpShort": "Сайт від 250 €, із записом від 350 €",
     "legal": "Працюю за договором dohoda o vykonaní práce",
     "q5": "Скільки робиться сайт?",
     "a5": "Простий сайт до 5 днів, сайт з онлайн-записом до 10 днів. Рахую з моменту, коли ви надішлете послуги, ціни і фото.",
