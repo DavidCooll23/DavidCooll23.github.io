@@ -5,6 +5,10 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Davyd Konstantinov — remote support, testing and AI automation</title>
 <meta name="description" content="Looking for a remote job: customer and technical support in English and Slovak, manual testing, AI automation. Projects on video and CVs in PDF.">
+<link rel="alternate" hreflang="sk" href="https://davidcooll23.github.io/?lang=sk">
+<link rel="alternate" hreflang="en" href="https://davidcooll23.github.io/?lang=en">
+<link rel="alternate" hreflang="ru" href="https://davidcooll23.github.io/?lang=ru">
+<link rel="alternate" hreflang="uk" href="https://davidcooll23.github.io/?lang=uk">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://davidcooll23.github.io/">
 <meta property="og:title" content="Davyd Konstantinov — remote support, testing and AI automation">
@@ -167,6 +171,80 @@ header.stuck .mini{opacity:1;transform:none;pointer-events:auto}
 .faq details p{color:var(--sec);max-width:60ch;padding-bottom:22px}
 .slot video{opacity:0;transition:opacity .5s var(--ease)}
 .slot.ok video{opacity:1}
+/* 2026-11-22: dark stage, services mode for RU/UA, price list, "site form -> Telegram" scene */
+body[data-mode=biz] .job,body[data-mode=job] .biz{display:none!important}
+body{background:var(--bg)}
+header{color:#fff}
+header::before{background:rgba(10,15,28,.8);border-bottom-color:rgba(255,255,255,.08)}
+.lang{background:rgba(255,255,255,.07);border-color:rgba(255,255,255,.12)}
+.lang button{color:rgba(255,255,255,.68);padding:0 10px}
+.lang button:hover{color:#fff}
+.lang button[aria-pressed=true]{background:#fff;color:var(--ink)}
+.stage{position:relative;isolation:isolate;color:#eef1f7;padding-bottom:40px}
+.stage::before{content:"";position:absolute;inset:-64px calc(50% - 50vw) 0;z-index:-1;background:#0a0f1c}
+body[data-mode=biz] .stage h1{max-width:20ch;font-size:clamp(2.25rem,5.6vw,3.9rem)}
+.stage .hero p.lead{color:#aab3c5}
+body[data-mode=biz] .stage .hero p.lead{max-width:40ch}
+.stage .gets li{color:#e6eaf2}
+.stage .gets li::before{background:#5b9bff}
+.stage .btn{background:rgba(255,255,255,.06);border-color:rgba(255,255,255,.16);color:#fff}
+.stage .btn:hover{background:rgba(255,255,255,.12)}
+.stage .btn.main{background:var(--accent);border-color:var(--accent);}
+.stage .btn.main:hover{background:#2f7df0;border-color:#2f7df0}
+.stage .facts{border-top-color:rgba(255,255,255,.12)}
+.stage .facts li{color:#d5dbe7;border-left-color:#5b9bff}
+.stage .chat{color:var(--ink);box-shadow:0 30px 80px rgba(0,0,0,.5)}
+.scene{position:relative;width:100%;max-width:460px;padding-bottom:96px;color:var(--ink);align-self:center}
+.win{background:#fff;border-radius:14px;overflow:hidden;box-shadow:0 30px 80px rgba(0,0,0,.55)}
+.win .bar{display:flex;align-items:center;gap:6px;height:36px;padding:0 12px;background:#eef1f5;border-bottom:1px solid var(--line)}
+.win .bar i{width:10px;height:10px;border-radius:50%;background:#cbd2dc}
+.win .bar span{margin-left:10px;flex:1;height:22px;border-radius:6px;background:#fff;font:400 .6875rem/22px var(--mono);color:var(--mute);padding:0 10px}
+.site{padding:22px 22px 24px;display:grid;gap:12px}
+.site .logo{font-size:.8125rem;color:#b85f4e}
+.site .st{font-size:1.375rem;font-weight:600;line-height:1.2;letter-spacing:-.01em}
+.fld{border:1px solid rgba(17,24,39,.14);border-radius:10px;padding:8px 12px;min-height:54px;transition:border-color .2s}
+.fld.on{border-color:var(--accent)}
+.fld small{display:block;font-size:.6875rem;color:var(--mute)}
+.fld span{font-size:.9375rem;font-weight:500}
+.fld.on span::after{content:"";display:inline-block;width:1.5px;height:1em;margin-left:1px;background:var(--accent);vertical-align:-2px;animation:blink 1s steps(2) infinite}
+@keyframes blink{50%{opacity:0}}
+.send{height:44px;border-radius:10px;background:var(--accent);color:#fff;font-weight:600;display:grid;place-items:center;transition:background-color .3s var(--ease),transform .15s var(--ease)}
+.send .b,.okb .b{display:none}
+.s0 .send{transform:scale(.97)}
+.s1 .send{background:#1f9d61}.s1 .send .a{display:none}.s1 .send .b{display:inline}
+.tgc{position:absolute;right:0;bottom:0;width:82%;background:#fff;border-radius:16px;box-shadow:0 24px 60px rgba(0,0,0,.5);padding:12px 14px 14px;display:grid;gap:10px;opacity:0;transform:translateY(28px) scale(.94);transition:opacity .5s var(--ease),transform .6s var(--ease)}
+.s2 .tgc{opacity:1;transform:none}
+.tgc .top{display:flex;align-items:center;gap:10px}
+.tgc .top b{display:block;font-size:.875rem;line-height:1.25}
+.tgc .top span{font-size:.75rem;color:var(--mute)}
+.tgc .av{width:34px;height:34px;font-size:.75rem;background:#2aabee}
+.tgc .m{background:var(--wall);border-radius:12px;padding:9px 12px;font-size:.875rem;line-height:1.4}
+.tgc .m b{display:block}
+.okb{height:36px;border-radius:9px;background:rgba(28,110,232,.1);color:var(--accent);font-weight:600;font-size:.875rem;display:grid;place-items:center;transition:background-color .3s,color .3s}
+.s3 .okb{background:#1f9d61;color:#fff}.s3 .okb .a{display:none}.s3 .okb .b{display:inline}
+.plist{border-top:1px solid rgba(17,24,39,.14)}
+.prow{display:grid;grid-template-columns:1fr auto;gap:4px 24px;align-items:center;padding:22px 0;border-bottom:1px solid rgba(17,24,39,.14)}
+.prow h3{font-size:1.25rem}
+.prow p{color:var(--sec);font-size:.9375rem;max-width:52ch;margin-top:4px}
+.prow .term{grid-column:1;font-size:.875rem;color:var(--mute)}
+.prow .eur{grid-row:1;grid-column:2;font:500 1.5rem/1 var(--mono);white-space:nowrap;letter-spacing:-.02em}
+.prow .eur.q{font:600 .9375rem/1.3 var(--font);letter-spacing:0;color:var(--accent)}
+.fine{margin-top:24px;color:var(--sec);max-width:64ch;padding-left:14px;border-left:2px solid var(--accent)}
+@media(min-width:760px){
+ .scene{justify-self:end}.tgc{right:-16px}
+ .prow{grid-template-columns:1fr 130px 150px;padding:26px 16px;margin:0 -16px;border-radius:14px}
+ .prow .term{grid-column:2;grid-row:1}
+ .prow .eur{grid-column:3;text-align:right;font-size:2rem}
+ .prow .eur.q{font-size:1rem}
+ .prow h3{font-size:1.375rem}
+ .cards .card:first-child{grid-column:1/-1;flex-direction:row}
+ .cards .card:first-child .slot{flex:0 0 58%}
+ .cards .card:first-child .body{align-content:center;padding:32px}
+ .cards .card:first-child h3{font-size:1.5rem}
+}
+@media(hover:hover){.prow{transition:background-color .3s var(--ease)}.prow:hover{background:#fff}.prow:hover .eur{color:var(--accent)}}
+@media(prefers-reduced-motion:reduce){.tgc,.send{transition:none;transform:none}.fld.on span::after{display:none}}
+@media(max-width:520px){header .mini{display:none}.lang{gap:2px;flex:none}.lang button{padding:0 8px}}
 @media(prefers-reduced-motion:reduce){.progress{display:none}.hero h1,.hero .lead,.hero .gets,.hero .btns{animation:none}.js .rv{opacity:1;transform:none;transition:none}.card:hover,.box:hover{transform:none}.faq details::details-content,.faq summary::after,.mini{transition:none}}
 </style>
 </head>
@@ -175,25 +253,51 @@ header.stuck .mini{opacity:1;transform:none;pointer-events:auto}
 <div class="wrap">
 <header>
   <span class="name">Davyd Konstantinov</span>
-  <a class="btn main mini" href="mailto:davidcoolld@gmail.com" data-i="mail"></a>
+  <a class="btn main mini job" href="mailto:davidcoolld@gmail.com" data-i="mail"></a>
+  <a class="btn main mini biz" href="https://t.me/+421910392871" rel="noopener noreferrer" data-i="tg"></a>
   <div class="lang" role="group" aria-label="Language">
     <button type="button" data-set="sk" aria-pressed="true">SK</button>
     <button type="button" data-set="en" aria-pressed="false">EN</button>
+    <button type="button" data-set="ru" aria-pressed="false">RU</button>
+    <button type="button" data-set="uk" aria-pressed="false">UA</button>
   </div>
 </header>
 <main>
+<div class="stage">
 <div class="hero">
   <div>
     <h1 data-i="h1"></h1>
     <p class="lead" data-i="lead"></p>
     <ul class="gets"><li data-i="g1"></li><li data-i="g2"></li><li data-i="g3"></li></ul>
-    <div class="btns">
+    <div class="btns job">
       <a class="btn main" href="mailto:davidcoolld@gmail.com" data-i="mail"></a>
       <a class="btn" href="#cv" data-i="cvb"></a>
       <a class="btn" href="support-samples.html" data-i="smp"></a>
     </div>
+    <div class="btns biz">
+      <a class="btn main" href="https://t.me/+421910392871" rel="noopener noreferrer" data-i="tg"></a>
+      <a class="btn" href="https://t.me/StudioBellaBookingBot" target="_blank" rel="noopener noreferrer" data-i="demo2"></a>
+      <a class="btn" href="#prices" data-i="prb"></a>
+    </div>
   </div>
-  <div class="chat" aria-hidden="true">
+  <div class="scene biz" aria-hidden="true">
+    <div class="win">
+      <div class="bar"><i></i><i></i><i></i><span>studio-bella.sk</span></div>
+      <div class="site">
+        <b class="logo">Studio Bella</b>
+        <p class="st" data-i="sc_t"></p>
+        <div class="fld"><small data-i="sc_n"></small><span id="tn"></span></div>
+        <div class="fld"><small data-i="sc_s"></small><span id="ts"></span></div>
+        <div class="send"><span class="a" data-i="sc_b"></span><span class="b" data-i="sc_b2"></span></div>
+      </div>
+    </div>
+    <div class="tgc">
+      <div class="top"><span class="av">TG</span><div><b>Studio Bella</b><span data-i="sc_bot"></span></div></div>
+      <div class="m"><b data-i="sc_new"></b><span data-i="sc_m"></span></div>
+      <div class="okb"><span class="a" data-i="sc_ok"></span><span class="b" data-i="sc_ok2"></span></div>
+    </div>
+  </div>
+  <div class="chat job" aria-hidden="true">
     <div class="top"><span class="av">SB</span><div><b>Studio Bella</b><span data-i="c0"></span></div></div>
     <div class="msgs">
       <div class="b me"><span data-i="c1"></span><small>17:02</small></div>
@@ -205,8 +309,21 @@ header.stuck .mini{opacity:1;transform:none;pointer-events:auto}
   </div>
 </div>
 <ul class="facts"><li data-i="f1"></li><li data-i="f2"></li><li data-i="f3"></li><li data-i="f4"></li></ul>
+</div>
 
-<section id="roles">
+<section id="prices" class="biz">
+  <h2 data-i="ph"></h2>
+  <div class="plist">
+    <div class="prow"><div><h3 data-i="p0t"></h3><p data-i="p0p"></p></div><span class="term" data-i="p0d"></span><b class="eur q" data-i="p0e"></b></div>
+    <div class="prow"><div><h3 data-i="p1t"></h3><p data-i="p1p"></p></div><span class="term" data-i="p1d"></span><b class="eur">80 €</b></div>
+    <div class="prow"><div><h3 data-i="p2t"></h3><p data-i="p2p"></p></div><span class="term" data-i="p2d"></span><b class="eur">120 €</b></div>
+    <div class="prow"><div><h3 data-i="p3t"></h3><p data-i="p3p"></p></div><span class="term" data-i="p3d"></span><b class="eur">200 €</b></div>
+    <div class="prow"><div><h3 data-i="p4t"></h3><p data-i="p4p"></p></div><span class="term" data-i="p4d"></span><b class="eur">400 €</b></div>
+  </div>
+  <p class="fine" data-i="pfine"></p>
+</section>
+
+<section id="roles" class="job">
   <h2 data-i="rh"></h2>
   <div class="trio">
     <div class="box"><h3 data-i="r1t"></h3><p data-i="r1p"></p></div>
@@ -227,12 +344,12 @@ header.stuck .mini{opacity:1;transform:none;pointer-events:auto}
       <div class="body"><h3 data-i="w3t"></h3><p data-i="w3p"></p></div></article>
     <article class="card"><div class="slot" data-video="media/n8n.mp4"><div class="ph"><i></i><span data-i="soon"></span></div></div>
       <div class="body"><h3 data-i="w4t"></h3><p data-i="w4p"></p></div></article>
-    <article class="card"><div class="slot" data-video="media/pcmusic.mp4"><div class="ph"><i></i><span data-i="soon"></span></div></div>
+    <article class="card job"><div class="slot" data-video="media/pcmusic.mp4"><div class="ph"><i></i><span data-i="soon"></span></div></div>
       <div class="body"><h3>PC Music Remote</h3><p data-i="w5p"></p></div></article>
   </div>
 </section>
 
-<section>
+<section class="job">
   <div class="band"><h2 data-i="lgh"></h2><p data-i="lgp"></p></div>
 </section>
 
@@ -256,7 +373,7 @@ header.stuck .mini{opacity:1;transform:none;pointer-events:auto}
   </div>
 </section>
 
-<section id="cv">
+<section id="cv" class="job">
   <h2 data-i="cvh"></h2>
   <div class="cvs">
     <a class="cvl" data-cv="Support" target="_blank" rel="noopener"><b data-i="r1t"></b><span>PDF</span></a>
@@ -269,9 +386,13 @@ header.stuck .mini{opacity:1;transform:none;pointer-events:auto}
   <div class="contact">
     <h2 data-i="ch"></h2>
     <p data-i="cp"></p>
-    <div class="btns">
+    <div class="btns job">
       <a class="btn main" href="mailto:davidcoolld@gmail.com">davidcoolld@gmail.com</a>
       <a class="btn" href="https://t.me/+421910392871" rel="noopener noreferrer" data-i="tg"></a>
+    </div>
+    <div class="btns biz">
+      <a class="btn main" href="https://t.me/+421910392871" rel="noopener noreferrer" data-i="tg"></a>
+      <a class="btn" href="mailto:davidcoolld@gmail.com">davidcoolld@gmail.com</a>
     </div>
   </div>
 </section>
@@ -293,7 +414,7 @@ mail:"Napísať e-mail",cvb:"Životopis (PDF)",smp:"Ukážky práce (EN)",tg:"Te
 c0:"Rezervačný bot",c1:"Ahoj! Strih zajtra po piatej?",c2:"Voľné: 17:00, 18:30, 19:00. Ktorý termín?",c3:"18:30",c4:"Zarezervované. Pripomeniem 2 hodiny vopred.",
 cn:"Ukážka z môjho projektu, nie skutočná konverzácia",
 rh:"Na aké pozície sa hlásim",
-r1t:"Zákaznícka a technická podpora",r1p:"Chat a e-mail v angličtine a slovenčine. Trpezlivo zistím, čo sa stalo, a riešenie vysvetlím jednoducho.",
+r1t:"Zákaznícka a technická podpora",r1p:"Chat, e-mail aj telefón v angličtine a slovenčine. Trpezlivo zistím, čo sa stalo, a riešenie vysvetlím jednoducho.",
 r2t:"Tester / QA junior",r2p:"Manuálne testovanie botov, formulárov a prepojení. Hlásenia chýb s krokmi, očakávaným výsledkom a logmi.",
 r3t:"AI automatizácia",r3p:"Telegram boty, n8n workflowy a Python skripty, ktoré berú rutinu z rúk tímu. AI je môj hlavný nástroj.",
 work:"Moje projekty",soon:"Video už čoskoro",demo:"Vyskúšať živé demo v Telegrame",
@@ -307,7 +428,7 @@ faqh:"Čo sa ľudia pýtajú ako prvé",
 q1:"Používate AI?",a1:"Áno, otvorene. S AI asistentmi (Claude Code) stavám boty a automatizácie a píšem návrhy odpovedí. Každé rozhodnutie a výsledok kontrolujem sám a za výsledok zodpovedám.",
 q2:"Môžem vás zamestnať, keď ste cudzinec?",a2:"Mám schválené povolenie na pobyt za účelom zamestnania. Nový zamestnávateľ si vyžiada potvrdenie ÚPSVaR. Hľadám pracovnú zmluvu, nie živnosť.",
 q3:"Prečo sklad a prečo teraz IT?",a3:"Teraz pracujem v sklade. Podporu a testovanie robím vo svojich projektoch: boty som postavil, otestoval a zdokumentoval, ako je vidno na videách vyššie.",
-q4:"Aký formát práce hľadáte?",a4:"100 % z domu a hlavne písomná komunikácia: chat, e-mail, tikety. Na pohovory a porady s tímom sa rád pripojím.",
+q4:"Aký formát práce hľadáte?",a4:"100 % z domu: chat, e-mail, tikety aj telefonická podpora. Na pohovory a porady s tímom sa rád pripojím.",
 prch:"Ako pracujem",
 s1t:"Pochopím úlohu",s1p:"Opýtam sa, čo presne má fungovať a pre koho, a zapíšem to ako jasné zadanie.",
 s2t:"Postavím s AI",s2p:"Riešenie robím s AI asistentmi (Claude Code). Rozhodnutia a výsledok kontrolujem sám.",
@@ -328,7 +449,7 @@ mail:"Send an email",cvb:"CV (PDF)",smp:"Support writing samples",tg:"Telegram",
 c0:"Booking bot",c1:"Hi! Haircut tomorrow after 5pm?",c2:"Free: 17:00, 18:30, 19:00. Which one?",c3:"18:30",c4:"Booked. I'll remind you 2 hours before.",
 cn:"From one of my projects, not a real chat",
 rh:"Roles I'm applying for",
-r1t:"Customer & technical support",r1p:"Chat and email in English and Slovak. I patiently find out what happened and explain the fix in plain words.",
+r1t:"Customer & technical support",r1p:"Chat, email and phone in English and Slovak. I patiently find out what happened and explain the fix in plain words.",
 r2t:"Junior QA tester",r2p:"Manual testing of bots, forms and integrations. Bug reports with steps, expected result and logs.",
 r3t:"AI automation",r3p:"Telegram bots, n8n workflows and Python scripts that take routine work off a team. AI is my main tool.",
 work:"My projects",soon:"Video coming soon",demo:"Try the live demo in Telegram",
@@ -342,30 +463,117 @@ faqh:"What people ask first",
 q1:"Do you use AI?",a1:"Yes, openly. I build bots and automations with AI assistants (Claude Code) and draft replies with them. I check every decision and result myself and I answer for the result.",
 q2:"Can you be hired as a foreigner?",a2:"I have an approved residence permit for employment. A new employer needs the labour office confirmation (ÚPSVaR). I am looking for an employment contract, not freelance.",
 q3:"Why a warehouse, and why IT now?",a3:"I work in a warehouse today. I do the support and testing work in my own projects: I built, tested and documented the bots, as the videos above show.",
-q4:"What kind of work are you after?",a4:"100% remote and mostly written: chat, email, tickets. I am happy to join interviews and team calls.",
+q4:"What kind of work are you after?",a4:"100% remote: chat, email, tickets and phone support. I am happy to join interviews and team calls.",
 prch:"How I work",
 s1t:"Understand the task",s1p:"I ask what exactly has to work and for whom, and write it down as a clear brief.",
 s2t:"Build with AI",s2p:"I build with AI assistants (Claude Code). I check the decisions and the result myself.",
 s3t:"Test",s3p:"Normal path, wrong input, duplicates, restarts and outages. Only then is it done.",
 s4t:"Hand over and document",s4p:"A short guide on what it does and how to restart it, so someone else can run it too.",
 cvh:"CVs",
-ch:"Looking for a remote job",cp:"Support, testing or AI automation, full-time or part-time. I have a Slovak residence permit for employment; a new employer needs a labour office confirmation (ÚPSVaR). Write to me, I'm happy to show a live demo."}
+ch:"Looking for a remote job",cp:"Support, testing or AI automation, full-time or part-time. I have a Slovak residence permit for employment; a new employer needs a labour office confirmation (ÚPSVaR). Write to me, I'm happy to show a live demo."},
+ru:{
+title:"Давид Константинов: сайты и Telegram-боты для бизнеса в Словакии",
+desc:"Сайты и Telegram-боты для малого бизнеса в Словакии: заявки с сайта в Telegram, бот записи, 4 языка. Цены от 80 до 400 €, рабочий пример открыт.",
+h1:"Сайты и Telegram-боты для малого бизнеса в Словакии",
+lead:"Рабочий пример можно открыть прямо сейчас: бот записи для салона. Цены от 80 до 400 € и сроки от 2 до 10 дней стоят ниже.",
+g1:"Сайт на словацком, украинском, русском и английском",
+g2:"Заявки с сайта приходят вам в Telegram и сохраняются в таблицу",
+g3:"Бота записи сначала бесплатно показываю на ваших услугах",
+tg:"Написать в Telegram",demo2:"Открыть пример бота",prb:"Цены",
+f1:"Братислава, работаю удалённо",f2:"Всё решаем перепиской",f3:"Официально, по договору (dohoda)",f4:"Эту страницу тоже сделал я",
+sc_t:"Запись онлайн",sc_n:"Имя",sc_s:"Услуга и время",sc_b:"Записаться",sc_b2:"Заявка отправлена",sc_bot:"заявки с сайта",sc_new:"Новая заявка",sc_m:"Олена, маникюр, пятница 18:30",sc_ok:"Подтвердить",sc_ok2:"Подтверждено",ty_n:"Олена",ty_s:"Маникюр, пятница 18:30",
+ph:"Что делаю и сколько стоит",
+p0t:"Сайт-визитка или лендинг",p0p:"Страница о вас: услуги, цены, контакты и форма заявки. На нужных языках, удобно открывать с телефона.",p0d:"срок после брифа",p0e:"цена после брифа",
+p1t:"Заявки с сайта в Telegram и таблицу",p1p:"Каждая заявка из формы приходит вам сообщением и сохраняется в Google Таблицу.",p1d:"2 дня",
+p2t:"Украинская или русская версия страницы",p2p:"Перевод готовой страницы и форма заявки на ней.",p2d:"3 дня",
+p3t:"Бот записи в Telegram",p3p:"Клиент сам выбирает время и получает напоминание, вы только подтверждаете. Сначала бесплатно показываю бота на ваших услугах. Понравится, 200 €. Не понравится, ничего не должны.",p3d:"до 7 дней",
+p4t:"Автоответчик на частые вопросы",p4p:"Отвечает клиентам по вашему прайсу и частым вопросам, пока вы заняты.",p4d:"10 дней",
+pfine:"Точную цену и срок называю до начала работы. Нужны тексты, прайс на нескольких языках или картинки для рекламы, напишите, посчитаю.",
+work:"Работы",soon:"Видео скоро будет",demo:"Открыть пример в Telegram",
+w1t:"Бот записи для салона",w1p:"Клиент пишет «есть окно в пятницу после 17?», бот предлагает свободное время и записывает. Владелец подтверждает одним нажатием, бот напоминает о визите. 4 языка.",
+w2t:"Монитор объявлений и цен",w2p:"Следит за bazos.sk, складывает новые объявления в Google Таблицу и сразу присылает уведомление в Telegram.",
+w3t:"Магазин в Telegram",w3p:"Каталог, корзина и оформление заказа прямо в чате.",
+w4t:"Заявки с сайта",w4p:"Заявка из формы попадает в таблицу, а владельцу приходит сообщение в Telegram.",
+prch:"Как идёт работа",
+s1t:"Вы пишете задачу",s1p:"Пара строк в Telegram: что нужно и для какого бизнеса. Задаю вопросы, называю цену и срок.",
+s2t:"Показываю",s2p:"Собираю рабочую версию и присылаю ссылку, чтобы вы сами попробовали с телефона.",
+s3t:"Правки и запуск",s3p:"Вношу правки, подключаю ваш домен, Telegram и таблицу.",
+s4t:"Сдача",s4p:"Короткая инструкция: как всё работает и что делать, если что-то сломалось. Всё остаётся на ваших аккаунтах.",
+faqh:"Частые вопросы",
+q1:"Сколько стоит сайт?",a1:"Зависит от числа страниц и языков. Напишите, что нужно, и я назову цену и срок до начала работы.",
+q2:"Как оформляем?",a2:"Официально, по договору (dohoda) с вашей фирмой в Словакии.",
+q3:"На каких языках делаете?",a3:"Словацкий, украинский, русский и английский. Переписку веду на любом из них.",
+q4:"Нужны ли созвоны?",a4:"Нет, всё решаем перепиской в Telegram. Если вам удобнее голосом, хватит одного короткого звонка на старте.",
+ch:"Напишите, что нужно сделать",cp:"Пара строк о задаче в Telegram. Отвечу с ценой и сроком."},
+uk:{
+title:"Давид Константінов: сайти й Telegram-боти для бізнесу в Словаччині",
+desc:"Сайти й Telegram-боти для малого бізнесу в Словаччині: заявки із сайту в Telegram, бот для запису, 4 мови. Ціни від 80 до 400 €, робочий приклад відкритий.",
+h1:"Сайти й Telegram-боти для малого бізнесу в Словаччині",
+lead:"Робочий приклад можна відкрити просто зараз: бот для запису клієнтів салону. Ціни від 80 до 400 € і терміни від 2 до 10 днів вказані нижче.",
+g1:"Сайт словацькою, українською, російською та англійською",
+g2:"Заявки із сайту надходять вам у Telegram і зберігаються в таблиці",
+g3:"Бота для запису спершу безкоштовно показую на прикладі ваших послуг",
+tg:"Написати в Telegram",demo2:"Відкрити приклад бота",prb:"Ціни",
+f1:"Братислава, працюю віддалено",f2:"Усе вирішуємо листуванням",f3:"Офіційно, за договором (dohoda)",f4:"Цю сторінку теж зробив я",
+sc_t:"Запис онлайн",sc_n:"Ім’я",sc_s:"Послуга і час",sc_b:"Записатися",sc_b2:"Заявку надіслано",sc_bot:"заявки із сайту",sc_new:"Нова заявка",sc_m:"Олена, манікюр, п’ятниця 18:30",sc_ok:"Підтвердити",sc_ok2:"Підтверджено",ty_n:"Олена",ty_s:"Манікюр, п’ятниця 18:30",
+ph:"Що роблю і скільки це коштує",
+p0t:"Сайт-візитка або лендинг",p0p:"Сторінка про вас: послуги, ціни, контакти й форма заявки. Потрібними мовами, зручно відкривати з телефона.",p0d:"термін після брифу",p0e:"ціна після брифу",
+p1t:"Заявки із сайту в Telegram і таблицю",p1p:"Кожна заявка з форми надходить вам повідомленням і зберігається в Google Таблиці.",p1d:"2 дні",
+p2t:"Українська або російська версія сторінки",p2p:"Переклад готової сторінки і форма заявки на ній.",p2d:"3 дні",
+p3t:"Бот для запису в Telegram",p3p:"Клієнт сам обирає час і отримує нагадування, ви лише підтверджуєте. Спершу безкоштовно показую бота на прикладі ваших послуг. Сподобається, 200 €. Не сподобається, нічого не винні.",p3d:"до 7 днів",
+p4t:"Автовідповідач на часті запитання",p4p:"Відповідає клієнтам за вашим прайсом і на часті запитання, поки ви зайняті.",p4d:"10 днів",
+pfine:"Точну ціну і термін називаю до початку роботи. Потрібні тексти, прайс кількома мовами чи картинки для реклами, напишіть, порахую.",
+work:"Роботи",soon:"Відео скоро буде",demo:"Відкрити приклад у Telegram",
+w1t:"Бот для запису клієнтів салону",w1p:"Клієнт пише «є вікно в п’ятницю після 17?», бот пропонує вільний час і записує. Власник підтверджує одним натисканням, бот нагадує про візит. 4 мови.",
+w2t:"Монітор оголошень і цін",w2p:"Стежить за bazos.sk, заносить нові оголошення в Google Таблицю й одразу надсилає сповіщення в Telegram.",
+w3t:"Магазин у Telegram",w3p:"Каталог, кошик і оформлення замовлення просто в чаті.",
+w4t:"Заявки із сайту",w4p:"Заявка з форми потрапляє в таблицю, а власнику надходить повідомлення в Telegram.",
+prch:"Як іде робота",
+s1t:"Ви пишете завдання",s1p:"Кілька рядків у Telegram: що потрібно і для якого бізнесу. Ставлю запитання, називаю ціну і термін.",
+s2t:"Показую",s2p:"Збираю робочу версію і надсилаю посилання, щоб ви самі спробували з телефона.",
+s3t:"Правки і запуск",s3p:"Вношу правки, підключаю ваш домен, Telegram і таблицю.",
+s4t:"Здача",s4p:"Коротка інструкція: як усе працює і що робити, якщо щось зламалося. Усе залишається на ваших акаунтах.",
+faqh:"Часті запитання",
+q1:"Скільки коштує сайт?",a1:"Залежить від кількості сторінок і мов. Напишіть, що потрібно, і я назву ціну й термін до початку роботи.",
+q2:"Як оформлюємо?",a2:"Офіційно, за договором (dohoda) з вашою фірмою в Словаччині.",
+q3:"Якими мовами робите?",a3:"Словацькою, українською, російською та англійською. Листуюся будь-якою з них.",
+q4:"Чи потрібні дзвінки?",a4:"Ні, усе вирішуємо листуванням у Telegram. Якщо вам зручніше голосом, вистачить одного короткого дзвінка на старті.",
+ch:"Напишіть, що потрібно зробити",cp:"Кілька рядків про завдання в Telegram. Відповім із ціною і терміном."}
 };
+// hero scene for RU/UA: the form fills itself, the request lands in Telegram, the owner confirms
+let run=0;
+async function scene(l){
+  const id=++run,sc=document.querySelector('.scene'),tn=document.getElementById('tn'),ts=document.getElementById('ts');
+  const t=T[l];if(!t.ty_n)return;
+  const still=matchMedia('(prefers-reduced-motion:reduce)').matches;
+  const w=ms=>new Promise(r=>setTimeout(r,ms));
+  const type=async(el,s)=>{el.parentNode.classList.add('on');for(let i=1;i<=s.length&&id==run;i++){el.textContent=s.slice(0,i);await w(55)}el.parentNode.classList.remove('on')};
+  if(still){tn.textContent=t.ty_n;ts.textContent=t.ty_s;sc.className='scene biz s1 s2 s3';return}
+  while(id==run){
+    sc.className='scene biz';tn.textContent=ts.textContent='';await w(700);
+    await type(tn,t.ty_n);await w(250);await type(ts,t.ty_s);await w(400);if(id!=run)return;
+    sc.classList.add('s0');await w(160);sc.classList.remove('s0');sc.classList.add('s1');await w(700);if(id!=run)return;
+    sc.classList.add('s2');await w(1500);if(id!=run)return;
+    sc.classList.add('s3');await w(3800);
+  }
+}
 const els=[...document.querySelectorAll('[data-i]')];
 function setLang(l){
   if(!Object.hasOwn(T,l))l='sk';
-  els.forEach(e=>e.textContent=T[l][e.dataset.i]);
+  document.body.dataset.mode=(l=='ru'||l=='uk')?'biz':'job';
+  els.forEach(e=>e.textContent=T[l][e.dataset.i]??'');
   document.querySelectorAll('[data-cv]').forEach(a=>a.href='cv/Davyd_Konstantinov_'+a.dataset.cv+'_'+(l=='sk'?'SK':'EN')+'.pdf');
   document.documentElement.lang=l;
   document.title=T[l].title;
   document.querySelector('meta[name=description]').content=T[l].desc;
   document.querySelectorAll('[data-set]').forEach(b=>b.setAttribute('aria-pressed',b.dataset.set===l));
   try{localStorage.lang=l}catch(e){}
+  scene(l);
 }
 document.querySelectorAll('[data-set]').forEach(b=>b.onclick=()=>setLang(b.dataset.set));
 let saved='';try{saved=localStorage.lang}catch(e){}
 const bl=(navigator.language||'').slice(0,2);
-setLang(new URLSearchParams(location.search).get('lang')||saved||(bl=='en'?'en':'sk'));
+setLang(new URLSearchParams(location.search).get('lang')||saved||(['en','ru','uk'].includes(bl)?bl:'sk'));
 // video slots: attach the file only when the card is near the screen, show the player only if the file exists
 const lazy=new IntersectionObserver(es=>es.forEach(e=>{
   if(!e.isIntersecting)return;
