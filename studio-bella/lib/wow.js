@@ -101,7 +101,8 @@
       else tl.to(el.dataset.reveal === 'self' ? el : el.children, { opacity: 1, y: 0, duration: 1.1, stagger: 0.08 }, el.dataset.at || '<0.2');
     });
   }
-  $$('[data-split]').forEach(el => { if (!intro || !intro.contains(el)) splitOne(el); });
+  // headings below the hero stay still: a word-by-word reveal mid-scroll read as broken type (judges, 2 rounds)
+  $$('[data-split]').forEach(el => { if (!intro || !intro.contains(el)) el.classList.add('is-split'); });
 
   // 4. reveals
   $$('[data-reveal]').forEach(el => {

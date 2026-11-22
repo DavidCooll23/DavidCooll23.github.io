@@ -274,6 +274,7 @@ footer .mel{margin-left:4px}footer .me{width:56px;height:56px}
 @media(min-width:900px){.galsec .track{display:grid;grid-template-columns:repeat(3,1fr);width:auto}.galsec .track figure{width:auto}}
 @media(min-width:900px){h1{max-width:15ch;font-size:clamp(3rem,5vw,6rem)}}
 .pcsec{--mo-hold:0.5 !important;min-height:0 !important}
+@media(max-width:639px){.pcsec .mo-pc__visual{display:none}}
 .dsh{display:none}@media(max-width:640px){.demo [data-i=demo]{display:none}.dsh{display:inline}.demo .wrap{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}}
 section:has(+.pcsec){padding-bottom:0}section:has(+.pcsec) .stmt{margin-bottom:0}
 </style>
@@ -395,8 +396,8 @@ section:has(+.pcsec){padding-bottom:0}section:has(+.pcsec) .stmt{margin-bottom:0
           <thead><tr><th></th><th>A</th><th>B</th><th>C</th><th>D</th></tr></thead>
           <tbody id="rows">
             <tr class="hd"><td class="rn">1</td><td data-i="c1"></td><td data-i="c2"></td><td data-i="c3"></td><td data-i="c4"></td></tr>
-            <tr><td class="rn">2</td><td>20.11 10:12</td><td>Jana</td><td>+421 905 000 000</td><td data-i="r1"></td></tr>
-            <tr><td class="rn">3</td><td>21.11 18:47</td><td>Petra</td><td>—</td><td data-i="r2"></td></tr>
+            <tr><td class="rn">2</td><td>20. 11. 10:12</td><td>Jana</td><td>+421 905 000 000</td><td data-i="r1"></td></tr>
+            <tr><td class="rn">3</td><td>21. 11. 18:47</td><td>Petra</td><td>—</td><td data-i="r2"></td></tr>
           </tbody>
         </table>
       </div>
@@ -610,7 +611,7 @@ fq.addEventListener('submit',ev=>{
   ev.preventDefault();
   const n=fq.n.value.trim(),c=fq.c.value.trim(),q=fq.q.value.trim();
   if(!n||!q){$('fdone').textContent=T[cur].fneed;(n?fq.q:fq.n).focus();return}
-  const d=new Date(),stamp=pad(d.getDate())+'.'+pad(d.getMonth()+1)+' '+pad(d.getHours())+':'+pad(d.getMinutes());
+  const d=new Date(),stamp=d.getDate()+'. '+(d.getMonth()+1)+'. '+pad(d.getHours())+':'+pad(d.getMinutes());
   $('tn').textContent=n;$('tq').textContent=q;$('tt').textContent=stamp;
   if(c){$('tc').textContent=c;delete $('tc').dataset.none}else{$('tc').textContent=T[cur].onone;$('tc').dataset.none='1'}
   const ow=$('owner');ow.classList.remove('got');void ow.offsetWidth;ow.classList.add('got');
