@@ -78,8 +78,8 @@ header{min-height:80px;border-bottom:1px solid var(--rule);display:flex;align-it
 .btn.arrow::after,.btn.outward::after{content:none}
 
 /* First screen: text + the customer's booking card, then the salon's Friday as an hour scale */
-.hero{display:grid;grid-template-columns:minmax(0,1fr) minmax(300px,380px);grid-template-areas:"intro client" "cal cal";column-gap:clamp(32px,6vw,110px);row-gap:clamp(30px,3.4vw,48px);align-items:end;padding:clamp(40px,4.6vw,70px) 0 0}
-.intro{grid-area:intro}
+.hero{display:grid;grid-template-columns:minmax(0,1fr) minmax(300px,380px);grid-template-areas:"intro client" "cal cal";column-gap:clamp(32px,6vw,110px);row-gap:0;align-items:end;padding:clamp(40px,4.6vw,70px) 0 0}
+.intro{grid-area:intro;padding-bottom:clamp(30px,3.4vw,48px)}
 .location{font-size:14px;color:var(--muted);margin-bottom:16px}
 h1,h2,.thanks h3{font-family:var(--display);font-weight:500;letter-spacing:-.04em;text-wrap:balance}
 h1{font-size:clamp(38px,4.4vw,66px);line-height:1.04}
@@ -97,7 +97,7 @@ h1 em{display:block;font-style:normal}
 .minor-link{display:inline-block;padding:7px 0;margin-top:7px;color:var(--muted);font-size:14px}
 
 .hero .live-demo{display:contents}
-.ld-client{grid-area:client;background:var(--white);border:1px solid var(--rule);border-radius:10px;padding:24px;box-shadow:0 34px 60px -42px rgba(20,26,99,.55)}
+.ld-client{grid-area:client;background:var(--white);border:1px solid var(--rule);border-bottom:0;border-radius:10px 10px 0 0;padding:24px;box-shadow:0 34px 60px -42px rgba(20,26,99,.55)}
 .ld-tag{display:block;font:600 13px/1.4 var(--sans);color:var(--blue);margin-bottom:10px}
 .ld-client b{display:block;font:500 21px/1.25 var(--display);letter-spacing:-.04em}
 .ld-day{color:var(--muted);font-size:14px;margin:4px 0 16px}
@@ -223,7 +223,8 @@ footer{display:flex;justify-content:space-between;align-items:center;gap:16px;pa
   .header-contact{display:grid;place-items:center;width:34px;height:34px;border:1px solid var(--rule);border-radius:50%;font-size:0;gap:0}
   .header-contact::after{width:17px;height:17px;transform:rotate(-40deg)}
   .hero{grid-template-columns:minmax(0,1fr);grid-template-areas:"intro" "client" "cal";row-gap:22px;padding-top:30px;align-items:start}
-  .ld-client{max-width:520px;border-radius:10px 10px 0 0;box-shadow:none}
+  .intro{padding-bottom:0}
+  .ld-client{max-width:520px;border:1px solid var(--rule);border-radius:10px 10px 0 0;box-shadow:none}
   .ld-owner{max-width:520px;margin-top:-22px;background:var(--white);border:1px solid var(--rule);border-top:1px dashed var(--rule);border-radius:0 0 10px 10px;padding:14px 16px 16px;box-shadow:0 34px 60px -42px rgba(20,26,99,.55)}
   .ld-track{padding-top:0}.ld-scale,.ld-ghost{display:none}
   .ld-list{height:auto;max-width:520px}
@@ -383,7 +384,7 @@ footer{display:flex;justify-content:space-between;align-items:center;gap:16px;pa
     <div class="prow"><div><h3 data-i="p3t">Rezervačný bot v Telegrame</h3><p data-i="p3p">Zákazník si sám vyberie čas a dostane pripomienku, vy len potvrdíte. Najprv vám bota zadarmo ukážem na vašich službách. Ak sa vám páči, stojí 200 €. Ak nie, nič neplatíte.</p><a class="ex" href="https://t.me/StudioBellaBookingBot" data-ex="https://t.me/StudioBellaBookingBot" data-q="" data-h="" data-i="exBot">Napísať botovi v Telegrame</a></div><span class="term" data-i="p3d">do 7 dní</span><b class="eur">200 €</b></div>
     <div class="prow"><div><h3 data-i="p4t">AI asistent na časté otázky</h3><p data-i="p4p">Kým sa venujete klientom, asistent odpovedá na otázky o cenách a službách podľa vášho cenníka.</p><a class="ex" href="studio-bella/" data-ex="studio-bella/" data-q="chat=1" data-h="" data-i="exAI">Opýtať sa AI asistenta</a></div><span class="term" data-i="p4d">10 dní</span><b class="eur">400 €</b></div>
   </div></details>
-  <p class="fine" data-i="pfine">Presnú cenu poviem pred začiatkom práce. Termín počítam od chvíle, keď mi pošlete zoznam služieb, cenník a fotky. Ak potrebujete texty, cenník vo viacerých jazykoch alebo obrázky do reklamy, napíšte mi a pripravím vám cenovú ponuku.</p>
+  <p class="fine" data-i="pfine">Presnú cenu poviem pred začiatkom práce. Web bude hotový do 5 dní, s rezerváciou do 10 dní od chvíle, keď mi pošlete zoznam služieb, cenník a fotky. Ak potrebujete texty, cenník vo viacerých jazykoch alebo obrázky do reklamy, napíšte mi a pripravím vám cenovú ponuku.</p>
 </section>
 
 <section id="roles" class="job">
@@ -405,7 +406,7 @@ footer{display:flex;justify-content:space-between;align-items:center;gap:16px;pa
   <h2 data-i="faqh">Časté otázky</h2>
   <div class="faq">
     <div class="qa"><h3 data-i="q1">Koľko stojí web?</h3><p data-i="a1">Jednoduchý web alebo landing page od 250 €, web s online rezerváciou a panelom od 350 €. Presnú cenu poviem pred začiatkom práce.</p></div>
-    <div class="qa"><h3 data-i="q2">Ako to riešime zmluvne?</h3><p data-i="a2">Oficiálne, na dohodu o vykonaní práce s vašou firmou na Slovensku. Nie som živnostník, preto pracujem na dohodu, nie na faktúru.</p></div>
+    <div class="qa"><h3 data-i="q2">Ako to riešime zmluvne?</h3><p data-i="a2">Oficiálne: podpíšeme dohodu o vykonaní práce s vašou firmou na Slovensku. Faktúru preto nevystavujem.</p></div>
     <div class="qa"><h3 data-i="q3">V ktorých jazykoch robíte weby?</h3><p data-i="a3">Slovenčina, ukrajinčina, ruština a angličtina. Písať si môžeme v ktoromkoľvek z nich.</p></div>
     <div class="qa"><h3 data-i="q4">Sú potrebné telefonáty?</h3><p data-i="a4">Nie, všetko vyriešime písomne cez WhatsApp alebo e-mail. Ak vám viac vyhovuje hovor, stačí jeden krátky na začiatku.</p></div>
     <div class="qa"><h3 data-i="q5">Za ako dlho bude web hotový?</h3><p data-i="a5">Jednoduchý web do 5 dní, web s online rezerváciou do 10 dní. Počítam od chvíle, keď mi pošlete zoznam služieb, cenník a fotky.</p></div>
@@ -503,7 +504,7 @@ const T = {
     "q1": "Koľko stojí web?",
     "a1": "Jednoduchý web alebo landing page od 250 €, web s online rezerváciou a panelom od 350 €. Presnú cenu poviem pred začiatkom práce.",
     "q2": "Ako to riešime zmluvne?",
-    "a2": "Oficiálne, na dohodu o vykonaní práce s vašou firmou na Slovensku. Nie som živnostník, preto pracujem na dohodu, nie na faktúru.",
+    "a2": "Oficiálne: podpíšeme dohodu o vykonaní práce s vašou firmou na Slovensku. Faktúru preto nevystavujem.",
     "q3": "V ktorých jazykoch robíte weby?",
     "a3": "Slovenčina, ukrajinčina, ruština a angličtina. Písať si môžeme v ktoromkoľvek z nich.",
     "q4": "Sú potrebné telefonáty?",
@@ -552,7 +553,7 @@ const T = {
     "p4t": "AI asistent na časté otázky",
     "p4p": "Kým sa venujete klientom, asistent odpovedá na otázky o cenách a službách podľa vášho cenníka.",
     "p4d": "10 dní",
-    "pfine": "Presnú cenu poviem pred začiatkom práce. Termín počítam od chvíle, keď mi pošlete zoznam služieb, cenník a fotky. Ak potrebujete texty, cenník vo viacerých jazykoch alebo obrázky do reklamy, napíšte mi a pripravím vám cenovú ponuku.",
+    "pfine": "Presnú cenu poviem pred začiatkom práce. Web bude hotový do 5 dní, s rezerváciou do 10 dní od chvíle, keď mi pošlete zoznam služieb, cenník a fotky. Ak potrebujete texty, cenník vo viacerých jazykoch alebo obrázky do reklamy, napíšte mi a pripravím vám cenovú ponuku.",
     "ex": "Pozrieť ukážku",
     "wa": "Alebo cez WhatsApp",
     "callName": "Zavolať",
