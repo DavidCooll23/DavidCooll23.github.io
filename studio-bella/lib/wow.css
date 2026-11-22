@@ -41,7 +41,7 @@ html.lenis, html.lenis body { height: auto; }
 [data-marquee] .wow-track { display: inline-flex; }
 
 /* highlight: words go from faint to ink as the statement scrolls past */
-.wow-js [data-highlight] .wow-w { opacity: .14; }
+.wow-js [data-highlight] .wow-w { opacity: .4; }
 .wow-safe [data-highlight] .wow-w { opacity: 1 !important; }
 
 /* cursor: dot + ring; grows with a label over [data-cursor] */
