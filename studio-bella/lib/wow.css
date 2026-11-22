@@ -1,0 +1,91 @@
+/* wow.css - pairs with wow.js (_claude/web/BOOK.md). Hidden start states apply ONLY under html.wow-js,
+   so without JS / under reduced motion / on a failed load the page is complete. html.wow-safe (3 s timer) shows all. */
+@view-transition { navigation: auto; }                      /* cross-page fade between pages of one site, no JS */
+::view-transition-old(root), ::view-transition-new(root) { animation-duration: .45s; }
+
+html.lenis, html.lenis body { height: auto; }
+.lenis.lenis-smooth { scroll-behavior: auto !important; }
+.lenis.lenis-stopped { overflow: hidden; }
+
+/* split headings: lines are masked by SplitText (mask:'lines') */
+.wow-js [data-split] { visibility: hidden; }
+.wow-js [data-split].is-split, .wow-safe [data-split] { visibility: visible; }
+
+/* reveal: fade + rise, children of the marked block one after another */
+.wow-js [data-reveal] > *, .wow-js [data-reveal=self] { opacity: 0; transform: translateY(28px); }
+.wow-safe [data-reveal] > *, .wow-safe [data-reveal=self] { opacity: 1 !important; transform: none !important; }
+
+/* clip: frame wipes open from the bottom, the picture inside settles from 1.25 */
+[data-clip] { overflow: hidden; }
+.wow-js [data-clip] { clip-path: inset(100% 0 0 0); }
+.wow-safe [data-clip] { clip-path: none !important; }
+@media (max-width: 899px) { .wow-js [data-intro] [data-clip] { clip-path: none; } }   /* phones: first-screen photo shows at once (LCP) */
+[data-clip] img { display: block; width: 100%; height: 100%; object-fit: cover; }
+
+/* parallax: the img drifts inside its frame (frame clips) */
+[data-parallax] { overflow: hidden; }
+[data-parallax] img { display: block; width: 100%; height: 118%; object-fit: cover; }
+
+/* zoom on hover inside its frame */
+[data-zoom] { overflow: hidden; }
+[data-zoom] img { transition: transform 1.1s cubic-bezier(.2,.7,.1,1); }
+[data-zoom]:hover img { transform: scale(1.05); }
+
+/* underline that draws */
+.wow-line { text-decoration: none; background: linear-gradient(currentColor, currentColor) 0 100% / 0 1px no-repeat; transition: background-size .5s cubic-bezier(.6,0,.2,1); }
+.wow-line:hover, .wow-line:focus-visible { background-size: 100% 1px; }
+
+/* marquee: JS clones the track */
+[data-marquee] { overflow: hidden; white-space: nowrap; }
+[data-marquee] .wow-track { display: inline-flex; }
+
+/* highlight: words go from faint to ink as the statement scrolls past */
+.wow-js [data-highlight] .wow-w { opacity: .14; }
+.wow-safe [data-highlight] .wow-w { opacity: 1 !important; }
+
+/* cursor: dot + ring; grows with a label over [data-cursor] */
+.wow-cursor { position: fixed; left: 0; top: 0; z-index: 9999; pointer-events: none; }
+.wow-cursor .d { position: absolute; width: 6px; height: 6px; margin: -3px; border-radius: 50%; background: var(--cursor, #111); transition: opacity .2s; }
+.wow-cursor .r { position: absolute; width: 36px; height: 36px; margin: -18px; border-radius: 50%; border: 1px solid var(--cursor, #111); opacity: .5;
+  display: grid; place-items: center; font: 600 11px/1.1 system-ui, sans-serif; letter-spacing: .08em; text-transform: uppercase; text-align: center; color: transparent;
+  transition: width .4s cubic-bezier(.2,.8,.2,1), height .4s cubic-bezier(.2,.8,.2,1), margin .4s cubic-bezier(.2,.8,.2,1), background .3s, opacity .3s, color .2s; }
+.wow-cursor.big .r { width: 104px; height: 104px; margin: -52px; background: var(--cursor, #111); color: var(--cursor-ink, #fff); opacity: 1; }
+.wow-cursor.big .d { opacity: 0; }
+.wow-cursor.link .r { width: 56px; height: 56px; margin: -28px; opacity: .9; }
+@media (pointer: coarse) { .wow-cursor { display: none; } }
+
+/* floating preview that follows the pointer over rows with data-float="img.jpg" */
+.wow-float { position: fixed; left: 0; top: 0; width: 260px; aspect-ratio: 4/5; z-index: 40; pointer-events: none; overflow: hidden; border-radius: 4px; visibility: hidden; }
+.wow-float img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+
+/* scroll progress line */
+.wow-progress { position: fixed; left: 0; top: 0; height: 2px; width: 100%; transform-origin: 0 50%; transform: scaleX(0); z-index: 100; background: var(--accent, currentColor); }
+
+/* header hides going down, returns going up */
+[data-hide-header] { transition: transform .45s cubic-bezier(.2,.8,.2,1), background .3s; }
+[data-hide-header].wow-up { transform: translateY(-110%); }
+
+/* loader curtain: only with JS, once per session (html.wow-noload set in <head>), hides itself after 4 s whatever happens */
+[data-loader] { display: none; }
+.wow-js [data-loader] { display: flex; position: fixed; inset: 0; z-index: 300; align-items: flex-end; justify-content: space-between; gap: 24px;
+  padding: clamp(20px, 4vw, 56px); background: var(--loader-bg, #111); color: var(--loader-ink, #fff); animation: wowLoaderOut 0s 4s forwards; }
+.wow-safe [data-loader], .wow-noload [data-loader] { display: none !important; }
+@media (max-width: 899px), (pointer: coarse) { [data-loader] { display: none !important; } }   /* phones: speed first */
+[data-loader-n] { font-variant-numeric: tabular-nums; line-height: .8; }
+@keyframes wowLoaderOut { to { visibility: hidden; pointer-events: none; } }
+
+/* text roll: the button's first span rolls up to its own copy (text-shadow), language-safe; button clips */
+[data-roll] { overflow: hidden; }
+[data-roll] > span:first-child { display: inline-block; text-shadow: 0 2.4em currentColor; transition: transform .55s cubic-bezier(.7,0,.2,1); }
+@media (hover: hover) { [data-roll]:hover > span:first-child, [data-roll]:focus-visible > span:first-child { transform: translateY(-2.4em); } }
+
+/* film grain: static noise over the page, cheap (one fixed layer, no animation) */
+body[data-grain]::after { content: ""; position: fixed; inset: 0; z-index: 250; pointer-events: none; opacity: var(--grain, .08); mix-blend-mode: multiply;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='200' height='200'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .6 0'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>"); }
+
+@media (prefers-reduced-motion: reduce) {
+  [data-loader] { display: none !important; }
+  [data-roll] > span:first-child { transition: none; }
+  [data-zoom] img { transition: none; }
+  .wow-cursor, .wow-float, .wow-progress { display: none; }
+}
