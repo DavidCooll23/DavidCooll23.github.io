@@ -127,6 +127,10 @@ h1 em{font-style:normal;padding:0 .06em;margin:0 -.06em;background:linear-gradie
 @media(prefers-reduced-motion:reduce){.ld-list .ld-new{animation:none}}
 /* Desktop: the salon's calendar sits right under the booking card, so the new booking lands next to the button */
 @media(min-width:761px){.hero{grid-template-areas:"intro client" "intro cal";align-items:start;padding-bottom:clamp(30px,3.4vw,48px)}.intro{padding-bottom:0}.ld-client{margin-top:30px;box-shadow:none}.ld-owner{background:var(--white);border:1px solid var(--rule);border-top:1px dashed var(--rule);border-radius:0 0 10px 10px;padding:16px 30px 22px;box-shadow:0 34px 60px -42px rgba(20,26,99,.55)}.ld-track{padding-top:0;margin-top:4px}.ld-scale,.ld-ghost{display:none}.ld-list{height:auto}.ld-list li{position:static;width:auto;flex-direction:row;align-items:baseline;gap:14px;margin:6px 0 0;padding:9px 12px;font-size:15px}.ld-list time{font-size:13px}}
+/* Desktop calendar: one earlier booking + the new one, so the card stays short (codex 23.11) */
+@media(min-width:761px){.ld-list li:not(.ld-new):not(:last-child){display:none}}
+/* Phones: the marked line «Rezervácie online.» fits on one line in every language (longest is SK) */
+@media(max-width:540px){h1{font-size:min(38px,calc(9.6vw - 4px))}}
 /* Ribbon: the promises as one ink band across the page (moves only with motion allowed) */
 .ribbon{margin:clamp(30px,3.4vw,48px) calc(50% - 50vw) 0;background:var(--ink);color:#fff;overflow:hidden}
 .ribbon{position:relative}.ribbon::before,.ribbon::after{content:"";position:absolute;top:0;bottom:0;width:7%;z-index:1;pointer-events:none;background:linear-gradient(90deg,var(--ink),transparent)}.ribbon::before{left:0}.ribbon::after{right:0;transform:scaleX(-1)}
