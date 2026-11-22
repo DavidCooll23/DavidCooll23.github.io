@@ -19,6 +19,9 @@
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%23752239'/%3E%3Ctext x='16' y='22' font-family='Segoe UI,Arial' font-weight='700' font-size='16' text-anchor='middle' fill='white'%3EDK%3C/text%3E%3C/svg%3E">
 <meta name="theme-color" content="#f9f7f1">
+<link rel="canonical" href="https://konstantinov.sk/">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"ProfessionalService","name":"Davyd Konstantinov – weby s online rezerváciou","url":"https://konstantinov.sk/","image":"https://konstantinov.sk/media/og.jpg","telephone":"+421910392871","email":"davyd@konstantinov.sk","areaServed":"SK","address":{"@type":"PostalAddress","addressLocality":"Bratislava","addressCountry":"SK"},"priceRange":"80–400 €","availableLanguage":["sk","en","ru","uk"]}</script>
+<script src="https://cdn.counter.dev/script.js" data-id="257df3c8-5256-4c70-addb-07ba1530a824" data-utcoffset="1" defer></script>
 <link rel="preload" href="fonts/ibm-plex-sans-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="fonts/ibm-plex-sans-latin-600-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="fonts/ibm-plex-sans-latin-ext-600-normal.woff2" as="font" type="font/woff2" crossorigin>
@@ -244,9 +247,9 @@ footer{display:flex;justify-content:space-between;align-items:center;gap:16px;pa
     <div class="device-stage">
       <div class="browser">
         <div class="browser-bar" aria-hidden="true"><i></i><i></i><i></i><span data-i="previewUrl">konstantinov.sk/studio-bella/</span></div>
-        <img src="media/shot-bella-desktop.jpg" width="2160" height="1350" fetchpriority="high" data-alt="desktopAlt" alt="Studio Bella">
+        <img src="media/shot-bella-desktop-1280.webp" srcset="media/shot-bella-desktop-800.webp 800w, media/shot-bella-desktop-1280.webp 1280w, media/shot-bella-desktop-1600.webp 1600w" sizes="(max-width:760px) 82vw, 48vw" width="2160" height="1350" fetchpriority="high" data-alt="desktopAlt" alt="Studio Bella">
       </div>
-      <div class="phone"><img src="media/shot-bella-mobile.jpg" width="780" height="1688" data-alt="mobileAlt" alt="Studio Bella"></div>
+      <div class="phone"><img src="media/shot-bella-mobile-400.webp" srcset="media/shot-bella-mobile-240.webp 240w, media/shot-bella-mobile-400.webp 400w" sizes="(max-width:760px) 20vw, 10vw" width="780" height="1688" data-alt="mobileAlt" alt="Studio Bella"></div>
       <div class="booking-note" aria-hidden="true">
         <div class="booking-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3.5" y="5" width="17" height="15" rx="2"/><path d="M7.5 3v4m9-4v4M4 10h16m-12 5 2.2 2 4.8-4.8"/></svg></div>
         <div><small data-i="sc_bot">panel majiteľa</small><strong data-i="sc_new">Nová rezervácia</strong><span data-i="sc_m">Olena, manikúra, piatok 18:30</span></div>
@@ -366,7 +369,7 @@ footer{display:flex;justify-content:space-between;align-items:center;gap:16px;pa
     <h2 data-i="ch">Aký web potrebujete?</h2><p data-i="cp">Napíšte mi pár slov o svojom podniku. Ozvem sa s cenou a termínom.</p>
     <div class="address"><span id="email-address">davyd@konstantinov.sk</span><button type="button" id="copy-email" data-i="copy">Kopírovať</button></div>
     <small id="copy-status" role="status"></small>
-    <div class="channels"><a href="https://wa.me/421910392871" data-wa><span data-i="waName">WhatsApp</span> <span>+421 910 392 871</span></a><a href="https://t.me/+421910392871" data-i="tgName">Telegram</a></div>
+    <div class="channels"><a href="https://wa.me/421910392871" data-wa><span data-i="waName">WhatsApp</span> <span>+421 910 392 871</span></a><a href="tel:+421910392871" data-i="callName">Zavolať</a><a href="https://t.me/+421910392871" data-i="tgName">Telegram</a></div>
     <div class="btns job"><a class="btn" href="#qf" data-write>davyd@konstantinov.sk</a><a class="btn" href="https://t.me/+421910392871" data-i="tg">Napísať na Telegram</a></div>
   </div>
   <div class="form-panel">
@@ -385,7 +388,7 @@ footer{display:flex;justify-content:space-between;align-items:center;gap:16px;pa
   </div>
 </section>
 </main>
-<footer><span>© 2026 Davyd Konstantinov</span><a href="#top" data-i="backTop">Späť hore</a></footer>
+<footer><span>© 2026 Davyd Konstantinov</span><a href="ochrana-udajov.html" data-i="privacy">Ochrana osobných údajov</a><a href="#top" data-i="backTop">Späť hore</a></footer>
 </div>
 <script>
 const T = {
@@ -491,6 +494,8 @@ const T = {
     "pfine": "Presnú cenu a termín poviem pred začiatkom práce. Ak potrebujete texty, cenník vo viacerých jazykoch alebo obrázky do reklamy, napíšte a spočítam to.",
     "ex": "Pozrieť ukážku",
     "wa": "Alebo cez WhatsApp",
+    "callName": "Zavolať",
+    "privacy": "Ochrana osobných údajov",
     "mailb": "Napísať mi",
     "tgs": "alebo cez Telegram",
     "wat": "Dobrý deň, píšem z vašej stránky.",
@@ -649,6 +654,8 @@ const T = {
     "pfine": "I give you the exact price and timing before I start. If you need texts, a price list in several languages or images for ads, write to me and I'll quote it.",
     "ex": "See an example",
     "wa": "Or use WhatsApp",
+    "callName": "Call",
+    "privacy": "Privacy policy (SK)",
     "mailb": "Write to me",
     "tgs": "or on Telegram",
     "wat": "Hello, I'm writing from your website.",
@@ -787,6 +794,8 @@ const T = {
     "cp": "Расскажите немного о своём деле. Я отвечу, сколько будет стоить работа и когда сайт будет готов.",
     "ex": "Посмотреть пример",
     "wa": "Или в WhatsApp",
+    "callName": "Позвонить",
+    "privacy": "Защита личных данных (SK)",
     "mailb": "Написать мне",
     "tgs": "или в Telegram",
     "wat": "Здравствуйте! Пишу с вашей страницы.",
@@ -926,6 +935,8 @@ const T = {
     "cp": "Розкажіть трохи про свою справу. Я відповім, скільки коштуватиме робота й коли сайт буде готовий.",
     "ex": "Подивитися приклад",
     "wa": "Або у WhatsApp",
+    "callName": "Зателефонувати",
+    "privacy": "Захист особистих даних (SK)",
     "mailb": "Написати мені",
     "tgs": "або в Telegram",
     "wat": "Добрий день! Пишу з вашої сторінки.",
