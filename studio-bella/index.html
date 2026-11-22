@@ -270,7 +270,8 @@ html,body{overflow-x:clip}
  body:not(.past) .fab{opacity:0;pointer-events:none;transform:translateY(16px)}
 }
 .mel{display:inline-flex;align-items:center;gap:7px;margin-left:10px;vertical-align:middle}.me{width:26px;height:26px;border-radius:50%;object-fit:cover;flex:none}
-footer .mel{margin-left:4px}footer .me{width:34px;height:34px}
+footer .mel{margin-left:4px}footer .me{width:56px;height:56px}
+@media(min-width:900px){.galsec .track{display:grid;grid-template-columns:repeat(3,1fr);width:auto}.galsec .track figure{width:auto}}
 @media(min-width:900px){h1{max-width:15ch;font-size:clamp(3rem,5vw,6rem)}}
 .pcsec{--mo-hold:0.5 !important}
 section:has(+.pcsec){padding-bottom:0}section:has(+.pcsec) .stmt{margin-bottom:0}
@@ -351,14 +352,11 @@ section:has(+.pcsec){padding-bottom:0}section:has(+.pcsec) .stmt{margin-bottom:0
   </div>
 </div></section>
 
-<section id="gallery" class="galsec" data-hscroll>
+<section id="gallery" class="galsec">
   <div class="wrap"><p class="label" data-i="gh"></p><h2 data-split data-i="gs"></h2></div>
   <div class="track" data-hscroll-track role="region" aria-label="Galéria" data-al="gh" tabindex="0">
-    <figure data-zoom data-cursor="Bella" data-skew><img src="salon-interior.jpg" width="640" height="800" loading="lazy" alt="" data-alt="g1"></figure>
-    <figure data-zoom data-cursor="Bella" data-skew><img src="work-cut.jpg" width="640" height="800" loading="lazy" alt="" data-alt="g2"></figure>
-    <figure data-zoom data-cursor="Bella" data-skew><img src="work-color.jpg" width="640" height="800" loading="lazy" alt="" data-alt="g3"></figure>
+    <figure data-zoom data-cursor="Bella" data-skew><img src="hero.jpg" width="640" height="800" loading="lazy" alt="" data-alt="s3"></figure>
     <figure data-zoom data-cursor="Bella" data-skew><img src="work-brows.jpg" width="640" height="800" loading="lazy" alt="" data-alt="g4"></figure>
-    <figure data-zoom data-cursor="Bella" data-skew><img src="salon-reception.jpg" width="640" height="800" loading="lazy" alt="" data-alt="g5"></figure>
     <figure data-zoom data-cursor="Bella" data-skew><img src="salon-wash.jpg" width="640" height="800" loading="lazy" alt="" data-alt="g6"></figure>
   </div>
 </section>
