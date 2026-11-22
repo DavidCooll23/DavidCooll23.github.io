@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="sk">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Studio Bella</title>
+<style>
+:root{--bg:#f7f2ea;--paper:#fffdf9;--ink:#2b211b;--sec:#6a5c52;--line:rgba(43,33,27,.14);--clay:#b4553d;--sand:#eadfce;--serif:Georgia,"Times New Roman",serif;--sans:"Segoe UI",system-ui,-apple-system,Roboto,"Helvetica Neue",Arial,sans-serif}
+*{box-sizing:border-box;margin:0}
+body{background:var(--bg);color:var(--ink);font:17px/1.6 var(--sans)}
+.wrap{max-width:760px;margin:0 auto;padding:24px}
+header{display:flex;flex-wrap:wrap;gap:12px;align-items:center;justify-content:space-between;margin-bottom:28px}
+header a{font-weight:600;color:var(--clay);text-underline-offset:4px}
+.lang{display:flex;gap:2px}
+.lang button{font:600 .8125rem/1 var(--sans);color:var(--sec);background:none;border:0;padding:9px 8px;border-radius:8px;cursor:pointer}
+.lang button[aria-pressed=true]{background:var(--sand);color:var(--ink)}
+.note{background:var(--sand);border-radius:14px;padding:12px 16px;font-size:.9375rem;margin-bottom:24px}
+h1{font:400 2rem/1.2 var(--serif);margin-bottom:18px}
+h2{font:400 1.25rem/1.3 var(--serif);margin:24px 0 6px}
+p,li{color:var(--ink)}
+ul{padding-left:22px}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header><a href="./" id="back"></a><div class="lang">
+<button type="button" data-set="sk">SK</button><button type="button" data-set="uk">UA</button><button type="button" data-set="ru">RU</button><button type="button" data-set="en">EN</button></div></header>
+<main id="m"></main>
+</div>
+<script>
+const P={
+sk:{back:"← Späť na stránku salónu",note:"Ukážka textu pre vymyslený salón. Skutočný salón si ho upraví so svojimi údajmi.",h:"Ochrana osobných údajov",s:[
+["Kto spracúva údaje","Studio Bella s. r. o., Hlavná 1, 811 01 Bratislava (ukážkové údaje)."],
+["Aké údaje","Meno, telefón, e-mail (ak ho uvediete), poznámka k rezervácii, zvolená služba, deň a čas."],
+["Prečo","Aby sme vás mohli objednať, pripomenúť termín a ozvať sa pri zmene. Právny základ je rezervácia, o ktorú žiadate (čl. 6 ods. 1 písm. b GDPR)."],
+["Ako dlho","Rezervácie uchovávame 2 roky od návštevy, potom ich vymažeme."],
+["Kto ich vidí","Majiteľka salónu a špecialistka, ku ktorej ste objednaní. Údaje nepredávame ani neposielame na reklamu."],
+["Vaše práva","Môžete požiadať o kópiu svojich údajov, opravu alebo vymazanie a podať sťažnosť na Úrad na ochranu osobných údajov SR."],
+["V tejto ukážke","Všetko sa ukladá len vo vašom prehliadači (localStorage). Nikam sa nič neodosiela. Údaje zmažete tlačidlom „Vymazať ukážkové údaje“ v paneli alebo vymazaním údajov stránky v prehliadači."]]},
+uk:{back:"← Назад на сторінку салону",note:"Приклад тексту для вигаданого салону. Справжній салон підставить свої дані.",h:"Захист персональних даних",s:[
+["Хто обробляє дані","Studio Bella s. r. o., Hlavná 1, 811 01 Bratislava (дані для прикладу)."],
+["Які дані","Ім'я, телефон, e-mail (якщо вкажете), коментар до запису, послуга, день і час."],
+["Навіщо","Щоб записати вас, нагадати про візит і зв'язатися, якщо щось зміниться. Правова підстава — запис, який ви самі робите (ст. 6(1)(b) GDPR)."],
+["Як довго","Записи зберігаються 2 роки після візиту, потім видаляються."],
+["Хто бачить","Власниця салону і майстриня, до якої ви записані. Дані не продаються і не використовуються для реклами."],
+["Ваші права","Можна попросити копію своїх даних, виправлення чи видалення, а також поскаржитися до Úrad na ochranu osobných údajov SR."],
+["У цьому прикладі","Усе зберігається лише у вашому браузері (localStorage), нікуди нічого не надсилається. Стерти дані можна кнопкою «Стерти дані прикладу» в панелі або очищенням даних сайту в браузері."]]},
+ru:{back:"← Назад на страницу салона",note:"Пример текста для выдуманного салона. Настоящий салон подставит свои данные.",h:"Защита персональных данных",s:[
+["Кто обрабатывает данные","Studio Bella s. r. o., Hlavná 1, 811 01 Bratislava (данные для примера)."],
+["Какие данные","Имя, телефон, e-mail (если укажете), комментарий к записи, услуга, день и время."],
+["Зачем","Чтобы записать вас, напомнить о визите и связаться, если что-то изменится. Правовое основание — запись, которую вы сами делаете (ст. 6(1)(b) GDPR)."],
+["Как долго","Записи хранятся 2 года после визита, потом удаляются."],
+["Кто видит","Владелица салона и мастер, к которому вы записаны. Данные не продаются и не используются для рекламы."],
+["Ваши права","Можно попросить копию своих данных, исправление или удаление, а также пожаловаться в Úrad na ochranu osobných údajov SR."],
+["В этом примере","Всё хранится только в вашем браузере (localStorage), никуда ничего не отправляется. Стереть данные можно кнопкой «Стереть данные примера» в панели или очисткой данных сайта в браузере."]]},
+en:{back:"← Back to the salon page",note:"Sample text for a made-up salon. A real salon fills in its own details.",h:"Privacy policy",s:[
+["Who handles your data","Studio Bella s. r. o., Hlavná 1, 811 01 Bratislava (sample details)."],
+["What data","Your name, phone, email (if you give it), a note on the booking, the service, day and time."],
+["Why","To book you in, remind you of the visit and get in touch if something changes. The legal basis is the booking you ask for (GDPR Art. 6(1)(b))."],
+["How long","Bookings are kept for 2 years after the visit, then deleted."],
+["Who sees it","The salon owner and the stylist you booked with. Your data is not sold or used for advertising."],
+["Your rights","You can ask for a copy of your data, a correction or deletion, and complain to the Slovak Data Protection Office (Úrad na ochranu osobných údajov SR)."],
+["In this demo","Everything stays in your browser (localStorage) and nothing is sent anywhere. Clear it with “Clear demo data” in the panel or by clearing site data in your browser."]]}};
+function el(t,x){const e=document.createElement(t);e.textContent=x;return e}
+function setLang(l){if(!P[l])l='sk';const p=P[l];try{localStorage.lang=l}catch(e){}
+document.documentElement.lang=l;document.title=p.h+' · Studio Bella';
+const b=document.getElementById('back');b.textContent=p.back;b.href='./?lang='+l;
+const m=document.getElementById('m');m.replaceChildren(el('p',p.note),el('h1',p.h));m.firstChild.className='note';
+p.s.forEach(([h,t])=>m.append(el('h2',h),el('p',t)));
+document.querySelectorAll('[data-set]').forEach(x=>x.setAttribute('aria-pressed',x.dataset.set===l))}
+document.querySelectorAll('[data-set]').forEach(x=>x.onclick=()=>setLang(x.dataset.set));
+let l0=new URLSearchParams(location.search).get('lang');try{l0=l0||localStorage.lang}catch(e){}
+setLang(l0||'sk');
+</script>
+</body>
+</html>

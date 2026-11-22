@@ -168,13 +168,25 @@ footer{padding-bottom:96px}
  .fab{right:14px;bottom:14px}
 }
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.btn{transition:none}*,*::before,*::after{animation:none!important}}
+
+/* team photos + swipe gallery (22.11) */
+.who{flex-direction:column;align-items:stretch;padding:0;overflow:hidden}
+.who>img{width:100%;height:auto;aspect-ratio:4/3;object-fit:cover;object-position:50% 30%;display:block}
+.who>div{padding:20px 24px 24px}
+.ms{list-style:none;padding:0;margin-top:14px}
+.ms li{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:10px 0;border-top:1px solid var(--line)}
+.gal{display:flex!important;gap:12px;overflow-x:auto;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;padding-bottom:10px;scrollbar-width:thin;grid-template-columns:none!important}
+.gal img{flex:0 0 calc(25% - 9px);width:auto;height:auto;aspect-ratio:4/5;object-fit:cover;scroll-snap-align:start;border-radius:16px}
+@media(max-width:760px){.gal img{flex-basis:78%;min-width:0}}
 </style>
+<link rel="stylesheet" href="book.css">
 </head>
 <body>
 <div class="demo"><div class="wrap"><span data-i="demo"></span><a data-back href="../" data-i="back"></a></div></div>
 <header><div class="wrap">
   <a class="mark" href="#top">Studio Bella</a>
   <nav><a href="#services" data-i="n1"></a><a href="#team" data-i="n2"></a><a href="#visit" data-i="n3"></a></nav>
+  <button class="btn hbook" type="button" data-book data-i="book"></button>
   <div class="lang" role="group" aria-label="Language">
     <button type="button" data-set="sk">SK</button><button type="button" data-set="uk">UA</button><button type="button" data-set="ru">RU</button><button type="button" data-set="en">EN</button>
   </div>
@@ -186,10 +198,10 @@ footer{padding-bottom:96px}
     <h1 data-i="h1"></h1>
     <p class="lead" data-i="lead"></p>
     <div class="btns">
-      <a class="btn" href="https://t.me/StudioBellaBookingBot" target="_blank" rel="noopener" data-i="book"></a>
+      <button class="btn" type="button" data-book data-i="book"></button>
       <a class="btn ghost" href="#services" data-i="see"></a>
     </div>
-    <p class="open"><b data-i="hours"></b> · <span data-i="langs"></span></p>
+    <p class="open"><span class="isopen" data-open></span><br><b data-i="hours"></b> · <span data-i="langs"></span></p>
   </div>
   <div class="photo"><img src="hero.jpg" width="1000" height="1250" alt="" data-alt="alt"></div>
 </div>
@@ -198,10 +210,10 @@ footer{padding-bottom:96px}
   <h2 data-i="sh"></h2>
   <p class="sub" data-i="ss"></p>
   <ul class="menu">
-    <li><div><h3 data-i="s1"></h3><small data-i="s1d"></small></div><span class="eur">25 €</span><a href="https://t.me/StudioBellaBookingBot" target="_blank" rel="noopener" data-i="bk"></a></li>
-    <li><div><h3 data-i="s2"></h3><small data-i="s2d"></small></div><span class="eur">60 €</span><a href="https://t.me/StudioBellaBookingBot" target="_blank" rel="noopener" data-i="bk"></a></li>
-    <li><div><h3 data-i="s3"></h3><small data-i="s3d"></small></div><span class="eur">30 €</span><a href="https://t.me/StudioBellaBookingBot" target="_blank" rel="noopener" data-i="bk"></a></li>
-    <li><div><h3 data-i="s4"></h3><small data-i="s4d"></small></div><span class="eur">15 €</span><a href="https://t.me/StudioBellaBookingBot" target="_blank" rel="noopener" data-i="bk"></a></li>
+    <li data-svc="cut"><div><h3 data-i="s1"></h3><small data-i="s1d"></small></div><span class="eur">25 €</span><button class="bkb" type="button" data-book="cut" data-i="bk"></button></li>
+    <li data-svc="color"><div><h3 data-i="s2"></h3><small data-i="s2d"></small></div><span class="eur">60 €</span><button class="bkb" type="button" data-book="color" data-i="bk"></button></li>
+    <li data-svc="nails"><div><h3 data-i="s3"></h3><small data-i="s3d"></small></div><span class="eur">30 €</span><button class="bkb" type="button" data-book="nails" data-i="bk"></button></li>
+    <li data-svc="brows"><div><h3 data-i="s4"></h3><small data-i="s4d"></small></div><span class="eur">15 €</span><button class="bkb" type="button" data-book="brows" data-i="bk"></button></li>
   </ul>
 </div></section>
 
@@ -219,8 +231,21 @@ footer{padding-bottom:96px}
   <h2 data-i="th"></h2>
   <p class="sub" data-i="ts"></p>
   <div class="team">
-    <div class="who"><i>A</i><div><h3 data-i="m1"></h3><p data-i="m1p"></p></div></div>
-    <div class="who"><i>O</i><div><h3 data-i="m2"></h3><p data-i="m2p"></p></div></div>
+    <div class="who"><img src="team-anna.jpg" width="640" height="800" loading="lazy" decoding="async" alt="" data-alt="m1a"><div><h3 data-i="m1"></h3><p data-i="m1p"></p><ul class="ms"><li><span data-i="s1"></span><button class="bkb" type="button" data-book="cut" data-staff="anna" data-i="bk"></button></li><li><span data-i="s2"></span><button class="bkb" type="button" data-book="color" data-staff="anna" data-i="bk"></button></li><li><span data-i="s4"></span><button class="bkb" type="button" data-book="brows" data-staff="anna" data-i="bk"></button></li></ul></div></div>
+    <div class="who"><img src="team-olga.jpg" width="640" height="800" loading="lazy" decoding="async" alt="" data-alt="m2a"><div><h3 data-i="m2"></h3><p data-i="m2p"></p><ul class="ms"><li><span data-i="s3"></span><button class="bkb" type="button" data-book="nails" data-staff="olga" data-i="bk"></button></li><li><span data-i="s4"></span><button class="bkb" type="button" data-book="brows" data-staff="olga" data-i="bk"></button></li></ul></div></div>
+  </div>
+</div></section>
+
+<section id="gallery"><div class="wrap">
+  <h2 data-i="gh"></h2>
+  <p class="sub" data-i="gs"></p>
+  <div class="gal" tabindex="0" role="region" aria-label="Galéria" data-al="gh">
+    <img src="salon-interior.jpg" width="640" height="800" loading="lazy" decoding="async" alt="" data-alt="g1">
+    <img src="work-cut.jpg" width="640" height="800" loading="lazy" decoding="async" alt="" data-alt="g2">
+    <img src="work-color.jpg" width="640" height="800" loading="lazy" decoding="async" alt="" data-alt="g3">
+    <img src="work-brows.jpg" width="640" height="800" loading="lazy" decoding="async" alt="" data-alt="g4">
+    <img src="salon-reception.jpg" width="640" height="800" loading="lazy" decoding="async" alt="" data-alt="g5">
+    <img src="salon-wash.jpg" width="640" height="800" loading="lazy" decoding="async" alt="" data-alt="g6">
   </div>
 </div></section>
 
@@ -249,7 +274,7 @@ footer{padding-bottom:96px}
           <thead><tr><th></th><th>A</th><th>B</th><th>C</th><th>D</th></tr></thead>
           <tbody id="rows">
             <tr class="hd"><td class="rn">1</td><td data-i="c1"></td><td data-i="c2"></td><td data-i="c3"></td><td data-i="c4"></td></tr>
-            <tr><td class="rn">2</td><td>20.11 10:12</td><td>Jana</td><td>@jana_b</td><td data-i="r1"></td></tr>
+            <tr><td class="rn">2</td><td>20.11 10:12</td><td>Jana</td><td>+421 905 000 000</td><td data-i="r1"></td></tr>
             <tr><td class="rn">3</td><td>21.11 18:47</td><td>Petra</td><td>—</td><td data-i="r2"></td></tr>
           </tbody>
         </table>
@@ -267,16 +292,23 @@ footer{padding-bottom:96px}
       <dt data-i="v1"></dt><dd>Hlavná 1, 811 01 Bratislava</dd>
       <dt data-i="v2"></dt><dd data-i="hours"></dd>
       <dt data-i="v3"></dt><dd data-i="sun"></dd>
+      <dt data-i="v4"></dt><dd><a href="#" data-fake>+421 900 000 000</a></dd>
+      <dt data-i="v5"></dt><dd data-i="canc"></dd>
     </dl>
+    <div class="contacts">
+      <a href="https://www.google.com/maps/search/?api=1&amp;query=Hlavn%C3%A1+1%2C+Bratislava" target="_blank" rel="noopener" data-i="map"></a>
+      <a href="#" data-fake>Instagram</a>
+    </div>
   </div>
   <div class="card">
     <h3 data-i="ch"></h3>
     <p data-i="cp"></p>
-    <a class="btn" href="https://t.me/StudioBellaBookingBot" target="_blank" rel="noopener" data-i="book"></a>
+    <button class="btn" type="button" data-book data-i="book"></button>
   </div>
 </div></section>
 </main>
-<footer><div class="wrap"><span data-i="foot"></span> <a data-back href="../" data-i="back"></a><br>© 2026 Davyd Konstantinov</div></footer>
+<footer><div class="wrap"><span data-i="foot"></span> <a data-back href="../" data-i="back"></a><br>© 2026 Davyd Konstantinov<br><span class="legal"><span data-i="firm"></span> · <a href="ochrana.html" data-i="priv"></a></span></div></footer>
+<div class="bar"><small class="isopen" data-open></small><button class="btn" type="button" data-book data-i="book"></button></div>
 <button class="fab" id="fab" type="button"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12a8 8 0 0 1-11.6 7.1L4 20l1-4.6A8 8 0 1 1 21 12z"/><path d="M9 11h.01M12.5 11h.01M16 11h.01"/></svg><span data-i="fab"></span></button>
 <div class="chat" id="chat" role="dialog" aria-labelledby="cht" hidden>
   <div class="ct"><span class="av">B</span><div><b id="cht">Studio Bella</b><span data-i="ws"></span></div><button class="x" id="cx" type="button" data-al="wclose">×</button></div>
@@ -286,69 +318,69 @@ footer{padding-bottom:96px}
 </div>
 <script>
 const T={
-sk:{title:"Studio Bella: kaderníctvo a manikúra v Bratislave",desc:"Ukážková stránka salónu: služby, ceny a online rezervácia cez Telegram.",
-demo:"Ukážka webu. Salón je vymyslený, rezervácia cez Telegram naozaj funguje.",back:"Web vytvoril Davyd Konstantinov",
+sk:{title:"Studio Bella: kaderníctvo a manikúra v Bratislave",desc:"Ukážková stránka salónu: služby, ceny a online rezervácia priamo na webe.",
+demo:"Ukážka webu. Salón je vymyslený, ale rezervácia aj panel majiteľa naozaj fungujú.",back:"Web vytvoril Davyd Konstantinov",
 n1:"Služby a ceny",n2:"Kto vás obslúži",n3:"Kde nás nájdete",
 eye:"Salón krásy · Bratislava, Staré Mesto",h1:"Strih, farba, manikúra a obočie v centre Bratislavy",
-lead:"Termín si vyberiete sami za minútu, bez volania. V Telegrame zvolíte službu a čas a my rezerváciu potvrdíme.",
+lead:"Termín si vyberiete sami za minútu, bez volania a bez registrácie. Rezervácia je potvrdená hneď.",
 book:"Rezervovať online",see:"Služby a ceny",hours:"Po–So 9:00–19:00",langs:"Hovoríme po slovensky, ukrajinsky, rusky aj anglicky",alt:"Manikúra v salóne Studio Bella",
 sh:"Služby a ceny",ss:"Cena je konečná. Ak si služba vyžiada viac času alebo materiálu, povieme vám to vopred.",
 s1:"Strih",s1d:"60 minút · Anna",s2:"Farbenie",s2d:"120 minút · Anna",s3:"Manikúra",s3d:"90 minút · Oľga",s4:"Obočie",s4d:"30 minút · Oľga",bk:"Rezervovať",
-hh:"Ako prebieha rezervácia",hs:"Odpovedá vám bot, takže to ide aj o desiatej večer.",
-h1t:"Vyberiete službu",h1p:"Otvoríte náš Telegram a ťuknete na službu. Môžete aj napísať vlastnými slovami, napríklad „manikúra v piatok po piatej“.",
-h2t:"Vyberiete čas",h2p:"Bot ukáže voľné termíny na najbližších sedem dní. Vyberiete ten, ktorý vám sedí.",
-h3t:"Potvrdíme a pripomenieme",h3p:"Rezerváciu potvrdí recepčná. Dve hodiny pred návštevou vám príde pripomienka.",
+hh:"Ako prebieha rezervácia",hs:"Rezervovať sa dá aj o desiatej večer a nikto pritom nemusí dvíhať telefón.",
+h1t:"Vyberiete službu",h1p:"Ťuknete na „Rezervovať online“ alebo priamo na službu v cenníku. Pri každej vidíte cenu a dĺžku.",
+h2t:"Vyberiete čas",h2p:"Vyberiete si špecialistku alebo „ktokoľvek voľný“ a potom deň a čas. Ukazujeme len časy, ktoré sú naozaj voľné.",
+h3t:"Potvrdíme a pripomenieme",h3p:"Napíšete meno a telefón a rezervácia je hneď potvrdená. Pripomienku dostanete deň vopred. Presunúť alebo zrušiť ju môžete cez odkaz.",
 th:"Kto vás obslúži",ts:"Sme dve. Ku komu pôjdete, závisí od služby.",
 m1:"Anna",m1p:"Strihy a farbenie",m2:"Oľga",m2p:"Manikúra a obočie",
 vh:"Kde nás nájdete",vs:"V Starom Meste, pár minút pešo od zastávky.",v1:"Adresa",v2:"Otvorené",v3:"Nedeľa",sun:"zatvorené",
 ch:"Voľný termín ešte tento týždeň",cp:"Pozrite si voľné časy a rezervujte sa bez volania.",
 foot:"Toto je ukážka webu pre malý salón. Salón, adresa a mená sú vymyslené."},
-uk:{title:"Studio Bella: стрижка, фарбування та манікюр у Братиславі",desc:"Приклад сайту салону: послуги, ціни та онлайн-запис через Telegram.",
-demo:"Приклад сайту. Салон вигаданий, а запис через Telegram справді працює.",back:"Сайт зробив Давид Константінов",
+uk:{title:"Studio Bella: стрижка, фарбування та манікюр у Братиславі",desc:"Приклад сайту салону: послуги, ціни та онлайн-запис прямо на сайті.",
+demo:"Приклад сайту. Салон вигаданий, але запис і панель власника справді працюють.",back:"Сайт зробив Давид Константінов",
 n1:"Послуги та ціни",n2:"Майстри",n3:"Як нас знайти",
 eye:"Салон краси · Братислава, Старе Місто",h1:"Стрижка, фарбування, манікюр і брови в центрі Братислави",
-lead:"Час обираєте самі за хвилину, без дзвінків. У Telegram вибираєте послугу й час, а ми підтверджуємо запис.",
+lead:"Час обираєте самі за хвилину, без дзвінків і без реєстрації. Запис підтверджується одразу.",
 book:"Записатися онлайн",see:"Послуги та ціни",hours:"Пн–Сб 9:00–19:00",langs:"Говоримо словацькою, українською, російською та англійською",alt:"Манікюр у салоні Studio Bella",
 sh:"Послуги та ціни",ss:"Ціна остаточна. Якщо знадобиться більше часу чи матеріалу, скажемо заздалегідь.",
 s1:"Стрижка",s1d:"60 хвилин · Анна",s2:"Фарбування",s2d:"120 хвилин · Анна",s3:"Манікюр",s3d:"90 хвилин · Ольга",s4:"Брови",s4d:"30 хвилин · Ольга",bk:"Записатися",
-hh:"Як записатися",hs:"Відповідає бот, тож записатися можна й о десятій вечора.",
-h1t:"Обираєте послугу",h1p:"Відкриваєте наш Telegram і натискаєте на послугу. Можна написати й своїми словами, наприклад «манікюр у п’ятницю після п’ятої».",
-h2t:"Обираєте час",h2p:"Бот показує вільні вікна на найближчі сім днів. Обираєте зручне.",
-h3t:"Підтверджуємо й нагадуємо",h3p:"Запис підтверджує адміністраторка. За дві години до візиту прийде нагадування.",
+hh:"Як записатися",hs:"Записатися можна й о десятій вечора, і нікому не треба брати слухавку.",
+h1t:"Обираєте послугу",h1p:"Натискаєте «Записатися онлайн» або одразу на послугу в прайсі. Біля кожної видно ціну й тривалість.",
+h2t:"Обираєте час",h2p:"Обираєте майстриню або «будь-хто вільний», потім день і час. Показуємо лише справді вільний час.",
+h3t:"Підтверджуємо й нагадуємо",h3p:"Пишете ім'я й телефон, і запис одразу підтверджено. Нагадування прийде за день. Перенести чи скасувати запис можна за посиланням.",
 th:"Майстри",ts:"Нас двоє. До кого ви потрапите, залежить від послуги.",
 m1:"Анна",m1p:"Стрижки та фарбування",m2:"Ольга",m2p:"Манікюр і брови",
 vh:"Як нас знайти",vs:"У Старому Місті, кілька хвилин пішки від зупинки.",v1:"Адреса",v2:"Працюємо",v3:"Неділя",sun:"вихідний",
 ch:"Вільний час ще цього тижня",cp:"Подивіться вільні вікна та запишіться без дзвінка.",
 foot:"Це приклад сайту для невеликого салону. Салон, адреса та імена вигадані."},
-ru:{title:"Studio Bella: стрижка, окрашивание и маникюр в Братиславе",desc:"Пример сайта салона: услуги, цены и онлайн-запись через Telegram.",
-demo:"Пример сайта. Салон выдуманный, а запись через Telegram работает по-настоящему.",back:"Сайт сделал Давид Константинов",
+ru:{title:"Studio Bella: стрижка, окрашивание и маникюр в Братиславе",desc:"Пример сайта салона: услуги, цены и онлайн-запись прямо на сайте.",
+demo:"Пример сайта. Салон выдуманный, но запись и панель владельца работают по-настоящему.",back:"Сайт сделал Давид Константинов",
 n1:"Услуги и цены",n2:"Мастера",n3:"Как нас найти",
 eye:"Салон красоты · Братислава, Старый город",h1:"Стрижка, окрашивание, маникюр и брови в центре Братиславы",
-lead:"Время выбираете сами за минуту, без звонков. В Telegram выбираете услугу и время, а мы подтверждаем запись.",
+lead:"Время выбираете сами за минуту, без звонков и регистрации. Запись подтверждается сразу.",
 book:"Записаться онлайн",see:"Услуги и цены",hours:"Пн–Сб 9:00–19:00",langs:"Говорим по-словацки, по-украински, по-русски и по-английски",alt:"Маникюр в салоне Studio Bella",
 sh:"Услуги и цены",ss:"Цена окончательная. Если понадобится больше времени или материала, скажем заранее.",
 s1:"Стрижка",s1d:"60 минут · Анна",s2:"Окрашивание",s2d:"120 минут · Анна",s3:"Маникюр",s3d:"90 минут · Ольга",s4:"Брови",s4d:"30 минут · Ольга",bk:"Записаться",
-hh:"Как записаться",hs:"Отвечает бот, поэтому записаться можно и в десять вечера.",
-h1t:"Выбираете услугу",h1p:"Открываете наш Telegram и нажимаете на услугу. Можно написать и своими словами, например «маникюр в пятницу после пяти».",
-h2t:"Выбираете время",h2p:"Бот показывает свободные окна на ближайшие семь дней. Выбираете удобное.",
-h3t:"Подтверждаем и напоминаем",h3p:"Запись подтверждает администратор. За два часа до визита придёт напоминание.",
+hh:"Как записаться",hs:"Записаться можно и в десять вечера, и никому не нужно брать трубку.",
+h1t:"Выбираете услугу",h1p:"Нажимаете «Записаться онлайн» или сразу на услугу в прайсе. У каждой видны цена и длительность.",
+h2t:"Выбираете время",h2p:"Выбираете мастера или «любой свободный», потом день и время. Показываем только то время, которое действительно свободно.",
+h3t:"Подтверждаем и напоминаем",h3p:"Пишете имя и телефон, и запись сразу подтверждена. Напоминание придёт за день. Перенести или отменить запись можно по ссылке.",
 th:"Мастера",ts:"Нас двое. К кому вы попадёте, зависит от услуги.",
 m1:"Анна",m1p:"Стрижки и окрашивание",m2:"Ольга",m2p:"Маникюр и брови",
 vh:"Как нас найти",vs:"В Старом городе, пара минут пешком от остановки.",v1:"Адрес",v2:"Работаем",v3:"Воскресенье",sun:"выходной",
 ch:"Свободное время ещё на этой неделе",cp:"Посмотрите свободные окна и запишитесь без звонка.",
 foot:"Это пример сайта для небольшого салона. Салон, адрес и имена выдуманы."},
-en:{title:"Studio Bella: hair, nails and brows in Bratislava",desc:"A sample salon website: services, prices and online booking through Telegram.",
-demo:"Sample website. The salon is made up, the Telegram booking really works.",back:"Website by Davyd Konstantinov",
+en:{title:"Studio Bella: hair, nails and brows in Bratislava",desc:"A sample salon website: services, prices and online booking right on the site.",
+demo:"Sample website. The salon is made up, but the booking and the owner's panel really work.",back:"Website by Davyd Konstantinov",
 n1:"Services and prices",n2:"Who you'll see",n3:"Find us",
 eye:"Beauty salon · Bratislava Old Town",h1:"Haircuts, colour, manicure and brows in central Bratislava",
-lead:"Pick your own time in a minute, no phone calls. Choose a service and a slot in Telegram and we confirm the booking.",
+lead:"Pick your own time in a minute, with no phone calls and no sign-up. Your booking is confirmed straight away.",
 book:"Book online",see:"Services and prices",hours:"Mon–Sat 9:00–19:00",langs:"We speak Slovak, Ukrainian, Russian and English",alt:"A manicure at Studio Bella",
 sh:"Services and prices",ss:"The price is final. If a service needs more time or material, we tell you beforehand.",
 s1:"Haircut",s1d:"60 minutes · Anna",s2:"Hair colouring",s2d:"120 minutes · Anna",s3:"Manicure",s3d:"90 minutes · Olga",s4:"Brows",s4d:"30 minutes · Olga",bk:"Book",
-hh:"How booking works",hs:"A bot answers, so you can book at ten in the evening too.",
-h1t:"Pick a service",h1p:"Open our Telegram and tap a service. You can also write it your own way, like “manicure on Friday after five”.",
-h2t:"Pick a time",h2p:"The bot shows free slots for the next seven days. Choose the one that suits you.",
-h3t:"We confirm and remind",h3p:"Our receptionist confirms the booking. You get a reminder two hours before your visit.",
+hh:"How booking works",hs:"You can book at ten in the evening too, and nobody has to pick up the phone.",
+h1t:"Pick a service",h1p:"Tap “Book online” or a service in the price list. Each one shows the price and how long it takes.",
+h2t:"Pick a time",h2p:"Choose a stylist or “anyone available”, then a day and time. We only show times that are really free.",
+h3t:"We confirm and remind",h3p:"Enter your name and phone and the booking is confirmed at once. You get a reminder the day before. You can reschedule or cancel through a link.",
 th:"Who you'll see",ts:"There are two of us. Who you see depends on the service.",
 m1:"Anna",m1p:"Haircuts and colouring",m2:"Olga",m2p:"Manicure and brows",
 vh:"Find us",vs:"In the Old Town, a few minutes on foot from the stop.",v1:"Address",v2:"Open",v3:"Sunday",sun:"closed",
@@ -356,72 +388,76 @@ ch:"Free slots still available this week",cp:"See the free times and book withou
 foot:"This is a sample website for a small salon. The salon, address and names are made up."}};
 // 2026-11-22: question form (demo of "enquiries to Telegram + sheet") and FAQ auto-replies
 Object.assign(T.sk,{qh:"Máte otázku? Napíšte nám",qs:"Stačí meno a otázka. Recepčná vám odpovie ešte v ten deň.",
-fn:"Meno",fc:"Telefón alebo Telegram",fcx:"(nepovinné)",fq:"Otázka",fb:"Odoslať otázku",fok:"Odoslané. Pozrite sa, čo práve prišlo do salónu.",fneed:"Doplňte meno a otázku.",
-pn:"Mária",pc:"+421 … alebo @meno",pq:"Striháte aj deti?",
+fn:"Meno",fc:"Telefón alebo e-mail",fcx:"(nepovinné)",fq:"Otázka",fb:"Odoslať otázku",fok:"Odoslané. Pozrite sa, čo práve prišlo do salónu.",fneed:"Doplňte meno a otázku.",
+pn:"Mária",pc:"+421 … alebo meno@email.sk",pq:"Striháte aj deti?",
 oh:"Toto salón dostane hneď po odoslaní otázky",ow:"Po odoslaní formulára sa tu objaví správa.",obot:"dopyty z webu",onew:"Nová otázka z webu",on:"Meno",oc:"Kontakt",oq:"Otázka",onone:"neuvedený",
 stitle:"Dopyty z webu",c1:"Dátum",c2:"Meno",c3:"Kontakt",c4:"Otázka",r1:"Máte voľno v sobotu ráno?",r2:"Koľko stojí farbenie dlhých vlasov?",
-onote:"Toto je ukážka. Z tejto stránky sa nič neodosiela. Na skutočnom webe dostane majiteľ správu cez Telegram a do jeho tabuľky v Tabuľkách Google sa pridá riadok.",
+onote:"Toto je ukážka. Z tejto stránky sa nič neodosiela. Na skutočnom webe príde otázka majiteľovi na e-mail alebo do Telegramu a do jeho tabuľky Google sa pridá riadok.",
 fab:"Opýtať sa",ws:"Automatické odpovede · ukážka",wph:"Napíšte otázku…",wsend:"Poslať",wclose:"Zavrieť",
 w0:"Dobrý deň! Opýtajte sa na ceny, otváracie hodiny, adresu alebo voľné termíny. Odpoviem v jazyku, v ktorom napíšete.",
 chips:["Koľko stojí manikúra?","Máte otvorené v nedeľu?","Kde vás nájdem?","Скільки коштує фарбування?"]});
 Object.assign(T.uk,{qh:"Маєте запитання? Напишіть нам",qs:"Досить імені та запитання. Адміністраторка відповість того ж дня.",
-fn:"Ім’я",fc:"Телефон або Telegram",fcx:"(необов’язково)",fq:"Запитання",fb:"Надіслати запитання",fok:"Надіслано. Подивіться, що щойно отримав салон.",fneed:"Вкажіть ім’я та напишіть запитання.",
-pn:"Марія",pc:"+421 … або @нік",pq:"Ви стрижете й дітей?",
+fn:"Ім’я",fc:"Телефон або e-mail",fcx:"(необов’язково)",fq:"Запитання",fb:"Надіслати запитання",fok:"Надіслано. Подивіться, що щойно отримав салон.",fneed:"Вкажіть ім’я та напишіть запитання.",
+pn:"Марія",pc:"+421 … або name@email.sk",pq:"Ви стрижете й дітей?",
 oh:"Ось що салон отримає одразу після надсилання запитання",ow:"Після надсилання форми тут з’явиться повідомлення.",obot:"звернення із сайту",onew:"Нове запитання із сайту",on:"Ім’я",oc:"Контакт",oq:"Запитання",onone:"не вказано",
 stitle:"Звернення із сайту",c1:"Дата",c2:"Ім’я",c3:"Контакт",c4:"Запитання",r1:"Чи можна записатися на суботу зранку?",r2:"Скільки коштує фарбування довгого волосся?",
-onote:"Це приклад. Із цієї сторінки нічого не надсилається. На робочому сайті власник отримує повідомлення в Telegram, а до його таблиці в Google Таблицях додається рядок.",
+onote:"Це приклад. Із цієї сторінки нічого не надсилається. На робочому сайті питання приходить власникові на пошту або в Telegram, а в його Google-таблицю додається рядок.",
 fab:"Запитати",ws:"Автовідповіді · приклад",wph:"Напишіть запитання…",wsend:"Надіслати",wclose:"Закрити",
 w0:"Добрий день! Запитайте про ціни, години роботи, адресу чи вільний час для запису. Відповім тією мовою, якою ви напишете.",
 chips:["Скільки коштує манікюр?","Ви працюєте в неділю?","Де вас знайти?","Koľko stojí strih?"]});
 Object.assign(T.ru,{qh:"Есть вопрос? Напишите нам",qs:"Достаточно имени и вопроса. Администратор ответит в тот же день.",
-fn:"Имя",fc:"Телефон или Telegram",fcx:"(необязательно)",fq:"Вопрос",fb:"Отправить вопрос",fok:"Отправлено. Посмотрите, что сейчас получил салон.",fneed:"Укажите имя и вопрос.",
-pn:"Мария",pc:"+421 … или @ник",pq:"Вы стрижёте детей?",
+fn:"Имя",fc:"Телефон или e-mail",fcx:"(необязательно)",fq:"Вопрос",fb:"Отправить вопрос",fok:"Отправлено. Посмотрите, что сейчас получил салон.",fneed:"Укажите имя и вопрос.",
+pn:"Мария",pc:"+421 … или name@email.sk",pq:"Вы стрижёте детей?",
 oh:"Вот что в эту минуту получает салон",ow:"После отправки формы здесь появится сообщение.",obot:"заявки с сайта",onew:"Новый вопрос с сайта",on:"Имя",oc:"Контакт",oq:"Вопрос",onone:"не указан",
 stitle:"Заявки с сайта",c1:"Дата",c2:"Имя",c3:"Контакт",c4:"Вопрос",r1:"Есть свободное время в субботу утром?",r2:"Сколько стоит окрашивание длинных волос?",
-onote:"Это пример: с этой страницы ничего никуда не отправляется. На настоящем сайте сообщение приходит в Telegram владельца, а строка добавляется в его Google Таблицу.",
+onote:"Это пример: с этой страницы ничего никуда не отправляется. На настоящем сайте вопрос приходит владельцу на почту или в Telegram, а в его Google-таблицу добавляется строка.",
 fab:"Спросить",ws:"Автоответы · пример",wph:"Напишите вопрос…",wsend:"Отправить",wclose:"Закрыть",
 w0:"Здравствуйте! Спросите про цены, часы работы, адрес или свободное время. Отвечу на том языке, на котором вы напишете.",
 chips:["Сколько стоит маникюр?","Вы работаете в воскресенье?","Где вас найти?","How much is a haircut?"]});
 Object.assign(T.en,{qh:"Got a question? Write to us",qs:"Just enter your name and question. Our receptionist will reply the same day.",
-fn:"Name",fc:"Phone or Telegram",fcx:"(optional)",fq:"Question",fb:"Send question",fok:"Sent. Have a look at what the salon just received.",fneed:"Please add your name and question.",
-pn:"Maria",pc:"+421 … or @username",pq:"Do you cut children's hair?",
+fn:"Name",fc:"Phone or email",fcx:"(optional)",fq:"Question",fb:"Send question",fok:"Sent. Have a look at what the salon just received.",fneed:"Please add your name and question.",
+pn:"Maria",pc:"+421 … or name@email.sk",pq:"Do you cut children's hair?",
 oh:"What the salon receives as soon as you submit your question",ow:"A message appears here once you send the form.",obot:"website enquiries",onew:"New question from the website",on:"Name",oc:"Contact",oq:"Question",onone:"not given",
 stitle:"Website enquiries",c1:"Date",c2:"Name",c3:"Contact",c4:"Question",r1:"Do you have any appointments available on Saturday morning?",r2:"How much does it cost to colour long hair?",
-onote:"This is a demo. Nothing is sent from this page. On a live website, the owner receives the message on Telegram and a row is added to their Google Sheet.",
+onote:"This is a demo. Nothing is sent from this page. On a live website, the question goes to the owner by email or Telegram and a row is added to their Google Sheet.",
 fab:"Ask a question",ws:"Automatic replies · demo",wph:"Type a question…",wsend:"Send",wclose:"Close",
 w0:"Hello! Ask about prices, opening hours, the address or free slots. I reply in the language you write in.",
 chips:["How much is a manicure?","Are you open on Sunday?","Where are you?","Скільки коштує фарбування?"]});
 // answers of the auto-reply, one set per language (data = the price list and hours above)
+// 2026-11-22: online booking on the site, gallery, contacts
+Object.assign(T.sk,{"gh": "Ako to u nás vyzerá", "gs": "Svetlý salón s dvoma pracovnými miestami. Fotografie sú ilustračné.", "g1": "Salón so zrkadlom a kreslom", "g2": "Rovný strih po plecia", "g3": "Príprava farby na farbenie", "g4": "Nástroje na úpravu obočia", "v4": "Telefón", "v5": "Zrušenie", "canc": "Kedykoľvek, cez odkaz z potvrdenia", "map": "Otvoriť v mapách", "firm": "Ukážkové firemné údaje: Studio Bella s. r. o., IČO 00 000 000, Hlavná 1, 811 01 Bratislava", "priv": "Ochrana osobných údajov"});
+Object.assign(T.uk,{"gh": "Як у нас", "gs": "Світлий салон на два робочі місця. Фото ілюстративні.", "g1": "Салон із дзеркалом і кріслом", "g2": "Рівна стрижка до плечей", "g3": "Підготовка фарби для фарбування", "g4": "Інструменти для оформлення брів", "v4": "Телефон", "v5": "Скасування", "canc": "Будь-коли, за посиланням із підтвердження", "map": "Відкрити на мапі", "firm": "Зразок реквізитів: Studio Bella s. r. o., IČO 00 000 000, Hlavná 1, 811 01 Bratislava", "priv": "Захист персональних даних"});
+Object.assign(T.ru,{"gh": "Как у нас", "gs": "Светлый салон на два рабочих места. Фото иллюстративные.", "g1": "Салон с зеркалом и креслом", "g2": "Ровная стрижка до плеч", "g3": "Подготовка краски для окрашивания", "g4": "Инструменты для оформления бровей", "v4": "Телефон", "v5": "Отмена", "canc": "В любой момент, по ссылке из подтверждения", "map": "Открыть в картах", "firm": "Образец реквизитов: Studio Bella s. r. o., IČO 00 000 000, Hlavná 1, 811 01 Bratislava", "priv": "Защита персональных данных"});
+Object.assign(T.en,{"gh": "Inside the salon", "gs": "A bright salon with two workstations. The photos are illustrative.", "g1": "The salon with a mirror and a styling chair", "g2": "A straight shoulder-length cut", "g3": "Hair colour being mixed", "g4": "Brow tools", "v4": "Phone", "v5": "Cancelling", "canc": "Any time, via the link in your confirmation", "map": "Open in maps", "firm": "Sample company details: Studio Bella s. r. o., IČO 00 000 000, Hlavná 1, 811 01 Bratislava", "priv": "Privacy policy"});
 const A={
 sk:{cut:"Strih stojí 25 € a trvá 60 minút. Strihá Anna.",color:"Farbenie stojí 60 € a trvá 120 minút. Robí ho Anna.",nails:"Manikúra stojí 30 € a trvá 90 minút. Robí ju Oľga.",brows:"Úprava obočia u Oľgy stojí 15 € a trvá 30 minút.",
 list:"Strih 25 €, farbenie 60 €, manikúra 30 €, úprava obočia 15 €. Ceny sú konečné.",hours:"Otvorené máme od pondelka do soboty, 9:00–19:00. V nedeľu je zatvorené.",
-addr:"Sme na Hlavnej 1 v Starom Meste, pár minút pešo od zastávky.",book:"Náš bot na Telegrame vám ukáže voľné termíny na najbližších 7 dní. Vyberiete si čas a recepčná vám rezerváciu potvrdí.",bookb:"Rezervovať si termín",
-cancel:"Rezerváciu môžete zrušiť alebo presunúť cez toho istého bota na Telegrame. Stačí mu napísať napríklad „presuňte mi termín na zajtra“.",pay:"Platiť môžete kartou aj v hotovosti.",
+addr:"Sme na Hlavnej 1 v Starom Meste, pár minút pešo od zastávky.",book:"Voľný termín si vyberiete priamo tu na stránke: služba, špecialistka, deň a čas. Rezervácia je potvrdená hneď.",bookb:"Rezervovať si termín",
+cancel:"Presunúť alebo zrušiť rezerváciu môžete cez odkaz, ktorý dostanete pri potvrdení. Nikam netreba volať.",pay:"Platiť môžete kartou aj v hotovosti.",
 park:"Na ulici pri salóne sa za parkovanie platí. Pohodlnejšie je prísť MHD. Od zastávky je to k nám pár minút pešo.",lang:"Hovoríme po slovensky, ukrajinsky, rusky aj anglicky.",
 who:"Anna strihá a farbí vlasy. Oľga robí manikúru a upravuje obočie.",hi:"Dobrý deň! Na čo sa chcete opýtať?",thx:"Radi sme pomohli. Tešíme sa na vás.",
 unk:"Presnú odpoveď vám dá recepčná. Napíšte otázku do formulára na stránke a ozve sa vám ešte v ten deň.",unkb:"Napísať otázku"},
 uk:{cut:"Стрижка коштує 25 € і триває 60 хвилин. Стриже Анна.",color:"Фарбування волосся в Анни коштує 60 € і триває 120 хвилин.",nails:"Манікюр в Ольги коштує 30 € і триває 90 хвилин.",brows:"Оформлення брів в Ольги коштує 15 € і триває 30 хвилин.",
 list:"Стрижка — 25 €, фарбування — 60 €, манікюр — 30 €, оформлення брів — 15 €. Ціни остаточні.",hours:"Працюємо з понеділка по суботу, 9:00–19:00. У неділю вихідний.",
-addr:"Ми на вулиці Hlavná 1 у Старому Місті, кілька хвилин пішки від зупинки.",book:"Наш Telegram-бот покаже, на коли можна записатися протягом найближчих 7 днів. Ви обираєте час, а адміністраторка підтверджує запис.",bookb:"Записатися",
-cancel:"Скасувати чи перенести запис можна в тому ж Telegram-боті. Достатньо написати, наприклад, «перенесіть мене на завтра».",pay:"Оплатити можна карткою або готівкою.",
+addr:"Ми на вулиці Hlavná 1 у Старому Місті, кілька хвилин пішки від зупинки.",book:"Вільний час можна обрати прямо тут, на сайті: послуга, майстриня, день і час. Запис підтверджується одразу.",bookb:"Записатися",
+cancel:"Перенести чи скасувати запис можна за посиланням, яке ви отримаєте після підтвердження. Дзвонити не треба.",pay:"Оплатити можна карткою або готівкою.",
 park:"На вулиці біля салону паркування платне. Зручніше дістатися громадським транспортом. Від зупинки до нас кілька хвилин пішки.",lang:"Говоримо словацькою, українською, російською та англійською.",
 who:"Анна стриже й фарбує волосся. Ольга робить манікюр і оформлює брови.",hi:"Добрий день! Про що хочете запитати?",thx:"Раді допомогти. Чекаємо на вас.",
 unk:"Точну відповідь на це запитання дасть адміністраторка. Залиште запитання у формі на сторінці, й вона відповість того ж дня.",unkb:"Написати запитання"},
 ru:{cut:"Стрижка стоит 25 € и занимает 60 минут. Стрижёт Анна.",color:"Окрашивание стоит 60 € и занимает 120 минут. Делает Анна.",nails:"Маникюр стоит 30 € и занимает 90 минут. Делает Ольга.",brows:"Брови стоят 15 €, это 30 минут. Делает Ольга.",
 list:"Стрижка 25 €, окрашивание 60 €, маникюр 30 €, брови 15 €. Цена окончательная.",hours:"Работаем с понедельника по субботу, 9:00–19:00. В воскресенье выходной.",
-addr:"Мы на улице Hlavná 1 в Старом городе, пара минут пешком от остановки.",book:"Свободное время на ближайшие 7 дней покажет наш Telegram-бот. Вы выбираете время, администратор подтверждает запись.",bookb:"Открыть запись",
-cancel:"Отменить или перенести запись можно в том же Telegram-боте. Достаточно написать, например, «перенесите меня на завтра».",pay:"Оплатить можно картой или наличными.",
+addr:"Мы на улице Hlavná 1 в Старом городе, пара минут пешком от остановки.",book:"Свободное время можно выбрать прямо здесь, на сайте: услуга, мастер, день и время. Запись подтверждается сразу.",bookb:"Открыть запись",
+cancel:"Перенести или отменить запись можно по ссылке, которую вы получите после подтверждения. Звонить не нужно.",pay:"Оплатить можно картой или наличными.",
 park:"У салона платная парковка на улице. Удобнее приехать на общественном транспорте, остановка в паре минут пешком.",lang:"Говорим по-словацки, по-украински, по-русски и по-английски.",
 who:"Стрижки и окрашивание делает Анна, маникюр и брови Ольга.",hi:"Здравствуйте! О чём хотите спросить?",thx:"Рады помочь. Ждём вас.",
 unk:"На это точно ответит администратор. Напишите вопрос в форме на странице, ответ придёт в тот же день.",unkb:"Написать вопрос"},
 en:{cut:"A haircut with Anna costs €25 and takes 60 minutes.",color:"Hair colouring with Anna costs €60 and takes 120 minutes.",nails:"A manicure with Olga costs €30 and takes 90 minutes.",brows:"A brow treatment with Olga costs €15 and takes 30 minutes.",
 list:"Haircut €25, colouring €60, manicure €30, brow treatment €15. These are the final prices.",hours:"We're open Monday to Saturday, 9:00–19:00. Closed on Sunday.",
-addr:"We're at Hlavná 1 in the Old Town, a few minutes' walk from the stop.",book:"Our Telegram bot shows available appointments for the next 7 days. Pick a time and our receptionist will confirm your booking.",bookb:"Book an appointment",
-cancel:"You can cancel or reschedule through the same Telegram bot. Just send a message like “Can I move my appointment to tomorrow?”",pay:"You can pay by card or in cash.",
+addr:"We're at Hlavná 1 in the Old Town, a few minutes' walk from the stop.",book:"You can pick a free time right here on the site: service, stylist, day and time. Your booking is confirmed straight away.",bookb:"Book an appointment",
+cancel:"You can reschedule or cancel through the link you get when you book. No need to call.",pay:"You can pay by card or in cash.",
 park:"There is paid street parking by the salon. Public transport is easier. The stop is a few minutes' walk away.",lang:"We speak Slovak, Ukrainian, Russian and English.",
 who:"Anna cuts and colours hair. Olga does manicures and brow treatments.",hi:"Hello! What would you like to know?",thx:"Happy to help. See you soon.",
 unk:"Our receptionist can give you a precise answer. Send your question using the form on this page and she'll reply the same day.",unkb:"Ask a question"}};
-const BOT='https://t.me/StudioBellaBookingBot';
 let cur='sk';
 const els=[...document.querySelectorAll('[data-i]')];
 function setLang(l){
@@ -433,6 +469,7 @@ function setLang(l){
   const ch=document.getElementById('chips');ch.replaceChildren(...T[l].chips.map(q=>{const b=document.createElement('button');b.type='button';b.textContent=q;b.onclick=()=>ask(q);return b}));
   const tc=document.getElementById('tc');if(tc.dataset.none)tc.textContent=T[l].onone;
   document.querySelectorAll('[data-alt]').forEach(e=>e.alt=T[l][e.dataset.alt]);
+  document.querySelectorAll('[data-al]').forEach(e=>e.setAttribute('aria-label',T[l][e.dataset.al]));
   document.querySelectorAll('[data-back]').forEach(a=>a.href='../?lang='+l);
   document.documentElement.lang=l;document.title=T[l].title;
   document.querySelector('meta[name=description]').content=T[l].desc;
@@ -507,8 +544,8 @@ function reply(q){
   if(!sv.length&&h.has('price'))out.push(a.list);
   if(!sv.length&&h.has('who'))out.push(a.who);
   ['hours','addr','pay','park','lang'].forEach(k=>{if(h.has(k))out.push(a[k])});
-  if(h.has('book')){out.push(a.book);btn={t:a.bookb,href:BOT}}
-  if(h.has('cancel')){out.push(a.cancel);btn={t:a.bookb,href:BOT}}
+  if(h.has('book')){out.push(a.book);btn={t:a.bookb,book:1}}
+  if(h.has('cancel')){out.push(a.cancel);btn={t:a.bookb,book:1}}
   if(!out.length&&h.has('thx'))out.push(a.thx);
   else if(!out.length&&h.has('hi'))out.push(a.hi);
   if(!out.length){out.push(a.unk);btn={t:a.unkb,form:q}}
@@ -519,6 +556,7 @@ function msg(cls,text,btn){
   const m=document.createElement('div');m.className='m '+cls;m.textContent=text;
   if(btn){const b=document.createElement(btn.href?'a':'button');b.className='act';b.textContent=btn.t;
     if(btn.href){b.href=btn.href;b.target='_blank';b.rel='noopener'}
+    else if(btn.book){b.type='button';b.onclick=()=>{closeChat();if(window.BellaBook)BellaBook.open()}}
     else{b.type='button';b.onclick=()=>{closeChat();fq.q.value=btn.form;$('dopyt').scrollIntoView({behavior:'smooth'});setTimeout(()=>fq.n.focus({preventScroll:true}),600)}}
     m.append(b)}
   log.append(m);log.scrollTop=log.scrollHeight;return m;
@@ -537,8 +575,12 @@ $('cf').addEventListener('submit',e=>{e.preventDefault();const v=ci.value;if(v.t
 document.querySelectorAll('[data-set]').forEach(b=>b.onclick=()=>setLang(b.dataset.set));
 let saved='';try{saved=localStorage.lang}catch(e){}
 const bl=(navigator.language||'').slice(0,2);
+Object.assign(T.sk,{"g5": "Recepcia so sušenými kvetmi", "g6": "Umývadlo na vlasy", "m1a": "Anna pri práci", "m2a": "Oľga pri manikúrovom stolíku"});Object.assign(T.uk,{"g5": "Рецепція із сухоцвітами", "g6": "Мийка для волосся", "m1a": "Анна за роботою", "m2a": "Ольга за манікюрним столиком"});Object.assign(T.ru,{"g5": "Ресепшен с сухоцветами", "g6": "Мойка для волос", "m1a": "Анна за работой", "m2a": "Ольга за маникюрным столиком"});Object.assign(T.en,{"g5": "Reception with dried flowers", "g6": "Hair wash basin", "m1a": "Anna at work", "m2a": "Olga at the manicure table"});
 setLang(new URLSearchParams(location.search).get('lang')||saved||(['en','ru','uk'].includes(bl)?bl:'sk'));
 if(new URLSearchParams(location.search).has('chat')||location.hash==='#chat')openChat();
+window.T0=T;
 </script>
+<script src="core.js"></script>
+<script src="book.js"></script>
 </body>
 </html>

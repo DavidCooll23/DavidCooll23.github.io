@@ -3,16 +3,20 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Davyd Konstantinov — remote support, testing and AI automation</title>
-<meta name="description" content="Looking for a remote job: customer and technical support in English and Slovak, manual testing, AI automation. Projects on video and CVs in PDF.">
+<title>Davyd Konstantinov: weby s online rezerváciou pre malé firmy na Slovensku</title>
+<meta name="description" content="Weby s online rezerváciou a dopytmi pre malé firmy na Slovensku. Zákazník sa objedná priamo na webe, vy vidíte rezervácie v paneli na mobile. 4 jazyky. Ceny od 80 €.">
 <link rel="alternate" hreflang="sk" href="https://davidcooll23.github.io/?lang=sk">
 <link rel="alternate" hreflang="en" href="https://davidcooll23.github.io/?lang=en">
 <link rel="alternate" hreflang="ru" href="https://davidcooll23.github.io/?lang=ru">
 <link rel="alternate" hreflang="uk" href="https://davidcooll23.github.io/?lang=uk">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://davidcooll23.github.io/">
-<meta property="og:title" content="Davyd Konstantinov — remote support, testing and AI automation">
-<meta property="og:description" content="Customer and technical support, manual testing and AI automation. 100% remote, English and Slovak. Projects on video, CVs in PDF.">
+<meta property="og:title" content="Weby s online rezerváciou pre malé firmy na Slovensku">
+<meta property="og:description" content="Zákazník sa objedná priamo na webe, vy vidíte rezervácie v paneli na mobile. Funkčná ukážka salónu v 4 jazykoch.">
+<meta property="og:image" content="https://davidcooll23.github.io/media/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%231c6ee8'/%3E%3Ctext x='16' y='22' font-family='Segoe UI,Arial' font-weight='700' font-size='16' text-anchor='middle' fill='white'%3EDK%3C/text%3E%3C/svg%3E">
 <meta name="theme-color" content="#f5f7fa">
 <link rel="preload" href="fonts/ibm-plex-sans-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
@@ -64,6 +68,7 @@ header.stuck::before{opacity:1}
 .gets li{padding-left:32px;position:relative;font-weight:500;max-width:52ch}
 .gets li::before{content:"";position:absolute;left:0;top:.45em;width:20px;height:12px;background:var(--accent);-webkit-mask:var(--tick) no-repeat center/contain;mask:var(--tick) no-repeat center/contain}
 .btns{display:flex;flex-wrap:wrap;gap:12px}
+.tgl{align-self:center;padding:8px 4px;font-size:.875rem;color:var(--sec);text-decoration:underline;text-underline-offset:3px}.contact .tgl,.stage .tgl{color:#a3a9b8}
 .btn{display:inline-flex;align-items:center;height:48px;padding:0 20px;border-radius:10px;font-weight:600;text-decoration:none;border:1px solid var(--line);background:var(--card);transition:background-color .15s var(--ease),border-color .15s var(--ease),transform .15s var(--ease)}
 .btn:hover{background:var(--raised)}
 .btn:active{transform:scale(.98)}
@@ -218,7 +223,7 @@ body[data-mode=biz] .stage .hero p.lead{max-width:40ch}
 .tgc .top{display:flex;align-items:center;gap:10px}
 .tgc .top b{display:block;font-size:.875rem;line-height:1.25}
 .tgc .top span{font-size:.75rem;color:var(--mute)}
-.tgc .av{width:34px;height:34px;font-size:.75rem;background:#2aabee}
+.tgc .av{width:34px;height:34px;font-size:.75rem;background:var(--accent)}
 .tgc .m{background:var(--wall);border-radius:12px;padding:9px 12px;font-size:.875rem;line-height:1.4}
 .tgc .m b{display:block}
 .okb{height:36px;border-radius:9px;background:rgba(28,110,232,.1);color:var(--accent);font-weight:600;font-size:.875rem;display:grid;place-items:center;transition:background-color .3s,color .3s}
@@ -249,6 +254,14 @@ body[data-mode=biz] .stage .hero p.lead{max-width:40ch}
 @media(prefers-reduced-motion:reduce){.tgc,.send{transition:none;transform:none}.fld.on span::after{display:none}}
 @media(max-width:520px){header .mini{display:none}.lang{gap:2px;flex:none}.lang button{padding:0 8px}}
 @media(prefers-reduced-motion:reduce){.progress{display:none}.hero h1,.hero .lead,.hero .gets,.hero .btns{animation:none}.js .rv{opacity:1;transform:none;transition:none}.card:hover,.box:hover{transform:none}.faq details::details-content,.faq summary::after,.mini{transition:none}}
+.stage .deal{margin:-12px 0 24px;font-weight:600;font-size:1.0625rem;line-height:1.45;color:#fff;max-width:44ch}
+.qf{display:grid;gap:14px;max-width:520px}
+.qf label{display:grid;gap:6px;font-size:.9375rem;color:#d5dbe7}
+.qf input,.qf textarea{font:inherit;font-size:1rem;color:#fff;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.18);border-radius:10px;padding:12px 14px;width:100%;resize:vertical}
+.qf input:focus,.qf textarea:focus{outline:2px solid #5b9bff;outline-offset:1px}
+.qf .qe{color:#ffb4a8;font-size:.875rem;margin-top:-6px}
+.qf .btns{margin-top:4px}
+.contact .qo{margin-top:16px}
 </style>
 </head>
 <body>
@@ -257,7 +270,7 @@ body[data-mode=biz] .stage .hero p.lead{max-width:40ch}
 <header>
   <span class="name">Davyd Konstantinov</span>
   <a class="btn main mini job" href="mailto:davidcoolld@gmail.com" data-i="mail"></a>
-  <a class="btn main mini biz" href="https://t.me/+421910392871" rel="noopener noreferrer" data-i="tg"></a>
+  <a class="btn main mini biz" href="https://wa.me/421910392871" data-wa rel="noopener noreferrer" data-i="wa"></a>
   <div class="lang" role="group" aria-label="Language">
     <button type="button" data-set="sk" aria-pressed="true">SK</button>
     <button type="button" data-set="en" aria-pressed="false">EN</button>
@@ -271,6 +284,7 @@ body[data-mode=biz] .stage .hero p.lead{max-width:40ch}
   <div>
     <h1 data-i="h1"></h1>
     <p class="lead" data-i="lead"></p>
+    <p class="deal biz" data-i="deal"></p>
     <ul class="gets"><li data-i="g1"></li><li data-i="g2"></li><li data-i="g3"></li></ul>
     <div class="btns job">
       <a class="btn main" href="mailto:davidcoolld@gmail.com" data-i="mail"></a>
@@ -278,10 +292,11 @@ body[data-mode=biz] .stage .hero p.lead{max-width:40ch}
       <a class="btn" href="support-samples.html" data-i="smp"></a>
     </div>
     <div class="btns biz">
-      <a class="btn main" href="https://t.me/+421910392871" rel="noopener noreferrer" data-i="tg"></a>
-      <a class="btn" href="studio-bella/" data-i="site2"></a>
-      <a class="btn" href="https://t.me/StudioBellaBookingBot" target="_blank" rel="noopener noreferrer" data-i="demo2"></a>
+      <a class="btn main" href="studio-bella/" data-ex="studio-bella/" data-q="" data-h="" data-i="site2"></a>
+      <a class="btn" href="https://wa.me/421910392871" data-wa rel="noopener noreferrer" data-i="wa"></a>
+      <a class="btn" href="mailto:davidcoolld@gmail.com" data-i="mailb"></a>
       <a class="btn" href="#prices" data-i="prb"></a>
+      <a class="tgl" href="https://t.me/+421910392871" rel="noopener noreferrer" data-i="tgs"></a>
     </div>
   </div>
   <div class="scene biz" aria-hidden="true">
@@ -296,7 +311,7 @@ body[data-mode=biz] .stage .hero p.lead{max-width:40ch}
       </div>
     </div>
     <div class="tgc">
-      <div class="top"><span class="av">TG</span><div><b>Studio Bella</b><span data-i="sc_bot"></span></div></div>
+      <div class="top"><span class="av">SB</span><div><b>Studio Bella</b><span data-i="sc_bot"></span></div></div>
       <div class="m"><b data-i="sc_new"></b><span data-i="sc_m"></span></div>
       <div class="okb"><span class="a" data-i="sc_ok"></span><span class="b" data-i="sc_ok2"></span></div>
     </div>
@@ -315,10 +330,21 @@ body[data-mode=biz] .stage .hero p.lead{max-width:40ch}
 <ul class="facts"><li data-i="f1"></li><li data-i="f2"></li><li data-i="f3"></li><li data-i="f4"></li></ul>
 </div>
 
+<section id="ako" class="biz">
+  <h2 data-i="akh"></h2>
+  <ol class="steps">
+    <li><h3 data-i="ak1"></h3></li>
+    <li><h3 data-i="ak2"></h3></li>
+    <li><h3 data-i="ak3"></h3></li>
+  </ol>
+  <p class="fine" data-i="akf"></p>
+</section>
+
 <section id="prices" class="biz">
   <h2 data-i="ph"></h2>
   <div class="plist">
     <div class="prow"><div><h3 data-i="p0t"></h3><p data-i="p0p"></p><a class="ex" href="garaz-4/" data-ex="garaz-4/" data-q="" data-h="" data-i="ex"></a></div><span class="term" data-i="p0d"></span><b class="eur q" data-i="p0e"></b></div>
+    <div class="prow"><div><h3 data-i="p5t"></h3><p data-i="p5p"></p><a class="ex" href="studio-bella/" data-ex="studio-bella/" data-q="" data-h="" data-i="ex"></a></div><span class="term" data-i="p5d"></span><b class="eur q" data-i="p5e"></b></div>
     <div class="prow"><div><h3 data-i="p1t"></h3><p data-i="p1p"></p><a class="ex" href="studio-bella/" data-ex="studio-bella/" data-q="" data-h="#dopyt" data-i="ex"></a></div><span class="term" data-i="p1d"></span><b class="eur">80 €</b></div>
     <div class="prow"><div><h3 data-i="p2t"></h3><p data-i="p2p"></p><a class="ex" href="preklad/" data-ex="preklad/" data-q="" data-h="" data-i="ex"></a></div><span class="term" data-i="p2d"></span><b class="eur">120 €</b></div>
     <div class="prow"><div><h3 data-i="p3t"></h3><p data-i="p3p"></p><a class="ex" href="https://t.me/StudioBellaBookingBot" data-ex="https://t.me/StudioBellaBookingBot" data-q="" data-h="" data-i="ex"></a></div><span class="term" data-i="p3d"></span><b class="eur">200 €</b></div>
@@ -397,9 +423,19 @@ body[data-mode=biz] .stage .hero p.lead{max-width:40ch}
       <a class="btn main" href="mailto:davidcoolld@gmail.com">davidcoolld@gmail.com</a>
       <a class="btn" href="https://t.me/+421910392871" rel="noopener noreferrer" data-i="tg"></a>
     </div>
-    <div class="btns biz">
-      <a class="btn main" href="https://t.me/+421910392871" rel="noopener noreferrer" data-i="tg"></a>
-      <a class="btn" href="mailto:davidcoolld@gmail.com">davidcoolld@gmail.com</a>
+    <form class="qf biz" id="qf" novalidate>
+      <label><span data-i="qb"></span><input id="qb" maxlength="120" autocomplete="organization"></label>
+      <label><span data-i="qn"></span><textarea id="qn" rows="3" maxlength="800" aria-describedby="qe"></textarea></label>
+      <small class="qe" id="qe" data-i="qe" hidden></small>
+      <label><span data-i="qk"></span><input id="qk" maxlength="120"></label>
+      <div class="btns">
+        <button class="btn main" type="submit" data-q="wa" data-i="qwa"></button>
+        <button class="btn" type="submit" data-q="mail" data-i="qml"></button>
+      </div>
+    </form>
+    <div class="btns biz qo">
+      <a class="tgl" href="mailto:davidcoolld@gmail.com">davidcoolld@gmail.com</a>
+      <a class="tgl" href="https://t.me/+421910392871" rel="noopener noreferrer" data-i="tgs"></a>
     </div>
   </div>
 </section>
@@ -551,6 +587,13 @@ ch:"Напишіть, що потрібно зробити",cp:"Кілька р�
 Object.assign(T.sk,{"title": "Davyd Konstantinov: weby a Telegram boty pre firmy na Slovensku", "desc": "Weby a Telegram boty pre malé firmy na Slovensku: dopyty z webu do Telegramu, rezervačný bot, 4 jazyky. Ceny od 80 do 400 €, funkčné ukážky sú dostupné.", "h1": "Weby a Telegram boty pre malé firmy na Slovensku", "lead": "Funkčné ukážky si môžete otvoriť hneď: web salónu a rezervačný bot. Ceny od 80 do 400 € a termíny od 2 do 10 dní nájdete nižšie.", "g1": "Web v slovenčine, ukrajinčine, ruštine a angličtine", "g2": "Dopyty z webu vám chodia do Telegramu a ukladajú sa do tabuľky", "g3": "Rezervačného bota vám najprv zadarmo ukážem na vašich službách", "tg": "Napísať na Telegram", "site2": "Otvoriť ukážku webu", "demo2": "Otvoriť ukážku bota", "prb": "Ceny", "f1": "Bratislava, pracujem na diaľku", "f2": "Všetko vyriešime písomne", "f3": "Oficiálne, na dohodu", "f4": "Aj túto stránku som robil ja", "sc_t": "Online rezervácia", "sc_n": "Meno", "sc_s": "Služba a čas", "sc_b": "Rezervovať", "sc_b2": "Dopyt odoslaný", "sc_bot": "dopyty z webu", "sc_new": "Nový dopyt", "sc_m": "Olena, manikúra, piatok 18:30", "sc_ok": "Potvrdiť", "sc_ok2": "Potvrdené", "ty_n": "Olena", "ty_s": "Manikúra, piatok 18:30", "ph": "Čo robím a koľko to stojí", "p0t": "Jednoduchý web alebo landing page", "p0p": "Stránka o vás: služby, ceny, kontakty a formulár. V jazykoch, ktoré potrebujete, pohodlná na mobile.", "p0d": "termín podľa zadania", "p0e": "od 250 €", "p1t": "Dopyty z webu do Telegramu a tabuľky", "p1p": "Každý dopyt z formulára vám príde ako správa a uloží sa do Google Tabuľky.", "p1d": "2 dni", "p2t": "Ukrajinská alebo ruská verzia stránky", "p2p": "Preklad hotovej stránky a formulár na nej.", "p2d": "3 dni", "p3t": "Rezervačný bot v Telegrame", "p3p": "Zákazník si sám vyberie čas a dostane pripomienku, vy len potvrdíte. Najprv vám bota zadarmo ukážem na vašich službách. Ak sa vám páči, stojí 200 €. Ak nie, nič neplatíte.", "p3d": "do 7 dní", "p4t": "Automatické odpovede na časté otázky", "p4p": "Odpovedá zákazníkom podľa vášho cenníka a častých otázok, kým máte prácu.", "p4d": "10 dní", "pfine": "Presnú cenu a termín poviem pred začiatkom práce. Ak potrebujete texty, cenník vo viacerých jazykoch alebo obrázky do reklamy, napíšte a spočítam to.", "work": "Práce", "soon": "Video už čoskoro", "demo": "Otvoriť ukážku v Telegrame", "w1t": "Rezervačný bot pre salón", "w1p": "Zákazník napíše „máte voľno v piatok po 17?“, bot ponúkne voľné časy a zapíše ho. Majiteľ potvrdí jedným kliknutím, bot pripomenie návštevu. 4 jazyky.", "w2t": "Monitor inzerátov a cien", "w2p": "Sleduje bazos.sk, nové inzeráty ukladá do Google Tabuľky a hneď pošle upozornenie do Telegramu.", "w3t": "Obchod v Telegrame", "w3p": "Katalóg, košík a objednávka priamo v chate.", "w4t": "Dopyty z webu", "w4p": "Dopyt z formulára sa uloží do tabuľky a majiteľovi príde správa do Telegramu.", "prch": "Ako prebieha práca", "s1t": "Napíšete zadanie", "s1p": "Pár riadkov na Telegram: čo potrebujete a pre akú firmu. Opýtam sa na detaily, poviem cenu a termín.", "s2t": "Ukážem", "s2p": "Pripravím funkčnú verziu a pošlem odkaz, aby ste si ju sami vyskúšali na mobile.", "s3t": "Úpravy a spustenie", "s3p": "Zapracujem pripomienky, pripojím vašu doménu, Telegram a tabuľku.", "s4t": "Odovzdanie", "s4p": "Krátky návod: ako všetko funguje a čo robiť, keď sa niečo pokazí. Všetko zostáva na vašich účtoch.", "faqh": "Časté otázky", "q1": "Koľko stojí web?", "a1": "Závisí od počtu stránok a jazykov. Napíšte, čo potrebujete, a cenu aj termín poviem pred začiatkom práce.", "q2": "Ako to riešime zmluvne?", "a2": "Oficiálne, na dohodu s vašou firmou na Slovensku.", "q3": "V akých jazykoch robíte?", "a3": "Slovenčina, ukrajinčina, ruština a angličtina. Písať si môžeme v ktoromkoľvek z nich.", "q4": "Sú potrebné telefonáty?", "a4": "Nie, všetko vyriešime písomne cez Telegram. Ak vám viac vyhovuje hovor, stačí jeden krátky na začiatku.", "ch": "Napíšte, čo potrebujete", "cp": "Pár riadkov o zadaní na Telegram. Odpoviem s cenou a termínom."});
 Object.assign(T.en,{"title": "Davyd Konstantinov: websites and Telegram bots for small businesses in Slovakia", "desc": "Websites and Telegram bots for small businesses in Slovakia: website enquiries sent to Telegram, a booking bot, 4 languages. Prices from €80 to €400, working examples are available.", "h1": "Websites and Telegram bots for small businesses in Slovakia", "lead": "You can open working examples right now: a salon website and a booking bot. Prices from €80 to €400 and turnaround from 2 to 10 days are listed below.", "g1": "A website in Slovak, Ukrainian, Russian and English", "g2": "Enquiries from the website reach you in Telegram and are saved to a spreadsheet", "g3": "I first show you the booking bot with your own services, free", "tg": "Message me on Telegram", "site2": "Open the sample website", "demo2": "Open the sample bot", "prb": "Prices", "f1": "Bratislava, I work remotely", "f2": "Everything is settled in writing", "f3": "Official, under a contract (dohoda)", "f4": "I built this page too", "sc_t": "Book online", "sc_n": "Name", "sc_s": "Service and time", "sc_b": "Book", "sc_b2": "Request sent", "sc_bot": "website enquiries", "sc_new": "New request", "sc_m": "Olena, manicure, Friday 18:30", "sc_ok": "Confirm", "sc_ok2": "Confirmed", "ty_n": "Olena", "ty_s": "Manicure, Friday 18:30", "ph": "What I do and what it costs", "p0t": "Business website or landing page", "p0p": "A page about you: services, prices, contacts and an enquiry form. In the languages you need, easy to use on a phone.", "p0d": "timing agreed after a brief", "p0e": "from €250", "p1t": "Website enquiries to Telegram and a spreadsheet", "p1p": "Every enquiry from the form reaches you as a message and is saved to Google Sheets.", "p1d": "2 days", "p2t": "Ukrainian or Russian version of a page", "p2p": "A translation of your existing page with an enquiry form on it.", "p2d": "3 days", "p3t": "Booking bot in Telegram", "p3p": "The customer picks a time and gets a reminder, you only confirm. I first show you the bot with your own services, free. If you like it, it costs €200. If you don't, you owe nothing.", "p3d": "up to 7 days", "p4t": "Auto-replies to common questions", "p4p": "Answers customers using your price list and common questions while you are busy.", "p4d": "10 days", "pfine": "I give you the exact price and timing before I start. If you need texts, a price list in several languages or images for ads, write to me and I'll quote it.", "work": "Work", "soon": "Video coming soon", "demo": "Open the example in Telegram", "w1t": "Booking bot for a salon", "w1p": "A customer types “any slot on Friday after 5?”, the bot offers free times and books it. The owner confirms in one tap, the bot sends a reminder. 4 languages.", "w2t": "Listings and price monitor", "w2p": "Watches bazos.sk, saves new listings to Google Sheets and sends a Telegram alert straight away.", "w3t": "Shop in Telegram", "w3p": "Catalogue, cart and checkout right in the chat.", "w4t": "Website enquiries", "w4p": "An enquiry from the form goes into a spreadsheet and the owner gets a Telegram message.", "prch": "How the work goes", "s1t": "You describe the job", "s1p": "A couple of lines on Telegram: what you need and for what business. I ask questions, then give you a price and timing.", "s2t": "I show it", "s2p": "I build a working version and send a link so you can try it on your phone.", "s3t": "Changes and launch", "s3p": "I make the changes and connect your domain, Telegram and spreadsheet.", "s4t": "Handover", "s4p": "A short guide: how everything works and what to do if something breaks. Everything stays on your accounts.", "faqh": "Common questions", "q1": "How much does a website cost?", "a1": "It depends on the number of pages and languages. Tell me what you need and I'll give you a price and timing before I start.", "q2": "How do we make it official?", "a2": "Officially, under a contract (dohoda) with your company in Slovakia.", "q3": "Which languages do you work in?", "a3": "Slovak, Ukrainian, Russian and English. We can write to each other in any of them.", "q4": "Do we need calls?", "a4": "No, everything is settled in writing on Telegram. If you prefer to talk, one short call at the start is enough.", "ch": "Tell me what you need", "cp": "A couple of lines about the job on Telegram. I'll reply with a price and timing."});
 Object.assign(T.sk,{ex:"Pozrieť ukážku"});Object.assign(T.uk,{ex:"Подивитися приклад"});Object.assign(T.ru,{ex:"Посмотреть пример"});Object.assign(T.en,{ex:"See an example"});
+// 2026-11-22: booking on the site first, contact via WhatsApp + e-mail, Telegram small
+Object.assign(T.ru,{"title": "Давид Константинов: сайты с онлайн-записью для малого бизнеса в Словакии", "desc": "Сайты с онлайн-записью и заявками для малого бизнеса в Словакии. Клиент записывается прямо на сайте, вы видите записи в панели с телефона. 4 языка. Цены от 80 €.", "h1": "Сайты с онлайн-записью и заявками для малого бизнеса в Словакии", "lead": "Откройте пример салона: запишитесь как клиент, потом зайдите в панель владельца и увидите там свою запись. Цены и сроки ниже.", "g2": "Клиент записывается на сайте сам, без приложения и регистрации", "g3": "Записи и заявки видны вам в панели с телефона, уведомление приходит на почту или в Telegram", "wa": "Написать в WhatsApp", "mailb": "Написать на почту", "tgs": "или в Telegram", "wat": "Здравствуйте! Пишу с вашей страницы.", "site2": "Открыть пример салона с записью", "sc_b2": "Запись подтверждена", "sc_bot": "панель владельца", "sc_new": "Новая запись", "sc_ok": "Открыть", "sc_ok2": "Просмотрено", "p1t": "Заявки с сайта на почту или в Telegram и в таблицу", "p1p": "Каждая заявка из формы приходит вам письмом или сообщением и сохраняется в Google Таблицу.", "w0t": "Сайт салона с онлайн-записью", "w0p": "Клиент выбирает услугу, мастера и время прямо на сайте и сразу видит подтверждение. Владелец видит все записи в панели, мастер только свои. 4 языка, удобно с телефона.", "s1p": "Пара строк в WhatsApp или на почту: что нужно и для какого бизнеса. Задаю вопросы, называю цену и срок.", "s3p": "Вношу правки, подключаю ваш домен, почту или Telegram и таблицу.", "a1": "Сайт-визитка или лендинг от 250 €. Точная цена зависит от числа страниц и языков, называю её до начала работы.", "a4": "Нет, всё решаем перепиской в WhatsApp или по почте. Если вам удобнее голосом, хватит одного короткого звонка на старте.", "cp": "Пара строк о задаче в WhatsApp или на почту. Отвечу с ценой и сроком."});
+Object.assign(T.sk,{"title": "Davyd Konstantinov: weby s online rezerváciou pre malé firmy na Slovensku", "desc": "Weby s online rezerváciou a dopytmi pre malé firmy na Slovensku. Zákazník sa objedná priamo na webe, vy vidíte rezervácie v paneli na mobile. 4 jazyky. Ceny od 80 €.", "h1": "Weby s online rezerváciou a dopytmi pre malé firmy na Slovensku", "lead": "Otvorte si ukážku salónu: objednajte sa ako zákazník, potom otvorte panel majiteľa a uvidíte tam svoju rezerváciu. Ceny a termíny sú nižšie.", "g2": "Zákazník sa objedná na webe sám, bez aplikácie a registrácie", "g3": "Rezervácie a dopyty vidíte v paneli na mobile, upozornenie príde e-mailom alebo do Telegramu", "wa": "Napísať na WhatsApp", "mailb": "Napísať e-mail", "tgs": "alebo cez Telegram", "wat": "Dobrý deň, píšem z vašej stránky.", "site2": "Otvoriť ukážku salónu s rezerváciou", "sc_b2": "Rezervácia potvrdená", "sc_bot": "panel majiteľa", "sc_new": "Nová rezervácia", "sc_ok": "Otvoriť", "sc_ok2": "Videné", "p1t": "Dopyty z webu na e-mail alebo do Telegramu a do tabuľky", "p1p": "Každý dopyt z formulára vám príde e-mailom alebo správou a uloží sa do Google Tabuľky.", "w0t": "Web salónu s online rezerváciou", "w0p": "Zákazník si na webe vyberie službu, špecialistku a čas a hneď vidí potvrdenie. Majiteľ vidí všetky rezervácie v paneli, špecialistka len svoje. 4 jazyky, pohodlné na mobile.", "s1p": "Pár riadkov na WhatsApp alebo e-mailom: čo potrebujete a pre akú firmu. Opýtam sa na detaily, poviem cenu a termín.", "s3p": "Zapracujem pripomienky, pripojím vašu doménu, e-mail alebo Telegram a tabuľku.", "a1": "Jednoduchý web alebo landing page od 250 €. Presná cena závisí od počtu stránok a jazykov, poviem ju pred začiatkom práce.", "a4": "Nie, všetko vyriešime písomne cez WhatsApp alebo e-mail. Ak vám viac vyhovuje hovor, stačí jeden krátky na začiatku.", "cp": "Pár riadkov o zadaní na WhatsApp alebo e-mailom. Odpoviem s cenou a termínom."});
+Object.assign(T.en,{"title": "Davyd Konstantinov: websites with online booking for small businesses in Slovakia", "desc": "Websites with online booking and enquiry forms for small businesses in Slovakia. Clients book right on the site, and you see every booking in a panel on your phone. 4 languages. Prices from €80.", "h1": "Websites with online booking and enquiries for small businesses in Slovakia", "lead": "Try the salon example: book as a client, then open the owner's panel and you'll find your booking there. Prices and timelines are below.", "g2": "Clients book on the website themselves, with no app and no sign-up", "g3": "You see bookings and enquiries in a panel on your phone and get a notice by email or Telegram", "wa": "Message me on WhatsApp", "mailb": "Send an email", "tgs": "or on Telegram", "wat": "Hello, I'm writing from your website.", "site2": "Open the salon example with booking", "sc_b2": "Booking confirmed", "sc_bot": "owner's panel", "sc_new": "New booking", "sc_ok": "Open", "sc_ok2": "Seen", "p1t": "Website enquiries to email or Telegram and a spreadsheet", "p1p": "Every enquiry from the form reaches you by email or as a message and is saved to Google Sheets.", "w0t": "Salon website with online booking", "w0p": "Clients pick a service, a stylist and a time right on the site and see the confirmation straight away. The owner sees every booking in a panel, each stylist only their own. 4 languages, easy on a phone.", "s1p": "A couple of lines on WhatsApp or by email: what you need and for what business. I ask questions, then give you a price and a timeline.", "s3p": "I make the changes and connect your domain, email or Telegram, and the spreadsheet.", "a1": "A business website or landing page starts at €250. The exact price depends on the number of pages and languages, and you get it before I start.", "a4": "No, everything is settled in writing on WhatsApp or by email. If you prefer to talk, one short call at the start is enough.", "cp": "A couple of lines about the job on WhatsApp or by email. I'll reply with a price and a timeline."});
+Object.assign(T.uk,{"title": "Давид Константінов: сайти з онлайн-записом для малого бізнесу в Словаччині", "desc": "Сайти з онлайн-записом і заявками для малого бізнесу в Словаччині. Клієнт записується просто на сайті, ви бачите записи в панелі з телефона. 4 мови. Ціни від 80 €.", "h1": "Сайти з онлайн-записом і заявками для малого бізнесу в Словаччині", "lead": "Відкрийте приклад салону: запишіться як клієнт, потім зайдіть у панель власника й побачите там свій запис. Ціни й терміни нижче.", "g2": "Клієнт записується на сайті сам, без застосунку й реєстрації", "g3": "Записи й заявки ви бачите в панелі з телефона, сповіщення приходить на пошту або в Telegram", "wa": "Написати у WhatsApp", "mailb": "Написати на пошту", "tgs": "або в Telegram", "wat": "Добрий день! Пишу з вашої сторінки.", "site2": "Відкрити приклад салону із записом", "sc_b2": "Запис підтверджено", "sc_bot": "панель власника", "sc_new": "Новий запис", "sc_ok": "Відкрити", "sc_ok2": "Переглянуто", "p1t": "Заявки із сайту на пошту або в Telegram і в таблицю", "p1p": "Кожна заявка з форми надходить вам листом або повідомленням і зберігається в Google Таблиці.", "w0t": "Сайт салону з онлайн-записом", "w0p": "Клієнт обирає послугу, майстриню й час просто на сайті та одразу бачить підтвердження. Власник бачить усі записи в панелі, майстриня тільки свої. 4 мови, зручно з телефона.", "s1p": "Кілька рядків у WhatsApp або на пошту: що потрібно і для якого бізнесу. Ставлю запитання, називаю ціну і термін.", "s3p": "Вношу правки, підключаю ваш домен, пошту або Telegram і таблицю.", "a1": "Сайт-візитка або лендинг від 250 €. Точна ціна залежить від кількості сторінок і мов, називаю її до початку роботи.", "a4": "Ні, усе вирішуємо листуванням у WhatsApp або поштою. Якщо вам зручніше голосом, вистачить одного короткого дзвінка на старті.", "cp": "Кілька рядків про завдання у WhatsApp або на пошту. Відповім із ціною і терміном."});
+Object.assign(T.sk,{"deal": "Web od 250 € · bez mesačných poplatkov · platíte až po tom, čo uvidíte hotový web", "lead": "Pre salóny, kaderníctva, autoservisy a majstrov. Otvorte si ukážku salónu: objednajte sa ako zákazník, potom otvorte panel majiteľa a uvidíte tam svoju rezerváciu.", "akh": "Ako to prebieha", "ak1": "Napíšete, čo potrebujete", "ak2": "Ukážem vám web s vašimi službami", "ak3": "Platíte, až keď sa vám páči", "akf": "Web, doména aj prístupy sú vaše. Doména stojí asi 15 € ročne a platíte ju priamo registrátorovi.", "qb": "Aký máte podnik", "qn": "Čo potrebujete", "qk": "Kontakt (nepovinné)", "qe": "Napíšte aspoň pár slov, čo potrebujete.", "qwa": "Poslať cez WhatsApp", "qml": "Poslať e-mailom", "qL1": "Podnik", "qL2": "Potrebujem", "qL3": "Kontakt", "qs": "Dopyt z webu"});Object.assign(T.en,{"deal": "Website from €250 · no monthly fees · you pay only after you see the finished site", "lead": "For salons, hairdressers, car repair shops and tradespeople. Try the salon example: book as a client, then open the owner's panel and you'll find your booking there.", "akh": "How it works", "ak1": "You tell me what you need", "ak2": "I show you the site with your services", "ak3": "You pay only when you like it", "akf": "The site, the domain and all logins are yours. A domain costs about €15 a year, and you pay the registrar directly.", "qb": "Business type", "qn": "What you need", "qk": "Contact (optional)", "qe": "Write at least a few words about what you need.", "qwa": "Send via WhatsApp", "qml": "Send by email", "qL1": "Business", "qL2": "I need", "qL3": "Contact", "qs": "Enquiry from the website"});Object.assign(T.uk,{"deal": "Сайт від 250 € · без щомісячних платежів · платите лише тоді, коли побачите готовий сайт", "lead": "Для салонів, перукарень, автосервісів і майстрів. Відкрийте приклад салону: запишіться як клієнт, потім зайдіть у панель власника й побачите там свій запис.", "akh": "Як це відбувається", "ak1": "Ви пишете, що потрібно", "ak2": "Я показую сайт із вашими послугами", "ak3": "Платите, лише коли сайт вам подобається", "akf": "Сайт, домен і доступи належать вам. Домен коштує приблизно 15 € на рік, його ви оплачуєте напряму реєстраторові.", "qb": "Який у вас бізнес", "qn": "Що потрібно", "qk": "Контакт (необов'язково)", "qe": "Напишіть хоча б кілька слів, що потрібно.", "qwa": "Надіслати у WhatsApp", "qml": "Надіслати e-mail", "qL1": "Бізнес", "qL2": "Потрібно", "qL3": "Контакт", "qs": "Запит із сайту"});Object.assign(T.ru,{"deal": "Сайт от 250 € · без ежемесячных платежей · платите, только когда увидите готовый сайт", "lead": "Для салонов, парикмахерских, автосервисов и мастеров. Откройте пример салона: запишитесь как клиент, потом зайдите в панель владельца и увидите там свою запись.", "akh": "Как это проходит", "ak1": "Вы пишете, что нужно", "ak2": "Я показываю сайт с вашими услугами", "ak3": "Платите, только когда сайт вам нравится", "akf": "Сайт, домен и доступы ваши. Домен стоит примерно 15 € в год, его вы оплачиваете напрямую регистратору.", "qb": "Какой у вас бизнес", "qn": "Что нужно", "qk": "Контакт (необязательно)", "qe": "Напишите хотя бы пару слов, что нужно.", "qwa": "Отправить в WhatsApp", "qml": "Отправить на e-mail", "qL1": "Бизнес", "qL2": "Нужно", "qL3": "Контакт", "qs": "Запрос с сайта"});
+Object.assign(T.sk,{"p5t": "Web s online rezerváciou a panelom majiteľa", "p5p": "Zákazník si sám vyberie službu a čas priamo na webe. Rezervácie vidíte v paneli na mobile, môžete ich presunúť alebo zrušiť. Bez mesačných poplatkov.", "p5d": "termín podľa zadania", "p5e": "od 350 €", "a1": "Jednoduchý web alebo landing page od 250 €, web s online rezerváciou a panelom od 350 €. Presnú cenu poviem pred začiatkom práce."});Object.assign(T.en,{"p5t": "Website with online booking and an owner's panel", "p5p": "Clients pick a service and a time on the site. You see every booking in a panel on your phone and can move or cancel it. No monthly fees.", "p5d": "timing agreed after a brief", "p5e": "from €350", "a1": "A business website or landing page starts at €250, a website with online booking and an owner's panel at €350. You get the exact price before I start."});Object.assign(T.ru,{"p5t": "Сайт с онлайн-записью и панелью владельца", "p5p": "Клиент сам выбирает услугу и время прямо на сайте. Записи вы видите в панели с телефона, можете перенести или отменить. Без ежемесячных платежей.", "p5d": "срок после брифа", "p5e": "от 350 €", "a1": "Сайт-визитка или лендинг от 250 €, сайт с онлайн-записью и панелью от 350 €. Точную цену называю до начала работы."});Object.assign(T.uk,{"p5t": "Сайт з онлайн-записом і панеллю власника", "p5p": "Клієнт сам обирає послугу й час просто на сайті. Записи ви бачите в панелі з телефона, можете перенести або скасувати. Без щомісячних платежів.", "p5d": "термін після брифу", "p5e": "від 350 €", "a1": "Сайт-візитка або лендинг від 250 €, сайт з онлайн-записом і панеллю від 350 €. Точну ціну називаю до початку роботи."});
 // hero scene for RU/UA: the form fills itself, the request lands in Telegram, the owner confirms
 let run=0;
 async function scene(l){
@@ -580,6 +623,7 @@ function setLang(l){
   document.querySelectorAll('[data-set]').forEach(b=>b.setAttribute('aria-pressed',b.dataset.set===l));
   try{localStorage.lang=l}catch(e){}
   document.querySelectorAll('[data-ex]').forEach(a=>{const u=a.dataset.ex;a.href=u.startsWith('http')?u:u+'?'+(a.dataset.q?a.dataset.q+'&':'')+'lang='+l+a.dataset.h});
+  document.querySelectorAll('[data-wa]').forEach(a=>a.href='https://wa.me/421910392871?text='+encodeURIComponent(T[l].wat));
   scene(l);
 }
 document.querySelectorAll('[data-set]').forEach(b=>b.onclick=()=>setLang(b.dataset.set));
@@ -607,6 +651,17 @@ document.querySelectorAll('.box,.card,.steps li,.faq details,.cvl').forEach(e=>{
 const hd=document.querySelector('header');
 const st=()=>hd.classList.toggle('stuck',scrollY>8);
 addEventListener('scroll',st,{passive:true});st();
+
+// quick request form: builds a WhatsApp / mailto message from the fields, nothing is stored or sent elsewhere
+(()=>{const f=document.getElementById('qf');if(!f)return;const n=f.querySelector('#qn'),e=f.querySelector('#qe');
+n.addEventListener('input',()=>{if(n.value.trim()){e.hidden=true;n.removeAttribute('aria-invalid')}});
+f.addEventListener('submit',ev=>{ev.preventDefault();const t=T[document.documentElement.lang]||T.sk,how=ev.submitter&&ev.submitter.dataset.q;
+ if(!n.value.trim()){e.hidden=false;n.setAttribute('aria-invalid','true');n.focus();return}
+ const b=f.querySelector('#qb').value.trim(),k=f.querySelector('#qk').value.trim();
+ const msg=[t.wat,b&&t.qL1+': '+b,t.qL2+': '+n.value.trim(),k&&t.qL3+': '+k].filter(Boolean).join('\n');
+ const url=how==='mail'?'mailto:davidcoolld@gmail.com?subject='+encodeURIComponent(t.qs)+'&body='+encodeURIComponent(msg):'https://wa.me/421910392871?text='+encodeURIComponent(msg);
+ window.qGo(url)})})();
+window.qGo=u=>{if(u.startsWith('mailto:'))location.href=u;else window.open(u,'_blank','noopener')};
 </script>
 </body>
 </html>
