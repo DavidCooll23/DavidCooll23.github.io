@@ -196,7 +196,7 @@ footer{display:flex;justify-content:space-between;align-items:center;gap:16px;pa
   .cover{grid-row:span 2;aspect-ratio:1.12}.project-title{margin:2px 0 4px}
   .salon-cover img{width:70%;left:15%}.type-cover{font-size:clamp(18px,3.8vw,30px)}
   .circle-arrow{width:26px;height:26px}.project p{font-size:14px}
-  .process{grid-template-columns:1fr}.process>img{height:auto;aspect-ratio:2;object-position:50% 54%}
+  .process{grid-template-columns:1fr}.process>img{height:auto;aspect-ratio:6/5}
   #faq,#contact{grid-template-columns:1fr;gap:24px}
   .contact-intro>p{margin:12px 0 20px}
 }
@@ -315,7 +315,7 @@ footer{display:flex;justify-content:space-between;align-items:center;gap:16px;pa
 </section>
 
 <section id="ako" class="process biz">
-  <img src="media/shopfront.webp" width="1200" height="800" loading="lazy" alt="">
+  <img src="media/panel-owner.webp" width="1200" height="1000" loading="lazy" data-alt="panelAlt" alt="">
   <div class="process-copy">
     <h2 data-i="akh">Ako to prebieha</h2>
     <ol class="steps"><li data-i="ak1">Napíšete, čo potrebujete</li><li data-i="ak2">Ukážem vám hotový web s vašimi službami a cenami</li><li data-i="ak3">Platíte, až keď sa vám páči</li></ol>
@@ -585,7 +585,8 @@ const T = {
     "exAI": "Opýtať sa AI asistenta",
     "who": "Píšete priamo mne, Davydovi. Web robím sám, od návrhu po spustenie.",
     "meAlt": "Davyd Konstantinov",
-    "addh": "Doplnkové služby"
+    "addh": "Doplnkové služby",
+    "panelAlt": "Panel majiteľa na mobile: rezervácie na deň, nová rezervácia z webu"
   },
   "en": {
     "title": "Davyd Konstantinov: websites with online booking for small businesses in Slovakia",
@@ -766,7 +767,8 @@ const T = {
     "exAI": "Ask the AI assistant",
     "who": "You talk to me, Davyd, directly. I build the site myself, from design to launch.",
     "meAlt": "Davyd Konstantinov",
-    "addh": "Add-on services"
+    "addh": "Add-on services",
+    "panelAlt": "Owner panel on a phone: the day’s bookings and a new booking from the website"
   },
   "ru": {
     "title": "Давид Константинов: сайты с онлайн-записью для малого бизнеса в Словакии",
@@ -928,7 +930,8 @@ const T = {
     "exAI": "Спросить AI-ассистента",
     "who": "Пишете напрямую мне, Давиду. Сайт делаю сам, от макета до запуска.",
     "meAlt": "Давид Константинов",
-    "addh": "Дополнительные услуги"
+    "addh": "Дополнительные услуги",
+    "panelAlt": "Панель владельца на телефоне: записи на день и новая запись с сайта"
   },
   "uk": {
     "title": "Давид Константінов: сайти з онлайн-записом для малого бізнесу в Словаччині",
@@ -1090,7 +1093,8 @@ const T = {
     "exAI": "Запитати AI-асистента",
     "who": "Пишете напряму мені, Давиду. Сайт роблю сам, від макета до запуску.",
     "meAlt": "Давид Константинов",
-    "addh": "Додаткові послуги"
+    "addh": "Додаткові послуги",
+    "panelAlt": "Панель власника на телефоні: записи на день і новий запис із сайту"
   }
 };
 const translations = [...document.querySelectorAll('[data-i]')];
