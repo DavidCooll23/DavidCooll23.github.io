@@ -22,6 +22,7 @@
 <link rel="canonical" href="https://konstantinov.sk/">
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"ProfessionalService","name":"Davyd Konstantinov – weby s online rezerváciou","url":"https://konstantinov.sk/","image":"https://konstantinov.sk/media/og.jpg","telephone":"+421910392871","email":"davyd@konstantinov.sk","areaServed":"SK","address":{"@type":"PostalAddress","addressLocality":"Bratislava","addressCountry":"SK"},"priceRange":"80–400 €","availableLanguage":["sk","en","ru","uk"]}</script>
 <script src="https://cdn.counter.dev/script.js" data-id="257df3c8-5256-4c70-addb-07ba1530a824" data-utcoffset="1" defer></script>
+<link rel="preload" as="image" href="media/shot-bella-desktop-1280.webp" imagesrcset="media/shot-bella-desktop-800.webp 800w, media/shot-bella-desktop-1280.webp 1280w, media/shot-bella-desktop-1600.webp 1600w" imagesizes="(max-width:760px) 82vw, 48vw" fetchpriority="high">
 <link rel="preload" href="fonts/ibm-plex-sans-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="fonts/ibm-plex-sans-latin-600-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="fonts/ibm-plex-sans-latin-ext-600-normal.woff2" as="font" type="font/woff2" crossorigin>
@@ -72,13 +73,19 @@ header{min-height:86px;border-bottom:1px solid var(--rule);display:flex;align-it
 h1,h2,.thanks h3{font-family:var(--serif);font-weight:400;letter-spacing:-.057em;text-wrap:balance}
 h1{font-size:clamp(55px,5.5vw,84px);line-height:.99}
 h1 em{display:block;color:var(--wine);font-weight:400}
-.lead{max-width:43ch;color:var(--muted);font-size:clamp(17px,1.35vw,20px);line-height:1.55;margin:22px 0 26px}
+.lead{max-width:43ch;color:var(--muted);font-size:clamp(17px,1.35vw,20px);line-height:1.55;margin:22px 0 20px}
 .btns{gap:10px;flex-wrap:wrap}
 .btn{display:inline-flex;align-items:center;justify-content:center;gap:14px;min-height:48px;padding:10px 19px;border:1px solid #988b81;border-radius:5px;color:var(--ink);background:transparent;text-decoration:none;font-size:15px;font-weight:600;line-height:1.3;text-align:center}
 .btn:hover{background:#eee8df}
 .btn.main{background:var(--wine);border-color:var(--wine);color:white}
 .btn.main:hover{background:var(--deep)}
 .btn:disabled{opacity:.7;cursor:wait}
+.hero-prices{list-style:none;display:flex;flex-wrap:wrap;gap:8px;padding:0;margin:0 0 22px}
+.hero-prices li{padding:7px 13px;border:1px solid #cdb9ad;border-radius:999px;background:var(--white);font-size:15px;font-weight:600}
+.price-cta{margin:0 0 26px}.addons .plist{padding-bottom:10px}.addons .plist .prow:first-child{border-top:0}
+.me{display:flex;align-items:center;gap:16px;margin:0 0 28px;max-width:44ch}.me img{width:76px;height:76px;flex:none;border-radius:50%;object-fit:cover;border:2px solid #eddcdb}.me p{font:italic clamp(18px,1.4vw,21px)/1.35 var(--serif);color:#f6e8e6}
+a.device-stage{display:block;color:inherit;text-decoration:none}
+a.device-stage:hover .note-open{text-decoration:underline}
 .minor-link{display:inline-block;padding:7px 0;margin-top:7px;color:var(--muted);font-size:14px}
 .showcase{min-width:0;background:#ead8cb;border-radius:9px;overflow:hidden}
 .device-stage{position:relative;aspect-ratio:1.52;isolation:isolate;background:#ead8cb;overflow:hidden}
@@ -153,7 +160,7 @@ details[open]>summary::after{background-size:13px 1.5px,0 0}
 .faq summary{padding:18px 0;font-weight:600;font-size:clamp(18px,1.6vw,24px);line-height:1.35}
 .faq p{color:var(--muted);padding:0 28px 20px 0;max-width:65ch}
 #contact{background:var(--deep);color:var(--white);display:grid;grid-template-columns:.9fr 1.1fr;align-items:start;gap:clamp(24px,5vw,80px);padding:clamp(26px,4.5vw,70px);border-radius:8px}
-.contact-intro>p{color:#eddcdb;margin:18px 0 32px;max-width:38ch}
+.contact-intro>p{color:#eddcdb;margin:18px 0 26px;max-width:38ch}
 .address,.channels{display:flex;align-items:center;gap:10px;flex-wrap:wrap}
 .address button{font-size:13px;border:1px solid #b09298;padding:4px 9px;background:transparent;color:inherit;border-radius:3px}
 .channels{gap:10px 18px;font-size:14px;margin-top:12px;color:#f2e0df}
@@ -204,6 +211,7 @@ footer{display:flex;justify-content:space-between;align-items:center;gap:16px;pa
   .plist .prow{grid-template-columns:minmax(0,1fr) auto;gap:5px 16px}.plist .prow>div{grid-column:1/-1}
   .plist .eur{font-size:26px}.plist .term{align-self:center}.process-copy{padding:24px}
   #contact{padding:25px 16px 16px}.contact-intro{padding:0 4px}.form-panel{padding:18px}
+  .hero-prices{gap:6px}.hero-prices li{padding:5px 10px;font-size:14px}
   .qf .btn{flex:1 1 auto}.qf .btns{gap:8px}footer{font-size:12px}
 }
 @media(prefers-reduced-motion:no-preference){
@@ -237,14 +245,14 @@ footer{display:flex;justify-content:space-between;align-items:center;gap:16px;pa
       <a class="btn" href="#cv" data-i="cvb">Životopis (PDF)</a>
       <a class="btn" href="support-samples.html" data-i="smp">Ukážky práce (EN)</a>
     </div>
+    <ul class="hero-prices biz"><li data-i="hp1">Jednoduchý web od 250 €</li><li data-i="hp2">S online rezerváciou od 350 €</li></ul>
     <div class="btns biz">
-      <a class="btn main outward" href="studio-bella/" data-ex="studio-bella/" data-i="site2">Vyskúšať web salónu</a>
-      <a class="btn" href="#qf" data-write data-i="mailb">Napísať mi</a>
+      <a class="btn main arrow" href="#qf" data-write data-i="cta">Zistiť cenu a termín</a>
+      <a class="btn outward" href="studio-bella/" data-ex="studio-bella/" data-i="site2">Vyskúšať web salónu</a>
     </div>
-    <a class="minor-link biz" href="https://wa.me/421910392871" data-wa data-i="wa">Alebo cez WhatsApp</a>
   </div>
   <figure class="showcase biz">
-    <div class="device-stage">
+    <a class="device-stage" href="studio-bella/" data-ex="studio-bella/" data-aria="site2">
       <div class="browser">
         <div class="browser-bar" aria-hidden="true"><i></i><i></i><i></i><span data-i="previewUrl">konstantinov.sk/studio-bella/</span></div>
         <img src="media/shot-bella-desktop-1280.webp" srcset="media/shot-bella-desktop-800.webp 800w, media/shot-bella-desktop-1280.webp 1280w, media/shot-bella-desktop-1600.webp 1600w" sizes="(max-width:760px) 82vw, 48vw" width="2160" height="1350" fetchpriority="high" data-alt="desktopAlt" alt="Studio Bella">
@@ -255,7 +263,7 @@ footer{display:flex;justify-content:space-between;align-items:center;gap:16px;pa
         <div><small data-i="sc_bot">panel majiteľa</small><strong data-i="sc_new">Nová rezervácia</strong><span data-i="sc_m">Olena, manikúra, piatok 18:30</span></div>
         <span class="note-open" data-i="sc_ok">Otvoriť</span>
       </div>
-    </div>
+    </a>
     <figcaption><b data-i="bellaName">Studio Bella</b><span data-i="bookingDemo">Web s online rezerváciou</span></figcaption>
   </figure>
   <div class="chat job" aria-hidden="true">
@@ -269,7 +277,7 @@ footer{display:flex;justify-content:space-between;align-items:center;gap:16px;pa
     <div class="note" data-i="cn">Ukážka z môjho projektu, nie skutočná konverzácia</div>
   </div>
 </div>
-<ul class="facts biz"><li data-i="priceFact">Web od 250 €</li><li data-i="payFact">Platíte až za funkčný web</li><li data-i="feeFact">Bez mesačných poplatkov</li><li data-i="f3">Oficiálne na dohodu</li></ul>
+<ul class="facts biz"><li data-i="priceFact">Hotové za 5–10 dní</li><li data-i="payFact">Platíte až za funkčný web</li><li data-i="feeFact">Bez mesačných poplatkov</li><li data-i="f3">Oficiálne na dohodu</li></ul>
 </div>
 
 <section id="work" class="work">
@@ -310,7 +318,7 @@ footer{display:flex;justify-content:space-between;align-items:center;gap:16px;pa
   <img src="media/shopfront.webp" width="1200" height="800" loading="lazy" alt="">
   <div class="process-copy">
     <h2 data-i="akh">Ako to prebieha</h2>
-    <ol class="steps"><li data-i="ak1">Napíšete, čo potrebujete</li><li data-i="ak2">Ukážem vám web s vašimi službami</li><li data-i="ak3">Platíte, až keď sa vám páči</li></ol>
+    <ol class="steps"><li data-i="ak1">Napíšete, čo potrebujete</li><li data-i="ak2">Ukážem vám hotový web s vašimi službami a cenami</li><li data-i="ak3">Platíte, až keď sa vám páči</li></ol>
     <p class="fine" data-i="akf">Web, doména aj prístupy sú vaše. Doména stojí asi 15 € ročne a platíte ju priamo registrátorovi.</p>
   </div>
 </section>
@@ -318,16 +326,17 @@ footer{display:flex;justify-content:space-between;align-items:center;gap:16px;pa
 <section id="prices" class="biz">
   <h2 data-i="ph">Služby a ceny</h2>
   <div class="packages">
-    <div class="prow"><div><h3 data-i="p0t">Jednoduchý web alebo landing page</h3><p data-i="p0p">Stránka o vás: služby, ceny, kontakty a formulár. V jazykoch, ktoré potrebujete, pohodlná na mobile.</p><a class="ex" href="garaz-4/" data-ex="garaz-4/" data-q="" data-h="" data-i="ex">Pozrieť ukážku</a></div><span class="term" data-i="p0d">termín podľa zadania</span><b class="eur q" data-i="p0e">od 250 €</b></div>
-    <div class="prow"><div><h3 data-i="p5t">Web s online rezerváciou a panelom majiteľa</h3><p data-i="p5p">Zákazník si sám vyberie službu a čas priamo na webe. Rezervácie vidíte v paneli na mobile, môžete ich presunúť alebo zrušiť. Bez mesačných poplatkov.</p><a class="ex" href="studio-bella/" data-ex="studio-bella/" data-q="" data-h="" data-i="ex">Pozrieť ukážku</a></div><span class="term" data-i="p5d">termín podľa zadania</span><b class="eur q" data-i="p5e">od 350 €</b></div>
+    <div class="prow"><div><h3 data-i="p0t">Jednoduchý web alebo landing page</h3><p data-i="p0p">Stránka o vás: služby, ceny, kontakty a formulár. Web pripravím v jazykoch, ktoré potrebujete, a bude sa ľahko používať aj na mobile.</p><a class="ex" href="garaz-4/" data-ex="garaz-4/" data-q="" data-h="" data-i="exG">Ukážka: autoservis Garáž 4</a></div><span class="term" data-i="p0d">do 5 dní</span><b class="eur q" data-i="p0e">od 250 €</b></div>
+    <div class="prow"><div><h3 data-i="p5t">Web s online rezerváciou a panelom majiteľa</h3><p data-i="p5p">Zákazník si sám vyberie službu a čas priamo na webe. Rezervácie vidíte v paneli na mobile, môžete ich presunúť alebo zrušiť. Bez mesačných poplatkov.</p><a class="ex" href="studio-bella/" data-ex="studio-bella/" data-q="" data-h="" data-i="exB">Vyskúšať rezerváciu v Studio Bella</a></div><span class="term" data-i="p5d">do 10 dní</span><b class="eur q" data-i="p5e">od 350 €</b></div>
   </div>
-  <div class="plist">
-    <div class="prow"><div><h3 data-i="p1t">Dopyty z webu na e-mail alebo do Telegramu a do tabuľky</h3><p data-i="p1p">Každý dopyt z formulára vám príde e-mailom alebo správou a uloží sa do Google Tabuľky.</p><a class="ex" href="studio-bella/" data-ex="studio-bella/" data-q="" data-h="#dopyt" data-i="ex">Pozrieť ukážku</a></div><span class="term" data-i="p1d">2 dni</span><b class="eur">80 €</b></div>
-    <div class="prow"><div><h3 data-i="p2t">Ukrajinská alebo ruská verzia stránky</h3><p data-i="p2p">Preklad hotovej stránky a formulár na nej.</p><a class="ex" href="preklad/" data-ex="preklad/" data-q="" data-h="" data-i="ex">Pozrieť ukážku</a></div><span class="term" data-i="p2d">3 dni</span><b class="eur">120 €</b></div>
-    <div class="prow"><div><h3 data-i="p3t">Rezervačný bot v Telegrame</h3><p data-i="p3p">Zákazník si sám vyberie čas a dostane pripomienku, vy len potvrdíte. Najprv vám bota zadarmo ukážem na vašich službách. Ak sa vám páči, stojí 200 €. Ak nie, nič neplatíte.</p><a class="ex" href="https://t.me/StudioBellaBookingBot" data-ex="https://t.me/StudioBellaBookingBot" data-q="" data-h="" data-i="ex">Pozrieť ukážku</a></div><span class="term" data-i="p3d">do 7 dní</span><b class="eur">200 €</b></div>
-    <div class="prow"><div><h3 data-i="p4t">AI asistent na časté otázky</h3><p data-i="p4p">Odpovedá zákazníkom podľa vášho cenníka a častých otázok, kým máte prácu.</p><a class="ex" href="studio-bella/" data-ex="studio-bella/" data-q="chat=1" data-h="" data-i="ex">Pozrieť ukážku</a></div><span class="term" data-i="p4d">10 dní</span><b class="eur">400 €</b></div>
-  </div>
-  <p class="fine" data-i="pfine">Presnú cenu a termín poviem pred začiatkom práce. Ak potrebujete texty, cenník vo viacerých jazykoch alebo obrázky do reklamy, napíšte a spočítam to.</p>
+  <div class="btns price-cta"><a class="btn main arrow" href="#qf" data-write data-i="cta">Zistiť cenu a termín</a></div>
+  <details class="more-work addons"><summary data-i="addh">Doplnkové služby</summary><div class="plist">
+    <div class="prow"><div><h3 data-i="p1t">Upozornenie na každý dopyt z webu</h3><p data-i="p1p">Každý dopyt z formulára vám príde e-mailom alebo správou a uloží sa do Google Tabuľky.</p><a class="ex" href="studio-bella/" data-ex="studio-bella/" data-q="" data-h="#dopyt" data-i="exF">Pozrieť formulár na dopyt</a></div><span class="term" data-i="p1d">2 dni</span><b class="eur">80 €</b></div>
+    <div class="prow"><div><h3 data-i="p2t">Ukrajinská alebo ruská verzia stránky</h3><p data-i="p2p">Preložím vám web aj kontaktný formulár.</p><a class="ex" href="preklad/" data-ex="preklad/" data-q="" data-h="" data-i="exT">Porovnať pred a po</a></div><span class="term" data-i="p2d">3 dni</span><b class="eur">120 €</b></div>
+    <div class="prow"><div><h3 data-i="p3t">Rezervačný bot v Telegrame</h3><p data-i="p3p">Zákazník si sám vyberie čas a dostane pripomienku, vy len potvrdíte. Najprv vám bota zadarmo ukážem na vašich službách. Ak sa vám páči, stojí 200 €. Ak nie, nič neplatíte.</p><a class="ex" href="https://t.me/StudioBellaBookingBot" data-ex="https://t.me/StudioBellaBookingBot" data-q="" data-h="" data-i="exBot">Napísať botovi v Telegrame</a></div><span class="term" data-i="p3d">do 7 dní</span><b class="eur">200 €</b></div>
+    <div class="prow"><div><h3 data-i="p4t">AI asistent na časté otázky</h3><p data-i="p4p">Kým sa venujete klientom, asistent odpovedá na otázky o cenách a službách podľa vášho cenníka.</p><a class="ex" href="studio-bella/" data-ex="studio-bella/" data-q="chat=1" data-h="" data-i="exAI">Opýtať sa AI asistenta</a></div><span class="term" data-i="p4d">10 dní</span><b class="eur">400 €</b></div>
+  </div></details>
+  <p class="fine" data-i="pfine">Presnú cenu poviem pred začiatkom práce. Termín počítam od chvíle, keď mi pošlete služby, ceny a fotky. Ak potrebujete texty, cenník vo viacerých jazykoch alebo obrázky do reklamy, napíšte a spočítam to.</p>
 </section>
 
 <section id="roles" class="job">
@@ -349,9 +358,13 @@ footer{display:flex;justify-content:space-between;align-items:center;gap:16px;pa
   <h2 data-i="faqh">Časté otázky</h2>
   <div class="faq">
     <details><summary data-i="q1">Koľko stojí web?</summary><p data-i="a1">Jednoduchý web alebo landing page od 250 €, web s online rezerváciou a panelom od 350 €. Presnú cenu poviem pred začiatkom práce.</p></details>
-    <details><summary data-i="q2">Ako to riešime zmluvne?</summary><p data-i="a2">Oficiálne, na dohodu s vašou firmou na Slovensku.</p></details>
+    <details><summary data-i="q2">Ako to riešime zmluvne?</summary><p data-i="a2">Oficiálne, na dohodu o vykonaní práce s vašou firmou na Slovensku. Nie som živnostník, preto pracujem na dohodu, nie na faktúru.</p></details>
     <details><summary data-i="q3">V akých jazykoch robíte?</summary><p data-i="a3">Slovenčina, ukrajinčina, ruština a angličtina. Písať si môžeme v ktoromkoľvek z nich.</p></details>
     <details><summary data-i="q4">Sú potrebné telefonáty?</summary><p data-i="a4">Nie, všetko vyriešime písomne cez WhatsApp alebo e-mail. Ak vám viac vyhovuje hovor, stačí jeden krátky na začiatku.</p></details>
+    <details><summary data-i="q5">Za ako dlho bude web hotový?</summary><p data-i="a5">Jednoduchý web do 5 dní, web s online rezerváciou do 10 dní. Počítam od chvíle, keď mi pošlete služby, ceny a fotky.</p></details>
+    <details><summary data-i="q6">Čo ak sa mi web nebude páčiť?</summary><p data-i="a6">Najprv vám pošlem odkaz na hotový web a upravím ho podľa vašich pripomienok. Platíte, až keď sa vám páči.</p></details>
+    <details><summary data-i="q7">Platí sa niečo mesačne?</summary><p data-i="a7">Mne nie. Platíte len doménu, asi 15 € ročne, a to priamo registrátorovi.</p></details>
+    <details><summary data-i="q8">Kto bude meniť texty a ceny?</summary><p data-i="a8">Prvý mesiac po spustení ich zmením ja, zadarmo. Stačí mi napísať. Neskôr sa dohodneme na cene.</p></details>
   </div>
 </section>
 
@@ -367,6 +380,7 @@ footer{display:flex;justify-content:space-between;align-items:center;gap:16px;pa
 <section id="contact">
   <div class="contact-intro">
     <h2 data-i="ch">Aký web potrebujete?</h2><p data-i="cp">Napíšte mi pár slov o svojom podniku. Ozvem sa s cenou a termínom.</p>
+    <div class="me"><img src="media/davyd-192.webp" width="192" height="192" data-alt="meAlt" alt="Davyd Konstantinov"><p data-i="who">Píšete priamo mne, Davydovi. Web robím sám, od návrhu po spustenie.</p></div>
     <div class="address"><span id="email-address">davyd@konstantinov.sk</span><button type="button" id="copy-email" data-i="copy">Kopírovať</button></div>
     <small id="copy-status" role="status"></small>
     <div class="channels"><a href="https://wa.me/421910392871" data-wa><span data-i="waName">WhatsApp</span> <span>+421 910 392 871</span></a><a href="tel:+421910392871" data-i="callName">Zavolať</a><a href="https://t.me/+421910392871" data-i="tgName">Telegram</a></div>
@@ -388,7 +402,7 @@ footer{display:flex;justify-content:space-between;align-items:center;gap:16px;pa
   </div>
 </section>
 </main>
-<footer><span>© 2026 Davyd Konstantinov</span><a href="ochrana-udajov.html" data-i="privacy">Ochrana osobných údajov</a><a href="#top" data-i="backTop">Späť hore</a></footer>
+<footer><span>© 2026 Davyd Konstantinov · <span data-i="legal">Pracujem na dohodu o vykonaní práce</span></span><a href="ochrana-udajov.html" data-i="privacy">Ochrana osobných údajov</a><a href="#top" data-i="backTop">Späť hore</a></footer>
 </div>
 <script>
 const T = {
@@ -442,7 +456,7 @@ const T = {
     "q1": "Koľko stojí web?",
     "a1": "Jednoduchý web alebo landing page od 250 €, web s online rezerváciou a panelom od 350 €. Presnú cenu poviem pred začiatkom práce.",
     "q2": "Ako to riešime zmluvne?",
-    "a2": "Oficiálne, na dohodu s vašou firmou na Slovensku.",
+    "a2": "Oficiálne, na dohodu o vykonaní práce s vašou firmou na Slovensku. Nie som živnostník, preto pracujem na dohodu, nie na faktúru.",
     "q3": "V akých jazykoch robíte?",
     "a3": "Slovenčina, ukrajinčina, ruština a angličtina. Písať si môžeme v ktoromkoľvek z nich.",
     "q4": "Sú potrebné telefonáty?",
@@ -476,22 +490,22 @@ const T = {
     "ty_s": "Manikúra, piatok 18:30",
     "ph": "Služby a ceny",
     "p0t": "Jednoduchý web alebo landing page",
-    "p0p": "Stránka o vás: služby, ceny, kontakty a formulár. V jazykoch, ktoré potrebujete, pohodlná na mobile.",
-    "p0d": "termín podľa zadania",
+    "p0p": "Stránka o vás: služby, ceny, kontakty a formulár. Web pripravím v jazykoch, ktoré potrebujete, a bude sa ľahko používať aj na mobile.",
+    "p0d": "do 5 dní",
     "p0e": "od 250 €",
-    "p1t": "Dopyty z webu na e-mail alebo do Telegramu a do tabuľky",
+    "p1t": "Upozornenie na každý dopyt z webu",
     "p1p": "Každý dopyt z formulára vám príde e-mailom alebo správou a uloží sa do Google Tabuľky.",
     "p1d": "2 dni",
     "p2t": "Ukrajinská alebo ruská verzia stránky",
-    "p2p": "Preklad hotovej stránky a formulár na nej.",
+    "p2p": "Preložím vám web aj kontaktný formulár.",
     "p2d": "3 dni",
     "p3t": "Rezervačný bot v Telegrame",
     "p3p": "Zákazník si sám vyberie čas a dostane pripomienku, vy len potvrdíte. Najprv vám bota zadarmo ukážem na vašich službách. Ak sa vám páči, stojí 200 €. Ak nie, nič neplatíte.",
     "p3d": "do 7 dní",
     "p4t": "AI asistent na časté otázky",
-    "p4p": "Odpovedá zákazníkom podľa vášho cenníka a častých otázok, kým máte prácu.",
+    "p4p": "Kým sa venujete klientom, asistent odpovedá na otázky o cenách a službách podľa vášho cenníka.",
     "p4d": "10 dní",
-    "pfine": "Presnú cenu a termín poviem pred začiatkom práce. Ak potrebujete texty, cenník vo viacerých jazykoch alebo obrázky do reklamy, napíšte a spočítam to.",
+    "pfine": "Presnú cenu poviem pred začiatkom práce. Termín počítam od chvíle, keď mi pošlete služby, ceny a fotky. Ak potrebujete texty, cenník vo viacerých jazykoch alebo obrázky do reklamy, napíšte a spočítam to.",
     "ex": "Pozrieť ukážku",
     "wa": "Alebo cez WhatsApp",
     "callName": "Zavolať",
@@ -502,7 +516,7 @@ const T = {
     "deal": "Web od 250 € · bez mesačných poplatkov · platíte až po tom, čo uvidíte hotový web",
     "akh": "Ako to prebieha",
     "ak1": "Napíšete, čo potrebujete",
-    "ak2": "Ukážem vám web s vašimi službami",
+    "ak2": "Ukážem vám hotový web s vašimi službami a cenami",
     "ak3": "Platíte, až keď sa vám páči",
     "akf": "Web, doména aj prístupy sú vaše. Doména stojí asi 15 € ročne a platíte ju priamo registrátorovi.",
     "qb": "Aký máte podnik? (nepovinné)",
@@ -517,7 +531,7 @@ const T = {
     "qs": "Dopyt z webu",
     "p5t": "Web s online rezerváciou a panelom majiteľa",
     "p5p": "Zákazník si sám vyberie službu a čas priamo na webe. Rezervácie vidíte v paneli na mobile, môžete ich presunúť alebo zrušiť. Bez mesačných poplatkov.",
-    "p5d": "termín podľa zadania",
+    "p5d": "do 10 dní",
     "p5e": "od 350 €",
     "bellaName": "Studio Bella",
     "garageName": "Garáž 4",
@@ -528,7 +542,7 @@ const T = {
     "studio": "Webové štúdio",
     "location": "Bratislava, Slovensko",
     "h1end": "Rezervácie online.",
-    "priceFact": "Web od 250 €",
+    "priceFact": "Hotové za 5–10 dní",
     "payFact": "Platíte až za funkčný web",
     "feeFact": "Bez mesačných poplatkov",
     "workNav": "Ukážky",
@@ -550,7 +564,28 @@ const T = {
     "backTop": "Späť hore",
     "monogram": "dk",
     "previewUrl": "konstantinov.sk/studio-bella/",
-    "navigation": "Navigácia"
+    "navigation": "Navigácia",
+    "cta": "Zistiť cenu a termín",
+    "hp1": "Jednoduchý web od 250 €",
+    "hp2": "S online rezerváciou od 350 €",
+    "legal": "Pracujem na dohodu o vykonaní práce",
+    "q5": "Za ako dlho bude web hotový?",
+    "a5": "Jednoduchý web do 5 dní, web s online rezerváciou do 10 dní. Počítam od chvíle, keď mi pošlete služby, ceny a fotky.",
+    "q6": "Čo ak sa mi web nebude páčiť?",
+    "a6": "Najprv vám pošlem odkaz na hotový web a upravím ho podľa vašich pripomienok. Platíte, až keď sa vám páči.",
+    "q7": "Platí sa niečo mesačne?",
+    "a7": "Mne nie. Platíte len doménu, asi 15 € ročne, a to priamo registrátorovi.",
+    "q8": "Kto bude meniť texty a ceny?",
+    "a8": "Prvý mesiac po spustení ich zmením ja, zadarmo. Stačí mi napísať. Neskôr sa dohodneme na cene.",
+    "exG": "Ukážka: autoservis Garáž 4",
+    "exB": "Vyskúšať rezerváciu v Studio Bella",
+    "exF": "Pozrieť formulár na dopyt",
+    "exT": "Porovnať pred a po",
+    "exBot": "Napísať botovi v Telegrame",
+    "exAI": "Opýtať sa AI asistenta",
+    "who": "Píšete priamo mne, Davydovi. Web robím sám, od návrhu po spustenie.",
+    "meAlt": "Davyd Konstantinov",
+    "addh": "Doplnkové služby"
   },
   "en": {
     "title": "Davyd Konstantinov: websites with online booking for small businesses in Slovakia",
@@ -602,7 +637,7 @@ const T = {
     "q1": "How much does a website cost?",
     "a1": "A business website or landing page starts at €250, a website with online booking and an owner's panel at €350. You get the exact price before I start.",
     "q2": "How do we make it official?",
-    "a2": "Officially, under a contract (dohoda) with your company in Slovakia.",
+    "a2": "Officially, under a dohoda o vykonaní práce (a Slovak work agreement) with your company. I am not self-employed, so we sign an agreement instead of an invoice.",
     "q3": "Which languages do you work in?",
     "a3": "Slovak, Ukrainian, Russian and English. We can write to each other in any of them.",
     "q4": "Do we need calls?",
@@ -637,13 +672,13 @@ const T = {
     "ph": "Services and prices",
     "p0t": "Business website or landing page",
     "p0p": "A page about you: services, prices, contacts and an enquiry form. In the languages you need, easy to use on a phone.",
-    "p0d": "timing agreed after a brief",
+    "p0d": "within 5 days",
     "p0e": "from €250",
     "p1t": "Website enquiries to email or Telegram and a spreadsheet",
     "p1p": "Every enquiry from the form reaches you by email or as a message and is saved to Google Sheets.",
     "p1d": "2 days",
     "p2t": "Ukrainian or Russian version of a page",
-    "p2p": "A translation of your existing page with an enquiry form on it.",
+    "p2p": "I translate your website and its contact form.",
     "p2d": "3 days",
     "p3t": "Booking bot in Telegram",
     "p3p": "The customer picks a time and gets a reminder, you only confirm. I first show you the bot with your own services, free. If you like it, it costs €200. If you don't, you owe nothing.",
@@ -651,7 +686,7 @@ const T = {
     "p4t": "AI replies to common questions",
     "p4p": "Answers customers using your price list and common questions while you are busy.",
     "p4d": "10 days",
-    "pfine": "I give you the exact price and timing before I start. If you need texts, a price list in several languages or images for ads, write to me and I'll quote it.",
+    "pfine": "I confirm the exact price before I start. The timeline starts once you send me your services, prices and photos. If you need copywriting, a price list in several languages or ad images, write to me and I will quote it.",
     "ex": "See an example",
     "wa": "Or use WhatsApp",
     "callName": "Call",
@@ -677,7 +712,7 @@ const T = {
     "qs": "Enquiry from the website",
     "p5t": "Website with online booking and an owner's panel",
     "p5p": "Clients pick a service and a time on the site. You see every booking in a panel on your phone and can move or cancel it. No monthly fees.",
-    "p5d": "timing agreed after a brief",
+    "p5d": "within 10 days",
     "p5e": "from €350",
     "bellaName": "Studio Bella",
     "garageName": "Garáž 4",
@@ -688,7 +723,7 @@ const T = {
     "studio": "Web studio",
     "location": "Bratislava, Slovakia",
     "h1end": "Online booking.",
-    "priceFact": "Websites from €250",
+    "priceFact": "Ready in 5–10 days",
     "payFact": "Pay once your site works",
     "feeFact": "No monthly fees",
     "workNav": "Examples",
@@ -710,7 +745,28 @@ const T = {
     "backTop": "Back to top",
     "monogram": "dk",
     "previewUrl": "konstantinov.sk/studio-bella/",
-    "navigation": "Navigation"
+    "navigation": "Navigation",
+    "cta": "Get a price and timeline",
+    "hp1": "Simple website from €250",
+    "hp2": "With online booking from €350",
+    "legal": "I work under a dohoda o vykonaní práce (Slovak work agreement)",
+    "q5": "How long does it take?",
+    "a5": "A simple website within 5 days, a website with online booking within 10 days, counted from when you send me your services, prices and photos.",
+    "q6": "What if I don’t like it?",
+    "a6": "First I send you a link to the finished site and change it based on your feedback. You pay only when you like it.",
+    "q7": "Are there monthly fees?",
+    "a7": "Not from me. You only pay for the domain, about €15 a year, directly to the registrar.",
+    "q8": "Who changes texts and prices later?",
+    "a8": "For the first month after launch I change them for free, just send me a message. After that we agree on a price.",
+    "exG": "Example: Garáž 4 car service",
+    "exB": "Try booking at Studio Bella",
+    "exF": "See the enquiry form",
+    "exT": "Compare before and after",
+    "exBot": "Message the bot on Telegram",
+    "exAI": "Ask the AI assistant",
+    "who": "You talk to me, Davyd, directly. I build the site myself, from design to launch.",
+    "meAlt": "Davyd Konstantinov",
+    "addh": "Add-on services"
   },
   "ru": {
     "title": "Давид Константинов: сайты с онлайн-записью для малого бизнеса в Словакии",
@@ -743,13 +799,13 @@ const T = {
     "ph": "Услуги и цены",
     "p0t": "Сайт-визитка или лендинг",
     "p0p": "Страница о вас: услуги, цены, контакты и форма заявки. На нужных языках, удобно открывать с телефона.",
-    "p0d": "срок после брифа",
+    "p0d": "до 5 дней",
     "p0e": "от 250 €",
     "p1t": "Заявки с сайта на почту или в Telegram и в таблицу",
     "p1p": "Каждая заявка из формы приходит вам письмом или сообщением и сохраняется в Google Таблицу.",
     "p1d": "2 дня",
     "p2t": "Украинская или русская версия страницы",
-    "p2p": "Перевод готовой страницы и форма заявки на ней.",
+    "p2p": "Переведу ваш сайт и форму заявки.",
     "p2d": "3 дня",
     "p3t": "Бот записи в Telegram",
     "p3p": "Клиент сам выбирает время и получает напоминание, вы только подтверждаете. Сначала бесплатно показываю бота на ваших услугах. Понравится, 200 €. Не понравится, ничего не должны.",
@@ -757,7 +813,7 @@ const T = {
     "p4t": "ИИ-помощник для частых вопросов",
     "p4p": "Отвечает клиентам по вашему прайсу и частым вопросам, пока вы заняты.",
     "p4d": "10 дней",
-    "pfine": "Точную цену и срок называю до начала работы. Нужны тексты, прайс на нескольких языках или картинки для рекламы, напишите, посчитаю.",
+    "pfine": "Точную цену назову до начала работы. Срок считаю с момента, когда вы пришлёте услуги, цены и фото. Если нужны тексты, прайс на нескольких языках или картинки для рекламы, напишите, я посчитаю.",
     "work": "Попробуйте сами",
     "soon": "Видео скоро будет",
     "demo": "Открыть пример в Telegram",
@@ -785,7 +841,7 @@ const T = {
     "q1": "Сколько стоит сайт?",
     "a1": "Сайт-визитка или лендинг от 250 €, сайт с онлайн-записью и панелью от 350 €. Точную цену называю до начала работы.",
     "q2": "Как оформляем?",
-    "a2": "Официально, по договору (dohoda) с вашей фирмой в Словакии.",
+    "a2": "Официально, по договору dohoda o vykonaní práce с вашей фирмой в Словакии. Я не živnostník, поэтому работаю по договору, а не по счёту.",
     "q3": "На каких языках делаете?",
     "a3": "Словацкий, украинский, русский и английский. Переписку веду на любом из них.",
     "q4": "Нужны ли созвоны?",
@@ -817,7 +873,7 @@ const T = {
     "qs": "Запрос с сайта",
     "p5t": "Сайт с онлайн-записью и панелью владельца",
     "p5p": "Клиент сам выбирает услугу и время прямо на сайте. Записи вы видите в панели с телефона, можете перенести или отменить. Без ежемесячных платежей.",
-    "p5d": "срок после брифа",
+    "p5d": "до 10 дней",
     "p5e": "от 350 €",
     "bellaName": "Studio Bella",
     "garageName": "Garáž 4",
@@ -828,7 +884,7 @@ const T = {
     "studio": "Веб-студия",
     "location": "Братислава, Словакия",
     "h1end": "Запись онлайн.",
-    "priceFact": "Сайт от 250 €",
+    "priceFact": "Готово за 5–10 дней",
     "payFact": "Оплата за работающий сайт",
     "feeFact": "Без ежемесячных платежей",
     "workNav": "Примеры",
@@ -851,7 +907,28 @@ const T = {
     "lgh": "Язык",
     "monogram": "dk",
     "previewUrl": "konstantinov.sk/studio-bella/",
-    "navigation": "Навигация"
+    "navigation": "Навигация",
+    "cta": "Узнать цену и срок",
+    "hp1": "Простой сайт от 250 €",
+    "hp2": "С онлайн-записью от 350 €",
+    "legal": "Работаю по договору dohoda o vykonaní práce",
+    "q5": "Сколько делается сайт?",
+    "a5": "Простой сайт до 5 дней, сайт с онлайн-записью до 10 дней. Считаю с момента, когда вы пришлёте услуги, цены и фото.",
+    "q6": "А если сайт не понравится?",
+    "a6": "Сначала пришлю ссылку на готовый сайт и поправлю по вашим замечаниям. Платите, только когда нравится.",
+    "q7": "Есть ежемесячная плата?",
+    "a7": "Мне нет. Платите только за домен, около 15 € в год, напрямую регистратору.",
+    "q8": "Кто будет менять тексты и цены?",
+    "a8": "Первый месяц после запуска меняю я, бесплатно, просто напишите. Дальше договоримся о цене.",
+    "exG": "Пример: автосервис Garáž 4",
+    "exB": "Попробовать запись в Studio Bella",
+    "exF": "Посмотреть форму заявки",
+    "exT": "Сравнить до и после",
+    "exBot": "Написать боту в Telegram",
+    "exAI": "Спросить AI-ассистента",
+    "who": "Пишете напрямую мне, Давиду. Сайт делаю сам, от макета до запуска.",
+    "meAlt": "Давид Константинов",
+    "addh": "Дополнительные услуги"
   },
   "uk": {
     "title": "Давид Константінов: сайти з онлайн-записом для малого бізнесу в Словаччині",
@@ -884,13 +961,13 @@ const T = {
     "ph": "Послуги й ціни",
     "p0t": "Сайт-візитка або лендинг",
     "p0p": "Сторінка про вас: послуги, ціни, контакти й форма заявки. Потрібними мовами, зручно відкривати з телефона.",
-    "p0d": "термін після брифу",
+    "p0d": "до 5 днів",
     "p0e": "від 250 €",
     "p1t": "Заявки із сайту на пошту або в Telegram і в таблицю",
     "p1p": "Кожна заявка з форми надходить вам листом або повідомленням і зберігається в Google Таблиці.",
     "p1d": "2 дні",
     "p2t": "Українська або російська версія сторінки",
-    "p2p": "Переклад готової сторінки і форма заявки на ній.",
+    "p2p": "Перекладу ваш сайт і форму заявки.",
     "p2d": "3 дні",
     "p3t": "Бот для запису в Telegram",
     "p3p": "Клієнт сам обирає час і отримує нагадування, ви лише підтверджуєте. Спершу безкоштовно показую бота на прикладі ваших послуг. Сподобається, 200 €. Не сподобається, нічого не винні.",
@@ -898,7 +975,7 @@ const T = {
     "p4t": "ШІ-помічник для частих запитань",
     "p4p": "Відповідає клієнтам за вашим прайсом і на часті запитання, поки ви зайняті.",
     "p4d": "10 днів",
-    "pfine": "Точну ціну і термін називаю до початку роботи. Потрібні тексти, прайс кількома мовами чи картинки для реклами, напишіть, порахую.",
+    "pfine": "Точну ціну назву до початку роботи. Термін рахую з моменту, коли ви надішлете послуги, ціни і фото. Якщо потрібні тексти, прайс кількома мовами чи картинки для реклами, напишіть, я порахую.",
     "work": "Спробуйте самі",
     "soon": "Відео скоро буде",
     "demo": "Відкрити приклад у Telegram",
@@ -926,7 +1003,7 @@ const T = {
     "q1": "Скільки коштує сайт?",
     "a1": "Сайт-візитка або лендинг від 250 €, сайт з онлайн-записом і панеллю від 350 €. Точну ціну називаю до початку роботи.",
     "q2": "Як оформлюємо?",
-    "a2": "Офіційно, за договором (dohoda) з вашою фірмою в Словаччині.",
+    "a2": "Офіційно, за договором dohoda o vykonaní práce з вашою фірмою у Словаччині. Я не živnostník, тому працюю за договором, а не за рахунком.",
     "q3": "Якими мовами робите?",
     "a3": "Словацькою, українською, російською та англійською. Листуюся будь-якою з них.",
     "q4": "Чи потрібні дзвінки?",
@@ -958,7 +1035,7 @@ const T = {
     "qs": "Запит із сайту",
     "p5t": "Сайт з онлайн-записом і панеллю власника",
     "p5p": "Клієнт сам обирає послугу й час просто на сайті. Записи ви бачите в панелі з телефона, можете перенести або скасувати. Без щомісячних платежів.",
-    "p5d": "термін після брифу",
+    "p5d": "до 10 днів",
     "p5e": "від 350 €",
     "bellaName": "Studio Bella",
     "garageName": "Garáž 4",
@@ -969,7 +1046,7 @@ const T = {
     "studio": "Вебстудія",
     "location": "Братислава, Словаччина",
     "h1end": "Запис онлайн.",
-    "priceFact": "Сайт від 250 €",
+    "priceFact": "Готово за 5–10 днів",
     "payFact": "Оплата за готовий сайт",
     "feeFact": "Без щомісячних платежів",
     "workNav": "Приклади",
@@ -992,7 +1069,28 @@ const T = {
     "lgh": "Мова",
     "monogram": "dk",
     "previewUrl": "konstantinov.sk/studio-bella/",
-    "navigation": "Навігація"
+    "navigation": "Навігація",
+    "cta": "Дізнатися ціну і термін",
+    "hp1": "Простий сайт від 250 €",
+    "hp2": "З онлайн-записом від 350 €",
+    "legal": "Працюю за договором dohoda o vykonaní práce",
+    "q5": "Скільки робиться сайт?",
+    "a5": "Простий сайт до 5 днів, сайт з онлайн-записом до 10 днів. Рахую з моменту, коли ви надішлете послуги, ціни і фото.",
+    "q6": "А якщо сайт не сподобається?",
+    "a6": "Спершу надішлю посилання на готовий сайт і виправлю за вашими зауваженнями. Платите, тільки коли подобається.",
+    "q7": "Чи є щомісячна плата?",
+    "a7": "Мені ні. Платите тільки за домен, близько 15 € на рік, напряму реєстратору.",
+    "q8": "Хто змінюватиме тексти і ціни?",
+    "a8": "Перший місяць після запуску змінюю я, безкоштовно, просто напишіть. Далі домовимося про ціну.",
+    "exG": "Приклад: автосервіс Garáž 4",
+    "exB": "Спробувати запис у Studio Bella",
+    "exF": "Подивитися форму заявки",
+    "exT": "Порівняти до і після",
+    "exBot": "Написати боту в Telegram",
+    "exAI": "Запитати AI-асистента",
+    "who": "Пишете напряму мені, Давиду. Сайт роблю сам, від макета до запуску.",
+    "meAlt": "Давид Константинов",
+    "addh": "Додаткові послуги"
   }
 };
 const translations = [...document.querySelectorAll('[data-i]')];
