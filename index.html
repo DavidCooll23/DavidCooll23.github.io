@@ -49,8 +49,8 @@
   --h:12;
 }
 *,*::before,*::after{box-sizing:border-box}
-html{scroll-padding-top:24px}
-body{margin:0;background:var(--paper);color:var(--ink);font:16px/1.6 var(--sans)}
+html{scroll-padding-top:104px}
+body{margin:0;background:var(--paper);color:var(--ink);font:16px/1.6 var(--sans);overflow-x:clip}
 [hidden],body[data-mode=job] .biz,body[data-mode=biz] .job{display:none!important}
 .wrap{width:min(1440px,100%);padding:0 clamp(20px,5vw,78px);margin:auto}
 h1,h2,h3,p,ol,ul,figure{margin:0}
@@ -60,7 +60,8 @@ button,a{touch-action:manipulation}
 button,summary{cursor:pointer}
 img,video{display:block;max-width:100%}
 :focus-visible{outline:3px solid var(--blue);outline-offset:3px}
-header{min-height:80px;border-bottom:1px solid var(--rule);display:flex;align-items:center;gap:clamp(18px,2.5vw,40px)}
+header{min-height:80px;border-bottom:1px solid var(--rule);display:flex;align-items:center;gap:clamp(18px,2.5vw,40px);position:sticky;top:0;z-index:40;background:var(--paper);box-shadow:0 0 0 100vmax var(--paper);clip-path:inset(0 -100vmax)}
+.progress{position:fixed;inset:0 0 auto;height:3px;z-index:60;background:var(--blue);transform-origin:0 50%;transform:scaleX(0);pointer-events:none}
 .identity{display:inline-flex;gap:12px;align-items:center;text-decoration:none;font-weight:600;font-size:17px;line-height:1.18;letter-spacing:-.02em;margin-right:auto}
 .identity small{display:block;font-size:13px;color:var(--muted);font-weight:400;letter-spacing:0;margin-top:4px}
 .monogram{display:grid;place-items:center;flex:none;background:var(--blue);color:#fff;width:42px;height:42px;border-radius:4px;font:500 16px/1 var(--display);letter-spacing:-.05em}
@@ -83,7 +84,8 @@ header{min-height:80px;border-bottom:1px solid var(--rule);display:flex;align-it
 .location{font-size:14px;color:var(--muted);margin-bottom:16px}
 h1,h2,.thanks h3{font-family:var(--display);font-weight:500;letter-spacing:-.04em;text-wrap:balance}
 h1{font-size:clamp(38px,4.4vw,66px);line-height:1.04}
-h1 em{display:block;font-style:normal}
+h1>span:first-child{display:block}
+h1 em{font-style:normal;padding:0 .06em;margin:0 -.06em;background:linear-gradient(transparent 60%,var(--marker) 60% 90%,transparent 90%) no-repeat 0 0/100% 100%;-webkit-box-decoration-break:clone;box-decoration-break:clone}
 .lead{max-width:46ch;color:var(--muted);font-size:clamp(17px,1.3vw,19px);line-height:1.55;margin:22px 0 18px}
 .hero-prices{display:none}
 .hero-price-line{display:block;margin:0 0 22px;font:500 clamp(15px,1.2vw,18px)/1.4 var(--display);letter-spacing:-.03em}
@@ -122,10 +124,13 @@ h1 em{display:block;font-style:normal}
 .ld-ghost{top:32px;border:2px dashed var(--blue);border-radius:5px;background:#2b35c40d}
 @keyframes ldIn{from{opacity:0;transform:scale(.92)}}
 @media(prefers-reduced-motion:reduce){.ld-list .ld-new{animation:none}}
-.facts{list-style:none;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));padding:0;margin:clamp(26px,3vw,40px) 0 0;border-block:1px solid var(--rule);font-size:15px;font-weight:600}
-.facts li{padding:16px 18px}
-.facts li+li{border-left:1px solid var(--rule)}
-.facts li:first-child{padding-left:0}
+/* Ribbon: the promises as one ink band across the page (moves only with motion allowed) */
+.ribbon{margin:clamp(30px,3.4vw,48px) calc(50% - 50vw) 0;background:var(--ink);color:#fff;overflow:hidden}
+.rb-track{display:flex}
+.facts{list-style:none;display:flex;flex-wrap:wrap;justify-content:center;margin:0;padding:0;font:500 clamp(15px,1.35vw,19px)/1.3 var(--display);letter-spacing:-.03em}
+.facts li{display:flex;align-items:center;gap:clamp(18px,2vw,30px);padding:18px 0 18px clamp(18px,2vw,30px);white-space:nowrap}
+.facts li::before{content:"";flex:none;width:9px;height:9px;border-radius:50%;background:var(--marker)}
+.facts[aria-hidden]{display:none}
 
 main>section{margin-top:clamp(80px,8vw,128px)}
 h2{font-size:clamp(30px,3.2vw,48px);line-height:1.1}
@@ -187,9 +192,10 @@ details[open]>summary::after{background-size:13px 1.5px,0 0}
 /* FAQ: two short columns */
 #faq h2{margin-bottom:clamp(22px,2.6vw,34px)}
 .faq{display:grid;grid-template-columns:1fr 1fr;column-gap:clamp(24px,4vw,64px);align-items:start}
-.qa{border-top:1px solid var(--rule);padding:18px 0 22px}
-.qa h3{font-size:clamp(16px,1.25vw,18px);line-height:1.35;font-weight:600;margin-bottom:6px}
-.qa p{color:var(--muted);font-size:15px;line-height:1.55;max-width:56ch}
+.qa{border-top:1px solid var(--rule)}
+.qa>summary{padding:18px 0}.qa>summary:hover h3{color:var(--blue)}
+.qa h3{font-size:clamp(16px,1.25vw,18px);line-height:1.35;font-weight:600}
+.qa p{color:var(--muted);font-size:15px;line-height:1.55;max-width:56ch;padding:0 0 22px}
 
 #contact{background:var(--deep);color:#fff;display:grid;grid-template-columns:.9fr 1.1fr;align-items:start;gap:clamp(24px,5vw,80px);padding:clamp(26px,4.5vw,70px);border-radius:12px}
 .contact-intro>p{color:#d5d9f6;margin:18px 0 26px;max-width:38ch}
@@ -213,7 +219,6 @@ details[open]>summary::after{background-size:13px 1.5px,0 0}
 footer{display:flex;justify-content:space-between;align-items:center;gap:16px;padding:26px 0 34px;color:var(--muted);font-size:14px}
 @media(max-width:1000px){
   .wrap{padding-inline:4vw}.hero{grid-template-columns:minmax(0,1fr) 320px;column-gap:28px}
-  .facts{grid-template-columns:1fr 1fr}.facts li:nth-child(3){border-left:0;padding-left:0}.facts li:nth-child(n+3){border-top:1px solid var(--rule)}
   .cards{grid-template-columns:repeat(2,minmax(0,1fr))}
   .ld-scale span:nth-child(even){color:transparent}
 }
@@ -231,7 +236,7 @@ footer{display:flex;justify-content:space-between;align-items:center;gap:16px;pa
   .ld-list{height:auto;max-width:520px}
   .ld-list li{position:static;width:auto;flex-direction:row;align-items:baseline;gap:14px;margin:6px 0 0;padding:9px 12px;font-size:15px}
   .ld-list time{font-size:13px}
-  .facts li{padding:12px 12px 12px 0;font-size:14px}.facts li+li{border-left:0}
+  .facts li{padding-block:14px}
   .projects{grid-template-columns:1fr}.project:first-child{grid-row:auto}
   .process{grid-template-columns:1fr}
   .steps{grid-template-columns:1fr;gap:0}.steps li{display:grid;grid-template-columns:52px 1fr;align-items:baseline;border-top-width:1px;padding:14px 0}.steps li::before{font-size:30px;margin:0}
@@ -252,11 +257,57 @@ footer{display:flex;justify-content:space-between;align-items:center;gap:16px;pa
   .qf .btn{flex:1 1 auto}.qf .btns{gap:8px}footer{font-size:12px;flex-wrap:wrap}
 }
 @media(prefers-reduced-motion:no-preference){
-  html{scroll-behavior:smooth}.btn,.circle-arrow,.lang button,.ld-times button{transition:background-color .15s,color .15s,border-color .15s}
+  html{scroll-behavior:smooth}.circle-arrow,.lang button,.ld-times button{transition:background-color .15s,color .15s,border-color .15s}
+  /* header hides on the way down, returns on the way up */
+  header{transition:transform .45s cubic-bezier(.2,.8,.2,1)}header.away{transform:translateY(-102%)}
+  /* first screen plays as one scene: lines rise, the marker draws under "online booking", then the calendar fills */
+  .intro>*{animation:rise .9s cubic-bezier(.2,.8,.2,1) both}
+  .intro>h1{animation:none}.intro>h1>span:first-child{display:block;animation:rise 1s .05s cubic-bezier(.2,.8,.2,1) both}
+  .intro>.lead{animation-delay:.18s}.intro>.btns,.intro>.hero-price-line{animation-delay:.28s}.intro>.hero-risk{animation-delay:.4s}
+  h1 em{animation:mark 1s .5s cubic-bezier(.65,0,.25,1) both}
+  .ld-client{animation:rise 1s .3s cubic-bezier(.2,.8,.2,1) both}
+  .ld-owner{animation:line .9s .45s cubic-bezier(.65,0,.25,1) both}
+  .ld-list li:not(.ld-new){transform-origin:0 50%;animation:slot .7s cubic-bezier(.2,.8,.2,1) both}
+  .ld-list li:nth-child(1){animation-delay:.75s}.ld-list li:nth-child(2){animation-delay:.87s}.ld-list li:nth-child(3){animation-delay:.99s}.ld-list li:nth-child(4){animation-delay:1.11s}.ld-list li:nth-child(5){animation-delay:1.23s}
+  .ld-book.tap{animation:tap .35s ease}
+  @keyframes rise{from{opacity:0;transform:translateY(28px)}}
+  @keyframes mark{from{background-size:0 100%}}
+  @keyframes line{from{border-top-color:transparent}}
+  @keyframes slot{from{opacity:0;transform:scaleX(.4)}}
+  @keyframes tap{50%{transform:scale(.96)}}
+  /* ribbon runs; two copies make the loop seamless, hover pauses it */
+  .rb-track{width:max-content;animation:rb 42s linear infinite}
+  .ribbon:hover .rb-track{animation-play-state:paused}
+  .facts{flex-wrap:nowrap;justify-content:flex-start}.facts[aria-hidden]{display:flex}
+  @keyframes rb{to{transform:translateX(-50%)}}
+  /* blocks slide up as they come into view; only moved, never hidden, so a full-page shot stays complete */
+  .rv{transform:translateY(36px);transition:transform 1.1s cubic-bezier(.2,.8,.2,1) calc(var(--i,0) * 90ms)}
+  .rv.in{transform:none}
+  .cover img{transition:transform 1.6s cubic-bezier(.2,.8,.2,1)}.project.rv:not(.in) .cover img{transform:scale(1.12)}
+  .project:hover .cover img{transform:scale(1.04)}
+  .packages .prow:nth-child(2) .eur{transition:background-size 1s .3s cubic-bezier(.65,0,.25,1)}.packages .prow.rv:not(.in):nth-child(2) .eur{background-size:0 100%}
+  .packages .prow:nth-child(2) .eur{background-repeat:no-repeat;background-size:100% 100%}
+  /* buttons fill from the left on hover */
+  .btn{position:relative;isolation:isolate;overflow:hidden;transition:color .25s,border-color .25s}
+  .btn::before{content:"";position:absolute;inset:0;z-index:-1;background:var(--fill,var(--sky));transform:scaleX(0);transform-origin:100% 50%;transition:transform .45s cubic-bezier(.65,0,.25,1)}
+  .btn:hover::before{transform:scaleX(1);transform-origin:0 50%}
+  .btn:hover{background:transparent}.btn.main{--fill:var(--deep)}.btn.main:hover{background:var(--blue)}
+  .form-panel .btn.main{--fill:#fff}.form-panel .btn.main:hover{background:var(--marker)}
+  .form-panel .btn:not(.main){--fill:#262d85}.form-panel .btn:not(.main):hover{background:transparent}
+  .btn:disabled::before{display:none}
+  /* FAQ answers fold open */
+  .qa{interpolate-size:allow-keywords}
+  .qa::details-content{block-size:0;overflow:hidden;transition:block-size .45s cubic-bezier(.2,.8,.2,1),content-visibility .45s allow-discrete}
+  .qa[open]::details-content{block-size:auto}
+  summary::after{transition:background-size .3s}
+  /* language switch: old text slides out, new slides in */
+  ::view-transition-old(root){animation:.22s ease both vtOut}::view-transition-new(root){animation:.32s cubic-bezier(.2,.8,.2,1) both vtIn}
+  @keyframes vtOut{to{opacity:0;transform:translateY(-8px)}}@keyframes vtIn{from{opacity:0;transform:translateY(10px)}}
 }
 </style>
 </head>
 <body data-mode="biz" id="top">
+<div class="progress" aria-hidden="true"></div>
 <div class="wrap">
 <header>
   <a class="identity" href="#top"><span class="monogram" aria-hidden="true" data-i="monogram">dk</span><span>Davyd Konstantinov<small data-i="studio">Webové štúdio</small></span></a>
@@ -327,7 +378,10 @@ footer{display:flex;justify-content:space-between;align-items:center;gap:16px;pa
     <div class="note" data-i="cn">Ukážka z môjho projektu, nie skutočná konverzácia</div>
   </div>
 </div>
-<ul class="facts biz"><li data-i="priceFact">Hotové za 5–10 dní</li><li data-i="payFact">Platíte až za funkčný web</li><li data-i="feeFact">Bez mesačných poplatkov</li><li data-i="f3">Na dohodu o vykonaní práce</li></ul>
+<div class="ribbon biz"><div class="rb-track">
+  <ul class="facts"><li data-i="priceFact">Hotové za 5–10 dní</li><li data-i="payFact">Platíte až za funkčný web</li><li data-i="feeFact">Bez mesačných poplatkov</li><li data-i="rb1">Úpravy počas prvého mesiaca zadarmo</li><li data-i="rb2">Web v štyroch jazykoch</li><li data-i="f3">Na dohodu o vykonaní práce</li></ul>
+  <ul class="facts" aria-hidden="true"><li data-i="priceFact">Hotové za 5–10 dní</li><li data-i="payFact">Platíte až za funkčný web</li><li data-i="feeFact">Bez mesačných poplatkov</li><li data-i="rb1">Úpravy počas prvého mesiaca zadarmo</li><li data-i="rb2">Web v štyroch jazykoch</li><li data-i="f3">Na dohodu o vykonaní práce</li></ul>
+</div></div>
 </div>
 
 <section id="work" class="work">
@@ -406,14 +460,14 @@ footer{display:flex;justify-content:space-between;align-items:center;gap:16px;pa
 <section id="faq">
   <h2 data-i="faqh">Časté otázky</h2>
   <div class="faq">
-    <div class="qa"><h3 data-i="q1">Koľko stojí web?</h3><p data-i="a1">Jednoduchý web alebo landing page od 250 €, web s online rezerváciou a panelom od 350 €. Presnú cenu poviem pred začiatkom práce.</p></div>
-    <div class="qa"><h3 data-i="q2">Ako to riešime zmluvne?</h3><p data-i="a2">Oficiálne, na dohodu o vykonaní práce s vašou firmou na Slovensku.</p></div>
-    <div class="qa"><h3 data-i="q3">V ktorých jazykoch robíte weby?</h3><p data-i="a3">Slovenčina, ukrajinčina, ruština a angličtina. Písať si môžeme v ktoromkoľvek z nich.</p></div>
-    <div class="qa"><h3 data-i="q4">Sú potrebné telefonáty?</h3><p data-i="a4">Nie, všetko vyriešime písomne cez WhatsApp alebo e-mail. Ak vám viac vyhovuje hovor, stačí jeden krátky na začiatku.</p></div>
-    <div class="qa"><h3 data-i="q5">Za ako dlho bude web hotový?</h3><p data-i="a5">Jednoduchý web do 5 dní, web s online rezerváciou do 10 dní. Počítam od chvíle, keď mi pošlete zoznam služieb, cenník a fotky.</p></div>
-    <div class="qa"><h3 data-i="q6">Čo ak sa mi web nebude páčiť?</h3><p data-i="a6">Najprv vám pošlem odkaz na hotový web a upravím ho podľa vašich pripomienok. Platíte, až keď sa vám páči.</p></div>
-    <div class="qa"><h3 data-i="q7">Platí sa niečo mesačne?</h3><p data-i="a7">Mne nie. Platíte len doménu, asi 15 € ročne, a to priamo registrátorovi.</p></div>
-    <div class="qa"><h3 data-i="q8">Kto bude meniť texty a ceny?</h3><p data-i="a8">Prvý mesiac po spustení ich zmením ja, zadarmo. Stačí mi napísať. Neskôr sa dohodneme na cene.</p></div>
+    <details class="qa" open><summary><h3 data-i="q1">Koľko stojí web?</h3></summary><p data-i="a1">Jednoduchý web alebo landing page od 250 €, web s online rezerváciou a panelom od 350 €. Presnú cenu poviem pred začiatkom práce.</p></details>
+    <details class="qa" open><summary><h3 data-i="q2">Ako to riešime zmluvne?</h3></summary><p data-i="a2">Oficiálne, na dohodu o vykonaní práce s vašou firmou na Slovensku.</p></details>
+    <details class="qa"><summary><h3 data-i="q3">V ktorých jazykoch robíte weby?</h3></summary><p data-i="a3">Slovenčina, ukrajinčina, ruština a angličtina. Písať si môžeme v ktoromkoľvek z nich.</p></details>
+    <details class="qa"><summary><h3 data-i="q4">Sú potrebné telefonáty?</h3></summary><p data-i="a4">Nie, všetko vyriešime písomne cez WhatsApp alebo e-mail. Ak vám viac vyhovuje hovor, stačí jeden krátky na začiatku.</p></details>
+    <details class="qa"><summary><h3 data-i="q5">Za ako dlho bude web hotový?</h3></summary><p data-i="a5">Jednoduchý web do 5 dní, web s online rezerváciou do 10 dní. Počítam od chvíle, keď mi pošlete zoznam služieb, cenník a fotky.</p></details>
+    <details class="qa"><summary><h3 data-i="q6">Čo ak sa mi web nebude páčiť?</h3></summary><p data-i="a6">Najprv vám pošlem odkaz na hotový web a upravím ho podľa vašich pripomienok. Platíte, až keď sa vám páči.</p></details>
+    <details class="qa"><summary><h3 data-i="q7">Platí sa niečo mesačne?</h3></summary><p data-i="a7">Mne nie. Platíte len doménu, asi 15 € ročne, a to priamo registrátorovi.</p></details>
+    <details class="qa"><summary><h3 data-i="q8">Kto bude meniť texty a ceny?</h3></summary><p data-i="a8">Prvý mesiac po spustení ich zmením ja, zadarmo. Stačí mi napísať. Neskôr sa dohodneme na cene.</p></details>
   </div>
 </section>
 
@@ -594,6 +648,8 @@ const T = {
     "priceFact": "Hotové za 5–10 dní",
     "payFact": "Platíte až za funkčný web",
     "feeFact": "Bez mesačných poplatkov",
+    "rb1": "Úpravy počas prvého mesiaca zadarmo",
+    "rb2": "Web v štyroch jazykoch",
     "workNav": "Ukážky",
     "bookingDemo": "Web s online rezerváciou",
     "desktopAlt": "Web salónu Studio Bella na počítači",
@@ -790,6 +846,8 @@ const T = {
     "priceFact": "Ready in 5–10 days",
     "payFact": "Pay once your site works",
     "feeFact": "No monthly fees",
+    "rb1": "Free changes for the first month",
+    "rb2": "Your site in four languages",
     "workNav": "Examples",
     "bookingDemo": "Website with online booking",
     "desktopAlt": "Studio Bella salon website on desktop",
@@ -966,6 +1024,8 @@ const T = {
     "priceFact": "Готово за 5–10 дней",
     "payFact": "Оплата за работающий сайт",
     "feeFact": "Без ежемесячных платежей",
+    "rb1": "Правки первый месяц бесплатно",
+    "rb2": "Сайт на четырёх языках",
     "workNav": "Примеры",
     "bookingDemo": "Сайт с онлайн-записью",
     "desktopAlt": "Сайт салона Studio Bella на компьютере",
@@ -1143,6 +1203,8 @@ const T = {
     "priceFact": "Готово за 5–10 днів",
     "payFact": "Оплата за готовий сайт",
     "feeFact": "Без щомісячних платежів",
+    "rb1": "Правки перший місяць безкоштовно",
+    "rb2": "Сайт чотирма мовами",
     "workNav": "Приклади",
     "bookingDemo": "Сайт з онлайн-записом",
     "desktopAlt": "Сайт салону Studio Bella на комп’ютері",
@@ -1246,8 +1308,10 @@ function setLang(l) {
   try { localStorage.lang = l; } catch {}
 }
 
+const motionOK = matchMedia('(prefers-reduced-motion: no-preference)').matches;
 document.querySelectorAll('[data-set]').forEach(button => button.addEventListener('click', () => {
-  setLang(button.dataset.set);
+  if (motionOK && document.startViewTransition && button.dataset.set !== currentLanguage()) document.startViewTransition(() => setLang(button.dataset.set));
+  else setLang(button.dataset.set);
   const url = new URL(location.href);
   url.searchParams.set('lang', currentLanguage());
   history.replaceState(null, '', url);
@@ -1374,6 +1438,22 @@ form.addEventListener('submit', async event => {
     fresh.hidden = true; book.disabled = false; label('ldBook');
     ghost.style.setProperty('--s', at(b.textContent)); ghost.hidden = false;
   }));
+  let touched = false;
+  ['pointerdown', 'keydown'].forEach(e => demo.addEventListener(e, () => { touched = true; }, {once: true}));
+  if (motionOK && 'IntersectionObserver' in window) {
+    // The demo books 18:30 by itself once, so the visitor sees the booking land in the salon's calendar.
+    const io = new IntersectionObserver(entries => {
+      if (!entries[0].isIntersecting) return;
+      io.disconnect();
+      setTimeout(() => {
+        if (touched || book.disabled) return;
+        book.classList.add('tap');
+        book.addEventListener('animationend', () => book.classList.remove('tap'), {once: true});
+        setTimeout(() => { if (!touched && !book.disabled) book.click(); }, 180);
+      }, 1900);
+    }, {threshold: .6});
+    io.observe(book);
+  }
   book.addEventListener('click', () => {
     const t = picked().textContent;
     fresh.querySelector('time').textContent = t;
@@ -1382,6 +1462,35 @@ form.addEventListener('submit', async event => {
     list.insertBefore(fresh, after || null);
     fresh.hidden = false; book.disabled = true; label('ldDone');
   });
+})();
+
+(() => {
+  // Scroll progress line, header that hides on the way down, blocks that slide up into view.
+  const bar = document.querySelector('.progress');
+  const header = document.querySelector('header');
+  let lastY = scrollY, ticking = false;
+  const update = () => {
+    ticking = false;
+    const max = document.documentElement.scrollHeight - innerHeight;
+    bar.style.transform = 'scaleX(' + (max > 0 ? Math.min(1, scrollY / max) : 0) + ')';
+    if (motionOK) header.classList.toggle('away', scrollY > lastY && scrollY > 240 && !header.contains(document.activeElement));
+    lastY = scrollY;
+  };
+  addEventListener('scroll', () => { if (!ticking) { ticking = true; requestAnimationFrame(update); } }, {passive: true});
+  if (!motionOK || !('IntersectionObserver' in window)) return;
+  const io = new IntersectionObserver(entries => entries.forEach(e => {
+    if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
+  }), {rootMargin: '0px 0px -8% 0px'});
+  // Marked only on the first scroll and only below the fold, so a still full-page shot shows everything in place.
+  addEventListener('scroll', () => {
+    const groups = ['main>section>h2', '.section-head', '.projects>.project', '.process>div:first-child', '.steps>li', '.packages>.prow', '.price-cta', '.faq>.qa', '#contact'];
+    groups.forEach(sel => document.querySelectorAll(sel).forEach((el, i) => {
+      if (el.getBoundingClientRect().top < innerHeight) return;
+      el.style.setProperty('--i', i % 4);
+      el.classList.add('rv');
+      io.observe(el);
+    }));
+  }, {once: true, passive: true});
 })();
 
 document.getElementById('copy-email').addEventListener('click', async () => {
