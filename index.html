@@ -131,6 +131,8 @@ h1 em{font-style:normal;padding:0 .06em;margin:0 -.06em;background:linear-gradie
 @media(min-width:761px){.ld-list li:not(.ld-new):not(:last-child){display:none}}
 /* Phones: the marked line «Rezervácie online.» fits on one line in every language (longest is SK) */
 @media(max-width:540px){h1{font-size:min(38px,calc(9.6vw - 4px))}}
+@media(max-width:760px){.garage-cover{aspect-ratio:auto}.salon-cover img,.garage-cover img{height:auto}}
+@media(min-width:761px){.ld-owner{box-shadow:0 18px 34px -30px rgba(20,26,99,.3)}}
 /* Ribbon: the promises as one ink band across the page (moves only with motion allowed) */
 .ribbon{margin:clamp(30px,3.4vw,48px) calc(50% - 50vw) 0;background:var(--ink);color:#fff;overflow:hidden}
 .ribbon{position:relative}.ribbon::before,.ribbon::after{content:"";position:absolute;top:0;bottom:0;width:7%;z-index:1;pointer-events:none;background:linear-gradient(90deg,var(--ink),transparent)}.ribbon::before{left:0}.ribbon::after{right:0;transform:scaleX(-1)}
@@ -237,7 +239,8 @@ footer{display:flex;justify-content:space-between;align-items:center;gap:16px;pa
   .wrap{padding-inline:clamp(18px,5vw,32px)}header{min-height:70px;gap:8px;flex-wrap:wrap}
   .page-nav{display:none}.lang{padding-left:0;border:0}
   .header-contact{display:grid;place-items:center;width:34px;height:34px;border:1px solid var(--rule);border-radius:50%;font-size:0;gap:0}
-  .header-contact::after{width:17px;height:17px;transform:rotate(-40deg)}
+  .header-contact::after{display:none}
+  .header-contact::before{content:"";width:18px;height:18px;background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23141a63' stroke-width='1.8' stroke-linejoin='round'%3E%3Crect x='3' y='5.5' width='18' height='13' rx='2'/%3E%3Cpath d='m3.5 7 8.5 6.5L20.5 7'/%3E%3C/svg%3E") center/contain no-repeat}
   .hero{grid-template-columns:minmax(0,1fr);grid-template-areas:"intro" "client" "cal";row-gap:22px;padding-top:30px;align-items:start}
   .intro{padding-bottom:0}
   .hero{row-gap:16px;padding-top:20px}.location{margin-bottom:10px}.lead{margin:16px 0 12px}.hero-price-line{margin-bottom:16px}.hero-risk{margin-top:12px}
@@ -401,12 +404,12 @@ footer{display:flex;justify-content:space-between;align-items:center;gap:16px;pa
   <div class="section-head"><h2 data-i="work">Vyskúšajte si ukážky</h2></div>
   <div class="projects">
     <a class="project" href="studio-bella/" data-ex="studio-bella/">
-      <div class="cover salon-cover"><img src="media/shot-bella-desktop-1280.webp" srcset="media/shot-bella-desktop-800.webp 800w, media/shot-bella-desktop-1280.webp 1280w, media/shot-bella-desktop-1600.webp 1600w" sizes="(max-width:760px) 92vw, 56vw" width="1280" height="800" alt="" loading="lazy"></div>
+      <div class="cover salon-cover"><picture><source media="(max-width:760px)" srcset="media/shot-bella-phone-780.webp" width="780" height="1080"><img src="media/shot-bella-desktop-1280.webp" srcset="media/shot-bella-desktop-800.webp 800w, media/shot-bella-desktop-1280.webp 1280w, media/shot-bella-desktop-1600.webp 1600w" sizes="(max-width:760px) 92vw, 56vw" width="1280" height="800" alt="" loading="lazy"></picture></div>
       <div class="project-title"><h3 data-i="bellaName">Studio Bella</h3><span class="circle-arrow" aria-hidden="true"></span></div>
       <p data-i="w0p">Vyberte si službu, špecialistku a čas. Rezerváciu potom nájdete aj v paneli majiteľa.</p>
     </a>
     <a class="project" href="garaz-4/" data-ex="garaz-4/">
-      <div class="cover garage-cover"><img src="media/shot-garage-960.webp" width="960" height="640" alt="" loading="lazy"></div>
+      <div class="cover garage-cover"><picture><source media="(max-width:760px)" srcset="media/shot-garage-phone-780.webp" width="780" height="1080"><img src="media/shot-garage-960.webp" width="960" height="640" alt="" loading="lazy"></picture></div>
       <div class="project-title"><h3 data-i="garageName">Garáž 4</h3><span class="circle-arrow" aria-hidden="true"></span></div>
       <p data-i="garageDesc">Web autoservisu so službami a cenníkom. Cez formulár si zákazník vypýta cenovú ponuku.</p>
     </a>
