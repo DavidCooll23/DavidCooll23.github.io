@@ -112,7 +112,6 @@ h1 em{font-style:normal;padding:0 .06em;margin:0 -.06em;background:linear-gradie
 .ld-book:disabled{background:#1f6b45;cursor:default}
 .ld-hint{margin:12px 0 0;font-size:13px;color:var(--muted)}
 .ld-owner{grid-area:cal;border-top:2px solid var(--ink);padding-top:12px}
-@media(min-width:761px){.ld-client{align-self:start;margin-top:30px;border-bottom:1px solid var(--rule);border-radius:10px}.ld-list{height:124px}.ld-list .ld-new{z-index:1;transform:scale(1.06);transform-origin:50% 100%}}
 .ld-owner .ld-tag{color:var(--ink);font-size:14px;margin:0}
 .ld-track{position:relative;padding-top:26px;margin-top:6px}
 .ld-scale{position:absolute;inset:0;display:grid;grid-template-columns:repeat(var(--h),1fr);font:12px/1 var(--mono);color:var(--muted)}
@@ -126,6 +125,8 @@ h1 em{font-style:normal;padding:0 .06em;margin:0 -.06em;background:linear-gradie
 .ld-ghost{top:32px;border:2px dashed var(--blue);border-radius:5px;background:#2b35c40d}
 @keyframes ldIn{from{opacity:0;transform:scale(.92)}}
 @media(prefers-reduced-motion:reduce){.ld-list .ld-new{animation:none}}
+/* Desktop: the salon's calendar sits right under the booking card, so the new booking lands next to the button */
+@media(min-width:761px){.hero{grid-template-areas:"intro client" "intro cal";align-items:start;padding-bottom:clamp(30px,3.4vw,48px)}.intro{padding-bottom:0}.ld-client{margin-top:30px;box-shadow:none}.ld-owner{background:var(--white);border:1px solid var(--rule);border-top:1px dashed var(--rule);border-radius:0 0 10px 10px;padding:16px 30px 22px;box-shadow:0 34px 60px -42px rgba(20,26,99,.55)}.ld-track{padding-top:0;margin-top:4px}.ld-scale,.ld-ghost{display:none}.ld-list{height:auto}.ld-list li{position:static;width:auto;flex-direction:row;align-items:baseline;gap:14px;margin:6px 0 0;padding:9px 12px;font-size:15px}.ld-list time{font-size:13px}}
 /* Ribbon: the promises as one ink band across the page (moves only with motion allowed) */
 .ribbon{margin:clamp(30px,3.4vw,48px) calc(50% - 50vw) 0;background:var(--ink);color:#fff;overflow:hidden}
 .ribbon{position:relative}.ribbon::before,.ribbon::after{content:"";position:absolute;top:0;bottom:0;width:7%;z-index:1;pointer-events:none;background:linear-gradient(90deg,var(--ink),transparent)}.ribbon::before{left:0}.ribbon::after{right:0;transform:scaleX(-1)}
