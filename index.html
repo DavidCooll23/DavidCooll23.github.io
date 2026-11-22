@@ -133,6 +133,7 @@ h1 em{font-style:normal;padding:0 .06em;margin:0 -.06em;background:linear-gradie
 @media(max-width:540px){h1{font-size:min(38px,calc(9.6vw - 4px))}}
 @media(max-width:760px){.garage-cover{aspect-ratio:auto}.salon-cover img,.garage-cover img{height:auto}}
 @media(min-width:761px){.ld-owner{box-shadow:0 18px 34px -30px rgba(20,26,99,.3)}}
+[data-i=soon]{display:none}
 /* Ribbon: the promises as one ink band across the page (moves only with motion allowed) */
 .ribbon{margin:clamp(30px,3.4vw,48px) calc(50% - 50vw) 0;background:var(--ink);color:#fff;overflow:hidden}
 .ribbon{position:relative}.ribbon::before,.ribbon::after{content:"";position:absolute;top:0;bottom:0;width:7%;z-index:1;pointer-events:none;background:linear-gradient(90deg,var(--ink),transparent)}.ribbon::before{left:0}.ribbon::after{right:0;transform:scaleX(-1)}
@@ -342,7 +343,7 @@ footer{display:flex;justify-content:space-between;align-items:center;gap:16px;pa
 <div class="hero">
   <div class="intro">
     <p class="location" data-i="location">Bratislava, Slovensko</p>
-    <h1><span data-i="h1">Web pre váš podnik.</span> <em data-i="h1end">Rezervácie online.</em></h1>
+    <h1><span data-i="h1">Web pre váš podnik.</span> <em data-i="h1end">Rezervácie online.</em></h1>
     <p class="lead" data-i="lead">Robím weby pre salóny, autoservisy a lektorov. Zákazník si vyberie termín na webe a vy vidíte rezerváciu v mobile.</p>
     <div class="btns job">
       <a class="btn main" href="#qf" data-write data-i="mail">Napísať e-mail</a>
@@ -409,7 +410,7 @@ footer{display:flex;justify-content:space-between;align-items:center;gap:16px;pa
       <p data-i="w0p">Vyberte si službu, špecialistku a čas. Rezerváciu potom nájdete aj v paneli majiteľa.</p>
     </a>
     <a class="project" href="garaz-4/" data-ex="garaz-4/">
-      <div class="cover garage-cover"><picture><source media="(max-width:760px)" srcset="media/shot-garage-phone-780.webp" width="780" height="1080"><img src="media/shot-garage-960.webp" width="960" height="640" alt="" loading="lazy"></picture></div>
+      <div class="cover garage-cover"><picture><source media="(max-width:760px)" srcset="media/shot-garage-phone-780.webp" width="780" height="1240"><img src="media/shot-garage-960.webp" width="960" height="640" alt="" loading="lazy"></picture></div>
       <div class="project-title"><h3 data-i="garageName">Garáž 4</h3><span class="circle-arrow" aria-hidden="true"></span></div>
       <p data-i="garageDesc">Web autoservisu so službami a cenníkom. Cez formulár si zákazník vypýta cenovú ponuku.</p>
     </a>
@@ -528,7 +529,7 @@ const T = {
   "sk": {
     "title": "Davyd Konstantinov: weby s online rezerváciou pre malé firmy na Slovensku",
     "desc": "Weby s online rezerváciou a dopytmi pre malé firmy na Slovensku. Zákazník sa objedná priamo na webe, vy vidíte rezervácie v paneli na mobile. 4 jazyky. Ceny od 80 €.",
-    "h1": "Web pre váš podnik.",
+    "h1": "Web pre váš podnik.",
     "lead": "Robím weby pre salóny, autoservisy a lektorov. Zákazník si vyberie termín na webe a vy vidíte rezerváciu v mobile.",
     "g1": "Web v slovenčine, ukrajinčine, ruštine a angličtine",
     "f1": "Bratislava, pracujem na diaľku",

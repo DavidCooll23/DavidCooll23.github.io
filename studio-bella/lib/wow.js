@@ -83,7 +83,7 @@
       type: 'lines,words', mask: 'lines', autoSplit: true, linesClass: 'wow-l',
       onSplit(self) {
         el.classList.add('is-split');
-        const anim = gsap.from(self.words, { yPercent: 115, rotate: 3, duration: 1.25, ease: EASE, stagger: 0.045, paused: true, immediateRender: inIntro });
+        const anim = gsap.from(self.words, { yPercent: 115, rotate: 3, duration: 0.8, ease: EASE, stagger: 0.025, paused: true, immediateRender: inIntro });
         if (inIntro) { if (tl && !el.__wowPlaced) { tl.add(anim.play(), el.dataset.at || '<0.15'); el.__wowPlaced = 1; } else anim.progress(1); }
         else ScrollTrigger.create({ trigger: el, start: 'top bottom+=40', once: true, onEnter: () => anim.play(0) });
         return anim;
