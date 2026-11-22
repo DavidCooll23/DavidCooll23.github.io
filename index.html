@@ -97,6 +97,7 @@ header.stuck::before{opacity:1}
 .slot .ph i{display:block;width:48px;height:48px;border-radius:50%;background:#fff;margin:0 auto 8px;position:relative}
 .slot .ph i::after{content:"";position:absolute;left:19px;top:14px;border-left:14px solid var(--ink);border-top:10px solid transparent;border-bottom:10px solid transparent}
 .slot video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;background:var(--ink);display:none}
+.slot img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:top}
 .slot.ok video{display:block}
 .card .body{padding:20px 24px 24px;display:grid;gap:8px;flex:1;align-content:start}
 .card p{color:var(--sec);font-size:.9375rem}
@@ -276,6 +277,7 @@ body[data-mode=biz] .stage .hero p.lead{max-width:40ch}
     </div>
     <div class="btns biz">
       <a class="btn main" href="https://t.me/+421910392871" rel="noopener noreferrer" data-i="tg"></a>
+      <a class="btn" href="studio-bella/" data-i="site2"></a>
       <a class="btn" href="https://t.me/StudioBellaBookingBot" target="_blank" rel="noopener noreferrer" data-i="demo2"></a>
       <a class="btn" href="#prices" data-i="prb"></a>
     </div>
@@ -335,6 +337,9 @@ body[data-mode=biz] .stage .hero p.lead{max-width:40ch}
 <section id="work">
   <h2 data-i="work"></h2>
   <div class="cards">
+    <article class="card"><a class="slot ok" href="studio-bella/"><img src="media/site.jpg" width="1280" height="720" alt="Studio Bella" loading="lazy"></a>
+      <div class="body"><h3 data-i="w0t"></h3><p data-i="w0p"></p>
+      <a class="demo" href="studio-bella/" data-i="site"></a></div></article>
     <article class="card"><div class="slot" data-video="media/salon.mp4"><div class="ph"><i></i><span data-i="soon"></span></div></div>
       <div class="body"><h3 data-i="w1t"></h3><p data-i="w1p"></p>
       <a class="demo" href="https://t.me/StudioBellaBookingBot" target="_blank" rel="noopener noreferrer" data-i="demo"></a></div></article>
@@ -418,7 +423,7 @@ r1t:"Zákaznícka a technická podpora",r1p:"Chat, e-mail aj telefón v angličt
 r2t:"Tester / QA junior",r2p:"Manuálne testovanie botov, formulárov a prepojení. Hlásenia chýb s krokmi, očakávaným výsledkom a logmi.",
 r3t:"AI automatizácia",r3p:"Telegram boty, n8n workflowy a Python skripty, ktoré berú rutinu z rúk tímu. AI je môj hlavný nástroj.",
 work:"Moje projekty",soon:"Video už čoskoro",demo:"Vyskúšať živé demo v Telegrame",
-w1t:"Rezervačný bot pre salón",w1p:"Zákazník napíše „máte voľno v piatok po 17?“ a AI asistent ponúkne voľné časy a zapíše ho. Majiteľ potvrdí jedným klikom, bot pripomenie návštevu. 4 jazyky.",
+w0t:"Web pre salón",w0p:"Služby, ceny, otváracie hodiny a adresa na jednej stránke. Tlačidlo „Rezervovať“ vedie do bota, ktorý zákazníka zapíše sám. 4 jazyky, funguje na mobile.",site:"Otvoriť ukážku webu",w1t:"Rezervačný bot pre salón",w1p:"Zákazník napíše „máte voľno v piatok po 17?“ a AI asistent ponúkne voľné časy a zapíše ho. Majiteľ potvrdí jedným kliknutím, bot pripomenie návštevu. 4 jazyky.",
 w2t:"Monitor inzerátov a cien",w2p:"Sleduje bazos.sk, nové inzeráty ukladá do Google Sheets a hneď pošle upozornenie do Telegramu.",
 w3t:"Telegram e-shop",w3p:"Katalóg, košík a objednávka priamo v chate.",
 w4t:"Dopyty z webu v n8n",w4p:"Dopyt z formulára sa uloží do tabuľky a majiteľovi príde správa do Telegramu. Webhook je chránený tajnou hlavičkou.",
@@ -453,7 +458,7 @@ r1t:"Customer & technical support",r1p:"Chat, email and phone in English and Slo
 r2t:"Junior QA tester",r2p:"Manual testing of bots, forms and integrations. Bug reports with steps, expected result and logs.",
 r3t:"AI automation",r3p:"Telegram bots, n8n workflows and Python scripts that take routine work off a team. AI is my main tool.",
 work:"My projects",soon:"Video coming soon",demo:"Try the live demo in Telegram",
-w1t:"Booking bot for a salon",w1p:"A customer types “any slot on Friday after 5?” and the AI assistant offers free times and books it. The owner confirms in one tap, the bot sends a reminder. 4 languages.",
+w0t:"Website for a salon",w0p:"Services, prices, opening hours and address on one page. The Book button opens a bot that takes the booking itself. 4 languages, works on a phone.",site:"Open the sample website",w1t:"Booking bot for a salon",w1p:"A customer types “any slot on Friday after 5?” and the AI assistant offers free times and books it. The owner confirms in one tap, the bot sends a reminder. 4 languages.",
 w2t:"Listing and price monitor",w2p:"Watches bazos.sk, saves new listings to Google Sheets and sends an instant Telegram alert.",
 w3t:"Telegram shop bot",w3p:"Catalog, cart and checkout right inside the chat.",
 w4t:"Website leads in n8n",w4p:"A form request is saved to a sheet and the owner gets a Telegram message. The webhook is protected by a secret header.",
@@ -475,11 +480,11 @@ ru:{
 title:"Давид Константинов: сайты и Telegram-боты для бизнеса в Словакии",
 desc:"Сайты и Telegram-боты для малого бизнеса в Словакии: заявки с сайта в Telegram, бот записи, 4 языка. Цены от 80 до 400 €, рабочий пример открыт.",
 h1:"Сайты и Telegram-боты для малого бизнеса в Словакии",
-lead:"Рабочий пример можно открыть прямо сейчас: бот записи для салона. Цены от 80 до 400 € и сроки от 2 до 10 дней стоят ниже.",
+lead:"Рабочие примеры можно открыть прямо сейчас: сайт салона и бот записи. Цены от 80 до 400 € и сроки от 2 до 10 дней стоят ниже.",
 g1:"Сайт на словацком, украинском, русском и английском",
 g2:"Заявки с сайта приходят вам в Telegram и сохраняются в таблицу",
 g3:"Бота записи сначала бесплатно показываю на ваших услугах",
-tg:"Написать в Telegram",demo2:"Открыть пример бота",prb:"Цены",
+tg:"Написать в Telegram",site2:"Открыть пример сайта",demo2:"Открыть пример бота",prb:"Цены",
 f1:"Братислава, работаю удалённо",f2:"Всё решаем перепиской",f3:"Официально, по договору (dohoda)",f4:"Эту страницу тоже сделал я",
 sc_t:"Запись онлайн",sc_n:"Имя",sc_s:"Услуга и время",sc_b:"Записаться",sc_b2:"Заявка отправлена",sc_bot:"заявки с сайта",sc_new:"Новая заявка",sc_m:"Олена, маникюр, пятница 18:30",sc_ok:"Подтвердить",sc_ok2:"Подтверждено",ty_n:"Олена",ty_s:"Маникюр, пятница 18:30",
 ph:"Что делаю и сколько стоит",
@@ -490,7 +495,7 @@ p3t:"Бот записи в Telegram",p3p:"Клиент сам выбирает 
 p4t:"Автоответчик на частые вопросы",p4p:"Отвечает клиентам по вашему прайсу и частым вопросам, пока вы заняты.",p4d:"10 дней",
 pfine:"Точную цену и срок называю до начала работы. Нужны тексты, прайс на нескольких языках или картинки для рекламы, напишите, посчитаю.",
 work:"Работы",soon:"Видео скоро будет",demo:"Открыть пример в Telegram",
-w1t:"Бот записи для салона",w1p:"Клиент пишет «есть окно в пятницу после 17?», бот предлагает свободное время и записывает. Владелец подтверждает одним нажатием, бот напоминает о визите. 4 языка.",
+w0t:"Сайт для салона",w0p:"Услуги, цены, часы работы и адрес на одной странице. Кнопка «Записаться» ведёт в бота, который записывает сам. 4 языка, открывается с телефона.",site:"Открыть сайт-пример",w1t:"Бот записи для салона",w1p:"Клиент пишет «есть окно в пятницу после 17?», бот предлагает свободное время и записывает. Владелец подтверждает одним нажатием, бот напоминает о визите. 4 языка.",
 w2t:"Монитор объявлений и цен",w2p:"Следит за bazos.sk, складывает новые объявления в Google Таблицу и сразу присылает уведомление в Telegram.",
 w3t:"Магазин в Telegram",w3p:"Каталог, корзина и оформление заказа прямо в чате.",
 w4t:"Заявки с сайта",w4p:"Заявка из формы попадает в таблицу, а владельцу приходит сообщение в Telegram.",
@@ -509,11 +514,11 @@ uk:{
 title:"Давид Константінов: сайти й Telegram-боти для бізнесу в Словаччині",
 desc:"Сайти й Telegram-боти для малого бізнесу в Словаччині: заявки із сайту в Telegram, бот для запису, 4 мови. Ціни від 80 до 400 €, робочий приклад відкритий.",
 h1:"Сайти й Telegram-боти для малого бізнесу в Словаччині",
-lead:"Робочий приклад можна відкрити просто зараз: бот для запису клієнтів салону. Ціни від 80 до 400 € і терміни від 2 до 10 днів вказані нижче.",
+lead:"Робочі приклади можна відкрити просто зараз: сайт салону та бот для запису. Ціни від 80 до 400 € і терміни від 2 до 10 днів вказані нижче.",
 g1:"Сайт словацькою, українською, російською та англійською",
 g2:"Заявки із сайту надходять вам у Telegram і зберігаються в таблиці",
 g3:"Бота для запису спершу безкоштовно показую на прикладі ваших послуг",
-tg:"Написати в Telegram",demo2:"Відкрити приклад бота",prb:"Ціни",
+tg:"Написати в Telegram",site2:"Відкрити приклад сайту",demo2:"Відкрити приклад бота",prb:"Ціни",
 f1:"Братислава, працюю віддалено",f2:"Усе вирішуємо листуванням",f3:"Офіційно, за договором (dohoda)",f4:"Цю сторінку теж зробив я",
 sc_t:"Запис онлайн",sc_n:"Ім’я",sc_s:"Послуга і час",sc_b:"Записатися",sc_b2:"Заявку надіслано",sc_bot:"заявки із сайту",sc_new:"Нова заявка",sc_m:"Олена, манікюр, п’ятниця 18:30",sc_ok:"Підтвердити",sc_ok2:"Підтверджено",ty_n:"Олена",ty_s:"Манікюр, п’ятниця 18:30",
 ph:"Що роблю і скільки це коштує",
@@ -524,7 +529,7 @@ p3t:"Бот для запису в Telegram",p3p:"Клієнт сам обира
 p4t:"Автовідповідач на часті запитання",p4p:"Відповідає клієнтам за вашим прайсом і на часті запитання, поки ви зайняті.",p4d:"10 днів",
 pfine:"Точну ціну і термін називаю до початку роботи. Потрібні тексти, прайс кількома мовами чи картинки для реклами, напишіть, порахую.",
 work:"Роботи",soon:"Відео скоро буде",demo:"Відкрити приклад у Telegram",
-w1t:"Бот для запису клієнтів салону",w1p:"Клієнт пише «є вікно в п’ятницю після 17?», бот пропонує вільний час і записує. Власник підтверджує одним натисканням, бот нагадує про візит. 4 мови.",
+w0t:"Сайт для салону",w0p:"Послуги, ціни, графік і адреса на одній сторінці. Кнопка «Записатися» веде в бота, який записує сам. 4 мови, зручно з телефона.",site:"Відкрити сайт-приклад",w1t:"Бот для запису клієнтів салону",w1p:"Клієнт пише «є вікно в п’ятницю після 17?», бот пропонує вільний час і записує. Власник підтверджує одним натисканням, бот нагадує про візит. 4 мови.",
 w2t:"Монітор оголошень і цін",w2p:"Стежить за bazos.sk, заносить нові оголошення в Google Таблицю й одразу надсилає сповіщення в Telegram.",
 w3t:"Магазин у Telegram",w3p:"Каталог, кошик і оформлення замовлення просто в чаті.",
 w4t:"Заявки із сайту",w4p:"Заявка з форми потрапляє в таблицю, а власнику надходить повідомлення в Telegram.",
@@ -540,6 +545,9 @@ q3:"Якими мовами робите?",a3:"Словацькою, украї�
 q4:"Чи потрібні дзвінки?",a4:"Ні, усе вирішуємо листуванням у Telegram. Якщо вам зручніше голосом, вистачить одного короткого дзвінка на старті.",
 ch:"Напишіть, що потрібно зробити",cp:"Кілька рядків про завдання в Telegram. Відповім із ціною і терміном."}
 };
+// one services page in every language: SK and EN get the same texts as RU/UK
+Object.assign(T.sk,{"title": "Davyd Konstantinov: weby a Telegram boty pre firmy na Slovensku", "desc": "Weby a Telegram boty pre malé firmy na Slovensku: dopyty z webu do Telegramu, rezervačný bot, 4 jazyky. Ceny od 80 do 400 €, funkčné ukážky sú dostupné.", "h1": "Weby a Telegram boty pre malé firmy na Slovensku", "lead": "Funkčné ukážky si môžete otvoriť hneď: web salónu a rezervačný bot. Ceny od 80 do 400 € a termíny od 2 do 10 dní nájdete nižšie.", "g1": "Web v slovenčine, ukrajinčine, ruštine a angličtine", "g2": "Dopyty z webu vám chodia do Telegramu a ukladajú sa do tabuľky", "g3": "Rezervačného bota vám najprv zadarmo ukážem na vašich službách", "tg": "Napísať na Telegram", "site2": "Otvoriť ukážku webu", "demo2": "Otvoriť ukážku bota", "prb": "Ceny", "f1": "Bratislava, pracujem na diaľku", "f2": "Všetko vyriešime písomne", "f3": "Oficiálne, na dohodu", "f4": "Aj túto stránku som robil ja", "sc_t": "Online rezervácia", "sc_n": "Meno", "sc_s": "Služba a čas", "sc_b": "Rezervovať", "sc_b2": "Dopyt odoslaný", "sc_bot": "dopyty z webu", "sc_new": "Nový dopyt", "sc_m": "Olena, manikúra, piatok 18:30", "sc_ok": "Potvrdiť", "sc_ok2": "Potvrdené", "ty_n": "Olena", "ty_s": "Manikúra, piatok 18:30", "ph": "Čo robím a koľko to stojí", "p0t": "Jednoduchý web alebo landing page", "p0p": "Stránka o vás: služby, ceny, kontakty a formulár. V jazykoch, ktoré potrebujete, pohodlná na mobile.", "p0d": "termín podľa zadania", "p0e": "cena podľa zadania", "p1t": "Dopyty z webu do Telegramu a tabuľky", "p1p": "Každý dopyt z formulára vám príde ako správa a uloží sa do Google Tabuľky.", "p1d": "2 dni", "p2t": "Ukrajinská alebo ruská verzia stránky", "p2p": "Preklad hotovej stránky a formulár na nej.", "p2d": "3 dni", "p3t": "Rezervačný bot v Telegrame", "p3p": "Zákazník si sám vyberie čas a dostane pripomienku, vy len potvrdíte. Najprv vám bota zadarmo ukážem na vašich službách. Ak sa vám páči, stojí 200 €. Ak nie, nič neplatíte.", "p3d": "do 7 dní", "p4t": "Automatické odpovede na časté otázky", "p4p": "Odpovedá zákazníkom podľa vášho cenníka a častých otázok, kým máte prácu.", "p4d": "10 dní", "pfine": "Presnú cenu a termín poviem pred začiatkom práce. Ak potrebujete texty, cenník vo viacerých jazykoch alebo obrázky do reklamy, napíšte a spočítam to.", "work": "Práce", "soon": "Video už čoskoro", "demo": "Otvoriť ukážku v Telegrame", "w1t": "Rezervačný bot pre salón", "w1p": "Zákazník napíše „máte voľno v piatok po 17?“, bot ponúkne voľné časy a zapíše ho. Majiteľ potvrdí jedným kliknutím, bot pripomenie návštevu. 4 jazyky.", "w2t": "Monitor inzerátov a cien", "w2p": "Sleduje bazos.sk, nové inzeráty ukladá do Google Tabuľky a hneď pošle upozornenie do Telegramu.", "w3t": "Obchod v Telegrame", "w3p": "Katalóg, košík a objednávka priamo v chate.", "w4t": "Dopyty z webu", "w4p": "Dopyt z formulára sa uloží do tabuľky a majiteľovi príde správa do Telegramu.", "prch": "Ako prebieha práca", "s1t": "Napíšete zadanie", "s1p": "Pár riadkov na Telegram: čo potrebujete a pre akú firmu. Opýtam sa na detaily, poviem cenu a termín.", "s2t": "Ukážem", "s2p": "Pripravím funkčnú verziu a pošlem odkaz, aby ste si ju sami vyskúšali na mobile.", "s3t": "Úpravy a spustenie", "s3p": "Zapracujem pripomienky, pripojím vašu doménu, Telegram a tabuľku.", "s4t": "Odovzdanie", "s4p": "Krátky návod: ako všetko funguje a čo robiť, keď sa niečo pokazí. Všetko zostáva na vašich účtoch.", "faqh": "Časté otázky", "q1": "Koľko stojí web?", "a1": "Závisí od počtu stránok a jazykov. Napíšte, čo potrebujete, a cenu aj termín poviem pred začiatkom práce.", "q2": "Ako to riešime zmluvne?", "a2": "Oficiálne, na dohodu s vašou firmou na Slovensku.", "q3": "V akých jazykoch robíte?", "a3": "Slovenčina, ukrajinčina, ruština a angličtina. Písať si môžeme v ktoromkoľvek z nich.", "q4": "Sú potrebné telefonáty?", "a4": "Nie, všetko vyriešime písomne cez Telegram. Ak vám viac vyhovuje hovor, stačí jeden krátky na začiatku.", "ch": "Napíšte, čo potrebujete", "cp": "Pár riadkov o zadaní na Telegram. Odpoviem s cenou a termínom."});
+Object.assign(T.en,{"title": "Davyd Konstantinov: websites and Telegram bots for small businesses in Slovakia", "desc": "Websites and Telegram bots for small businesses in Slovakia: website enquiries sent to Telegram, a booking bot, 4 languages. Prices from €80 to €400, working examples are available.", "h1": "Websites and Telegram bots for small businesses in Slovakia", "lead": "You can open working examples right now: a salon website and a booking bot. Prices from €80 to €400 and turnaround from 2 to 10 days are listed below.", "g1": "A website in Slovak, Ukrainian, Russian and English", "g2": "Enquiries from the website reach you in Telegram and are saved to a spreadsheet", "g3": "I first show you the booking bot with your own services, free", "tg": "Message me on Telegram", "site2": "Open the sample website", "demo2": "Open the sample bot", "prb": "Prices", "f1": "Bratislava, I work remotely", "f2": "Everything is settled in writing", "f3": "Official, under a contract (dohoda)", "f4": "I built this page too", "sc_t": "Book online", "sc_n": "Name", "sc_s": "Service and time", "sc_b": "Book", "sc_b2": "Request sent", "sc_bot": "website enquiries", "sc_new": "New request", "sc_m": "Olena, manicure, Friday 18:30", "sc_ok": "Confirm", "sc_ok2": "Confirmed", "ty_n": "Olena", "ty_s": "Manicure, Friday 18:30", "ph": "What I do and what it costs", "p0t": "Business website or landing page", "p0p": "A page about you: services, prices, contacts and an enquiry form. In the languages you need, easy to use on a phone.", "p0d": "timing agreed after a brief", "p0e": "price quoted after a brief", "p1t": "Website enquiries to Telegram and a spreadsheet", "p1p": "Every enquiry from the form reaches you as a message and is saved to Google Sheets.", "p1d": "2 days", "p2t": "Ukrainian or Russian version of a page", "p2p": "A translation of your existing page with an enquiry form on it.", "p2d": "3 days", "p3t": "Booking bot in Telegram", "p3p": "The customer picks a time and gets a reminder, you only confirm. I first show you the bot with your own services, free. If you like it, it costs €200. If you don't, you owe nothing.", "p3d": "up to 7 days", "p4t": "Auto-replies to common questions", "p4p": "Answers customers using your price list and common questions while you are busy.", "p4d": "10 days", "pfine": "I give you the exact price and timing before I start. If you need texts, a price list in several languages or images for ads, write to me and I'll quote it.", "work": "Work", "soon": "Video coming soon", "demo": "Open the example in Telegram", "w1t": "Booking bot for a salon", "w1p": "A customer types “any slot on Friday after 5?”, the bot offers free times and books it. The owner confirms in one tap, the bot sends a reminder. 4 languages.", "w2t": "Listings and price monitor", "w2p": "Watches bazos.sk, saves new listings to Google Sheets and sends a Telegram alert straight away.", "w3t": "Shop in Telegram", "w3p": "Catalogue, cart and checkout right in the chat.", "w4t": "Website enquiries", "w4p": "An enquiry from the form goes into a spreadsheet and the owner gets a Telegram message.", "prch": "How the work goes", "s1t": "You describe the job", "s1p": "A couple of lines on Telegram: what you need and for what business. I ask questions, then give you a price and timing.", "s2t": "I show it", "s2p": "I build a working version and send a link so you can try it on your phone.", "s3t": "Changes and launch", "s3p": "I make the changes and connect your domain, Telegram and spreadsheet.", "s4t": "Handover", "s4p": "A short guide: how everything works and what to do if something breaks. Everything stays on your accounts.", "faqh": "Common questions", "q1": "How much does a website cost?", "a1": "It depends on the number of pages and languages. Tell me what you need and I'll give you a price and timing before I start.", "q2": "How do we make it official?", "a2": "Officially, under a contract (dohoda) with your company in Slovakia.", "q3": "Which languages do you work in?", "a3": "Slovak, Ukrainian, Russian and English. We can write to each other in any of them.", "q4": "Do we need calls?", "a4": "No, everything is settled in writing on Telegram. If you prefer to talk, one short call at the start is enough.", "ch": "Tell me what you need", "cp": "A couple of lines about the job on Telegram. I'll reply with a price and timing."});
 // hero scene for RU/UA: the form fills itself, the request lands in Telegram, the owner confirms
 let run=0;
 async function scene(l){
@@ -560,7 +568,7 @@ async function scene(l){
 const els=[...document.querySelectorAll('[data-i]')];
 function setLang(l){
   if(!Object.hasOwn(T,l))l='sk';
-  document.body.dataset.mode=(l=='ru'||l=='uk')?'biz':'job';
+  document.body.dataset.mode='biz';
   els.forEach(e=>e.textContent=T[l][e.dataset.i]??'');
   document.querySelectorAll('[data-cv]').forEach(a=>a.href='cv/Davyd_Konstantinov_'+a.dataset.cv+'_'+(l=='sk'?'SK':'EN')+'.pdf');
   document.documentElement.lang=l;
@@ -579,11 +587,11 @@ const lazy=new IntersectionObserver(es=>es.forEach(e=>{
   if(!e.isIntersecting)return;
   const s=e.target;lazy.unobserve(s);
   const v=document.createElement('video');
-  v.controls=true;v.preload='metadata';v.playsInline=true;v.src=s.dataset.video+'#t=0.1';
+  v.controls=true;v.preload='metadata';v.playsInline=true;v.poster=s.dataset.video.replace('.mp4','.jpg');v.src=s.dataset.video;
   v.onloadedmetadata=()=>{s.classList.add('ok');s.querySelector('.ph').hidden=true};
   s.appendChild(v);
 }),{rootMargin:'400px'});
-document.querySelectorAll('.slot').forEach(s=>lazy.observe(s));
+document.querySelectorAll('.slot[data-video]').forEach(s=>lazy.observe(s));
 // reveal on scroll, staggered inside a row
 document.documentElement.classList.add('js');
 const rv=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');rv.unobserve(e.target)}}),{threshold:.12,rootMargin:'0px 0px -6% 0px'});
