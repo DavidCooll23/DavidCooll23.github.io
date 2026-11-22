@@ -1107,9 +1107,13 @@ form.addEventListener('submit', async event => {
       method: 'POST',
       headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
       body: JSON.stringify({
-        _subject: T[l].qs, _template: 'table', _captcha: 'false',
-        business: businessField.value.trim(), need: needField.value.trim(), contact: contactField.value.trim(),
-        language: l, page: location.href, _honey: honey
+        _subject: 'Новая заявка с сайта' + (businessField.value.trim() ? ': ' + businessField.value.trim().slice(0, 60) : ''),
+        _template: 'box', _captcha: 'false',
+        'Что нужно': needField.value.trim(),
+        'Как связаться': contactField.value.trim(),
+        'Чем занимается': businessField.value.trim() || 'не написал',
+        'Язык сайта': { sk: 'словацкий', en: 'английский', ru: 'русский', uk: 'украинский' }[l] || l,
+        _honey: honey
       })
     });
     const data = await res.json().catch(() => ({}));
