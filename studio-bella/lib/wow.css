@@ -12,13 +12,12 @@ html.lenis, html.lenis body { height: auto; }
 .wow-js [data-split].is-split, .wow-safe [data-split] { visibility: visible; }
 
 /* reveal: fade + rise, children of the marked block one after another */
-/* only the hero hides before its intro; blocks further down stay visible until they are about to enter (wow.js) */
-.wow-js [data-intro] [data-reveal] > *, .wow-js [data-intro] [data-reveal=self] { opacity: 0; transform: translateY(28px); }
+.wow-js [data-reveal] > *, .wow-js [data-reveal=self] { opacity: 0; transform: translateY(28px); }
 .wow-safe [data-reveal] > *, .wow-safe [data-reveal=self] { opacity: 1 !important; transform: none !important; }
 
 /* clip: frame wipes open from the bottom, the picture inside settles from 1.25 */
 [data-clip] { overflow: hidden; }
-.wow-js [data-intro] [data-clip] { clip-path: inset(100% 0 0 0); }
+.wow-js [data-clip] { clip-path: inset(100% 0 0 0); }
 .wow-safe [data-clip] { clip-path: none !important; }
 @media (max-width: 899px) { .wow-js [data-intro] [data-clip] { clip-path: none; } }   /* phones: first-screen photo shows at once (LCP) */
 [data-clip] img { display: block; width: 100%; height: 100%; object-fit: cover; }
@@ -41,7 +40,7 @@ html.lenis, html.lenis body { height: auto; }
 [data-marquee] .wow-track { display: inline-flex; }
 
 /* highlight: words go from faint to ink as the statement scrolls past */
-.wow-js [data-highlight] .wow-w { opacity: .6; }   /* .4 read as too pale on a still full-page shot (codex 23.11) */
+.wow-js [data-highlight] .wow-w { opacity: .14; }
 .wow-safe [data-highlight] .wow-w { opacity: 1 !important; }
 
 /* cursor: dot + ring; grows with a label over [data-cursor] */
@@ -69,7 +68,7 @@ html.lenis, html.lenis body { height: auto; }
 /* loader curtain: only with JS, once per session (html.wow-noload set in <head>), hides itself after 4 s whatever happens */
 [data-loader] { display: none; }
 .wow-js [data-loader] { display: flex; position: fixed; inset: 0; z-index: 300; align-items: flex-end; justify-content: space-between; gap: 24px;
-  padding: clamp(20px, 4vw, 56px); background: var(--loader-bg, #111); color: var(--loader-ink, #fff); animation: wowLoaderOut 0s 2.5s forwards; }
+  padding: clamp(20px, 4vw, 56px); background: var(--loader-bg, #111); color: var(--loader-ink, #fff); animation: wowLoaderOut 0s 4s forwards; }
 .wow-safe [data-loader], .wow-noload [data-loader] { display: none !important; }
 @media (max-width: 899px), (pointer: coarse) { [data-loader] { display: none !important; } }   /* phones: speed first */
 [data-loader-n] { font-variant-numeric: tabular-nums; line-height: .8; }

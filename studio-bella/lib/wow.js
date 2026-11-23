@@ -66,9 +66,9 @@
       const num = loader.querySelector('[data-loader-n]'), o = { n: 0 };
       if (lenis) lenis.stop();
       const lt = gsap.timeline({ onComplete: () => { loader.style.display = 'none'; if (lenis) lenis.start(); } });
-      lt.to(o, { n: 100, duration: 0.6, ease: 'power2.inOut', onUpdate: () => { if (num) num.textContent = Math.round(o.n); } })
-        .to(loader.children, { yPercent: -60, opacity: 0, duration: 0.35, ease: 'power2.in', stagger: 0.05 }, '-=0.1')
-        .to(loader, { yPercent: -100, duration: 0.7, ease: 'expo.inOut' }, '-=0.2');
+      lt.to(o, { n: 100, duration: 1.05, ease: 'power2.inOut', onUpdate: () => { if (num) num.textContent = Math.round(o.n); } })
+        .to(loader.children, { yPercent: -60, opacity: 0, duration: 0.45, ease: 'power2.in', stagger: 0.05 }, '-=0.1')
+        .to(loader, { yPercent: -100, duration: 0.95, ease: 'expo.inOut' }, '-=0.2');
       introAt = lt.duration() - 0.6;
     }
   }
@@ -83,9 +83,9 @@
       type: 'lines,words', mask: 'lines', autoSplit: true, linesClass: 'wow-l',
       onSplit(self) {
         el.classList.add('is-split');
-        const anim = gsap.from(self.words, { yPercent: 115, rotate: 3, duration: 0.8, ease: EASE, stagger: 0.025, paused: true, immediateRender: inIntro });
+        const anim = gsap.from(self.words, { yPercent: 115, rotate: 3, duration: 1.25, ease: EASE, stagger: 0.045, paused: inIntro });
         if (inIntro) { if (tl && !el.__wowPlaced) { tl.add(anim.play(), el.dataset.at || '<0.15'); el.__wowPlaced = 1; } else anim.progress(1); }
-        else ScrollTrigger.create({ trigger: el, start: 'top bottom+=40', once: true, onEnter: () => anim.play(0) });
+        else ScrollTrigger.create({ trigger: el, start: 'top 88%', once: true, onEnter: () => anim.play() }), anim.pause();
         return anim;
       }
     });
@@ -101,15 +101,14 @@
       else tl.to(el.dataset.reveal === 'self' ? el : el.children, { opacity: 1, y: 0, duration: 1.1, stagger: 0.08 }, el.dataset.at || '<0.2');
     });
   }
-  // headings below the hero stay still: a word-by-word reveal mid-scroll read as broken type (judges, 2 rounds)
-  $$('[data-split]').forEach(el => { if (!intro || !intro.contains(el)) el.classList.add('is-split'); });
+  $$('[data-split]').forEach(el => { if (!intro || !intro.contains(el)) splitOne(el); });
 
   // 4. reveals
   $$('[data-reveal]').forEach(el => {
     if (intro && intro.contains(el)) return;
     const items = el.dataset.reveal === 'self' ? [el] : [...el.children];
-    gsap.fromTo(items, { opacity: 0, y: 28 }, { opacity: 1, y: 0, duration: 1.1, ease: EASE, stagger: 0.09, immediateRender: false,
-      scrollTrigger: { trigger: el, start: 'top bottom+=40', once: true } });
+    gsap.to(items, { opacity: 1, y: 0, duration: 1.1, ease: EASE, stagger: 0.09,
+      scrollTrigger: { trigger: el, start: 'top 85%', once: true } });
   });
 
   // 5. clip-in images
@@ -117,10 +116,10 @@
     const img = el.querySelector('img,video');
     const a = gsap.timeline({ paused: !tl });
     // phones: the first-screen photo is visible from the first paint (it is the LCP), only its settle plays
-    if (!(tl && phone)) a.fromTo(el, { clipPath: 'inset(100% 0 0 0)' }, { clipPath: 'inset(0% 0 0 0)', duration: 1.5, ease: 'expo.inOut', immediateRender: !!tl });
-    a.from(img, { scale: 1.25, duration: 2, ease: EASE, immediateRender: !!tl }, 0);
+    if (!(tl && phone)) a.to(el, { clipPath: 'inset(0% 0 0 0)', duration: 1.5, ease: 'expo.inOut' });
+    a.from(img, { scale: 1.25, duration: 2, ease: EASE }, 0);
     if (tl) tl.add(a.play(), el.dataset.at || '<0.1');
-    else ScrollTrigger.create({ trigger: el, start: 'top bottom+=40', once: true, onEnter: () => a.play() });
+    else ScrollTrigger.create({ trigger: el, start: 'top 85%', once: true, onEnter: () => a.play() });
   }
   $$('[data-clip]').forEach(el => { if (!intro || !intro.contains(el)) clipIn(el); });
 
@@ -217,10 +216,7 @@
     const rows = $$('[data-float]');
     if (rows.length) {
       const f = document.createElement('div'); f.className = 'wow-float'; document.body.append(f);
-      const imgs = {}; rows.forEach(r => { const s = r.dataset.float; if (!imgs[s]) { const i = new Image(); i.alt = ''; f.append(i); imgs[s] = i; } });
-      // hover photos load after the page is up: fetched at once they took bandwidth from the first-screen photo (LCP 2.6 s, 23.11)
-      const fetchFloats = () => setTimeout(() => Object.entries(imgs).forEach(([s, i]) => { if (!i.src) i.src = s; }), 1500);
-      if (document.readyState === 'complete') fetchFloats(); else addEventListener('load', fetchFloats, { once: true });
+      const imgs = {}; rows.forEach(r => { const s = r.dataset.float; if (!imgs[s]) { const i = new Image(); i.src = s; i.alt = ''; f.append(i); imgs[s] = i; } });
       const fx = gsap.quickTo(f, 'x', { duration: 0.7, ease: 'power3' }), fy = gsap.quickTo(f, 'y', { duration: 0.7, ease: 'power3' });
       gsap.set(f, { xPercent: -50, yPercent: -50, scale: 0.6, autoAlpha: 0 });
       rows.forEach(r => {

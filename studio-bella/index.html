@@ -9,11 +9,11 @@
 <link rel="canonical" href="https://konstantinov.sk/studio-bella/">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='16' fill='%23b4553d'/%3E%3Ctext x='16' y='22.5' font-size='19' text-anchor='middle' fill='white' font-family='Georgia,serif' font-style='italic'%3EB%3C/text%3E%3C/svg%3E">
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"Studio Bella: ukážka webu pre salón","description":"Ukážková stránka vymysleného salónu s funkčnou online rezerváciou.","url":"https://konstantinov.sk/studio-bella/","inLanguage":["sk","uk","ru","en"],"author":{"@type":"Person","name":"Davyd Konstantinov","url":"https://konstantinov.sk/"}}</script>
-<script>addEventListener('load',()=>setTimeout(()=>{const s=document.createElement('script');s.src='https://cdn.counter.dev/script.js';s.dataset.id='257df3c8-5256-4c70-addb-07ba1530a824';s.dataset.utcoffset='1';document.head.appendChild(s);document.querySelectorAll('img[loading=lazy]').forEach(i=>i.loading='eager')},1200))</script>
+<script src="https://cdn.counter.dev/script.js" data-id="257df3c8-5256-4c70-addb-07ba1530a824" data-utcoffset="1" defer></script>
 <meta name="robots" content="noindex">
 <meta property="og:title" content="Studio Bella">
 <meta property="og:image" content="https://konstantinov.sk/studio-bella/hero.jpg">
-<link rel="preload" as="image" href="work-cut.webp" type="image/webp" fetchpriority="high">
+<link rel="preload" as="image" href="work-cut.jpg">
 <link rel="preload" as="font" type="font/woff2" href="fonts/cormorant-garamond-latin-500-normal.woff2" crossorigin>
 <script>document.documentElement.classList.add('wow-js');try{sessionStorage.wowL&&document.documentElement.classList.add('wow-noload')}catch(e){};window.__wowT=setTimeout(()=>document.documentElement.classList.add('wow-safe'),3000)</script>
 <link rel="stylesheet" href="lib/wow.css">
@@ -83,7 +83,7 @@ h1 .wow-l{padding-bottom:.06em}
 .mq span{display:inline-flex;align-items:center;gap:.5em;padding-right:.5em}
 .mq span::after{content:"";width:.22em;height:.22em;border-radius:50%;background:var(--clay)}
 /* sections */
-section{padding:clamp(72px,11vh,128px) 0;border:0}
+section{padding:clamp(80px,14vh,160px) 0;border:0}
 .label{display:flex;gap:14px;align-items:center;font-size:.8125rem;letter-spacing:.14em;text-transform:uppercase;color:var(--sec);margin-bottom:28px}
 .label::before{content:"";width:44px;height:1px;background:var(--clay)}
 h2{font:500 clamp(2.6rem,5.6vw,5.6rem)/.95 var(--serif);letter-spacing:-.03em;margin-bottom:22px;max-width:16ch;text-wrap:balance}
@@ -168,7 +168,7 @@ footer a{color:var(--cream);font-weight:600}
 .q .done{color:var(--clay);font-weight:600;font-size:.9375rem;min-height:1.5em}
 .owner{display:grid;gap:14px}
 .owner h3{font:400 1.375rem/1.25 var(--serif)}
-.q .note{margin:0;font-size:.875rem;color:var(--sec)}
+.owner .note{font-size:.875rem;color:var(--sec)}
 .tgm{background:#dfe7ee;border-radius:18px;overflow:hidden;box-shadow:0 14px 34px rgba(43,33,27,.10)}
 .tgm .top{display:flex;gap:12px;align-items:center;padding:11px 16px;background:#fff}
 .tgm .av{flex:none;width:38px;height:38px;border-radius:50%;background:var(--clay);color:#fff;display:grid;place-items:center;font:italic 400 1.125rem/1 var(--serif)}
@@ -269,51 +269,13 @@ html,body{overflow-x:clip}
  body:not(.past) .bar{transform:translateY(110%)}
  body:not(.past) .fab{opacity:0;pointer-events:none;transform:translateY(16px)}
 }
-.mel{display:inline-flex;align-items:center;gap:7px;margin-left:10px;vertical-align:middle}.me{width:26px;height:26px;border-radius:50%;object-fit:cover;flex:none}
-footer .mel{margin-left:4px}footer .me{width:56px;height:56px}
-@media(min-width:900px){.galsec .track{display:grid;grid-template-columns:repeat(3,1fr);width:auto}.galsec .track figure{width:auto}}
-@media(min-width:900px){h1{max-width:15ch;font-size:clamp(3rem,5vw,6rem)}}
-.pcsec{--mo-hold:0.5 !important;min-height:0 !important}
-@media(max-width:640px){section{padding:56px 0}.galsec .wrap{padding-top:56px}.track{padding-bottom:56px !important}.track figure:nth-child(even){margin-top:0}.galsec .track figure{width:64vw}.stmt{font-size:1.75rem}.final h2{font-size:2.7rem}.who:nth-child(2){margin-top:48px}}
-.dsh{display:none}@media(max-width:640px){.demo [data-i=demo]{display:none}.dsh{display:inline}.demo .wrap{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}}
-section:has(+.pcsec){padding-bottom:0}section:has(+.pcsec) .stmt{margin-bottom:0}
-/* codex 23.11: on phones one step photo, not three in a row before the masters; no lone word in the eyebrow */
-@media(max-width:639px){.pcsec .mo-pc__step:not(:first-child) .mo-pc__visual{display:none}}
-.eyebrow{text-wrap:balance}
-/* codex 23.11: room for the háček over Č in the giant type (line-height .86 clipped it); air before step 01 */
-.gtsec .mo-gt__type{padding-top:.14em}
-.pcsec .mo-pc__steps{margin-top:clamp(20px,3vh,32px)}
-/* codex 23.11: on phones the owner's chat and sheet fold under their heading; they open on tap or after a test question */
-.owner>h3{font-size:1.125rem}@media(min-width:0px){.owner>h3{cursor:pointer;display:flex;justify-content:space-between;gap:12px;align-items:center;padding:14px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}.owner>h3::after{content:"+";font:400 1.5rem/1 var(--sans);transition:transform .3s}.owner.open>h3::after,.owner.got>h3::after{transform:rotate(45deg)}.owner:not(.open):not(.got)>:not(h3){display:none}}
-/* codex 23.11: price, booking button and photo show at once; on phones the first screen ends on the cut itself, hours are lower in «Návšteva» */
-@media(max-width:639px){.hero .btn.ghost,.hero .open{display:none}.hpw,.hphoto{aspect-ratio:6/5}.hphoto img{object-position:50% 60%}}
-/* codex 23.11 run 6: on a computer the three booking steps stand in one row, photo on top; FAQ and the form side by side, the owner's sample under the form */
-@media(min-width:1001px){.pcsec.pcsec:not(.is-live) .mo-pc__steps{grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(24px,3vw,48px)}.pcsec.pcsec:not(.is-live) .mo-pc__step{display:flex;flex-direction:column;gap:10px}.pcsec.pcsec:not(.is-live) .mo-pc__step .mo-pc__visual{order:-1;margin:0 0 8px}.pcsec.pcsec:not(.is-live) .mo-pc__visual>img{aspect-ratio:4/3;height:auto;max-height:none}.pcsec.pcsec:not(.is-live) .mo-pc__step h3{font-size:clamp(1.6rem,2.2vw,2.4rem)}.pcsec.pcsec:not(.is-live) .mo-pc__step>*{align-self:stretch}
-#dopyt>.wrap{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);column-gap:clamp(40px,5vw,80px);align-items:start}#dopyt>.wrap>.label,#dopyt>.wrap>h2,#dopyt>.wrap>.sub{grid-column:1/-1}#dopyt .faq{margin:0}#dopyt .ask{grid-template-columns:1fr;gap:24px}}
-/* codex 23.11 run 9: two big booking calls in a row ("Čas pre seba" then the dark block); the dark block now starts with address and hours */
-#visit>.wrap>.row{display:none}
-/* codex 23.11 run 10: on the phone the author's name in the top strip outshone the salon name; in the footer the "want such a site" offer got lost among service lines */
-.demo a{font-weight:400;color:rgba(241,231,218,.78);text-decoration:none}.demo .me{width:20px;height:20px}
-.fwant{margin:0 0 22px;padding-bottom:20px;border-bottom:1px solid rgba(241,231,218,.18);color:var(--cream);font-size:clamp(1.15rem,2.2vw,1.5rem);line-height:1.35;display:flex;flex-wrap:wrap;align-items:center;gap:10px 16px}.fwant span{flex:1 1 100%}.fwant .fwa{background:var(--cream);color:var(--night);padding:10px 20px;border-radius:999px;font-size:1rem;text-decoration:none}.fwant a{font-size:1rem}
-/* codex 23.11 run 11: empty band between the price list and the booking steps on PC; pale small captions; the marquee louder than the price heading */
-#services{padding-bottom:clamp(40px,5vh,64px)}#services+section{padding-top:clamp(32px,4vh,56px)}
-.menu small{color:#4f4239}
-.mq span{font-size:clamp(30px,4vw,56px)!important}
-/* codex 23.11 run 12: on the phone the full price list sat below a big photo and a marquee, with no colour price and no link to it; on PC prices sat far from the service names */
-@media(max-width:639px){.hero .btn.ghost{display:inline-flex}}
-@media(min-width:900px){.menu li{grid-template-columns:3rem minmax(0,26rem) auto 1fr}.menu li .bkb{justify-self:end}}
-/* 23.11 run 13: CLS 0.155 (score 89): price line and buttons rewrapped after the font loaded and pushed the photo; services repeated in the marquee on phones; descender of "y" clipped by the line mask */
-@media(max-width:639px){.hero .btns{flex-direction:column;align-items:flex-start}.hero .price{min-height:2lh}.mq{display:none}}
-.hero h1 .wow-l-mask{padding-bottom:.14em;margin-bottom:-.14em}
-/* codex 23.11 run 14: on the phone Anna and Olga were a full screen apart (big portrait + list each); now portrait beside name and services */
-@media(max-width:639px){#team .who{display:grid;grid-template-columns:38% minmax(0,1fr);gap:16px;align-items:start}#team .who h3{font-size:2.1rem;margin:0 0 4px}#team .who:nth-child(2){margin-top:32px}#team .ms li{padding:9px 0}}
 </style>
 <link rel="stylesheet" href="book.css">
 <style>.who{background:none;border-radius:0;display:block;overflow:visible;padding:0}.who>div{padding:0}</style>
 </head>
 <body data-progress data-grain>
-
-<div class="demo"><div class="wrap"><span data-i="demo"></span><span class="dsh" data-i="demos"></span><a data-back class="mel" href="../"><img class="me" src="../media/davyd-sunset-96.webp" width="96" height="96" alt=""><span data-i="back"></span></a></div></div>
+<div class="wow-loader" data-loader aria-hidden="true"><span class="ld-w">Studio <i>Bella</i></span><span class="ld-n" data-loader-n>0</span></div>
+<div class="demo"><div class="wrap"><span data-i="demo"></span><a data-back href="../" data-i="back"></a></div></div>
 <header data-hide-header><div class="wrap">
   <a class="mark" href="#top">Studio Bella</a>
   <nav><a class="wow-line" href="#services" data-i="n1"></a><a class="wow-line" href="#team" data-i="n2"></a><a class="wow-line" href="#visit" data-i="n3"></a></nav>
@@ -328,7 +290,7 @@ section:has(+.pcsec){padding-bottom:0}section:has(+.pcsec) .stmt{margin-bottom:0
   <div>
     <p class="eyebrow" data-reveal="self" data-i="eye"></p>
     <h1 data-split data-i="h1" data-at="<0.1"></h1>
-    <div>
+    <div data-reveal data-at="<0.5">
       <p class="lead" data-i="lead"></p>
       <p class="price" data-i="pr"></p>
       <div class="btns">
@@ -339,17 +301,18 @@ section:has(+.pcsec){padding-bottom:0}section:has(+.pcsec) .stmt{margin-bottom:0
     </div>
   </div>
   <div class="hpw">
-  <div class="hphoto">
-    <figure data-moment="liquid-hover" data-moment-opts='{"strength":0.6,"radius":0.16}'><img src="work-cut.webp" width="640" height="800" alt="" data-alt="g2" fetchpriority="high"></figure>
+  <div class="hphoto" data-clip data-at="0">
+    <figure data-moment="liquid-hover" data-moment-opts='{"strength":0.6,"radius":0.16}'><img src="work-cut.jpg" width="640" height="800" alt="" data-alt="g2" fetchpriority="high"></figure>
   </div>
-    <button class="badge" type="button" data-book data-magnetic aria-label="Book"><svg viewBox="0 0 132 132" aria-hidden="true"><defs><path id="c" d="M66,66 m-50,0 a50,50 0 1,1 100,0 a50,50 0 1,1 -100,0"/></defs><text><textPath href="#c" textLength="312" lengthAdjust="spacing">Studio Bella · Bratislava · Studio Bella · Bratislava ·</textPath></text></svg><b>B</b></button>
+    <button class="badge" type="button" data-book data-magnetic aria-label="Book"><svg viewBox="0 0 132 132" aria-hidden="true"><defs><path id="c" d="M66,66 m-50,0 a50,50 0 1,1 100,0 a50,50 0 1,1 -100,0"/></defs><text><textPath href="#c">Studio Bella · Bratislava · Studio Bella · Bratislava ·</textPath></text></svg><b>B</b></button>
   </div>
 </div>
 
 <div class="mq" data-marquee="38" aria-hidden="true"><div><span data-i="s1"></span><span data-i="s2"></span><span data-i="s3"></span><span data-i="s4"></span></div></div>
 
 <section id="services"><div class="wrap">
-    <h2 data-split data-i="sh"></h2>
+  <p class="label" data-i="n1"></p>
+  <h2 data-split data-i="sh"></h2>
   <p class="sub" data-reveal="self" data-i="ss"></p>
   <ul class="menu" data-reveal>
     <li data-svc="cut" data-float="work-cut.jpg"><div><h3 data-i="s1"></h3><small data-i="s1d"></small></div><span class="eur">25 €</span><button class="bkb" type="button" data-book="cut" data-i="bk"></button></li>
@@ -364,12 +327,12 @@ section:has(+.pcsec){padding-bottom:0}section:has(+.pcsec) .stmt{margin-bottom:0
   <p class="stmt" data-highlight data-i="hs"></p>
 </div></section>
 
-<section class="pcsec" data-moment="pinned-chapters" data-moment-opts='{"static":true}'><div class="wrap mo-pc__grid">
+<section class="pcsec" data-moment="pinned-chapters"><div class="wrap mo-pc__grid">
   <div class="mo-pc__text">
     <ol class="mo-pc__steps">
-      <li class="mo-pc__step"><h3><i>01</i> <span data-i="h1t"></span></h3><p><span data-i="h1p"></span></p><figure class="mo-pc__visual"><img src="work-color.jpg" width="640" height="800" loading="lazy" alt=""></figure></li>
-      <li class="mo-pc__step"><h3><i>02</i> <span data-i="h2t"></span></h3><p><span data-i="h2p"></span></p><figure class="mo-pc__visual"><img src="salon-interior.jpg" width="640" height="800" loading="lazy" alt=""></figure></li>
-      <li class="mo-pc__step"><h3><i>03</i> <span data-i="h3t"></span></h3><p><span data-i="h3p"></span></p><figure class="mo-pc__visual"><img src="salon-reception.jpg" width="640" height="800" loading="lazy" alt=""></figure></li>
+      <li class="mo-pc__step"><h3><i>01</i> <span data-i="h1t"></span></h3><p><span data-i="h1p"></span></p><figure class="mo-pc__visual"><img src="work-color.jpg" width="640" height="800" loading="lazy" decoding="async" alt=""></figure></li>
+      <li class="mo-pc__step"><h3><i>02</i> <span data-i="h2t"></span></h3><p><span data-i="h2p"></span></p><figure class="mo-pc__visual"><img src="team-anna.jpg" width="640" height="800" loading="lazy" decoding="async" alt=""></figure></li>
+      <li class="mo-pc__step"><h3><i>03</i> <span data-i="h3t"></span></h3><p><span data-i="h3p"></span></p><figure class="mo-pc__visual"><img src="salon-reception.jpg" width="640" height="800" loading="lazy" decoding="async" alt=""></figure></li>
     </ol>
   </div>
   <div class="mo-pc__visuals"></div>
@@ -379,17 +342,20 @@ section:has(+.pcsec){padding-bottom:0}section:has(+.pcsec) .stmt{margin-bottom:0
   <p class="label" data-i="n2"></p>
   <h2 data-split data-i="ts"></h2>
   <div class="team">
-    <div class="who"><div class="ph" data-cursor="Anna"><div data-parallax="0.12" style="height:100%"><img src="team-anna.jpg" width="640" height="800" loading="lazy" alt="" data-alt="m1a"></div></div><div><h3 data-i="m1"></h3><p data-i="m1p"></p><ul class="ms"><li><span data-i="s1"></span><button class="bkb" type="button" data-book="cut" data-staff="anna" data-i="bk"></button></li><li><span data-i="s2"></span><button class="bkb" type="button" data-book="color" data-staff="anna" data-i="bk"></button></li><li><span data-i="s4"></span><button class="bkb" type="button" data-book="brows" data-staff="anna" data-i="bk"></button></li></ul></div></div>
-    <div class="who"><div class="ph" data-cursor="Olga"><div data-parallax="0.12" style="height:100%"><img src="team-olga.jpg" width="640" height="800" loading="lazy" alt="" data-alt="m2a"></div></div><div><h3 data-i="m2"></h3><p data-i="m2p"></p><ul class="ms"><li><span data-i="s3"></span><button class="bkb" type="button" data-book="nails" data-staff="olga" data-i="bk"></button></li><li><span data-i="s4"></span><button class="bkb" type="button" data-book="brows" data-staff="olga" data-i="bk"></button></li></ul></div></div>
+    <div class="who"><div class="ph" data-clip data-cursor="Anna"><div data-parallax="0.12" style="height:100%"><img src="team-anna.jpg" width="640" height="800" loading="lazy" decoding="async" alt="" data-alt="m1a"></div></div><div><h3 data-i="m1"></h3><p data-i="m1p"></p><ul class="ms"><li><span data-i="s1"></span><button class="bkb" type="button" data-book="cut" data-staff="anna" data-i="bk"></button></li><li><span data-i="s2"></span><button class="bkb" type="button" data-book="color" data-staff="anna" data-i="bk"></button></li><li><span data-i="s4"></span><button class="bkb" type="button" data-book="brows" data-staff="anna" data-i="bk"></button></li></ul></div></div>
+    <div class="who"><div class="ph" data-clip data-cursor="Olga"><div data-parallax="0.12" style="height:100%"><img src="team-olga.jpg" width="640" height="800" loading="lazy" decoding="async" alt="" data-alt="m2a"></div></div><div><h3 data-i="m2"></h3><p data-i="m2p"></p><ul class="ms"><li><span data-i="s3"></span><button class="bkb" type="button" data-book="nails" data-staff="olga" data-i="bk"></button></li><li><span data-i="s4"></span><button class="bkb" type="button" data-book="brows" data-staff="olga" data-i="bk"></button></li></ul></div></div>
   </div>
 </div></section>
 
-<section id="gallery" class="galsec">
-  <div class="wrap"><p class="label" data-i="gh"></p><h2 data-split data-i="gs"></h2><p class="sub" data-i="gsn"></p></div>
+<section id="gallery" class="galsec" data-hscroll>
+  <div class="wrap"><p class="label" data-i="gh"></p><h2 data-split data-i="gs"></h2></div>
   <div class="track" data-hscroll-track role="region" aria-label="Galéria" data-al="gh" tabindex="0">
-    <figure data-zoom data-cursor="Bella" data-skew><img src="hero.jpg" width="640" height="800" loading="lazy" alt="" data-alt="s3"></figure>
-    <figure data-zoom data-cursor="Bella" data-skew><img src="work-brows.jpg" width="640" height="800" loading="lazy" alt="" data-alt="g4"></figure>
-    <figure data-zoom data-cursor="Bella" data-skew><img src="salon-wash.jpg" width="640" height="800" loading="lazy" alt="" data-alt="g6"></figure>
+    <figure data-zoom data-cursor="Bella" data-skew><img src="salon-interior.jpg" width="640" height="800" loading="lazy" decoding="async" alt="" data-alt="g1"></figure>
+    <figure data-zoom data-cursor="Bella" data-skew><img src="work-cut.jpg" width="640" height="800" loading="lazy" decoding="async" alt="" data-alt="g2"></figure>
+    <figure data-zoom data-cursor="Bella" data-skew><img src="work-color.jpg" width="640" height="800" loading="lazy" decoding="async" alt="" data-alt="g3"></figure>
+    <figure data-zoom data-cursor="Bella" data-skew><img src="work-brows.jpg" width="640" height="800" loading="lazy" decoding="async" alt="" data-alt="g4"></figure>
+    <figure data-zoom data-cursor="Bella" data-skew><img src="salon-reception.jpg" width="640" height="800" loading="lazy" decoding="async" alt="" data-alt="g5"></figure>
+    <figure data-zoom data-cursor="Bella" data-skew><img src="salon-wash.jpg" width="640" height="800" loading="lazy" decoding="async" alt="" data-alt="g6"></figure>
   </div>
 </section>
 
@@ -407,11 +373,10 @@ section:has(+.pcsec){padding-bottom:0}section:has(+.pcsec) .stmt{margin-bottom:0
   <div class="ask" data-reveal>
     <form class="q" id="fq" novalidate>
       <label><span data-i="fn"></span><input name="n" autocomplete="given-name" maxlength="60" required data-ph="pn"></label>
-      <label><span data-i="fc"></span><input name="c" autocomplete="tel" maxlength="60" required data-ph="pc"></label>
+      <label><span><span data-i="fc"></span> <small data-i="fcx"></small></span><input name="c" autocomplete="tel" maxlength="60" data-ph="pc"></label>
       <label><span data-i="fq"></span><textarea name="q" maxlength="500" required data-ph="pq"></textarea></label>
       <button class="btn" type="submit" data-i="fb" data-magnetic></button>
       <p class="done" id="fdone" aria-live="polite"></p>
-      <p class="note" data-i="onote"></p>
     </form>
     <div class="owner" id="owner">
       <h3 data-i="oh"></h3>
@@ -427,11 +392,12 @@ section:has(+.pcsec){padding-bottom:0}section:has(+.pcsec) .stmt{margin-bottom:0
           <thead><tr><th></th><th>A</th><th>B</th><th>C</th><th>D</th></tr></thead>
           <tbody id="rows">
             <tr class="hd"><td class="rn">1</td><td data-i="c1"></td><td data-i="c2"></td><td data-i="c3"></td><td data-i="c4"></td></tr>
-            <tr><td class="rn">2</td><td>20. 11. 10:12</td><td>Jana</td><td>+421 905 000 000</td><td data-i="r1"></td></tr>
-            <tr><td class="rn">3</td><td>21. 11. 18:47</td><td>Petra</td><td>—</td><td data-i="r2"></td></tr>
+            <tr><td class="rn">2</td><td>20.11 10:12</td><td>Jana</td><td>+421 905 000 000</td><td data-i="r1"></td></tr>
+            <tr><td class="rn">3</td><td>21.11 18:47</td><td>Petra</td><td>—</td><td data-i="r2"></td></tr>
           </tbody>
         </table>
       </div>
+      <p class="note" data-i="onote"></p>
     </div>
   </div>
 </div></section>
@@ -466,7 +432,7 @@ section:has(+.pcsec){padding-bottom:0}section:has(+.pcsec) .stmt{margin-bottom:0
   </div>
 </div></section>
 </main>
-<footer><div class="wrap"><p class="fwant"><span data-i="want"></span> <a class="fwa" href="https://wa.me/421910392871" target="_blank" rel="noopener">WhatsApp</a> <a href="tel:+421910392871">+421 910 392 871</a></p><span data-i="foot"></span> <a data-back class="mel" href="../"><img loading="lazy" class="me" src="../media/davyd-sunset-96.webp" width="96" height="96" alt=""><span data-i="back"></span></a><br>© 2026 Davyd Konstantinov<br><span class="legal"><span data-i="firm"></span> · <a href="ochrana.html" data-i="priv"></a></span></div></footer>
+<footer><div class="wrap"><span data-i="foot"></span> <a data-back href="../" data-i="back"></a><br><span data-i="want"></span> <a href="https://wa.me/421910392871" target="_blank" rel="noopener">WhatsApp</a> · <a href="tel:+421910392871">+421 910 392 871</a><br>© 2026 Davyd Konstantinov<br><span class="legal"><span data-i="firm"></span> · <a href="ochrana.html" data-i="priv"></a></span></div></footer>
 <div class="bar"><small class="isopen" data-open></small><button class="btn" type="button" data-book data-i="book"></button></div>
 <button class="fab" id="fab" type="button"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12a8 8 0 0 1-11.6 7.1L4 20l1-4.6A8 8 0 1 1 21 12z"/><path d="M9 11h.01M12.5 11h.01M16 11h.01"/></svg><span data-i="fab"></span></button>
 <div class="chat" id="chat" role="dialog" aria-labelledby="cht" hidden>
@@ -478,11 +444,11 @@ section:has(+.pcsec){padding-bottom:0}section:has(+.pcsec) .stmt{margin-bottom:0
 <script>
 const T={
 sk:{title:"Studio Bella: kaderníctvo a manikúra v Bratislave",desc:"Ukážková stránka salónu: služby, ceny a online rezervácia priamo na webe.",
-demos:"Ukážka webu.",demo:"Ukážka webu. Salón je vymyslený, ale rezervácia aj panel majiteľa naozaj fungujú.",back:"Web vytvoril Davyd Konstantinov",
+demo:"Ukážka webu. Salón je vymyslený, ale rezervácia aj panel majiteľa naozaj fungujú.",back:"Web vytvoril Davyd Konstantinov",
 n1:"Služby a ceny",n2:"Kto vás obslúži",n3:"Kde nás nájdete",
 eye:"Salón krásy · Bratislava, Staré Mesto",h1:"Strih, farba, manikúra a obočie v centre Bratislavy",
 lead:"Termín si vyberiete sami za minútu, bez volania a bez registrácie. Rezervácia je potvrdená hneď.",
-book:"Rezervovať online",see:"Služby a ceny",hours:"po–so 9:00–19:00",langs:"Hovoríme po slovensky, ukrajinsky, rusky aj anglicky",alt:"Manikúra v salóne Studio Bella",
+book:"Rezervovať online",see:"Služby a ceny",hours:"Po–So 9:00–19:00",langs:"Hovoríme po slovensky, ukrajinsky, rusky aj anglicky",alt:"Manikúra v salóne Studio Bella",
 sh:"Služby a ceny",ss:"Cena je konečná. Ak si služba vyžiada viac času alebo materiálu, povieme vám to vopred.",
 s1:"Strih",s1d:"60 minút · Anna",s2:"Farbenie",s2d:"120 minút · Anna",s3:"Manikúra",s3d:"90 minút · Oľga",s4:"Obočie",s4d:"30 minút · Oľga",bk:"Rezervovať",
 gt:"Čas pre seba",gtp:"Hodina v kresle, keď nemusíte na nič myslieť.",hh:"Ako prebieha rezervácia",hs:"Rezervovať sa dá aj o desiatej večer a nikto pritom nemusí dvíhať telefón.",
@@ -492,10 +458,10 @@ h3t:"Potvrdíme a pripomenieme",h3p:"Napíšete meno a telefón a rezervácia je
 th:"Kto vás obslúži",ts:"Sme dve. Ku komu pôjdete, závisí od služby.",
 m1:"Anna",m1p:"Strihy a farbenie",m2:"Oľga",m2p:"Manikúra a obočie",
 vh:"Kde nás nájdete",vs:"V Starom Meste, pár minút pešo od zastávky.",v1:"Adresa",v2:"Otvorené",v3:"Nedeľa",sun:"zatvorené",
-ch:"Voľný termín ešte tento týždeň",cp:"Pozrite si voľné časy a rezervujte si termín bez volania.",
+ch:"Voľný termín ešte tento týždeň",cp:"Pozrite si voľné časy a rezervujte sa bez volania.",
 foot:"Toto je ukážka webu pre malý salón. Salón, adresa a mená sú vymyslené."},
 uk:{title:"Studio Bella: стрижка, фарбування та манікюр у Братиславі",desc:"Приклад сайту салону: послуги, ціни та онлайн-запис прямо на сайті.",
-demos:"Приклад сайту.",demo:"Приклад сайту. Салон вигаданий, але запис і панель власника справді працюють.",back:"Сайт зробив Давид Константінов",
+demo:"Приклад сайту. Салон вигаданий, але запис і панель власника справді працюють.",back:"Сайт зробив Давид Константінов",
 n1:"Послуги та ціни",n2:"Майстри",n3:"Як нас знайти",
 eye:"Салон краси · Братислава, Старе Місто",h1:"Стрижка, фарбування, манікюр і брови в центрі Братислави",
 lead:"Час обираєте самі за хвилину, без дзвінків і без реєстрації. Запис підтверджується одразу.",
@@ -512,7 +478,7 @@ vh:"Як нас знайти",vs:"У Старому Місті, кілька х�
 ch:"Вільний час ще цього тижня",cp:"Подивіться вільні вікна та запишіться без дзвінка.",
 foot:"Це приклад сайту для невеликого салону. Салон, адреса та імена вигадані."},
 ru:{title:"Studio Bella: стрижка, окрашивание и маникюр в Братиславе",desc:"Пример сайта салона: услуги, цены и онлайн-запись прямо на сайте.",
-demos:"Пример сайта.",demo:"Пример сайта. Салон выдуманный, но запись и панель владельца работают по-настоящему.",back:"Сайт сделал Давид Константинов",
+demo:"Пример сайта. Салон выдуманный, но запись и панель владельца работают по-настоящему.",back:"Сайт сделал Давид Константинов",
 n1:"Услуги и цены",n2:"Мастера",n3:"Как нас найти",
 eye:"Салон красоты · Братислава, Старый город",h1:"Стрижка, окрашивание, маникюр и брови в центре Братиславы",
 lead:"Время выбираете сами за минуту, без звонков и регистрации. Запись подтверждается сразу.",
@@ -529,7 +495,7 @@ vh:"Как нас найти",vs:"В Старом городе, пара мин�
 ch:"Свободное время ещё на этой неделе",cp:"Посмотрите свободные окна и запишитесь без звонка.",
 foot:"Это пример сайта для небольшого салона. Салон, адрес и имена выдуманы."},
 en:{title:"Studio Bella: hair, nails and brows in Bratislava",desc:"A sample salon website: services, prices and online booking right on the site.",
-demos:"Sample website.",demo:"Sample website. The salon is made up, but the booking and the owner's panel really work.",back:"Website by Davyd Konstantinov",
+demo:"Sample website. The salon is made up, but the booking and the owner's panel really work.",back:"Website by Davyd Konstantinov",
 n1:"Services and prices",n2:"Who you'll see",n3:"Find us",
 eye:"Beauty salon · Bratislava Old Town",h1:"Haircuts, colour, manicure and brows in central Bratislava",
 lead:"Pick your own time in a minute, with no phone calls and no sign-up. Your booking is confirmed straight away.",
@@ -546,37 +512,37 @@ vh:"Find us",vs:"In the Old Town, a few minutes on foot from the stop.",v1:"Addr
 ch:"Free slots still available this week",cp:"See the free times and book without calling.",
 foot:"This is a sample website for a small salon. The salon, address and names are made up."}};
 // 2026-11-22: question form (demo of "enquiries to Telegram + sheet") and FAQ auto-replies
-Object.assign(T.sk,{qh:"Máte otázku? Napíšte nám",qs:"Meno, kontakt a otázka. Recepčná vám odpovie ešte v ten deň.",
-fn:"Meno",fc:"Telefón alebo e-mail",fcx:"(nepovinné)",fq:"Otázka",fb:"Odoslať otázku",fok:"Odoslané. Pozrite sa, čo práve prišlo do salónu.",fneed:"Doplňte meno, telefón alebo e-mail a otázku.",
+Object.assign(T.sk,{qh:"Máte otázku? Napíšte nám",qs:"Stačí meno a otázka. Recepčná vám odpovie ešte v ten deň.",
+fn:"Meno",fc:"Telefón alebo e-mail",fcx:"(nepovinné)",fq:"Otázka",fb:"Odoslať otázku",fok:"Odoslané. Pozrite sa, čo práve prišlo do salónu.",fneed:"Doplňte meno a otázku.",
 pn:"Mária",pc:"+421 … alebo meno@email.sk",pq:"Striháte aj deti?",
-oh:"Pre majiteľa salónu: ukážka prijatej otázky",ow:"Po odoslaní formulára sa tu objaví správa.",obot:"dopyty z webu",onew:"Nová otázka z webu",on:"Meno",oc:"Kontakt",oq:"Otázka",onone:"neuvedený",
+oh:"Toto salón dostane hneď po odoslaní otázky",ow:"Po odoslaní formulára sa tu objaví správa.",obot:"dopyty z webu",onew:"Nová otázka z webu",on:"Meno",oc:"Kontakt",oq:"Otázka",onone:"neuvedený",
 stitle:"Dopyty z webu",c1:"Dátum",c2:"Meno",c3:"Kontakt",c4:"Otázka",r1:"Máte voľno v sobotu ráno?",r2:"Koľko stojí farbenie dlhých vlasov?",
 onote:"Toto je ukážka. Z tejto stránky sa nič neodosiela. Na skutočnom webe príde otázka majiteľovi na e-mail alebo do Telegramu a do jeho tabuľky Google sa pridá riadok.",
 fab:"Opýtať sa",ws:"Automatické odpovede · ukážka",wph:"Napíšte otázku…",wsend:"Poslať",wclose:"Zavrieť",
 w0:"Dobrý deň! Opýtajte sa na ceny, otváracie hodiny, adresu alebo voľné termíny. Odpoviem v jazyku, v ktorom napíšete.",
 chips:["Koľko stojí manikúra?","Máte otvorené v nedeľu?","Kde vás nájdem?","Скільки коштує фарбування?"]});
-Object.assign(T.uk,{qh:"Маєте запитання? Напишіть нам",qs:"Ім’я, контакт і запитання. Адміністраторка відповість того ж дня.",
-fn:"Ім’я",fc:"Телефон або e-mail",fcx:"(необов’язково)",fq:"Запитання",fb:"Надіслати запитання",fok:"Надіслано. Подивіться, що щойно отримав салон.",fneed:"Вкажіть ім’я, телефон або e-mail і запитання.",
+Object.assign(T.uk,{qh:"Маєте запитання? Напишіть нам",qs:"Досить імені та запитання. Адміністраторка відповість того ж дня.",
+fn:"Ім’я",fc:"Телефон або e-mail",fcx:"(необов’язково)",fq:"Запитання",fb:"Надіслати запитання",fok:"Надіслано. Подивіться, що щойно отримав салон.",fneed:"Вкажіть ім’я та напишіть запитання.",
 pn:"Марія",pc:"+421 … або name@email.sk",pq:"Ви стрижете й дітей?",
-oh:"Для власника салону: приклад отриманого запитання",ow:"Після надсилання форми тут з’явиться повідомлення.",obot:"звернення із сайту",onew:"Нове запитання із сайту",on:"Ім’я",oc:"Контакт",oq:"Запитання",onone:"не вказано",
+oh:"Ось що салон отримає одразу після надсилання запитання",ow:"Після надсилання форми тут з’явиться повідомлення.",obot:"звернення із сайту",onew:"Нове запитання із сайту",on:"Ім’я",oc:"Контакт",oq:"Запитання",onone:"не вказано",
 stitle:"Звернення із сайту",c1:"Дата",c2:"Ім’я",c3:"Контакт",c4:"Запитання",r1:"Чи можна записатися на суботу зранку?",r2:"Скільки коштує фарбування довгого волосся?",
 onote:"Це приклад. Із цієї сторінки нічого не надсилається. На робочому сайті питання приходить власникові на пошту або в Telegram, а в його Google-таблицю додається рядок.",
 fab:"Запитати",ws:"Автовідповіді · приклад",wph:"Напишіть запитання…",wsend:"Надіслати",wclose:"Закрити",
 w0:"Добрий день! Запитайте про ціни, години роботи, адресу чи вільний час для запису. Відповім тією мовою, якою ви напишете.",
 chips:["Скільки коштує манікюр?","Ви працюєте в неділю?","Де вас знайти?","Koľko stojí strih?"]});
-Object.assign(T.ru,{qh:"Есть вопрос? Напишите нам",qs:"Имя, контакт и вопрос. Администратор ответит в тот же день.",
-fn:"Имя",fc:"Телефон или e-mail",fcx:"(необязательно)",fq:"Вопрос",fb:"Отправить вопрос",fok:"Отправлено. Посмотрите, что сейчас получил салон.",fneed:"Укажите имя, телефон или e-mail и вопрос.",
+Object.assign(T.ru,{qh:"Есть вопрос? Напишите нам",qs:"Достаточно имени и вопроса. Администратор ответит в тот же день.",
+fn:"Имя",fc:"Телефон или e-mail",fcx:"(необязательно)",fq:"Вопрос",fb:"Отправить вопрос",fok:"Отправлено. Посмотрите, что сейчас получил салон.",fneed:"Укажите имя и вопрос.",
 pn:"Мария",pc:"+421 … или name@email.sk",pq:"Вы стрижёте детей?",
-oh:"Для владельца салона: пример полученного вопроса",ow:"После отправки формы здесь появится сообщение.",obot:"заявки с сайта",onew:"Новый вопрос с сайта",on:"Имя",oc:"Контакт",oq:"Вопрос",onone:"не указан",
+oh:"Вот что в эту минуту получает салон",ow:"После отправки формы здесь появится сообщение.",obot:"заявки с сайта",onew:"Новый вопрос с сайта",on:"Имя",oc:"Контакт",oq:"Вопрос",onone:"не указан",
 stitle:"Заявки с сайта",c1:"Дата",c2:"Имя",c3:"Контакт",c4:"Вопрос",r1:"Есть свободное время в субботу утром?",r2:"Сколько стоит окрашивание длинных волос?",
 onote:"Это пример: с этой страницы ничего никуда не отправляется. На настоящем сайте вопрос приходит владельцу на почту или в Telegram, а в его Google-таблицу добавляется строка.",
 fab:"Спросить",ws:"Автоответы · пример",wph:"Напишите вопрос…",wsend:"Отправить",wclose:"Закрыть",
 w0:"Здравствуйте! Спросите про цены, часы работы, адрес или свободное время. Отвечу на том языке, на котором вы напишете.",
 chips:["Сколько стоит маникюр?","Вы работаете в воскресенье?","Где вас найти?","How much is a haircut?"]});
-Object.assign(T.en,{qh:"Got a question? Write to us",qs:"Your name, a contact and your question. Our receptionist will reply the same day.",
-fn:"Name",fc:"Phone or email",fcx:"(optional)",fq:"Question",fb:"Send question",fok:"Sent. Have a look at what the salon just received.",fneed:"Please add your name, phone or email and question.",
+Object.assign(T.en,{qh:"Got a question? Write to us",qs:"Just enter your name and question. Our receptionist will reply the same day.",
+fn:"Name",fc:"Phone or email",fcx:"(optional)",fq:"Question",fb:"Send question",fok:"Sent. Have a look at what the salon just received.",fneed:"Please add your name and question.",
 pn:"Maria",pc:"+421 … or name@email.sk",pq:"Do you cut children's hair?",
-oh:"For the salon owner: a sample of a received question",ow:"A message appears here once you send the form.",obot:"website enquiries",onew:"New question from the website",on:"Name",oc:"Contact",oq:"Question",onone:"not given",
+oh:"What the salon receives as soon as you submit your question",ow:"A message appears here once you send the form.",obot:"website enquiries",onew:"New question from the website",on:"Name",oc:"Contact",oq:"Question",onone:"not given",
 stitle:"Website enquiries",c1:"Date",c2:"Name",c3:"Contact",c4:"Question",r1:"Do you have any appointments available on Saturday morning?",r2:"How much does it cost to colour long hair?",
 onote:"This is a demo. Nothing is sent from this page. On a live website, the question goes to the owner by email or Telegram and a row is added to their Google Sheet.",
 fab:"Ask a question",ws:"Automatic replies · demo",wph:"Type a question…",wsend:"Send",wclose:"Close",
@@ -584,10 +550,10 @@ w0:"Hello! Ask about prices, opening hours, the address or free slots. I reply i
 chips:["How much is a manicure?","Are you open on Sunday?","Where are you?","Скільки коштує фарбування?"]});
 // answers of the auto-reply, one set per language (data = the price list and hours above)
 // 2026-11-22: online booking on the site, gallery, contacts
-Object.assign(T.sk,{"gh": "Ako to u nás vyzerá", "gs": "Svetlý salón s dvoma pracovnými miestami.", "gsn": "Fotografie sú ilustračné.", "g1": "Salón so zrkadlom a kreslom", "g2": "Rovný strih po plecia", "g3": "Príprava farby na farbenie", "g4": "Nástroje na úpravu obočia", "v4": "Telefón", "v5": "Zrušenie", "canc": "Kedykoľvek, cez odkaz z potvrdenia", "map": "Otvoriť v mapách", "firm": "Ukážkové firemné údaje: Studio Bella s. r. o., IČO 00 000 000, Hlavná 1, 811 01 Bratislava", "priv": "Ochrana osobných údajov"});
-Object.assign(T.uk,{"gh": "Як у нас", "gs": "Світлий салон на два робочі місця.", "gsn": "Фото ілюстративні.", "g1": "Салон із дзеркалом і кріслом", "g2": "Рівна стрижка до плечей", "g3": "Підготовка фарби для фарбування", "g4": "Інструменти для оформлення брів", "v4": "Телефон", "v5": "Скасування", "canc": "Будь-коли, за посиланням із підтвердження", "map": "Відкрити на мапі", "firm": "Зразок реквізитів: Studio Bella s. r. o., IČO 00 000 000, Hlavná 1, 811 01 Bratislava", "priv": "Захист персональних даних"});
-Object.assign(T.ru,{"gh": "Как у нас", "gs": "Светлый салон на два рабочих места.", "gsn": "Фото иллюстративные.", "g1": "Салон с зеркалом и креслом", "g2": "Ровная стрижка до плеч", "g3": "Подготовка краски для окрашивания", "g4": "Инструменты для оформления бровей", "v4": "Телефон", "v5": "Отмена", "canc": "В любой момент, по ссылке из подтверждения", "map": "Открыть в картах", "firm": "Образец реквизитов: Studio Bella s. r. o., IČO 00 000 000, Hlavná 1, 811 01 Bratislava", "priv": "Защита персональных данных"});
-Object.assign(T.en,{"gh": "Inside the salon", "gs": "A bright salon with two workstations.", "gsn": "The photos are illustrative.", "g1": "The salon with a mirror and a styling chair", "g2": "A straight shoulder-length cut", "g3": "Hair colour being mixed", "g4": "Brow tools", "v4": "Phone", "v5": "Cancelling", "canc": "Any time, via the link in your confirmation", "map": "Open in maps", "firm": "Sample company details: Studio Bella s. r. o., IČO 00 000 000, Hlavná 1, 811 01 Bratislava", "priv": "Privacy policy"});
+Object.assign(T.sk,{"gh": "Ako to u nás vyzerá", "gs": "Svetlý salón s dvoma pracovnými miestami. Fotografie sú ilustračné.", "g1": "Salón so zrkadlom a kreslom", "g2": "Rovný strih po plecia", "g3": "Príprava farby na farbenie", "g4": "Nástroje na úpravu obočia", "v4": "Telefón", "v5": "Zrušenie", "canc": "Kedykoľvek, cez odkaz z potvrdenia", "map": "Otvoriť v mapách", "firm": "Ukážkové firemné údaje: Studio Bella s. r. o., IČO 00 000 000, Hlavná 1, 811 01 Bratislava", "priv": "Ochrana osobných údajov"});
+Object.assign(T.uk,{"gh": "Як у нас", "gs": "Світлий салон на два робочі місця. Фото ілюстративні.", "g1": "Салон із дзеркалом і кріслом", "g2": "Рівна стрижка до плечей", "g3": "Підготовка фарби для фарбування", "g4": "Інструменти для оформлення брів", "v4": "Телефон", "v5": "Скасування", "canc": "Будь-коли, за посиланням із підтвердження", "map": "Відкрити на мапі", "firm": "Зразок реквізитів: Studio Bella s. r. o., IČO 00 000 000, Hlavná 1, 811 01 Bratislava", "priv": "Захист персональних даних"});
+Object.assign(T.ru,{"gh": "Как у нас", "gs": "Светлый салон на два рабочих места. Фото иллюстративные.", "g1": "Салон с зеркалом и креслом", "g2": "Ровная стрижка до плеч", "g3": "Подготовка краски для окрашивания", "g4": "Инструменты для оформления бровей", "v4": "Телефон", "v5": "Отмена", "canc": "В любой момент, по ссылке из подтверждения", "map": "Открыть в картах", "firm": "Образец реквизитов: Studio Bella s. r. o., IČO 00 000 000, Hlavná 1, 811 01 Bratislava", "priv": "Защита персональных данных"});
+Object.assign(T.en,{"gh": "Inside the salon", "gs": "A bright salon with two workstations. The photos are illustrative.", "g1": "The salon with a mirror and a styling chair", "g2": "A straight shoulder-length cut", "g3": "Hair colour being mixed", "g4": "Brow tools", "v4": "Phone", "v5": "Cancelling", "canc": "Any time, via the link in your confirmation", "map": "Open in maps", "firm": "Sample company details: Studio Bella s. r. o., IČO 00 000 000, Hlavná 1, 811 01 Bratislava", "priv": "Privacy policy"});
 const A={
 sk:{cut:"Strih stojí 25 € a trvá 60 minút. Strihá Anna.",color:"Farbenie stojí 60 € a trvá 120 minút. Robí ho Anna.",nails:"Manikúra stojí 30 € a trvá 90 minút. Robí ju Oľga.",brows:"Úprava obočia u Oľgy stojí 15 € a trvá 30 minút.",
 list:"Strih 25 €, farbenie 60 €, manikúra 30 €, úprava obočia 15 €. Ceny sú konečné.",hours:"Otvorené máme od pondelka do soboty, 9:00–19:00. V nedeľu je zatvorené.",
@@ -640,8 +606,8 @@ const pad=n=>String(n).padStart(2,'0');
 fq.addEventListener('submit',ev=>{
   ev.preventDefault();
   const n=fq.n.value.trim(),c=fq.c.value.trim(),q=fq.q.value.trim();
-  if(!n||!c||!q){$('fdone').textContent=T[cur].fneed;(!n?fq.n:!c?fq.c:fq.q).focus();return}
-  const d=new Date(),stamp=d.getDate()+'. '+(d.getMonth()+1)+'. '+pad(d.getHours())+':'+pad(d.getMinutes());
+  if(!n||!q){$('fdone').textContent=T[cur].fneed;(n?fq.q:fq.n).focus();return}
+  const d=new Date(),stamp=pad(d.getDate())+'.'+pad(d.getMonth()+1)+' '+pad(d.getHours())+':'+pad(d.getMinutes());
   $('tn').textContent=n;$('tq').textContent=q;$('tt').textContent=stamp;
   if(c){$('tc').textContent=c;delete $('tc').dataset.none}else{$('tc').textContent=T[cur].onone;$('tc').dataset.none='1'}
   const ow=$('owner');ow.classList.remove('got');void ow.offsetWidth;ow.classList.add('got');
@@ -735,7 +701,7 @@ document.querySelectorAll('[data-set]').forEach(b=>b.onclick=()=>setLang(b.datas
 let saved='';try{saved=localStorage.lang}catch(e){}
 const bl=(navigator.language||'').slice(0,2);
 Object.assign(T.sk,{"g5": "Recepcia so sušenými kvetmi", "g6": "Umývadlo na vlasy", "m1a": "Anna pri práci", "m2a": "Oľga pri manikúrovom stolíku"});Object.assign(T.uk,{"g5": "Рецепція із сухоцвітами", "g6": "Мийка для волосся", "m1a": "Анна за роботою", "m2a": "Ольга за манікюрним столиком"});Object.assign(T.ru,{"g5": "Ресепшен с сухоцветами", "g6": "Мойка для волос", "m1a": "Анна за работой", "m2a": "Ольга за маникюрным столиком"});Object.assign(T.en,{"g5": "Reception with dried flowers", "g6": "Hair wash basin", "m1a": "Anna at work", "m2a": "Olga at the manicure table"});
-Object.assign(T.sk,{"pr": "Strih 25 € · Farbenie 60 € · Manikúra 30 € · Obočie 15 €", "faqh": "Časté otázky", "q1": "Koľko stojí farbenie dlhých vlasov?", "a1": "Cena v cenníku je konečná aj pre dlhé vlasy. Ak by bolo treba viac farby, povieme vám to ešte pred začatím.", "q2": "Dá sa rezervácia zrušiť alebo presunúť?", "a2": "Áno, kedykoľvek a zadarmo, cez odkaz v potvrdení. Netreba volať.", "q3": "Platí sa vopred?", "a3": "Nie. Platíte až v salóne, kartou alebo v hotovosti.", "q4": "Čo ak budem meškať?", "a4": "Napíšte nám. Meškanie do 15 minút zvládneme, inak vám termín bezplatne presunieme.", "canc": "Zadarmo, kedykoľvek cez odkaz z potvrdenia", "want": "Chcete taký web pre svoj podnik?"});Object.assign(T.uk,{"pr": "Стрижка 25 € · Фарбування 60 € · Манікюр 30 € · Брови 15 €", "faqh": "Часті питання", "q1": "Скільки коштує фарбування довгого волосся?", "a1": "Ціна в прайсі остаточна й для довгого волосся. Якщо знадобиться більше фарби, скажемо ще до початку.", "q2": "Чи можна скасувати або перенести запис?", "a2": "Так, будь-коли й безкоштовно, за посиланням у підтвердженні. Дзвонити не треба.", "q3": "Чи треба платити наперед?", "a3": "Ні. Платите вже в салоні, карткою або готівкою.", "q4": "А якщо я запізнюся?", "a4": "Напишіть нам. Запізнення до 15 хвилин не страшне, інакше безкоштовно перенесемо запис.", "canc": "Безкоштовно, будь-коли за посиланням із підтвердження", "want": "Хочете такий сайт для свого бізнесу?"});Object.assign(T.ru,{"pr": "Стрижка 25 € · Окрашивание 60 € · Маникюр 30 € · Брови 15 €", "faqh": "Частые вопросы", "q1": "Сколько стоит окрашивание длинных волос?", "a1": "Цена в прайсе окончательная и для длинных волос. Если понадобится больше краски, скажем ещё до начала.", "q2": "Можно отменить или перенести запись?", "a2": "Да, в любой момент и бесплатно, по ссылке в подтверждении. Звонить не нужно.", "q3": "Нужно платить заранее?", "a3": "Нет. Платите уже в салоне, картой или наличными.", "q4": "А если я опоздаю?", "a4": "Напишите нам. Опоздание до 15 минут не страшно, иначе бесплатно перенесём запись.", "canc": "Бесплатно, в любой момент по ссылке из подтверждения", "want": "Хотите такой сайт для своего бизнеса?"});Object.assign(T.en,{"pr": "Haircut 25 € · Colour 60 € · Manicure 30 € · Brows 15 €", "faqh": "Common questions", "q1": "How much is colour for long hair?", "a1": "The menu price is final, long hair included. If you need extra colour, we tell you before we start.", "q2": "Can I cancel or move my booking?", "a2": "Yes, any time and free of charge, through the link in your confirmation. No need to call.", "q3": "Do I pay in advance?", "a3": "No. You pay at the salon, by card or in cash.", "q4": "What if I'm running late?", "a4": "Send us a message. Up to 15 minutes late is fine; otherwise we move your booking at no charge.", "canc": "Free, any time via the link in your confirmation", "want": "Want a website like this for your business?"});
+Object.assign(T.sk,{"pr": "Strih 25 € · Manikúra 30 € · Obočie 15 €", "faqh": "Časté otázky", "q1": "Koľko stojí farbenie dlhých vlasov?", "a1": "Cena v cenníku je konečná aj pre dlhé vlasy. Ak by bolo treba viac farby, povieme vám to ešte pred začatím.", "q2": "Dá sa rezervácia zrušiť alebo presunúť?", "a2": "Áno, kedykoľvek a zadarmo, cez odkaz v potvrdení. Netreba volať.", "q3": "Platí sa vopred?", "a3": "Nie. Platíte až v salóne, kartou alebo v hotovosti.", "q4": "Čo ak budem meškať?", "a4": "Napíšte nám. Meškanie do 15 minút zvládneme, inak vám termín bezplatne presunieme.", "canc": "Zadarmo, kedykoľvek cez odkaz z potvrdenia", "want": "Chcete taký web pre svoj podnik?"});Object.assign(T.uk,{"pr": "Стрижка 25 € · Манікюр 30 € · Брови 15 €", "faqh": "Часті питання", "q1": "Скільки коштує фарбування довгого волосся?", "a1": "Ціна в прайсі остаточна й для довгого волосся. Якщо знадобиться більше фарби, скажемо ще до початку.", "q2": "Чи можна скасувати або перенести запис?", "a2": "Так, будь-коли й безкоштовно, за посиланням у підтвердженні. Дзвонити не треба.", "q3": "Чи треба платити наперед?", "a3": "Ні. Платите вже в салоні, карткою або готівкою.", "q4": "А якщо я запізнюся?", "a4": "Напишіть нам. Запізнення до 15 хвилин не страшне, інакше безкоштовно перенесемо запис.", "canc": "Безкоштовно, будь-коли за посиланням із підтвердження", "want": "Хочете такий сайт для свого бізнесу?"});Object.assign(T.ru,{"pr": "Стрижка 25 € · Маникюр 30 € · Брови 15 €", "faqh": "Частые вопросы", "q1": "Сколько стоит окрашивание длинных волос?", "a1": "Цена в прайсе окончательная и для длинных волос. Если понадобится больше краски, скажем ещё до начала.", "q2": "Можно отменить или перенести запись?", "a2": "Да, в любой момент и бесплатно, по ссылке в подтверждении. Звонить не нужно.", "q3": "Нужно платить заранее?", "a3": "Нет. Платите уже в салоне, картой или наличными.", "q4": "А если я опоздаю?", "a4": "Напишите нам. Опоздание до 15 минут не страшно, иначе бесплатно перенесём запись.", "canc": "Бесплатно, в любой момент по ссылке из подтверждения", "want": "Хотите такой сайт для своего бизнеса?"});Object.assign(T.en,{"pr": "Haircut 25 € · Manicure 30 € · Brows 15 €", "faqh": "Common questions", "q1": "How much is colour for long hair?", "a1": "The menu price is final, long hair included. If you need extra colour, we tell you before we start.", "q2": "Can I cancel or move my booking?", "a2": "Yes, any time and free of charge, through the link in your confirmation. No need to call.", "q3": "Do I pay in advance?", "a3": "No. You pay at the salon, by card or in cash.", "q4": "What if I'm running late?", "a4": "Send us a message. Up to 15 minutes late is fine; otherwise we move your booking at no charge.", "canc": "Free, any time via the link in your confirmation", "want": "Want a website like this for your business?"});
 setLang(new URLSearchParams(location.search).get('lang')||saved||(['en','ru','uk'].includes(bl)?bl:'sk'));
 if(new URLSearchParams(location.search).has('chat')||location.hash==='#chat')openChat();
 window.T0=T;
@@ -748,8 +714,6 @@ window.T0=T;
 <script defer src="lib/SplitText.min.js"></script>
 <script defer src="lib/lenis.min.js"></script>
 <script defer src="lib/wow.js"></script>
-<script>/* phones have no hover: skip the WebGL water (it also held the first photo's paint, LCP 2.6 s) */if(innerWidth<900||!matchMedia('(hover:hover)').matches)document.querySelectorAll('[data-moment=liquid-hover]').forEach(e=>e.removeAttribute('data-moment'));
-/* owner's preview folds on phones: disclosure button after W3C APG disclosure-button.js */document.querySelectorAll('.owner>h3').forEach(h=>{h.tabIndex=0;h.setAttribute('role','button');h.setAttribute('aria-expanded','false');const t=()=>h.setAttribute('aria-expanded',h.parentNode.classList.toggle('open'));h.addEventListener('click',t);h.addEventListener('keydown',e=>(e.key=='Enter'||e.key==' ')&&(e.preventDefault(),t()))})</script>
 <script>document.documentElement.classList.add('mo-js');setTimeout(()=>document.documentElement.classList.add('mo-safe'),2500)</script>
 <script type="module" src="lib/moments/moments.js"></script>
 <script>document.querySelectorAll('[data-set]').forEach(b=>b.addEventListener('click',()=>setTimeout(()=>window.wow&&wow.resplit(),0)))</script>
