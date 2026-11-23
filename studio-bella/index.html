@@ -331,7 +331,7 @@ html,body{overflow-x:clip}
 <section class="pcsec" data-moment="pinned-chapters"><div class="wrap mo-pc__grid">
   <div class="mo-pc__text">
     <ol class="mo-pc__steps">
-      <li class="mo-pc__step"><h3><i>01</i> <span data-i="h1t"></span></h3><p><span data-i="h1p"></span></p><figure class="mo-pc__visual"><img src="work-color.webp" width="640" height="800" loading="lazy" decoding="async" alt=""></figure></li>
+      <li class="mo-pc__step"><h3><i>01</i> <span data-i="h1t"></span></h3><p><span data-i="h1p"></span></p><figure class="mo-pc__visual"><img data-src="work-color.webp" width="640" height="800" decoding="async" alt=""></figure></li>
       <li class="mo-pc__step"><h3><i>02</i> <span data-i="h2t"></span></h3><p><span data-i="h2p"></span></p><figure class="mo-pc__visual"><img src="team-anna.jpg" width="640" height="800" loading="lazy" decoding="async" alt=""></figure></li>
       <li class="mo-pc__step"><h3><i>03</i> <span data-i="h3t"></span></h3><p><span data-i="h3p"></span></p><figure class="mo-pc__visual"><img src="salon-reception.jpg" width="640" height="800" loading="lazy" decoding="async" alt=""></figure></li>
     </ol>
@@ -352,7 +352,7 @@ html,body{overflow-x:clip}
   <div class="wrap"><p class="label" data-i="gh"></p><h2 data-split data-i="gs"></h2></div>
   <div class="track" data-hscroll-track role="region" aria-label="Galéria" data-al="gh" tabindex="0">
     <figure data-zoom data-cursor="Bella" data-skew><img src="salon-interior.jpg" width="640" height="800" loading="lazy" decoding="async" alt="" data-alt="g1"></figure>
-    <figure data-zoom data-cursor="Bella" data-skew><img src="work-cut.jpg" width="640" height="800" loading="lazy" decoding="async" alt="" data-alt="g2"></figure>
+    <figure data-zoom data-cursor="Bella" data-skew><img src="work-cut.webp" width="640" height="800" loading="lazy" decoding="async" alt="" data-alt="g2"></figure>
     <figure data-zoom data-cursor="Bella" data-skew><img src="work-color.webp" width="640" height="800" loading="lazy" decoding="async" alt="" data-alt="g3"></figure>
     <figure data-zoom data-cursor="Bella" data-skew><img src="work-brows.jpg" width="640" height="800" loading="lazy" decoding="async" alt="" data-alt="g4"></figure>
     <figure data-zoom data-cursor="Bella" data-skew><img src="salon-reception.jpg" width="640" height="800" loading="lazy" decoding="async" alt="" data-alt="g5"></figure>
@@ -712,7 +712,7 @@ window.T0=T;
 <script defer src="book.js"></script>
 <script>document.documentElement.classList.add('mo-js');setTimeout(()=>document.documentElement.classList.add('mo-safe'),2500)</script>
 <script>/* 23.11: motion libraries load right after the page has painted (as on the main page), so the first-screen photo no longer waits for them; same order, same motion */
-addEventListener('load',()=>setTimeout(()=>{['gsap.min.js','ScrollTrigger.min.js','SplitText.min.js','lenis.min.js','wow.js'].forEach(f=>{const e=document.createElement('script');e.src='lib/'+f;e.async=false;if(f=='wow.js')e.onload=e.onerror=()=>{const m=document.createElement('script');m.type='module';m.src='lib/moments/moments.js';document.body.append(m)};document.body.append(e)})},150),{once:true})</script>
+addEventListener('load',()=>setTimeout(()=>{document.querySelectorAll('img[data-src]').forEach(i=>{i.src=i.dataset.src;i.removeAttribute('data-src')});['gsap.min.js','ScrollTrigger.min.js','SplitText.min.js','lenis.min.js','wow.js'].forEach(f=>{const e=document.createElement('script');e.src='lib/'+f;e.async=false;if(f=='wow.js')e.onload=e.onerror=()=>{const m=document.createElement('script');m.type='module';m.src='lib/moments/moments.js';document.body.append(m)};document.body.append(e)})},150),{once:true})</script>
 <script>document.querySelectorAll('[data-set]').forEach(b=>b.addEventListener('click',()=>setTimeout(()=>window.wow&&wow.resplit(),0)))</script>
 </body>
 </html>
