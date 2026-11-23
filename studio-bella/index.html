@@ -280,6 +280,8 @@ section:has(+.pcsec){padding-bottom:0}section:has(+.pcsec) .stmt{margin-bottom:0
 /* codex 23.11: on phones one step photo, not three in a row before the masters; no lone word in the eyebrow */
 @media(max-width:639px){.pcsec .mo-pc__step:not(:first-child) .mo-pc__visual{display:none}}
 .eyebrow{text-wrap:balance}
+/* codex 23.11: price, booking button and photo show at once; on phones the first screen ends on the cut itself, hours are lower in «Návšteva» */
+@media(max-width:639px){.hero .btn.ghost,.hero .open{display:none}.hpw,.hphoto{aspect-ratio:6/5}.hphoto img{object-position:50% 60%}}
 </style>
 <link rel="stylesheet" href="book.css">
 <style>.who{background:none;border-radius:0;display:block;overflow:visible;padding:0}.who>div{padding:0}</style>
@@ -301,7 +303,7 @@ section:has(+.pcsec){padding-bottom:0}section:has(+.pcsec) .stmt{margin-bottom:0
   <div>
     <p class="eyebrow" data-reveal="self" data-i="eye"></p>
     <h1 data-split data-i="h1" data-at="<0.1"></h1>
-    <div data-reveal data-at="<0.5">
+    <div>
       <p class="lead" data-i="lead"></p>
       <p class="price" data-i="pr"></p>
       <div class="btns">
@@ -312,7 +314,7 @@ section:has(+.pcsec){padding-bottom:0}section:has(+.pcsec) .stmt{margin-bottom:0
     </div>
   </div>
   <div class="hpw">
-  <div class="hphoto" data-clip data-at="0">
+  <div class="hphoto">
     <figure data-moment="liquid-hover" data-moment-opts='{"strength":0.6,"radius":0.16}'><img src="work-cut.jpg" width="640" height="800" alt="" data-alt="g2" fetchpriority="high"></figure>
   </div>
     <button class="badge" type="button" data-book data-magnetic aria-label="Book"><svg viewBox="0 0 132 132" aria-hidden="true"><defs><path id="c" d="M66,66 m-50,0 a50,50 0 1,1 100,0 a50,50 0 1,1 -100,0"/></defs><text><textPath href="#c">Studio Bella · Bratislava · Studio Bella · Bratislava ·</textPath></text></svg><b>B</b></button>
