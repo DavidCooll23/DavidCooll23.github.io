@@ -217,7 +217,10 @@
     const rows = $$('[data-float]');
     if (rows.length) {
       const f = document.createElement('div'); f.className = 'wow-float'; document.body.append(f);
-      const imgs = {}; rows.forEach(r => { const s = r.dataset.float; if (!imgs[s]) { const i = new Image(); i.src = s; i.alt = ''; f.append(i); imgs[s] = i; } });
+      const imgs = {}; rows.forEach(r => { const s = r.dataset.float; if (!imgs[s]) { const i = new Image(); i.alt = ''; f.append(i); imgs[s] = i; } });
+      // hover photos load after the page is up: fetched at once they took bandwidth from the first-screen photo (LCP 2.6 s, 23.11)
+      const fetchFloats = () => setTimeout(() => Object.entries(imgs).forEach(([s, i]) => { if (!i.src) i.src = s; }), 1500);
+      if (document.readyState === 'complete') fetchFloats(); else addEventListener('load', fetchFloats, { once: true });
       const fx = gsap.quickTo(f, 'x', { duration: 0.7, ease: 'power3' }), fy = gsap.quickTo(f, 'y', { duration: 0.7, ease: 'power3' });
       gsap.set(f, { xPercent: -50, yPercent: -50, scale: 0.6, autoAlpha: 0 });
       rows.forEach(r => {
