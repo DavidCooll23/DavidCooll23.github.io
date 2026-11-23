@@ -211,7 +211,8 @@ details[open]>summary::after{background-size:13px 1.5px,0 0}
 .qa p{color:var(--muted);font-size:15px;line-height:1.55;max-width:56ch;padding:0 0 22px}
 
 #contact{background:var(--deep);color:#fff;display:grid;grid-template-columns:.9fr 1.1fr;align-items:start;gap:clamp(24px,5vw,80px);padding:clamp(26px,4.5vw,70px);border-radius:12px}
-.contact-intro>p{color:#d5d9f6;margin:18px 0 26px;max-width:38ch}
+.contact-intro>p{color:#d5d9f6;margin:18px 0 26px;max-width:38ch}.contact-intro>p.paynote{margin-top:-12px;color:#fff;font-weight:600}
+/* codex 23.11 runs 2,3,9: the pay-after-approval promise repeated in a grey paragraph and a giant "Váš web" screen; now one line beside the form */
 .me{display:grid;grid-template-columns:minmax(0,220px) minmax(0,1fr);align-items:end;gap:20px;margin:6px 0 30px;max-width:560px}.me img{width:100%;height:auto;aspect-ratio:1;border-radius:8px;object-fit:cover;box-shadow:0 24px 50px -30px rgba(0,0,0,.6)}.me p{font-size:clamp(16px,1.2vw,18px);line-height:1.45;color:#e8eafc}
 .address,.channels{display:flex;align-items:center;gap:10px;flex-wrap:wrap}
 .address button{font-size:13px;border:1px solid #8a90d4;padding:4px 9px;background:transparent;color:inherit;border-radius:4px}
@@ -475,8 +476,6 @@ html.lenis{scroll-behavior:auto}
   <p class="fine" data-i="pfine">Presnú cenu poviem pred začiatkom práce. Jednoduchý web pripravím do 5 dní, web s rezervačným systémom do 10 dní od chvíle, keď mi pošlete zoznam služieb, cenník a fotky. Ak potrebujete texty, cenník vo viacerých jazykoch alebo obrázky do reklamy, napíšte mi a pripravím vám cenovú ponuku.</p>
 </section>
 
-<section class="stmtsec biz"><p class="stmt" data-highlight data-i="stmt">Najprv vám ukážem hotový web s vašimi službami a cenami. Platíte, až keď sa vám páči. Web, doména aj prístupy potom patria vám.</p></section>
-
 <section id="ako" class="pcsec biz" data-moment="pinned-chapters" data-moment-opts='{"static":true}'><div class="mo-pc__grid">
   <div class="mo-pc__text">
     <h2 data-i="akh">Ako to prebieha</h2>
@@ -529,14 +528,9 @@ html.lenis{scroll-behavior:auto}
   </div>
 </section>
 
-<section class="gtsec biz" data-moment="giant-type-pass" data-moment-opts='{"image":"media/shopfront.webp","travel":40,"focusY":55}'>
-  <h2 class="mo-gt__type" data-i="gt">Váš web</h2>
-  <div class="mo-gt__row"><p data-i="gtp">Hotový za 5–10 dní. Bez mesačných poplatkov.</p><a class="btn main arrow" href="#qf" data-write data-magnetic data-i="cta">Zistiť cenu a termín</a></div>
-</section>
-
 <section id="contact">
   <div class="contact-intro">
-    <h2 data-i="ch">Aký web potrebujete?</h2><p data-i="cp">Napíšte mi pár slov o svojom podniku. Ozvem sa s cenou a termínom.</p>
+    <h2 data-i="ch">Aký web potrebujete?</h2><p data-i="cp">Napíšte mi pár slov o svojom podniku. Ozvem sa s cenou a termínom.</p><p class="paynote" data-i="payNote">Najprv vám ukážem hotový web. Platíte, až keď sa vám páči.</p>
     <div class="me"><img src="media/davyd-sunset-640.webp" srcset="media/davyd-sunset-360.webp 360w, media/davyd-sunset-640.webp 640w" sizes="(max-width:760px) 132px, 220px" width="640" height="640" decoding="async" loading="lazy" fetchpriority="low" data-alt="meAlt" alt="Davyd Konstantinov"><p data-i="who">Píšete priamo mne, Davydovi. Web robím sám, od návrhu po spustenie.</p></div>
     <div class="address"><span id="email-address">davyd@konstantinov.sk</span><button type="button" id="copy-email" data-i="copy">Kopírovať</button></div>
     <small id="copy-status" role="status"></small>
@@ -629,7 +623,7 @@ const T = {
     "s4p": "Krátky návod: ako všetko funguje a čo robiť, keď sa niečo pokazí. Všetko zostáva na vašich účtoch.",
     "cvh": "Životopisy",
     "ch": "Aký web potrebujete?",
-    "cp": "Napíšte mi pár slov o svojom podniku. Ozvem sa s cenou a termínom.",
+    "cp": "Napíšte mi pár slov o svojom podniku. Ozvem sa s cenou a termínom.", "payNote": "Najprv vám ukážem hotový web. Platíte, až keď sa vám páči.",
     "site2": "Vyskúšať web salónu",
     "demo2": "Otvoriť ukážku bota",
     "prb": "Ceny",
@@ -834,7 +828,7 @@ const T = {
     "s4p": "A short guide: how everything works and what to do if something breaks. Everything stays on your accounts.",
     "cvh": "CVs",
     "ch": "What does your site need?",
-    "cp": "Tell me a little about your business. I’ll get back to you with a price and timeline.",
+    "cp": "Tell me a little about your business. I’ll get back to you with a price and timeline.", "payNote": "First I show you the finished site. You pay only when you like it.",
     "site2": "Try the salon site",
     "demo2": "Open the sample bot",
     "prb": "Prices",
@@ -1052,7 +1046,7 @@ const T = {
     "q4": "Нужны ли созвоны?",
     "a4": "Нет, всё решаем перепиской в WhatsApp или по почте. Если вам удобнее голосом, хватит одного короткого звонка на старте.",
     "ch": "Какой сайт вам нужен?",
-    "cp": "Расскажите немного о своём деле. Я отвечу, сколько будет стоить работа и когда сайт будет готов.",
+    "cp": "Расскажите немного о своём деле. Я отвечу, сколько будет стоить работа и когда сайт будет готов.", "payNote": "Сначала я покажу вам готовый сайт. Платите, только когда он вам нравится.",
     "ex": "Посмотреть пример",
     "wa": "Или в WhatsApp",
     "callName": "Позвонить",
@@ -1238,7 +1232,7 @@ const T = {
     "q4": "Чи потрібні дзвінки?",
     "a4": "Ні, усе вирішуємо листуванням у WhatsApp або поштою. Якщо вам зручніше голосом, вистачить одного короткого дзвінка на старті.",
     "ch": "Який сайт вам потрібен?",
-    "cp": "Розкажіть трохи про свою справу. Я відповім, скільки коштуватиме робота й коли сайт буде готовий.",
+    "cp": "Розкажіть трохи про свою справу. Я відповім, скільки коштуватиме робота й коли сайт буде готовий.", "payNote": "Спочатку я покажу вам готовий сайт. Платите, лише коли він вам подобається.",
     "ex": "Подивитися приклад",
     "wa": "Або у WhatsApp",
     "callName": "Зателефонувати",

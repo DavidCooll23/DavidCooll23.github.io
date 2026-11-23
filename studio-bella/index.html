@@ -290,6 +290,8 @@ section:has(+.pcsec){padding-bottom:0}section:has(+.pcsec) .stmt{margin-bottom:0
 /* codex 23.11 run 6: on a computer the three booking steps stand in one row, photo on top; FAQ and the form side by side, the owner's sample under the form */
 @media(min-width:1001px){.pcsec.pcsec:not(.is-live) .mo-pc__steps{grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(24px,3vw,48px)}.pcsec.pcsec:not(.is-live) .mo-pc__step{display:flex;flex-direction:column;gap:10px}.pcsec.pcsec:not(.is-live) .mo-pc__step .mo-pc__visual{order:-1;margin:0 0 8px}.pcsec.pcsec:not(.is-live) .mo-pc__visual>img{aspect-ratio:4/3;height:auto;max-height:none}.pcsec.pcsec:not(.is-live) .mo-pc__step h3{font-size:clamp(1.6rem,2.2vw,2.4rem)}.pcsec.pcsec:not(.is-live) .mo-pc__step>*{align-self:stretch}
 #dopyt>.wrap{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);column-gap:clamp(40px,5vw,80px);align-items:start}#dopyt>.wrap>.label,#dopyt>.wrap>h2,#dopyt>.wrap>.sub{grid-column:1/-1}#dopyt .faq{margin:0}#dopyt .ask{grid-template-columns:1fr;gap:24px}}
+/* codex 23.11 run 9: two big booking calls in a row ("Čas pre seba" then the dark block); the dark block now starts with address and hours */
+#visit>.wrap>.row{display:none}
 </style>
 <link rel="stylesheet" href="book.css">
 <style>.who{background:none;border-radius:0;display:block;overflow:visible;padding:0}.who>div{padding:0}</style>
