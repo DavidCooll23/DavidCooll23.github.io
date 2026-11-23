@@ -83,7 +83,7 @@ h1 .wow-l{padding-bottom:.06em}
 .mq span{display:inline-flex;align-items:center;gap:.5em;padding-right:.5em}
 .mq span::after{content:"";width:.22em;height:.22em;border-radius:50%;background:var(--clay)}
 /* sections */
-section{padding:clamp(80px,14vh,160px) 0;border:0}
+section{padding:clamp(72px,11vh,128px) 0;border:0}
 .label{display:flex;gap:14px;align-items:center;font-size:.8125rem;letter-spacing:.14em;text-transform:uppercase;color:var(--sec);margin-bottom:28px}
 .label::before{content:"";width:44px;height:1px;background:var(--clay)}
 h2{font:500 clamp(2.6rem,5.6vw,5.6rem)/.95 var(--serif);letter-spacing:-.03em;margin-bottom:22px;max-width:16ch;text-wrap:balance}
@@ -284,7 +284,7 @@ section:has(+.pcsec){padding-bottom:0}section:has(+.pcsec) .stmt{margin-bottom:0
 .gtsec .mo-gt__type{padding-top:.14em}
 .pcsec .mo-pc__steps{margin-top:clamp(20px,3vh,32px)}
 /* codex 23.11: on phones the owner's chat and sheet fold under their heading; they open on tap or after a test question */
-@media(max-width:899px){.owner>h3{cursor:pointer;display:flex;justify-content:space-between;gap:12px;align-items:center;padding:14px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}.owner>h3::after{content:"+";font:400 1.5rem/1 var(--sans);transition:transform .3s}.owner.open>h3::after,.owner.got>h3::after{transform:rotate(45deg)}.owner:not(.open):not(.got)>:not(h3){display:none}}
+.owner>h3{font-size:1.125rem}@media(min-width:0px){.owner>h3{cursor:pointer;display:flex;justify-content:space-between;gap:12px;align-items:center;padding:14px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}.owner>h3::after{content:"+";font:400 1.5rem/1 var(--sans);transition:transform .3s}.owner.open>h3::after,.owner.got>h3::after{transform:rotate(45deg)}.owner:not(.open):not(.got)>:not(h3){display:none}}
 /* codex 23.11: price, booking button and photo show at once; on phones the first screen ends on the cut itself, hours are lower in «Návšteva» */
 @media(max-width:639px){.hero .btn.ghost,.hero .open{display:none}.hpw,.hphoto{aspect-ratio:6/5}.hphoto img{object-position:50% 60%}}
 </style>
@@ -365,7 +365,7 @@ section:has(+.pcsec){padding-bottom:0}section:has(+.pcsec) .stmt{margin-bottom:0
 </div></section>
 
 <section id="gallery" class="galsec">
-  <div class="wrap"><p class="label" data-i="gh"></p><h2 data-split data-i="gs"></h2></div>
+  <div class="wrap"><p class="label" data-i="gh"></p><h2 data-split data-i="gs"></h2><p class="sub" data-i="gsn"></p></div>
   <div class="track" data-hscroll-track role="region" aria-label="Galéria" data-al="gh" tabindex="0">
     <figure data-zoom data-cursor="Bella" data-skew><img src="hero.jpg" width="640" height="800" loading="lazy" alt="" data-alt="s3"></figure>
     <figure data-zoom data-cursor="Bella" data-skew><img src="work-brows.jpg" width="640" height="800" loading="lazy" alt="" data-alt="g4"></figure>
@@ -529,7 +529,7 @@ foot:"This is a sample website for a small salon. The salon, address and names a
 Object.assign(T.sk,{qh:"Máte otázku? Napíšte nám",qs:"Meno, kontakt a otázka. Recepčná vám odpovie ešte v ten deň.",
 fn:"Meno",fc:"Telefón alebo e-mail",fcx:"(nepovinné)",fq:"Otázka",fb:"Odoslať otázku",fok:"Odoslané. Pozrite sa, čo práve prišlo do salónu.",fneed:"Doplňte meno, telefón alebo e-mail a otázku.",
 pn:"Mária",pc:"+421 … alebo meno@email.sk",pq:"Striháte aj deti?",
-oh:"Tento salón dostane hneď po odoslaní otázky",ow:"Po odoslaní formulára sa tu objaví správa.",obot:"dopyty z webu",onew:"Nová otázka z webu",on:"Meno",oc:"Kontakt",oq:"Otázka",onone:"neuvedený",
+oh:"Pre majiteľa salónu: ukážka prijatej otázky",ow:"Po odoslaní formulára sa tu objaví správa.",obot:"dopyty z webu",onew:"Nová otázka z webu",on:"Meno",oc:"Kontakt",oq:"Otázka",onone:"neuvedený",
 stitle:"Dopyty z webu",c1:"Dátum",c2:"Meno",c3:"Kontakt",c4:"Otázka",r1:"Máte voľno v sobotu ráno?",r2:"Koľko stojí farbenie dlhých vlasov?",
 onote:"Toto je ukážka. Z tejto stránky sa nič neodosiela. Na skutočnom webe príde otázka majiteľovi na e-mail alebo do Telegramu a do jeho tabuľky Google sa pridá riadok.",
 fab:"Opýtať sa",ws:"Automatické odpovede · ukážka",wph:"Napíšte otázku…",wsend:"Poslať",wclose:"Zavrieť",
@@ -538,7 +538,7 @@ chips:["Koľko stojí manikúra?","Máte otvorené v nedeľu?","Kde vás nájdem
 Object.assign(T.uk,{qh:"Маєте запитання? Напишіть нам",qs:"Ім’я, контакт і запитання. Адміністраторка відповість того ж дня.",
 fn:"Ім’я",fc:"Телефон або e-mail",fcx:"(необов’язково)",fq:"Запитання",fb:"Надіслати запитання",fok:"Надіслано. Подивіться, що щойно отримав салон.",fneed:"Вкажіть ім’я, телефон або e-mail і запитання.",
 pn:"Марія",pc:"+421 … або name@email.sk",pq:"Ви стрижете й дітей?",
-oh:"Ось що салон отримає одразу після надсилання запитання",ow:"Після надсилання форми тут з’явиться повідомлення.",obot:"звернення із сайту",onew:"Нове запитання із сайту",on:"Ім’я",oc:"Контакт",oq:"Запитання",onone:"не вказано",
+oh:"Для власника салону: приклад отриманого запитання",ow:"Після надсилання форми тут з’явиться повідомлення.",obot:"звернення із сайту",onew:"Нове запитання із сайту",on:"Ім’я",oc:"Контакт",oq:"Запитання",onone:"не вказано",
 stitle:"Звернення із сайту",c1:"Дата",c2:"Ім’я",c3:"Контакт",c4:"Запитання",r1:"Чи можна записатися на суботу зранку?",r2:"Скільки коштує фарбування довгого волосся?",
 onote:"Це приклад. Із цієї сторінки нічого не надсилається. На робочому сайті питання приходить власникові на пошту або в Telegram, а в його Google-таблицю додається рядок.",
 fab:"Запитати",ws:"Автовідповіді · приклад",wph:"Напишіть запитання…",wsend:"Надіслати",wclose:"Закрити",
@@ -547,7 +547,7 @@ chips:["Скільки коштує манікюр?","Ви працюєте в �
 Object.assign(T.ru,{qh:"Есть вопрос? Напишите нам",qs:"Имя, контакт и вопрос. Администратор ответит в тот же день.",
 fn:"Имя",fc:"Телефон или e-mail",fcx:"(необязательно)",fq:"Вопрос",fb:"Отправить вопрос",fok:"Отправлено. Посмотрите, что сейчас получил салон.",fneed:"Укажите имя, телефон или e-mail и вопрос.",
 pn:"Мария",pc:"+421 … или name@email.sk",pq:"Вы стрижёте детей?",
-oh:"Вот что в эту минуту получает салон",ow:"После отправки формы здесь появится сообщение.",obot:"заявки с сайта",onew:"Новый вопрос с сайта",on:"Имя",oc:"Контакт",oq:"Вопрос",onone:"не указан",
+oh:"Для владельца салона: пример полученного вопроса",ow:"После отправки формы здесь появится сообщение.",obot:"заявки с сайта",onew:"Новый вопрос с сайта",on:"Имя",oc:"Контакт",oq:"Вопрос",onone:"не указан",
 stitle:"Заявки с сайта",c1:"Дата",c2:"Имя",c3:"Контакт",c4:"Вопрос",r1:"Есть свободное время в субботу утром?",r2:"Сколько стоит окрашивание длинных волос?",
 onote:"Это пример: с этой страницы ничего никуда не отправляется. На настоящем сайте вопрос приходит владельцу на почту или в Telegram, а в его Google-таблицу добавляется строка.",
 fab:"Спросить",ws:"Автоответы · пример",wph:"Напишите вопрос…",wsend:"Отправить",wclose:"Закрыть",
@@ -556,7 +556,7 @@ chips:["Сколько стоит маникюр?","Вы работаете в �
 Object.assign(T.en,{qh:"Got a question? Write to us",qs:"Your name, a contact and your question. Our receptionist will reply the same day.",
 fn:"Name",fc:"Phone or email",fcx:"(optional)",fq:"Question",fb:"Send question",fok:"Sent. Have a look at what the salon just received.",fneed:"Please add your name, phone or email and question.",
 pn:"Maria",pc:"+421 … or name@email.sk",pq:"Do you cut children's hair?",
-oh:"What the salon receives as soon as you submit your question",ow:"A message appears here once you send the form.",obot:"website enquiries",onew:"New question from the website",on:"Name",oc:"Contact",oq:"Question",onone:"not given",
+oh:"For the salon owner: a sample of a received question",ow:"A message appears here once you send the form.",obot:"website enquiries",onew:"New question from the website",on:"Name",oc:"Contact",oq:"Question",onone:"not given",
 stitle:"Website enquiries",c1:"Date",c2:"Name",c3:"Contact",c4:"Question",r1:"Do you have any appointments available on Saturday morning?",r2:"How much does it cost to colour long hair?",
 onote:"This is a demo. Nothing is sent from this page. On a live website, the question goes to the owner by email or Telegram and a row is added to their Google Sheet.",
 fab:"Ask a question",ws:"Automatic replies · demo",wph:"Type a question…",wsend:"Send",wclose:"Close",
@@ -564,10 +564,10 @@ w0:"Hello! Ask about prices, opening hours, the address or free slots. I reply i
 chips:["How much is a manicure?","Are you open on Sunday?","Where are you?","Скільки коштує фарбування?"]});
 // answers of the auto-reply, one set per language (data = the price list and hours above)
 // 2026-11-22: online booking on the site, gallery, contacts
-Object.assign(T.sk,{"gh": "Ako to u nás vyzerá", "gs": "Svetlý salón s dvoma pracovnými miestami. Fotografie sú ilustračné.", "g1": "Salón so zrkadlom a kreslom", "g2": "Rovný strih po plecia", "g3": "Príprava farby na farbenie", "g4": "Nástroje na úpravu obočia", "v4": "Telefón", "v5": "Zrušenie", "canc": "Kedykoľvek, cez odkaz z potvrdenia", "map": "Otvoriť v mapách", "firm": "Ukážkové firemné údaje: Studio Bella s. r. o., IČO 00 000 000, Hlavná 1, 811 01 Bratislava", "priv": "Ochrana osobných údajov"});
-Object.assign(T.uk,{"gh": "Як у нас", "gs": "Світлий салон на два робочі місця. Фото ілюстративні.", "g1": "Салон із дзеркалом і кріслом", "g2": "Рівна стрижка до плечей", "g3": "Підготовка фарби для фарбування", "g4": "Інструменти для оформлення брів", "v4": "Телефон", "v5": "Скасування", "canc": "Будь-коли, за посиланням із підтвердження", "map": "Відкрити на мапі", "firm": "Зразок реквізитів: Studio Bella s. r. o., IČO 00 000 000, Hlavná 1, 811 01 Bratislava", "priv": "Захист персональних даних"});
-Object.assign(T.ru,{"gh": "Как у нас", "gs": "Светлый салон на два рабочих места. Фото иллюстративные.", "g1": "Салон с зеркалом и креслом", "g2": "Ровная стрижка до плеч", "g3": "Подготовка краски для окрашивания", "g4": "Инструменты для оформления бровей", "v4": "Телефон", "v5": "Отмена", "canc": "В любой момент, по ссылке из подтверждения", "map": "Открыть в картах", "firm": "Образец реквизитов: Studio Bella s. r. o., IČO 00 000 000, Hlavná 1, 811 01 Bratislava", "priv": "Защита персональных данных"});
-Object.assign(T.en,{"gh": "Inside the salon", "gs": "A bright salon with two workstations. The photos are illustrative.", "g1": "The salon with a mirror and a styling chair", "g2": "A straight shoulder-length cut", "g3": "Hair colour being mixed", "g4": "Brow tools", "v4": "Phone", "v5": "Cancelling", "canc": "Any time, via the link in your confirmation", "map": "Open in maps", "firm": "Sample company details: Studio Bella s. r. o., IČO 00 000 000, Hlavná 1, 811 01 Bratislava", "priv": "Privacy policy"});
+Object.assign(T.sk,{"gh": "Ako to u nás vyzerá", "gs": "Svetlý salón s dvoma pracovnými miestami.", "gsn": "Fotografie sú ilustračné.", "g1": "Salón so zrkadlom a kreslom", "g2": "Rovný strih po plecia", "g3": "Príprava farby na farbenie", "g4": "Nástroje na úpravu obočia", "v4": "Telefón", "v5": "Zrušenie", "canc": "Kedykoľvek, cez odkaz z potvrdenia", "map": "Otvoriť v mapách", "firm": "Ukážkové firemné údaje: Studio Bella s. r. o., IČO 00 000 000, Hlavná 1, 811 01 Bratislava", "priv": "Ochrana osobných údajov"});
+Object.assign(T.uk,{"gh": "Як у нас", "gs": "Світлий салон на два робочі місця.", "gsn": "Фото ілюстративні.", "g1": "Салон із дзеркалом і кріслом", "g2": "Рівна стрижка до плечей", "g3": "Підготовка фарби для фарбування", "g4": "Інструменти для оформлення брів", "v4": "Телефон", "v5": "Скасування", "canc": "Будь-коли, за посиланням із підтвердження", "map": "Відкрити на мапі", "firm": "Зразок реквізитів: Studio Bella s. r. o., IČO 00 000 000, Hlavná 1, 811 01 Bratislava", "priv": "Захист персональних даних"});
+Object.assign(T.ru,{"gh": "Как у нас", "gs": "Светлый салон на два рабочих места.", "gsn": "Фото иллюстративные.", "g1": "Салон с зеркалом и креслом", "g2": "Ровная стрижка до плеч", "g3": "Подготовка краски для окрашивания", "g4": "Инструменты для оформления бровей", "v4": "Телефон", "v5": "Отмена", "canc": "В любой момент, по ссылке из подтверждения", "map": "Открыть в картах", "firm": "Образец реквизитов: Studio Bella s. r. o., IČO 00 000 000, Hlavná 1, 811 01 Bratislava", "priv": "Защита персональных данных"});
+Object.assign(T.en,{"gh": "Inside the salon", "gs": "A bright salon with two workstations.", "gsn": "The photos are illustrative.", "g1": "The salon with a mirror and a styling chair", "g2": "A straight shoulder-length cut", "g3": "Hair colour being mixed", "g4": "Brow tools", "v4": "Phone", "v5": "Cancelling", "canc": "Any time, via the link in your confirmation", "map": "Open in maps", "firm": "Sample company details: Studio Bella s. r. o., IČO 00 000 000, Hlavná 1, 811 01 Bratislava", "priv": "Privacy policy"});
 const A={
 sk:{cut:"Strih stojí 25 € a trvá 60 minút. Strihá Anna.",color:"Farbenie stojí 60 € a trvá 120 minút. Robí ho Anna.",nails:"Manikúra stojí 30 € a trvá 90 minút. Robí ju Oľga.",brows:"Úprava obočia u Oľgy stojí 15 € a trvá 30 minút.",
 list:"Strih 25 €, farbenie 60 €, manikúra 30 €, úprava obočia 15 €. Ceny sú konečné.",hours:"Otvorené máme od pondelka do soboty, 9:00–19:00. V nedeľu je zatvorené.",
