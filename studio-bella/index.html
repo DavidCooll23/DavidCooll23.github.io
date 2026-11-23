@@ -302,6 +302,9 @@ section:has(+.pcsec){padding-bottom:0}section:has(+.pcsec) .stmt{margin-bottom:0
 /* codex 23.11 run 12: on the phone the full price list sat below a big photo and a marquee, with no colour price and no link to it; on PC prices sat far from the service names */
 @media(max-width:639px){.hero .btn.ghost{display:inline-flex}}
 @media(min-width:900px){.menu li{grid-template-columns:3rem minmax(0,26rem) auto 1fr}.menu li .bkb{justify-self:end}}
+/* 23.11 run 13: CLS 0.155 (score 89): price line and buttons rewrapped after the font loaded and pushed the photo; services repeated in the marquee on phones; descender of "y" clipped by the line mask */
+@media(max-width:639px){.hero .btns{flex-direction:column;align-items:flex-start}.hero .price{min-height:2lh}.mq{display:none}}
+.hero h1 .wow-l-mask{padding-bottom:.14em;margin-bottom:-.14em}
 </style>
 <link rel="stylesheet" href="book.css">
 <style>.who{background:none;border-radius:0;display:block;overflow:visible;padding:0}.who>div{padding:0}</style>
