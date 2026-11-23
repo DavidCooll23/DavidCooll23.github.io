@@ -13,7 +13,7 @@
 <meta name="robots" content="noindex">
 <meta property="og:title" content="Studio Bella">
 <meta property="og:image" content="https://konstantinov.sk/studio-bella/hero.jpg">
-<link rel="preload" as="image" href="work-cut.jpg">
+<link rel="preload" as="image" href="work-cut.webp" type="image/webp" fetchpriority="high">
 <link rel="preload" as="font" type="font/woff2" href="fonts/cormorant-garamond-latin-500-normal.woff2" crossorigin>
 <script>document.documentElement.classList.add('wow-js');try{sessionStorage.wowL&&document.documentElement.classList.add('wow-noload')}catch(e){};window.__wowT=setTimeout(()=>document.documentElement.classList.add('wow-safe'),3000)</script>
 <link rel="stylesheet" href="lib/wow.css">
@@ -303,7 +303,7 @@ html,body{overflow-x:clip}
   </div>
   <div class="hpw">
   <div class="hphoto" data-clip data-at="0">
-    <figure data-moment="liquid-hover" data-moment-opts='{"strength":0.6,"radius":0.16}'><img src="work-cut.jpg" width="640" height="800" alt="" data-alt="g2" fetchpriority="high"></figure>
+    <figure data-moment="liquid-hover" data-moment-opts='{"strength":0.6,"radius":0.16}'><img src="work-cut.webp" width="640" height="800" alt="" data-alt="g2" fetchpriority="high"></figure>
   </div>
     <button class="badge" type="button" data-book data-magnetic aria-label="Book"><svg viewBox="0 0 132 132" aria-hidden="true"><defs><path id="c" d="M66,66 m-50,0 a50,50 0 1,1 100,0 a50,50 0 1,1 -100,0"/></defs><text><textPath href="#c">Studio Bella · Bratislava · Studio Bella · Bratislava ·</textPath></text></svg><b>B</b></button>
   </div>
@@ -708,8 +708,8 @@ if(new URLSearchParams(location.search).has('chat')||location.hash==='#chat')ope
 window.T0=T;
 {const hb=document.querySelector('.hero .btns');if(hb&&'IntersectionObserver'in window)new IntersectionObserver(([e])=>document.body.classList.toggle('past',!e.isIntersecting&&e.boundingClientRect.top<0)).observe(hb);else document.body.classList.add('past')}
 </script>
-<script src="core.js"></script>
-<script src="book.js"></script>
+<script defer src="core.js"></script>
+<script defer src="book.js"></script>
 <script defer src="lib/gsap.min.js"></script>
 <script defer src="lib/ScrollTrigger.min.js"></script>
 <script defer src="lib/SplitText.min.js"></script>
