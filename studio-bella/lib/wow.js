@@ -219,10 +219,17 @@
       const imgs = {}; rows.forEach(r => { const s = r.dataset.float; if (!imgs[s]) { const i = new Image(); i.src = s; i.alt = ''; f.append(i); imgs[s] = i; } });
       const fx = gsap.quickTo(f, 'x', { duration: 0.7, ease: 'power3' }), fy = gsap.quickTo(f, 'y', { duration: 0.7, ease: 'power3' });
       gsap.set(f, { xPercent: -50, yPercent: -50, scale: 0.6, autoAlpha: 0 });
+      // 23.11: the preview is fixed to the screen; a wheel scroll moves the rows away without any pointer event,
+      // so it stayed hanging over the page. Now any scroll hides it; the next pointer move over a row brings it back.
+      let shown = false;
+      const show = r => { shown = true; Object.values(imgs).forEach(i => i.style.opacity = i === imgs[r.dataset.float] ? 1 : 0); gsap.to(f, { autoAlpha: 1, scale: 1, rotate: -3, duration: 0.5, ease: EASE, overwrite: 'auto' }); };
+      const hide = () => { if (!shown) return; shown = false; gsap.to(f, { autoAlpha: 0, scale: 0.6, rotate: 0, duration: 0.3, ease: 'power2.in', overwrite: 'auto' }); };
+      addEventListener('scroll', hide, { passive: true });
+      if (lenis) lenis.on('scroll', hide);
       rows.forEach(r => {
-        r.addEventListener('pointerenter', () => { Object.values(imgs).forEach(i => i.style.opacity = i === imgs[r.dataset.float] ? 1 : 0); gsap.to(f, { autoAlpha: 1, scale: 1, rotate: -3, duration: 0.5, ease: EASE }); });
-        r.addEventListener('pointerleave', () => gsap.to(f, { autoAlpha: 0, scale: 0.6, rotate: 0, duration: 0.4, ease: 'power2.in' }));
-        r.addEventListener('pointermove', e => { fx(e.clientX + 170); fy(e.clientY); });
+        r.addEventListener('pointerenter', () => show(r));
+        r.addEventListener('pointerleave', hide);
+        r.addEventListener('pointermove', e => { if (!shown) { fx(e.clientX + 170, e.clientX + 170); fy(e.clientY, e.clientY); show(r); } else { fx(e.clientX + 170); fy(e.clientY); } });
       });
     }
   }

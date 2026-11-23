@@ -377,6 +377,7 @@ h2{font-size:clamp(34px,4.6vw,76px);line-height:1.02}
 /* work: dark, pinned, slides sideways on a computer */
 main>section.work{margin-top:0}
 .work{margin-inline:calc(50% - 50vw);background:var(--ink);color:#fff;overflow:hidden}
+.work-pin{width:100%;background:var(--ink);overflow:hidden}/* 23.11: GSAP pins this wrapper, not the full-bleed section: pinning an element with negative margins cut it short on wide screens */
 .work-track{display:flex;align-items:center;gap:clamp(28px,3.4vw,64px);width:max-content;min-height:100svh;padding:clamp(70px,10vh,120px) clamp(20px,5vw,78px)}
 .work-intro{width:clamp(300px,30vw,500px);flex:none;align-self:center}
 .work .kicker{color:#a9acc6}.work .kicker i{color:var(--marker)}
@@ -501,7 +502,8 @@ footer a{color:#dfe2fb}
 </div></div>
 </div>
 
-<section id="work" class="work" data-hscroll>
+<section id="work" class="work">
+  <div class="work-pin" data-hscroll>
   <div class="work-track" data-hscroll-track>
     <div class="work-intro">
       <p class="kicker"><i>01</i> <span data-i="workNav">Ukážky</span></p>
@@ -524,6 +526,7 @@ footer a{color:#dfe2fb}
       <div class="project-title"><h3 data-i="translationName">Pred a po</h3><span class="circle-arrow" aria-hidden="true"></span></div>
       <p data-i="translationDesc">Porovnajte pôvodnú stránku s ukrajinskou a ruskou verziou.</p>
     </a>
+  </div>
   </div>
 </section>
   <details class="more-work work-more"><summary data-i="moreWork">Ďalšie projekty vrátane rezervačného bota</summary><div class="cards">
