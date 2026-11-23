@@ -284,7 +284,7 @@ footer{display:flex;justify-content:space-between;align-items:center;gap:16px;pa
   header{transition:transform .45s cubic-bezier(.2,.8,.2,1)}header.away{transform:translateY(-102%)}
   /* first screen plays as one scene: lines rise, the marker draws under "online booking", then the calendar fills */
   .intro>*{animation:rise .9s cubic-bezier(.2,.8,.2,1) both}
-  .intro>h1{animation:none}.intro>h1>span:first-child{display:block;animation:rise 1s .05s cubic-bezier(.2,.8,.2,1) both}
+  .intro>h1{animation:none}.intro>h1>span:first-child{display:block}
   .intro>.lead{animation-delay:.18s}.intro>.btns,.intro>.hero-price-line{animation-delay:.28s}.intro>.hero-risk{animation-delay:.4s}
   h1 em{animation:mark 1s .5s cubic-bezier(.65,0,.25,1) both}
   .ld-client{animation:rise 1s .3s cubic-bezier(.2,.8,.2,1) both}
@@ -337,11 +337,13 @@ html.lenis{scroll-behavior:auto}
 .pcsec .mo-pc__step h3 i{font-style:normal;color:var(--blue);margin-right:.35em}
 .pcsec.pcsec .mo-pc__step p{color:var(--muted);font-size:16px;line-height:1.55;max-width:46ch}
 .pcsec .mo-pc__visual img{display:block;width:100%;aspect-ratio:4/3;object-fit:cover;object-position:top;border-radius:6px;border:1px solid var(--rule)}
-@media(max-width:639px){.pcsec .mo-pc__step:not(:first-child) .mo-pc__visual{display:none}}
+@media(max-width:639px){.pcsec .mo-pc__visual{display:none}}
 .gtsec .mo-gt__type{--mo-tint:color-mix(in oklab,var(--deep) 22%,transparent);font:500 clamp(72px,15vw,250px)/.92 var(--display);letter-spacing:-.07em}
 .gtsec .mo-gt__row p{color:var(--muted);font-size:clamp(17px,1.4vw,21px)}
 #contact h2{font-size:clamp(40px,5vw,84px);line-height:1.02}
 @media(min-width:1001px){#contact{grid-template-columns:1fr 1fr}}
+/* codex 23.11 run 1: the booking card and the salon calendar read as one card on a computer; step 01 portrait keeps the face */
+@media(min-width:761px){.hero{row-gap:0}}.pcsec .mo-pc__step:first-child .mo-pc__visual img{object-position:50% 30%}
 </style>
 </head>
 <body data-mode="biz" id="top" data-grain>
@@ -456,21 +458,6 @@ html.lenis{scroll-behavior:auto}
   </div></details>
 </section>
 
-<section class="stmtsec biz"><p class="stmt" data-highlight data-i="stmt">Najprv vám ukážem hotový web s vašimi službami a cenami. Platíte, až keď sa vám páči. Web, doména aj prístupy potom patria vám.</p></section>
-
-<section id="ako" class="pcsec biz" data-moment="pinned-chapters" data-moment-opts='{"static":true}'><div class="mo-pc__grid">
-  <div class="mo-pc__text">
-    <h2 data-i="akh">Ako to prebieha</h2>
-    <p class="fine" data-i="akf">Web, doména aj prístupy sú vaše. Doména stojí asi 15 € ročne a platíte ju priamo registrátorovi.</p>
-    <ol class="mo-pc__steps">
-      <li class="mo-pc__step"><h3><i>01</i> <span data-i="ak1">Napíšete, čo potrebujete</span></h3><p><span data-i="ak1p"></span></p><figure class="mo-pc__visual"><img src="media/davyd-sunset-640.webp" width="640" height="640" loading="lazy" alt="" data-alt="meAlt"></figure></li>
-      <li class="mo-pc__step"><h3><i>02</i> <span data-i="ak2">Ukážem vám hotový web s vašimi službami a cenami</span></h3><p><span data-i="ak2p"></span></p><figure class="mo-pc__visual"><img src="media/shot-bella-desktop-1280.webp" width="1280" height="800" loading="lazy" alt=""></figure></li>
-      <li class="mo-pc__step"><h3><i>03</i> <span data-i="ak3">Platíte, až keď ste spokojní</span></h3><p><span data-i="ak3p"></span></p><figure class="mo-pc__visual"><img src="media/panel-owner.webp" width="1200" height="1000" loading="lazy" alt=""></figure></li>
-    </ol>
-  </div>
-  <div class="mo-pc__visuals"></div>
-</div></section>
-
 <section id="prices" class="biz">
   <h2 data-i="ph">Služby a ceny</h2>
   <div class="packages">
@@ -486,6 +473,22 @@ html.lenis{scroll-behavior:auto}
   </div></details>
   <p class="fine" data-i="pfine">Presnú cenu poviem pred začiatkom práce. Jednoduchý web pripravím do 5 dní, web s rezervačným systémom do 10 dní od chvíle, keď mi pošlete zoznam služieb, cenník a fotky. Ak potrebujete texty, cenník vo viacerých jazykoch alebo obrázky do reklamy, napíšte mi a pripravím vám cenovú ponuku.</p>
 </section>
+
+<section class="stmtsec biz"><p class="stmt" data-highlight data-i="stmt">Najprv vám ukážem hotový web s vašimi službami a cenami. Platíte, až keď sa vám páči. Web, doména aj prístupy potom patria vám.</p></section>
+
+<section id="ako" class="pcsec biz" data-moment="pinned-chapters" data-moment-opts='{"static":true}'><div class="mo-pc__grid">
+  <div class="mo-pc__text">
+    <h2 data-i="akh">Ako to prebieha</h2>
+    <p class="fine" data-i="akf">Web, doména aj prístupy sú vaše. Doména stojí asi 15 € ročne a platíte ju priamo registrátorovi.</p>
+    <ol class="mo-pc__steps">
+      <li class="mo-pc__step"><h3><i>01</i> <span data-i="ak1">Napíšete, čo potrebujete</span></h3><p><span data-i="ak1p"></span></p><figure class="mo-pc__visual"><img src="media/davyd-sunset-640.webp" width="640" height="640" loading="lazy" alt="" data-alt="meAlt"></figure></li>
+      <li class="mo-pc__step"><h3><i>02</i> <span data-i="ak2">Ukážem vám hotový web s vašimi službami a cenami</span></h3><p><span data-i="ak2p"></span></p><figure class="mo-pc__visual"><img src="media/shot-bella-desktop-1280.webp" width="1280" height="800" loading="lazy" alt=""></figure></li>
+      <li class="mo-pc__step"><h3><i>03</i> <span data-i="ak3">Platíte, až keď ste spokojní</span></h3><p><span data-i="ak3p"></span></p><figure class="mo-pc__visual"><img src="media/panel-owner.webp" width="1200" height="1000" loading="lazy" alt=""></figure></li>
+    </ol>
+  </div>
+  <div class="mo-pc__visuals"></div>
+</div></section>
+
 
 <section id="roles" class="job">
   <h2 data-i="rh">Na aké pozície sa hlásim</h2>
