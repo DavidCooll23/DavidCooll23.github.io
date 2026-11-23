@@ -45,6 +45,7 @@ img{max-width:100%}
 .demo{background:var(--night);color:var(--cream);font-size:.8125rem;line-height:1.4;padding:8px 0}
 .demo .wrap{display:flex;gap:6px 16px;flex-wrap:wrap;justify-content:space-between}
 .demo a{color:#fff;font-weight:600;text-underline-offset:3px}
+.demo a{display:inline-flex;align-items:center;gap:8px}.demo .me{width:26px;height:26px;border-radius:50%;object-fit:cover;margin:-4px 0;flex:none}
 /* header */
 header{position:sticky;top:0;z-index:30;background:color-mix(in srgb,var(--bg) 82%,transparent);backdrop-filter:blur(10px)}
 header .wrap{display:flex;align-items:center;gap:28px;padding-top:16px;padding-bottom:16px}
@@ -277,7 +278,7 @@ html,body{overflow-x:clip}
 </head>
 <body data-progress data-grain>
 <div class="wow-loader" data-loader aria-hidden="true"><span class="ld-w">Studio <i>Bella</i></span><span class="ld-n" data-loader-n>0</span></div>
-<div class="demo"><div class="wrap"><span data-i="demo"></span><a data-back href="../" data-i="back"></a></div></div>
+<div class="demo"><div class="wrap"><span data-i="demo"></span><a data-back href="../"><img class="me" src="../media/davyd-sunset-96.webp" width="96" height="96" alt="Davyd Konstantinov"><span data-i="back"></span></a></div></div>
 <header data-hide-header><div class="wrap">
   <a class="mark" href="#top">Studio Bella</a>
   <nav><a class="wow-line" href="#services" data-i="n1"></a><a class="wow-line" href="#team" data-i="n2"></a><a class="wow-line" href="#visit" data-i="n3"></a></nav>
