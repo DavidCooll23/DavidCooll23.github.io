@@ -25,6 +25,9 @@
 <link rel="preload" href="fonts/unbounded-latin-500.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="fonts/unbounded-sk-500.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="fonts/ibm-plex-sans-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+<script>try{var L=new URLSearchParams(location.search).get('lang')||localStorage.lang||navigator.language||'';if(/^(ru|uk)/.test(L)){var f=document.createElement('link');f.rel='preload';f.as='font';f.type='font/woff2';f.crossOrigin='';f.href='fonts/unbounded-cyrillic-500.woff2';document.head.appendChild(f)}}catch(e){}</script>
+<script>document.documentElement.classList.add('wow-js');try{sessionStorage.wowL&&document.documentElement.classList.add('wow-noload')}catch(e){};window.__wowT=setTimeout(()=>document.documentElement.classList.add('wow-safe'),3000)</script>
+<link rel="stylesheet" href="lib/wow.css">
 <style>
 @font-face{font-family:"Plex";src:url(fonts/ibm-plex-sans-latin-400-normal.woff2) format("woff2");font-weight:400;font-display:swap;unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
 @font-face{font-family:"Plex";src:url(fonts/ibm-plex-sans-latin-ext-400-normal.woff2) format("woff2");font-weight:400;font-display:swap;unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF}
@@ -272,7 +275,7 @@ footer{display:flex;justify-content:space-between;align-items:center;gap:16px;pa
   .plist .prow{grid-template-columns:minmax(0,1fr) auto;gap:5px 16px}.plist .prow>div{grid-column:1/-1}
   .plist .eur{font-size:24px}.plist .term{align-self:center}
   #contact{padding:25px 16px 16px}.contact-intro{padding:0 4px}.form-panel{padding:6px 4px 4px}
-  .intro .btn.outward{display:none}
+  .intro .btn.outward{min-height:40px;padding:6px 4px}
   .qf .btn{flex:1 1 auto}.qf .btns{gap:8px}footer{font-size:12px;flex-wrap:wrap}
 }
 @media(prefers-reduced-motion:no-preference){
@@ -322,9 +325,26 @@ footer{display:flex;justify-content:space-between;align-items:center;gap:16px;pa
   ::view-transition-old(root){animation:.22s ease both vtOut}::view-transition-new(root){animation:.32s cubic-bezier(.2,.8,.2,1) both vtIn}
   @keyframes vtOut{to{opacity:0;transform:translateY(-8px)}}@keyframes vtIn{from{opacity:0;transform:translateY(10px)}}
 }
+/* 23.11 «main page to Bella's level»: wow set (lib/), taste tokens for the moments, bigger type, statement, pinned steps, giant type, bigger dark finale */
+:root{--s-2:8px;--s-4:16px;--s-5:24px;--s-6:32px;--s-7:48px;--s-8:64px;--gutter:clamp(24px,4vw,72px);--font-text:var(--sans);--t-lead:17px;--r-md:6px;--nav:80px;--display-weight:500;--line:var(--rule);--accent:var(--blue);--grain:.05}
+html.lenis{scroll-behavior:auto}
+@media(min-width:761px){h1{font-size:clamp(40px,5vw,84px)}}
+.facts{font-size:clamp(20px,2.4vw,36px)}.facts li::before{width:12px;height:12px}
+.stmtsec .stmt{font:500 clamp(28px,4.4vw,68px)/1.1 var(--display);letter-spacing:-.045em;max-width:22ch;text-wrap:balance}
+.pcsec{min-height:0!important}
+.pcsec .mo-pc__text>h2{margin-bottom:12px}.pcsec .mo-pc__text>.fine{max-width:46ch;margin-bottom:clamp(28px,3vw,44px)}
+.pcsec.pcsec .mo-pc__step h3{font:500 clamp(22px,2.3vw,36px)/1.15 var(--display);letter-spacing:-.04em}
+.pcsec .mo-pc__step h3 i{font-style:normal;color:var(--blue);margin-right:.35em}
+.pcsec.pcsec .mo-pc__step p{color:var(--muted);font-size:16px;line-height:1.55;max-width:46ch}
+.pcsec .mo-pc__visual img{display:block;width:100%;aspect-ratio:4/3;object-fit:cover;object-position:top;border-radius:6px;border:1px solid var(--rule)}
+@media(max-width:639px){.pcsec .mo-pc__step:not(:first-child) .mo-pc__visual{display:none}}
+.gtsec .mo-gt__type{--mo-tint:color-mix(in oklab,var(--deep) 22%,transparent);font:500 clamp(72px,15vw,250px)/.92 var(--display);letter-spacing:-.07em}
+.gtsec .mo-gt__row p{color:var(--muted);font-size:clamp(17px,1.4vw,21px)}
+#contact h2{font-size:clamp(40px,5vw,84px);line-height:1.02}
+@media(min-width:1001px){#contact{grid-template-columns:1fr 1fr}}
 </style>
 </head>
-<body data-mode="biz" id="top">
+<body data-mode="biz" id="top" data-grain>
 <div class="progress" aria-hidden="true"></div>
 <div class="wrap">
 <header>
@@ -354,7 +374,7 @@ footer{display:flex;justify-content:space-between;align-items:center;gap:16px;pa
     <p class="hero-price-line biz" data-i="hpShort">Web od 250 €, s rezervačným systémom od 350 €</p>
     <ul class="hero-prices biz"><li data-i="hp1">Jednoduchý web od 250 €</li><li data-i="hp2">S online rezerváciou od 350 €</li></ul>
     <div class="btns biz">
-      <a class="btn main arrow" href="#qf" data-write data-i="cta">Zistiť cenu a termín</a>
+      <a class="btn main arrow" href="#qf" data-write data-magnetic data-i="cta">Zistiť cenu a termín</a>
       <a class="btn outward" href="studio-bella/" data-ex="studio-bella/" data-i="site2">Vyskúšať web salónu</a>
     </div>
     <div class="hero-risk biz"><img src="media/davyd-sunset-96.webp" width="96" height="96" data-alt="meAlt" alt="Davyd Konstantinov"><p data-i="heroRisk">Najprv uvidíte hotový web. Platíte, až keď ste spokojní.</p></div>
@@ -405,17 +425,17 @@ footer{display:flex;justify-content:space-between;align-items:center;gap:16px;pa
 <section id="work" class="work">
   <div class="section-head"><h2 data-i="work">Vyskúšajte si ukážky</h2></div>
   <div class="projects">
-    <a class="project" href="studio-bella/" data-ex="studio-bella/">
+    <a class="project" href="studio-bella/" data-ex="studio-bella/" data-cursor="Studio Bella">
       <div class="cover salon-cover"><picture><source media="(max-width:760px)" srcset="media/shot-bella-phone-780.webp" width="780" height="1080"><img src="media/shot-bella-desktop-1280.webp" srcset="media/shot-bella-desktop-800.webp 800w, media/shot-bella-desktop-1280.webp 1280w, media/shot-bella-desktop-1600.webp 1600w" sizes="(max-width:760px) 92vw, 56vw" width="1280" height="800" alt="" loading="lazy"></picture></div>
       <div class="project-title"><h3 data-i="bellaName">Studio Bella</h3><span class="circle-arrow" aria-hidden="true"></span></div>
       <p data-i="w0p">Vyberte si službu, špecialistku a čas. Rezerváciu potom nájdete aj v paneli majiteľa.</p>
     </a>
-    <a class="project" href="garaz-4/" data-ex="garaz-4/">
+    <a class="project" href="garaz-4/" data-ex="garaz-4/" data-cursor="Garáž 4">
       <div class="cover garage-cover"><picture><source media="(max-width:760px)" srcset="media/shot-garage-phone-780.webp?v=4" width="780" height="678"><img src="media/shot-garage-960.webp" width="960" height="640" alt="" loading="lazy"></picture></div>
       <div class="project-title"><h3 data-i="garageName">Garáž 4</h3><span class="circle-arrow" aria-hidden="true"></span></div>
       <p data-i="garageDesc">Web autoservisu so službami a cenníkom. Cez formulár si zákazník vypýta cenovú ponuku.</p>
     </a>
-    <a class="project" href="preklad/" data-ex="preklad/">
+    <a class="project" href="preklad/" data-ex="preklad/" data-cursor="↗">
       <div class="cover type-cover" aria-hidden="true"><span lang="sk" data-i="helloSK">Dobrý deň.</span><em lang="uk" data-i="helloUA">Добрий день.</em></div>
       <div class="project-title"><h3 data-i="translationName">Pred a po</h3><span class="circle-arrow" aria-hidden="true"></span></div>
       <p data-i="translationDesc">Porovnajte pôvodnú stránku s ukrajinskou a ruskou verziou.</p>
@@ -436,13 +456,20 @@ footer{display:flex;justify-content:space-between;align-items:center;gap:16px;pa
   </div></details>
 </section>
 
-<section id="ako" class="process biz">
-  <div class="process-copy">
+<section class="stmtsec biz"><p class="stmt" data-highlight data-i="stmt">Najprv vám ukážem hotový web s vašimi službami a cenami. Platíte, až keď sa vám páči. Web, doména aj prístupy potom patria vám.</p></section>
+
+<section id="ako" class="pcsec biz" data-moment="pinned-chapters" data-moment-opts='{"static":true}'><div class="mo-pc__grid">
+  <div class="mo-pc__text">
     <h2 data-i="akh">Ako to prebieha</h2>
     <p class="fine" data-i="akf">Web, doména aj prístupy sú vaše. Doména stojí asi 15 € ročne a platíte ju priamo registrátorovi.</p>
+    <ol class="mo-pc__steps">
+      <li class="mo-pc__step"><h3><i>01</i> <span data-i="ak1">Napíšete, čo potrebujete</span></h3><p><span data-i="ak1p"></span></p><figure class="mo-pc__visual"><img src="media/davyd-sunset-640.webp" width="640" height="640" loading="lazy" alt="" data-alt="meAlt"></figure></li>
+      <li class="mo-pc__step"><h3><i>02</i> <span data-i="ak2">Ukážem vám hotový web s vašimi službami a cenami</span></h3><p><span data-i="ak2p"></span></p><figure class="mo-pc__visual"><img src="media/shot-bella-desktop-1280.webp" width="1280" height="800" loading="lazy" alt=""></figure></li>
+      <li class="mo-pc__step"><h3><i>03</i> <span data-i="ak3">Platíte, až keď ste spokojní</span></h3><p><span data-i="ak3p"></span></p><figure class="mo-pc__visual"><img src="media/panel-owner.webp" width="1200" height="1000" loading="lazy" alt=""></figure></li>
+    </ol>
   </div>
-  <ol class="steps"><li data-i="ak1">Napíšete, čo potrebujete</li><li data-i="ak2">Ukážem vám hotový web s vašimi službami a cenami</li><li data-i="ak3">Platíte, až keď ste spokojní</li></ol>
-</section>
+  <div class="mo-pc__visuals"></div>
+</div></section>
 
 <section id="prices" class="biz">
   <h2 data-i="ph">Služby a ceny</h2>
@@ -496,6 +523,11 @@ footer{display:flex;justify-content:space-between;align-items:center;gap:16px;pa
     <a class="cvl" data-cv="QA" target="_blank" rel="noopener"><b data-i="r2t">Tester / QA junior</b><span>PDF</span></a>
     <a class="cvl" data-cv="Automation" target="_blank" rel="noopener"><b data-i="r3t">AI automatizácia</b><span>PDF</span></a>
   </div>
+</section>
+
+<section class="gtsec biz" data-moment="giant-type-pass" data-moment-opts='{"image":"media/shopfront.webp","travel":40,"focusY":55}'>
+  <h2 class="mo-gt__type" data-i="gt">Váš web</h2>
+  <div class="mo-gt__row"><p data-i="gtp">Hotový za 5–10 dní. Bez mesačných poplatkov.</p><a class="btn main arrow" href="#qf" data-write data-magnetic data-i="cta">Zistiť cenu a termín</a></div>
 </section>
 
 <section id="contact">
@@ -640,6 +672,12 @@ const T = {
     "ak2": "Ukážem vám hotový web s vašimi službami a cenami",
     "ak3": "Platíte, až keď ste spokojní",
     "akf": "Web, doména aj prístupy sú vaše. Doména stojí asi 15 € ročne a platíte ju priamo registrátorovi.",
+    "stmt": "Najprv vám ukážem hotový web s vašimi službami a cenami. Platíte, až keď sa vám páči. Web, doména aj prístupy potom patria vám.",
+    "ak1p": "Pár slov o vašom podniku: aké služby ponúkate a v akých jazykoch má byť web.",
+    "ak2p": "Za 5–10 dní dostanete odkaz a web aj rezerváciu si sami vyskúšate.",
+    "ak3p": "Upravím, čo treba, a spustím web na vašej doméne. Prvý mesiac sú úpravy zadarmo.",
+    "gt": "Váš web",
+    "gtp": "Hotový za 5–10 dní. Bez mesačných poplatkov.",
     "qb": "Aký máte podnik? (nepovinné)",
     "qn": "Čo potrebujete?",
     "qk": "Váš telefón alebo e-mail",
@@ -839,6 +877,12 @@ const T = {
     "ak2": "I show you the site with your services",
     "ak3": "You pay only when you like it",
     "akf": "The site, the domain and all logins are yours. A domain costs about €15 a year, and you pay the registrar directly.",
+    "stmt": "First I show you the finished site with your services and prices. You pay only when you like it. The site, the domain and the logins are yours.",
+    "ak1p": "A few words about your business: which services you offer and which languages the site needs.",
+    "ak2p": "Within 5–10 days you get a link and try the site and the booking yourself.",
+    "ak3p": "I adjust what is needed and launch the site on your domain. Changes are free for the first month.",
+    "gt": "Your site",
+    "gtp": "Ready in 5–10 days. No monthly fees.",
     "qb": "Type of business (optional)",
     "qn": "What do you need?",
     "qk": "Your phone number or email",
@@ -1018,6 +1062,12 @@ const T = {
     "ak2": "Я показываю сайт с вашими услугами",
     "ak3": "Платите, только когда сайт вам нравится",
     "akf": "Сайт, домен и доступы ваши. Домен стоит примерно 15 € в год, его вы оплачиваете напрямую регистратору.",
+    "stmt": "Сначала я показываю вам готовый сайт с вашими услугами и ценами. Платите, только когда он вам нравится. Сайт, домен и доступы — ваши.",
+    "ak1p": "Пара слов о вашем деле: какие услуги и на каких языках нужен сайт.",
+    "ak2p": "Через 5–10 дней вы получаете ссылку и сами пробуете сайт и запись.",
+    "ak3p": "Правлю, что нужно, и запускаю сайт на вашем домене. Первый месяц правки бесплатно.",
+    "gt": "Ваш сайт",
+    "gtp": "Готов за 5–10 дней. Без ежемесячной платы.",
     "qb": "Чем вы занимаетесь? (необязательно)",
     "qn": "Что вам нужно?",
     "qk": "Ваш телефон или электронная почта",
@@ -1198,6 +1248,12 @@ const T = {
     "ak2": "Я показую сайт із вашими послугами",
     "ak3": "Платите, лише коли сайт вам подобається",
     "akf": "Сайт, домен і доступи належать вам. Домен коштує приблизно 15 € на рік, його ви оплачуєте напряму реєстраторові.",
+    "stmt": "Спочатку я показую вам готовий сайт з вашими послугами та цінами. Платите, лише коли він вам подобається. Сайт, домен і доступи — ваші.",
+    "ak1p": "Кілька слів про вашу справу: які послуги та якими мовами потрібен сайт.",
+    "ak2p": "За 5–10 днів ви отримуєте посилання і самі пробуєте сайт і запис.",
+    "ak3p": "Виправляю, що потрібно, і запускаю сайт на вашому домені. Перший місяць правки безкоштовні.",
+    "gt": "Ваш сайт",
+    "gtp": "Готовий за 5–10 днів. Без щомісячної плати.",
     "qb": "Чим ви займаєтеся? (необов’язково)",
     "qn": "Що вам потрібно?",
     "qk": "Ваш телефон або електронна пошта",
@@ -1328,6 +1384,7 @@ function setLang(l) {
   if (!sendError.hidden) sendError.querySelector('a').href = whatsappUrl(messageFromFields());
   copyStatus.textContent = '';
   try { localStorage.lang = l; } catch {}
+  setTimeout(() => window.wow && wow.resplit(), 0);
 }
 
 const motionOK = matchMedia('(prefers-reduced-motion: no-preference)').matches;
@@ -1464,20 +1521,6 @@ form.addEventListener('submit', async event => {
   }));
   let touched = false;
   ['pointerdown', 'keydown'].forEach(e => demo.addEventListener(e, () => { touched = true; }, {once: true}));
-  if (motionOK && 'IntersectionObserver' in window) {
-    // The demo books 18:30 by itself once, so the visitor sees the booking land in the salon's calendar.
-    const io = new IntersectionObserver(entries => {
-      if (!entries[0].isIntersecting) return;
-      io.disconnect();
-      setTimeout(() => {
-        if (touched || book.disabled) return;
-        book.classList.add('tap');
-        book.addEventListener('animationend', () => book.classList.remove('tap'), {once: true});
-        setTimeout(() => { if (!touched && !book.disabled) book.click(); }, 180);
-      }, 1900);
-    }, {threshold: .6});
-    io.observe(book);
-  }
   book.addEventListener('click', () => {
     const t = picked().textContent;
     fresh.querySelector('time').textContent = t;
@@ -1507,7 +1550,7 @@ form.addEventListener('submit', async event => {
   }), {rootMargin: '0px 0px -8% 0px'});
   // Marked only on the first scroll and only below the fold, so a still full-page shot shows everything in place.
   addEventListener('scroll', () => {
-    const groups = ['main>section>h2', '.section-head', '.projects>.project', '.process>div:first-child', '.steps>li', '.packages>.prow', '.price-cta', '.faq>.qa', '#contact'];
+    const groups = ['main>section:not(.gtsec)>h2', '.section-head', '.projects>.project', '.packages>.prow', '.price-cta', '.faq>.qa', '#contact'];
     groups.forEach(sel => document.querySelectorAll(sel).forEach((el, i) => {
       if (el.getBoundingClientRect().top < innerHeight) return;
       el.style.setProperty('--i', i % 4);
@@ -1535,5 +1578,12 @@ document.getElementById('copy-email').addEventListener('click', async () => {
   copyStatus.textContent = T[currentLanguage()][copied ? 'copied' : 'copyManual'];
 });
 </script>
+<script defer src="lib/gsap.min.js"></script>
+<script defer src="lib/ScrollTrigger.min.js"></script>
+<script defer src="lib/SplitText.min.js"></script>
+<script defer src="lib/lenis.min.js"></script>
+<script defer src="lib/wow.js"></script>
+<script>document.documentElement.classList.add('mo-js');setTimeout(()=>document.documentElement.classList.add('mo-safe'),2500)</script>
+<script type="module" src="lib/moments/moments.js"></script>
 </body>
 </html>
