@@ -63,7 +63,7 @@ nav a{color:var(--sec)}nav a:hover{color:var(--ink)}
 .hero{position:relative;display:grid;grid-template-columns:1.15fr .85fr;gap:clamp(24px,4vw,72px);align-items:center;padding-top:clamp(16px,3vh,40px);padding-bottom:clamp(48px,8vh,96px);min-height:calc(100svh - 110px)}
 .eyebrow{display:flex;gap:14px;align-items:center;font-size:.8125rem;letter-spacing:.14em;text-transform:uppercase;color:var(--sec);margin-bottom:clamp(20px,3vh,36px)}
 .eyebrow::before{content:"";width:44px;height:1px;background:var(--clay)}
-h1{font:500 clamp(3rem,5.7vw,6.6rem)/.92 var(--serif);letter-spacing:-.035em;margin-bottom:clamp(24px,4vh,44px);text-wrap:balance;max-width:11ch}
+h1{font:500 clamp(3rem,5.7vw,6.6rem)/.92 var(--serif);letter-spacing:-.035em;margin-bottom:clamp(24px,4vh,44px);text-wrap:balance;max-width:19ch}
 h1 .wow-l{padding-bottom:.06em}
 .lead{font-size:1.125rem;color:var(--sec);max-width:40ch;margin-bottom:32px}
 .btns{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:28px}
@@ -169,7 +169,7 @@ footer a{color:var(--cream);font-weight:600}
 .q .done{color:var(--clay);font-weight:600;font-size:.9375rem;min-height:1.5em}
 .owner{display:grid;gap:14px}
 .owner h3{font:400 1.375rem/1.25 var(--serif)}
-.owner .note{font-size:.875rem;color:var(--sec)}
+.q .note{font-size:.875rem;color:var(--sec)}
 .tgm{background:#dfe7ee;border-radius:18px;overflow:hidden;box-shadow:0 14px 34px rgba(43,33,27,.10)}
 .tgm .top{display:flex;gap:12px;align-items:center;padding:11px 16px;background:#fff}
 .tgm .av{flex:none;width:38px;height:38px;border-radius:50%;background:var(--clay);color:#fff;display:grid;place-items:center;font:italic 400 1.125rem/1 var(--serif)}
@@ -375,10 +375,11 @@ html,body{overflow-x:clip}
   <div class="ask" data-reveal>
     <form class="q" id="fq" novalidate>
       <label><span data-i="fn"></span><input name="n" autocomplete="given-name" maxlength="60" required data-ph="pn"></label>
-      <label><span><span data-i="fc"></span> <small data-i="fcx"></small></span><input name="c" autocomplete="tel" maxlength="60" data-ph="pc"></label>
+      <label><span data-i="fc"></span><input name="c" autocomplete="tel" maxlength="60" required data-ph="pc"></label>
       <label><span data-i="fq"></span><textarea name="q" maxlength="500" required data-ph="pq"></textarea></label>
       <button class="btn" type="submit" data-i="fb" data-magnetic></button>
       <p class="done" id="fdone" aria-live="polite"></p>
+      <p class="note" data-i="onote"></p>
     </form>
     <div class="owner" id="owner">
       <h3 data-i="oh"></h3>
@@ -399,7 +400,6 @@ html,body{overflow-x:clip}
           </tbody>
         </table>
       </div>
-      <p class="note" data-i="onote"></p>
     </div>
   </div>
 </div></section>
@@ -515,7 +515,7 @@ ch:"Free slots still available this week",cp:"See the free times and book withou
 foot:"This is a sample website for a small salon. The salon, address and names are made up."}};
 // 2026-11-22: question form (demo of "enquiries to Telegram + sheet") and FAQ auto-replies
 Object.assign(T.sk,{qh:"Máte otázku? Napíšte nám",qs:"Stačí meno a otázka. Recepčná vám odpovie ešte v ten deň.",
-fn:"Meno",fc:"Telefón alebo e-mail",fcx:"(nepovinné)",fq:"Otázka",fb:"Odoslať otázku",fok:"Odoslané. Pozrite sa, čo práve prišlo do salónu.",fneed:"Doplňte meno a otázku.",
+fn:"Meno",fc:"Telefón alebo e-mail",fq:"Otázka",fb:"Odoslať otázku",fok:"Odoslané. Pozrite sa, čo práve prišlo do salónu.",fneed:"Doplňte meno, kontakt a otázku.",
 pn:"Mária",pc:"+421 … alebo meno@email.sk",pq:"Striháte aj deti?",
 oh:"Toto salón dostane hneď po odoslaní otázky",ow:"Po odoslaní formulára sa tu objaví správa.",obot:"dopyty z webu",onew:"Nová otázka z webu",on:"Meno",oc:"Kontakt",oq:"Otázka",onone:"neuvedený",
 stitle:"Dopyty z webu",c1:"Dátum",c2:"Meno",c3:"Kontakt",c4:"Otázka",r1:"Máte voľno v sobotu ráno?",r2:"Koľko stojí farbenie dlhých vlasov?",
@@ -524,7 +524,7 @@ fab:"Opýtať sa",ws:"Automatické odpovede · ukážka",wph:"Napíšte otázku�
 w0:"Dobrý deň! Opýtajte sa na ceny, otváracie hodiny, adresu alebo voľné termíny. Odpoviem v jazyku, v ktorom napíšete.",
 chips:["Koľko stojí manikúra?","Máte otvorené v nedeľu?","Kde vás nájdem?","Скільки коштує фарбування?"]});
 Object.assign(T.uk,{qh:"Маєте запитання? Напишіть нам",qs:"Досить імені та запитання. Адміністраторка відповість того ж дня.",
-fn:"Ім’я",fc:"Телефон або e-mail",fcx:"(необов’язково)",fq:"Запитання",fb:"Надіслати запитання",fok:"Надіслано. Подивіться, що щойно отримав салон.",fneed:"Вкажіть ім’я та напишіть запитання.",
+fn:"Ім’я",fc:"Телефон або e-mail",fq:"Запитання",fb:"Надіслати запитання",fok:"Надіслано. Подивіться, що щойно отримав салон.",fneed:"Вкажіть ім’я, контакт і запитання.",
 pn:"Марія",pc:"+421 … або name@email.sk",pq:"Ви стрижете й дітей?",
 oh:"Ось що салон отримає одразу після надсилання запитання",ow:"Після надсилання форми тут з’явиться повідомлення.",obot:"звернення із сайту",onew:"Нове запитання із сайту",on:"Ім’я",oc:"Контакт",oq:"Запитання",onone:"не вказано",
 stitle:"Звернення із сайту",c1:"Дата",c2:"Ім’я",c3:"Контакт",c4:"Запитання",r1:"Чи можна записатися на суботу зранку?",r2:"Скільки коштує фарбування довгого волосся?",
@@ -533,7 +533,7 @@ fab:"Запитати",ws:"Автовідповіді · приклад",wph:"Н
 w0:"Добрий день! Запитайте про ціни, години роботи, адресу чи вільний час для запису. Відповім тією мовою, якою ви напишете.",
 chips:["Скільки коштує манікюр?","Ви працюєте в неділю?","Де вас знайти?","Koľko stojí strih?"]});
 Object.assign(T.ru,{qh:"Есть вопрос? Напишите нам",qs:"Достаточно имени и вопроса. Администратор ответит в тот же день.",
-fn:"Имя",fc:"Телефон или e-mail",fcx:"(необязательно)",fq:"Вопрос",fb:"Отправить вопрос",fok:"Отправлено. Посмотрите, что сейчас получил салон.",fneed:"Укажите имя и вопрос.",
+fn:"Имя",fc:"Телефон или e-mail",fq:"Вопрос",fb:"Отправить вопрос",fok:"Отправлено. Посмотрите, что сейчас получил салон.",fneed:"Укажите имя, контакт и вопрос.",
 pn:"Мария",pc:"+421 … или name@email.sk",pq:"Вы стрижёте детей?",
 oh:"Вот что в эту минуту получает салон",ow:"После отправки формы здесь появится сообщение.",obot:"заявки с сайта",onew:"Новый вопрос с сайта",on:"Имя",oc:"Контакт",oq:"Вопрос",onone:"не указан",
 stitle:"Заявки с сайта",c1:"Дата",c2:"Имя",c3:"Контакт",c4:"Вопрос",r1:"Есть свободное время в субботу утром?",r2:"Сколько стоит окрашивание длинных волос?",
@@ -542,7 +542,7 @@ fab:"Спросить",ws:"Автоответы · пример",wph:"Напиш
 w0:"Здравствуйте! Спросите про цены, часы работы, адрес или свободное время. Отвечу на том языке, на котором вы напишете.",
 chips:["Сколько стоит маникюр?","Вы работаете в воскресенье?","Где вас найти?","How much is a haircut?"]});
 Object.assign(T.en,{qh:"Got a question? Write to us",qs:"Just enter your name and question. Our receptionist will reply the same day.",
-fn:"Name",fc:"Phone or email",fcx:"(optional)",fq:"Question",fb:"Send question",fok:"Sent. Have a look at what the salon just received.",fneed:"Please add your name and question.",
+fn:"Name",fc:"Phone or email",fq:"Question",fb:"Send question",fok:"Sent. Have a look at what the salon just received.",fneed:"Please add your name, contact and question.",
 pn:"Maria",pc:"+421 … or name@email.sk",pq:"Do you cut children's hair?",
 oh:"What the salon receives as soon as you submit your question",ow:"A message appears here once you send the form.",obot:"website enquiries",onew:"New question from the website",on:"Name",oc:"Contact",oq:"Question",onone:"not given",
 stitle:"Website enquiries",c1:"Date",c2:"Name",c3:"Contact",c4:"Question",r1:"Do you have any appointments available on Saturday morning?",r2:"How much does it cost to colour long hair?",
@@ -608,7 +608,7 @@ const pad=n=>String(n).padStart(2,'0');
 fq.addEventListener('submit',ev=>{
   ev.preventDefault();
   const n=fq.n.value.trim(),c=fq.c.value.trim(),q=fq.q.value.trim();
-  if(!n||!q){$('fdone').textContent=T[cur].fneed;(n?fq.q:fq.n).focus();return}
+  if(!n||!c||!q){$('fdone').textContent=T[cur].fneed;(!n?fq.n:!c?fq.c:fq.q).focus();return}
   const d=new Date(),stamp=d.getDate()+'. '+(d.getMonth()+1)+'. '+pad(d.getHours())+':'+pad(d.getMinutes());
   $('tn').textContent=n;$('tq').textContent=q;$('tt').textContent=stamp;
   if(c){$('tc').textContent=c;delete $('tc').dataset.none}else{$('tc').textContent=T[cur].onone;$('tc').dataset.none='1'}
