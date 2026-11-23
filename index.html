@@ -536,7 +536,7 @@ html.lenis{scroll-behavior:auto}
 <section id="contact">
   <div class="contact-intro">
     <h2 data-i="ch">Aký web potrebujete?</h2><p data-i="cp">Napíšte mi pár slov o svojom podniku. Ozvem sa s cenou a termínom.</p>
-    <div class="me"><img src="media/davyd-sunset-640.webp" srcset="media/davyd-sunset-360.webp 360w, media/davyd-sunset-640.webp 640w" sizes="(max-width:760px) 132px, 220px" width="640" height="640" decoding="async" fetchpriority="low" data-alt="meAlt" alt="Davyd Konstantinov"><p data-i="who">Píšete priamo mne, Davydovi. Web robím sám, od návrhu po spustenie.</p></div>
+    <div class="me"><img src="media/davyd-sunset-640.webp" srcset="media/davyd-sunset-360.webp 360w, media/davyd-sunset-640.webp 640w" sizes="(max-width:760px) 132px, 220px" width="640" height="640" decoding="async" loading="lazy" fetchpriority="low" data-alt="meAlt" alt="Davyd Konstantinov"><p data-i="who">Píšete priamo mne, Davydovi. Web robím sám, od návrhu po spustenie.</p></div>
     <div class="address"><span id="email-address">davyd@konstantinov.sk</span><button type="button" id="copy-email" data-i="copy">Kopírovať</button></div>
     <small id="copy-status" role="status"></small>
     <div class="channels"><a href="https://wa.me/421910392871" data-wa><span data-i="waName">WhatsApp</span> <span>+421 910 392 871</span></a><a href="tel:+421910392871" data-i="callName">Zavolať</a><a href="https://t.me/+421910392871" data-i="tgName">Telegram</a></div>
@@ -1581,12 +1581,8 @@ document.getElementById('copy-email').addEventListener('click', async () => {
   copyStatus.textContent = T[currentLanguage()][copied ? 'copied' : 'copyManual'];
 });
 </script>
-<script defer src="lib/gsap.min.js"></script>
-<script defer src="lib/ScrollTrigger.min.js"></script>
-<script defer src="lib/SplitText.min.js"></script>
-<script defer src="lib/lenis.min.js"></script>
-<script defer src="lib/wow.js"></script>
-<script>document.documentElement.classList.add('mo-js');setTimeout(()=>document.documentElement.classList.add('mo-safe'),2500)</script>
-<script type="module" src="lib/moments/moments.js"></script>
+<script>document.documentElement.classList.add('mo-js');setTimeout(()=>document.documentElement.classList.add('mo-safe'),2500)
+/* motion libraries load 1 s after the page: fetched with it they took the slow-4G bandwidth from the first screen (LCP 3.1 s, 23.11). async=false keeps their order */
+addEventListener('load',()=>setTimeout(()=>{['gsap.min.js','ScrollTrigger.min.js','SplitText.min.js','lenis.min.js','wow.js'].forEach(f=>{const e=document.createElement('script');e.src='lib/'+f;e.async=false;if(f=='wow.js')e.onload=e.onerror=()=>{const m=document.createElement('script');m.type='module';m.src='lib/moments/moments.js';document.body.append(m)};document.body.append(e)})},1000),{once:true})</script>
 </body>
 </html>
