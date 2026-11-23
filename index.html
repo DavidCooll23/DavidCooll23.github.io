@@ -337,7 +337,10 @@ html.lenis{scroll-behavior:auto}
 .pcsec .mo-pc__step h3 i{font-style:normal;color:var(--blue);margin-right:.35em}
 .pcsec.pcsec .mo-pc__step p{color:var(--muted);font-size:16px;line-height:1.55;max-width:46ch}
 .pcsec .mo-pc__visual img{display:block;width:100%;aspect-ratio:4/3;object-fit:cover;object-position:top;border-radius:6px;border:1px solid var(--rule)}
-@media(max-width:639px){.pcsec .mo-pc__visual{display:none}}
+.pcsec .mo-pc__visual{display:none}
+/* codex 23.11 runs 9-10 (twice): on PC three short steps ran over several screens and repeated the portrait and the Bella cover; now one row, text only */
+@media(min-width:1001px){.pcsec.pcsec .mo-pc__steps{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(24px,3vw,48px)}.pcsec.pcsec .mo-pc__step{min-height:0;padding:0;display:block}}
+@media(max-width:760px){#faq h2{margin-bottom:34px}}
 .gtsec .mo-gt__type{--mo-tint:color-mix(in oklab,var(--deep) 22%,transparent);font:500 clamp(72px,15vw,250px)/.92 var(--display);letter-spacing:-.07em}
 .gtsec .mo-gt__row p{color:var(--muted);font-size:clamp(17px,1.4vw,21px)}
 #contact h2{font-size:clamp(40px,5vw,84px);line-height:1.02}
