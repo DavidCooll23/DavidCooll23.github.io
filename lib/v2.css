@@ -145,3 +145,12 @@ footer{background:var(--night)}
 .v2-light.on{opacity:1}
 .wrap{position:relative;z-index:1}
 @media(prefers-reduced-motion:reduce),(hover:none){.v2-light{display:none}}
+
+/* 25.11 after the blind judges: step numbers were dark blue on black, form fields hard to see */
+.pcsec .mo-pc__step h3 i{color:#9aa2ff}
+.pcsec .mo-pc__step.is-on h3 i{color:var(--marker)}
+[data-moment="pinned-chapters"].is-live .mo-pc__step h3{color:#ffffffb8}
+[data-moment="pinned-chapters"].is-live .mo-pc__step.is-on h3{color:#fff}
+.pcsec.pcsec .mo-pc__step p{color:#ffffffc7}
+.qf input,.qf textarea{border-color:#ffffffc0;background:#ffffff1c}
+.qf label{color:#fff}
