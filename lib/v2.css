@@ -1,0 +1,147 @@
+/* v2.css - dark, dense version of the main page (preview /v2.html, 25.11 evening).
+   Loaded after novy.css. Texts, prices and contacts are the same; motion is the same plus a pointer light and an hour grid.
+   The page is night; UI cards (client demo, phone notification, browser frames, the cream work card) stay light
+   by re-scoping the colour variables on them. */
+
+:root{color-scheme:dark;--paper:#0a0a0f;--ink:#f2f2f6;--muted:#9c9eae;--rule:#ffffff1f;--night:#14151f;--sky:#151831;--blue-t:#8f97ff;--deep:#141a63}
+.ld-client,.nb-notif,.work .nv-p2,.nv-browser{--paper:#f6f6f3;--white:#fff;--ink:#0d0d0d;--muted:#5f6068;--rule:#e3e3e6;--sky:#e8eaf8;color:#0d0d0d}
+body{background:var(--paper);color:var(--ink)}
+body[data-grain]::after{mix-blend-mode:screen;opacity:.06}
+::selection{background:var(--marker);color:#0d0d0d}
+
+/* ---------- header ---------- */
+.monogram{background:var(--ink);color:#0a0a0f}
+.nvm-top .monogram{background:#fff;color:#0d0d0d}
+.lang button{color:var(--ink)}
+.lang button[aria-pressed=true]{background:var(--ink);color:#0a0a0f}
+.lang button:hover:not([aria-pressed=true]){background:#ffffff17;color:var(--ink)}
+.header-contact{color:#0a0a0f}
+.header-contact:hover{color:#fff}
+.nv-burger{background:transparent;border-color:#ffffff47;color:var(--ink)}
+@media(max-width:760px){header{background:#0a0a0fe8}header .header-contact{color:#0a0a0f}}
+.progress{background:var(--marker)}
+
+/* ---------- buttons on night ---------- */
+.btn{border-color:#ffffff47;color:var(--ink)}
+.btn.main{color:#0a0a0f}
+.btn.main:hover{color:#fff}
+.btn:not(.main):hover{color:#0a0a0f}
+.hero .btn.main,.price-cta .btn.main,.mo-gt__row .btn.main,.form-panel .btn.main{background:var(--marker);border-color:var(--marker);color:#0d0d0d;--fill:#fff}
+.hero .btn.main:hover,.price-cta .btn.main:hover,.mo-gt__row .btn.main:hover,.form-panel .btn.main:hover{background:#fff;border-color:#fff;color:#0d0d0d}
+.hero .btn.outward{border-color:#ffffff59}
+.bigbtn{color:#0d0d0d}
+.wow-cursor,.wow-cursor.dark{--cursor:#fff;--cursor-ink:#0a0a0f}
+
+/* ---------- first screen: bigger type, calendar hour grid behind it ---------- */
+h1 em{color:var(--blue-t)}
+.kicker i{color:var(--marker)}
+.stage{position:relative}
+.v2-hours{position:absolute;inset:0 calc(50% - 50vw);z-index:-1;pointer-events:none;overflow:hidden;display:grid;grid-template-rows:repeat(12,1fr);
+  -webkit-mask:linear-gradient(#000 60%,#0000);mask:linear-gradient(#000 60%,#0000)}
+.v2-hours span{display:flex;align-items:flex-start;padding:6px 0 0 clamp(6px,.6vw,14px);border-top:1px solid #ffffff0d;color:#ffffff38;font:400 clamp(9px,.62vw,13px)/1 var(--mono)}
+@media(max-width:999px){.v2-hours{display:none}}   /* hours sit in the left gutter on PC; on smaller screens the gutter is too narrow */
+.v2-hours span.on{color:var(--marker);border-top-color:#f6df4533}
+.hero .live-demo{background:linear-gradient(160deg,#1a1c2c,#101119 70%);box-shadow:inset 0 0 0 1px #ffffff14,0 60px 120px -60px #2b35c4aa}
+@media(min-width:1000px){
+  h1{font-size:clamp(44px,5.2vw,150px);line-height:.98}
+  .intro>h1{margin:auto 0 clamp(18px,1.6vw,36px)}
+  .intro>.lead{max-width:30ch;font-size:clamp(18px,1.4vw,30px)}
+  .intro>.hero-risk{padding-top:clamp(14px,1.2vw,28px)}   /* the whole column fits the first screen, the last line is not cut */
+  /* one row: the old phone layout left an empty second row whose 43 px gap pushed the first screen past the fold */
+  .hero{grid-template-areas:"intro client";grid-template-rows:auto}
+  /* the demo grows with the width; on wide, short screens (1920x960, 1985x1040) it was taller than the screen.
+     Its spacing and type follow whichever is smaller, width or height (identical to before at 16:10) */
+  #live-demo{--fs-text:clamp(15px,min(1.15vw,1.84vh),24px);--fs-card:clamp(24px,min(2.6vw,4.16vh),64px);--fs-label:clamp(12px,min(.9vw,1.44vh),18px);
+    gap:clamp(10px,min(1vw,1.6vh),20px);padding:clamp(14px,min(1.5vw,2.4vh),30px)}
+  #live-demo .ld-client,#live-demo .ld-owner{padding:clamp(14px,min(1.6vw,2.56vh),34px)}
+  #live-demo .ld-day{margin:6px 0 clamp(10px,min(1.2vw,1.92vh),24px)}
+  #live-demo .ld-times button{min-height:clamp(44px,min(3.4vw,5.44vh),68px)}
+  #live-demo .ld-book{min-height:clamp(48px,min(3.6vw,5.76vh),72px)}
+  #live-demo .ld-list{gap:clamp(5px,min(.5vw,.8vh),10px)}
+  #live-demo .ld-list li{min-height:clamp(38px,min(3.1vw,4.96vh),62px)}
+}
+
+/* ---------- ribbon ---------- */
+.ribbon{border-color:#ffffff1f}
+.ribbon .facts li::before{background:var(--marker)}
+
+/* ---------- work island ---------- */
+.work-pin{background:linear-gradient(170deg,#161830,#101119 60%);box-shadow:inset 0 0 0 1px #ffffff12}
+.work .nv-p1{background:#1f2131}
+.work .nv-p2{background:#efede6}
+
+/* ---------- bots ---------- */
+.nv-bot:nth-child(1){background:#14151f;box-shadow:inset 0 0 0 1px #ffffff14}
+.nv-bot:nth-child(2){background:#151a3d}
+.nv-bot:nth-child(2) p,.nv-bot:nth-child(3) p,.nv-bot:nth-child(4) p{color:#b9bbc9}
+.nv-bot:nth-child(3){background:#1b1a17}
+.nv-bot:nth-child(4){border-color:#ffffff26;background:#0f1016}
+.nvb-head p{color:var(--muted)}
+
+/* ---------- prices ---------- */
+.nb-card--sky{background:linear-gradient(170deg,#1b1e3a,#12142a);color:var(--ink);box-shadow:inset 0 0 0 1px #ffffff12}
+.nb-card--deep{background:linear-gradient(170deg,#2b35c4,#141a63 75%)}
+.nb-list li::before{background:var(--blue-t)}
+.nb-card--deep .nb-list li::before{background:var(--marker)}
+.nb-add__list li{box-shadow:inset 0 0 0 1px #ffffff12}
+.nb-note{color:var(--muted)}
+
+/* ---------- statement: the picture is the stage itself ---------- */
+.nb-stage::before,.nb-stage::after{content:none}
+.nb-stage.nb-on{background:linear-gradient(160deg,#141a6366,#141a63e6 72%),url(../media/loop/shot-bella-owner.webp) center var(--nbY,30%)/cover no-repeat,var(--nb-deep)}
+html[lang=en] .nb-stage.nb-on{background-image:linear-gradient(160deg,#141a6366,#141a63e6 72%),url(../media/loop/shot-bella-owner-en.webp)}
+html[lang=ru] .nb-stage.nb-on{background-image:linear-gradient(160deg,#141a6366,#141a63e6 72%),url(../media/loop/shot-bella-owner-ru.webp)}
+html[lang=uk] .nb-stage.nb-on{background-image:linear-gradient(160deg,#141a6366,#141a63e6 72%),url(../media/loop/shot-bella-owner-uk.webp)}
+
+/* ---------- who ---------- */
+.nb-who{background:radial-gradient(80% 120% at 85% 0%,#2b35c4,#141a63 55%,#0d1040)}
+
+/* ---------- contact + FAQ: one night, FAQ is a dark glass card ---------- */
+#contact{background:radial-gradient(70% 60% at 50% 0%,#1b2060,#14151f 70%)}
+#contact #faq.nb-faq{background:#ffffff09;color:var(--ink);box-shadow:inset 0 0 0 1px #ffffff17}
+#contact #faq.nb-faq>h2,#contact #faq.nb-faq .qa h3{color:#fff}
+#contact #faq.nb-faq .qa,#contact #faq.nb-faq .qa:last-child{border-color:#ffffff24}
+#contact #faq.nb-faq .qa>summary:hover h3{color:var(--marker)}
+#contact #faq.nb-faq .qa p{color:#b9bbc9}
+#contact #faq.nb-faq :focus-visible{outline-color:var(--marker)}
+footer{background:var(--night)}
+
+/* ---------- density on PC: less air between blocks, bigger reading type ---------- */
+@media(min-width:1000px){
+  main>section{margin-top:clamp(56px,5.5vw,140px)}
+  main>section.work,main>.nv-bots{margin-top:clamp(36px,3.6vw,90px)}
+  .nb-prices,.nb-stmt{padding-block:clamp(20px,2.4vw,56px)}
+  /* statement: big words on the left, the phone on the owner's panel on the right (was: words top-right, stage
+     bottom-left, so each screen of it was half empty) */
+  .stmtsec.nb-stmt{grid-template-columns:minmax(0,1fr) minmax(0,1fr);grid-template-areas:"k v" "s v";grid-template-rows:auto 1fr;
+    column-gap:clamp(28px,4vw,96px);row-gap:clamp(16px,1.6vw,36px);align-items:start}
+  .nb-stmt>.kicker{grid-area:k}
+  .nb-stmt>.stmt{grid-area:s;align-self:center;font-size:clamp(40px,4.9vw,140px);line-height:1.04}
+  .nb-stmt>.nb-stage{grid-area:v;min-height:min(80svh,860px);padding-block:clamp(24px,3vw,64px)}
+  .nb-stage>.nb-phone{width:min(330px,21vw)}
+  .nb-ako{padding-block:clamp(16px,2.4vw,48px)}
+  .nb-who{padding-block:clamp(48px,5vw,110px)}
+  .nb-who__photo{width:min(100%,clamp(400px,34vw,680px))}
+  .nb-who__lead{font-size:clamp(22px,2.1vw,44px)}
+  .nb-who__facts{max-width:none;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));column-gap:clamp(20px,2.4vw,48px)}
+  .nb-who__facts li{font-size:clamp(17px,1.35vw,26px);padding:clamp(14px,1.2vw,24px) 0}
+  .nb-who__facts li:nth-last-child(2){border-bottom:1px solid #ffffff38}
+  .gtsec.nb-gt{padding-block:clamp(16px,2.4vw,48px)}
+  #contact.nb-contact{padding-bottom:clamp(32px,3.4vw,80px)}
+  .final-top{padding-bottom:clamp(24px,2.8vw,56px)}
+  /* FAQ fills its column: bigger questions, the card stretches to the form column, so no hole under it */
+  .nb-split{align-items:stretch}
+  #contact #faq.nb-faq{display:flex;flex-direction:column}
+  #contact #faq.nb-faq .faq{flex:1;display:flex;flex-direction:column;justify-content:space-between}
+  #contact #faq.nb-faq .qa>summary{min-height:clamp(64px,4.6vw,96px)}
+  #contact #faq.nb-faq .qa h3{font-size:clamp(18px,1.45vw,30px);font-weight:500}
+  #contact #faq.nb-faq .qa p{font-size:clamp(16px,1.15vw,22px)}
+  .nb-formcol{align-self:start}
+}
+
+/* ---------- pointer light: a soft blue spot follows the mouse over the night (v2.js) ---------- */
+.v2-light{position:fixed;left:0;top:0;z-index:0;width:clamp(420px,42vw,900px);aspect-ratio:1;margin:calc(clamp(420px,42vw,900px) / -2) 0 0 calc(clamp(420px,42vw,900px) / -2);border-radius:50%;
+  background:radial-gradient(closest-side,#3b46ff26,#3b46ff00);pointer-events:none;opacity:0;transition:opacity .6s;will-change:transform}
+.v2-light.on{opacity:1}
+.wrap{position:relative;z-index:1}
+@media(prefers-reduced-motion:reduce),(hover:none){.v2-light{display:none}}
