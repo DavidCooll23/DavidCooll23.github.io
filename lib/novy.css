@@ -359,7 +359,8 @@ main>.nv-bots{margin-top:clamp(44px,5vw,120px)}
 
 /* 25.11 chat: PC density - the phone stands on the owner's panel, add-ons are 4 cards in a row */
 .nb-stage{position:relative;display:grid;place-items:center;padding:clamp(28px,5vw,96px) clamp(16px,3vw,56px);border-radius:var(--nb-r);overflow:hidden;background:var(--nb-deep)}
-.nb-stage::before{content:"";position:absolute;inset:0;background:url(../media/loop/shot-bella-owner.webp) center var(--nbY,30%)/cover no-repeat;opacity:.38;filter:saturate(.7)}
+.nb-stage::before{content:"";position:absolute;inset:0;background:center var(--nbY,30%)/cover no-repeat;opacity:.38;filter:saturate(.7)}
+.nb-stage.nb-on::before{background-image:url(../media/loop/shot-bella-owner.webp)} /* 25.11: set by novy.js near the viewport, so the picture is not fetched with the first screen (LCP) */
 .nb-stage::after{content:"";position:absolute;inset:0;background:linear-gradient(160deg,#141a6340,#141a63d9 70%)}
 .nb-stage>.nb-phone{position:relative;z-index:1}
 @media(min-width:1000px){
