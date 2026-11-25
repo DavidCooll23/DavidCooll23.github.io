@@ -663,6 +663,7 @@ footer .sig i{display:inline-block;font-style:normal}
     <p class="location" data-i="location">Bratislava, Slovensko</p>
     <h1><span data-i="h1">Zákazník sa objedná sám.</span> <em data-i="h1end">Rezerváciu uvidíte v mobile.</em></h1>
     <p class="lead" data-i="lead">Pre salóny, autoservisy a lektorov robím weby s online rezerváciou a dopytmi. V štyroch jazykoch.</p>
+    <script>/* 25.11: the first screen gets its language before the first paint, so the H1 (LCP) is not drawn twice */try{var H={"en": ["Customers book themselves.", "You see it on your phone.", "I build websites with online booking and enquiry forms for salons, car workshops and tutors. In four languages."], "ru": ["Клиент записывается сам.", "Вы видите запись в телефоне.", "Делаю сайты с онлайн-записью и заявками для салонов, автосервисов и репетиторов. На четырёх языках."], "uk": ["Клієнт записується сам.", "Ви бачите запис у телефоні.", "Роблю сайти з онлайн-записом і заявками для салонів, автосервісів і репетиторів. Чотирма мовами."]},L=(new URLSearchParams(location.search).get('lang')||localStorage.lang||navigator.language||'').slice(0,2),h=H[L];if(h)['h1','h1end','lead'].forEach(function(k,j){document.querySelector('[data-i="'+k+'"]').textContent=h[j]})}catch(e){}</script>
     <div class="btns job">
       <a class="btn main" href="#qf" data-write data-i="mail">Napísať e-mail</a>
       <a class="btn" href="#cv" data-i="cvb">Životopis (PDF)</a>
@@ -2042,7 +2043,7 @@ function setLang(l) {
   document.documentElement.lang = l;
   document.title = t.title;
   document.querySelector('meta[name=description]').content = t.desc;
-  translations.forEach(el => { el.textContent = t[el.dataset.i] ?? ''; });
+  translations.forEach(el => { const v = t[el.dataset.i] ?? ''; if (el.textContent !== v) el.textContent = v; });   // same text: no repaint
   document.querySelectorAll('[data-alt]').forEach(el => { el.alt = t[el.dataset.alt]; });
   document.querySelectorAll('[data-aria]').forEach(el => { el.setAttribute('aria-label', t[el.dataset.aria]); });
   document.querySelectorAll('[data-cursor-i]').forEach(el => { el.dataset.cursor = t[el.dataset.cursorI]; });
