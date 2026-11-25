@@ -1,0 +1,109 @@
+{
+ "bella-book": {
+  "w": 360,
+  "h": 780,
+  "m_w": 296,
+  "m_h": 640,
+  "dur": 7.46,
+  "bytes": 115467,
+  "m_bytes": 87307,
+  "poster_bytes": 16108
+ },
+ "bella-owner": {
+  "w": 360,
+  "h": 780,
+  "m_w": 296,
+  "m_h": 640,
+  "dur": 6.38,
+  "bytes": 28638,
+  "m_bytes": 22743,
+  "poster_bytes": 17872
+ },
+ "garaz-calc": {
+  "w": 1280,
+  "h": 800,
+  "m_w": 854,
+  "m_h": 534,
+  "dur": 6.29,
+  "bytes": 62335,
+  "m_bytes": 35380,
+  "poster_bytes": 32788
+ },
+ "preklad-lang": {
+  "w": 1280,
+  "h": 800,
+  "m_w": 854,
+  "m_h": 534,
+  "dur": 6.33,
+  "bytes": 140408,
+  "m_bytes": 72510,
+  "poster_bytes": 35724
+ },
+ "bot-salon": {
+  "w": 1280,
+  "h": 720,
+  "m_w": 854,
+  "m_h": 480,
+  "dur": 7.0,
+  "bytes": 155488,
+  "m_bytes": 86990,
+  "poster_bytes": 33462
+ },
+ "bot-monitor": {
+  "w": 1280,
+  "h": 720,
+  "m_w": 854,
+  "m_h": 480,
+  "dur": 7.0,
+  "bytes": 133227,
+  "m_bytes": 81721,
+  "poster_bytes": 42180
+ },
+ "bot-shop": {
+  "w": 1280,
+  "h": 720,
+  "m_w": 854,
+  "m_h": 480,
+  "dur": 7.0,
+  "bytes": 118217,
+  "m_bytes": 66968,
+  "poster_bytes": 32232
+ },
+ "bot-n8n": {
+  "w": 1280,
+  "h": 720,
+  "m_w": 854,
+  "m_h": 480,
+  "dur": 7.0,
+  "bytes": 73366,
+  "m_bytes": 44677,
+  "poster_bytes": 19372
+ },
+ "shots": {
+  "shot-bella-book": {
+   "w": 390,
+   "h": 844,
+   "bytes": 19818
+  },
+  "shot-bella-owner": {
+   "w": 390,
+   "h": 844,
+   "bytes": 29822
+  },
+  "shot-garaz-calc": {
+   "w": 1280,
+   "h": 800,
+   "bytes": 47818
+  },
+  "shot-preklad": {
+   "w": 1280,
+   "h": 800,
+   "bytes": 52146
+  },
+  "shot-bella-confirm": {
+   "w": 390,
+   "h": 844,
+   "bytes": 24042
+  }
+ }
+}
