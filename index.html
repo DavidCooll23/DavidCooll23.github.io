@@ -375,6 +375,7 @@ h2{font-size:clamp(34px,4.6vw,76px);line-height:1.02}
   .cu-p:nth-of-type(2){background-image:url(media/panel-owner.webp);animation-delay:.5s}
   .cu-p:nth-of-type(3){background-image:url(media/shot-garage-960.webp);animation-delay:.65s}
   .cu-p:nth-of-type(4){background-image:url(media/davyd-sunset-360.webp);background-position:50% 30%;animation-delay:.8s}
+  /* 25.11: the demo shots in the page language */html[lang=en] .cu-p:nth-of-type(1){background-image:url(media/shot-bella-desktop-800-en.webp)}html[lang=en] .cu-p:nth-of-type(2){background-image:url(media/panel-owner-en.webp)}html[lang=en] .cu-p:nth-of-type(3){background-image:url(media/shot-garage-960-en.webp)}html[lang=ru] .cu-p:nth-of-type(1){background-image:url(media/shot-bella-desktop-800-ru.webp)}html[lang=ru] .cu-p:nth-of-type(2){background-image:url(media/panel-owner-ru.webp)}html[lang=ru] .cu-p:nth-of-type(3){background-image:url(media/shot-garage-960-ru.webp)}html[lang=uk] .cu-p:nth-of-type(1){background-image:url(media/shot-bella-desktop-800-uk.webp)}html[lang=uk] .cu-p:nth-of-type(2){background-image:url(media/panel-owner-uk.webp)}html[lang=uk] .cu-p:nth-of-type(3){background-image:url(media/shot-garage-960-uk.webp)}
   .cu-ph::after{content:"";position:absolute;inset:0;background:#0d0d0d;opacity:0;animation:cuShow .3s .95s ease forwards}
   .cu-w,.cu-n{position:absolute;bottom:clamp(22px,4vh,44px);font:500 14px/1 var(--sans);letter-spacing:.01em;opacity:0;animation:cuFlash .4s .3s ease forwards,cuGone .2s .9s forwards}
   .cu-w{left:clamp(24px,3.5vw,64px)}.cu-n{right:clamp(24px,3.5vw,64px);font-family:var(--mono);color:#ffffff99}
@@ -617,31 +618,52 @@ footer .sig i{display:inline-block;font-style:normal}
   .monogram{width:36px;height:36px}.lang button{min-width:30px;min-height:30px;padding:3px}.header-contact{width:38px;height:38px}
 }
 </style>
+<link rel="stylesheet" href="lib/novy.css">
 </head>
 <body data-mode="biz" id="top" data-grain>
-<div class="curtain" aria-hidden="true"><svg class="cu-ring" viewBox="0 0 100 100"><circle cx="50" cy="50" r="49" pathLength="100" transform="rotate(-90 50 50)"/></svg><div class="cu-f"><div class="cu-ph"><span class="cu-p"></span><span class="cu-p"></span><span class="cu-p"></span><span class="cu-p"></span></div><i></i><i></i><i></i><i></i></div><span class="cu-w">Davyd Konstantinov</span><span class="cu-n">2026</span></div>
+<div class="curtain" aria-hidden="true"><svg class="cu-ring" viewBox="0 0 100 100"><circle cx="50" cy="50" r="49" pathLength="100" transform="rotate(-90 50 50)"/></svg><div class="cu-f"><div class="cu-ph"><span class="cu-p"></span><span class="cu-p"></span><span class="cu-p"></span><span class="cu-p"></span></div><i></i><i></i><i></i><i></i><b class="nv-plate cu-plate"><time>18:30</time><span data-i="plSvc">Manikúra</span></b></div><span class="cu-w">Davyd Konstantinov</span><span class="cu-n">2026</span></div>
 <script>(()=>{const c=document.querySelector('.curtain'),k=()=>c.classList.add('cu-skip');addEventListener('pointerdown',k,{once:true});addEventListener('keydown',k,{once:true});addEventListener('wheel',k,{once:true,passive:true})})()</script>
 <div class="progress" aria-hidden="true"></div>
 <div class="wrap">
 <header>
   <a class="identity" href="#top"><span class="monogram" aria-hidden="true" data-i="monogram">dk</span><span>Davyd Konstantinov<small data-i="studio">Webové štúdio</small></span></a>
-  <nav class="page-nav" data-aria="navigation"><a href="#work" data-i="workNav">Ukážky</a><a href="#prices" data-i="prb">Ceny</a></nav>
+  <nav class="page-nav" data-aria="navigation"><a href="#work" data-i="workNav">Ukážky</a><a href="#prices" data-i="prb">Ceny</a><a class="nav-x" href="#ako" data-i="akh">Ako to prebieha</a><a class="nav-x" href="#faq" data-i="faqh">Časté otázky</a></nav>
   <div class="lang" role="group" data-aria="lgh">
     <button type="button" data-set="sk" aria-label="Slovenčina" aria-pressed="true">SK</button>
     <button type="button" data-set="en" aria-label="English" aria-pressed="false">EN</button>
     <button type="button" data-set="ru" aria-label="Русский" aria-pressed="false">RU</button>
     <button type="button" data-set="uk" aria-label="Українська" aria-pressed="false">UA</button>
   </div>
-  <a class="header-contact arrow biz" href="#qf" data-write data-magnetic data-i="mailb">Napísať mi</a>
+  <a class="header-contact arrow biz" href="#qf" data-write data-magnetic><span class="hc-l" data-i="mailb">Napísať mi</span><span class="hc-s" data-i="mailS">Napísať</span></a>
+  <button type="button" class="nv-burger" aria-haspopup="dialog" aria-controls="nv-menu" onclick="document.getElementById('nv-menu').showModal()"><span data-i="menu">Menu</span></button>
   <a class="btn job" href="#qf" data-write data-i="mail">Napísať e-mail</a>
 </header>
+<dialog class="nv-menu" id="nv-menu" data-aria="menu" data-lenis-prevent>
+  <div class="nvm-top"><span class="monogram" aria-hidden="true">dk</span><form method="dialog"><button class="nv-burger nvm-x" data-i="nvClose">Zavrieť</button></form></div>
+  <nav class="nvm-links" data-aria="navigation">
+    <a href="#work" data-i="workNav">Ukážky</a>
+    <a href="#prices" data-i="prb">Ceny</a>
+    <a href="#ako" data-i="akh">Ako to prebieha</a>
+    <a href="#faq" data-i="faqh">Časté otázky</a>
+    <a href="#qf" data-write data-i="mailb">Napísať mi</a>
+  </nav>
+  <div class="lang nvm-lang" role="group" data-aria="lgh">
+    <button type="button" data-set="sk" aria-label="Slovenčina" aria-pressed="true">SK</button>
+    <button type="button" data-set="en" aria-label="English" aria-pressed="false">EN</button>
+    <button type="button" data-set="ru" aria-label="Русский" aria-pressed="false">RU</button>
+    <button type="button" data-set="uk" aria-label="Українська" aria-pressed="false">UA</button>
+  </div>
+  <div class="nvm-ch"><a href="https://wa.me/421910392871" data-wa><span data-i="waName">WhatsApp</span> <span>+421 910 392 871</span></a><a href="tel:+421910392871" data-i="callName">Zavolať</a><a href="https://t.me/+421910392871" data-i="tgName">Telegram</a></div>
+</dialog>
+<script>(()=>{const m=document.getElementById('nv-menu');m.addEventListener('click',e=>{if(e.target.closest('a'))m.close()},true)})()/* a menu link closes the menu first, then does its own job */</script>
 <main>
 <div class="stage">
 <div class="hero">
   <div class="intro">
     <p class="location" data-i="location">Bratislava, Slovensko</p>
-    <h1><span data-i="h1">Web pre váš podnik.</span> <em data-i="h1end">Rezervácie online.</em></h1>
-    <p class="lead" data-i="lead">Robím weby pre salóny, autoservisy a lektorov. Zákazník si vyberie termín na webe a vy vidíte rezerváciu v mobile.</p>
+    <h1><span data-i="h1">Zákazník sa objedná sám.</span> <em data-i="h1end">Rezerváciu uvidíte v mobile.</em></h1>
+    <p class="lead" data-i="lead">Pre salóny, autoservisy a lektorov robím weby s online rezerváciou a dopytmi. V štyroch jazykoch.</p>
+    <script>/* 25.11: the first screen gets its language before the first paint, so the H1 (LCP) is not drawn twice */try{var H={"en": ["Customers book themselves.", "You see it on your phone.", "I build websites with online booking and enquiry forms for salons, car workshops and tutors. In four languages."], "ru": ["Клиент записывается сам.", "Вы видите запись в телефоне.", "Делаю сайты с онлайн-записью и заявками для салонов, автосервисов и репетиторов. На четырёх языках."], "uk": ["Клієнт записується сам.", "Ви бачите запис у телефоні.", "Роблю сайти з онлайн-записом і заявками для салонів, автосервісів і репетиторів. Чотирма мовами."]},L=(new URLSearchParams(location.search).get('lang')||localStorage.lang||navigator.language||'').slice(0,2),h=H[L];if(h)['h1','h1end','lead'].forEach(function(k,j){document.querySelector('[data-i="'+k+'"]').textContent=h[j]})}catch(e){}</script>
     <div class="btns job">
       <a class="btn main" href="#qf" data-write data-i="mail">Napísať e-mail</a>
       <a class="btn" href="#cv" data-i="cvb">Životopis (PDF)</a>
@@ -651,11 +673,12 @@ footer .sig i{display:inline-block;font-style:normal}
     <ul class="hero-prices biz"><li data-i="hp1">Jednoduchý web od 250 €</li><li data-i="hp2">S online rezerváciou od 350 €</li></ul>
     <div class="btns biz">
       <a class="btn main arrow" href="#qf" data-write data-magnetic data-roll><span data-i="cta">Zistiť cenu a termín</span></a>
-      <a class="btn outward" href="studio-bella/" data-ex="studio-bella/" data-i="site2">Vyskúšať web salónu</a>
+      <a class="btn nv-wa" href="https://wa.me/421910392871" data-wa><span data-i="waName">WhatsApp</span> <span class="nv-num">+421 910 392 871</span></a>
     </div>
     <div class="hero-risk biz"><img src="media/davyd-sunset-96.webp" width="96" height="96" data-alt="meAlt" alt="Davyd Konstantinov"><p data-i="heroRisk">Najprv uvidíte hotový web. Platíte, až keď ste spokojní.</p></div>
   </div>
   <div class="live-demo biz" id="live-demo"><i class="glow" data-speed="0.8" aria-hidden="true"></i>
+    <p class="ld-cap" data-i="ldCap">Ukážka: rezervácia pre váš podnik</p>
     <div class="ld-card ld-client">
       <small class="ld-tag" data-i="ldC">Zákazník na webe</small>
       <b data-i="ldSvc">Manikúra, 45 min</b>
@@ -674,12 +697,13 @@ footer .sig i{display:inline-block;font-style:normal}
           <li style="--s:10;--d:1"><time>10:00</time><span data-i="ldA">Anna · strih</span></li>
           <li style="--s:12;--d:1.5"><time>12:00</time><span data-i="ldF">Lucia · pedikúra</span></li>
           <li style="--s:15;--d:1"><time>15:00</time><span data-i="ldB">Mária · farbenie</span></li>
-          <li class="ld-new pend" style="--s:18.5;--d:.75"><time>18:30</time><span data-i="ldN">Nová · manikúra</span></li>
+          <li class="ld-new pend" style="--s:18.5;--d:.75"><time>18:30</time><span data-i="ldN">Nová · manikúra</span><span class="nv-slot" data-plate-slot="hero"><b class="nv-plate" id="nv-plate"><time>18:30</time><span data-i="plSvc">Manikúra</span></b></span></li>
           <li style="--s:19.5;--d:1"><time>19:30</time><span data-i="ldE">Eva · obočie</span></li>
         </ol>
         <div class="ld-ghost" aria-hidden="true" style="--s:18.5;--d:.75"></div>
       </div>
     </div>
+    <a class="ld-try outward" href="studio-bella/" data-ex="studio-bella/" data-i="site2">Vyskúšať web salónu</a>
   </div>
   <script>(()=>{const c=document.querySelector('.curtain'),d=document.getElementById('live-demo');if(!c||!d)return;const m=()=>{const r=d.getBoundingClientRect(),E=document.documentElement,W=E.clientWidth,H=E.clientHeight;c.style.setProperty('--cu-end',`${r.top}px ${W-r.right}px ${H-r.bottom}px ${r.left}px`)};m();document.fonts&&document.fonts.ready.then(m)})()/* opener frame lands exactly on the dark card */</script>
   <div class="chat job" aria-hidden="true">
@@ -694,7 +718,7 @@ footer .sig i{display:inline-block;font-style:normal}
   </div>
 </div>
 <div class="ribbon biz" data-marquee="46"><div class="rb-track">
-  <ul class="facts"><li data-i="priceFact">Hotové za 5–10 dní</li><li data-i="payFact">Platíte až za funkčný web</li><li data-i="feeFact">Bez mesačných poplatkov</li><li data-i="rb1">Úpravy počas prvého mesiaca zadarmo</li><li data-i="rb2">Stránka v štyroch jazykoch</li><li data-i="f3">Na dohodu o vykonaní práce</li></ul>
+  <ul class="facts"><li data-i="priceFact">Hotové za 5–10 dní</li><li data-i="feeFact">Bez mesačných poplatkov</li><li data-i="rb1">Úpravy počas prvého mesiaca zadarmo</li><li data-i="rb2">Stránka v štyroch jazykoch</li><li data-i="f3">Na dohodu o vykonaní práce</li></ul>
 </div></div>
 </div>
 
@@ -707,70 +731,122 @@ footer .sig i{display:inline-block;font-style:normal}
       <p class="work-sub" data-i="workSub">Klikajte, rezervujte si termín, prepínajte jazyky. Všetko naozaj funguje.</p>
       <span class="work-hint" aria-hidden="true"></span>
     </div>
-    <a class="project" href="studio-bella/" data-ex="studio-bella/" data-cursor="Pozrieť" data-cursor-i="look" data-skew>
-      <div class="cover salon-cover" data-clip><picture><source media="(max-width:760px)" srcset="media/shot-bella-phone-780.webp?v=2" width="780" height="1080"><img src="media/shot-bella-desktop-1280.webp" srcset="media/shot-bella-desktop-800.webp 800w, media/shot-bella-desktop-1280.webp 1280w, media/shot-bella-desktop-1600.webp 1600w" sizes="(max-width:760px) 92vw, 50vw" width="1280" height="800" alt="" loading="lazy"></picture></div>
-      <div class="project-title"><h3 data-i="bellaName">Studio Bella</h3><span class="circle-arrow" aria-hidden="true"></span></div>
+    <a class="project nv-p1" href="studio-bella/" data-ex="studio-bella/" data-cursor="Pozrieť" data-cursor-i="look" data-skew>
+      <div class="cover nv-cover" data-clip><img data-ll class="nv-back" data-src="media/shot-bella-desktop-1280.webp" data-srcset="media/shot-bella-desktop-800.webp 800w, media/shot-bella-desktop-1280.webp 1280w" sizes="(max-width:899px) 92vw, 46vw" width="1280" height="800" alt="" loading="lazy"><div class="nv-dev nv-phone"><div class="nv-vid" data-loop="bella-book" data-ll><img data-ll data-src="media/loop/bella-book.webp" data-fb="media/shot-bella-phone-780.webp" onerror="this.onerror=null;this.src=this.dataset.fb" width="360" height="780" alt="" loading="lazy"></div></div></div>
+      <div class="project-title"><h3 data-i="bellaName">Studio Bella</h3><span class="nv-slot" data-plate-slot="work"></span><span class="nv-go"><span data-i="look">Pozrieť</span> ↗</span><span class="circle-arrow" aria-hidden="true"></span></div>
       <p data-i="w0p">Vyberte si službu, špecialistku a čas. Rezerváciu potom nájdete aj v paneli majiteľa.</p>
     </a>
-    <a class="project" href="garaz-4/" data-ex="garaz-4/" data-cursor="Pozrieť" data-cursor-i="look" data-skew>
-      <div class="cover garage-cover" data-clip><picture><source media="(max-width:760px)" srcset="media/shot-garage-phone-780.webp?v=5" width="780" height="678"><img src="media/shot-garage-960.webp" width="960" height="640" alt="" loading="lazy"></picture></div>
-      <div class="project-title"><h3 data-i="garageName">Garáž 4</h3><span class="circle-arrow" aria-hidden="true"></span></div>
+    <a class="project nv-p2" href="garaz-4/" data-ex="garaz-4/" data-cursor="Pozrieť" data-cursor-i="look" data-skew>
+      <div class="cover nv-cover" data-clip><div class="nv-dev nv-browser"><div class="nv-bar" aria-hidden="true"><i></i><i></i><i></i><span>konstantinov.sk/garaz-4</span></div><div class="nv-vid" data-loop="garaz-calc" data-ll><img data-ll data-src="media/loop/garaz-calc.webp" data-fb="media/shot-garage-960.webp" onerror="this.onerror=null;this.src=this.dataset.fb" width="1280" height="800" alt="" loading="lazy"></div></div></div>
+      <div class="project-title"><h3 data-i="garageName">Garáž 4</h3><span class="nv-go"><span data-i="look">Pozrieť</span> ↗</span><span class="circle-arrow" aria-hidden="true"></span></div>
       <p data-i="garageDesc">Web autoservisu so službami a cenníkom. Cez formulár si zákazník vypýta cenovú ponuku.</p>
     </a>
-    <a class="project" href="preklad/" data-ex="preklad/" data-cursor="Pozrieť" data-cursor-i="look" data-skew>
-      <div class="cover type-cover" aria-hidden="true"><span lang="sk" data-i="helloSK">Dobrý deň.</span><em lang="uk" data-i="helloUA">Добрий день.</em></div>
-      <div class="project-title"><h3 data-i="translationName">Pred a po</h3><span class="circle-arrow" aria-hidden="true"></span></div>
+    <a class="project nv-p3" href="preklad/" data-ex="preklad/" data-cursor="Pozrieť" data-cursor-i="look" data-skew>
+      <div class="cover nv-cover" data-clip><div class="nv-dev nv-browser"><div class="nv-bar" aria-hidden="true"><i></i><i></i><i></i><span>konstantinov.sk/preklad</span></div><div class="nv-vid" data-loop="preklad-lang" data-ll><img data-ll data-src="media/loop/preklad-lang.webp" data-fb="media/loop/shot-preklad.webp" onerror="this.onerror=null;this.src=this.dataset.fb" width="1280" height="800" alt="" loading="lazy"></div></div></div>
+      <div class="project-title"><h3 data-i="translationName">Pred a po</h3><span class="nv-go"><span data-i="look">Pozrieť</span> ↗</span><span class="circle-arrow" aria-hidden="true"></span></div>
       <p data-i="translationDesc">Porovnajte pôvodnú stránku s ukrajinskou a ruskou verziou.</p>
     </a>
   </div>
   </div>
 </section>
-  <details class="more-work work-more"><summary data-i="moreWork">Ďalšie projekty vrátane rezervačného bota</summary><div class="cards">
-    <article class="card"><div class="slot" data-video="media/salon.mp4"><div class="ph"><i></i><span data-i="soon">Video už čoskoro</span></div></div>
+<section class="nv-bots" id="boty">
+  <div class="nvb-head"><h2 data-i="botsH">Boty a automatizácie</h2><p data-i="botsSub">Krátke ukážky. Ťuknite a pozrite si celé video.</p></div>
+  <div class="nvb-grid">
+    <article class="card nv-bot"><button type="button" class="slot nv-vid" data-loop="bot-salon" data-full="media/salon.mp4" aria-labelledby="project-1 nv-fv1"><img data-src="media/loop/bot-salon.webp" data-fb="media/salon.jpg" onerror="this.onerror=null;this.src=this.dataset.fb" width="1280" height="720" alt="" loading="lazy"><span class="nv-play" id="nv-fv1" data-i="fullVid">Celé video</span></button>
       <div class="body"><h3 id="project-1" data-i="w1t">Rezervačný bot pre salón</h3><p data-i="w1p">Zákazník napíše „Máte voľno v piatok po 17:00?“, bot ponúkne voľné časy a zapíše ho. Majiteľ potvrdí jedným kliknutím, bot pripomenie návštevu. 4 jazyky.</p>
       <a class="demo" href="https://t.me/StudioBellaBookingBot" target="_blank" rel="noopener noreferrer" data-i="demo">Otvoriť ukážku v Telegrame</a></div></article>
-    <article class="card"><div class="slot" data-video="media/monitor.mp4"><div class="ph"><i></i><span data-i="soon">Video už čoskoro</span></div></div>
+    <article class="card nv-bot"><button type="button" class="slot nv-vid" data-loop="bot-monitor" data-full="media/monitor.mp4" aria-labelledby="project-2 nv-fv2"><img data-src="media/loop/bot-monitor.webp" data-fb="media/monitor.jpg" onerror="this.onerror=null;this.src=this.dataset.fb" width="1280" height="720" alt="" loading="lazy"><span class="nv-play" id="nv-fv2" data-i="fullVid">Celé video</span></button>
       <div class="body"><h3 id="project-2" data-i="w2t">Monitor inzerátov a cien</h3><p data-i="w2p">Sleduje bazos.sk, nové inzeráty ukladá do tabuľky Google a hneď pošle upozornenie do Telegramu.</p></div></article>
-    <article class="card"><div class="slot" data-video="media/shop.mp4"><div class="ph"><i></i><span data-i="soon">Video už čoskoro</span></div></div>
+    <article class="card nv-bot"><button type="button" class="slot nv-vid" data-loop="bot-shop" data-full="media/shop.mp4" aria-labelledby="project-3 nv-fv3"><img data-src="media/loop/bot-shop.webp" data-fb="media/shop.jpg" onerror="this.onerror=null;this.src=this.dataset.fb" width="1280" height="720" alt="" loading="lazy"><span class="nv-play" id="nv-fv3" data-i="fullVid">Celé video</span></button>
       <div class="body"><h3 id="project-3" data-i="w3t">Obchod v Telegrame</h3><p data-i="w3p">Katalóg, košík a objednávka priamo v chate.</p></div></article>
-    <article class="card"><div class="slot" data-video="media/n8n.mp4"><div class="ph"><i></i><span data-i="soon">Video už čoskoro</span></div></div>
+    <article class="card nv-bot"><button type="button" class="slot nv-vid" data-loop="bot-n8n" data-full="media/n8n.mp4" aria-labelledby="project-4 nv-fv4"><img data-src="media/loop/bot-n8n.webp" data-fb="media/n8n.jpg" onerror="this.onerror=null;this.src=this.dataset.fb" width="1280" height="720" alt="" loading="lazy"><span class="nv-play" id="nv-fv4" data-i="fullVid">Celé video</span></button>
       <div class="body"><h3 id="project-4" data-i="w4t">Dopyty z webu</h3><p data-i="w4p">Dopyt z formulára sa uloží do tabuľky a majiteľovi príde správa do Telegramu.</p></div></article>
-    <article class="card job"><div class="slot" data-video="media/pcmusic.mp4"><div class="ph"><i></i><span data-i="soon">Video už čoskoro</span></div></div>
-      <div class="body"><h3 id="project-5">PC Music Remote</h3><p data-i="w5p">Ovládanie hudby a hlasitosti v počítači z hodiniek alebo telefónu cez domácu sieť.</p></div></article>
-  </div></details>
-
-<section id="prices" class="biz">
-  <p class="kicker"><i>02</i> <span data-i="prb">Ceny</span></p>
-  <h2 data-split data-i="ph">Služby a ceny</h2>
-  <div class="packages">
-    <div class="prow"><div><h3 data-i="p0t">Jednoduchý web alebo landing page</h3><p data-i="p0p">Stránka o vás: služby, ceny, kontakty a formulár. Web pripravím v jazykoch, ktoré potrebujete, a bude sa ľahko používať aj na mobile.</p><a class="ex" href="garaz-4/" data-ex="garaz-4/" data-q="" data-h="" data-i="exG">Ukážka: autoservis Garáž 4</a></div><span class="term" data-i="p0d">do 5 dní</span><b class="eur q" data-i="p0e">od 250 €</b></div>
-    <div class="prow"><div><h3 data-i="p5t">Web s online objednávaním a prehľadom rezervácií</h3><p data-i="p5p">Zákazník si sám vyberie službu a čas priamo na webe. Rezervácie vidíte v paneli na mobile, môžete ich presunúť alebo zrušiť. Bez mesačných poplatkov.</p><a class="ex" href="studio-bella/" data-ex="studio-bella/" data-q="" data-h="" data-i="exB">Rezervovať si termín v salóne Studio Bella</a></div><span class="term" data-i="p5d">do 10 dní</span><b class="eur q" data-i="p5e">od 350 €</b></div>
   </div>
-  <div class="btns price-cta"><a class="btn main arrow" href="#qf" data-write data-magnetic data-roll><span data-i="cta">Zistiť cenu a termín</span></a></div>
-  <details class="more-work addons"><summary data-i="addh">Doplnkové služby</summary><div class="plist">
-    <div class="prow"><div><h3 data-i="p1t">Upozornenie na každý dopyt z webu</h3><p data-i="p1p">Každý dopyt z formulára vám príde e-mailom alebo správou a uloží sa do tabuľky Google.</p><a class="ex" href="studio-bella/" data-ex="studio-bella/" data-q="" data-h="#dopyt" data-i="exF">Pozrieť formulár na dopyt</a></div><span class="term" data-i="p1d">2 dni</span><b class="eur">80 €</b></div>
-    <div class="prow"><div><h3 data-i="p2t">Ukrajinská alebo ruská verzia stránky</h3><p data-i="p2p">Preložím vám web aj kontaktný formulár.</p><a class="ex" href="preklad/" data-ex="preklad/" data-q="" data-h="" data-i="exT">Porovnať pred a po</a></div><span class="term" data-i="p2d">3 dni</span><b class="eur">120 €</b></div>
-    <div class="prow"><div><h3 data-i="p3t">Rezervačný bot v Telegrame</h3><p data-i="p3p">Zákazník si sám vyberie čas a dostane pripomienku, vy len potvrdíte. Najprv vám zadarmo ukážem bota nastaveného na vaše služby. Ak sa vám páči, stojí 200 €. Ak nie, nič neplatíte.</p><a class="ex" href="https://t.me/StudioBellaBookingBot" data-ex="https://t.me/StudioBellaBookingBot" data-q="" data-h="" data-i="exBot">Napísať botovi v Telegrame</a></div><span class="term" data-i="p3d">do 7 dní</span><b class="eur">200 €</b></div>
-    <div class="prow"><div><h3 data-i="p4t">AI asistent na časté otázky</h3><p data-i="p4p">Kým sa venujete klientom, asistent odpovedá na otázky o cenách a službách podľa vášho cenníka.</p><a class="ex" href="studio-bella/" data-ex="studio-bella/" data-q="chat=1" data-h="" data-i="exAI">Opýtať sa AI asistenta</a></div><span class="term" data-i="p4d">10 dní</span><b class="eur">400 €</b></div>
-  </div></details>
-  <p class="fine" data-reveal="self" data-i="pfine">Presnú cenu poviem pred začiatkom práce. Jednoduchý web pripravím do 5 dní, web s rezervačným systémom do 10 dní od chvíle, keď mi pošlete zoznam služieb, cenník a fotky. Ak potrebujete texty, cenník vo viacerých jazykoch alebo obrázky do reklamy, napíšte mi a pripravím vám cenovú ponuku.</p>
 </section>
 
-<section class="stmtsec biz"><p class="kicker" data-reveal="self"><i>03</i> <span data-i="stmtK">Čo dostanete</span></p><p class="stmt" data-highlight data-i="stmt">Zákazník si termín vyberie sám, aj v nedeľu o polnoci. Vy ho ráno nájdete v kalendári v mobile.</p></section>
+<!-- 5. CENY -->
+<section id="prices" class="biz nb-prices">
+  <h2 data-split data-i="n_pr_h">Koľko to stojí</h2>
+  <div class="nb-cards">
+    <article class="nb-card nb-card--sky">
+      <div class="nb-card__vis" data-clip><img data-ll data-src="media/shot-garage-960.webp" width="960" height="640" loading="lazy" alt=""></div>
+      <div class="nb-card__body">
+        <span class="nb-tag" data-i="n_demo">Ukážka</span>
+        <h3 data-i="n_pr1t">Jednoduchý web</h3>
+        <b class="nb-eur" data-i="n_pr1e">od 250 €</b>
+        <ul class="nb-list">
+          <li data-i="n_pr1a">Stránka o vás: služby, ceny, kontakty</li>
+          <li data-i="n_pr1b">Dopytový formulár</li>
+          <li data-i="n_pr1c">Verzie v jazykoch, ktoré potrebujete</li>
+          <li data-i="n_pr1d">Pohodlné používanie aj na mobile</li>
+          <li data-i="n_pr1f">Hotový do 5 dní</li>
+        </ul>
+        <a class="ex nb-ex" href="garaz-4/" data-ex="garaz-4/" data-q="" data-h="" data-i="exG">Ukážka: autoservis Garáž 4</a>
+      </div>
+    </article>
+    <article class="nb-card nb-card--deep">
+      <div class="nb-card__vis" data-clip><div class="nv-vid nb-vid" data-loop="bella-owner" data-ll><img data-ll data-src="media/loop/bella-owner.webp" width="360" height="780" alt="" loading="lazy"></div></div>
+      <div class="nb-card__body">
+        <span class="nb-tag" data-i="n_demo">Ukážka</span>
+        <h3 data-i="n_pr2t">Web s online rezerváciou</h3>
+        <b class="nb-eur" data-i="n_pr2e">od 350 €</b>
+        <ul class="nb-list">
+          <li data-i="n_pr2a">Zákazník si sám vyberie službu a čas</li>
+          <li data-i="n_pr2b">Rezervácie si v paneli pozriete aj na mobile</li>
+          <li data-i="n_pr2c">Môžete ich presunúť alebo zrušiť</li>
+          <li data-i="n_pr2d">Upozornenie príde e-mailom alebo do Telegramu</li>
+          <li data-i="n_pr2f">Hotový do 10 dní</li>
+        </ul>
+        <a class="ex nb-ex" href="studio-bella/" data-ex="studio-bella/" data-q="" data-h="" data-i="exB">Rezervovať si termín v salóne Studio Bella</a>
+      </div>
+    </article>
+  </div>
+  <div class="btns price-cta"><a class="btn main arrow" href="#qf" data-write data-magnetic data-roll><span data-i="cta">Zistiť cenu a termín</span></a></div>
+  <p class="fine nb-note" data-reveal="self" data-i="n_pr_note">Presnú cenu poviem pred začiatkom práce. Doména stojí asi 15 € ročne a platíte ju priamo registrátorovi.</p>
+  <div class="nb-add">
+    <h3 data-i="n_add_h">Pridajte, čo potrebujete</h3>
+    <ul class="nb-add__list">
+      <li><b data-i="n_a1e">80 €</b><span data-i="n_a1t">Upozornenie na každý dopyt z webu</span></li>
+      <li><b data-i="n_a2e">120 €</b><span data-i="n_a2t">Ukrajinská alebo ruská verzia stránky</span></li>
+      <li><b data-i="n_a3e">200 €</b><span data-i="n_a3t">Rezervačný bot v Telegrame. Zadarmo vám ukážem bota s vašimi službami.</span></li>
+      <li><b data-i="n_a4e">400 €</b><span data-i="n_a4t">AI asistent na časté otázky</span></li>
+    </ul>
+  </div>
+</section>
 
-<section id="ako" class="pcsec biz" data-moment="pinned-chapters"><div class="mo-pc__grid">
+<!-- 6. FRAZA + MOKAP BOTA -->
+<section class="stmtsec biz nb-stmt">
+  <p class="kicker" data-reveal="self"><i>03</i> <span data-i="stmtK">Čo dostanete</span></p>
+  <p class="stmt" data-highlight data-i="n_stmt">Rezervácia sa zapíše sama. Nemusíte dvíhať telefón ani zapisovať termíny do zošita.</p>
+  <div class="nb-stage">
+  <div class="nb-phone" role="group" data-aria="n_mock_aria">
+    <div class="nb-phone__screen">
+      <span class="nb-phone__clock" aria-hidden="true">18:30</span>
+      <div class="nb-notif">
+        <i class="nb-notif__ico" aria-hidden="true"></i>
+        <div class="nb-notif__txt">
+          <span class="nb-notif__app"><span data-i="n_notif_app">Telegram</span> <em data-i="n_demo">Ukážka</em></span>
+          <b data-i="n_notif">Nová rezervácia · 18:30 · Manikúra</b>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+</section>
+
+<!-- 7. AKO PRACUJEME -->
+<section id="ako" class="pcsec biz nb-ako" data-moment="pinned-chapters"><div class="mo-pc__grid">
   <div class="mo-pc__text">
-    <h2 data-i="akh">Ako to prebieha</h2>
-    <p class="fine" data-i="akf">Web, doména aj prístupy sú vaše. Doména stojí asi 15 € ročne a platíte ju priamo registrátorovi.</p>
+    <h2 data-i="n_ako_h">Ako pracujeme</h2>
     <ol class="mo-pc__steps">
-      <li class="mo-pc__step"><h3><i>01</i> <span data-i="ak1">Napíšete, čo potrebujete</span></h3><p><span data-i="ak1p"></span></p><figure class="mo-pc__visual"><img src="media/davyd-sunset-640.webp" width="640" height="640" loading="lazy" alt="" data-alt="meAlt"></figure></li>
-      <li class="mo-pc__step"><h3><i>02</i> <span data-i="ak2">Ukážem vám hotový web s vašimi službami a cenami</span></h3><p><span data-i="ak2p"></span></p><figure class="mo-pc__visual"><img src="media/shot-bella-desktop-1280.webp" width="1280" height="800" loading="lazy" alt=""></figure></li>
-      <li class="mo-pc__step"><h3><i>03</i> <span data-i="ak3">Platíte, až keď ste spokojní</span></h3><p><span data-i="ak3p"></span></p><figure class="mo-pc__visual"><img src="media/panel-owner.webp" width="1200" height="1000" loading="lazy" alt=""></figure></li>
+      <li class="mo-pc__step"><h3><i>01</i> <span data-i="n_ako1t">Napíšete</span></h3><p><span data-i="n_ako1p">Pár slov o podniku cez WhatsApp alebo e-mail. Ozvem sa s cenou a termínom.</span></p><figure class="mo-pc__visual"><img data-src="media/loop/bot-n8n.webp" width="1280" height="720" loading="lazy" alt=""></figure></li>
+      <li class="mo-pc__step"><h3><i>02</i> <span data-i="n_ako2t">Ukážem</span></h3><p><span data-i="n_ako2p">Odkaz na funkčný web pošlem za 5–10 dní. Rezerváciu si sami vyskúšate na mobile.</span></p><figure class="mo-pc__visual"><img data-ll data-src="media/shot-bella-desktop-1280.webp" width="1280" height="800" loading="lazy" alt="" data-alt="desktopAlt"></figure></li>
+      <li class="mo-pc__step"><h3><i>03</i> <span data-i="n_ako3t">Doladím</span></h3><p><span data-i="n_ako3p">Zapracujem pripomienky, pripojím vašu doménu a nastavím upozornenia e-mailom alebo cez Telegram.</span></p><figure class="mo-pc__visual"><img data-ll data-src="media/panel-owner.webp" width="1200" height="1000" loading="lazy" alt="" data-alt="panelAlt"></figure></li>
+      <li class="mo-pc__step"><h3><i>04</i> <span data-i="n_ako4t">Odovzdám</span></h3><p><span data-i="n_ako4p">Krátky návod, ako všetko funguje. Web a prístupy zostávajú vám.</span></p><figure class="mo-pc__visual"><img data-src="media/loop/bot-salon.webp" width="1280" height="720" loading="lazy" alt=""></figure></li>
     </ol>
   </div>
   <div class="mo-pc__visuals"></div>
 </div></section>
-
 
 <section id="roles" class="job">
   <h2 data-i="rh">Na aké pozície sa hlásim</h2>
@@ -787,20 +863,6 @@ footer .sig i{display:inline-block;font-style:normal}
   <div class="band"><h2 data-i="lgh">Jazyk</h2><p data-i="lgp">Angličtina na úrovni B2, písomne sa dohovorím isto. Slovenčine dobre rozumiem a bežne sa dohovorím.</p></div>
 </section>
 
-<section id="faq">
-  <h2 data-split data-i="faqh">Časté otázky</h2>
-  <div class="faq" data-reveal>
-    <details class="qa" open><summary><h3 data-i="q1">Koľko stojí web?</h3></summary><p data-i="a1">Jednoduchý web alebo landing page od 250 €, web s online rezerváciou a panelom od 350 €. Presnú cenu poviem pred začiatkom práce.</p></details>
-    <details class="qa" open><summary><h3 data-i="q2">Ako to riešime zmluvne?</h3></summary><p data-i="a2">Oficiálne, na dohodu o vykonaní práce s vašou firmou na Slovensku.</p></details>
-    <details class="qa"><summary><h3 data-i="q3">V ktorých jazykoch robíte weby?</h3></summary><p data-i="a3">Slovenčina, ukrajinčina, ruština a angličtina. Písať si môžeme v ktoromkoľvek z nich.</p></details>
-    <details class="qa"><summary><h3 data-i="q4">Sú potrebné telefonáty?</h3></summary><p data-i="a4">Nie, všetko vyriešime písomne cez WhatsApp alebo e-mail. Ak vám viac vyhovuje hovor, stačí jeden krátky na začiatku.</p></details>
-    <details class="qa"><summary><h3 data-i="q5">Za aký čas bude web hotový?</h3></summary><p data-i="a5">Jednoduchý web do 5 dní, web s online rezerváciou do 10 dní. Počítam od chvíle, keď mi pošlete zoznam služieb, cenník a fotky.</p></details>
-    <details class="qa"><summary><h3 data-i="q6">Čo ak sa mi web nebude páčiť?</h3></summary><p data-i="a6">Najprv vám pošlem odkaz na hotový web a upravím ho podľa vašich pripomienok. Platíte, až keď sa vám páči.</p></details>
-    <details class="qa"><summary><h3 data-i="q7">Platí sa niečo mesačne?</h3></summary><p data-i="a7">Mne nie. Platíte len doménu, asi 15 € ročne, a to priamo registrátorovi.</p></details>
-    <details class="qa"><summary><h3 data-i="q8">Kto bude meniť texty a ceny?</h3></summary><p data-i="a8">Prvý mesiac po spustení ich zmením ja, zadarmo. Stačí mi napísať. Neskôr sa dohodneme na cene.</p></details>
-  </div>
-</section>
-
 <section id="cv" class="job">
   <h2 data-i="cvh">Životopisy</h2>
   <div class="cvs">
@@ -810,20 +872,54 @@ footer .sig i{display:inline-block;font-style:normal}
   </div>
 </section>
 
-<section class="gtsec biz" data-moment="giant-type-pass" data-moment-opts='{"image":"media/shopfront.webp","travel":40,"focusY":55}'>
-  <h2 class="mo-gt__type" data-i="gt">Váš web</h2>
+<!-- 8. KTO TO ROBI -->
+<section id="kto" class="biz nb-who">
+  <div class="nb-who__photo" data-clip><img data-src="media/davyd-sunset-640.webp" data-srcset="media/davyd-sunset-360.webp 360w, media/davyd-sunset-640.webp 640w" sizes="(max-width:760px) 320px, 400px" width="640" height="640" loading="lazy" decoding="async" alt="Davyd Konstantinov" data-alt="meAlt"></div>
+  <div class="nb-who__text">
+    <h2 data-split data-i="n_who_h">Kto to robí</h2>
+    <p class="nb-who__lead" data-i="n_who_p">Píšete priamo mne, Davydovi. Web robím sám, od návrhu po spustenie.</p>
+    <ul class="nb-who__facts">
+      <li data-i="n_who1">Bratislava, pracujem na diaľku</li>
+      <li data-i="n_who2">Píšem po slovensky, ukrajinsky, rusky aj anglicky</li>
+      <li data-i="n_who3">Na dohodu o vykonaní práce</li>
+      <li data-i="n_who4">Všetko riešime písomne</li>
+      <li data-i="n_who5">Aj túto stránku som robil ja</li>
+    </ul>
+  </div>
+</section>
+
+<!-- 9. OBRI PISMO (bez textu na fotke) -->
+<section class="gtsec biz nb-gt" data-moment="giant-type-pass" data-moment-opts='{"image":"media/shopfront.webp","travel":40,"focusY":55}'>
+  <h2 class="mo-gt__type" data-i="n_gt">Zarezervované.</h2>
   <div class="mo-gt__row"><p data-i="gtp">Hotový za 5–10 dní. Bez mesačných poplatkov.</p><a class="btn main arrow" href="#qf" data-write data-magnetic data-roll><span data-i="cta">Zistiť cenu a termín</span></a></div>
 </section>
 
-<section id="contact"><i class="arc" aria-hidden="true"></i><i class="glow" data-speed="0.75" aria-hidden="true"></i>
-  <div class="final-top" data-reveal><h2 data-split data-i="ch">Aký web potrebujete?</h2><a class="bigbtn" href="https://wa.me/421910392871" data-wa data-magnetic data-cursor="WhatsApp"><span data-i="waName">WhatsApp</span></a></div>
-  <div class="contact-intro" data-reveal><p data-i="cp">Napíšte mi pár slov o svojom podniku. Ozvem sa s cenou a termínom.</p><p class="paynote" data-i="payNote">Najprv vám ukážem hotový web. Platíte, až keď sa vám páči.</p>
-    <div class="me"><figure data-moment="liquid-hover" data-moment-opts='{"strength":0.5,"radius":0.18}'><img src="media/davyd-sunset-640.webp" srcset="media/davyd-sunset-360.webp 360w, media/davyd-sunset-640.webp 640w" sizes="(max-width:760px) 132px, 220px" width="640" height="640" decoding="async" loading="lazy" fetchpriority="low" data-alt="meAlt" alt="Davyd Konstantinov"></figure><p data-i="who">Píšete priamo mne, Davydovi. Web robím sám, od návrhu po spustenie.</p></div>
-    <div class="address"><span id="email-address">davyd@konstantinov.sk</span><button type="button" id="copy-email" data-i="copy">Kopírovať</button></div>
-    <small id="copy-status" role="status"></small>
-    <div class="channels"><a href="https://wa.me/421910392871" data-wa><span data-i="waName">WhatsApp</span> <span>+421 910 392 871</span></a><a href="tel:+421910392871" data-i="callName">Zavolať</a><a href="https://t.me/+421910392871" data-i="tgName">Telegram</a></div>
-    <div class="btns job"><a class="btn" href="#qf" data-write>davyd@konstantinov.sk</a><a class="btn" href="https://t.me/+421910392871" data-i="tg">Napísať na Telegram</a></div>
-  </div>
+<!-- 10 + 11. FAQ (vlavo) a jediny FINAL #contact (formular vpravo) -->
+<section id="contact" class="nb-contact"><i class="arc" aria-hidden="true"></i><i class="glow" data-speed="0.75" aria-hidden="true"></i>
+  <div class="final-top" data-reveal><h2 data-split data-i="n_c_h">Vaša prvá rezervácia.</h2><a class="bigbtn" href="https://wa.me/421910392871" data-wa data-magnetic data-cursor="WhatsApp"><span data-i="waName">WhatsApp</span></a></div>
+  <div class="nb-split">
+    <section id="faq" class="nb-faq">
+      <h2 data-split data-i="n_faq_h">Časté otázky</h2>
+      <div class="faq" data-reveal>
+        <details class="qa" open><summary><h3 data-i="q1">Koľko stojí web?</h3></summary><p data-i="a1">Jednoduchý web alebo landing page od 250 €, web s online rezerváciou a panelom od 350 €. Presnú cenu poviem pred začiatkom práce.</p></details>
+        <details class="qa"><summary><h3 data-i="q5">Za aký čas bude web hotový?</h3></summary><p data-i="a5">Jednoduchý web do 5 dní, web s online rezerváciou do 10 dní. Počítam od chvíle, keď mi pošlete zoznam služieb, cenník a fotky.</p></details>
+        <details class="qa"><summary><h3 data-i="q6">Čo ak sa mi web nebude páčiť?</h3></summary><p data-i="a6">Najprv vám pošlem odkaz na hotový web a upravím ho podľa vašich pripomienok. Platíte, až keď sa vám páči.</p></details>
+        <details class="qa"><summary><h3 data-i="q7">Platí sa niečo mesačne?</h3></summary><p data-i="a7">Mne nie. Platíte len doménu, asi 15 € ročne, a to priamo registrátorovi.</p></details>
+        <details class="qa"><summary><h3 data-i="q8">Kto bude meniť texty a ceny?</h3></summary><p data-i="a8">Prvý mesiac po spustení ich zmením ja, zadarmo. Stačí mi napísať. Neskôr sa dohodneme na cene.</p></details>
+        <details class="qa"><summary><h3 data-i="q2">Ako to riešime zmluvne?</h3></summary><p data-i="a2">Oficiálne, na dohodu o vykonaní práce s vašou firmou na Slovensku.</p></details>
+        <details class="qa"><summary><h3 data-i="q3">V ktorých jazykoch robíte weby?</h3></summary><p data-i="a3">Slovenčina, ukrajinčina, ruština a angličtina. Písať si môžeme v ktoromkoľvek z nich.</p></details>
+        <details class="qa"><summary><h3 data-i="q4">Sú potrebné telefonáty?</h3></summary><p data-i="a4">Nie, všetko vyriešime písomne cez WhatsApp alebo e-mail. Ak vám viac vyhovuje hovor, stačí jeden krátky na začiatku.</p></details>
+        <details class="qa"><summary><h3 data-i="n_q9">Čo vám mám poslať na začiatku?</h3></summary><p data-i="n_a9">Zoznam služieb, cenník a fotky. Ak ich nemáte hotové, napíšte mi a poradím, čo treba pripraviť.</p></details>
+        <details class="qa"><summary><h3 data-i="n_q10">Ako sa dozviem o novej rezervácii?</h3></summary><p data-i="n_a10">Rezervácie vidíte v paneli na mobile. Upozornenie príde e-mailom alebo do Telegramu.</p></details>
+      </div>
+    </section>
+    <div class="nb-formcol">
+      <div class="contact-intro" data-reveal><p data-i="n_c_p">Napíšte pár slov o svojom podniku. Ozvem sa s cenou a termínom.</p><p class="paynote" data-i="n_c_pay">Najprv uvidíte hotový web. Platíte až potom, keď ste spokojní.</p>
+        <figure class="nb-fig" data-moment="liquid-hover" data-moment-opts='{"strength":0.5,"radius":0.18}'><img data-src="media/garage-headlamp.webp" width="960" height="640" decoding="async" loading="lazy" fetchpriority="low" alt=""></figure>
+        <div class="address"><span id="email-address">davyd@konstantinov.sk</span><button type="button" id="copy-email" data-i="copy">Kopírovať</button></div>
+        <small id="copy-status" role="status"></small>
+        <div class="channels"><a href="https://wa.me/421910392871" data-wa><span data-i="waName">WhatsApp</span> <span>+421 910 392 871</span></a><a href="tel:+421910392871" data-i="callName">Zavolať</a><a href="https://t.me/+421910392871" data-i="tgName">Telegram</a></div>
+      </div>
   <div class="form-panel" data-reveal>
     <form class="qf biz" id="qf" method="post" novalidate>
       <label for="qb" data-i="qb">Aký máte podnik? (nepovinné)</label><input id="qb" name="business" maxlength="120" autocomplete="organization">
@@ -838,9 +934,13 @@ footer .sig i{display:inline-block;font-style:normal}
     </form>
     <div class="thanks" hidden tabindex="-1"><h3 data-i="thankTitle">Ďakujem za správu.</h3><p data-i="thankText">Ozvem sa vám do jedného dňa.</p></div>
   </div>
+    </div>
+  </div>
 </section>
 </main>
-<footer><span>© 2026 Davyd Konstantinov · <span data-i="legal">Pracujem na dohodu o vykonaní práce</span></span><a href="ochrana-udajov.html" data-i="privacy">Ochrana osobných údajov</a><a href="#top" data-i="backTop">Späť hore</a><div class="sig" aria-hidden="true"><span>Davyd Konstantinov</span></div></footer>
+
+<!-- 12. PATICKA -->
+<footer class="nb-foot"><span class="nb-foot__sub" data-i="n_foot_sub">Bratislava · weby, boty, automatizácie</span><span>© 2026 Davyd Konstantinov · <span data-i="legal">Pracujem na dohodu o vykonaní práce</span></span><a href="ochrana-udajov.html" data-i="privacy">Ochrana osobných údajov</a><a href="#top" data-i="backTop">Späť hore</a><div class="sig" aria-hidden="true"><span>Davyd Konstantinov</span></div></footer>
 <script>(()=>{const s=document.querySelector('footer .sig'),w=s.firstElementChild;w.innerHTML=[...w.textContent].map(c=>'<i>'+(c==' '?'&nbsp;':c)+'</i>').join('');const f=()=>{s.style.fontSize='';const x=w.getBoundingClientRect().width;if(x)s.style.fontSize=parseFloat(getComputedStyle(s).fontSize)*s.clientWidth/x*.995+'px'};f();document.fonts&&document.fonts.ready.then(f);addEventListener('resize',f,{passive:true})})()/* the signature fills the width exactly */</script>
 </div>
 <script>
@@ -1051,6 +1151,14 @@ const T = {
     "ldHint": "Skúste: vyberte čas a kliknite na Rezervovať.",
     "ldSeen": "Hotovo. Nová rezervácia sa objavila vo vašom kalendári.",
     "look": "Pozrieť",
+    "mailS": "Napísať",
+    "menu": "Menu",
+    "nvClose": "Zavrieť",
+    "ldCap": "Ukážka: rezervácia pre váš podnik",
+    "plSvc": "Manikúra",
+    "botsH": "Boty a automatizácie",
+    "botsSub": "Krátke ukážky. Ťuknite a pozrite si celé video.",
+    "fullVid": "Celé video",
     "stmtK": "Čo dostanete"
   },
   "en": {
@@ -1259,6 +1367,14 @@ const T = {
     "ldHint": "Try it: pick a time and press Book.",
     "ldSeen": "Done. The new booking is now in your calendar.",
     "look": "View",
+    "mailS": "Write",
+    "menu": "Menu",
+    "nvClose": "Close",
+    "ldCap": "Demo: booking for your business",
+    "plSvc": "Manicure",
+    "botsH": "Bots and automations",
+    "botsSub": "Short clips. Tap to watch the full video.",
+    "fullVid": "Full video",
     "stmtK": "What you get"
   },
   "ru": {
@@ -1448,6 +1564,14 @@ const T = {
     "ldHint": "Попробуйте: выберите время и нажмите «Записаться».",
     "ldSeen": "Готово. Новая запись уже в вашем календаре.",
     "look": "Смотреть",
+    "mailS": "Написать",
+    "menu": "Меню",
+    "nvClose": "Закрыть",
+    "ldCap": "Пример: запись для вашего бизнеса",
+    "plSvc": "Маникюр",
+    "botsH": "Боты и автоматизация",
+    "botsSub": "Короткие ролики. Нажмите, чтобы посмотреть видео целиком.",
+    "fullVid": "Видео целиком",
     "stmtK": "Что вы получаете"
   },
   "uk": {
@@ -1637,9 +1761,259 @@ const T = {
     "ldHint": "Спробуйте: оберіть час і натисніть «Записатися».",
     "ldSeen": "Готово. Новий запис уже у вашому календарі.",
     "look": "Дивитися",
+    "mailS": "Написати",
+    "menu": "Меню",
+    "nvClose": "Закрити",
+    "ldCap": "Приклад: запис для вашого бізнесу",
+    "plSvc": "Манікюр",
+    "botsH": "Боти й автоматизація",
+    "botsSub": "Короткі ролики. Натисніть, щоб переглянути відео повністю.",
+    "fullVid": "Відео повністю",
     "stmtK": "Що ви отримуєте"
   }
 };
+const S3 = {
+  "sk": {
+    "n_a10": "Rezervácie vidíte v paneli na mobile. Upozornenie príde e-mailom alebo do Telegramu.",
+    "n_a1e": "80 €",
+    "n_a1t": "Upozornenie na každý dopyt z webu",
+    "n_a2e": "120 €",
+    "n_a2t": "Ukrajinská alebo ruská verzia stránky",
+    "n_a3e": "200 €",
+    "n_a3t": "Rezervačný bot v Telegrame. Zadarmo vám ukážem bota s vašimi službami.",
+    "n_a4e": "400 €",
+    "n_a4t": "AI asistent na časté otázky",
+    "n_a9": "Zoznam služieb, cenník a fotky. Ak ich nemáte hotové, napíšte mi a poradím, čo treba pripraviť.",
+    "n_add_h": "Pridajte, čo potrebujete",
+    "n_ako1p": "Pár slov o podniku cez WhatsApp alebo e-mail. Ozvem sa s cenou a termínom.",
+    "n_ako1t": "Napíšete",
+    "n_ako2p": "Odkaz na funkčný web pošlem za 5–10 dní. Rezerváciu si sami vyskúšate na mobile.",
+    "n_ako2t": "Ukážem",
+    "n_ako3p": "Zapracujem pripomienky, pripojím vašu doménu a nastavím upozornenia e-mailom alebo cez Telegram.",
+    "n_ako3t": "Doladím",
+    "n_ako4p": "Krátky návod, ako všetko funguje. Web a prístupy zostávajú vám.",
+    "n_ako4t": "Odovzdám",
+    "n_ako_h": "Ako pracujeme",
+    "n_c_h": "Vaša prvá rezervácia.",
+    "n_c_p": "Napíšte pár slov o svojom podniku. Ozvem sa s cenou a termínom.",
+    "n_c_pay": "Najprv uvidíte hotový web. Platíte až potom, keď ste spokojní.",
+    "n_demo": "Ukážka",
+    "n_faq_h": "Časté otázky",
+    "n_foot_sub": "Bratislava · weby, boty, automatizácie",
+    "n_gt": "Zarezervované.",
+    "n_mock_aria": "Ukážka upozornenia z Telegramu",
+    "n_notif": "Nová rezervácia · 18:30 · Manikúra",
+    "n_notif_app": "Telegram",
+    "n_pr1a": "Stránka o vás: služby, ceny, kontakty",
+    "n_pr1b": "Dopytový formulár",
+    "n_pr1c": "Verzie v jazykoch, ktoré potrebujete",
+    "n_pr1d": "Pohodlné používanie aj na mobile",
+    "n_pr1e": "od 250 €",
+    "n_pr1f": "Hotový do 5 dní",
+    "n_pr1t": "Jednoduchý web",
+    "n_pr2a": "Zákazník si sám vyberie službu a čas",
+    "n_pr2b": "Rezervácie si v paneli pozriete aj na mobile",
+    "n_pr2c": "Môžete ich presunúť alebo zrušiť",
+    "n_pr2d": "Upozornenie príde e-mailom alebo do Telegramu",
+    "n_pr2e": "od 350 €",
+    "n_pr2f": "Hotový do 10 dní",
+    "n_pr2t": "Web s online rezerváciou",
+    "n_pr_h": "Koľko to stojí",
+    "n_pr_note": "Presnú cenu poviem pred začiatkom práce. Doména stojí asi 15 € ročne a platíte ju priamo registrátorovi.",
+    "n_q10": "Ako sa dozviem o novej rezervácii?",
+    "n_q9": "Čo vám mám poslať na začiatku?",
+    "n_stmt": "Rezervácia sa zapíše sama. Nemusíte dvíhať telefón ani zapisovať termíny do zošita.",
+    "n_who1": "Bratislava, pracujem na diaľku",
+    "n_who2": "Píšem po slovensky, ukrajinsky, rusky aj anglicky",
+    "n_who3": "Na dohodu o vykonaní práce",
+    "n_who4": "Všetko riešime písomne",
+    "n_who5": "Aj túto stránku som robil ja",
+    "n_who_h": "Kto to robí",
+    "n_who_p": "Píšete priamo mne, Davydovi. Web robím sám, od návrhu po spustenie."
+  },
+  "en": {
+    "n_a10": "You see bookings in a panel on your phone. A notification arrives by email or in Telegram.",
+    "n_a1e": "€80",
+    "n_a1t": "Every website enquiry sent to your email or Telegram",
+    "n_a2e": "€120",
+    "n_a2t": "Ukrainian or Russian version of a page",
+    "n_a3e": "€200",
+    "n_a3t": "A booking bot in Telegram. You first see it free, set up with your own services.",
+    "n_a4e": "€400",
+    "n_a4t": "AI assistant for common questions",
+    "n_a9": "A list of services, a price list and photos. If you don't have them ready, write to me and I'll tell you what to prepare.",
+    "n_add_h": "Add what you need",
+    "n_ako1p": "A few words about your business on WhatsApp or by email. I give you a price and a date.",
+    "n_ako1t": "You write",
+    "n_ako2p": "Within 5–10 days I send a link to a working site. You try the booking yourself on your phone.",
+    "n_ako2t": "I show",
+    "n_ako3p": "I apply your comments and connect your domain, email or Telegram.",
+    "n_ako3t": "I refine",
+    "n_ako4p": "A short guide to how it all works. The site and the logins stay with you.",
+    "n_ako4t": "I hand over",
+    "n_ako_h": "How we work",
+    "n_c_h": "Your first booking.",
+    "n_c_p": "Write a few words about your business. I'll reply with a price and a date.",
+    "n_c_pay": "You see the finished site first. You pay only when you're happy.",
+    "n_demo": "Demo",
+    "n_faq_h": "FAQ",
+    "n_foot_sub": "Bratislava · websites, bots, automation",
+    "n_gt": "Booked.",
+    "n_mock_aria": "Example of a Telegram notification",
+    "n_notif": "New booking · 18:30 · Manicure",
+    "n_notif_app": "Telegram",
+    "n_pr1a": "A page about you: services, prices, contacts",
+    "n_pr1b": "An enquiry form",
+    "n_pr1c": "Versions in the languages you need",
+    "n_pr1d": "Easy to use on a phone",
+    "n_pr1e": "from €250",
+    "n_pr1f": "Ready within 5 days",
+    "n_pr1t": "A simple website",
+    "n_pr2a": "The customer picks a service and a time on their own",
+    "n_pr2b": "You see bookings in a panel on your phone",
+    "n_pr2c": "You can move or cancel them",
+    "n_pr2d": "A notification arrives by email or in Telegram",
+    "n_pr2e": "from €350",
+    "n_pr2f": "Ready within 10 days",
+    "n_pr2t": "A website with online booking",
+    "n_pr_h": "What it costs",
+    "n_pr_note": "I confirm the exact price before I start. A domain costs about €15 a year, paid directly to the registrar.",
+    "n_q10": "How will I find out about a new booking?",
+    "n_q9": "What do I need to send you at the start?",
+    "n_stmt": "The booking writes itself down. You don't pick up the phone or jot anything in a notebook.",
+    "n_who1": "Bratislava, I work remotely",
+    "n_who2": "I write in Slovak, Ukrainian, Russian and English",
+    "n_who3": "Under a dohoda (agreement on work performed)",
+    "n_who4": "Everything is settled in writing",
+    "n_who5": "I built this page too",
+    "n_who_h": "Who does the work",
+    "n_who_p": "You talk to me, Davyd, directly. I build the site myself, from design to launch."
+  },
+  "ru": {
+    "n_a10": "Записи видны в панели на телефоне. Уведомление приходит на почту или в Telegram.",
+    "n_a1e": "80 €",
+    "n_a1t": "Уведомление о каждой заявке с сайта",
+    "n_a2e": "120 €",
+    "n_a2t": "Украинская или русская версия страницы",
+    "n_a3e": "200 €",
+    "n_a3t": "Бот записи в Telegram. Сначала вы бесплатно увидите его на своих услугах.",
+    "n_a4e": "400 €",
+    "n_a4t": "AI-помощник для частых вопросов",
+    "n_a9": "Список услуг, прайс и фото. Если их ещё нет, напишите, подскажу, что подготовить.",
+    "n_add_h": "Добавьте, что нужно",
+    "n_ako1p": "Пара слов о вашем деле в WhatsApp или на почту. Я называю цену и срок.",
+    "n_ako1t": "Вы пишете",
+    "n_ako2p": "За 5–10 дней присылаю ссылку на рабочий сайт. Запись вы пробуете сами на телефоне.",
+    "n_ako2t": "Показываю",
+    "n_ako3p": "Учитываю замечания и подключаю ваш домен, почту или Telegram.",
+    "n_ako3t": "Дорабатываю",
+    "n_ako4p": "Короткая инструкция, как всё работает. Сайт и доступы остаются у вас.",
+    "n_ako4t": "Передаю",
+    "n_ako_h": "Как мы работаем",
+    "n_c_h": "Ваша первая запись.",
+    "n_c_p": "Напишите пару слов о вашем деле. Отвечу ценой и сроком.",
+    "n_c_pay": "Сначала вы видите готовый сайт. Оплата после результата, когда всё нравится.",
+    "n_demo": "Пример",
+    "n_faq_h": "Частые вопросы",
+    "n_foot_sub": "Братислава · сайты, боты, автоматизация",
+    "n_gt": "Записано.",
+    "n_mock_aria": "Пример уведомления из Telegram",
+    "n_notif": "Новая запись · 18:30 · Маникюр",
+    "n_notif_app": "Telegram",
+    "n_pr1a": "Страница о вас: услуги, цены, контакты",
+    "n_pr1b": "Форма для заявок",
+    "n_pr1c": "Версии на нужных вам языках",
+    "n_pr1d": "Удобно и с телефона",
+    "n_pr1e": "от 250 €",
+    "n_pr1f": "Готово до 5 дней",
+    "n_pr1t": "Простой сайт",
+    "n_pr2a": "Клиент сам выбирает услугу и время",
+    "n_pr2b": "Записи видны в панели на телефоне",
+    "n_pr2c": "Их можно перенести или отменить",
+    "n_pr2d": "Уведомление приходит на почту или в Telegram",
+    "n_pr2e": "от 350 €",
+    "n_pr2f": "Готово до 10 дней",
+    "n_pr2t": "Сайт с онлайн-записью",
+    "n_pr_h": "Сколько это стоит",
+    "n_pr_note": "Точную цену назову до начала работы. Домен стоит около 15 € в год, платите регистратору напрямую.",
+    "n_q10": "Как я узнаю о новой записи?",
+    "n_q9": "Что вам прислать в начале?",
+    "n_stmt": "Запись заносится сама. Вы не берёте трубку и ничего не пишете в тетрадь.",
+    "n_who1": "Братислава, работаю удалённо",
+    "n_who2": "Пишу на словацком, украинском, русском и английском",
+    "n_who3": "По договору dohoda о выполнении работы",
+    "n_who4": "Всё решаем перепиской",
+    "n_who5": "Эту страницу тоже сделал я",
+    "n_who_h": "Кто это делает",
+    "n_who_p": "Пишете напрямую мне, Давиду. Сайт делаю сам, от макета до запуска."
+  },
+  "uk": {
+    "n_a10": "Записи видно в панелі на телефоні. Сповіщення приходить на пошту або в Telegram.",
+    "n_a1e": "80 €",
+    "n_a1t": "Сповіщення про кожну заявку із сайту",
+    "n_a2e": "120 €",
+    "n_a2t": "Українська або російська версія сторінки",
+    "n_a3e": "200 €",
+    "n_a3t": "Бот запису в Telegram. Спершу ви безкоштовно побачите його на своїх послугах.",
+    "n_a4e": "400 €",
+    "n_a4t": "AI-помічник для поширених питань",
+    "n_a9": "Перелік послуг, прайс і фото. Якщо їх ще немає, напишіть, підкажу, що підготувати.",
+    "n_add_h": "Додайте, що потрібно",
+    "n_ako1p": "Кілька слів про ваш бізнес у WhatsApp або на пошту. Я називаю ціну і термін.",
+    "n_ako1t": "Ви пишете",
+    "n_ako2p": "За 5–10 днів надсилаю посилання на робочий сайт. Запис ви пробуєте самі на телефоні.",
+    "n_ako2t": "Показую",
+    "n_ako3p": "Враховую зауваження й підключаю ваш домен, пошту або Telegram.",
+    "n_ako3t": "Доопрацьовую",
+    "n_ako4p": "Коротка інструкція, як усе працює. Сайт і доступи лишаються у вас.",
+    "n_ako4t": "Передаю",
+    "n_ako_h": "Як ми працюємо",
+    "n_c_h": "Ваш перший запис.",
+    "n_c_p": "Напишіть кілька слів про ваш бізнес. Відповім ціною і терміном.",
+    "n_c_pay": "Спочатку ви бачите готовий сайт. Оплачуєте після того, як усе подобається.",
+    "n_demo": "Приклад",
+    "n_faq_h": "Часті запитання",
+    "n_foot_sub": "Братислава · сайти, боти, автоматизація",
+    "n_gt": "Записано.",
+    "n_mock_aria": "Приклад сповіщення з Telegram",
+    "n_notif": "Новий запис · 18:30 · Манікюр",
+    "n_notif_app": "Telegram",
+    "n_pr1a": "Сторінка про вас: послуги, ціни, контакти",
+    "n_pr1b": "Форма для заявок",
+    "n_pr1c": "Версії потрібними вам мовами",
+    "n_pr1d": "Зручно й з телефона",
+    "n_pr1e": "від 250 €",
+    "n_pr1f": "Готово до 5 днів",
+    "n_pr1t": "Простий сайт",
+    "n_pr2a": "Клієнт сам обирає послугу і час",
+    "n_pr2b": "Записи видно в панелі на телефоні",
+    "n_pr2c": "Їх можна перенести або скасувати",
+    "n_pr2d": "Сповіщення приходить на пошту або в Telegram",
+    "n_pr2e": "від 350 €",
+    "n_pr2f": "Готово до 10 днів",
+    "n_pr2t": "Сайт з онлайн-записом",
+    "n_pr_h": "Скільки це коштує",
+    "n_pr_note": "Точну ціну назву до початку роботи. Домен коштує близько 15 € на рік, платите реєстраторові напряму.",
+    "n_q10": "Як я дізнаюся про новий запис?",
+    "n_q9": "Що вам надіслати на початку?",
+    "n_stmt": "Запис вноситься сам. Ви не берете слухавку і нічого не пишете в зошит.",
+    "n_who1": "Братислава, працюю віддалено",
+    "n_who2": "Пишу словацькою, українською, російською та англійською",
+    "n_who3": "За договором dohoda про виконання роботи",
+    "n_who4": "Усе вирішуємо листуванням",
+    "n_who5": "Цю сторінку теж зробив я",
+    "n_who_h": "Хто це робить",
+    "n_who_p": "Пишете напряму мені, Давиду. Сайт роблю сам, від макета до запуску."
+  }
+};
+for (const l in S3) Object.assign(T[l], S3[l]);
+const HERO = {
+  sk: {h1: "Zákazník sa objedná sám.", h1end: "Rezerváciu uvidíte v mobile.", lead: "Pre salóny, autoservisy a lektorov robím weby s online rezerváciou a dopytmi. V štyroch jazykoch."},
+  en: {h1: "Customers book themselves.", h1end: "You see it on your phone.", lead: "I build websites with online booking and enquiry forms for salons, car workshops and tutors. In four languages."},
+  ru: {h1: "Клиент записывается сам.", h1end: "Вы видите запись в телефоне.", lead: "Делаю сайты с онлайн-записью и заявками для салонов, автосервисов и репетиторов. На четырёх языках."},
+  uk: {h1: "Клієнт записується сам.", h1end: "Ви бачите запис у телефоні.", lead: "Роблю сайти з онлайн-записом і заявками для салонів, автосервісів і репетиторів. Чотирма мовами."}
+};
+for (const l in HERO) Object.assign(T[l], HERO[l]);
 const translations = [...document.querySelectorAll('[data-i]')];
 const form = document.getElementById('qf');
 const businessField = document.getElementById('qb');
@@ -1669,12 +2043,15 @@ function setLang(l) {
   document.documentElement.lang = l;
   document.title = t.title;
   document.querySelector('meta[name=description]').content = t.desc;
-  translations.forEach(el => { el.textContent = t[el.dataset.i] ?? ''; });
+  translations.forEach(el => { const v = t[el.dataset.i] ?? ''; if (el.textContent !== v) el.textContent = v; });   // same text: no repaint
   document.querySelectorAll('[data-alt]').forEach(el => { el.alt = t[el.dataset.alt]; });
   document.querySelectorAll('[data-aria]').forEach(el => { el.setAttribute('aria-label', t[el.dataset.aria]); });
   document.querySelectorAll('[data-cursor-i]').forEach(el => { el.dataset.cursor = t[el.dataset.cursorI]; });
   document.querySelectorAll('[data-set]').forEach(button => button.setAttribute('aria-pressed', button.dataset.set === l));
   document.querySelectorAll('[data-cv]').forEach(a => { a.href = 'cv/Davyd_Konstantinov_' + a.dataset.cv + '_' + (l === 'sk' ? 'SK' : 'EN') + '.pdf'; });
+  document.querySelectorAll('img[data-ll]').forEach(i => ['src', 'srcset', 'data-src', 'data-srcset'].forEach(k => {   // 25.11: demo pictures in the page language
+    const v = i.getAttribute(k); if (v) i.setAttribute(k, v.replace(/(-(?:en|ru|uk))?\.webp/g, (l === 'sk' ? '' : '-' + l) + '.webp'));
+  }));
   document.querySelectorAll('[data-ex]').forEach(a => {
     const path = a.dataset.ex;
     a.href = path.startsWith('https://') ? path : path + '?' + (a.dataset.q ? a.dataset.q + '&' : '') + 'lang=' + l + (a.dataset.h || '');
@@ -1706,7 +2083,7 @@ document.querySelectorAll('[data-write]').forEach(link => link.addEventListener(
 }));
 
 const projects = document.querySelector('.more-work');
-projects.addEventListener('toggle', () => {
+projects && projects.addEventListener('toggle', () => {
   if (!projects.open) return;
   projects.querySelectorAll('.slot[data-video]').forEach(slot => {
     const video = document.createElement('video');
@@ -1826,8 +2203,9 @@ form.addEventListener('submit', async event => {
     fresh.style.setProperty('--s', at(t)); ghost.hidden = true;
     const after = [...list.children].find(li => li !== fresh && li.querySelector('time').textContent > t);
     list.insertBefore(fresh, after || null);
-    fresh.classList.remove('pend'); book.disabled = true; if (innerWidth < 761) setTimeout(() => fresh.scrollIntoView({block:'center',behavior:'smooth'}), 400); label('ldDone'); hintLabel('ldSeen');
+    fresh.classList.remove('pend'); book.disabled = true; label('ldDone'); hintLabel('ldSeen');
   });
+  if (!motionOK) book.click();   // reduced motion: the result of the demo is visible at once
 })();
 
 (() => {
@@ -1880,6 +2258,7 @@ document.getElementById('copy-email').addEventListener('click', async () => {
 </script>
 <script>document.documentElement.classList.add('mo-js');setTimeout(()=>document.documentElement.classList.add('mo-safe'),2500)
 /* motion libraries load 1 s after the page: fetched with it they took the slow-4G bandwidth from the first screen (LCP 3.1 s, 23.11). async=false keeps their order */
-addEventListener('load',()=>setTimeout(()=>{['gsap.min.js','ScrollTrigger.min.js','SplitText.min.js','lenis.min.js','home.js','wow.js'].forEach(f=>{const e=document.createElement('script');e.src='lib/'+f+(f=='home.js'?'?v=2':'');e.async=false;if(f=='wow.js')e.onload=e.onerror=()=>{const m=document.createElement('script');m.type='module';m.src='lib/moments/moments.js';document.body.append(m)};document.body.append(e)})},1000),{once:true})</script>
+addEventListener('load',()=>setTimeout(()=>{['gsap.min.js','ScrollTrigger.min.js','SplitText.min.js','Flip.min.js','lenis.min.js','home.js','wow.js','novy.js'].forEach(f=>{const e=document.createElement('script');e.src='lib/'+f+(f=='home.js'?'?v=2':'');e.async=false;if(f=='wow.js')e.onload=e.onerror=()=>{const m=document.createElement('script');m.type='module';m.src='lib/moments/moments.js';document.body.append(m)};document.body.append(e)})},1000),{once:true})</script>
+<script>/* 25.11 LCP: pictures below the first screen get their address after load, so they do not compete with the H1 */addEventListener('load',()=>document.querySelectorAll('img[data-src]').forEach(i=>{if(i.dataset.srcset)i.srcset=i.dataset.srcset;i.src=i.dataset.src}))</script>
 </body>
 </html>
