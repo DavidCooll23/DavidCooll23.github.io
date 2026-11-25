@@ -2259,6 +2259,6 @@ document.getElementById('copy-email').addEventListener('click', async () => {
 <script>document.documentElement.classList.add('mo-js');setTimeout(()=>document.documentElement.classList.add('mo-safe'),2500)
 /* motion libraries load 1 s after the page: fetched with it they took the slow-4G bandwidth from the first screen (LCP 3.1 s, 23.11). async=false keeps their order */
 addEventListener('load',()=>setTimeout(()=>{['gsap.min.js','ScrollTrigger.min.js','SplitText.min.js','Flip.min.js','lenis.min.js','home.js','wow.js','novy.js'].forEach(f=>{const e=document.createElement('script');e.src='lib/'+f+(f=='home.js'?'?v=2':'');e.async=false;if(f=='wow.js')e.onload=e.onerror=()=>{const m=document.createElement('script');m.type='module';m.src='lib/moments/moments.js';document.body.append(m)};document.body.append(e)})},1000),{once:true})</script>
-<script>/* 25.11 LCP: pictures below the first screen get their address after load, so they do not compete with the H1 */addEventListener('load',()=>document.querySelectorAll('img[data-src]').forEach(i=>{if(i.dataset.srcset)i.srcset=i.dataset.srcset;i.src=i.dataset.src}))</script>
+<script>/* 25.11 LCP: pictures below the first screen get their address after load AND the first paint (load fires before the first paint on a fast line), so they do not compete with the H1 */addEventListener('load',()=>requestAnimationFrame(()=>setTimeout(()=>document.querySelectorAll('img[data-src]').forEach(i=>{if(i.dataset.srcset)i.srcset=i.dataset.srcset;i.src=i.dataset.src}),0)))</script>
 </body>
 </html>
