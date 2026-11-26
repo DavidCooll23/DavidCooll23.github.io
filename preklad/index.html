@@ -4,8 +4,15 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Pred a po</title>
-<meta name="description" content="">
+<meta name="description" content="Ukážka: stránka malej krajčírskej dielne pred prekladom a po ňom.">
 <meta name="robots" content="noindex">
+<link rel="canonical" href="https://konstantinov.sk/preklad/">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%23a8402a'/%3E%3Ctext x='16' y='23' font-size='20' text-anchor='middle' fill='%23f3ede3' font-family='Georgia,serif' font-weight='700'%3EA%3C/text%3E%3C/svg%3E">
+<meta property="og:title" content="Pred a po: web v štyroch jazykoch">
+<meta property="og:description" content="Ukážka: stránka malej krajčírskej dielne pred prekladom a po ňom. Dielňa je vymyslená.">
+<meta property="og:image" content="https://konstantinov.sk/preklad/og.jpg">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"Pred a po: ukážka prekladu webu do štyroch jazykov","url":"https://konstantinov.sk/preklad/","inLanguage":["sk","uk","ru","en"],"author":{"@type":"Person","name":"Davyd Konstantinov","url":"https://konstantinov.sk/"}}</script>
+<script>addEventListener('load',()=>setTimeout(()=>{const s=document.createElement('script');s.src='https://cdn.counter.dev/script.js';s.dataset.id='257df3c8-5256-4c70-addb-07ba1530a824';s.dataset.utcoffset='1';document.head.append(s)},400),{once:true})</script>
 <meta name="theme-color" content="#f3ede3">
 <link rel="stylesheet" href="../lib/wow.css">
 <script>document.documentElement.classList.add('wow-js');window.__wowT=setTimeout(()=>document.documentElement.classList.add('wow-safe'),3000)</script>
@@ -109,7 +116,10 @@ h1{font:400 clamp(2.6rem,5.6vw,5.4rem)/1.02 var(--serif);letter-spacing:-.02em;m
 .cta .go{flex:none;display:grid;place-items:center;width:200px;height:200px;border-radius:50%;background:var(--tape);color:var(--ink);text-decoration:none;font:600 1.0625rem/1.2 var(--font);text-align:center;padding:24px;transition:background-color .2s var(--ease)}
 .cta .go:hover{background:#f2c94a}
 footer{padding:28px 0 52px;font-size:.875rem;color:#b9ab9c;background:#211a15;border-top:1px solid rgba(243,237,227,.12)}
-footer a{color:var(--tape)}
+footer a{color:var(--tape)}.legal{opacity:.8}
+.top>a[data-back]{display:inline-flex;align-items:center;gap:8px}.top .me{width:28px;height:28px;border-radius:50%;object-fit:cover;flex:none}
+.faqs{padding:110px 0 90px}.faqs h2{font:400 clamp(2.4rem,5vw,4.6rem)/1.04 var(--serif);letter-spacing:-.02em}.faqs .faq{max-width:820px;margin-top:28px}.faq details{border-bottom:1px solid rgba(33,26,21,.16)}.faq summary{cursor:pointer;list-style:none;display:flex;justify-content:space-between;gap:16px;padding:20px 0;font-weight:600;font-size:1.0625rem}.faq summary::-webkit-details-marker{display:none}.faq summary::after{content:"+";font:400 1.6rem/1 var(--serif);color:var(--red);transition:transform .3s}.faq details[open] summary::after{transform:rotate(45deg)}.faq details p{color:var(--sec);padding:0 0 20px;max-width:60ch}
+@media(max-width:860px){.faqs{padding:72px 0 56px}}
 @media(max-width:1000px){.cards{grid-template-columns:1fr 1fr}.mini:nth-child(even){transform:none}}
 @media(max-width:860px){.stage{grid-template-columns:1fr;gap:48px;padding:28px 0 72px}.phone{max-width:360px;margin:0 auto;width:100%}.scr{height:600px}.cta .wrap{flex-direction:column;align-items:flex-start}}
 @media(max-width:600px){
@@ -124,7 +134,7 @@ footer a{color:var(--tape)}
 </head>
 <body class="before" data-progress data-grain>
 <header data-hide-header><div class="wrap">
-  <div class="top"><a data-back href="../" data-i="back"></a>
+  <div class="top"><a data-back href="../"><img class="me" src="../media/davyd-sunset-96.webp" width="96" height="96" alt="Davyd Konstantinov"><span data-i="back"></span></a>
     <div class="lang" role="group" aria-label="Language"><button type="button" data-set="sk">SK</button><button type="button" data-set="uk">UA</button><button type="button" data-set="ru">RU</button><button type="button" data-set="en">EN</button></div>
   </div>
 </div></header>
@@ -173,11 +183,12 @@ footer a{color:var(--tape)}
   <figure data-clip data-parallax="0.12"><img src="img/p-hands.webp" alt="" width="1200" height="800" loading="lazy"></figure>
 </div></section>
 
+<section class="faqs"><div class="wrap"><h2 data-i="faqh" data-reveal="self"></h2><div class="faq" data-reveal><details><summary data-i="q1"></summary><p data-i="a1"></p></details><details><summary data-i="q2"></summary><p data-i="a2"></p></details><details><summary data-i="q3"></summary><p data-i="a3"></p></details><details><summary data-i="q4"></summary><p data-i="a4"></p></details></div></div></section>
 <section class="cta"><div class="wrap price">
   <h2 data-i="pr"></h2>
   <a class="go" data-back href="../" data-magnetic data-cursor="→"><span data-i="prl"></span></a>
 </div></section>
-<footer><div class="wrap"><span data-i="foot"></span> <a data-back href="../" data-i="back"></a></div></footer>
+<footer><div class="wrap"><span data-i="foot"></span> <a data-back href="../" data-i="back"></a><br><span data-i="want"></span> <a href="https://wa.me/421910392871" target="_blank" rel="noopener">WhatsApp</a> · <a href="tel:+421910392871">+421 910 392 871</a><br>© 2026 Davyd Konstantinov<br><span class="legal"><a href="../ochrana-udajov.html" data-i="priv"></a></span></div></footer>
 <script defer src="../lib/gsap.min.js"></script>
 <script defer src="../lib/ScrollTrigger.min.js"></script>
 <script defer src="../lib/SplitText.min.js"></script>
@@ -222,6 +233,10 @@ ru:{h:"Ремонт одежды за два дня",s:"Укоротим, ушь
 wh:"Где и когда",hrs:"Пн–Пт 9:00–18:00, Сб 9:00–12:00",call:"Звоните 0900 000 000",fh:"Напишите нам",fn:"Имя",ft:"Телефон или e-mail",fw:"Что нужно переделать",fb:"Отправить",ok:"Спасибо, мы с вами свяжемся. (Пример, ничего не отправлено.)"},
 en:{h:"Clothing alterations within two days",s:"We shorten clothes, take them in and replace zips. Just drop by, no appointment needed.",ph:"Prices",r1:"Shorten trousers",r2:"Replace a jacket zip",r3:"Take in a dress",r3v:"from €15",r4:"Repair a lining",r4v:"from €10",
 wh:"Where and when",hrs:"Mon–Fri 9:00–18:00, Sat 9:00–12:00",call:"Call 0900 000 000",fh:"Write to us",fn:"Name",ft:"Phone or email",fw:"What needs altering",fb:"Send",ok:"Thank you. We'll get back to you. (This is a demo. Nothing was sent.)"}};
+Object.assign(T.sk,{"faqh": "Časté otázky", "q1": "Kedy platím?", "a1": "Platíte až potom, keď uvidíte hotový preklad na svojom webe a budete s ním spokojní.", "q2": "Musím meniť svoj web?", "a2": "Nie. Web zostane rovnaký, pribudne len prepínač jazykov.", "q3": "Ako dlho to trvá?", "a3": "Malá stránka býva hotová za 1–2 dni.", "q4": "Čo ak niečo v preklade nesedí?", "a4": "Napíšte mi a opravím to zadarmo.", "want": "Chcete svoj web aj v ďalších jazykoch?", "priv": "Ochrana osobných údajov"});
+Object.assign(T.uk,{"faqh": "Часті питання", "q1": "Коли я плачу?", "a1": "Ви платите тільки тоді, коли побачите готовий переклад на своєму сайті й будете ним задоволені.", "q2": "Чи треба змінювати мій сайт?", "a2": "Ні. Сайт залишиться таким самим, додасться лише перемикач мов.", "q3": "Скільки це триває?", "a3": "Невелика сторінка зазвичай готова за 1–2 дні.", "q4": "Що, як у перекладі щось не так?", "a4": "Напишіть мені, і я безкоштовно виправлю.", "want": "Хочете свій сайт ще й іншими мовами?", "priv": "Захист персональних даних"});
+Object.assign(T.ru,{"faqh": "Частые вопросы", "q1": "Когда я плачу?", "a1": "Вы платите только после того, как увидите готовый перевод на своём сайте и он вас устроит.", "q2": "Нужно ли менять мой сайт?", "a2": "Нет. Сайт останется прежним, добавится только переключатель языков.", "q3": "Сколько это занимает?", "a3": "Небольшая страница обычно готова за 1–2 дня.", "q4": "Что, если в переводе что-то не так?", "a4": "Напишите мне, и я бесплатно исправлю.", "want": "Хотите свой сайт и на других языках?", "priv": "Защита персональных данных"});
+Object.assign(T.en,{"faqh": "Frequently asked questions", "q1": "When do I pay?", "a1": "Only after you've seen the finished translation on your own website and you're happy with it.", "q2": "Do I have to change my website?", "a2": "No. Your site stays the same, with a language switch added.", "q3": "How long does it take?", "a3": "A small page is usually ready in 1–2 days.", "q4": "What if something in the translation is off?", "a4": "Message me and I'll fix it for free.", "want": "Want your website in more languages too?", "priv": "Privacy policy"});
 let cur='sk',after=false,pcur='sk',swapT=0,first=true;
 const $=id=>document.getElementById(id),pf=$('pf');
 function fill(l){
