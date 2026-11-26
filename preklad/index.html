@@ -117,6 +117,8 @@ h1{font:400 clamp(2.6rem,5.6vw,5.4rem)/1.02 var(--serif);letter-spacing:-.02em;m
 .cta .go:hover{background:#f2c94a}
 footer{padding:28px 0 52px;font-size:.875rem;color:#b9ab9c;background:#211a15;border-top:1px solid rgba(243,237,227,.12)}
 footer a{color:var(--tape)}.legal{opacity:.8}
+/* LCP: the first-screen lead paints at once (0.01 = invisible), the intro still fades it in */
+.wow-js [data-intro] .lead[data-reveal=self]{opacity:.01}
 .top>a[data-back]{display:inline-flex;align-items:center;gap:8px}.top .me{width:28px;height:28px;border-radius:50%;object-fit:cover;flex:none}
 .faqs{padding:110px 0 90px}.faqs h2{font:400 clamp(2.4rem,5vw,4.6rem)/1.04 var(--serif);letter-spacing:-.02em}.faqs .faq{max-width:820px;margin-top:28px}.faq details{border-bottom:1px solid rgba(33,26,21,.16)}.faq summary{cursor:pointer;list-style:none;display:flex;justify-content:space-between;gap:16px;padding:20px 0;font-weight:600;font-size:1.0625rem}.faq summary::-webkit-details-marker{display:none}.faq summary::after{content:"+";font:400 1.6rem/1 var(--serif);color:var(--red);transition:transform .3s}.faq details[open] summary::after{transform:rotate(45deg)}.faq details p{color:var(--sec);padding:0 0 20px;max-width:60ch}
 @media(max-width:860px){.faqs{padding:72px 0 56px}}
