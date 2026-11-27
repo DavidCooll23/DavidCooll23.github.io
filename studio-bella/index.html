@@ -282,6 +282,31 @@ html,body{overflow-x:clip}
 .owner h3{font:600 .9375rem/1.4 var(--sans);color:var(--sec)}
 .owner .tgm{box-shadow:none}
 @media(max-width:899px){.owner{padding:16px;gap:10px}.owner .tgm .feed{min-height:0;padding:12px}.owner.got .sheet{animation:pop .45s .15s both}}
+/* 27.11: real pages (sluzby, tim, rezervacia, kontakt): menu for phones and links to the pages */
+.burger{display:none;flex:none;width:44px;height:44px;border:0;border-radius:50%;background:var(--ink);cursor:pointer;place-content:center;gap:6px}
+.burger i{display:block;width:18px;height:1.5px;background:var(--cream)}
+nav a[aria-current]{color:var(--ink)}
+.mnav{position:fixed;inset:0;z-index:70;background:var(--night);color:var(--cream);display:flex;flex-direction:column;padding:16px clamp(20px,4vw,56px) calc(24px + env(safe-area-inset-bottom));clip-path:inset(0 0 100% 0);visibility:hidden;transition:clip-path .7s cubic-bezier(.7,0,.2,1),visibility 0s .7s;overflow-y:auto}
+.mnav.on{clip-path:inset(0);visibility:visible;transition:clip-path .7s cubic-bezier(.7,0,.2,1)}
+.mtop{display:flex;align-items:center;justify-content:space-between}
+.mnav .mark{color:var(--cream);margin:0}
+.mx{width:44px;height:44px;border-radius:50%;border:1px solid rgba(241,231,218,.3);background:none;color:var(--cream);font-size:1.6rem;line-height:1;cursor:pointer}
+.ml{display:grid;margin:auto 0;padding:28px 0}
+.ml a{display:flex;align-items:baseline;gap:16px;padding:.16em 0;font:500 clamp(2.5rem,11.5vw,4.6rem)/1.08 var(--serif);letter-spacing:-.03em;text-decoration:none;color:var(--cream);border-bottom:1px solid rgba(241,231,218,.14);opacity:0;transform:translateY(28px);transition:opacity .5s,transform .7s cubic-bezier(.2,.8,.2,1),color .3s}
+.ml a i{font:500 .75rem var(--sans);font-style:normal;color:#9d8d7e;letter-spacing:.08em;min-width:1.9em}
+.ml a:hover,.ml a[aria-current]{color:#e69a82}
+.ml a[aria-current]{font-style:italic}
+.mnav.on .ml a{opacity:1;transform:none;transition-delay:calc(.2s + var(--k)*.06s),calc(.2s + var(--k)*.06s),0s}
+.mfoot{display:flex;justify-content:space-between;align-items:end;gap:16px;color:#b9a998;font-size:.9375rem}
+.mfoot b{color:var(--cream)}
+.mfoot .btn{background:var(--clay);color:#fff;padding:15px 22px}
+html.mopen{overflow:hidden}
+.more{margin-top:clamp(24px,4vh,40px);font-weight:600}
+.more a{text-decoration:none;display:inline-flex;gap:10px;align-items:center;padding:10px 0;border-bottom:1px solid var(--ink);transition:gap .4s cubic-bezier(.2,.8,.2,1),color .3s}
+.more a:hover{gap:18px;color:var(--clay-press)}
+@media(max-width:1099px){nav{display:none}.burger{display:grid}}
+@media(max-width:520px){header .wrap{gap:10px}.mark{font-size:1.5rem}}
+@media(prefers-reduced-motion:reduce){.mnav,.mnav.on,.ml a,.mnav.on .ml a{transition:none}}
 </style>
 <link rel="stylesheet" href="book.css">
 <style>.who{background:none;border-radius:0;display:block;overflow:visible;padding:0}.who>div{padding:0}</style>
@@ -291,12 +316,18 @@ html,body{overflow-x:clip}
 <div class="demo"><div class="wrap"><span class="dl" data-i="demo"></span><span class="ds" data-i="demos"></span><span class="dr"><a data-back href="../"><img class="me" src="../media/davyd-sunset-96.webp" width="96" height="96" alt="Davyd Konstantinov"><span class="bl" data-i="back"></span><span class="bs" data-i="backs"></span></a><a class="wantb" data-back data-want href="../#qf" data-i="wantb"></a></span></div></div>
 <header data-hide-header><div class="wrap">
   <a class="mark" href="#top">Studio Bella</a>
-  <nav><a class="wow-line" href="#services" data-i="n1"></a><a class="wow-line" href="#team" data-i="n2"></a><a class="wow-line" href="#visit" data-i="n3"></a></nav>
+  <nav><a class="wow-line" href="sluzby.html" data-i="n1"></a><a class="wow-line" href="tim.html" data-i="pt"></a><a class="wow-line" href="rezervacia.html" data-i="pb"></a><a class="wow-line" href="kontakt.html" data-i="pk"></a></nav>
   <div class="lang" role="group" aria-label="Language">
     <button type="button" data-set="sk">SK</button><button type="button" data-set="uk">UA</button><button type="button" data-set="ru">RU</button><button type="button" data-set="en">EN</button>
   </div>
   <button class="btn hbook" type="button" data-book data-magnetic data-roll><span data-i="book"></span></button>
+  <button class="burger" type="button" id="mb" aria-expanded="false" aria-controls="mnav" data-al="pm"><i></i><i></i></button>
 </div></header>
+<div class="mnav" id="mnav" data-lenis-prevent>
+  <div class="mtop"><a class="mark" href="./">Studio Bella</a><button class="mx" type="button" id="mx" data-al="pmx">×</button></div>
+  <div class="ml" role="navigation" data-al="pm"><a href="./" aria-current="page" style="--k:0"><i>01</i><span data-i="ph0"></span></a><a href="sluzby.html" style="--k:1"><i>02</i><span data-i="n1"></span></a><a href="tim.html" style="--k:2"><i>03</i><span data-i="pt"></span></a><a href="rezervacia.html" style="--k:3"><i>04</i><span data-i="pb"></span></a><a href="kontakt.html" style="--k:4"><i>05</i><span data-i="pk"></span></a></div>
+  <div class="mfoot"><p><b data-i="hours"></b><br>Hlavná 1, Bratislava</p><button class="btn" type="button" data-book><span data-i="book"></span></button></div>
+</div>
 <main id="top">
 <div class="wrap hero" data-intro>
   <span class="ghostword" aria-hidden="true" data-speed="0.7">Bella</span>
@@ -333,6 +364,7 @@ html,body{overflow-x:clip}
     <li data-svc="nails" data-book="nails" data-float="hero.jpg"><div><h3 data-i="s3"></h3><small data-i="s3d"></small></div><span class="eur">30 €</span><button class="bkb" type="button" data-book="nails" data-i="bk"></button></li>
     <li data-svc="brows" data-book="brows" data-float="work-brows.jpg"><div><h3 data-i="s4"></h3><small data-i="s4d"></small></div><span class="eur">15 €</span><button class="bkb" type="button" data-book="brows" data-i="bk"></button></li>
   </ul>
+  <p class="more" data-reveal="self"><a href="sluzby.html"><span data-i="ms1"></span> <span aria-hidden="true">→</span></a></p>
 </div></section>
 
 <section><div class="wrap">
@@ -358,6 +390,7 @@ html,body{overflow-x:clip}
     <div class="who"><div class="ph" data-clip data-cursor="Anna"><div data-parallax="0.12" style="height:100%"><img src="team-anna.jpg" width="640" height="800" loading="lazy" decoding="async" alt="" data-alt="m1a"></div></div><div><h3 data-i="m1"></h3><p data-i="m1p"></p><ul class="ms"><li><span data-i="s1"></span><button class="bkb" type="button" data-book="cut" data-staff="anna" data-i="bk"></button></li><li><span data-i="s2"></span><button class="bkb" type="button" data-book="color" data-staff="anna" data-i="bk"></button></li><li><span data-i="s4"></span><button class="bkb" type="button" data-book="brows" data-staff="anna" data-i="bk"></button></li></ul></div></div>
     <div class="who"><div class="ph" data-clip data-cursor="Olga"><div data-parallax="0.12" style="height:100%"><img src="team-olga.jpg" width="640" height="800" loading="lazy" decoding="async" alt="" data-alt="m2a"></div></div><div><h3 data-i="m2"></h3><p data-i="m2p"></p><ul class="ms"><li><span data-i="s3"></span><button class="bkb" type="button" data-book="nails" data-staff="olga" data-i="bk"></button></li><li><span data-i="s4"></span><button class="bkb" type="button" data-book="brows" data-staff="olga" data-i="bk"></button></li></ul></div></div>
   </div>
+  <p class="more" data-reveal="self"><a href="tim.html"><span data-i="ms2"></span> <span aria-hidden="true">→</span></a></p>
 </div></section>
 
 <section id="gallery" class="galsec" data-hscroll>
@@ -712,6 +745,8 @@ fab.onclick=openChat;$('cx').onclick=closeChat;
 chat.addEventListener('keydown',e=>{if(e.key==='Escape')closeChat()});
 $('cf').addEventListener('submit',e=>{e.preventDefault();const v=ci.value;if(v.trim()&&!busy){ci.value='';ask(v)}});
 document.querySelectorAll('[data-set]').forEach(b=>b.onclick=()=>setLang(b.dataset.set));
+{const mn=$('mnav'),mb=$('mb');if(mn&&mb){const tg=o=>{mn.classList.toggle('on',o);document.documentElement.classList.toggle('mopen',o);mb.setAttribute('aria-expanded',o);mn.inert=!o;if(o)$('mx').focus({preventScroll:true});else mb.focus({preventScroll:true})};mn.inert=true;mb.onclick=()=>tg(true);$('mx').onclick=()=>tg(false);mn.addEventListener('click',e=>{if(e.target.closest('a,[data-book]'))tg(false)});mn.addEventListener('keydown',e=>{if(e.key==='Escape')tg(false)})}}
+Object.assign(T.sk,{"pt":"Tím","pb":"Rezervácia","pk":"Kontakt","ph0":"Domov","pm":"Menu","pmx":"Zavrieť menu","ms1":"Čo je v cene každej služby","ms2":"Viac o Anne a Oľge"});Object.assign(T.uk,{"pt":"Команда","pb":"Запис","pk":"Контакти","ph0":"Головна","pm":"Меню","pmx":"Закрити меню","ms1":"Що входить у ціну кожної послуги","ms2":"Більше про Анну та Ольгу"});Object.assign(T.ru,{"pt":"Мастера","pb":"Запись","pk":"Контакты","ph0":"Главная","pm":"Меню","pmx":"Закрыть меню","ms1":"Что входит в цену каждой услуги","ms2":"Подробнее об Анне и Ольге"});Object.assign(T.en,{"pt":"Team","pb":"Booking","pk":"Contact","ph0":"Home","pm":"Menu","pmx":"Close menu","ms1":"What each price includes","ms2":"More about Anna and Olga"});
 let saved='';try{saved=localStorage.lang}catch(e){}
 const bl=(navigator.language||'').slice(0,2);
 Object.assign(T.sk,{"g5": "Recepcia so sušenými kvetmi", "g6": "Umývadlo na vlasy", "m1a": "Anna pri práci", "m2a": "Oľga pri manikúrovom stolíku"});Object.assign(T.uk,{"g5": "Рецепція із сухоцвітами", "g6": "Мийка для волосся", "m1a": "Анна за роботою", "m2a": "Ольга за манікюрним столиком"});Object.assign(T.ru,{"g5": "Ресепшен с сухоцветами", "g6": "Мойка для волос", "m1a": "Анна за работой", "m2a": "Ольга за маникюрным столиком"});Object.assign(T.en,{"g5": "Reception with dried flowers", "g6": "Hair wash basin", "m1a": "Anna at work", "m2a": "Olga at the manicure table"});
