@@ -184,6 +184,7 @@ footer{padding:36px 0 52px;color:var(--sec);font-size:.875rem;border-top:1px sol
   .qsum{margin:12px 0 0;display:flex;align-items:baseline;justify-content:space-between;gap:12px;font-size:.9375rem;color:#d3d8dd}
   .qsum b{font:700 1.9rem/1 var(--cond);color:var(--acc);font-variant-numeric:tabular-nums}
   .qsum small{color:var(--sec);font-size:.8125rem;margin-left:4px}
+.qe{display:inline-block;margin-top:6px;padding:6px 0;font-size:.8125rem;color:#d3d8dd;text-decoration:underline;text-underline-offset:3px}
   .rimnow{display:flex;justify-content:space-between;align-items:center;gap:12px;margin:0 0 16px;font-size:.9375rem;color:var(--sec)}
   .rimnow b{color:var(--ink);font:700 1.2rem/1 var(--cond);margin-left:4px}
   .rimnow button{border:0;background:none;color:var(--acc);font:600 .9375rem var(--sans);text-decoration:underline;text-underline-offset:3px;cursor:pointer;min-height:44px;padding:0 4px}
@@ -236,7 +237,7 @@ footer{padding:36px 0 52px;color:var(--sec);font-size:.875rem;border-top:1px sol
   <div data-intro>
     <h1 data-split data-i="h1"></h1>
     <p class="lead" data-reveal="self" data-i="lead"></p>
-    <div data-reveal><div class="quick"><span class="ql" data-i="krim"></span><div class="qr"><button type="button" data-rim="14">R14</button><button type="button" data-rim="15">R15</button><button type="button" data-rim="16">R16</button><button type="button" data-rim="17">R17</button><button type="button" data-rim="18">R18</button><button type="button" data-rim="19">R19</button></div><p class="qsum"><span><span id="qn"></span> <small data-i="kts"></small></span><b id="qp" aria-live="polite"></b></p></div></div>
+    <div data-reveal><div class="quick"><span class="ql" data-i="krim"></span><div class="qr"><button type="button" data-rim="14">R14</button><button type="button" data-rim="15">R15</button><button type="button" data-rim="16">R16</button><button type="button" data-rim="17">R17</button><button type="button" data-rim="18">R18</button><button type="button" data-rim="19">R19</button></div><p class="qsum"><span><span id="qn"></span> <small data-i="kts"></small></span><b id="qp" aria-live="polite"></b></p><a class="qe" href="#calc" data-i="qed"></a></div></div>
     <div class="acts" data-reveal><a class="btn p" href="#objednat" data-magnetic data-roll><span data-i="b1"></span></a><a class="btn s" href="#cennik" data-roll><span data-i="b2"></span></a></div>
     <div data-reveal><p class="from"><span data-i="p1"></span><b data-i="p1v"></b></p></div>
     <div data-reveal><p class="open" id="open"><b></b><span id="opentx"></span></p></div>
@@ -440,7 +441,7 @@ Object.assign(T.sk,{"faqh": "Časté otázky", "q1": "Platí sa vopred?", "a1": 
 Object.assign(T.uk,{"faqh": "Часті питання", "q1": "Чи треба платити наперед?", "a1": "Ні. Ви платите тільки після роботи, карткою або готівкою.", "q2": "Ціна в прайсі остаточна?", "a2": "Так. Якщо знадобиться щось додатково, ми скажемо про це ще до початку.", "q3": "Що, як я не встигну на свій час?", "a3": "Напишіть нам. Ми безкоштовно перенесемо запис.", "q4": "Можна почекати на місці?", "a4": "Так. Заміна шин триває близько 30 хвилин, почекати можна в нас.", "want": "Хочете такий сайт для свого бізнесу?", "priv": "Захист персональних даних", "firm": "Зразок реквізитів: Garáž 4 s. r. o., IČO 00 000 000, Dielenská 4, 821 04 Bratislava"});
 Object.assign(T.ru,{"faqh": "Частые вопросы", "q1": "Нужно ли платить заранее?", "a1": "Нет. Вы платите только после работы, картой или наличными.", "q2": "Цена в прайсе окончательная?", "a2": "Да. Если понадобится что-то ещё, мы скажем об этом до начала работы.", "q3": "Что, если я не успеваю к своему времени?", "a3": "Напишите нам. Мы бесплатно перенесём запись.", "q4": "Можно подождать на месте?", "a4": "Да. Переобувка занимает около 30 минут, подождать можно у нас.", "want": "Хотите такой сайт для своего бизнеса?", "priv": "Защита персональных данных", "firm": "Образец реквизитов: Garáž 4 s. r. o., IČO 00 000 000, Dielenská 4, 821 04 Bratislava"});
 Object.assign(T.en,{"faqh": "Frequently asked questions", "q1": "Do I pay in advance?", "a1": "No. You pay only after the work is done, by card or in cash.", "q2": "Is the listed price final?", "a2": "Yes. If anything extra is needed, we'll tell you before we start.", "q3": "What if I can't make my slot?", "a3": "Message us and we'll move your booking for free.", "q4": "Can I wait on site?", "a4": "Yes. A tyre change takes about 30 minutes, and you can wait here.", "want": "Want a website like this for your business?", "priv": "Privacy policy", "firm": "Sample company details: Garáž 4 s. r. o., IČO 00 000 000, Dielenská 4, 821 04 Bratislava"});
-Object.assign(T.sk,{"backs": "Davyd Konstantinov", "wantb": "Chcem takýto web"});Object.assign(T.uk,{"backs": "Давид Константінов", "wantb": "Хочу такий сайт"});Object.assign(T.ru,{"backs": "Давид Константинов", "wantb": "Хочу такой сайт"});Object.assign(T.en,{"backs": "Davyd Konstantinov", "wantb": "I want a site like this"});
+Object.assign(T.sk,{"jcar": ", osobné auto", "qed": "SUV, dodávka alebo uskladnenie? Upraviť výpočet ↓"});Object.assign(T.uk,{"jcar": ", легкове авто", "qed": "SUV, фургон чи зберігання? Змінити розрахунок ↓"});Object.assign(T.ru,{"jcar": ", легковая", "qed": "SUV, бус или хранение? Изменить расчёт ↓"});Object.assign(T.en,{"jcar": ", passenger car", "qed": "SUV, van or storage? Adjust the quote ↓"});Object.assign(T.sk,{"backs": "Davyd Konstantinov", "wantb": "Chcem takýto web"});Object.assign(T.uk,{"backs": "Давид Константінов", "wantb": "Хочу такий сайт"});Object.assign(T.ru,{"backs": "Давид Константинов", "wantb": "Хочу такой сайт"});Object.assign(T.en,{"backs": "Davyd Konstantinov", "wantb": "I want a site like this"});
 let cur='sk',day=null,slot=null;
 const fmt=(s,o)=>s.replace(/\{(\w)\}/g,(_,k)=>o[k]);
 const eur=n=>cur==='en'?'€'+n:n+' €';
@@ -457,7 +458,7 @@ function paint(){
   $('size').textContent=SIZE[q.rim];
   calc.querySelectorAll('[name=rim]').forEach(r=>r.disabled=q.job==='swap');
   $('sj').textContent=q.name;$('sp').textContent=eur(q.p);
-  $('qn').textContent=q.name;$('qp').textContent=eur(q.p);
+  $('qn').textContent=q.name+(calc.car.value==='suv'?'':t.jcar);$('qp').textContent=eur(q.p);
   document.querySelectorAll('.qr button').forEach(b=>b.setAttribute('aria-pressed',q.job!=='swap'&&+b.dataset.rim===q.rim));$('rimnow').textContent='R'+q.rim;$('rimchg').parentNode.hidden=q.job==='swap';
 }
 calc.addEventListener('change',paint);

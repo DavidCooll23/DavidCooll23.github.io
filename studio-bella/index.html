@@ -100,6 +100,7 @@ h2 .wow-l{padding-bottom:.06em}
 .menu small{display:block;font-size:.9375rem;color:var(--sec);margin-top:6px}
 .menu .eur{font:italic 500 clamp(1.6rem,2.6vw,2.4rem)/1 var(--serif);white-space:nowrap}
 .menu .bkb{font:600 .875rem/1 var(--sans);color:var(--ink);background:none;border:1px solid var(--line);border-radius:999px;padding:13px 20px;cursor:pointer;transition:background .3s,color .3s,border-color .3s}
+.menu li{cursor:pointer}
 .menu li:hover h3{transform:translateX(18px);color:var(--clay)}
 .menu li:hover .bkb{background:var(--ink);color:var(--cream);border-color:var(--ink)}
 /* statement + steps */
@@ -155,7 +156,10 @@ footer a{color:var(--cream);font-weight:600}
  .badge{left:auto;right:-6px;bottom:-30px;width:104px;height:104px}
  .menu li{grid-template-columns:1fr auto;gap:6px 16px}
  .menu li::before{display:none}
- .menu .bkb{grid-column:1/-1;justify-self:start}
+ .menu li>div{grid-row:1/span 2}
+ .menu .eur{justify-self:end}
+ .menu .bkb{grid-column:2;justify-self:end;padding:11px 16px}
+ .menu .bkb::after{content:" →"}
  .steps,.team,.visit,#dopyt .ask,.final .row{grid-template-columns:1fr}
  .who:nth-child(2){margin-top:0}
  .hbook{display:none}
@@ -324,10 +328,10 @@ html,body{overflow-x:clip}
   <h2 data-split data-i="sh"></h2>
   <p class="sub" data-reveal="self" data-i="ss"></p>
   <ul class="menu" data-reveal>
-    <li data-svc="cut" data-float="work-cut.jpg"><div><h3 data-i="s1"></h3><small data-i="s1d"></small></div><span class="eur">25 €</span><button class="bkb" type="button" data-book="cut" data-i="bk"></button></li>
-    <li data-svc="color" data-float="work-color.webp"><div><h3 data-i="s2"></h3><small data-i="s2d"></small></div><span class="eur">60 €</span><button class="bkb" type="button" data-book="color" data-i="bk"></button></li>
-    <li data-svc="nails" data-float="hero.jpg"><div><h3 data-i="s3"></h3><small data-i="s3d"></small></div><span class="eur">30 €</span><button class="bkb" type="button" data-book="nails" data-i="bk"></button></li>
-    <li data-svc="brows" data-float="work-brows.jpg"><div><h3 data-i="s4"></h3><small data-i="s4d"></small></div><span class="eur">15 €</span><button class="bkb" type="button" data-book="brows" data-i="bk"></button></li>
+    <li data-svc="cut" data-book="cut" data-float="work-cut.jpg"><div><h3 data-i="s1"></h3><small data-i="s1d"></small></div><span class="eur">25 €</span><button class="bkb" type="button" data-book="cut" data-i="bk"></button></li>
+    <li data-svc="color" data-book="color" data-float="work-color.webp"><div><h3 data-i="s2"></h3><small data-i="s2d"></small></div><span class="eur">60 €</span><button class="bkb" type="button" data-book="color" data-i="bk"></button></li>
+    <li data-svc="nails" data-book="nails" data-float="hero.jpg"><div><h3 data-i="s3"></h3><small data-i="s3d"></small></div><span class="eur">30 €</span><button class="bkb" type="button" data-book="nails" data-i="bk"></button></li>
+    <li data-svc="brows" data-book="brows" data-float="work-brows.jpg"><div><h3 data-i="s4"></h3><small data-i="s4d"></small></div><span class="eur">15 €</span><button class="bkb" type="button" data-book="brows" data-i="bk"></button></li>
   </ul>
 </div></section>
 
@@ -521,7 +525,7 @@ vh:"Find us",vs:"In the Old Town, a few minutes on foot from the stop.",v1:"Addr
 ch:"Free slots still available this week",cp:"See the free times and book without calling.",
 foot:"This is a sample website for a small salon. The salon, address and names are made up."}};
 // 2026-11-22: question form (demo of "enquiries to Telegram + sheet") and FAQ auto-replies
-Object.assign(T.sk,{qh:"Máte otázku? Napíšte nám",qs:"Stačí meno a otázka. Recepčná vám odpovie ešte v ten deň.",
+Object.assign(T.sk,{qh:"Máte otázku? Napíšte nám",qs:"Napíšte meno, otázku a telefón alebo e-mail. Recepčná vám odpovie ešte v ten deň.",
 fn:"Meno",fc:"Telefón alebo e-mail",fq:"Otázka",fb:"Odoslať otázku",fok:"Odoslané. Pozrite sa, čo práve prišlo do salónu.",fneed:"Doplňte meno, kontakt a otázku.",
 pn:"Mária",pc:"+421 … alebo meno@email.sk",pq:"Striháte aj deti?",
 oh:"Toto salón dostane hneď po odoslaní otázky",ow:"Po odoslaní formulára sa tu objaví správa.",obot:"dopyty z webu",onew:"Nová otázka z webu",on:"Meno",oc:"Kontakt",oq:"Otázka",onone:"neuvedený",
@@ -530,7 +534,7 @@ onote:"Toto je ukážka. Z tejto stránky sa nič neodosiela. Na skutočnom webe
 fab:"Opýtať sa",ws:"Automatické odpovede · ukážka",wph:"Napíšte otázku…",wsend:"Poslať",wclose:"Zavrieť",
 w0:"Dobrý deň! Opýtajte sa na ceny, otváracie hodiny, adresu alebo voľné termíny. Odpoviem v jazyku, v ktorom napíšete.",
 chips:["Koľko stojí manikúra?","Máte otvorené v nedeľu?","Kde vás nájdem?","Скільки коштує фарбування?"]});
-Object.assign(T.uk,{qh:"Маєте запитання? Напишіть нам",qs:"Досить імені та запитання. Адміністраторка відповість того ж дня.",
+Object.assign(T.uk,{qh:"Маєте запитання? Напишіть нам",qs:"Напишіть ім’я, запитання і телефон або e-mail. Адміністраторка відповість того ж дня.",
 fn:"Ім’я",fc:"Телефон або e-mail",fq:"Запитання",fb:"Надіслати запитання",fok:"Надіслано. Подивіться, що щойно отримав салон.",fneed:"Вкажіть ім’я, контакт і запитання.",
 pn:"Марія",pc:"+421 … або name@email.sk",pq:"Ви стрижете й дітей?",
 oh:"Ось що салон отримає одразу після надсилання запитання",ow:"Після надсилання форми тут з’явиться повідомлення.",obot:"звернення із сайту",onew:"Нове запитання із сайту",on:"Ім’я",oc:"Контакт",oq:"Запитання",onone:"не вказано",
@@ -539,7 +543,7 @@ onote:"Це приклад. Із цієї сторінки нічого не н�
 fab:"Запитати",ws:"Автовідповіді · приклад",wph:"Напишіть запитання…",wsend:"Надіслати",wclose:"Закрити",
 w0:"Добрий день! Запитайте про ціни, години роботи, адресу чи вільний час для запису. Відповім тією мовою, якою ви напишете.",
 chips:["Скільки коштує манікюр?","Ви працюєте в неділю?","Де вас знайти?","Koľko stojí strih?"]});
-Object.assign(T.ru,{qh:"Есть вопрос? Напишите нам",qs:"Достаточно имени и вопроса. Администратор ответит в тот же день.",
+Object.assign(T.ru,{qh:"Есть вопрос? Напишите нам",qs:"Напишите имя, вопрос и телефон или e-mail. Администратор ответит в тот же день.",
 fn:"Имя",fc:"Телефон или e-mail",fq:"Вопрос",fb:"Отправить вопрос",fok:"Отправлено. Посмотрите, что сейчас получил салон.",fneed:"Укажите имя, контакт и вопрос.",
 pn:"Мария",pc:"+421 … или name@email.sk",pq:"Вы стрижёте детей?",
 oh:"Вот что в эту минуту получает салон",ow:"После отправки формы здесь появится сообщение.",obot:"заявки с сайта",onew:"Новый вопрос с сайта",on:"Имя",oc:"Контакт",oq:"Вопрос",onone:"не указан",
@@ -548,7 +552,7 @@ onote:"Это пример: с этой страницы ничего никуд
 fab:"Спросить",ws:"Автоответы · пример",wph:"Напишите вопрос…",wsend:"Отправить",wclose:"Закрыть",
 w0:"Здравствуйте! Спросите про цены, часы работы, адрес или свободное время. Отвечу на том языке, на котором вы напишете.",
 chips:["Сколько стоит маникюр?","Вы работаете в воскресенье?","Где вас найти?","How much is a haircut?"]});
-Object.assign(T.en,{qh:"Got a question? Write to us",qs:"Just enter your name and question. Our receptionist will reply the same day.",
+Object.assign(T.en,{qh:"Got a question? Write to us",qs:"Enter your name, your question and a phone number or e-mail. Our receptionist will reply the same day.",
 fn:"Name",fc:"Phone or email",fq:"Question",fb:"Send question",fok:"Sent. Have a look at what the salon just received.",fneed:"Please add your name, contact and question.",
 pn:"Maria",pc:"+421 … or name@email.sk",pq:"Do you cut children's hair?",
 oh:"What the salon receives as soon as you submit your question",ow:"A message appears here once you send the form.",obot:"website enquiries",onew:"New question from the website",on:"Name",oc:"Contact",oq:"Question",onone:"not given",

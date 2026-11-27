@@ -130,7 +130,7 @@ footer a{color:var(--tape)}.legal{opacity:.8}
 .faqs{padding:110px 0 90px}.faqs h2{font:400 clamp(2.4rem,5vw,4.6rem)/1.04 var(--serif);letter-spacing:-.02em}.faqs .faq{max-width:820px;margin-top:28px}.faq details{border-bottom:1px solid rgba(33,26,21,.16)}.faq summary{cursor:pointer;list-style:none;display:flex;justify-content:space-between;gap:16px;padding:20px 0;font-weight:600;font-size:1.0625rem}.faq summary::-webkit-details-marker{display:none}.faq summary::after{content:"+";font:400 1.6rem/1 var(--serif);color:var(--red);transition:transform .3s}.faq details[open] summary::after{transform:rotate(45deg)}.faq details p{color:var(--sec);padding:0 0 20px;max-width:60ch}
 @media(max-width:860px){.faqs{padding:72px 0 56px}}
 @media(max-width:1000px){.cards{grid-template-columns:1fr 1fr}.mini:nth-child(even){transform:none}}
-@media(max-width:860px){.stage{grid-template-columns:1fr;gap:48px;padding:28px 0 72px}.phone{max-width:360px;margin:0 auto;width:100%}.stage{gap:0}.stage>.phone{margin:30px auto 4px}.scr{height:600px}.cta .wrap{flex-direction:column;align-items:flex-start}}
+@media(max-width:860px){.stage{grid-template-columns:1fr;gap:48px;padding:28px 0 72px}.phone{max-width:360px;margin:0 auto;width:100%}.stage{gap:0}.stage>.phone{margin:30px auto 4px}[data-intro]>.acts{margin:-8px 0 26px}.chip .cs{display:none}.chip .c2{display:block;margin-top:2px}.scr{height:600px}.cta .wrap{flex-direction:column;align-items:flex-start}}
 @media(max-width:600px){
   .wrap{padding:0 18px}.ab{display:grid}.ab button{padding:11px 12px}
   .cards{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;gap:14px;margin:0 -18px;padding:0 18px 18px;scrollbar-width:none}
@@ -158,7 +158,7 @@ footer a{color:var(--tape)}.legal{opacity:.8}
     <div data-intro>
       <h1 data-split data-i="h1"></h1>
       <p class="lead" data-reveal="self"><span class="ll" data-i="lead"></span><span class="ls" data-i="leads"></span></p>
-      <div data-reveal><p class="chip"><span data-i="ct"></span> · <b>120 €</b> · <span data-i="cd"></span></p></div>
+      <div data-reveal><p class="chip"><span data-i="ct"></span><span class="cs"> · </span><span class="c2"><b>120 €</b> · <span data-i="cd"></span></span></p></div>
       <div data-reveal><div class="ab" role="group" data-al="abl">
         <button type="button" id="bBefore" aria-pressed="true"><span data-i="b0"></span><small data-i="b0s"></small></button>
         <button type="button" id="bAfter" aria-pressed="false" data-magnetic><span data-i="b1"></span><small data-i="b1s"></small></button>
@@ -263,7 +263,8 @@ let cur='sk',after=false,pcur='sk',swapT=0,first=true;
 const $=id=>document.getElementById(id),pf=$('pf');
 /* phone: the Pred/Po switch sits right above the mock-up, the notes go under it */
 {const mq=matchMedia('(max-width:860px)'),stg=document.querySelector('.stage'),intr=stg.querySelector('[data-intro]'),nt=$('notes'),prc=intr.querySelector('.price'),act=intr.querySelector('.acts');
- const place=()=>mq.matches?stg.append(nt,act,prc):intr.append(nt,act,prc);place();mq.addEventListener('change',place)}
+ const chw=intr.querySelector('.chip').parentNode;
+ const place=()=>{if(mq.matches){chw.after(act);stg.append(nt,prc)}else intr.append(nt,act,prc)};place();mq.addEventListener('change',place)}
 function fill(l){
   const d=P[l];
   document.querySelectorAll('[data-q]').forEach(e=>e.textContent=d[e.dataset.q]);
