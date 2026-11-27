@@ -25,7 +25,7 @@
 <link rel="preload" href="fonts/inter-tight-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
 <script>try{var L=new URLSearchParams(location.search).get('lang')||localStorage.lang||navigator.language||'';if(/^(ru|uk)/.test(L))['500','400'].forEach(function(w){var f=document.createElement('link');f.rel='preload';f.as='font';f.type='font/woff2';f.crossOrigin='';f.href='fonts/inter-tight-cyrillic-'+w+'-normal.woff2';document.head.appendChild(f)})}catch(e){}/* ru/uk: the Cyrillic faces are fetched with the page */</script>
 <script>document.documentElement.classList.add('wow-js');try{sessionStorage.wowL&&document.documentElement.classList.add('wow-noload')}catch(e){};window.__wowT=setTimeout(()=>document.documentElement.classList.add('wow-safe'),3000)</script>
-<link rel="stylesheet" href="lib/wow.css">
+<link rel="stylesheet" href="lib/wow.css?v=2">
 <style>
 @font-face{font-family:"Inter Tight";src:url(fonts/inter-tight-latin-400-normal.woff2) format("woff2");font-weight:400;font-display:optional;unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
 @font-face{font-family:"Inter Tight";src:url(fonts/inter-tight-latin-ext-400-normal.woff2) format("woff2");font-weight:400;font-display:optional;unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF}
@@ -617,7 +617,7 @@ footer .sig i{display:inline-block;font-style:normal}
 }
 </style>
 <link rel="stylesheet" href="lib/novy.css">
-<link rel="stylesheet" href="lib/v2.css?v=2">
+<link rel="stylesheet" href="lib/v2.css?v=3">
 <style>
 /* ===== multi-page: doors, page hero, next link, page transition (build_site.py) ===== */
 .doors{margin-top:clamp(64px,8vw,180px)}
@@ -2064,7 +2064,7 @@ document.getElementById('copy-email')?.addEventListener('click', async () => {
 </script>
 <script>document.documentElement.classList.add('mo-js');setTimeout(()=>document.documentElement.classList.add('mo-safe'),2500)
 /* motion libraries load 1 s after the page: fetched with it they took the slow-4G bandwidth from the first screen (LCP 3.1 s, 23.11). async=false keeps their order */
-addEventListener('load',()=>setTimeout(()=>{['gsap.min.js','ScrollTrigger.min.js','SplitText.min.js','Flip.min.js','lenis.min.js','home.js','wow.js','novy.js','v2.js'].forEach(f=>{const e=document.createElement('script');e.src='lib/'+f+(f=='home.js'||f=='v2.js'?'?v=2':'');e.async=false;if(f=='wow.js')e.onload=e.onerror=()=>{const m=document.createElement('script');m.type='module';m.src='lib/moments/moments.js';document.body.append(m)};document.body.append(e)})},1000),{once:true})</script>
+addEventListener('load',()=>setTimeout(()=>{['gsap.min.js','ScrollTrigger.min.js','SplitText.min.js','Flip.min.js','lenis.min.js','home.js','wow.js','novy.js','v2.js'].forEach(f=>{const e=document.createElement('script');e.src='lib/'+f+(f=='home.js'||f=='v2.js'?'?v=3':'');e.async=false;if(f=='wow.js')e.onload=e.onerror=()=>{const m=document.createElement('script');m.type='module';m.src='lib/moments/moments.js';document.body.append(m)};document.body.append(e)})},1000),{once:true})</script>
 <script>/* 25.11 LCP: pictures below the first screen get their address once the browser reports the largest paint (H1), or 1.5 s after load where that report is missing (the counter.dev beacon too, so its request does not count in the H1 time); load and the next frame both come before the H1 paint, so they do not compete with the H1 */(()=>{let d=0;const go=()=>{if(d)return;d=1;const c=document.createElement('script');c.src='https://cdn.counter.dev/script.js';c.dataset.id='257df3c8-5256-4c70-addb-07ba1530a824';c.dataset.utcoffset='1';document.head.appendChild(c);document.querySelectorAll('img[data-src]').forEach(i=>{if(i.dataset.srcset)i.srcset=i.dataset.srcset;i.src=i.dataset.src})};try{new PerformanceObserver(()=>setTimeout(go,50)).observe({type:'largest-contentful-paint',buffered:true})}catch(e){}addEventListener('load',()=>setTimeout(go,1500))})()</script>
 <script>/* page transition: yellow + black panels close over the page, the next page opens from under them */
 (()=>{const R=document.documentElement;

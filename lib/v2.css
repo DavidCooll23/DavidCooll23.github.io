@@ -6,7 +6,7 @@
 :root{color-scheme:dark;--paper:#0a0a0f;--ink:#f2f2f6;--muted:#9c9eae;--rule:#ffffff1f;--night:#14151f;--sky:#151831;--blue-t:#8f97ff;--deep:#141a63}
 .ld-client,.nb-notif,.work .nv-p2,.nv-browser{--paper:#f6f6f3;--white:#fff;--ink:#0d0d0d;--muted:#5f6068;--rule:#e3e3e6;--sky:#e8eaf8;color:#0d0d0d}
 body{background:var(--paper);color:var(--ink)}
-body[data-grain]::after{mix-blend-mode:screen;opacity:.06}
+body[data-grain]::after{display:none}/* 27.11: black noise in screen mode changed no pixel on the night page, yet cost a full-screen blend pass every frame */
 ::selection{background:var(--marker);color:#0d0d0d}
 
 /* ---------- header ---------- */
