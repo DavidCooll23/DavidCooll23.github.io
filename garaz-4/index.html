@@ -122,10 +122,10 @@ section.band.w{background:var(--paper)}
 .dial-n{position:absolute;inset:0;display:grid;place-items:center;font:700 clamp(3.4rem,7vw,6rem)/1 var(--cond);font-variant-numeric:tabular-nums;color:var(--ink)}
 .steps{list-style:none;margin:0;padding:0;counter-reset:s;display:grid;gap:24px}
 .steps li{counter-increment:s;background:var(--paper);border-radius:20px;padding:36px 36px 40px;min-height:46vh;display:flex;flex-direction:column;justify-content:flex-end;box-shadow:inset 0 0 0 1px var(--line);transition:box-shadow .4s var(--ease),background-color .4s var(--ease)}
-.steps li::before{content:"0" counter(s);font:700 5rem/1 var(--cond);color:#2b3038;display:block;margin-bottom:auto;transition:color .4s var(--ease)}
+.steps li::before{content:"0" counter(s);font:700 5rem/1 var(--cond);color:#2b3038;display:block;margin-bottom:0;transition:color .4s var(--ease)}
 .steps li.on{background:#1a1d22;box-shadow:inset 0 0 0 1.5px var(--acc)}
 .steps li.on::before{color:var(--acc)}
-.steps h3{font-size:2.1rem;margin:24px 0 10px}
+.steps h3{font-size:2.1rem;margin:14px 0 10px}
 .steps p{margin:0;color:var(--sec);font-size:1.0625rem;max-width:42ch}
 /* order form */
 .order{display:grid;grid-template-columns:1.2fr 1fr;gap:56px;align-items:start}
@@ -143,7 +143,7 @@ section.band.w{background:var(--paper)}
 .f{display:grid;gap:14px;margin-top:20px}
 .f label{display:grid;gap:6px;font-size:.875rem;color:var(--sec)}
 .f input{font:400 1rem var(--sans);color:var(--ink);padding:12px 14px;border:1.5px solid rgba(238,240,242,.28);border-radius:10px;background:rgba(238,240,242,.06);min-height:50px;width:100%}
-.f input::placeholder{color:#7b848e}
+.f input::placeholder{color:#9aa3ad}
 .f input:focus{border-color:var(--acc);outline:none}
 .card{background:var(--bg);border-radius:20px;padding:28px;position:sticky;top:96px;box-shadow:inset 0 0 0 1px var(--line)}
 .card h3{font-size:1.6rem;margin-bottom:16px}
@@ -173,7 +173,7 @@ section.band.w{background:var(--paper)}
 .go{display:grid;place-items:center;width:168px;height:168px;border-radius:50%;background:var(--acc);color:#0d0f11;text-decoration:none;font:700 1.15rem/1.1 var(--cond);text-transform:uppercase;text-align:center;padding:20px;margin-top:36px;letter-spacing:.04em}
 .go:hover{background:var(--acc-press)}
 footer{padding:36px 0 52px;color:var(--sec);font-size:.875rem;border-top:1px solid var(--line)}
-.quick{display:none}
+.quick{display:none}.rimnow{display:none}
 .slots .hint{grid-column:1/-1;margin:0;min-height:46px;display:flex;align-items:center;color:var(--sec);font-size:.9375rem}
 @media(max-width:900px){
   .quick{display:block;margin:0 0 24px;max-width:520px}
@@ -183,6 +183,11 @@ footer{padding:36px 0 52px;color:var(--sec);font-size:.875rem;border-top:1px sol
   .qr button[aria-pressed=true]{background:var(--acc);color:#0d0f11;box-shadow:none}
   .qsum{margin:12px 0 0;display:flex;align-items:baseline;justify-content:space-between;gap:12px;font-size:.9375rem;color:#d3d8dd}
   .qsum b{font:700 1.9rem/1 var(--cond);color:var(--acc);font-variant-numeric:tabular-nums}
+  .qsum small{color:var(--sec);font-size:.8125rem;margin-left:4px}
+  .rimnow{display:flex;justify-content:space-between;align-items:center;gap:12px;margin:0 0 16px;font-size:.9375rem;color:var(--sec)}
+  .rimnow b{color:var(--ink);font:700 1.2rem/1 var(--cond);margin-left:4px}
+  .rimnow button{border:0;background:none;color:var(--acc);font:600 .9375rem var(--sans);text-decoration:underline;text-underline-offset:3px;cursor:pointer;min-height:44px;padding:0 4px}
+  .tk:not(.rimopen) .rf,.tk.rimopen .rimnow,.rimnow[hidden]{display:none}
   .lead{margin-bottom:22px}
   .from{display:none}
   .hero .wrap,.order,.contact,.clock .wrap{grid-template-columns:1fr;gap:40px}
@@ -231,7 +236,7 @@ footer{padding:36px 0 52px;color:var(--sec);font-size:.875rem;border-top:1px sol
   <div data-intro>
     <h1 data-split data-i="h1"></h1>
     <p class="lead" data-reveal="self" data-i="lead"></p>
-    <div data-reveal><div class="quick"><span class="ql" data-i="krim"></span><div class="qr"><button type="button" data-rim="14">R14</button><button type="button" data-rim="15">R15</button><button type="button" data-rim="16">R16</button><button type="button" data-rim="17">R17</button><button type="button" data-rim="18">R18</button><button type="button" data-rim="19">R19</button></div><p class="qsum"><span id="qn"></span><b id="qp" aria-live="polite"></b></p></div></div>
+    <div data-reveal><div class="quick"><span class="ql" data-i="krim"></span><div class="qr"><button type="button" data-rim="14">R14</button><button type="button" data-rim="15">R15</button><button type="button" data-rim="16">R16</button><button type="button" data-rim="17">R17</button><button type="button" data-rim="18">R18</button><button type="button" data-rim="19">R19</button></div><p class="qsum"><span><span id="qn"></span> <small data-i="kts"></small></span><b id="qp" aria-live="polite"></b></p></div></div>
     <div class="acts" data-reveal><a class="btn p" href="#objednat" data-magnetic data-roll><span data-i="b1"></span></a><a class="btn s" href="#cennik" data-roll><span data-i="b2"></span></a></div>
     <div data-reveal><p class="from"><span data-i="p1"></span><b data-i="p1v"></b></p></div>
     <div data-reveal><p class="open" id="open"><b></b><span id="opentx"></span></p></div>
@@ -255,7 +260,8 @@ footer{padding:36px 0 52px;color:var(--sec);font-size:.875rem;border-top:1px sol
         <input type="radio" name="job" id="j1" value="mount" checked><label for="j1"><span data-i="kj1"></span><small data-i="kj1s"></small></label>
         <input type="radio" name="job" id="j2" value="swap"><label for="j2"><span data-i="kj2"></span><small data-i="kj2s"></small></label>
       </div></fieldset>
-      <fieldset><legend data-i="krim"></legend><div class="seg rims">
+      <p class="rimnow"><span><span data-i="krim"></span>: <b id="rimnow">R16</b></span><button type="button" id="rimchg" data-i="kchg"></button></p>
+      <fieldset class="rf"><legend data-i="krim"></legend><div class="seg rims">
         <input type="radio" name="rim" id="r14" value="14"><label for="r14">R14</label>
         <input type="radio" name="rim" id="r15" value="15"><label for="r15">R15</label>
         <input type="radio" name="rim" id="r16" value="16" checked><label for="r16">R16</label>
@@ -362,8 +368,8 @@ const T={
 sk:{title:"Garáž 4: prezutie a servis áut v Ružinove",desc:"Prezutie pneumatík, výmena oleja a menšie opravy v Bratislave-Ružinove. Cenu vidíte vopred, termín si vyberiete online.",
 demo:"Ukážka webu. Servis je vymyslený, nič sa neodosiela.",back:"Web vytvoril Davyd Konstantinov",n1:"Cenník",n2:"Objednať sa",n3:"Kontakt",
 h1:"Prezutie za pol hodiny, cena vopred",lead:"Malý servis v Ružinove. Vyberte si veľkosť disku a zobrazí sa vám cena aj voľné termíny. Kým auto prezujeme, môžete si u nás dať kávu.",b1:"Vybrať termín",b2:"Pozrieť cenník",
-open:"Máme otvorené do {t}",shut:"Teraz je zatvorené. Otvárame {d} o {t}",
-kt:"Koľko zaplatíte",kts:"za 4 kolesá",kjob:"Čo treba urobiť",kj1:"Prezutie",kj1s:"pneumatík na disky",kj2:"Prehodenie kolies",kj2s:"celé kolesá",krim:"Veľkosť disku",kcar:"Auto",kc1:"Osobné",kc2:"SUV alebo dodávka",
+open:"Máme otvorené do {t}",shut:"Teraz je zatvorené. Otvárame {d} o {t}",tdy:"dnes",din:["v nedeľu","v pondelok","v utorok","v stredu","vo štvrtok","v piatok","v sobotu"],
+kt:"Koľko zaplatíte",kts:"za 4 kolesá",kjob:"Čo treba urobiť",kj1:"Prezutie",kj1s:"pneumatík na disky",kj2:"Prehodenie kolies",kj2s:"celé kolesá",krim:"Veľkosť disku",kchg:"Zmeniť",kcar:"Auto",kc1:"Osobné",kc2:"SUV alebo dodávka",
 kst:"Uskladniť pneumatiky do ďalšej sezóny (+25 €)",kinc:"Vyváženie a ventilky sú v cene.",kmin:"asi {m} minút",kgo:"Objednať sa za túto cenu",
 ph:"Cenník",ps:"Konečné ceny s DPH. Ak treba nový diel, cenu povieme skôr, než začneme.",
 p1:"Prezutie pneumatík R14–R19",p1v:"30–52 €",p2:"Prehodenie celých kolies",p2v:"20 €",p3:"Uskladnenie pneumatík na sezónu",p3v:"25 €",p4:"Výmena oleja a filtra",p4v:"od 45 €",
@@ -379,8 +385,8 @@ foot:"Toto je ukážka webu pre malý autoservis. Servis, adresa a ceny sú vymy
 uk:{title:"Garáž 4: шиномонтаж і сервіс у Ружинові",desc:"Заміна шин, заміна оливи та дрібний ремонт у Ружинові, Братислава. Ціну видно одразу, а час можна обрати онлайн.",
 demo:"Приклад сайту. Сервіс вигаданий, нічого не надсилається.",back:"Сайт зробив Давид Константінов",n1:"Ціни",n2:"Записатися",n3:"Контакти",
 h1:"Заміна шин за пів години, ціна наперед",lead:"Невеликий автосервіс у Ружинові. Оберіть розмір диска, щоб побачити ціну й доступний час для запису. Поки ми працюємо, можете випити в нас кави.",b1:"Обрати час",b2:"Подивитися ціни",
-open:"Відчинено до {t}",shut:"Зараз зачинено. Відчиняємо {d} о {t}",
-kt:"Скільки коштує",kts:"за 4 колеса",kjob:"Що потрібно",kj1:"Заміна шин",kj1s:"монтаж шин на диски",kj2:"Заміна коліс",kj2s:"колеса в зборі",krim:"Розмір диска",kcar:"Авто",kc1:"Легкове",kc2:"SUV або фургон",
+open:"Відчинено до {t}",shut:"Зараз зачинено. Відчиняємо {d} о {t}",tdy:"сьогодні",din:["у неділю","у понеділок","у вівторок","у середу","у четвер","у п’ятницю","у суботу"],
+kt:"Скільки коштує",kts:"за 4 колеса",kjob:"Що потрібно",kj1:"Заміна шин",kj1s:"монтаж шин на диски",kj2:"Заміна коліс",kj2s:"колеса в зборі",krim:"Розмір диска",kchg:"Змінити",kcar:"Авто",kc1:"Легкове",kc2:"SUV або фургон",
 kst:"Залишити шини на зберігання до наступного сезону (+25 €)",kinc:"Балансування та вентилі входять у ціну.",kmin:"приблизно {m} хвилин",kgo:"Записатися за цією ціною",
 ph:"Ціни",ps:"Остаточні ціни з ПДВ. Якщо потрібна нова деталь, назвемо ціну до початку роботи.",
 p1:"Заміна шин R14–R19",p1v:"30–52 €",p2:"Заміна коліс у зборі",p2v:"20 €",p3:"Зберігання шин протягом сезону",p3v:"25 €",p4:"Заміна оливи та фільтра",p4v:"від 45 €",
@@ -396,8 +402,8 @@ foot:"Це приклад сайту для невеликого автосер�
 ru:{title:"Garáž 4: шиномонтаж и автосервис в Ружинове",desc:"Переобувка шин, замена масла и мелкий ремонт в Братиславе-Ружинове. Цена видна сразу, время выбираете онлайн.",
 demo:"Пример сайта. Сервис выдуманный, ничего не отправляется.",back:"Сайт сделал Давид Константинов",n1:"Цены",n2:"Записаться",n3:"Контакты",
 h1:"Переобувка за полчаса, цена заранее",lead:"Небольшой сервис в Ружинове. Выберите размер диска и сразу увидите цену и свободное время. Подождать можно у нас за кофе.",b1:"Выбрать время",b2:"Посмотреть цены",
-open:"Сейчас открыто, до {t}",shut:"Сейчас закрыто. Открываемся {d} в {t}",
-kt:"Сколько стоит",kts:"за 4 колеса",kjob:"Что нужно",kj1:"Переобувка",kj1s:"шины на диски",kj2:"Замена колёс",kj2s:"колёса в сборе",krim:"Размер диска",kcar:"Машина",kc1:"Легковая",kc2:"SUV или бус",
+open:"Сейчас открыто, до {t}",shut:"Сейчас закрыто. Открываемся {d} в {t}",tdy:"сегодня",din:["в воскресенье","в понедельник","во вторник","в среду","в четверг","в пятницу","в субботу"],
+kt:"Сколько стоит",kts:"за 4 колеса",kjob:"Что нужно",kj1:"Переобувка",kj1s:"шины на диски",kj2:"Замена колёс",kj2s:"колёса в сборе",krim:"Размер диска",kchg:"Изменить",kcar:"Машина",kc1:"Легковая",kc2:"SUV или бус",
 kst:"Оставить шины на хранение до следующего сезона (+25 €)",kinc:"Балансировка и вентили входят в цену.",kmin:"примерно {m} минут",kgo:"Записаться по этой цене",
 ph:"Цены",ps:"Окончательные цены с НДС. Если нужна новая деталь, назовём цену до начала работы.",
 p1:"Переобувка шин R14–R19",p1v:"30–52 €",p2:"Замена колёс в сборе",p2v:"20 €",p3:"Хранение шин на сезон",p3v:"25 €",p4:"Замена масла и фильтра",p4v:"от 45 €",
@@ -413,8 +419,8 @@ foot:"Это пример сайта для небольшого автосер�
 en:{title:"Garáž 4: tyre changes and car servicing in Ružinov",desc:"Tyre changes, oil changes and minor repairs in Ružinov, Bratislava. See the price up front and book a time online.",
 demo:"Sample website. The garage is fictional. Nothing is sent.",back:"Website by Davyd Konstantinov",n1:"Prices",n2:"Book",n3:"Contact",
 h1:"Tyres changed in half an hour, with the price up front",lead:"A small garage in Ružinov. Pick your rim size to see the price and available appointments. Have a coffee while we work.",b1:"Pick a time",b2:"See prices",
-open:"Open until {t}",shut:"Closed now. We open {d} at {t}",
-kt:"What you'll pay",kts:"for 4 wheels",kjob:"What you need",kj1:"Tyre change",kj1s:"tyres onto rims",kj2:"Wheel swap",kj2s:"complete wheels",krim:"Rim size",kcar:"Vehicle type",kc1:"Passenger car",kc2:"SUV or van",
+open:"Open until {t}",shut:"Closed now. We open {d} at {t}",tdy:"today",din:["on Sunday","on Monday","on Tuesday","on Wednesday","on Thursday","on Friday","on Saturday"],
+kt:"What you'll pay",kts:"for 4 wheels",kjob:"What you need",kj1:"Tyre change",kj1s:"tyres onto rims",kj2:"Wheel swap",kj2s:"complete wheels",krim:"Rim size",kchg:"Change",kcar:"Vehicle type",kc1:"Passenger car",kc2:"SUV or van",
 kst:"Store the tyres until next season (+€25)",kinc:"Balancing and valves included.",kmin:"about {m} minutes",kgo:"Book at this price",
 ph:"Prices",ps:"Final prices including VAT. If a new part is needed, we tell you the price before we start.",
 p1:"Tyre change R14–R19",p1v:"€30–52",p2:"Complete wheel swap",p2v:"€20",p3:"Tyre storage for a season",p3v:"€25",p4:"Oil and filter change",p4v:"from €45",
@@ -451,10 +457,10 @@ function paint(){
   calc.querySelectorAll('[name=rim]').forEach(r=>r.disabled=q.job==='swap');
   $('sj').textContent=q.name;$('sp').textContent=eur(q.p);
   $('qn').textContent=q.name;$('qp').textContent=eur(q.p);
-  document.querySelectorAll('.qr button').forEach(b=>b.setAttribute('aria-pressed',q.job!=='swap'&&+b.dataset.rim===q.rim));
+  document.querySelectorAll('.qr button').forEach(b=>b.setAttribute('aria-pressed',q.job!=='swap'&&+b.dataset.rim===q.rim));$('rimnow').textContent='R'+q.rim;$('rimchg').parentNode.hidden=q.job==='swap';
 }
 calc.addEventListener('change',paint);
-document.querySelectorAll('.qr button').forEach(b=>b.onclick=()=>{$('j1').checked=true;const r=$('r'+b.dataset.rim);r.disabled=false;r.checked=true;r.dispatchEvent(new Event('change',{bubbles:true}))});calc.addEventListener('submit',e=>e.preventDefault());
+$('rimchg').onclick=()=>{document.querySelector('.tk').classList.add('rimopen');const r=document.querySelector('[name=rim]:checked');if(r)r.focus()};document.querySelectorAll('.qr button').forEach(b=>b.onclick=()=>{$('j1').checked=true;const r=$('r'+b.dataset.rim);r.disabled=false;r.checked=true;r.dispatchEvent(new Event('change',{bubbles:true}))});calc.addEventListener('submit',e=>e.preventDefault());
 /* opening hours: Europe/Bratislava */
 function nowBA(){const p=new Intl.DateTimeFormat('en-GB',{timeZone:'Europe/Bratislava',weekday:'short',hour:'2-digit',minute:'2-digit',hourCycle:'h23'}).formatToParts(new Date());const g=k=>p.find(x=>x.type===k).value;return{d:['Sun','Mon','Tue','Wed','Thu','Fri','Sat'].indexOf(g('weekday')),m:+g('hour')*60+ +g('minute')}}
 const HRS=d=>d===0?null:d===6?[480,780]:[450,1080];
@@ -464,7 +470,7 @@ function openState(){
   document.querySelectorAll('#hours tr').forEach(r=>{const [a,b]=r.dataset.d.split('-').map(Number);r.classList.toggle('now',n.d>=a&&n.d<=(b??a))});
   if(h&&n.m>=h[0]&&n.m<h[1]){o.classList.remove('shut');$('opentx').textContent=fmt(t.open,{t:hm(h[1])});return}
   o.classList.add('shut');let d=n.d,first=true;
-  while(true){const hh=HRS(d);if(hh&&(!first||n.m<hh[0])){const dn=new Intl.DateTimeFormat(cur==='uk'?'uk':cur,{weekday:'long',timeZone:'Europe/Bratislava'}).format(new Date(Date.now()+((d-n.d+7)%7)*864e5));$('opentx').textContent=fmt(t.shut,{d:dn,t:hm(hh[0])});return}d=(d+1)%7;first=false}
+  while(true){const hh=HRS(d);if(hh&&(!first||n.m<hh[0])){const dn=first?t.tdy:t.din[d];$('opentx').textContent=fmt(t.shut,{d:dn,t:hm(hh[0])});return}d=(d+1)%7;first=false}
 }
 /* booking: next 6 working days, slots every 40 min, some already taken */
 function days(){const out=[],d=new Date();d.setHours(12,0,0,0);while(out.length<6){d.setDate(d.getDate()+1);if(d.getDay()!==0)out.push(new Date(d))}return out}
