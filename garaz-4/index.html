@@ -110,7 +110,7 @@ section.band.w{background:var(--paper)}
 .shots .wrap{display:grid;grid-template-columns:1.5fr 1fr 1fr;gap:20px;align-items:end}
 .shots figure{margin:0;border-radius:18px;overflow:hidden;background:var(--panel)}
 .shots .s1{aspect-ratio:3/2}.shots .s2{aspect-ratio:4/5}.shots .s3{aspect-ratio:4/5;margin-bottom:64px}
-.shots img{display:block;width:100%;height:100%;object-fit:cover}
+.shots img{display:block;width:100%;height:124%;object-fit:cover}
 /* how it works: a 30-minute stopwatch fills while you scroll */
 .clock .wrap{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:72px}
 .clock-l{position:sticky;top:110px;align-self:start}
@@ -173,7 +173,18 @@ section.band.w{background:var(--paper)}
 .go{display:grid;place-items:center;width:168px;height:168px;border-radius:50%;background:var(--acc);color:#0d0f11;text-decoration:none;font:700 1.15rem/1.1 var(--cond);text-transform:uppercase;text-align:center;padding:20px;margin-top:36px;letter-spacing:.04em}
 .go:hover{background:var(--acc-press)}
 footer{padding:36px 0 52px;color:var(--sec);font-size:.875rem;border-top:1px solid var(--line)}
+.quick{display:none}
+.slots .hint{grid-column:1/-1;margin:0;min-height:46px;display:flex;align-items:center;color:var(--sec);font-size:.9375rem}
 @media(max-width:900px){
+  .quick{display:block;margin:0 0 24px;max-width:520px}
+  .quick .ql{display:block;font-size:.8125rem;color:var(--sec);margin-bottom:8px}
+  .qr{display:grid;grid-template-columns:repeat(6,1fr);gap:6px}
+  .qr button{min-height:46px;padding:0;border:0;border-radius:10px;background:rgba(28,32,38,.88);box-shadow:inset 0 0 0 1px var(--line);color:var(--ink);font:700 1.05rem/1 var(--cond);cursor:pointer;transition:background-color .15s var(--ease),color .15s var(--ease)}
+  .qr button[aria-pressed=true]{background:var(--acc);color:#0d0f11;box-shadow:none}
+  .qsum{margin:12px 0 0;display:flex;align-items:baseline;justify-content:space-between;gap:12px;font-size:.9375rem;color:#d3d8dd}
+  .qsum b{font:700 1.9rem/1 var(--cond);color:var(--acc);font-variant-numeric:tabular-nums}
+  .lead{margin-bottom:22px}
+  .from{display:none}
   .hero .wrap,.order,.contact,.clock .wrap{grid-template-columns:1fr;gap:40px}
   .clock-l{position:static}
   .dial{width:min(260px,70vw)}
@@ -220,6 +231,7 @@ footer{padding:36px 0 52px;color:var(--sec);font-size:.875rem;border-top:1px sol
   <div data-intro>
     <h1 data-split data-i="h1"></h1>
     <p class="lead" data-reveal="self" data-i="lead"></p>
+    <div data-reveal><div class="quick"><span class="ql" data-i="krim"></span><div class="qr"><button type="button" data-rim="14">R14</button><button type="button" data-rim="15">R15</button><button type="button" data-rim="16">R16</button><button type="button" data-rim="17">R17</button><button type="button" data-rim="18">R18</button><button type="button" data-rim="19">R19</button></div><p class="qsum"><span id="qn"></span><b id="qp" aria-live="polite"></b></p></div></div>
     <div class="acts" data-reveal><a class="btn p" href="#objednat" data-magnetic data-roll><span data-i="b1"></span></a><a class="btn s" href="#cennik" data-roll><span data-i="b2"></span></a></div>
     <div data-reveal><p class="from"><span data-i="p1"></span><b data-i="p1v"></b></p></div>
     <div data-reveal><p class="open" id="open"><b></b><span id="opentx"></span></p></div>
@@ -351,14 +363,14 @@ sk:{title:"Garáž 4: prezutie a servis áut v Ružinove",desc:"Prezutie pneumat
 demo:"Ukážka webu. Servis je vymyslený, nič sa neodosiela.",back:"Web vytvoril Davyd Konstantinov",n1:"Cenník",n2:"Objednať sa",n3:"Kontakt",
 h1:"Prezutie za pol hodiny, cena vopred",lead:"Malý servis v Ružinove. Vyberte si veľkosť disku a zobrazí sa vám cena aj voľné termíny. Kým auto prezujeme, môžete si u nás dať kávu.",b1:"Vybrať termín",b2:"Pozrieť cenník",
 open:"Máme otvorené do {t}",shut:"Teraz je zatvorené. Otvárame {d} o {t}",
-kt:"Koľko zaplatíte",kts:"za 4 kolesá",kjob:"Čo treba urobiť",kj1:"Prezutie",kj1s:"pneumatiky na disky",kj2:"Prehodenie kolies",kj2s:"celé kolesá",krim:"Veľkosť disku",kcar:"Auto",kc1:"Osobné",kc2:"SUV alebo dodávka",
+kt:"Koľko zaplatíte",kts:"za 4 kolesá",kjob:"Čo treba urobiť",kj1:"Prezutie",kj1s:"pneumatík na disky",kj2:"Prehodenie kolies",kj2s:"celé kolesá",krim:"Veľkosť disku",kcar:"Auto",kc1:"Osobné",kc2:"SUV alebo dodávka",
 kst:"Uskladniť pneumatiky do ďalšej sezóny (+25 €)",kinc:"Vyváženie a ventilky sú v cene.",kmin:"asi {m} minút",kgo:"Objednať sa za túto cenu",
 ph:"Cenník",ps:"Konečné ceny s DPH. Ak treba nový diel, cenu povieme skôr, než začneme.",
 p1:"Prezutie pneumatík R14–R19",p1v:"30–52 €",p2:"Prehodenie celých kolies",p2v:"20 €",p3:"Uskladnenie pneumatík na sezónu",p3v:"25 €",p4:"Výmena oleja a filtra",p4v:"od 45 €",
 p5:"Diagnostika chýb",p5v:"25 €",p6:"Brzdové platničky, jedna náprava",p6v:"od 55 €",p7:"Plnenie klimatizácie",p7v:"49 €",p8:"Oprava defektu",p8v:"12 €",
 sh:"Ako to prebieha",ss:"Na prezutie netreba nechávať auto celý deň.",
 s1t:"Vyberiete si čas",s1p:"Na webe alebo telefonicky. Termín vám pripomenieme deň vopred.",s2t:"Prídete s autom",s2p:"Zaparkujete pred dielňou. Ak máte pneumatiky uskladnené u nás, budú už pripravené.",s3t:"Za 30–40 minút odchádzate",s3p:"Matice alebo skrutky kolies dotiahneme momentovým kľúčom a skontrolujeme tlak v pneumatikách. Zaplatiť môžete kartou alebo v hotovosti.",
-oh:"Rezervovať si termín",os:"Vyberte si deň a čas. Zobrazujú sa voľné termíny na najbližších 6 pracovných dní.",oday:"Deň",otime:"Čas",oname:"Meno",otel:"Telefón",ocar:"Auto (nepovinné)",pn:"Peter",pt:"+421 9…",pc:"Škoda Octavia",
+oh:"Rezervovať si termín",os:"Vyberte si deň a čas. Zobrazujú sa voľné termíny na najbližších 6 pracovných dní.",oday:"Deň",otime:"Čas",opick:"Najprv vyberte deň",oname:"Meno",otel:"Telefón",ocar:"Auto (nepovinné)",pn:"Peter",pt:"+421 9…",pc:"Škoda Octavia",
 osum:"Vaša objednávka",ojob:"Služba",oprice:"Cena",owhen:"Kedy",obtn:"Rezervovať termín",oneed:"Vyberte si čas a doplňte meno a telefónne číslo.",okt:"Termín je rezervovaný",oktx:"{n}, čakáme vás {w}. Cena {p}.",
 onote:"Toto je ukážka. Nič sa neodosiela. Na skutočnom webe dostane servis objednávku cez Telegram a zákazníkovi príde SMS s pripomienkou.",
 jmount:"Prezutie {r}",jswap:"Prehodenie kolies",jsuv:", SUV",jstore:" + uskladnenie",
@@ -375,7 +387,7 @@ p1:"Заміна шин R14–R19",p1v:"30–52 €",p2:"Заміна коліс
 p5:"Діагностика несправностей",p5v:"25 €",p6:"Гальмівні колодки, одна вісь",p6v:"від 55 €",p7:"Заправка кондиціонера",p7v:"49 €",p8:"Ремонт проколу",p8v:"12 €",
 sh:"Як це відбувається",ss:"Щоб замінити шини, не треба залишати авто на цілий день.",
 s1t:"Обираєте час",s1p:"На сайті або телефоном. Ми нагадаємо вам про візит за день до нього.",s2t:"Приїжджаєте",s2p:"Паркуєтеся перед майстернею. Якщо ви залишили шини в нас на зберігання, вони вже будуть готові.",s3t:"За 30–40 хвилин їдете далі",s3p:"Затягуємо колісні болти або гайки динамометричним ключем і перевіряємо тиск у шинах. Оплата карткою або готівкою.",
-oh:"Записатися",os:"Оберіть день і час. Тут можна переглянути доступний час для запису на найближчі 6 робочих днів.",oday:"День",otime:"Час",oname:"Ім’я",otel:"Телефон",ocar:"Авто (необов’язково)",pn:"Петро",pt:"+421 9…",pc:"Škoda Octavia",
+oh:"Записатися",os:"Оберіть день і час. Тут можна переглянути доступний час для запису на найближчі 6 робочих днів.",oday:"День",otime:"Час",opick:"Спочатку оберіть день",oname:"Ім’я",otel:"Телефон",ocar:"Авто (необов’язково)",pn:"Петро",pt:"+421 9…",pc:"Škoda Octavia",
 osum:"Ваш запис",ojob:"Послуга",oprice:"Ціна",owhen:"Коли",obtn:"Записатися",oneed:"Оберіть час і вкажіть ім’я та номер телефону.",okt:"Ви записані",oktx:"{n}, чекаємо на вас {w}. Ціна — {p}.",
 onote:"Це приклад. Нічого не надсилається. На робочому сайті автосервіс отримує повідомлення про запис у Telegram, а клієнт — SMS із нагадуванням.",
 jmount:"Заміна шин {r}",jswap:"Заміна коліс",jsuv:", SUV",jstore:" + зберігання",
@@ -392,7 +404,7 @@ p1:"Переобувка шин R14–R19",p1v:"30–52 €",p2:"Замена к
 p5:"Диагностика ошибок",p5v:"25 €",p6:"Тормозные колодки, одна ось",p6v:"от 55 €",p7:"Заправка кондиционера",p7v:"49 €",p8:"Ремонт прокола",p8v:"12 €",
 sh:"Как это проходит",ss:"Для переобувки не нужно оставлять машину на целый день.",
 s1t:"Выбираете время",s1p:"На сайте или по телефону. За день до визита напомним.",s2t:"Приезжаете",s2p:"Паркуетесь перед мастерской. Шины с хранения уже ждут вас.",s3t:"Через 30–40 минут уезжаете",s3p:"Колёса затягиваем динамометрическим ключом и проверяем давление. Оплата картой или наличными.",
-oh:"Записаться",os:"Выберите день и время. Свободное время показано на ближайшие 6 рабочих дней.",oday:"День",otime:"Время",oname:"Имя",otel:"Телефон",ocar:"Машина (необязательно)",pn:"Пётр",pt:"+421 9…",pc:"Škoda Octavia",
+oh:"Записаться",os:"Выберите день и время. Свободное время показано на ближайшие 6 рабочих дней.",oday:"День",otime:"Время",opick:"Сначала выберите день",oname:"Имя",otel:"Телефон",ocar:"Машина (необязательно)",pn:"Пётр",pt:"+421 9…",pc:"Škoda Octavia",
 osum:"Ваша запись",ojob:"Работа",oprice:"Цена",owhen:"Когда",obtn:"Записаться",oneed:"Выберите время и укажите имя и телефон.",okt:"Вы записаны",oktx:"{n}, ждём вас {w}. Цена {p}.",
 onote:"Это пример, ничего не отправляется. На настоящем сайте запись приходит сервису в Telegram, а клиенту SMS с напоминанием.",
 jmount:"Переобувка {r}",jswap:"Замена колёс",jsuv:", SUV",jstore:" + хранение",
@@ -409,7 +421,7 @@ p1:"Tyre change R14–R19",p1v:"€30–52",p2:"Complete wheel swap",p2v:"€20"
 p5:"Fault diagnostics",p5v:"€25",p6:"Brake pads, one axle",p6v:"from €55",p7:"Air-con regas",p7v:"€49",p8:"Puncture repair",p8v:"€12",
 sh:"How it works",ss:"You don't have to leave the car with us all day.",
 s1t:"Pick a time",s1p:"Online or by phone. We send a reminder the day before.",s2t:"Drive in",s2p:"Park in front of the workshop. If you store your tyres with us, we'll have them ready.",s3t:"Leave in 30–40 minutes",s3p:"We tighten the wheel nuts or bolts with a torque wrench and check the tyre pressure. Pay by card or in cash.",
-oh:"Book a time",os:"Pick a day and time. You can see available appointments for the next 6 working days.",oday:"Day",otime:"Time",oname:"Name",otel:"Phone",ocar:"Car (optional)",pn:"Peter",pt:"+421 9…",pc:"Škoda Octavia",
+oh:"Book a time",os:"Pick a day and time. You can see available appointments for the next 6 working days.",oday:"Day",otime:"Time",opick:"Pick a day first",oname:"Name",otel:"Phone",ocar:"Car (optional)",pn:"Peter",pt:"+421 9…",pc:"Škoda Octavia",
 osum:"Your booking",ojob:"Job",oprice:"Price",owhen:"When",obtn:"Book this time",oneed:"Pick a time and enter your name and phone number.",okt:"You're booked",oktx:"{n}, see you {w}. Price {p}.",
 onote:"This is a demo. Nothing is sent. On a live website, the garage receives the booking via Telegram and the customer gets a text reminder.",
 jmount:"Tyre change {r}",jswap:"Wheel swap",jsuv:", SUV",jstore:" + storage",
@@ -438,8 +450,11 @@ function paint(){
   $('size').textContent=SIZE[q.rim];
   calc.querySelectorAll('[name=rim]').forEach(r=>r.disabled=q.job==='swap');
   $('sj').textContent=q.name;$('sp').textContent=eur(q.p);
+  $('qn').textContent=q.name;$('qp').textContent=eur(q.p);
+  document.querySelectorAll('.qr button').forEach(b=>b.setAttribute('aria-pressed',q.job!=='swap'&&+b.dataset.rim===q.rim));
 }
-calc.addEventListener('change',paint);calc.addEventListener('submit',e=>e.preventDefault());
+calc.addEventListener('change',paint);
+document.querySelectorAll('.qr button').forEach(b=>b.onclick=()=>{$('j1').checked=true;const r=$('r'+b.dataset.rim);r.disabled=false;r.checked=true;r.dispatchEvent(new Event('change',{bubbles:true}))});calc.addEventListener('submit',e=>e.preventDefault());
 /* opening hours: Europe/Bratislava */
 function nowBA(){const p=new Intl.DateTimeFormat('en-GB',{timeZone:'Europe/Bratislava',weekday:'short',hour:'2-digit',minute:'2-digit',hourCycle:'h23'}).formatToParts(new Date());const g=k=>p.find(x=>x.type===k).value;return{d:['Sun','Mon','Tue','Wed','Thu','Fri','Sat'].indexOf(g('weekday')),m:+g('hour')*60+ +g('minute')}}
 const HRS=d=>d===0?null:d===6?[480,780]:[450,1080];
@@ -462,7 +477,7 @@ function drawDays(){
     b.onclick=()=>{day=i;slot=null;drawDays();drawSlots();summary()};return b}));
 }
 function drawSlots(){
-  const box=$('slots');if(day===null){box.replaceChildren();return}
+  const box=$('slots');if(day===null){const p=document.createElement('p');p.className='hint';p.textContent=T[cur].opick;box.replaceChildren(p);return}
   const d=DAYS[day],h=HRS(d.getDay()),list=[];for(let m=h[0];m+30<=h[1];m+=40)list.push(m);
   box.replaceChildren(...list.map((m,i)=>{const b=document.createElement('button');b.type='button';b.textContent=hm(m);
     if(taken(d,i)){b.disabled=true}else{b.setAttribute('aria-pressed',slot===m);b.onclick=()=>{slot=m;drawSlots();summary()}}return b}));
