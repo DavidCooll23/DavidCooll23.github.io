@@ -7,7 +7,7 @@
 <meta name="description" content="Ukážková stránka salónu: služby, ceny a online rezervácia priamo na webe.">
 <meta property="og:description" content="Ukážka webu pre salón: služby, ceny a online rezervácia. Salón je vymyslený, rezervácia funguje naozaj.">
 <link rel="canonical" href="https://konstantinov.sk/studio-bella/">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='16' fill='%23b4553d'/%3E%3Ctext x='16' y='22.5' font-size='19' text-anchor='middle' fill='white' font-family='Georgia,serif' font-style='italic'%3EB%3C/text%3E%3C/svg%3E">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='16' fill='%239c2f52'/%3E%3Ctext x='16' y='22.5' font-size='19' text-anchor='middle' fill='white' font-family='Georgia,serif' font-style='italic'%3EB%3C/text%3E%3C/svg%3E">
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"Studio Bella: ukážka webu pre salón","description":"Ukážková stránka vymysleného salónu s funkčnou online rezerváciou.","url":"https://konstantinov.sk/studio-bella/","inLanguage":["sk","uk","ru","en"],"author":{"@type":"Person","name":"Davyd Konstantinov","url":"https://konstantinov.sk/"}}</script>
 <script>/* 23.11: visit counter loads after the page has painted: its two outside connections held the phone LCP at 2.7 s (2.1 s without) */
 addEventListener('load',()=>setTimeout(()=>{const s=document.createElement('script');s.src='https://cdn.counter.dev/script.js';s.dataset.id='257df3c8-5256-4c70-addb-07ba1530a824';s.dataset.utcoffset='1';document.head.append(s)},400),{once:true})</script>
@@ -16,7 +16,7 @@ addEventListener('load',()=>setTimeout(()=>{const s=document.createElement('scri
 <meta property="og:image" content="https://konstantinov.sk/studio-bella/hero.jpg">
 <link rel="preload" as="image" href="work-cut.webp" type="image/webp" fetchpriority="high">
 <link rel="preload" as="font" type="font/woff2" href="fonts/cormorant-garamond-latin-500-normal.woff2" crossorigin>
-<script>document.documentElement.classList.add('wow-js');try{sessionStorage.wowL&&document.documentElement.classList.add('wow-noload')}catch(e){};window.__wowT=setTimeout(()=>document.documentElement.classList.add('wow-safe'),3000)</script>
+<script>document.documentElement.classList.add('wow-js');try{sessionStorage.wowL&&document.documentElement.classList.add('wow-noload');if(sessionStorage.duo){sessionStorage.removeItem('duo');document.documentElement.classList.add('duo-in')}}catch(e){};window.__wowT=setTimeout(()=>document.documentElement.classList.add('wow-safe'),3000)</script>
 <link rel="stylesheet" href="lib/wow.css">
 <style>
 @font-face{font-family:Corm;font-weight:500;font-style:normal;font-display:swap;src:url(fonts/cormorant-garamond-latin-500-normal.woff2) format("woff2");unicode-range:U+0000-00FF,U+2000-206F,U+20AC}
@@ -32,10 +32,10 @@ addEventListener('load',()=>setTimeout(()=>{const s=document.createElement('scri
 @font-face{font-family:Man;font-weight:600;font-display:swap;src:url(fonts/manrope-latin-ext-600-normal.woff2) format("woff2");unicode-range:U+0100-02AF}
 @font-face{font-family:Man;font-weight:600;font-display:swap;src:url(fonts/manrope-cyrillic-600-normal.woff2) format("woff2");unicode-range:U+0400-04FF}
 :root{
- --bg:#efe8de;--paper:#f7f2ea;--ink:#1c1613;--sec:#6b5d53;--line:rgba(28,22,19,.16);
- --clay:#b4553d;--clay-press:#96432f;--sand:#e2d6c5;--night:#1c1613;--cream:#f1e7da;
+ --bg:#e4eae4;--paper:#f1f5f0;--ink:#10302a;--sec:#4d625b;--line:rgba(12,36,31,.16);
+ --clay:#9c2f52;--clay-press:#7d2140;--sand:#cfdacf;--night:#0c241f;--cream:#e9efe6;
  --serif:Corm,"Cormorant Garamond",Georgia,serif;--sans:Man,"Segoe UI",system-ui,sans-serif;
- --cursor:#1c1613;--cursor-ink:#f1e7da;--accent:var(--clay)
+ --cursor:#0c241f;--cursor-ink:#e9efe6;--accent:var(--clay);--anna:#ab6a14;--anna-ink:#875410;--anna-lt:#e2a64e;--olga:#9c2f52;--olga-lt:#ee9db5
 }
 *{box-sizing:border-box;margin:0}
 body{background:var(--bg);color:var(--ink);font:16px/1.6 var(--sans);-webkit-font-smoothing:antialiased;overflow-x:clip}
@@ -122,7 +122,7 @@ h2 .wow-l{padding-bottom:.06em}
 /* gallery: dark, pinned, sideways */
 .galsec{background:var(--night);color:var(--cream);padding:0;overflow:hidden}
 .galsec .wrap{padding-top:clamp(80px,14vh,140px)}
-.galsec .label,.galsec .sub{color:#b9a998}
+.galsec .label,.galsec .sub{color:#a3b5ac}
 .track{display:flex;gap:clamp(16px,2vw,32px);padding:0 clamp(20px,4vw,56px) clamp(80px,14vh,140px);width:max-content}
 .track figure{margin:0;width:clamp(260px,26vw,420px);aspect-ratio:4/5;border-radius:4px;flex:none}
 .track figure:nth-child(even){margin-top:clamp(30px,8vh,90px)}
@@ -132,21 +132,21 @@ h2 .wow-l{padding-bottom:.06em}
 #dopyt .ask{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:start}
 /* visit + final call */
 .final{background:var(--night);color:var(--cream);padding-bottom:0}
-.final .label{color:#b9a998}
+.final .label{color:#a3b5ac}
 .final h2{font-size:clamp(3.2rem,9vw,9.5rem);max-width:14ch;color:var(--cream)}
 .final .row{display:grid;grid-template-columns:1fr auto;gap:48px;align-items:end;margin-bottom:clamp(64px,10vh,120px)}
-.final p.cp{color:#b9a998;max-width:36ch;font-size:1.125rem}
+.final p.cp{color:#a3b5ac;max-width:36ch;font-size:1.125rem}
 .bigbtn{width:clamp(150px,14vw,210px);aspect-ratio:1;border-radius:50%;background:var(--clay);color:#fff;border:0;font:600 1rem/1.25 var(--sans);cursor:pointer;padding:20px;transition:background .3s}
-.bigbtn:hover{background:#c9654b}
-.visit{display:grid;grid-template-columns:1.2fr 1fr;gap:48px;padding:56px 0;border-top:1px solid rgba(241,231,218,.18)}
+.bigbtn:hover{background:#b5416a}
+.visit{display:grid;grid-template-columns:1.2fr 1fr;gap:48px;padding:56px 0;border-top:1px solid rgba(233,239,230,.18)}
 .visit dl{display:grid;grid-template-columns:auto 1fr;gap:12px 28px}
-.visit dt{color:#9d8d7e}
+.visit dt{color:#8fa399}
 .visit dd{font-weight:600}
 .visit .vh{font:500 2.6rem/1 var(--serif);margin-bottom:10px}
-.visit .vs{color:#b9a998;margin-bottom:24px}
+.visit .vs{color:#a3b5ac;margin-bottom:24px}
 .contacts{display:flex;gap:24px;margin-top:24px}
 .contacts a{color:var(--cream)}
-footer{background:var(--night);color:#9d8d7e;padding:28px 0 110px;font-size:.875rem;border-top:1px solid rgba(241,231,218,.18)}
+footer{background:var(--night);color:#8fa399;padding:28px 0 110px;font-size:.875rem;border-top:1px solid rgba(233,239,230,.18)}
 footer a{color:var(--cream);font-weight:600}
 :focus-visible{outline:2px solid var(--clay);outline-offset:3px}
 @media(max-width:899px){
@@ -175,7 +175,7 @@ footer a{color:var(--cream);font-weight:600}
 .owner{display:grid;gap:14px}
 .owner h3{font:400 1.375rem/1.25 var(--serif)}
 .q .note{font-size:.875rem;color:var(--sec)}
-.tgm{background:#dfe7ee;border-radius:18px;overflow:hidden;box-shadow:0 14px 34px rgba(43,33,27,.10)}
+.tgm{background:#dfe7ee;border-radius:18px;overflow:hidden;box-shadow:0 14px 34px rgba(16,48,42,.10)}
 .tgm .top{display:flex;gap:12px;align-items:center;padding:11px 16px;background:#fff}
 .tgm .av{flex:none;width:38px;height:38px;border-radius:50%;background:var(--clay);color:#fff;display:grid;place-items:center;font:italic 400 1.125rem/1 var(--serif)}
 .tgm .top b{display:block;font-size:.9375rem;line-height:1.2}
@@ -203,17 +203,17 @@ footer a{color:var(--cream);font-weight:600}
 @keyframes pop{from{opacity:0;transform:translateY(10px) scale(.97)}to{opacity:1;transform:none}}
 @keyframes rowin{from{opacity:0;background:#b7e1c1}to{opacity:1}}
 /* FAQ auto-reply widget */
-.fab{position:fixed;right:20px;bottom:20px;z-index:50;display:flex;align-items:center;gap:10px;background:var(--ink);color:#fff;border:0;border-radius:999px;padding:13px 20px 13px 15px;font:600 .9375rem/1 var(--sans);cursor:pointer;box-shadow:0 12px 30px rgba(43,33,27,.28);transition:transform .2s}
+.fab{position:fixed;right:20px;bottom:20px;z-index:50;display:flex;align-items:center;gap:10px;background:var(--ink);color:#fff;border:0;border-radius:999px;padding:13px 20px 13px 15px;font:600 .9375rem/1 var(--sans);cursor:pointer;box-shadow:0 12px 30px rgba(16,48,42,.28);transition:transform .2s}
 .fab:hover{transform:translateY(-2px)}
 .fab svg{width:22px;height:22px}
 .fab[hidden],.chat[hidden]{display:none}
-.chat{position:fixed;right:20px;bottom:20px;z-index:60;width:min(390px,calc(100vw - 24px));height:min(580px,calc(100dvh - 40px));background:var(--paper);border-radius:22px;box-shadow:0 24px 60px rgba(43,33,27,.30);display:flex;flex-direction:column;overflow:hidden;animation:pop .3s cubic-bezier(.2,.8,.2,1);transform-origin:bottom right}
-.chat .ct{display:flex;gap:12px;align-items:center;padding:14px 14px 14px 18px;background:var(--ink);color:#f7efe4}
+.chat{position:fixed;right:20px;bottom:20px;z-index:60;width:min(390px,calc(100vw - 24px));height:min(580px,calc(100dvh - 40px));background:var(--paper);border-radius:22px;box-shadow:0 24px 60px rgba(16,48,42,.30);display:flex;flex-direction:column;overflow:hidden;animation:pop .3s cubic-bezier(.2,.8,.2,1);transform-origin:bottom right}
+.chat .ct{display:flex;gap:12px;align-items:center;padding:14px 14px 14px 18px;background:var(--ink);color:#eef3ec}
 .chat .ct .av{flex:none;width:38px;height:38px;border-radius:50%;background:var(--clay);display:grid;place-items:center;font:italic 400 1.125rem/1 var(--serif)}
 .chat .ct div{flex:1;min-width:0}
 .chat .ct b{display:block;font-weight:600;line-height:1.2}
-.chat .ct span{font-size:.8125rem;color:#d9cbbb}
-.chat .x{flex:none;width:40px;height:40px;border:0;border-radius:50%;background:none;color:#f7efe4;font-size:1.5rem;line-height:1;cursor:pointer}
+.chat .ct span{font-size:.8125rem;color:#c3d0c5}
+.chat .x{flex:none;width:40px;height:40px;border:0;border-radius:50%;background:none;color:#eef3ec;font-size:1.5rem;line-height:1;cursor:pointer}
 .chat .x:hover{background:rgba(255,255,255,.1)}
 .log{flex:1;overflow-y:auto;padding:16px;display:flex;flex-direction:column;gap:8px;overscroll-behavior:contain}
 .m{max-width:86%;padding:10px 14px;border-radius:16px;font-size:.9375rem;line-height:1.45;overflow-wrap:anywhere;animation:pop .3s ease-out}
@@ -278,7 +278,7 @@ html,body{overflow-x:clip}
 }
 .demo .ds,.demo .bs{display:none}.demo .dr{display:inline-flex;align-items:center;gap:8px 18px}.demo a.wantb{background:var(--cream);color:var(--night);padding:3px 13px;border-radius:999px;text-decoration:none;white-space:nowrap;transition:background-color .2s}.demo a.wantb:hover{background:#fff}@media(max-width:640px){.demo .dl,.demo .bl{display:none}.demo .ds,.demo .bs{display:inline}.demo .dr{width:100%;justify-content:space-between}.eyebrow{font-size:.6875rem;letter-spacing:.08em;gap:10px;white-space:nowrap}.eyebrow::before{width:26px}}@media(min-width:900px){.faq{max-width:none;display:grid;grid-template-columns:1.12fr .88fr;gap:0 48px}.faq>*{grid-column:1}}
 @media(min-width:900px){#dopyt .ask{grid-template-columns:1.12fr .88fr}}
-.owner{background:rgba(43,33,27,.035);border:1px dashed var(--line);border-radius:24px;padding:22px}
+.owner{background:rgba(16,48,42,.035);border:1px dashed var(--line);border-radius:24px;padding:22px}
 .owner h3{font:600 .9375rem/1.4 var(--sans);color:var(--sec)}
 .owner .tgm{box-shadow:none}
 @media(max-width:899px){.owner{padding:16px;gap:10px}.owner .tgm .feed{min-height:0;padding:12px}.owner.got .sheet{animation:pop .45s .15s both}}
@@ -290,14 +290,14 @@ nav a[aria-current]{color:var(--ink)}
 .mnav.on{clip-path:inset(0);visibility:visible;transition:clip-path .7s cubic-bezier(.7,0,.2,1)}
 .mtop{display:flex;align-items:center;justify-content:space-between}
 .mnav .mark{color:var(--cream);margin:0}
-.mx{width:44px;height:44px;border-radius:50%;border:1px solid rgba(241,231,218,.3);background:none;color:var(--cream);font-size:1.6rem;line-height:1;cursor:pointer}
+.mx{width:44px;height:44px;border-radius:50%;border:1px solid rgba(233,239,230,.3);background:none;color:var(--cream);font-size:1.6rem;line-height:1;cursor:pointer}
 .ml{display:grid;margin:auto 0;padding:28px 0}
-.ml a{display:flex;align-items:baseline;gap:16px;padding:.16em 0;font:500 clamp(2.5rem,11.5vw,4.6rem)/1.08 var(--serif);letter-spacing:-.03em;text-decoration:none;color:var(--cream);border-bottom:1px solid rgba(241,231,218,.14);opacity:0;transform:translateY(28px);transition:opacity .5s,transform .7s cubic-bezier(.2,.8,.2,1),color .3s}
-.ml a i{font:500 .75rem var(--sans);font-style:normal;color:#9d8d7e;letter-spacing:.08em;min-width:1.9em}
-.ml a:hover,.ml a[aria-current]{color:#e69a82}
+.ml a{display:flex;align-items:baseline;gap:16px;padding:.16em 0;font:500 clamp(2.5rem,11.5vw,4.6rem)/1.08 var(--serif);letter-spacing:-.03em;text-decoration:none;color:var(--cream);border-bottom:1px solid rgba(233,239,230,.14);opacity:0;transform:translateY(28px);transition:opacity .5s,transform .7s cubic-bezier(.2,.8,.2,1),color .3s}
+.ml a i{font:500 .75rem var(--sans);font-style:normal;color:#8fa399;letter-spacing:.08em;min-width:1.9em}
+.ml a:hover,.ml a[aria-current]{color:#ee9db5}
 .ml a[aria-current]{font-style:italic}
 .mnav.on .ml a{opacity:1;transform:none;transition-delay:calc(.2s + var(--k)*.06s),calc(.2s + var(--k)*.06s),0s}
-.mfoot{display:flex;justify-content:space-between;align-items:end;gap:16px;color:#b9a998;font-size:.9375rem}
+.mfoot{display:flex;justify-content:space-between;align-items:end;gap:16px;color:#a3b5ac;font-size:.9375rem}
 .mfoot b{color:var(--cream)}
 .mfoot .btn{background:var(--clay);color:#fff;padding:15px 22px}
 html.mopen{overflow:hidden}
@@ -310,6 +310,24 @@ html.mopen{overflow:hidden}
 </style>
 <link rel="stylesheet" href="book.css">
 <style>.who{background:none;border-radius:0;display:block;overflow:visible;padding:0}.who>div{padding:0}</style>
+<style>/* «Нас двое»: у Анны свой цвет, у Ольги свой; страницы сменяются двумя шторками, которые сходятся посередине */
+html::before,html::after{content:"";position:fixed;top:0;bottom:0;width:50.5%;z-index:2147483000;pointer-events:none;transform:scaleX(0);transition:transform .55s cubic-bezier(.87,0,.13,1)}
+html::before{left:0;background:var(--anna);transform-origin:left}
+html::after{right:0;background:var(--olga);transform-origin:right}
+html.duo-out::before,html.duo-out::after{transform:scaleX(1)}
+html.duo-in::before,html.duo-in::after{animation:duo-open .75s cubic-bezier(.87,0,.13,1) .12s both}
+@keyframes duo-open{from{transform:scaleX(1)}to{transform:scaleX(0)}}
+@media(prefers-reduced-motion:reduce){html::before,html::after{display:none}}
+.who:nth-child(1) h3,#anna h2{color:var(--anna)}
+.who:nth-child(2) h3,#olga h2{color:var(--olga)}
+.who:nth-child(1) .ph,#anna .pp{background:var(--anna)}
+.who:nth-child(2) .ph,#olga .pp{background:var(--olga)}
+.ms .bkb[data-staff=anna]{color:var(--anna-ink)}
+.ms .bkb[data-staff=olga]{color:var(--olga)}
+.wn{white-space:nowrap}
+.wn::before{content:"";display:inline-block;width:.42em;height:.42em;border-radius:50%;background:currentColor;margin-right:.32em;vertical-align:.12em}
+.w-anna{color:var(--anna-ink)}.w-olga{color:var(--olga)}
+</style>
 </head>
 <body data-progress data-grain>
 <div class="wow-loader" data-loader aria-hidden="true"><span class="ld-w">Studio <i>Bella</i></span><span class="ld-n" data-loader-n>0</span></div>
@@ -755,6 +773,16 @@ setLang(new URLSearchParams(location.search).get('lang')||saved||(['en','ru','uk
 if(new URLSearchParams(location.search).has('chat')||location.hash==='#chat')openChat();
 window.T0=T;
 {const hb=document.querySelector('.hero .btns');if(hb&&'IntersectionObserver'in window)new IntersectionObserver(([e])=>document.body.classList.toggle('past',!e.isIntersecting&&e.boundingClientRect.top<0)).observe(hb);else document.body.classList.add('past')}
+/* переход между страницами Bella: шторки закрываются, потом открывается новая страница */
+(function(){const R=document.documentElement,PG=['','index.html','sluzby.html','tim.html','rezervacia.html','kontakt.html'],dir=p=>p.slice(0,p.lastIndexOf('/')+1);
+addEventListener('pageshow',e=>{if(e.persisted)R.classList.remove('duo-out','duo-in')});
+if(matchMedia('(prefers-reduced-motion: reduce)').matches)return;
+document.addEventListener('click',e=>{const a=e.target.closest&&e.target.closest('a[href]');
+if(!a||e.defaultPrevented||e.button||e.metaKey||e.ctrlKey||e.shiftKey||e.altKey||a.target||a.hasAttribute('download'))return;
+let u;try{u=new URL(a.href,location.href)}catch(x){return}
+if(u.origin!==location.origin||dir(u.pathname)!==dir(location.pathname)||u.pathname===location.pathname||PG.indexOf(u.pathname.slice(u.pathname.lastIndexOf('/')+1))<0)return;
+e.preventDefault();try{sessionStorage.duo='1'}catch(x){}
+R.classList.remove('duo-in');R.classList.add('duo-out');setTimeout(()=>{location.href=u.href},580)})})();
 </script>
 <script defer src="core.js"></script>
 <script defer src="book.js"></script>

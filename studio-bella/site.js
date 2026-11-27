@@ -267,5 +267,15 @@ setLang(new URLSearchParams(location.search).get('lang')||saved||(['en','ru','uk
 if(new URLSearchParams(location.search).has('chat')||location.hash==='#chat')openChat();
 window.T0=T;
 {const hb=document.querySelector('.hero .btns');if(hb&&'IntersectionObserver'in window)new IntersectionObserver(([e])=>document.body.classList.toggle('past',!e.isIntersecting&&e.boundingClientRect.top<0)).observe(hb);else document.body.classList.add('past')}
+/* переход между страницами Bella: шторки закрываются, потом открывается новая страница */
+(function(){const R=document.documentElement,PG=['','index.html','sluzby.html','tim.html','rezervacia.html','kontakt.html'],dir=p=>p.slice(0,p.lastIndexOf('/')+1);
+addEventListener('pageshow',e=>{if(e.persisted)R.classList.remove('duo-out','duo-in')});
+if(matchMedia('(prefers-reduced-motion: reduce)').matches)return;
+document.addEventListener('click',e=>{const a=e.target.closest&&e.target.closest('a[href]');
+if(!a||e.defaultPrevented||e.button||e.metaKey||e.ctrlKey||e.shiftKey||e.altKey||a.target||a.hasAttribute('download'))return;
+let u;try{u=new URL(a.href,location.href)}catch(x){return}
+if(u.origin!==location.origin||dir(u.pathname)!==dir(location.pathname)||u.pathname===location.pathname||PG.indexOf(u.pathname.slice(u.pathname.lastIndexOf('/')+1))<0)return;
+e.preventDefault();try{sessionStorage.duo='1'}catch(x){}
+R.classList.remove('duo-in');R.classList.add('duo-out');setTimeout(()=>{location.href=u.href},580)})})();
 
 document.documentElement.classList.remove('i18n-w');

@@ -14,7 +14,7 @@ function fill(){
   const svc=id=>B.svcById(db,id);
   document.querySelectorAll('[data-p]').forEach(e=>{const s=svc(e.dataset.p);if(s)e.textContent=B.price(s.price,L)});
   document.querySelectorAll('[data-d]').forEach(e=>{const s=svc(e.dataset.d);if(s)e.textContent=B.dur(s.dur,L)});
-  document.querySelectorAll('[data-w]').forEach(e=>{const s=svc(e.dataset.w);if(s)e.textContent=B.staffFor(db,s).map(x=>x.name[L]).join(', ')});
+  document.querySelectorAll('[data-w]').forEach(e=>{const s=svc(e.dataset.w);if(s)e.replaceChildren(...B.staffFor(db,s).flatMap((x,i)=>{const b=document.createElement('span');b.className='wn w-'+x.id;b.textContent=x.name[L];return i?[' ',b]:[b]}))});
   document.querySelectorAll('[data-next]').forEach(e=>{e.textContent=when(B.nearest(db,e.dataset.next,'any'),L)});
   document.querySelectorAll('[data-next-staff]').forEach(e=>{
     let best=null;db.services.forEach(s=>{if(!s.hidden&&s.staff.includes(e.dataset.nextStaff)){const n=B.nearest(db,s.id,e.dataset.nextStaff);if(n&&cmp(n,best))best=n}});
