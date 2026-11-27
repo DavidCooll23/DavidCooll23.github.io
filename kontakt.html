@@ -640,7 +640,8 @@ main>section.phero.long h1{font-size:clamp(44px,11.5vw,230px)}
 .nxt small{font:inherit;color:var(--blue);transition:transform .6s cubic-bezier(.2,.8,.2,1)}
 @media(hover:hover){.nxt a:hover{color:var(--blue);padding-left:.35em}.nxt a:hover small{transform:translateX(.15em)}}
 .nb-cta .cta-row{grid-column:1/-1;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:20px 40px}
-.nb-cta .cta-row p{margin:0;max-width:30ch;color:#c9cad3;font:400 var(--fs-lead)/1.3 var(--sans)}
+.nb-cta .cta-row .paynote{display:block;margin-top:.5em;color:#fff;font-weight:500}
+.nb-cta .cta-row p{margin:0;max-width:34ch;color:#c9cad3;font:400 var(--fs-lead)/1.3 var(--sans)}
 #contact.nb-cta .btn.main{background:#fff;border-color:#fff;color:#0d0d0d}#contact.nb-cta .btn.main:hover{background:var(--marker);border-color:var(--marker);color:#0d0d0d}
 .page-nav a[aria-current],.nvm-links a[aria-current]{color:var(--blue)}
 html::before,html::after{content:"";position:fixed;inset:0;z-index:99999;pointer-events:none;transform:translateY(101%);will-change:transform}
@@ -662,7 +663,7 @@ html.pt-in .curtain{display:none}
 <div class="wrap">
 <header>
   <a class="identity" href="./"><span class="monogram" aria-hidden="true" data-i="monogram">dk</span><span>Davyd Konstantinov<small data-i="studio">Webové štúdio</small></span></a>
-  <nav class="page-nav" data-aria="navigation"><a href="ukazky.html" data-i="workNav">Ukážky</a><a href="ceny.html" data-i="prb">Ceny</a><a class="nav-x" href="o-mne.html" data-i="n_who_h">Kto to robí</a><a class="nav-x" href="#faq" data-i="faqh">Časté otázky</a></nav>
+  <nav class="page-nav" data-aria="navigation"><a href="ukazky.html" data-i="workNav">Ukážky</a><a href="ceny.html" data-i="prb">Ceny</a><a class="nav-x" href="o-mne.html" data-i="n_who_h">Kto to robí</a><a class="nav-x" href="./#faq" data-i="faqh">Časté otázky</a></nav>
   <div class="lang" role="group" data-aria="lgh">
     <button type="button" data-set="sk" aria-label="Slovenčina" aria-pressed="true">SK</button>
     <button type="button" data-set="en" aria-label="English" aria-pressed="false">EN</button>
@@ -679,7 +680,7 @@ html.pt-in .curtain{display:none}
     <a href="ukazky.html" data-i="workNav">Ukážky</a>
     <a href="ceny.html" data-i="prb">Ceny</a>
     <a href="o-mne.html" data-i="n_who_h">Kto to robí</a>
-    <a href="#faq" data-i="faqh">Časté otázky</a>
+    <a href="./#faq" data-i="faqh">Časté otázky</a>
     <a href="#qf" data-write data-i="mailb">Napísať mi</a>
   </nav>
   <div class="lang nvm-lang" role="group" data-aria="lgh">
@@ -697,21 +698,7 @@ html.pt-in .curtain{display:none}
 <section id="contact" class="nb-contact"><i class="arc" aria-hidden="true"></i><i class="glow" data-speed="0.75" aria-hidden="true"></i>
   <div class="final-top" data-reveal><h2 data-split data-i="n_c_h">Vaša prvá rezervácia.</h2><a class="bigbtn" href="https://wa.me/421910392871" data-wa data-magnetic data-cursor="WhatsApp"><span data-i="waName">WhatsApp</span></a></div>
   <div class="nb-split">
-    <section id="faq" class="nb-faq">
-      <h2 data-split data-i="n_faq_h">Časté otázky</h2>
-      <div class="faq" data-reveal>
-        <details class="qa" open><summary><h3 data-i="q1">Koľko stojí web?</h3></summary><p data-i="a1">Jednoduchý web alebo landing page od 250 €, web s online rezerváciou a panelom od 350 €. Presnú cenu poviem pred začiatkom práce.</p></details>
-        <details class="qa"><summary><h3 data-i="q5">Za aký čas bude web hotový?</h3></summary><p data-i="a5">Jednoduchý web do 5 dní, web s online rezerváciou do 10 dní. Počítam od chvíle, keď mi pošlete zoznam služieb, cenník a fotky.</p></details>
-        <details class="qa"><summary><h3 data-i="q6">Čo ak sa mi web nebude páčiť?</h3></summary><p data-i="a6">Najprv vám pošlem odkaz na hotový web a upravím ho podľa vašich pripomienok. Platíte, až keď sa vám páči.</p></details>
-        <details class="qa"><summary><h3 data-i="q7">Platí sa niečo mesačne?</h3></summary><p data-i="a7">Mne nie. Platíte len doménu, asi 15 € ročne, a to priamo registrátorovi.</p></details>
-        <details class="qa"><summary><h3 data-i="q8">Kto bude meniť texty a ceny?</h3></summary><p data-i="a8">Prvý mesiac po spustení ich zmením ja, zadarmo. Stačí mi napísať. Neskôr sa dohodneme na cene.</p></details>
-        <details class="qa"><summary><h3 data-i="q2">Ako to riešime zmluvne?</h3></summary><p data-i="a2">Oficiálne, na dohodu o vykonaní práce s vašou firmou na Slovensku.</p></details>
-        <details class="qa"><summary><h3 data-i="q3">V ktorých jazykoch robíte weby?</h3></summary><p data-i="a3">Slovenčina, ukrajinčina, ruština a angličtina. Písať si môžeme v ktoromkoľvek z nich.</p></details>
-        <details class="qa"><summary><h3 data-i="q4">Sú potrebné telefonáty?</h3></summary><p data-i="a4">Nie, všetko vyriešime písomne cez WhatsApp alebo e-mail. Ak vám viac vyhovuje hovor, stačí jeden krátky na začiatku.</p></details>
-        <details class="qa"><summary><h3 data-i="n_q9">Čo vám mám poslať na začiatku?</h3></summary><p data-i="n_a9">Zoznam služieb, cenník a fotky. Ak ich nemáte hotové, napíšte mi a poradím, čo treba pripraviť.</p></details>
-        <details class="qa"><summary><h3 data-i="n_q10">Ako sa dozviem o novej rezervácii?</h3></summary><p data-i="n_a10">Rezervácie vidíte v paneli na mobile. Upozornenie príde e-mailom alebo do Telegramu.</p></details>
-      </div>
-    </section>
+    
     <div class="nb-formcol">
       <div class="contact-intro" data-reveal><p data-i="n_c_p">Napíšte pár slov o svojom podniku. Ozvem sa s cenou a termínom.</p><p class="paynote" data-i="n_c_pay">Najprv uvidíte hotový web. Platíte až potom, keď ste spokojní.</p>
         <figure class="nb-fig" data-moment="liquid-hover" data-moment-opts='{"strength":0.5,"radius":0.18}'><img data-src="media/garage-headlamp.webp" width="960" height="640" decoding="async" loading="lazy" fetchpriority="low" alt=""></figure>
