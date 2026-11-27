@@ -122,3 +122,19 @@
 .duo2 a:nth-child(2) span{background:var(--olga)}
 @media(hover:hover){.duo2 a:hover img{transform:scale(1.06)}}
 @media(max-width:899px){.phero.pair{grid-template-columns:1fr}.duo2 a:nth-child(2){margin-top:32px}}
+/* короткая главная: четыре двери на страницы */
+.doors{padding:clamp(40px,8vh,110px) 0}
+.drs{list-style:none;padding:0;display:grid;grid-template-columns:repeat(4,1fr);gap:clamp(12px,1.6vw,28px)}
+.drs li:nth-child(even){margin-top:clamp(0px,6vh,72px)}
+.drs a{display:block;text-decoration:none;color:inherit}
+.dph{display:block;aspect-ratio:4/5;overflow:hidden;border-radius:999px 999px 4px 4px;background:var(--sand)}
+.drs li:nth-child(odd) .dph{background:var(--anna)}
+.drs li:nth-child(even) .dph{background:var(--olga)}
+.dph>span{display:block;height:100%}
+.dph img{display:block;width:100%;height:100%;object-fit:cover;transition:transform 1.2s cubic-bezier(.16,1,.3,1)}
+.drs strong{display:flex;justify-content:space-between;align-items:baseline;gap:10px;font:500 clamp(1.7rem,2.6vw,2.7rem)/1.05 var(--serif);letter-spacing:-.02em;margin:18px 0 8px}
+.drs strong i{font-style:italic;color:var(--clay);transition:transform .6s cubic-bezier(.2,.8,.2,1)}
+.dl{display:block;color:var(--sec);font-size:.9375rem}
+.dl b{color:var(--ink)}
+@media(hover:hover){.drs a:hover img{transform:scale(1.06)}.drs a:hover strong i{transform:translateX(.25em)}}
+@media(max-width:899px){.drs{grid-template-columns:1fr 1fr;gap:28px 14px}.drs li:nth-child(even){margin-top:36px}.drs strong{font-size:1.45rem;margin:12px 0 6px}.dl{font-size:.8125rem}}
