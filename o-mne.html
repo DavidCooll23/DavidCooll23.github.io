@@ -1,0 +1,2080 @@
+<!doctype html>
+<html lang="sk">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Kto to robí · Davyd Konstantinov</title>
+<meta name="description" content="Píšete priamo mne, Davydovi. Web robím sám, od návrhu po spustenie.">
+<link rel="alternate" hreflang="sk" href="https://konstantinov.sk/o-mne.html?lang=sk">
+<link rel="alternate" hreflang="en" href="https://konstantinov.sk/o-mne.html?lang=en">
+<link rel="alternate" hreflang="ru" href="https://konstantinov.sk/o-mne.html?lang=ru">
+<link rel="alternate" hreflang="uk" href="https://konstantinov.sk/o-mne.html?lang=uk">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://konstantinov.sk/o-mne.html">
+<meta property="og:title" content="Weby s online rezerváciou pre malé firmy na Slovensku">
+<meta property="og:description" content="Zákazník sa objedná priamo na webe, vy vidíte rezervácie v paneli na mobile. Funkčná ukážka salónu v 4 jazykoch.">
+<meta property="og:image" content="https://konstantinov.sk/media/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='5' fill='%232b35c4'/%3E%3Ctext x='16' y='22' font-family='Segoe UI,Arial' font-weight='700' font-size='16' text-anchor='middle' fill='white'%3EDK%3C/text%3E%3C/svg%3E">
+<meta name="theme-color" content="#0a0a0f">
+<link rel="canonical" href="https://konstantinov.sk/o-mne.html">
+<link rel="preload" href="fonts/inter-tight-latin-500-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/inter-tight-sk-500.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/inter-tight-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+<script>try{var L=new URLSearchParams(location.search).get('lang')||localStorage.lang||navigator.language||'';if(/^(ru|uk)/.test(L))['500','400'].forEach(function(w){var f=document.createElement('link');f.rel='preload';f.as='font';f.type='font/woff2';f.crossOrigin='';f.href='fonts/inter-tight-cyrillic-'+w+'-normal.woff2';document.head.appendChild(f)})}catch(e){}/* ru/uk: the Cyrillic faces are fetched with the page */</script>
+<script>document.documentElement.classList.add('wow-js');try{sessionStorage.wowL&&document.documentElement.classList.add('wow-noload')}catch(e){};window.__wowT=setTimeout(()=>document.documentElement.classList.add('wow-safe'),3000)</script>
+<link rel="stylesheet" href="lib/wow.css">
+<style>
+@font-face{font-family:"Inter Tight";src:url(fonts/inter-tight-latin-400-normal.woff2) format("woff2");font-weight:400;font-display:optional;unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+@font-face{font-family:"Inter Tight";src:url(fonts/inter-tight-latin-ext-400-normal.woff2) format("woff2");font-weight:400;font-display:optional;unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF}
+@font-face{font-family:"Inter Tight";src:url(fonts/inter-tight-cyrillic-400-normal.woff2) format("woff2");font-weight:400;font-display:optional;unicode-range:U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116}
+@font-face{font-family:"Inter Tight";src:url(fonts/inter-tight-cyrillic-ext-400-normal.woff2) format("woff2");font-weight:400;font-display:optional;unicode-range:U+0460-052F,U+1C80-1C8A,U+20B4,U+2DE0-2DFF,U+A640-A69F,U+FE2E-FE2F}
+@font-face{font-family:"Inter Tight";src:url(fonts/inter-tight-sk-400.woff2) format("woff2");font-weight:400;font-display:optional;unicode-range:U+0104-0107,U+010C-010F,U+0118-011B,U+0139-013E,U+0141-0144,U+0147-0148,U+0150-0151,U+0154-0155,U+0158-0161,U+0164-0165,U+016E-0171,U+0179-017E}
+@font-face{font-family:"Inter Tight";src:url(fonts/inter-tight-latin-500-normal.woff2) format("woff2");font-weight:500;font-display:optional;unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+@font-face{font-family:"Inter Tight";src:url(fonts/inter-tight-latin-ext-500-normal.woff2) format("woff2");font-weight:500;font-display:optional;unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF}
+@font-face{font-family:"Inter Tight";src:url(fonts/inter-tight-cyrillic-500-normal.woff2) format("woff2");font-weight:500;font-display:optional;unicode-range:U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116}
+@font-face{font-family:"Inter Tight";src:url(fonts/inter-tight-cyrillic-ext-500-normal.woff2) format("woff2");font-weight:500;font-display:optional;unicode-range:U+0460-052F,U+1C80-1C8A,U+20B4,U+2DE0-2DFF,U+A640-A69F,U+FE2E-FE2F}
+@font-face{font-family:"Inter Tight";src:url(fonts/inter-tight-sk-500.woff2) format("woff2");font-weight:500;font-display:optional;unicode-range:U+0104-0107,U+010C-010F,U+0118-011B,U+0139-013E,U+0141-0144,U+0147-0148,U+0150-0151,U+0154-0155,U+0158-0161,U+0164-0165,U+016E-0171,U+0179-017E}
+/* Arial sized to Inter Tight (size/ascent/descent measured from the font files), so the late font does not shift the page */
+@font-face{font-family:"Inter Tight Fallback";src:local("Arial"),local("ArialMT");font-weight:400;size-adjust:94.9%;ascent-override:102.1%;descent-override:25.4%;line-gap-override:0%}
+@font-face{font-family:"Inter Tight Fallback";src:local("Arial"),local("ArialMT");font-weight:500;size-adjust:97.3%;ascent-override:99.6%;descent-override:24.8%;line-gap-override:0%}
+@font-face{font-family:"Plex Mono";src:url(fonts/ibm-plex-mono-latin-400-normal.woff2) format("woff2");font-weight:400;font-display:swap}
+/* Art direction 22.11: a page of a booking calendar. Ballpoint-ink blue, highlighter yellow for the new booking, the salon's day as an hour scale. */
+:root{
+  color-scheme:light;
+  --paper:#f6f6f3;--white:#fff;--ink:#14151c;--muted:#555968;--rule:#d7d9e1;
+  --blue:#2b35c4;--deep:#141a63;--marker:#f6df45;--sky:#e8eaf8;
+  --display:"Inter Tight","Inter Tight Fallback",Arial,sans-serif;
+  --sans:"Inter Tight","Inter Tight Fallback",Arial,sans-serif;--mono:"Plex Mono",Consolas,monospace;
+  --arrow:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M4 12h15m-6-6 6 6-6 6'/%3E%3C/svg%3E");
+  --h:12;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-padding-top:104px}
+body{margin:0;background:var(--paper);color:var(--ink);font:16px/1.6 var(--sans);overflow-x:clip}
+[hidden],body[data-mode=job] .biz,body[data-mode=biz] .job{display:none!important}
+.wrap{width:min(1440px,100%);padding:0 clamp(20px,5vw,78px);margin:auto}
+h1,h2,h3,p,ol,ul,figure{margin:0}
+a{color:inherit;text-underline-offset:.24em}
+button,input,textarea{font:inherit}
+button,a{touch-action:manipulation}
+button,summary{cursor:pointer}
+img,video{display:block;max-width:100%}
+:focus-visible{outline:3px solid var(--blue);outline-offset:3px}
+header{min-height:80px;border-bottom:1px solid var(--rule);display:flex;align-items:center;gap:clamp(18px,2.5vw,40px);position:sticky;top:0;z-index:40;background:var(--paper);box-shadow:0 0 0 100vmax var(--paper);clip-path:inset(0 -100vmax)}
+.progress{position:fixed;inset:0 0 auto;height:3px;z-index:60;background:var(--blue);transform-origin:0 50%;transform:scaleX(0);pointer-events:none}
+.identity{display:inline-flex;gap:12px;align-items:center;text-decoration:none;font-weight:600;font-size:17px;line-height:1.18;letter-spacing:-.02em;margin-right:auto}
+.identity small{display:block;font-size:13px;color:var(--muted);font-weight:400;letter-spacing:0;margin-top:4px}
+.monogram{display:grid;place-items:center;flex:none;background:var(--blue);color:#fff;width:42px;height:42px;border-radius:4px;font:500 16px/1 var(--display);letter-spacing:-.05em}
+.page-nav,.lang,.btns,.channels{display:flex;align-items:center}
+.page-nav{gap:26px}
+.page-nav a,.header-contact{font-size:15px;text-decoration:none;font-weight:600}
+.page-nav a:hover,.header-contact:hover,.project:hover h3{color:var(--blue);text-decoration:underline}
+.lang{gap:2px;border-left:1px solid var(--rule);padding-left:20px}
+.lang button{padding:5px;border:0;min-width:32px;min-height:32px;background:transparent;color:var(--muted);border-radius:4px;font:600 12px var(--sans)}
+.lang button[aria-pressed=true]{color:#fff;background:var(--ink)}
+.lang button:hover:not([aria-pressed=true]){background:var(--sky)}
+.header-contact{display:inline-flex;align-items:center;gap:8px}
+.arrow::after,.outward::after,.circle-arrow::after,.ex::after,.demo::after{content:"";display:inline-block;width:1.1em;height:1.1em;background:currentColor;mask:var(--arrow) center/contain no-repeat;flex:none}
+.outward::after,.circle-arrow::after,.ex::after,.demo::after{transform:rotate(-40deg)}
+.btn.arrow::after,.btn.outward::after{content:none}
+.hero .btn.outward{border-color:transparent;text-decoration:underline;text-underline-offset:5px;text-decoration-thickness:1px}
+
+/* First screen: text + the customer's booking card, then the salon's Friday as an hour scale */
+.hero{display:grid;grid-template-columns:minmax(0,1fr) minmax(320px,430px);grid-template-areas:"intro client" "cal cal";column-gap:clamp(32px,4vw,64px);row-gap:0;align-items:end;padding:clamp(40px,4.6vw,70px) 0 0}
+.intro{grid-area:intro;padding-bottom:clamp(30px,3.4vw,48px)}
+.location{font-size:14px;color:var(--muted);margin-bottom:16px}
+h1,h2,.thanks h3{font-family:var(--display);font-weight:500;letter-spacing:-.04em;text-wrap:balance}
+h1{font-size:clamp(38px,4.4vw,66px);line-height:1.04}
+h1>span:first-child{display:block}
+h1 em{font-style:normal;padding:0 .06em;margin:0 -.06em;background:linear-gradient(transparent 64%,var(--marker) 64% 92%,transparent 92%) no-repeat 0 0/100% 100%;-webkit-box-decoration-break:clone;box-decoration-break:clone}
+.lead{max-width:46ch;color:var(--muted);font-size:clamp(17px,1.3vw,19px);line-height:1.55;margin:22px 0 18px}
+.hero-prices{display:none}
+.hero-price-line{display:block;margin:0 0 22px;font:500 clamp(15px,1.2vw,18px)/1.4 var(--display);letter-spacing:-.03em}
+.btns{gap:10px;flex-wrap:wrap}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:14px;min-height:50px;padding:10px 22px;border:1px solid var(--ink);border-radius:6px;color:var(--ink);background:transparent;text-decoration:none;font-size:15px;font-weight:600;line-height:1.3;text-align:center}
+.btn:hover{background:var(--sky)}
+.btn.main{background:var(--blue);border-color:var(--blue);color:#fff}
+.btn.main:hover{background:var(--deep);border-color:var(--deep)}
+.btn:disabled{opacity:.7;cursor:wait}
+.hero-risk{display:flex;align-items:center;gap:12px;margin:18px 0 0;font-size:14px;line-height:1.45;color:var(--muted);max-width:44ch}.hero-risk img{width:44px;height:44px;border-radius:50%;object-fit:cover;flex:none}
+.minor-link{display:inline-block;padding:7px 0;margin-top:7px;color:var(--muted);font-size:14px}
+
+.hero .live-demo{display:contents}
+.ld-client{grid-area:client;background:var(--white);border:1px solid var(--rule);border-bottom:0;border-radius:10px 10px 0 0;padding:30px 30px 26px;box-shadow:0 34px 60px -42px rgba(20,26,99,.55)}
+.ld-tag{display:block;font:600 13px/1.4 var(--sans);color:var(--blue);margin-bottom:10px}
+.ld-client b{display:block;font:500 clamp(21px,2vw,28px)/1.2 var(--display);letter-spacing:-.04em}
+.ld-day{color:var(--muted);font-size:15px;margin:6px 0 22px}
+.ld-times{display:flex;gap:8px;margin-bottom:12px}
+.ld-times button{flex:1;min-height:54px;padding:6px 8px;border:1px solid var(--rule);border-radius:6px;background:var(--paper);font:15px var(--mono);color:var(--ink)}
+.ld-times button:hover{border-color:var(--ink)}
+.ld-times button[aria-pressed=true]{background:var(--marker);border-color:#cdb51f}
+.ld-book{width:100%;min-height:54px;border:0;border-radius:6px;background:var(--ink);color:#fff;font:600 15px var(--sans)}
+.ld-book:disabled{background:#1f6b45;cursor:default}
+.ld-hint{margin:12px 0 0;font-size:13px;color:var(--muted)}
+.ld-owner{grid-area:cal;border-top:2px solid var(--ink);padding-top:12px}
+.ld-owner .ld-tag{color:var(--ink);font-size:14px;margin:0}
+.ld-track{position:relative;padding-top:26px;margin-top:6px}
+.ld-scale{position:absolute;inset:0;display:grid;grid-template-columns:repeat(var(--h),1fr);font:12px/1 var(--mono);color:var(--muted)}
+.ld-scale span{border-left:1px solid var(--rule);padding-left:6px}
+.ld-list{position:relative;height:100px;list-style:none;margin:0;padding:0}
+.ld-list li,.ld-ghost{position:absolute;top:6px;bottom:6px;left:calc((var(--s) - 9) * 100% / var(--h) + 2px);width:calc(var(--d) * 100% / var(--h) - 4px)}
+.ld-list li{display:flex;flex-direction:column;gap:4px;padding:11px 12px;background:var(--sky);color:var(--deep);border-left:3px solid var(--blue);border-radius:3px 6px 6px 3px;font-size:14px;line-height:1.25;overflow:hidden}
+.ld-list time{font:12px/1.2 var(--mono);opacity:.75}
+.ld-list .ld-new{background:var(--marker);border-left-color:var(--ink);color:var(--ink);font-weight:600;box-shadow:0 10px 24px -14px #8a7400;animation:ldIn .4s ease}
+.ld-list .ld-new time{opacity:.7}
+.ld-ghost{top:32px;border:2px dashed var(--blue);border-radius:5px;background:#2b35c40d}
+@keyframes ldIn{from{opacity:0;transform:scale(.92)}}
+@media(prefers-reduced-motion:reduce){.ld-list .ld-new{animation:none}}
+/* Desktop: the salon's calendar sits right under the booking card, so the new booking lands next to the button */
+@media(min-width:761px){.hero{grid-template-areas:"intro client" "intro cal";align-items:start;padding-bottom:clamp(30px,3.4vw,48px)}.intro{padding-bottom:0}.ld-client{margin-top:30px;box-shadow:none}.ld-owner{background:var(--white);border:1px solid var(--rule);border-top:1px dashed var(--rule);border-radius:0 0 10px 10px;padding:16px 30px 22px;box-shadow:0 34px 60px -42px rgba(20,26,99,.55)}.ld-track{padding-top:0;margin-top:4px}.ld-scale,.ld-ghost{display:none}.ld-list{height:auto}.ld-list li{position:static;width:auto;flex-direction:row;align-items:baseline;gap:14px;margin:6px 0 0;padding:9px 12px;font-size:15px}.ld-list time{font-size:13px}}
+/* Desktop calendar: one earlier booking + the new one, so the card stays short (codex 23.11) */
+@media(min-width:761px){.ld-list li:not(.ld-new):not(:last-child){display:none}}
+/* Phones: the marked line «Rezervácie online.» fits on one line in every language (longest is SK) */
+@media(max-width:540px){h1{font-size:min(38px,calc(9.6vw - 4px))}}
+@media(max-width:760px){.cover.salon-cover,.cover.garage-cover{aspect-ratio:1.15}.cover.salon-cover img,.cover.garage-cover img{height:100%;object-fit:cover;object-position:top}}
+@media(min-width:761px){.ld-owner{box-shadow:0 18px 34px -30px rgba(20,26,99,.3)}}
+[data-i=soon]{display:none}
+/* Ribbon: the promises as one ink band across the page (moves only with motion allowed) */
+.ribbon{margin:clamp(30px,3.4vw,48px) calc(50% - 50vw) 0;background:var(--ink);color:#fff;overflow:hidden}
+.ribbon{position:relative}.ribbon::before,.ribbon::after{content:"";position:absolute;top:0;bottom:0;width:7%;z-index:1;pointer-events:none;background:linear-gradient(90deg,var(--ink),transparent)}.ribbon::before{left:0}.ribbon::after{right:0;transform:scaleX(-1)}
+.rb-track{display:flex}
+.facts{list-style:none;display:flex;flex-wrap:wrap;justify-content:center;margin:0;padding:0;font:500 clamp(15px,1.35vw,19px)/1.3 var(--display);letter-spacing:-.03em}
+.facts li{display:flex;align-items:center;gap:clamp(18px,2vw,30px);padding:18px 0 18px clamp(18px,2vw,30px);white-space:nowrap}
+.facts li::before{content:"";flex:none;width:9px;height:9px;border-radius:50%;background:var(--marker)}
+.rb-track{width:max-content}.ribbon .facts{flex-wrap:nowrap;justify-content:flex-start}
+
+main>section{margin-top:clamp(80px,8vw,128px)}
+h2{font-size:clamp(30px,3.2vw,48px);line-height:1.1}
+.section-head,#prices>h2{margin-bottom:clamp(24px,3vw,40px)}
+
+/* Work: one large example, two smaller ones */
+.projects{display:grid;grid-template-columns:minmax(0,1.55fr) minmax(0,1fr);gap:clamp(24px,2.6vw,40px) clamp(24px,3vw,48px)}
+.project{min-width:0;display:block;text-decoration:none}
+.project:first-child{grid-row:span 2}
+.cover{overflow:hidden;border-radius:6px;position:relative;background:var(--sky)}
+.salon-cover img{width:100%;height:auto}
+.garage-cover{aspect-ratio:1.9}
+.garage-cover img{width:100%;height:100%;object-fit:cover}
+.type-cover{aspect-ratio:1.9;background:var(--sky);display:flex;flex-direction:column;justify-content:center;gap:6px;padding:0 9%;font:500 clamp(22px,2.2vw,34px)/1.2 var(--display);letter-spacing:-.04em;color:var(--deep)}
+.type-cover em{font-style:normal;color:var(--blue)}
+.project-title{display:flex;justify-content:space-between;align-items:center;gap:8px;margin:16px 0 4px}
+.project h3{font:500 clamp(18px,1.5vw,23px)/1.2 var(--display);letter-spacing:-.04em}
+.project:first-child h3{font-size:clamp(22px,2vw,30px)}
+.card h3{font-weight:600;font-size:20px;line-height:1.2;letter-spacing:-.02em}
+.circle-arrow{flex:none;display:grid;place-items:center;width:34px;height:34px;border:1px solid var(--rule);border-radius:50%;color:var(--blue)}
+.project:hover .circle-arrow{background:var(--blue);border-color:var(--blue);color:#fff}
+.project p,.card p,.prow p,.fine{color:var(--muted);font-size:15px;line-height:1.55}
+.project p{max-width:52ch}
+.more-work{margin-top:32px;border-block:1px solid var(--rule)}
+summary{display:flex;align-items:center;justify-content:space-between;gap:16px;list-style:none}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"";flex:none;width:15px;height:15px;background:linear-gradient(currentColor,currentColor) center/13px 1.5px no-repeat,linear-gradient(currentColor,currentColor) center/1.5px 13px no-repeat;color:var(--blue)}
+details[open]>summary::after{background-size:13px 1.5px,0 0}
+.more-work>summary{font-weight:600;padding:17px 0}
+.cards{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:clamp(16px,2vw,32px);padding:8px 0 28px}
+.slot{display:block;background:var(--sky);border-radius:6px;overflow:hidden;aspect-ratio:16/9}
+.slot video{width:100%;height:100%}
+.card h3{margin:12px 0 7px}
+.demo,.ex{display:inline-flex;align-items:center;gap:5px;color:var(--blue);font-weight:600;font-size:14px}
+.demo{margin-top:8px}
+
+/* Process: three steps in a row */
+.process{display:grid;grid-template-columns:minmax(0,.75fr) minmax(0,1.6fr);gap:clamp(28px,5vw,88px);align-items:start}
+.process .fine{margin-top:18px;max-width:34ch}
+.steps{list-style:none;counter-reset:step;margin:0;padding:0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(16px,2vw,32px)}
+.steps li{counter-increment:step;border-top:2px solid var(--ink);padding-top:16px;font-size:clamp(17px,1.4vw,20px);font-weight:600;line-height:1.35}
+.steps li::before{content:counter(step);display:block;font:500 clamp(40px,4vw,62px)/1 var(--display);color:var(--blue);margin-bottom:20px}
+.steps li:last-child{border-top-color:var(--blue)}
+
+/* Prices: a price table, not cards */
+.packages{border-top:2px solid var(--ink);margin-bottom:30px}
+.packages .prow{display:grid;grid-template-columns:minmax(0,1fr) 110px minmax(200px,auto);gap:14px clamp(20px,3vw,48px);align-items:center;padding:clamp(22px,2.6vw,36px) 0;border-bottom:1px solid var(--rule)}
+.prow h3{font-size:clamp(18px,1.55vw,23px);line-height:1.25;font-weight:600;letter-spacing:-.02em}
+.prow p{margin:8px 0;max-width:62ch}.term{font-size:14px;color:var(--muted)}
+.eur{font-family:var(--display);font-size:clamp(22px,1.9vw,28px);font-weight:500;letter-spacing:-.04em;white-space:nowrap}
+.packages .eur{font-size:clamp(34px,4.2vw,62px);line-height:1;text-align:right;justify-self:end}
+.packages .prow:nth-child(2) .eur{background:linear-gradient(transparent 56%,var(--marker) 56% 94%,transparent 94%);padding:0 6px}
+.price-cta{margin:0 0 26px}.addons .plist{padding-bottom:10px}.addons .plist .prow:first-child{border-top:0}
+.plist .prow{display:grid;grid-template-columns:minmax(0,1fr) minmax(80px,.23fr) minmax(85px,.15fr);gap:22px;align-items:baseline;border-bottom:1px solid var(--rule);padding:22px 0}
+.plist .prow:first-child{border-top:1px solid var(--rule)}
+.plist .eur{text-align:right}.plist p{max-width:74ch}
+#prices>.fine{margin-top:20px;max-width:75ch}
+
+/* FAQ: two short columns */
+#faq h2{margin-bottom:clamp(22px,2.6vw,34px)}
+.faq{display:grid;grid-template-columns:1fr 1fr;column-gap:clamp(24px,4vw,64px);align-items:start}
+.qa{border-top:1px solid var(--rule)}
+.qa>summary{padding:18px 0}.qa>summary:hover h3{color:var(--blue)}
+.qa h3{font-size:clamp(16px,1.25vw,18px);line-height:1.35;font-weight:600}
+.qa p{color:var(--muted);font-size:15px;line-height:1.55;max-width:56ch;padding:0 0 22px}
+
+#contact{background:var(--deep);color:#fff;display:grid;grid-template-columns:.9fr 1.1fr;align-items:start;gap:clamp(24px,5vw,80px);padding:clamp(26px,4.5vw,70px);border-radius:12px}
+.contact-intro>p{color:#d5d9f6;margin:18px 0 26px;max-width:38ch}.contact-intro>p.paynote{margin-top:-12px;color:#fff;font-weight:600}
+/* codex 23.11 runs 2,3,9: the pay-after-approval promise repeated in a grey paragraph and a giant "Váš web" screen; now one line beside the form */
+.me{display:grid;grid-template-columns:minmax(0,220px) minmax(0,1fr);align-items:end;gap:20px;margin:6px 0 30px;max-width:560px}.me img{width:100%;height:auto;aspect-ratio:1;border-radius:8px;object-fit:cover;box-shadow:0 24px 50px -30px rgba(0,0,0,.6)}.me p{font-size:clamp(16px,1.2vw,18px);line-height:1.45;color:#e8eafc}
+.address,.channels{display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+.address button{font-size:13px;border:1px solid #8a90d4;padding:4px 9px;background:transparent;color:inherit;border-radius:4px}
+.channels{gap:10px 18px;font-size:14px;margin-top:12px;color:#dfe2fb}
+#copy-status{display:block;color:#dfe2fb}
+#contact :focus-visible{outline-color:var(--marker)}
+.form-panel{min-width:0;color:#fff;padding-top:6px}
+.form-panel .btn.main{background:var(--marker);border-color:var(--marker);color:var(--ink)}.form-panel .btn.main:hover{background:#fff;border-color:#fff}
+.form-panel .btn:not(.main){border-color:#9aa0e0;color:#fff}.form-panel .btn:not(.main):hover{background:#262d85}
+.form-panel :focus-visible{outline-color:var(--marker)!important}
+.qf{display:grid;scroll-margin-top:24px}
+.qf label{margin:16px 0 5px;font-size:15px;font-weight:600}.qf label:first-child{margin-top:0}
+.qf input,.qf textarea{width:100%;min-width:0;padding:12px 2px;border:0;border-bottom:1.5px solid #ffffffb3;border-radius:0;background:transparent;color:#fff;line-height:1.4;transition:border-color .2s}
+.qf input::placeholder,.qf textarea::placeholder{color:#ffffffa6}
+.qf input:focus,.qf textarea:focus{outline:0;border-bottom-color:var(--marker)}
+/* codex 23.11 runs 4,12: on PC the fields looked like three divider lines; same boxed fields as on the phone (look only, form markup untouched) */
+.qf input,.qf textarea{border:1.5px solid #ffffff8c;border-radius:8px;padding:12px 14px;background:#ffffff14}.qf textarea{min-height:96px}
+.qf input:focus-visible,.qf textarea:focus-visible{outline:2px solid var(--marker);outline-offset:4px}
+.qf textarea{resize:vertical}.qf .btns{margin-top:21px}
+.error,.send-error{color:#ffc2cc;font-size:14px;margin-top:6px}
+.qf [aria-invalid=true]{border-color:#ff8fa3;box-shadow:0 0 0 2px #ff8fa3}
+.thanks{padding:32px 0}.thanks h3{font-size:30px}
+footer{display:flex;justify-content:space-between;align-items:center;gap:16px;padding:26px 0 34px;color:var(--muted);font-size:14px}
+@media(max-width:1000px){
+  .wrap{padding-inline:4vw}.hero{grid-template-columns:minmax(0,1fr) 320px;column-gap:28px}
+  .cards{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .ld-scale span:nth-child(even){color:transparent}
+}
+@media(max-width:760px){
+  .wrap{padding-inline:clamp(18px,5vw,32px)}header{min-height:70px;gap:8px;flex-wrap:wrap}
+  .page-nav{display:none}.lang{padding-left:0;border:0}
+  .header-contact{display:grid;place-items:center;width:34px;height:34px;border:1px solid var(--rule);border-radius:50%;font-size:0;gap:0}
+  .header-contact::after{display:none}
+  .header-contact::before{content:"";width:18px;height:18px;background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23141a63' stroke-width='1.8' stroke-linejoin='round'%3E%3Crect x='3' y='5.5' width='18' height='13' rx='2'/%3E%3Cpath d='m3.5 7 8.5 6.5L20.5 7'/%3E%3C/svg%3E") center/contain no-repeat}
+  .hero{grid-template-columns:minmax(0,1fr);grid-template-areas:"intro" "client" "cal";row-gap:22px;padding-top:30px;align-items:start}
+  .intro{padding-bottom:0}
+  .hero{row-gap:16px;padding-top:20px}.location{margin-bottom:10px}.lead{margin:16px 0 12px}.hero-price-line{margin-bottom:16px}.hero-risk{margin-top:12px}
+  .ld-client{padding:18px}.ld-client b{font-size:21px}.ld-day{margin:2px 0 12px}.ld-times{margin-bottom:10px}.ld-times button,.ld-book{min-height:46px}.ld-hint{margin-top:8px}
+  .me{grid-template-columns:132px minmax(0,1fr);gap:14px}
+  .ld-client{max-width:520px;border:1px solid var(--rule);border-radius:10px 10px 0 0;box-shadow:none}
+  .ld-owner{max-width:520px;margin-top:-22px;background:var(--white);border:1px solid var(--rule);border-top:1px dashed var(--rule);border-radius:0 0 10px 10px;padding:14px 16px 16px;box-shadow:0 34px 60px -42px rgba(20,26,99,.55)}
+  .ld-track{padding-top:0}.ld-scale,.ld-ghost{display:none}
+  .ld-list{height:auto;max-width:520px}
+  .ld-list li{position:static;width:auto;flex-direction:row;align-items:baseline;gap:14px;margin:6px 0 0;padding:9px 12px;font-size:15px}
+  .ld-list time{font-size:13px}
+  .ld-list li:not(.ld-new):not(:last-child){display:none}
+  .facts li{padding-block:14px}
+  .projects{grid-template-columns:1fr}.project:first-child{grid-row:auto}
+  .process{grid-template-columns:1fr}
+  .steps{grid-template-columns:1fr;gap:0}.steps li{display:grid;grid-template-columns:52px 1fr;align-items:baseline;border-top-width:1px;padding:14px 0}.steps li::before{font-size:30px;margin:0}
+  .packages .prow{grid-template-columns:minmax(0,1fr) auto;align-items:end}.packages .prow>div{grid-column:1/-1}.packages .eur{font-size:40px}
+  .faq{grid-template-columns:1fr}
+  #contact{grid-template-columns:1fr;gap:24px}
+  .contact-intro>p{margin:12px 0 20px}
+}
+@media(max-width:540px){
+  .identity{font-size:16px;gap:8px}.identity small{font-size:11px}.monogram{width:36px;height:36px;font-size:14px}
+  .lang{gap:0}.lang button{min-width:28px;padding:4px}
+  .section-head,#prices>h2{margin-bottom:20px}
+  .cards{grid-template-columns:1fr}
+  .plist .prow{grid-template-columns:minmax(0,1fr) auto;gap:5px 16px}.plist .prow>div{grid-column:1/-1}
+  .plist .eur{font-size:24px}.plist .term{align-self:center}
+  #contact{padding:25px 16px 16px}.contact-intro{padding:0 4px}.form-panel{padding:6px 4px 4px}
+  .intro .btn.outward{min-height:40px;padding:6px 4px}
+  .qf .btn{flex:1 1 auto}.qf .btns{gap:8px}footer{font-size:12px;flex-wrap:wrap}
+}
+@media(prefers-reduced-motion:no-preference){
+  html{scroll-behavior:smooth}.circle-arrow,.lang button,.ld-times button{transition:background-color .15s,color .15s,border-color .15s}
+  /* header hides on the way down, returns on the way up */
+  header{transition:transform .45s cubic-bezier(.2,.8,.2,1)}header.away{transform:translateY(-102%)}
+  /* first screen plays as one scene: lines rise, the marker draws under "online booking", then the calendar fills */
+  .intro>*{animation:rise .9s cubic-bezier(.2,.8,.2,1) both}
+  .intro>h1{animation:none}.intro>h1>span:first-child{display:block}
+  .intro>.lead{animation-delay:.18s}.intro>.btns,.intro>.hero-price-line{animation-delay:.28s}.intro>.hero-risk{animation-delay:.4s}
+  h1 em{animation:mark 1s .5s cubic-bezier(.65,0,.25,1) both}
+  .ld-client{animation:rise 1s .3s cubic-bezier(.2,.8,.2,1) both}
+  .ld-owner{animation:line .9s .45s cubic-bezier(.65,0,.25,1) both}
+  /* existing bookings stand still from the start: only the new booking moves (codex 23.11) */
+  .ld-book.tap{animation:tap .35s ease}
+  @keyframes rise{from{opacity:0;transform:translateY(28px)}}
+  @keyframes mark{from{background-size:0 100%}}
+  @keyframes line{from{border-top-color:transparent}}
+  @keyframes slot{from{opacity:0;transform:scaleX(.4)}}
+  @keyframes tap{50%{transform:scale(.96)}}
+  /* ribbon: wow.js runs it (data-marquee), faster with the scroll, turns with its direction */
+  /* blocks slide up as they come into view; only moved, never hidden, so a full-page shot stays complete */
+  .rv{transform:translateY(36px);transition:transform 1.1s cubic-bezier(.2,.8,.2,1) calc(var(--i,0) * 90ms)}
+  .rv.in{transform:none}
+  .cover img{transition:transform 1.6s cubic-bezier(.2,.8,.2,1)}.project.rv:not(.in) .cover img{transform:scale(1.12)}
+  .project:hover .cover img{transform:scale(1.04)}
+  .packages .prow:nth-child(2) .eur{transition:background-size 1s .3s cubic-bezier(.65,0,.25,1)}.packages .prow.rv:not(.in):nth-child(2) .eur{background-size:0 100%}
+  .packages .prow:nth-child(2) .eur{background-repeat:no-repeat;background-size:100% 100%}
+  /* buttons fill from the left on hover */
+  .btn{position:relative;isolation:isolate;overflow:hidden;transition:color .25s,border-color .25s}
+  .btn::before{content:"";position:absolute;inset:0;z-index:-1;background:var(--fill,var(--sky));transform:scaleX(0);transform-origin:100% 50%;transition:transform .45s cubic-bezier(.65,0,.25,1)}
+  .btn:hover::before{transform:scaleX(1);transform-origin:0 50%}
+  .btn:hover{background:transparent}.btn.main{--fill:var(--deep)}.btn.main:hover{background:var(--blue)}
+  .form-panel .btn.main{--fill:#fff}.form-panel .btn.main:hover{background:var(--marker)}
+  .form-panel .btn:not(.main){--fill:#262d85}.form-panel .btn:not(.main):hover{background:transparent}
+  .btn:disabled::before{display:none}
+  /* FAQ answers fold open */
+  .qa{interpolate-size:allow-keywords}
+  .qa::details-content{block-size:0;overflow:hidden;transition:block-size .45s cubic-bezier(.2,.8,.2,1),content-visibility .45s allow-discrete}
+  .qa[open]::details-content{block-size:auto}
+  summary::after{transition:background-size .3s}
+  /* language switch: old text slides out, new slides in */
+  ::view-transition-old(root){animation:.22s ease both vtOut}::view-transition-new(root){animation:.32s cubic-bezier(.2,.8,.2,1) both vtIn}
+  @keyframes vtOut{to{opacity:0;transform:translateY(-8px)}}@keyframes vtIn{from{opacity:0;transform:translateY(10px)}}
+}
+/* 23.11 «main page to Bella's level»: wow set (lib/), taste tokens for the moments, bigger type, statement, pinned steps, giant type, bigger dark finale */
+:root{--s-2:8px;--s-4:16px;--s-5:24px;--s-6:32px;--s-7:48px;--s-8:64px;--gutter:clamp(24px,4vw,72px);--font-text:var(--sans);--t-lead:17px;--r-md:6px;--nav:80px;--display-weight:500;--line:var(--rule);--accent:var(--blue);--grain:.05}
+html.lenis{scroll-behavior:auto}
+@media(min-width:761px){h1{font-size:clamp(40px,5vw,84px)}}
+.facts{font-size:clamp(20px,2.4vw,36px)}.facts li::before{width:12px;height:12px}
+.stmtsec .stmt{font:500 clamp(28px,4.4vw,68px)/1.1 var(--display);letter-spacing:-.045em;max-width:22ch;text-wrap:balance}
+.pcsec .mo-pc__text>h2{margin-bottom:12px}.pcsec .mo-pc__text>.fine{max-width:46ch;margin-bottom:clamp(28px,3vw,44px)}
+.pcsec.pcsec .mo-pc__step h3{font:500 clamp(22px,2.3vw,36px)/1.15 var(--display);letter-spacing:-.04em}
+.pcsec .mo-pc__step h3 i{font-style:normal;color:var(--blue);margin-right:.35em}
+.pcsec.pcsec .mo-pc__step p{color:var(--muted);font-size:16px;line-height:1.55;max-width:46ch}
+.pcsec .mo-pc__visual img{display:block;width:100%;aspect-ratio:4/3;object-fit:cover;object-position:top;border-radius:6px;border:1px solid var(--rule)}
+@media(max-width:639px){.pcsec .mo-pc__step:not(:first-child) .mo-pc__visual{display:none}}
+@media(max-width:760px){#faq h2{margin-bottom:34px}}
+.gtsec .mo-gt__type{--mo-tint:color-mix(in oklab,var(--deep) 22%,transparent);font:500 clamp(72px,15vw,250px)/.92 var(--display);letter-spacing:-.07em}
+.gtsec .mo-gt__row p{color:var(--muted);font-size:clamp(17px,1.4vw,21px)}
+#contact h2{font-size:clamp(40px,5vw,84px);line-height:1.02}
+@media(min-width:1001px){#contact{grid-template-columns:1fr 1fr}}
+/* codex 23.11 run 1: the booking card and the salon calendar read as one card on a computer; step 01 portrait keeps the face */
+@media(min-width:761px){.hero{row-gap:0;grid-template-rows:auto 1fr}.ld-list .ld-new.pend{display:flex;background:transparent;border:1.5px dashed var(--blue);box-shadow:none;font-weight:500;color:var(--muted);animation:none}}
+/* codex 23.11 runs 2-3 (twice): on phones the big promise and the "Váš web" screen repeat what the steps and the form already say */
+/* codex 23.11 runs 3,12,13: on the phone the new booking sat under the bottom edge; the author line repeats the promise that now sits by the form */
+@media(max-width:760px){.hero-risk{display:none}.ld-list .ld-new.pend{display:flex;background:transparent;border:1.5px dashed var(--blue);box-shadow:none;font-weight:500;color:var(--muted);animation:none}}.pcsec .mo-pc__step:first-child .mo-pc__visual img{object-position:50% 30%}
+
+/* 23.11 evening, Давид «главная мега бедная, до уровня Беллы»: full wow set below the first screen.
+   First screen keeps its CSS scene (h1 paints at once, libs come after load). */
+:root{--cursor:var(--blue);--cursor-ink:#fff}
+.kicker{display:flex;align-items:center;gap:12px;font:600 13px/1 var(--sans);letter-spacing:.02em;color:var(--muted);margin-bottom:18px}
+.kicker i{font:400 13px/1 var(--mono);font-style:normal;color:var(--blue)}
+.kicker::after{content:"";width:48px;height:1px;background:currentColor;opacity:.5}
+h2{font-size:clamp(34px,4.6vw,76px);line-height:1.02}
+.wow-l-mask{padding-bottom:.14em;margin-bottom:-.14em}
+/* opener (Obys): ring draws, viewfinder corners, real work flashes inside, the frame opens into the dark first-screen card. Desktop, once per visit, pure CSS, 1.9 s */
+.curtain{display:none}
+@media(min-width:900px) and (pointer:fine) and (prefers-reduced-motion:no-preference){
+  .curtain{--cu-r:clamp(18px,2.5vw,48px);display:block;position:fixed;inset:0;z-index:300;background:#0d0d0d;color:#fff;pointer-events:none;animation:cuBg .3s 1.35s ease forwards,cuHide 0s 1.9s forwards}
+  .wow-noload .curtain{display:none}
+  .curtain.cu-skip{animation:cuGone .3s forwards,cuHide 0s .3s forwards}
+  .cu-ring{position:absolute;left:50%;top:50%;width:min(31vw,54vh);aspect-ratio:1;translate:-50% -50%;overflow:visible;fill:none;stroke:#fff;stroke-width:.32;stroke-dasharray:100;stroke-dashoffset:100;opacity:.6;animation:cuDraw .6s cubic-bezier(.65,0,.35,1) forwards,cuRingOut .35s .6s ease-in forwards}
+  .cu-f{position:absolute;inset:calc(50% - min(7.5vw,13vh)) calc(50% - min(12vw,21vh));border-radius:2px;animation:cuOpen .5s .9s cubic-bezier(.76,0,.24,1) forwards,cuGone .3s 1.55s forwards}
+  .cu-ph{position:absolute;inset:0;overflow:hidden;border-radius:inherit}
+  .cu-f i{position:absolute;width:20px;height:20px;border:0 solid #fff;opacity:0;animation:cuCorner .4s .2s cubic-bezier(.2,.8,.2,1) forwards,cuGone .2s .9s forwards}
+  .cu-f i:nth-of-type(1){left:-12px;top:-12px;border-width:1px 0 0 1px;translate:-14px -14px}
+  .cu-f i:nth-of-type(2){right:-12px;top:-12px;border-width:1px 1px 0 0;translate:14px -14px}
+  .cu-f i:nth-of-type(3){left:-12px;bottom:-12px;border-width:0 0 1px 1px;translate:-14px 14px}
+  .cu-f i:nth-of-type(4){right:-12px;bottom:-12px;border-width:0 1px 1px 0;translate:14px 14px}
+  .cu-p{position:absolute;inset:0;background:#191a21 center top/cover no-repeat;opacity:0;scale:1.06;animation:cuFlash .3s cubic-bezier(.2,.8,.2,1) forwards}
+  .cu-p:nth-of-type(1){background-image:url(media/shot-bella-desktop-800.webp);animation-delay:.35s}
+  .cu-p:nth-of-type(2){background-image:url(media/panel-owner.webp);animation-delay:.5s}
+  .cu-p:nth-of-type(3){background-image:url(media/shot-garage-960.webp);animation-delay:.65s}
+  .cu-p:nth-of-type(4){background-image:url(media/davyd-sunset-360.webp);background-position:50% 30%;animation-delay:.8s}
+  /* 25.11: the demo shots in the page language */html[lang=en] .cu-p:nth-of-type(1){background-image:url(media/shot-bella-desktop-800-en.webp)}html[lang=en] .cu-p:nth-of-type(2){background-image:url(media/panel-owner-en.webp)}html[lang=en] .cu-p:nth-of-type(3){background-image:url(media/shot-garage-960-en.webp)}html[lang=ru] .cu-p:nth-of-type(1){background-image:url(media/shot-bella-desktop-800-ru.webp)}html[lang=ru] .cu-p:nth-of-type(2){background-image:url(media/panel-owner-ru.webp)}html[lang=ru] .cu-p:nth-of-type(3){background-image:url(media/shot-garage-960-ru.webp)}html[lang=uk] .cu-p:nth-of-type(1){background-image:url(media/shot-bella-desktop-800-uk.webp)}html[lang=uk] .cu-p:nth-of-type(2){background-image:url(media/panel-owner-uk.webp)}html[lang=uk] .cu-p:nth-of-type(3){background-image:url(media/shot-garage-960-uk.webp)}
+  .cu-ph::after{content:"";position:absolute;inset:0;background:#0d0d0d;opacity:0;animation:cuShow .3s .95s ease forwards}
+  .cu-w,.cu-n{position:absolute;bottom:clamp(22px,4vh,44px);font:500 14px/1 var(--sans);letter-spacing:.01em;opacity:0;animation:cuFlash .4s .3s ease forwards,cuGone .2s .9s forwards}
+  .cu-w{left:clamp(24px,3.5vw,64px)}.cu-n{right:clamp(24px,3.5vw,64px);font-family:var(--mono);color:#ffffff99}
+  @keyframes cuDraw{to{stroke-dashoffset:0}}
+  @keyframes cuRingOut{to{opacity:0;scale:1.18}}
+  @keyframes cuCorner{to{opacity:1;translate:0 0}}
+  @keyframes cuFlash{to{opacity:1;scale:1}}
+  @keyframes cuGone{to{opacity:0}}
+  @keyframes cuShow{to{opacity:1}}
+  @keyframes cuOpen{to{inset:var(--cu-end,0);border-radius:var(--cu-r)}}
+  @keyframes cuBg{to{background-color:transparent}}
+  @keyframes cuHide{to{visibility:hidden}}
+  /* the first screen plays right after the frame lands */
+  html:not(.wow-noload) .intro>*{animation-delay:1.2s}
+  html:not(.wow-noload) .intro>.lead{animation-delay:1.3s}
+  html:not(.wow-noload) .intro>.btns,html:not(.wow-noload) .intro>.hero-price-line{animation-delay:1.38s}
+  html:not(.wow-noload) .intro>.hero-risk{animation-delay:1.46s}
+  html:not(.wow-noload) h1 em{animation-delay:1.5s}
+  html:not(.wow-noload) .live-demo .ld-client{animation-delay:1.45s}
+  html:not(.wow-noload) .live-demo .ld-owner{animation-delay:1.55s}
+}
+/* ribbon: big type, a dark band between first screen and work */
+.ribbon{margin-top:clamp(34px,4vw,56px)}
+.ribbon::before,.ribbon::after{display:none}
+.ribbon{background:var(--marker);color:var(--ink)}.ribbon .facts li::before{background:var(--ink)}
+.ribbon .facts{font-size:clamp(26px,4.2vw,68px);letter-spacing:-.045em}
+.ribbon .facts li{padding:clamp(16px,2.2vw,30px) 0 clamp(16px,2.2vw,30px) clamp(22px,2.6vw,44px)}
+.ribbon .facts li::before{width:.32em;height:.32em}
+/* work: dark, pinned, slides sideways on a computer */
+main>section.work{margin-top:0}
+.work{margin-inline:calc(50% - 50vw);background:var(--ink);color:#fff;overflow:hidden}
+.work-pin{width:100%;background:var(--ink);overflow:hidden}/* 23.11: GSAP pins this wrapper, not the full-bleed section: pinning an element with negative margins cut it short on wide screens */
+.work-track{display:flex;align-items:center;gap:clamp(28px,3.4vw,64px);width:max-content;min-height:100svh;padding:clamp(70px,10vh,120px) clamp(20px,5vw,78px)}
+.work-intro{width:clamp(300px,30vw,500px);flex:none;align-self:center}
+.work .kicker{color:#a9acc6}.work .kicker i{color:var(--marker)}
+.work h2{color:#fff}
+.work-sub{margin-top:22px;color:#b9bdd4;font-size:clamp(16px,1.25vw,19px);line-height:1.55;max-width:34ch}
+.work-hint{display:block;width:72px;height:72px;margin-top:40px;border:1px solid #ffffff40;border-radius:50%;background:var(--marker);mask:var(--arrow) center/30px no-repeat;-webkit-mask:var(--arrow) center/30px no-repeat}
+.work .project{flex:none;width:clamp(320px,46vw,780px);color:#fff}
+.work .project:nth-child(odd){margin-top:clamp(40px,10vh,110px)}
+.work .cover{border-radius:10px;background:#20222e;aspect-ratio:16/10;box-shadow:0 40px 80px -40px #000}
+.work .cover img{width:100%;height:100%;object-fit:cover;object-position:top}
+.work .type-cover{aspect-ratio:16/10;background:var(--sky);font-size:clamp(28px,3.4vw,58px)}
+.work .project h3,.work .project:first-child h3{font-size:clamp(22px,2.2vw,36px);color:#fff}
+.work .project p{color:#b9bdd4}
+.work .circle-arrow{border-color:#ffffff40;color:var(--marker);width:46px;height:46px}
+.work .project:hover .circle-arrow{background:var(--marker);border-color:var(--marker);color:var(--ink)}
+.work .project:hover h3{color:var(--marker);text-decoration:none}
+.work-more{margin-top:clamp(28px,3vw,44px)}
+@media(max-width:899px){
+  .work-track{display:grid;width:auto;min-height:0;gap:44px;padding:64px clamp(18px,5vw,32px)}
+  .work-intro,.work .project{width:auto}.work .project:nth-child(odd){margin-top:0}
+  .work-hint{display:none}
+  .work .cover{aspect-ratio:auto}.work .type-cover{aspect-ratio:1.9}
+}
+@media(max-width:760px){.work .cover.salon-cover,.work .cover.garage-cover{aspect-ratio:1.15}}
+/* statement: words light up with the scroll */
+.stmtsec{padding:clamp(20px,4vw,60px) 0}
+.stmtsec .stmt{font-size:clamp(30px,5vw,84px);max-width:20ch}
+/* steps live: pinned on a computer, the visuals share one frame */
+.pcsec .mo-pc__visual img,.pcsec .mo-pc__visuals img{border-radius:10px}
+/* giant type */
+.gtsec .mo-gt__type{padding-top:.14em}
+/* dark finale across the whole width */
+#contact{margin-inline:calc(50% - 50vw);border-radius:0;padding:calc(clamp(56px,8vw,170px) + clamp(40px,7vw,160px)) var(--pad) clamp(56px,6vw,130px);background:var(--night);row-gap:clamp(36px,5vw,72px);position:relative;overflow:clip;isolation:isolate}
+.final-top{grid-column:1/-1;display:grid;grid-template-columns:minmax(0,1fr) auto;align-items:end;gap:clamp(24px,4vw,64px);padding-bottom:clamp(36px,5vw,64px);border-bottom:1px solid #ffffff26}
+#contact .final-top h2{font-size:clamp(44px,8.4vw,150px);line-height:.98;max-width:12ch;color:#fff}
+.bigbtn{display:grid;place-items:center;width:clamp(130px,13vw,200px);aspect-ratio:1;border-radius:50%;background:var(--marker);color:var(--ink);text-decoration:none;font:600 clamp(15px,1.2vw,18px)/1.2 var(--sans);transition:background .3s,color .3s}
+.bigbtn:hover{background:#fff}
+#contact .me figure{margin:0}
+footer{margin-inline:calc(50% - 50vw);padding:clamp(40px,4vw,90px) var(--pad) 0;background:var(--night);color:#8d8e98;border-top:1px solid #ffffff1a;flex-wrap:wrap;font:400 var(--fs-label)/1.4 var(--sans)}
+footer a{color:#e6e6ea}
+@media(max-width:760px){
+  .final-top{grid-template-columns:1fr;gap:22px}.bigbtn{width:118px}
+  #contact{padding:calc(48px + clamp(40px,7vw,160px)) var(--pad) 40px}
+}
+/* 23.11 night: Cuberto frame (_claude/web/FORMULA.md §1). One grotesque in two weights, white page, dark rounded islands, capsule buttons, every size in vw (no 1440 column) */
+:root{--paper:#fff;--white:#fff;--ink:#0d0d0d;--muted:#5f6068;--rule:#e3e3e6;--night:#0d0d0d;--pad:max(18px,3.5vw);--r-island:clamp(18px,2.5vw,48px);--fs-h1:clamp(44px,5.6vw,150px);--fs-h2:clamp(36px,5vw,130px);--fs-card:clamp(26px,2.6vw,64px);--fs-lead:clamp(18px,1.7vw,38px);--fs-text:clamp(16px,1.15vw,24px);--fs-label:clamp(13px,.9vw,18px)}
+body{font:400 var(--fs-text)/1.45 var(--sans)}
+.wrap{width:100%;padding-inline:var(--pad)}
+h1{font-size:var(--fs-h1);line-height:1;letter-spacing:-.025em}
+h2{font-weight:400;font-size:var(--fs-h2);line-height:1.06;letter-spacing:-.03em}
+main>section{margin-top:clamp(80px,9vw,220px)}
+.kicker{font:500 var(--fs-label)/1.2 var(--sans);letter-spacing:0;gap:.6em;margin-bottom:clamp(16px,1.6vw,34px)}
+.kicker::after{display:none}.kicker i{font:500 var(--fs-label)/1 var(--sans)}
+/* header: logo left, links and a black capsule right */
+header{min-height:clamp(72px,6.2vw,124px);border-bottom:0;gap:clamp(14px,2vw,48px)}
+.identity{font-weight:500;font-size:clamp(16px,1.1vw,22px);letter-spacing:-.01em}.identity small{font-size:clamp(12px,.8vw,16px)}
+.monogram{width:clamp(40px,2.9vw,58px);height:clamp(40px,2.9vw,58px);border-radius:50%;background:var(--ink);font-size:clamp(14px,1vw,20px)}
+.page-nav{gap:clamp(20px,2.2vw,48px)}.page-nav a{font:500 var(--fs-label)/1 var(--sans)}.page-nav a:hover{text-decoration:none}
+.lang{border-left:0;padding-left:0;gap:4px}
+.lang button{border-radius:999px;min-width:clamp(34px,2.5vw,48px);min-height:clamp(34px,2.5vw,48px);font:500 clamp(12px,.8vw,15px)/1 var(--sans)}
+.lang button:hover:not([aria-pressed=true]){background:#f1f1f3;color:var(--ink)}
+.header-contact{gap:10px;min-height:clamp(46px,3.4vw,66px);padding:0 clamp(20px,1.7vw,34px);border-radius:999px;background:var(--ink);color:#fff;font:500 var(--fs-label)/1 var(--sans);transition:background .3s}
+.header-contact:hover{background:var(--blue);color:#fff;text-decoration:none}
+/* first screen: big two-line H1, lead and buttons under it, then the dark card with the live demo */
+.hero{display:block;padding:clamp(24px,3.2vw,80px) 0 0}
+.intro{display:grid;grid-template-columns:minmax(0,1fr) auto;grid-template-areas:"loc loc" "h1 h1" "lead btns" "price risk";column-gap:clamp(24px,4vw,120px);align-items:end;padding-bottom:clamp(28px,3.4vw,80px)}
+.location{grid-area:loc;margin:0 0 clamp(14px,1.4vw,30px);font:500 var(--fs-label)/1.3 var(--sans)}
+.intro>h1{grid-area:h1;margin-bottom:clamp(24px,2.8vw,64px)}
+.lead{grid-area:lead;margin:0;max-width:40ch;font-size:var(--fs-lead);line-height:1.3}
+.hero-price-line{grid-area:price;margin:clamp(12px,1.2vw,26px) 0 0;font:500 var(--fs-text)/1.35 var(--display);letter-spacing:-.01em}
+.intro>.btns{grid-area:btns;justify-self:end}
+.hero-risk{grid-area:risk;justify-self:end;margin:clamp(12px,1.2vw,26px) 0 0;font-size:var(--fs-label);max-width:34ch}.hero-risk img{width:clamp(40px,2.6vw,56px);height:auto}
+.hero .live-demo{display:grid;grid-template-columns:minmax(0,.95fr) minmax(0,1.25fr);gap:clamp(14px,2vw,40px);align-items:start;position:relative;isolation:isolate;overflow:hidden;padding:clamp(18px,3.4vw,72px);background:var(--night);color:#fff;border-radius:var(--cr,var(--r-island));transform:scale(var(--cs,1));transform-origin:50% 0}
+.glow{position:absolute;z-index:-1;aspect-ratio:1;border-radius:50%;background:radial-gradient(closest-side,#2b35c4b8,#2b35c400);pointer-events:none}
+.live-demo .glow{right:-14%;top:-45%;width:clamp(360px,62vw,1300px)}
+.live-demo .ld-client,.live-demo .ld-owner{grid-area:auto;margin:0;max-width:none;background:#fff;color:var(--ink);border:0;border-radius:clamp(12px,1.2vw,26px);padding:clamp(18px,2vw,44px);box-shadow:none}
+.live-demo .ld-tag{font:500 var(--fs-label)/1.4 var(--sans)}
+.live-demo .ld-client b{font:500 var(--fs-card)/1.1 var(--display);letter-spacing:-.025em}
+.live-demo .ld-day{font-size:var(--fs-text)}.live-demo .ld-hint{font-size:var(--fs-label)}
+.live-demo .ld-times button{border-radius:999px;min-height:clamp(48px,3.6vw,72px);font:500 var(--fs-text) var(--sans)}
+.live-demo .ld-book{border-radius:999px;min-height:clamp(52px,3.9vw,76px);font:500 var(--fs-text) var(--sans);transition:background .3s}
+.live-demo .ld-book:hover:not(:disabled){background:var(--blue)}
+@media(min-width:761px){
+  .live-demo .ld-list li:not(.ld-new):not(:last-child){display:flex}
+  .live-demo .ld-list li{font-size:var(--fs-text);padding:clamp(9px,.9vw,18px) clamp(12px,1vw,20px)}
+  .live-demo .ld-list time{font-size:var(--fs-label)}
+}
+/* capsule buttons */
+.btns{gap:clamp(8px,.7vw,14px)}
+.btn{min-height:clamp(52px,3.9vw,78px);padding:0 clamp(22px,2vw,42px);border-radius:999px;font:500 clamp(15px,1.05vw,22px)/1.2 var(--sans);gap:12px}
+.btn.main{background:var(--ink);border-color:var(--ink);color:#fff}.btn.main:hover{background:var(--blue);border-color:var(--blue)}
+.btn:not(.main):hover{background:var(--ink);color:#fff}
+.hero .btn.outward{border-color:var(--ink);text-decoration:none}
+.form-panel .btn:not(.main){--fill:#ffffff26;border-color:#ffffff59}.form-panel .btn:not(.main):hover{background:#ffffff26}
+/* ribbon: big type between hairlines */
+.ribbon{margin-top:clamp(48px,5vw,120px);background:transparent;color:var(--ink);border-block:1px solid var(--rule)}
+.ribbon .facts{font:400 clamp(28px,3.6vw,96px)/1.1 var(--display);letter-spacing:-.03em}
+.ribbon .facts li{gap:clamp(28px,3vw,72px);padding:clamp(20px,2.4vw,52px) 0 clamp(20px,2.4vw,52px) clamp(28px,3vw,72px)}
+.ribbon .facts li::before{background:var(--blue);width:.22em;height:.22em}
+/* work: a dark island; GSAP pins .work-pin, so the island lives on it */
+main>section.work{margin-top:clamp(40px,5vw,120px)}
+.work{margin-inline:0;background:transparent;overflow:visible}
+.work-pin{background:var(--night);border-radius:var(--r-island)}
+.work-track{padding:clamp(56px,9vh,130px) clamp(24px,4vw,96px)}
+.work-sub{font-size:var(--fs-lead);line-height:1.35}
+.work .cover{border-radius:clamp(10px,1vw,22px)}
+.work .project h3,.work .project:first-child h3{font:500 var(--fs-card)/1.1 var(--display);letter-spacing:-.025em}
+.work .project p{font-size:var(--fs-text);max-width:46ch}
+.work .circle-arrow{width:clamp(46px,3.4vw,68px);height:clamp(46px,3.4vw,68px)}
+.more-work>summary{font-weight:500}
+.demo,.ex{font-size:var(--fs-label);font-weight:500}
+.project p,.card p,.prow p,.fine{font-size:clamp(15px,1vw,20px)}
+/* prices (Collins): name left, explanation right, hairlines */
+.packages{border-top:1px solid var(--ink)}
+.packages .prow{grid-template-columns:minmax(0,1.1fr) minmax(0,1fr) auto;grid-template-areas:"name text eur" "name link term";gap:clamp(8px,.8vw,16px) clamp(24px,3vw,72px);align-items:start;padding:clamp(28px,3vw,64px) 0}
+.packages .prow>div{display:contents}
+.packages .prow h3{grid-area:name;font:500 var(--fs-card)/1.1 var(--display);letter-spacing:-.025em;max-width:16ch}
+.packages .prow p{grid-area:text;margin:0;font-size:var(--fs-text);max-width:48ch}
+.packages .prow .ex{grid-area:link;align-self:start}
+.packages .eur{grid-area:eur;font-size:clamp(36px,4vw,104px);font-weight:400;letter-spacing:-.03em}
+.packages .term{grid-area:term;justify-self:end;font-size:var(--fs-label)}
+/* statement: small label + big text (Cuberto overview) */
+.stmtsec{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,3fr);gap:clamp(20px,3vw,72px);align-items:start;padding:0}
+.stmtsec .stmt{font:400 var(--fs-h2)/1.08 var(--display);letter-spacing:-.03em;max-width:none;text-wrap:pretty}
+.pcsec.pcsec .mo-pc__step h3{font:500 var(--fs-card)/1.1 var(--display);letter-spacing:-.025em}
+.pcsec.pcsec .mo-pc__step p{font-size:var(--fs-text)}
+.pcsec .mo-pc__visual img,.pcsec .mo-pc__visuals img{border-radius:clamp(10px,1vw,22px)}
+.gtsec .mo-gt__type{letter-spacing:-.045em}.gtsec .mo-gt__row p{font-size:var(--fs-lead)}
+/* FAQ: a dark island, the plus turns into a cross */
+#faq{background:var(--night);color:#fff;border-radius:var(--r-island);padding:clamp(28px,5vw,120px)}
+#faq .qa{border-top-color:#ffffff26}
+#faq .qa h3{font:500 clamp(18px,1.5vw,30px)/1.3 var(--sans);letter-spacing:-.01em}
+#faq .qa p{color:#b9bac4;font-size:var(--fs-text)}
+#faq .qa>summary:hover h3{color:var(--marker)}
+.qa>summary::after{width:22px;height:22px;color:currentColor;background-size:20px 1.5px,1.5px 20px}
+.qa[open]>summary::after{background-size:20px 1.5px,1.5px 20px;transform:rotate(45deg)}
+/* final: black, giant question, blue glow, the light page above ends in an arc that straightens (Snellenberg) */
+#contact .arc{position:absolute;z-index:1;left:-10%;width:120%;top:-1px;height:clamp(40px,7vw,160px);background:var(--paper);border-radius:0 0 50% 50%/0 0 100% 100%;transform-origin:50% 0;pointer-events:none}
+#contact .glow{left:50%;top:-8%;translate:-50% 0;width:clamp(420px,72vw,1500px)}
+#contact .final-top h2{font-size:clamp(48px,7.6vw,200px);font-weight:400;line-height:1;letter-spacing:-.035em;max-width:14ch}
+.bigbtn{width:clamp(130px,13vw,250px);font:500 clamp(15px,1.2vw,24px)/1.2 var(--sans)}
+.contact-intro>p{color:#c9cad3}
+.address button{border-color:#ffffff40;border-radius:999px;padding:5px 14px}
+.qf label{font-size:var(--fs-label);font-weight:500}
+/* footer: giant signature across the whole width */
+footer .sig{flex:0 0 100%;overflow:hidden;color:#fff;font:500 11vw/1.22 var(--display);letter-spacing:-.04em;white-space:nowrap;padding-top:clamp(20px,3vw,70px)}
+footer .sig i{display:inline-block;font-style:normal}
+/* cursor (wow.js) in Cuberto's manner: a dot that grows into a labelled circle, white over the dark islands */
+.wow-cursor{--cursor:var(--ink);--cursor-ink:#fff}.wow-cursor.dark{--cursor:#fff;--cursor-ink:var(--ink)}
+.wow-cursor .d{width:10px;height:10px;margin:-5px}
+.wow-cursor .r{border-color:transparent;font:500 15px/1.1 var(--sans);letter-spacing:0;text-transform:none}
+.wow-cursor.big .r{width:100px;height:100px;margin:-50px}
+.wow-cursor.link .r{background:color-mix(in srgb,var(--cursor) 12%,transparent);opacity:1}
+@media(prefers-reduced-motion:no-preference){
+  .hero .live-demo{--cs:.93}
+  .live-demo .ld-owner{animation:rise 1s .42s cubic-bezier(.2,.8,.2,1) both}
+  /* buttons: a dome rises from the bottom and fills the capsule */
+  .btn::before{inset:auto -8% 0;height:125%;border-radius:50% 50% 0 0/70% 70% 0 0;transform:translateY(101%);transform-origin:50% 100%;transition:transform .6s cubic-bezier(.7,0,.2,1),border-radius .6s cubic-bezier(.7,0,.2,1)}
+  .btn:hover::before{transform:translateY(0);transform-origin:50% 100%;border-radius:0}
+  .btn.main{--fill:var(--blue)}.btn.main:hover{background:var(--ink)}
+  .btn:not(.main){--fill:var(--ink)}.btn:not(.main):hover{background:transparent;color:#fff}
+  .form-panel .btn:not(.main):hover{background:transparent}
+  .qa>summary::after{transition:transform .35s cubic-bezier(.2,.8,.2,1)}
+}
+/* 24.11: PC first screen reads as one offer (lead, price, buttons in one column, Codex); yellow price CTA; drawn lines; work label */
+@media(min-width:761px){
+  .intro{grid-template-areas:"loc loc" "h1 h1" "lead risk" "price risk" "btns risk"}
+  .intro>.btns{justify-self:start;margin-top:clamp(18px,1.8vw,40px)}
+  .hero-risk{align-self:end}
+}
+.price-cta .btn.main{background:var(--marker);border-color:var(--marker);color:var(--ink);--fill:var(--ink)}
+.price-cta .btn.main:hover{background:var(--ink);border-color:var(--ink);color:#fff}
+.packages{position:relative;border-top-color:transparent}
+.packages::before,.packages .prow::after{content:"";position:absolute;left:0;right:0;height:1px;background:var(--ink);transform:scaleX(var(--ln,1));transform-origin:0 50%;pointer-events:none}
+.packages::before{top:-1px}
+.packages .prow{position:relative;border-bottom-color:transparent}.packages .prow::after{bottom:-1px;background:var(--rule)}
+.kicker::after{transform:scaleX(var(--kl,1));transform-origin:0 50%}
+#contact{position:relative;z-index:1}
+.work-pin{position:relative}
+.work-now{display:none}
+@media(min-width:900px){
+  .work-now{display:flex;align-items:center;gap:clamp(14px,1.4vw,28px);position:absolute;z-index:2;left:clamp(24px,4vw,96px);right:clamp(24px,4vw,96px);top:clamp(20px,3.2vh,44px);margin:0;color:#fff;font:500 var(--fs-label)/1.2 var(--sans);opacity:0;pointer-events:none}
+  .work-now b{flex:1;height:1px;background:#ffffff2e;position:relative;overflow:hidden}
+  .work-now b::after{content:"";position:absolute;inset:0;background:var(--marker);transform:scaleX(var(--wp,0));transform-origin:0 50%}
+}
+@media(max-width:899px){.work-track{padding:clamp(40px,8vw,64px) clamp(18px,5vw,40px)}}
+@media(max-width:760px){
+  header{min-height:68px}
+  .header-contact{width:42px;height:42px;min-height:0;padding:0;font-size:0;border:0}
+  .header-contact::before{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='1.8' stroke-linejoin='round'%3E%3Crect x='3' y='5.5' width='18' height='13' rx='2'/%3E%3Cpath d='m3.5 7 8.5 6.5L20.5 7'/%3E%3C/svg%3E")}
+  .hero{padding-top:18px}
+  .intro{grid-template-columns:minmax(0,1fr);grid-template-areas:"loc" "h1" "lead" "price" "btns" "risk";padding-bottom:22px}
+  .location{margin-bottom:10px}.intro>h1{margin-bottom:16px}
+  .lead{font-size:18px;line-height:1.4}.hero-price-line{margin:12px 0 16px}.intro>.btns{justify-self:start}
+  .intro .btn.outward{min-height:52px;padding:0 22px}
+  .hero .live-demo{grid-template-columns:minmax(0,1fr);padding:14px;gap:10px}
+  .live-demo .ld-client,.live-demo .ld-owner{padding:18px}
+  .packages .prow{grid-template-columns:minmax(0,1fr) auto;grid-template-areas:"name name" "text text" "link link" "term eur";align-items:baseline}
+  .packages .term{justify-self:start}.packages .eur{font-size:clamp(36px,10vw,48px)}
+  .stmtsec{grid-template-columns:minmax(0,1fr)}
+  #contact .arc{left:-20%;width:140%}
+}
+@media(prefers-reduced-motion:no-preference) and (max-width:760px){.hero .live-demo{--cs:.96}}
+@media(max-width:380px){.identity .monogram{display:none}}
+@media(max-width:540px){
+  h1{font-size:min(44px,calc(10.6vw - 1px))}
+  header{gap:6px}.identity{font-size:15px}.lang{gap:0}
+  .monogram{width:36px;height:36px}.lang button{min-width:30px;min-height:30px;padding:3px}.header-contact{width:38px;height:38px}
+}
+</style>
+<link rel="stylesheet" href="lib/novy.css">
+<link rel="stylesheet" href="lib/v2.css?v=2">
+<style>
+/* ===== multi-page: doors, page hero, next link, page transition (build_site.py) ===== */
+.doors{margin-top:clamp(64px,8vw,180px)}
+.drs{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(4,1fr);gap:clamp(12px,1.6vw,32px)}
+.drs li:nth-child(even){margin-top:clamp(0px,7vh,96px)}
+.drs a{display:block;text-decoration:none;color:inherit}
+.dph{display:block;aspect-ratio:4/5;overflow:hidden;border-radius:var(--r-island);background:var(--night)}
+.dph>span{display:block;height:100%}
+.dph img{display:block;width:100%;height:100%;object-fit:cover;transition:transform 1.2s cubic-bezier(.16,1,.3,1)}
+.drs strong{display:flex;justify-content:space-between;align-items:baseline;gap:10px;font:500 clamp(26px,2.6vw,56px)/1.05 var(--sans);letter-spacing:-.03em;margin:clamp(14px,1.4vw,26px) 0 8px}
+.drs strong i{font-style:normal;color:var(--blue);transition:transform .6s cubic-bezier(.2,.8,.2,1)}
+.drs .dl{display:block;color:var(--muted);font:400 clamp(14px,1vw,19px)/1.45 var(--sans);max-width:32ch}
+@media(hover:hover){.drs a:hover img{transform:scale(1.06)}.drs a:hover strong i{transform:translateX(.25em)}}
+@media(max-width:899px){.drs{grid-template-columns:1fr 1fr;gap:30px 14px}.drs li:nth-child(even){margin-top:40px}.drs strong{font-size:24px}.drs .dl{font-size:13.5px}}
+main>section.phero{margin-top:0;padding:clamp(40px,9vh,140px) 0 0}
+main>section.phero h1{font:500 clamp(72px,17vw,340px)/.9 var(--sans);letter-spacing:-.055em;margin:0;overflow-wrap:anywhere}
+main>section.phero.long h1{font-size:clamp(44px,11.5vw,230px)}
+.phero+section,main>.phero+section.work{margin-top:clamp(36px,5vw,110px)}
+.nxt a{display:flex;align-items:baseline;gap:.25em;padding:clamp(22px,3vw,56px) 0;border-top:1px solid var(--rule);border-bottom:1px solid var(--rule);text-decoration:none;color:inherit;font:500 clamp(44px,9vw,190px)/1 var(--sans);letter-spacing:-.045em;transition:color .4s,padding .6s cubic-bezier(.2,.8,.2,1)}
+.nxt small{font:inherit;color:var(--blue);transition:transform .6s cubic-bezier(.2,.8,.2,1)}
+@media(hover:hover){.nxt a:hover{color:var(--blue);padding-left:.35em}.nxt a:hover small{transform:translateX(.15em)}}
+.nb-cta .cta-row{grid-column:1/-1;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:20px 40px}
+.nb-cta .cta-row p{margin:0;max-width:30ch;color:#c9cad3;font:400 var(--fs-lead)/1.3 var(--sans)}
+#contact.nb-cta .btn.main{background:#fff;border-color:#fff;color:#0d0d0d}#contact.nb-cta .btn.main:hover{background:var(--marker);border-color:var(--marker);color:#0d0d0d}
+.page-nav a[aria-current],.nvm-links a[aria-current]{color:var(--blue)}
+html::before,html::after{content:"";position:fixed;inset:0;z-index:99999;pointer-events:none;transform:translateY(101%);will-change:transform}
+html::before{background:var(--marker,#f6df45)}html::after{background:#0d0d0d}
+html.pt-out::before{transform:none;transition:transform .5s cubic-bezier(.7,0,.2,1)}
+html.pt-out::after{transform:none;transition:transform .5s .09s cubic-bezier(.7,0,.2,1)}
+html.pt-in::before,html.pt-in::after{transform:none}
+html.pt-in.pt-go::after{transform:translateY(-101%);transition:transform .6s cubic-bezier(.7,0,.2,1)}
+html.pt-in.pt-go::before{transform:translateY(-101%);transition:transform .6s .1s cubic-bezier(.7,0,.2,1)}
+html.pt-in .curtain{display:none}
+@media(prefers-reduced-motion:reduce){html::before,html::after{display:none}}
+</style>
+<script>try{if(sessionStorage.pt){sessionStorage.removeItem('pt');document.documentElement.classList.add('pt-in','wow-noload')}}catch(e){}</script>
+</head>
+<body data-mode="biz" id="top" data-grain>
+<div class="curtain" aria-hidden="true"><svg class="cu-ring" viewBox="0 0 100 100"><circle cx="50" cy="50" r="49" pathLength="100" transform="rotate(-90 50 50)"/></svg><div class="cu-f"><div class="cu-ph"><span class="cu-p"></span><span class="cu-p"></span><span class="cu-p"></span><span class="cu-p"></span></div><i></i><i></i><i></i><i></i><b class="nv-plate cu-plate"><time>18:30</time><span data-i="plSvc">Manikúra</span></b></div><span class="cu-w">Davyd Konstantinov</span><span class="cu-n">2026</span></div>
+<script>(()=>{const c=document.querySelector('.curtain'),k=()=>c.classList.add('cu-skip');addEventListener('pointerdown',k,{once:true});addEventListener('keydown',k,{once:true});addEventListener('wheel',k,{once:true,passive:true})})()</script>
+<div class="progress" aria-hidden="true"></div>
+<div class="wrap">
+<header>
+  <a class="identity" href="./"><span class="monogram" aria-hidden="true" data-i="monogram">dk</span><span>Davyd Konstantinov<small data-i="studio">Webové štúdio</small></span></a>
+  <nav class="page-nav" data-aria="navigation"><a href="ukazky.html" data-i="workNav">Ukážky</a><a href="ceny.html" data-i="prb">Ceny</a><a class="nav-x" href="#kto" aria-current="page" data-i="n_who_h">Kto to robí</a><a class="nav-x" href="kontakt.html#faq" data-i="faqh">Časté otázky</a></nav>
+  <div class="lang" role="group" data-aria="lgh">
+    <button type="button" data-set="sk" aria-label="Slovenčina" aria-pressed="true">SK</button>
+    <button type="button" data-set="en" aria-label="English" aria-pressed="false">EN</button>
+    <button type="button" data-set="ru" aria-label="Русский" aria-pressed="false">RU</button>
+    <button type="button" data-set="uk" aria-label="Українська" aria-pressed="false">UA</button>
+  </div>
+  <a class="header-contact arrow biz" href="kontakt.html#qf" data-write data-magnetic><span class="hc-l" data-i="mailb">Napísať mi</span><span class="hc-s" data-i="mailS">Napísať</span></a>
+  <button type="button" class="nv-burger" aria-haspopup="dialog" aria-controls="nv-menu" onclick="document.getElementById('nv-menu').showModal()"><span data-i="menu">Menu</span></button>
+  <a class="btn job" href="kontakt.html#qf" data-write data-i="mail">Napísať e-mail</a>
+</header>
+<dialog class="nv-menu" id="nv-menu" data-aria="menu" data-lenis-prevent>
+  <div class="nvm-top"><span class="monogram" aria-hidden="true">dk</span><form method="dialog"><button class="nv-burger nvm-x" data-i="nvClose">Zavrieť</button></form></div>
+  <nav class="nvm-links" data-aria="navigation">
+    <a href="ukazky.html" data-i="workNav">Ukážky</a>
+    <a href="ceny.html" data-i="prb">Ceny</a>
+    <a href="#kto" aria-current="page" data-i="n_who_h">Kto to robí</a>
+    <a href="kontakt.html#faq" data-i="faqh">Časté otázky</a>
+    <a href="kontakt.html#qf" data-write data-i="mailb">Napísať mi</a>
+  </nav>
+  <div class="lang nvm-lang" role="group" data-aria="lgh">
+    <button type="button" data-set="sk" aria-label="Slovenčina" aria-pressed="true">SK</button>
+    <button type="button" data-set="en" aria-label="English" aria-pressed="false">EN</button>
+    <button type="button" data-set="ru" aria-label="Русский" aria-pressed="false">RU</button>
+    <button type="button" data-set="uk" aria-label="Українська" aria-pressed="false">UA</button>
+  </div>
+  <div class="nvm-ch"><a href="https://wa.me/421910392871" data-wa><span data-i="waName">WhatsApp</span> <span>+421 910 392 871</span></a><a href="tel:+421910392871" data-i="callName">Zavolať</a><a href="https://t.me/+421910392871" data-i="tgName">Telegram</a></div>
+</dialog>
+<script>(()=>{const m=document.getElementById('nv-menu');m.addEventListener('click',e=>{if(e.target.closest('a'))m.close()},true)})()/* a menu link closes the menu first, then does its own job */</script>
+<script>window.PG={t:"n_who_h",d:"n_who_p"}</script>
+<main>
+<section class="phero biz long"><p class="kicker"><i>03</i> <span>Davyd Konstantinov</span></p><h1 data-split>Davyd Konstantinov</h1></section>
+<section id="kto" class="biz nb-who">
+  <div class="nb-who__photo" data-clip><img data-src="media/davyd-sunset-640.webp" data-srcset="media/davyd-sunset-360.webp 360w, media/davyd-sunset-640.webp 640w" sizes="(max-width:760px) 320px, 400px" width="640" height="640" loading="lazy" decoding="async" alt="Davyd Konstantinov" data-alt="meAlt"></div>
+  <div class="nb-who__text">
+    <h2 data-split data-i="n_who_h">Kto to robí</h2>
+    <p class="nb-who__lead" data-i="n_who_p">Píšete priamo mne, Davydovi. Web robím sám, od návrhu po spustenie.</p>
+    <ul class="nb-who__facts">
+      <li data-i="n_who1">Bratislava, pracujem na diaľku</li>
+      <li data-i="n_who2">Píšem po slovensky, ukrajinsky, rusky aj anglicky</li>
+      <li data-i="n_who3">Na dohodu o vykonaní práce</li>
+      <li data-i="n_who4">Všetko riešime písomne</li>
+      <li data-i="n_who5">Aj túto stránku som robil ja</li>
+    </ul>
+  </div>
+</section>
+<section id="roles" class="job">
+  <h2 data-i="rh">Na aké pozície sa hlásim</h2>
+  <div class="trio">
+    <div class="box"><h3 data-i="r1t">Zákaznícka a technická podpora</h3><p data-i="r1p">Chat, e-mail aj telefón v angličtine a slovenčine. Trpezlivo zistím, čo sa stalo, a riešenie vysvetlím jednoducho.</p></div>
+    <div class="box"><h3 data-i="r2t">Tester / QA junior</h3><p data-i="r2p">Manuálne testovanie botov, formulárov a prepojení. Hlásenia chýb s krokmi, očakávaným výsledkom a logmi.</p></div>
+    <div class="box"><h3 data-i="r3t">AI automatizácia</h3><p data-i="r3p">Telegram boty, n8n workflowy a Python skripty, ktoré berú rutinu z rúk tímu. AI je môj hlavný nástroj.</p></div>
+  </div>
+</section>
+
+
+
+<section class="job">
+  <div class="band"><h2 data-i="lgh">Jazyk</h2><p data-i="lgp">Angličtina na úrovni B2, písomne sa dohovorím isto. Slovenčine dobre rozumiem a bežne sa dohovorím.</p></div>
+</section>
+
+<section id="cv" class="job">
+  <h2 data-i="cvh">Životopisy</h2>
+  <div class="cvs">
+    <a class="cvl" data-cv="Support" target="_blank" rel="noopener"><b data-i="r1t">Zákaznícka a technická podpora</b><span>PDF</span></a>
+    <a class="cvl" data-cv="QA" target="_blank" rel="noopener"><b data-i="r2t">Tester / QA junior</b><span>PDF</span></a>
+    <a class="cvl" data-cv="Automation" target="_blank" rel="noopener"><b data-i="r3t">AI automatizácia</b><span>PDF</span></a>
+  </div>
+</section>
+<section class="nxt biz"><a href="ukazky.html" data-cursor="→" data-reveal><small aria-hidden="true">→</small><span data-i="workNav">Ukážky</span></a></section>
+<section id="contact" class="nb-contact nb-cta"><i class="arc" aria-hidden="true"></i><i class="glow" data-speed="0.75" aria-hidden="true"></i>
+  <div class="final-top" data-reveal><h2 data-split data-i="n_c_h">Vaša prvá rezervácia.</h2><a class="bigbtn" href="https://wa.me/421910392871" data-wa data-magnetic data-cursor="WhatsApp"><span data-i="waName">WhatsApp</span></a></div>
+  <div class="cta-row" data-reveal><p data-i="n_c_p"></p><a class="btn main arrow" href="kontakt.html#qf" data-magnetic data-roll><span data-i="cta"></span></a></div>
+</section>
+</main>
+
+<!-- 12. PATICKA -->
+<footer class="nb-foot"><span class="nb-foot__sub" data-i="n_foot_sub">Bratislava · weby, boty, automatizácie</span><span>© 2026 Davyd Konstantinov · <span data-i="legal">Pracujem na dohodu o vykonaní práce</span></span><a href="ochrana-udajov.html" data-i="privacy">Ochrana osobných údajov</a><a href="./" data-i="backTop">Späť hore</a><div class="sig" aria-hidden="true"><span>Davyd Konstantinov</span></div></footer>
+<script>(()=>{const s=document.querySelector('footer .sig'),w=s.firstElementChild;w.innerHTML=[...w.textContent].map(c=>'<i>'+(c==' '?'&nbsp;':c)+'</i>').join('');const f=()=>{s.style.fontSize='';const x=w.getBoundingClientRect().width;if(x)s.style.fontSize=parseFloat(getComputedStyle(s).fontSize)*s.clientWidth/x*.995+'px'};f();document.fonts&&document.fonts.ready.then(f);addEventListener('resize',f,{passive:true})})()/* the signature fills the width exactly */</script>
+</div>
+<script>
+const T = {
+  "sk": {
+    "title": "Davyd Konstantinov: weby s online rezerváciou pre malé firmy na Slovensku",
+    "desc": "Weby s online rezerváciou a dopytmi pre malé firmy na Slovensku. Zákazník sa objedná priamo na webe, vy vidíte rezervácie v paneli na mobile. 4 jazyky. Ceny od 80 €.",
+    "h1": "Web pre váš podnik.",
+    "lead": "Robím weby pre salóny, autoservisy a lektorov. Zákazník si vyberie termín na webe a vy vidíte rezerváciu v mobile.",
+    "g1": "Web v slovenčine, ukrajinčine, ruštine a angličtine",
+    "f1": "Bratislava, pracujem na diaľku",
+    "f2": "Všetko vyriešime písomne",
+    "f3": "Na dohodu o vykonaní práce",
+    "f4": "Aj túto stránku som robil ja",
+    "g2": "Zákazník sa objedná na webe sám, bez aplikácie a registrácie",
+    "g3": "Rezervácie a dopyty vidíte v paneli na mobile, upozornenie príde e-mailom alebo do Telegramu",
+    "mail": "Napísať e-mail",
+    "cvb": "Životopis (PDF)",
+    "smp": "Ukážky práce (EN)",
+    "tg": "Napísať na Telegram",
+    "c0": "Rezervačný bot",
+    "c1": "Ahoj! Strih zajtra po piatej?",
+    "c2": "Voľné: 17:00, 18:30, 19:00. Ktorý termín?",
+    "c3": "18:30",
+    "c4": "Zarezervované. Pripomeniem 2 hodiny vopred.",
+    "cn": "Ukážka z môjho projektu, nie skutočná konverzácia",
+    "rh": "Na aké pozície sa hlásim",
+    "r1t": "Zákaznícka a technická podpora",
+    "r1p": "Chat, e-mail aj telefón v angličtine a slovenčine. Trpezlivo zistím, čo sa stalo, a riešenie vysvetlím jednoducho.",
+    "r2t": "Tester / QA junior",
+    "r2p": "Manuálne testovanie botov, formulárov a prepojení. Hlásenia chýb s krokmi, očakávaným výsledkom a logmi.",
+    "r3t": "AI automatizácia",
+    "r3p": "Telegram boty, n8n workflowy a Python skripty, ktoré berú rutinu z rúk tímu. AI je môj hlavný nástroj.",
+    "work": "Vyskúšajte si ukážky",
+    "soon": "Video už čoskoro",
+    "demo": "Otvoriť ukážku v Telegrame",
+    "w0t": "Web salónu s online rezerváciou",
+    "w0p": "Vyberte si službu, špecialistku a čas. Rezerváciu potom nájdete aj v paneli majiteľa.",
+    "site": "Otvoriť ukážku webu",
+    "w1t": "Rezervačný bot pre salón",
+    "w1p": "Zákazník napíše „Máte voľno v piatok po 17:00?“, bot ponúkne voľné časy a zapíše ho. Majiteľ potvrdí jedným kliknutím, bot pripomenie návštevu. 4 jazyky.",
+    "w2t": "Monitor inzerátov a cien",
+    "w2p": "Sleduje bazos.sk, nové inzeráty ukladá do tabuľky Google a hneď pošle upozornenie do Telegramu.",
+    "w3t": "Obchod v Telegrame",
+    "w3p": "Katalóg, košík a objednávka priamo v chate.",
+    "w4t": "Dopyty z webu",
+    "w4p": "Dopyt z formulára sa uloží do tabuľky a majiteľovi príde správa do Telegramu.",
+    "w5p": "Ovládanie hudby a hlasitosti v počítači z hodiniek alebo telefónu cez domácu sieť.",
+    "lgh": "Jazyk",
+    "lgp": "Angličtina na úrovni B2, písomne sa dohovorím isto. Slovenčine dobre rozumiem a bežne sa dohovorím.",
+    "faqh": "Časté otázky",
+    "q1": "Koľko stojí web?",
+    "a1": "Jednoduchý web alebo landing page od 250 €, web s online rezerváciou a panelom od 350 €. Presnú cenu poviem pred začiatkom práce.",
+    "q2": "Ako to riešime zmluvne?",
+    "a2": "Oficiálne, na dohodu o vykonaní práce s vašou firmou na Slovensku.",
+    "q3": "V ktorých jazykoch robíte weby?",
+    "a3": "Slovenčina, ukrajinčina, ruština a angličtina. Písať si môžeme v ktoromkoľvek z nich.",
+    "q4": "Sú potrebné telefonáty?",
+    "a4": "Nie, všetko vyriešime písomne cez WhatsApp alebo e-mail. Ak vám viac vyhovuje hovor, stačí jeden krátky na začiatku.",
+    "prch": "Ako prebieha práca",
+    "s1t": "Napíšete zadanie",
+    "s1p": "Pár riadkov na WhatsApp alebo e-mailom: čo potrebujete a pre akú firmu. Opýtam sa na detaily, poviem cenu a termín.",
+    "s2t": "Ukážem",
+    "s2p": "Pripravím funkčnú verziu a pošlem odkaz, aby ste si ju sami vyskúšali na mobile.",
+    "s3t": "Úpravy a spustenie",
+    "s3p": "Zapracujem pripomienky, pripojím vašu doménu, e-mail alebo Telegram a tabuľku.",
+    "s4t": "Odovzdanie",
+    "s4p": "Krátky návod: ako všetko funguje a čo robiť, keď sa niečo pokazí. Všetko zostáva na vašich účtoch.",
+    "cvh": "Životopisy",
+    "ch": "Aký web potrebujete?",
+    "cp": "Napíšte mi pár slov o svojom podniku. Ozvem sa s cenou a termínom.", "payNote": "Najprv vám ukážem hotový web. Platíte, až keď sa vám páči.",
+    "site2": "Vyskúšať web salónu",
+    "demo2": "Otvoriť ukážku bota",
+    "prb": "Ceny",
+    "sc_t": "Online rezervácia",
+    "sc_n": "Meno",
+    "sc_s": "Služba a čas",
+    "sc_b": "Rezervovať",
+    "sc_b2": "Rezervácia potvrdená",
+    "sc_bot": "panel majiteľa",
+    "sc_new": "Nová rezervácia",
+    "sc_m": "Olena, manikúra, piatok 18:30",
+    "sc_ok": "Otvoriť",
+    "sc_ok2": "Videné",
+    "ty_n": "Olena",
+    "ty_s": "Manikúra, piatok 18:30",
+    "ph": "Služby a ceny",
+    "p0t": "Jednoduchý web alebo landing page",
+    "p0p": "Stránka o vás: služby, ceny, kontakty a formulár. Web pripravím v jazykoch, ktoré potrebujete, a bude sa ľahko používať aj na mobile.",
+    "p0d": "do 5 dní",
+    "p0e": "od 250 €",
+    "p1t": "Upozornenie na každý dopyt z webu",
+    "p1p": "Každý dopyt z formulára vám príde e-mailom alebo správou a uloží sa do tabuľky Google.",
+    "p1d": "2 dni",
+    "p2t": "Ukrajinská alebo ruská verzia stránky",
+    "p2p": "Preložím vám web aj kontaktný formulár.",
+    "p2d": "3 dni",
+    "p3t": "Rezervačný bot v Telegrame",
+    "p3p": "Zákazník si sám vyberie čas a dostane pripomienku, vy len potvrdíte. Najprv vám zadarmo ukážem bota nastaveného na vaše služby. Ak sa vám páči, stojí 200 €. Ak nie, nič neplatíte.",
+    "p3d": "do 7 dní",
+    "p4t": "AI asistent na časté otázky",
+    "p4p": "Kým sa venujete klientom, asistent odpovedá na otázky o cenách a službách podľa vášho cenníka.",
+    "p4d": "10 dní",
+    "pfine": "Presnú cenu poviem pred začiatkom práce. Jednoduchý web pripravím do 5 dní, web s rezervačným systémom do 10 dní od chvíle, keď mi pošlete zoznam služieb, cenník a fotky. Ak potrebujete texty, cenník vo viacerých jazykoch alebo obrázky do reklamy, napíšte mi a pripravím vám cenovú ponuku.",
+    "ex": "Pozrieť ukážku",
+    "wa": "Alebo cez WhatsApp",
+    "callName": "Zavolať",
+    "privacy": "Ochrana osobných údajov",
+    "mailb": "Napísať mi",
+    "tgs": "alebo cez Telegram",
+    "wat": "Dobrý deň, píšem z vašej stránky.",
+    "deal": "Web od 250 € · bez mesačných poplatkov · platíte až po tom, čo uvidíte hotový web",
+    "akh": "Ako to prebieha",
+    "ak1": "Napíšete, čo potrebujete",
+    "ak2": "Ukážem vám hotový web s vašimi službami a cenami",
+    "ak3": "Platíte, až keď ste spokojní",
+    "akf": "Web, doména aj prístupy sú vaše. Doména stojí asi 15 € ročne a platíte ju priamo registrátorovi.",
+    "stmt": "Zákazník si termín vyberie sám, aj v nedeľu o polnoci. Vy ho ráno nájdete v kalendári v mobile.",
+    "workSub": "Klikajte, rezervujte si termín, prepínajte jazyky. Všetko naozaj funguje.",
+    "ak1p": "Pár slov o vašom podniku: aké služby ponúkate a v akých jazykoch má byť web.",
+    "ak2p": "Za 5–10 dní dostanete odkaz a web aj rezerváciu si sami vyskúšate.",
+    "ak3p": "Upravím, čo treba, a spustím web na vašej doméne. Prvý mesiac sú úpravy zadarmo.",
+    "gt": "Váš web",
+    "gtp": "Hotový za 5–10 dní. Bez mesačných poplatkov.",
+    "qb": "Aký máte podnik? (nepovinné)",
+    "qn": "Čo potrebujete?",
+    "qk": "Váš telefón alebo e-mail",
+    "qe": "Napíšte aspoň pár slov, čo potrebujete.",
+    "qwa": "Poslať cez WhatsApp",
+    "qml": "Odoslať",
+    "qL1": "Podnik",
+    "qL2": "Potrebujem",
+    "qL3": "Kontakt",
+    "qs": "Dopyt z webu",
+    "p5t": "Web s online objednávaním a prehľadom rezervácií",
+    "p5p": "Zákazník si sám vyberie službu a čas priamo na webe. Rezervácie vidíte v paneli na mobile, môžete ich presunúť alebo zrušiť. Bez mesačných poplatkov.",
+    "p5d": "do 10 dní",
+    "p5e": "od 350 €",
+    "bellaName": "Studio Bella",
+    "garageName": "Garáž 4",
+    "waName": "WhatsApp",
+    "tgName": "Telegram",
+    "helloSK": "Dobrý deň.",
+    "helloUA": "Добрий день.",
+    "studio": "Webové štúdio",
+    "location": "Bratislava, Slovensko",
+    "h1end": "Rezervácie online.",
+    "priceFact": "Hotové za 5–10 dní",
+    "payFact": "Platíte až za funkčný web",
+    "feeFact": "Bez mesačných poplatkov",
+    "rb1": "Úpravy počas prvého mesiaca zadarmo",
+    "rb2": "Stránka v štyroch jazykoch",
+    "workNav": "Ukážky",
+    "bookingDemo": "Web s online rezerváciou",
+    "desktopAlt": "Web salónu Studio Bella na počítači",
+    "mobileAlt": "Mobilná verzia webu Studio Bella",
+    "garageDesc": "Web autoservisu. Kalkulačka ukáže cenu prezutia vopred a zákazník si hneď vyberie deň a čas.",
+    "translationName": "Pred a po",
+    "translationDesc": "Porovnajte pôvodnú stránku s ukrajinskou a ruskou verziou.",
+    "moreWork": "Ďalšie projekty vrátane rezervačného bota",
+    "sending": "Odosielam…",
+    "contactError": "Zadajte telefón alebo e-mail, aby som vám mohol odpovedať.",
+    "sendError": "Správu sa nepodarilo odoslať. Skúste to znova alebo mi napíšte cez WhatsApp.",
+    "thankTitle": "Ďakujem za správu.",
+    "thankText": "Ozvem sa vám do jedného dňa.",
+    "copy": "Kopírovať",
+    "copied": "Adresa je skopírovaná.",
+    "copyManual": "Označte a skopírujte e-mailovú adresu.",
+    "backTop": "Späť hore",
+    "monogram": "dk",
+    "previewUrl": "konstantinov.sk/studio-bella/",
+    "navigation": "Navigácia",
+    "cta": "Zistiť cenu a termín",
+    "hp1": "Jednoduchý web od 250 €",
+    "hp2": "S online rezerváciou od 350 €",
+    "hpShort": "Web od 250 €, s rezervačným systémom od 350 €",
+    "legal": "Pracujem na dohodu o vykonaní práce",
+    "q5": "Za aký čas bude web hotový?",
+    "a5": "Jednoduchý web do 5 dní, web s online rezerváciou do 10 dní. Počítam od chvíle, keď mi pošlete zoznam služieb, cenník a fotky.",
+    "q6": "Čo ak sa mi web nebude páčiť?",
+    "a6": "Najprv vám pošlem odkaz na hotový web a upravím ho podľa vašich pripomienok. Platíte, až keď sa vám páči.",
+    "q7": "Platí sa niečo mesačne?",
+    "a7": "Mne nie. Platíte len doménu, asi 15 € ročne, a to priamo registrátorovi.",
+    "q8": "Kto bude meniť texty a ceny?",
+    "a8": "Prvý mesiac po spustení ich zmením ja, zadarmo. Stačí mi napísať. Neskôr sa dohodneme na cene.",
+    "exG": "Ukážka: autoservis Garáž 4",
+    "exB": "Rezervovať si termín v salóne Studio Bella",
+    "exF": "Pozrieť formulár na dopyt",
+    "exT": "Porovnať pred a po",
+    "exBot": "Napísať botovi v Telegrame",
+    "exAI": "Opýtať sa AI asistenta",
+    "who": "Píšete priamo mne, Davydovi. Web robím sám, od návrhu po spustenie.",
+    "meAlt": "Davyd Konstantinov",
+    "addh": "Doplnkové služby",
+    "panelAlt": "Panel majiteľa na mobile: rezervácie na deň, nová rezervácia z webu",
+    "heroRisk": "Najprv uvidíte hotový web. Platíte, až keď ste spokojní.",
+    "ldC": "Zákazník na webe",
+    "ldSvc": "Manikúra, 45 min",
+    "ldDay": "Vyberte čas na piatok",
+    "ldBook": "Rezervovať",
+    "ldDone": "Rezervované ✓",
+    "ldO": "Váš kalendár rezervácií",
+    "ldA": "Anna · strih",
+    "ldF": "Lucia · pedikúra",
+    "ldB": "Mária · farbenie",
+    "ldN": "Nová · manikúra",
+    "ldE": "Eva · obočie",
+    "ldHint": "Skúste: vyberte čas a kliknite na Rezervovať.",
+    "ldSeen": "Hotovo. Nová rezervácia sa objavila vo vašom kalendári.",
+    "look": "Pozrieť",
+    "mailS": "Napísať",
+    "menu": "Menu",
+    "nvClose": "Zavrieť",
+    "ldCap": "Ukážka: rezervácia pre váš podnik",
+    "plSvc": "Manikúra",
+    "botsH": "Boty a automatizácie",
+    "botsSub": "Krátke ukážky. Ťuknite a pozrite si celé video.",
+    "fullVid": "Celé video",
+    "stmtK": "Čo dostanete"
+  },
+  "en": {
+    "title": "Davyd Konstantinov: websites with online booking for small businesses in Slovakia",
+    "desc": "Websites with online booking and enquiry forms for small businesses in Slovakia. Clients book right on the site, and you see every booking in a panel on your phone. 4 languages. Prices from €80.",
+    "h1": "Your business website.",
+    "lead": "I build websites for salons, garages and tutors. Your clients pick a time on the site. You see the booking on your phone.",
+    "g1": "A website in Slovak, Ukrainian, Russian and English",
+    "f1": "Based in Bratislava, working remotely",
+    "f2": "Everything is settled in writing",
+    "f3": "Official contract (dohoda)",
+    "f4": "I built this page too",
+    "g2": "Clients book on the website themselves, with no app and no sign-up",
+    "g3": "You see bookings and enquiries in a dashboard on your phone and get a notification by email or Telegram",
+    "mail": "Send an email",
+    "cvb": "CV (PDF)",
+    "smp": "Support writing samples",
+    "tg": "Message me on Telegram",
+    "c0": "Booking bot",
+    "c1": "Hi! Haircut tomorrow after 5pm?",
+    "c2": "Free: 17:00, 18:30, 19:00. Which one?",
+    "c3": "18:30",
+    "c4": "Booked. I'll remind you 2 hours before.",
+    "cn": "From one of my projects, not a real chat",
+    "rh": "Roles I'm applying for",
+    "r1t": "Customer & technical support",
+    "r1p": "Chat, email and phone in English and Slovak. I patiently find out what happened and explain the fix in plain words.",
+    "r2t": "Junior QA tester",
+    "r2p": "Manual testing of bots, forms and integrations. Bug reports with steps, expected result and logs.",
+    "r3t": "AI automation",
+    "r3p": "Telegram bots, n8n workflows and Python scripts that handle routine work for a team. AI is my main tool.",
+    "work": "Try the live examples",
+    "soon": "Video coming soon",
+    "demo": "Open the example in Telegram",
+    "w0t": "Salon website with online booking",
+    "w0p": "Choose a service, specialist and time. Then open the owner’s panel to see your booking.",
+    "site": "Open the sample website",
+    "w1t": "Booking bot for a salon",
+    "w1p": "A customer types “any slot on Friday after 5?”, and the bot offers available times and books the chosen slot. The owner confirms in one tap, and the bot sends a reminder. 4 languages.",
+    "w2t": "Listings and price monitor",
+    "w2p": "Watches bazos.sk, saves new listings to Google Sheets and sends a Telegram alert straight away.",
+    "w3t": "Shop in Telegram",
+    "w3p": "Catalogue, cart and checkout right in the chat.",
+    "w4t": "Website enquiries",
+    "w4p": "An enquiry from the form goes into a spreadsheet and the owner gets a Telegram message.",
+    "w5p": "Control music and volume on a PC from a watch or phone over the home network.",
+    "lgh": "Language",
+    "lgp": "English at B2, confident in writing. I understand Slovak well and handle everyday conversation.",
+    "faqh": "Common questions",
+    "q1": "How much does a website cost?",
+    "a1": "A business website or landing page starts at €250, a website with online booking and an owner's panel at €350. You get the exact price before I start.",
+    "q2": "How do we make it official?",
+    "a2": "I work with your company under a dohoda o vykonaní práce (a Slovak work agreement). I am not self-employed, so we sign an agreement and I don't issue an invoice.",
+    "q3": "Which languages do you work in?",
+    "a3": "Slovak, Ukrainian, Russian and English. We can write to each other in any of them.",
+    "q4": "Do we need calls?",
+    "a4": "No, everything is settled in writing on WhatsApp or by email. If you prefer to talk, one short call at the start is enough.",
+    "prch": "How the work goes",
+    "s1t": "You describe the job",
+    "s1p": "A couple of lines on WhatsApp or by email: what you need and for what business. I ask questions, then give you a price and a timeline.",
+    "s2t": "I show it",
+    "s2p": "I build a working version and send a link so you can try it on your phone.",
+    "s3t": "Changes and launch",
+    "s3p": "I make the changes and connect your domain, email or Telegram, and the spreadsheet.",
+    "s4t": "Handover",
+    "s4p": "A short guide: how everything works and what to do if something breaks. Everything stays in your accounts.",
+    "cvh": "CVs",
+    "ch": "What does your site need?",
+    "cp": "Tell me a little about your business. I’ll get back to you with a price and timeline.", "payNote": "First I show you the finished site. You pay only when you like it.",
+    "site2": "Try the salon site",
+    "demo2": "Open the sample bot",
+    "prb": "Prices",
+    "sc_t": "Book online",
+    "sc_n": "Name",
+    "sc_s": "Service and time",
+    "sc_b": "Book",
+    "sc_b2": "Booking confirmed",
+    "sc_bot": "owner's panel",
+    "sc_new": "New booking",
+    "sc_m": "Olena, manicure, Friday 18:30",
+    "sc_ok": "Open",
+    "sc_ok2": "Seen",
+    "ty_n": "Olena",
+    "ty_s": "Manicure, Friday 18:30",
+    "ph": "Services and prices",
+    "p0t": "Business website or landing page",
+    "p0p": "A page about you: services, prices, contact details and an enquiry form. In the languages you need and easy to use on a phone.",
+    "p0d": "within 5 days",
+    "p0e": "from €250",
+    "p1t": "Website enquiries sent by email or Telegram and saved to a spreadsheet",
+    "p1p": "Every enquiry from the form reaches you by email or as a message and is saved to Google Sheets.",
+    "p1d": "2 days",
+    "p2t": "Ukrainian or Russian version of a page",
+    "p2p": "I translate your website and its contact form.",
+    "p2d": "3 days",
+    "p3t": "Booking bot in Telegram",
+    "p3p": "The customer picks a time and gets a reminder. You just confirm the booking. I'll show you the bot with your own services for free first. If you like it, it costs €200. If you don't, you owe nothing.",
+    "p3d": "up to 7 days",
+    "p4t": "AI replies to common questions",
+    "p4p": "Answers customers using your price list and common questions while you are busy.",
+    "p4d": "10 days",
+    "pfine": "I confirm the exact price before I start. The timeline starts once you send me your services, prices and photos. If you need copywriting, a price list in several languages or ad images, write to me and I will quote it.",
+    "ex": "See an example",
+    "wa": "Or use WhatsApp",
+    "callName": "Call",
+    "privacy": "Privacy policy (SK)",
+    "mailb": "Write to me",
+    "tgs": "or on Telegram",
+    "wat": "Hello, I'm writing from your website.",
+    "deal": "Website from €250 · no monthly fees · you pay only after you see the finished site",
+    "akh": "How it works",
+    "ak1": "You tell me what you need",
+    "ak2": "I show you the site with your services",
+    "ak3": "You pay only when you like it",
+    "akf": "The site, the domain and all logins are yours. A domain costs about €15 a year, and you pay the registrar directly.",
+    "stmt": "Customers pick a time themselves, even at midnight on a Sunday. In the morning you find the booking in the calendar on your phone.",
+    "workSub": "Click around, book a time, switch languages. It all really works.",
+    "ak1p": "A few words about your business: which services you offer and which languages the site needs.",
+    "ak2p": "Within 5–10 days you get a link and can try the site and make a test booking yourself.",
+    "ak3p": "I adjust what is needed and launch the site on your domain. Changes are free for the first month.",
+    "gt": "Your site",
+    "gtp": "Ready in 5–10 days. No monthly fees.",
+    "qb": "Type of business (optional)",
+    "qn": "What do you need?",
+    "qk": "Your phone number or email",
+    "qe": "Write at least a few words about what you need.",
+    "qwa": "Send via WhatsApp",
+    "qml": "Send",
+    "qL1": "Business",
+    "qL2": "I need",
+    "qL3": "Contact",
+    "qs": "Enquiry from the website",
+    "p5t": "Website with online booking and an owner's panel",
+    "p5p": "Clients pick a service and a time on the site. You see every booking in a panel on your phone and can move or cancel it. No monthly fees.",
+    "p5d": "within 10 days",
+    "p5e": "from €350",
+    "bellaName": "Studio Bella",
+    "garageName": "Garáž 4",
+    "waName": "WhatsApp",
+    "tgName": "Telegram",
+    "helloSK": "Dobrý deň.",
+    "helloUA": "Добрий день.",
+    "studio": "Web studio",
+    "location": "Bratislava, Slovakia",
+    "h1end": "Online booking.",
+    "priceFact": "Ready in 5–10 days",
+    "payFact": "Pay once your site works",
+    "feeFact": "No monthly fees",
+    "rb1": "Free changes for the first month",
+    "rb2": "Your site in four languages",
+    "workNav": "Examples",
+    "bookingDemo": "Website with online booking",
+    "desktopAlt": "Studio Bella salon website on desktop",
+    "mobileAlt": "Studio Bella salon website on mobile",
+    "garageDesc": "A garage website. The calculator shows the price up front and the customer picks a day and time.",
+    "translationName": "Before and after",
+    "translationDesc": "Compare the original page with its Ukrainian and Russian versions.",
+    "moreWork": "Booking bot and other projects",
+    "sending": "Sending…",
+    "contactError": "Enter a phone number or email so I can reply.",
+    "sendError": "Your message couldn’t be sent. Try again or send it via WhatsApp.",
+    "thankTitle": "Thanks for your message.",
+    "thankText": "I’ll reply within a day.",
+    "copy": "Copy",
+    "copied": "Email address copied.",
+    "copyManual": "Select the email address and copy it.",
+    "backTop": "Back to top",
+    "monogram": "dk",
+    "previewUrl": "konstantinov.sk/studio-bella/",
+    "navigation": "Navigation",
+    "cta": "Get a price and timeline",
+    "hp1": "Simple website from €250",
+    "hp2": "With online booking from €350",
+    "hpShort": "Website from €250, with booking from €350",
+    "legal": "I work under a dohoda o vykonaní práce (Slovak work agreement)",
+    "q5": "How long does it take?",
+    "a5": "A simple website takes up to 5 days, a website with online booking up to 10 days. The time starts when you send me your services, prices and photos.",
+    "q6": "What if I don’t like it?",
+    "a6": "First I send you a link to the finished site and change it based on your feedback. You pay only when you like it.",
+    "q7": "Are there monthly fees?",
+    "a7": "Not from me. You only pay for the domain, about €15 a year, directly to the registrar.",
+    "q8": "Who updates the website text and prices later?",
+    "a8": "For the first month after launch, I'll change them for free. Just send me a message. After that, we agree on a price.",
+    "exG": "Example: Garáž 4 garage website",
+    "exB": "Try booking at Studio Bella",
+    "exF": "See the enquiry form",
+    "exT": "Compare before and after",
+    "exBot": "Message the bot on Telegram",
+    "exAI": "Ask the AI assistant",
+    "who": "You talk to me, Davyd, directly. I build the site myself, from design to launch.",
+    "meAlt": "Davyd Konstantinov",
+    "addh": "Add-on services",
+    "panelAlt": "Owner panel on a phone: the day’s bookings and a new booking from the website",
+    "heroRisk": "You see the finished site first. You pay only when you're happy.",
+    "ldC": "Your customer, on the website",
+    "ldSvc": "Manicure, 45 min",
+    "ldDay": "Pick a time on Friday",
+    "ldBook": "Book",
+    "ldDone": "Booked ✓",
+    "ldO": "Your booking calendar",
+    "ldA": "Anna · haircut",
+    "ldF": "Lucia · pedicure",
+    "ldB": "Maria · colouring",
+    "ldN": "New · manicure",
+    "ldE": "Eva · brows",
+    "ldHint": "Try it: pick a time and press Book.",
+    "ldSeen": "Done. The new booking is now in your calendar.",
+    "look": "View",
+    "mailS": "Write",
+    "menu": "Menu",
+    "nvClose": "Close",
+    "ldCap": "Demo: booking for your business",
+    "plSvc": "Manicure",
+    "botsH": "Bots and automations",
+    "botsSub": "Short clips. Tap to watch the full video.",
+    "fullVid": "Full video",
+    "stmtK": "What you get"
+  },
+  "ru": {
+    "title": "Давид Константинов: сайты с онлайн-записью для малого бизнеса в Словакии",
+    "desc": "Сайты с онлайн-записью и заявками для малого бизнеса в Словакии. Клиент записывается прямо на сайте, вы видите записи в панели с телефона. 4 языка. Цены от 80 €.",
+    "h1": "Сайт для вашего дела.",
+    "lead": "Делаю сайты для салонов, автосервисов и репетиторов. Клиент выбирает время на сайте, а вы видите запись в телефоне.",
+    "g1": "Сайт на словацком, украинском, русском и английском",
+    "g2": "Клиент записывается на сайте сам, без приложения и регистрации",
+    "g3": "Записи и заявки видны вам в панели с телефона, уведомление приходит на почту или в Telegram",
+    "tg": "Написать в Telegram",
+    "site2": "Попробовать сайт салона",
+    "demo2": "Открыть пример бота",
+    "prb": "Цены",
+    "f1": "Братислава, работаю удалённо",
+    "f2": "Всё решаем перепиской",
+    "f3": "По договору (dohoda)",
+    "f4": "Эту страницу тоже сделал я",
+    "sc_t": "Запись онлайн",
+    "sc_n": "Имя",
+    "sc_s": "Услуга и время",
+    "sc_b": "Записаться",
+    "sc_b2": "Запись подтверждена",
+    "sc_bot": "панель владельца",
+    "sc_new": "Новая запись",
+    "sc_m": "Олена, маникюр, пятница 18:30",
+    "sc_ok": "Открыть",
+    "sc_ok2": "Просмотрено",
+    "ty_n": "Олена",
+    "ty_s": "Маникюр, пятница 18:30",
+    "ph": "Услуги и цены",
+    "p0t": "Сайт-визитка или лендинг",
+    "p0p": "Страница о вас: услуги, цены, контакты и форма заявки. На нужных языках, удобно открывать с телефона.",
+    "p0d": "до 5 дней",
+    "p0e": "от 250 €",
+    "p1t": "Заявки с сайта на почту или в Telegram и в таблицу",
+    "p1p": "Каждая заявка из формы приходит вам письмом или сообщением и сохраняется в Google Таблицу.",
+    "p1d": "2 дня",
+    "p2t": "Украинская или русская версия страницы",
+    "p2p": "Переведу ваш сайт и форму заявки.",
+    "p2d": "3 дня",
+    "p3t": "Бот записи в Telegram",
+    "p3p": "Клиент сам выбирает время и получает напоминание, вы только подтверждаете. Сначала бесплатно показываю бота на ваших услугах. Понравится, 200 €. Не понравится, ничего не должны.",
+    "p3d": "до 7 дней",
+    "p4t": "ИИ-помощник для частых вопросов",
+    "p4p": "Отвечает клиентам по вашему прайсу и частым вопросам, пока вы заняты.",
+    "p4d": "10 дней",
+    "pfine": "Точную цену назову до начала работы. Срок считаю с момента, когда вы пришлёте услуги, цены и фото. Если нужны тексты, прайс на нескольких языках или картинки для рекламы, напишите, я посчитаю.",
+    "work": "Попробуйте сами",
+    "soon": "Видео скоро будет",
+    "demo": "Открыть пример в Telegram",
+    "w0t": "Сайт салона с онлайн-записью",
+    "w0p": "Выберите услугу, мастера и время. Затем откройте панель владельца и найдите свою запись.",
+    "site": "Открыть сайт-пример",
+    "w1t": "Бот записи для салона",
+    "w1p": "Клиент пишет «есть окно в пятницу после 17?», бот предлагает свободное время и записывает. Владелец подтверждает одним нажатием, бот напоминает о визите. 4 языка.",
+    "w2t": "Монитор объявлений и цен",
+    "w2p": "Следит за bazos.sk, складывает новые объявления в Google Таблицу и сразу присылает уведомление в Telegram.",
+    "w3t": "Магазин в Telegram",
+    "w3p": "Каталог, корзина и оформление заказа прямо в чате.",
+    "w4t": "Заявки с сайта",
+    "w4p": "Заявка из формы попадает в таблицу, а владельцу приходит сообщение в Telegram.",
+    "prch": "Как идёт работа",
+    "s1t": "Вы пишете задачу",
+    "s1p": "Пара строк в WhatsApp или на почту: что нужно и для какого бизнеса. Задаю вопросы, называю цену и срок.",
+    "s2t": "Показываю",
+    "s2p": "Собираю рабочую версию и присылаю ссылку, чтобы вы сами попробовали с телефона.",
+    "s3t": "Правки и запуск",
+    "s3p": "Вношу правки, подключаю ваш домен, почту или Telegram и таблицу.",
+    "s4t": "Сдача",
+    "s4p": "Короткая инструкция: как всё работает и что делать, если что-то сломалось. Всё остаётся на ваших аккаунтах.",
+    "faqh": "Частые вопросы",
+    "q1": "Сколько стоит сайт?",
+    "a1": "Сайт-визитка или лендинг от 250 €, сайт с онлайн-записью и панелью от 350 €. Точную цену называю до начала работы.",
+    "q2": "Как оформляем?",
+    "a2": "Официально, по договору dohoda o vykonaní práce с вашей фирмой в Словакии. Я не živnostník, поэтому работаю по договору, а не по счёту.",
+    "q3": "На каких языках делаете?",
+    "a3": "Словацкий, украинский, русский и английский. Переписку веду на любом из них.",
+    "q4": "Нужны ли созвоны?",
+    "a4": "Нет, всё решаем перепиской в WhatsApp или по почте. Если вам удобнее голосом, хватит одного короткого звонка на старте.",
+    "ch": "Какой сайт вам нужен?",
+    "cp": "Расскажите немного о своём деле. Я отвечу, сколько будет стоить работа и когда сайт будет готов.", "payNote": "Сначала я покажу вам готовый сайт. Платите, только когда он вам нравится.",
+    "ex": "Посмотреть пример",
+    "wa": "Или в WhatsApp",
+    "callName": "Позвонить",
+    "privacy": "Защита личных данных (SK)",
+    "mailb": "Написать мне",
+    "tgs": "или в Telegram",
+    "wat": "Здравствуйте! Пишу с вашей страницы.",
+    "deal": "Сайт от 250 € · без ежемесячных платежей · платите, только когда увидите готовый сайт",
+    "akh": "Как это проходит",
+    "ak1": "Вы пишете, что нужно",
+    "ak2": "Я показываю сайт с вашими услугами",
+    "ak3": "Платите, только когда сайт вам нравится",
+    "akf": "Сайт, домен и доступы ваши. Домен стоит примерно 15 € в год, его вы оплачиваете напрямую регистратору.",
+    "stmt": "Клиент сам выбирает время, даже в воскресенье в полночь. А вы утром видите запись в календаре в телефоне.",
+    "workSub": "Нажимайте, записывайтесь, переключайте языки. Всё работает по-настоящему.",
+    "ak1p": "Пара слов о вашем деле: какие услуги и на каких языках нужен сайт.",
+    "ak2p": "Через 5–10 дней вы получаете ссылку и сами пробуете сайт и запись.",
+    "ak3p": "Правлю, что нужно, и запускаю сайт на вашем домене. Первый месяц правки бесплатно.",
+    "gt": "Ваш сайт",
+    "gtp": "Готов за 5–10 дней. Без ежемесячной платы.",
+    "qb": "Чем вы занимаетесь? (необязательно)",
+    "qn": "Что вам нужно?",
+    "qk": "Ваш телефон или электронная почта",
+    "qe": "Напишите хотя бы пару слов, что нужно.",
+    "qwa": "Отправить в WhatsApp",
+    "qml": "Отправить",
+    "qL1": "Бизнес",
+    "qL2": "Нужно",
+    "qL3": "Контакт",
+    "qs": "Запрос с сайта",
+    "p5t": "Сайт с онлайн-записью и панелью владельца",
+    "p5p": "Клиент сам выбирает услугу и время прямо на сайте. Записи вы видите в панели с телефона, можете перенести или отменить. Без ежемесячных платежей.",
+    "p5d": "до 10 дней",
+    "p5e": "от 350 €",
+    "bellaName": "Studio Bella",
+    "garageName": "Garáž 4",
+    "waName": "WhatsApp",
+    "tgName": "Telegram",
+    "helloSK": "Dobrý deň.",
+    "helloUA": "Добрий день.",
+    "studio": "Веб-студия",
+    "location": "Братислава, Словакия",
+    "h1end": "Запись онлайн.",
+    "priceFact": "Готово за 5–10 дней",
+    "payFact": "Оплата за работающий сайт",
+    "feeFact": "Без ежемесячных платежей",
+    "rb1": "Правки первый месяц бесплатно",
+    "rb2": "Сайт на четырёх языках",
+    "workNav": "Примеры",
+    "bookingDemo": "Сайт с онлайн-записью",
+    "desktopAlt": "Сайт салона Studio Bella на компьютере",
+    "mobileAlt": "Мобильная версия сайта Studio Bella",
+    "garageDesc": "Сайт автосервиса. Калькулятор сразу показывает цену, клиент выбирает день и время.",
+    "translationName": "До и после перевода",
+    "translationDesc": "Сравните исходную страницу с версиями на украинском и русском.",
+    "moreWork": "Бот для записи и другие проекты",
+    "sending": "Отправляю…",
+    "contactError": "Укажите телефон или почту, чтобы я мог вам ответить.",
+    "sendError": "Не удалось отправить сообщение. Попробуйте ещё раз или напишите в WhatsApp.",
+    "thankTitle": "Спасибо за сообщение.",
+    "thankText": "Я отвечу вам в течение суток.",
+    "copy": "Скопировать",
+    "copied": "Адрес скопирован.",
+    "copyManual": "Выделите и скопируйте адрес почты.",
+    "backTop": "Наверх",
+    "lgh": "Язык",
+    "monogram": "dk",
+    "previewUrl": "konstantinov.sk/studio-bella/",
+    "navigation": "Навигация",
+    "cta": "Узнать цену и срок",
+    "hp1": "Простой сайт от 250 €",
+    "hp2": "С онлайн-записью от 350 €",
+    "hpShort": "Сайт от 250 €, с записью от 350 €",
+    "legal": "Работаю по договору dohoda o vykonaní práce",
+    "q5": "Сколько делается сайт?",
+    "a5": "Простой сайт до 5 дней, сайт с онлайн-записью до 10 дней. Считаю с момента, когда вы пришлёте услуги, цены и фото.",
+    "q6": "А если сайт не понравится?",
+    "a6": "Сначала пришлю ссылку на готовый сайт и поправлю по вашим замечаниям. Платите, только когда нравится.",
+    "q7": "Есть ежемесячная плата?",
+    "a7": "Мне нет. Платите только за домен, около 15 € в год, напрямую регистратору.",
+    "q8": "Кто будет менять тексты и цены?",
+    "a8": "Первый месяц после запуска меняю я, бесплатно, просто напишите. Дальше договоримся о цене.",
+    "exG": "Пример: автосервис Garáž 4",
+    "exB": "Попробовать запись в Studio Bella",
+    "exF": "Посмотреть форму заявки",
+    "exT": "Сравнить до и после",
+    "exBot": "Написать боту в Telegram",
+    "exAI": "Спросить AI-ассистента",
+    "who": "Пишете напрямую мне, Давиду. Сайт делаю сам, от макета до запуска.",
+    "meAlt": "Давид Константинов",
+    "addh": "Дополнительные услуги",
+    "panelAlt": "Панель владельца на телефоне: записи на день и новая запись с сайта",
+    "heroRisk": "Сначала вы видите готовый сайт. Платите, только когда всё нравится.",
+    "ldC": "Клиент на сайте",
+    "ldSvc": "Маникюр, 45 мин",
+    "ldDay": "Выберите время на пятницу",
+    "ldBook": "Записаться",
+    "ldDone": "Записано ✓",
+    "ldO": "Ваш календарь записей",
+    "ldA": "Анна · стрижка",
+    "ldF": "Ольга · педикюр",
+    "ldB": "Мария · окрашивание",
+    "ldN": "Новая · маникюр",
+    "ldE": "Ева · брови",
+    "ldHint": "Попробуйте: выберите время и нажмите «Записаться».",
+    "ldSeen": "Готово. Новая запись уже в вашем календаре.",
+    "look": "Смотреть",
+    "mailS": "Написать",
+    "menu": "Меню",
+    "nvClose": "Закрыть",
+    "ldCap": "Пример: запись для вашего бизнеса",
+    "plSvc": "Маникюр",
+    "botsH": "Боты и автоматизация",
+    "botsSub": "Короткие ролики. Нажмите, чтобы посмотреть видео целиком.",
+    "fullVid": "Видео целиком",
+    "stmtK": "Что вы получаете"
+  },
+  "uk": {
+    "title": "Давид Константінов: сайти з онлайн-записом для малого бізнесу в Словаччині",
+    "desc": "Сайти з онлайн-записом і заявками для малого бізнесу в Словаччині. Клієнт записується просто на сайті, ви бачите записи в панелі з телефона. 4 мови. Ціни від 80 €.",
+    "h1": "Сайт для вашої справи.",
+    "lead": "Роблю сайти для салонів, автосервісів і репетиторів. Клієнт обирає час на сайті, а ви бачите запис у телефоні.",
+    "g1": "Сайт словацькою, українською, російською та англійською",
+    "g2": "Клієнт записується на сайті сам, без застосунку й реєстрації",
+    "g3": "Записи й заявки ви бачите в панелі з телефона, сповіщення приходить на пошту або в Telegram",
+    "tg": "Написати в Telegram",
+    "site2": "Спробувати сайт салону",
+    "demo2": "Відкрити приклад бота",
+    "prb": "Ціни",
+    "f1": "Братислава, працюю віддалено",
+    "f2": "Усе вирішуємо листуванням",
+    "f3": "За договором (dohoda)",
+    "f4": "Цю сторінку теж зробив я",
+    "sc_t": "Запис онлайн",
+    "sc_n": "Ім’я",
+    "sc_s": "Послуга і час",
+    "sc_b": "Записатися",
+    "sc_b2": "Запис підтверджено",
+    "sc_bot": "панель власника",
+    "sc_new": "Новий запис",
+    "sc_m": "Олена, манікюр, п’ятниця 18:30",
+    "sc_ok": "Відкрити",
+    "sc_ok2": "Переглянуто",
+    "ty_n": "Олена",
+    "ty_s": "Манікюр, п’ятниця 18:30",
+    "ph": "Послуги й ціни",
+    "p0t": "Сайт-візитка або лендинг",
+    "p0p": "Сторінка про вас: послуги, ціни, контакти й форма заявки. Потрібними мовами, зручно відкривати з телефона.",
+    "p0d": "до 5 днів",
+    "p0e": "від 250 €",
+    "p1t": "Заявки із сайту на пошту або в Telegram і в таблицю",
+    "p1p": "Кожна заявка з форми надходить вам листом або повідомленням і зберігається в Google Таблиці.",
+    "p1d": "2 дні",
+    "p2t": "Українська або російська версія сторінки",
+    "p2p": "Перекладу ваш сайт і форму заявки.",
+    "p2d": "3 дні",
+    "p3t": "Бот для запису в Telegram",
+    "p3p": "Клієнт сам обирає час і отримує нагадування, ви лише підтверджуєте. Спершу безкоштовно показую бота на прикладі ваших послуг. Сподобається, 200 €. Не сподобається, нічого не винні.",
+    "p3d": "до 7 днів",
+    "p4t": "ШІ-помічник для частих запитань",
+    "p4p": "Відповідає клієнтам за вашим прайсом і на часті запитання, поки ви зайняті.",
+    "p4d": "10 днів",
+    "pfine": "Точну ціну назву до початку роботи. Термін рахую з моменту, коли ви надішлете послуги, ціни і фото. Якщо потрібні тексти, прайс кількома мовами чи картинки для реклами, напишіть, я порахую.",
+    "work": "Спробуйте самі",
+    "soon": "Відео скоро буде",
+    "demo": "Відкрити приклад у Telegram",
+    "w0t": "Сайт салону з онлайн-записом",
+    "w0p": "Оберіть послугу, майстра й час. Потім відкрийте панель власника й перегляньте свій запис.",
+    "site": "Відкрити сайт-приклад",
+    "w1t": "Бот для запису клієнтів салону",
+    "w1p": "Клієнт пише «є вікно в п’ятницю після 17?», бот пропонує вільний час і записує. Власник підтверджує одним натисканням, бот нагадує про візит. 4 мови.",
+    "w2t": "Монітор оголошень і цін",
+    "w2p": "Стежить за bazos.sk, заносить нові оголошення в Google Таблицю й одразу надсилає сповіщення в Telegram.",
+    "w3t": "Магазин у Telegram",
+    "w3p": "Каталог, кошик і оформлення замовлення просто в чаті.",
+    "w4t": "Заявки із сайту",
+    "w4p": "Заявка з форми потрапляє в таблицю, а власнику надходить повідомлення в Telegram.",
+    "prch": "Як іде робота",
+    "s1t": "Ви пишете завдання",
+    "s1p": "Кілька рядків у WhatsApp або на пошту: що потрібно і для якого бізнесу. Ставлю запитання, називаю ціну і термін.",
+    "s2t": "Показую",
+    "s2p": "Збираю робочу версію і надсилаю посилання, щоб ви самі спробували з телефона.",
+    "s3t": "Правки і запуск",
+    "s3p": "Вношу правки, підключаю ваш домен, пошту або Telegram і таблицю.",
+    "s4t": "Здача",
+    "s4p": "Коротка інструкція: як усе працює і що робити, якщо щось зламалося. Усе залишається на ваших акаунтах.",
+    "faqh": "Часті запитання",
+    "q1": "Скільки коштує сайт?",
+    "a1": "Сайт-візитка або лендинг від 250 €, сайт з онлайн-записом і панеллю від 350 €. Точну ціну називаю до початку роботи.",
+    "q2": "Як оформлюємо?",
+    "a2": "Офіційно, за договором dohoda o vykonaní práce з вашою фірмою у Словаччині. Я не živnostník, тому працюю за договором, а не за рахунком.",
+    "q3": "Якими мовами робите?",
+    "a3": "Словацькою, українською, російською та англійською. Листуюся будь-якою з них.",
+    "q4": "Чи потрібні дзвінки?",
+    "a4": "Ні, усе вирішуємо листуванням у WhatsApp або поштою. Якщо вам зручніше голосом, вистачить одного короткого дзвінка на старті.",
+    "ch": "Який сайт вам потрібен?",
+    "cp": "Розкажіть трохи про свою справу. Я відповім, скільки коштуватиме робота й коли сайт буде готовий.", "payNote": "Спочатку я покажу вам готовий сайт. Платите, лише коли він вам подобається.",
+    "ex": "Подивитися приклад",
+    "wa": "Або у WhatsApp",
+    "callName": "Зателефонувати",
+    "privacy": "Захист особистих даних (SK)",
+    "mailb": "Написати мені",
+    "tgs": "або в Telegram",
+    "wat": "Добрий день! Пишу з вашої сторінки.",
+    "deal": "Сайт від 250 € · без щомісячних платежів · платите лише тоді, коли побачите готовий сайт",
+    "akh": "Як це відбувається",
+    "ak1": "Ви пишете, що потрібно",
+    "ak2": "Я показую сайт із вашими послугами",
+    "ak3": "Платите, лише коли сайт вам подобається",
+    "akf": "Сайт, домен і доступи належать вам. Домен коштує приблизно 15 € на рік, його ви оплачуєте напряму реєстраторові.",
+    "stmt": "Клієнт сам обирає час, навіть у неділю опівночі. А ви вранці бачите запис у календарі в телефоні.",
+    "workSub": "Натискайте, записуйтеся, перемикайте мови. Усе працює насправді.",
+    "ak1p": "Кілька слів про вашу справу: які послуги та якими мовами потрібен сайт.",
+    "ak2p": "За 5–10 днів ви отримуєте посилання і самі пробуєте сайт і запис.",
+    "ak3p": "Виправляю, що потрібно, і запускаю сайт на вашому домені. Перший місяць правки безкоштовні.",
+    "gt": "Ваш сайт",
+    "gtp": "Готовий за 5–10 днів. Без щомісячної плати.",
+    "qb": "Чим ви займаєтеся? (необов’язково)",
+    "qn": "Що вам потрібно?",
+    "qk": "Ваш телефон або електронна пошта",
+    "qe": "Напишіть хоча б кілька слів, що потрібно.",
+    "qwa": "Надіслати у WhatsApp",
+    "qml": "Надіслати",
+    "qL1": "Бізнес",
+    "qL2": "Потрібно",
+    "qL3": "Контакт",
+    "qs": "Запит із сайту",
+    "p5t": "Сайт з онлайн-записом і панеллю власника",
+    "p5p": "Клієнт сам обирає послугу й час просто на сайті. Записи ви бачите в панелі з телефона, можете перенести або скасувати. Без щомісячних платежів.",
+    "p5d": "до 10 днів",
+    "p5e": "від 350 €",
+    "bellaName": "Studio Bella",
+    "garageName": "Garáž 4",
+    "waName": "WhatsApp",
+    "tgName": "Telegram",
+    "helloSK": "Dobrý deň.",
+    "helloUA": "Добрий день.",
+    "studio": "Вебстудія",
+    "location": "Братислава, Словаччина",
+    "h1end": "Запис онлайн.",
+    "priceFact": "Готово за 5–10 днів",
+    "payFact": "Оплата за готовий сайт",
+    "feeFact": "Без щомісячних платежів",
+    "rb1": "Правки перший місяць безкоштовно",
+    "rb2": "Сайт чотирма мовами",
+    "workNav": "Приклади",
+    "bookingDemo": "Сайт з онлайн-записом",
+    "desktopAlt": "Сайт салону Studio Bella на комп’ютері",
+    "mobileAlt": "Мобільна версія сайту Studio Bella",
+    "garageDesc": "Сайт автосервісу. Калькулятор одразу показує ціну, клієнт обирає день і час.",
+    "translationName": "До і після перекладу",
+    "translationDesc": "Порівняйте початкову сторінку з українською та російською версіями.",
+    "moreWork": "Бот для запису та інші проєкти",
+    "sending": "Надсилаю…",
+    "contactError": "Вкажіть телефон або пошту, щоб я міг вам відповісти.",
+    "sendError": "Не вдалося надіслати повідомлення. Спробуйте ще раз або напишіть у WhatsApp.",
+    "thankTitle": "Дякую за повідомлення.",
+    "thankText": "Я відповім вам протягом доби.",
+    "copy": "Скопіювати",
+    "copied": "Адресу скопійовано.",
+    "copyManual": "Виділіть і скопіюйте адресу пошти.",
+    "backTop": "Нагору",
+    "lgh": "Мова",
+    "monogram": "dk",
+    "previewUrl": "konstantinov.sk/studio-bella/",
+    "navigation": "Навігація",
+    "cta": "Дізнатися ціну і термін",
+    "hp1": "Простий сайт від 250 €",
+    "hp2": "З онлайн-записом від 350 €",
+    "hpShort": "Сайт від 250 €, із записом від 350 €",
+    "legal": "Працюю за договором dohoda o vykonaní práce",
+    "q5": "Скільки робиться сайт?",
+    "a5": "Простий сайт до 5 днів, сайт з онлайн-записом до 10 днів. Рахую з моменту, коли ви надішлете послуги, ціни і фото.",
+    "q6": "А якщо сайт не сподобається?",
+    "a6": "Спершу надішлю посилання на готовий сайт і виправлю за вашими зауваженнями. Платите, тільки коли подобається.",
+    "q7": "Чи є щомісячна плата?",
+    "a7": "Мені ні. Платите тільки за домен, близько 15 € на рік, напряму реєстратору.",
+    "q8": "Хто змінюватиме тексти і ціни?",
+    "a8": "Перший місяць після запуску змінюю я, безкоштовно, просто напишіть. Далі домовимося про ціну.",
+    "exG": "Приклад: автосервіс Garáž 4",
+    "exB": "Спробувати запис у Studio Bella",
+    "exF": "Подивитися форму заявки",
+    "exT": "Порівняти до і після",
+    "exBot": "Написати боту в Telegram",
+    "exAI": "Запитати AI-асистента",
+    "who": "Пишете напряму мені, Давиду. Сайт роблю сам, від макета до запуску.",
+    "meAlt": "Давид Константинов",
+    "addh": "Додаткові послуги",
+    "panelAlt": "Панель власника на телефоні: записи на день і новий запис із сайту",
+    "heroRisk": "Спочатку ви бачите готовий сайт. Платите, лише коли все подобається.",
+    "ldC": "Клієнт на сайті",
+    "ldSvc": "Манікюр, 45 хв",
+    "ldDay": "Оберіть час на пʼятницю",
+    "ldBook": "Записатися",
+    "ldDone": "Записано ✓",
+    "ldO": "Ваш календар записів",
+    "ldA": "Анна · стрижка",
+    "ldF": "Ольга · педикюр",
+    "ldB": "Марія · фарбування",
+    "ldN": "Нова · манікюр",
+    "ldE": "Єва · брови",
+    "ldHint": "Спробуйте: оберіть час і натисніть «Записатися».",
+    "ldSeen": "Готово. Новий запис уже у вашому календарі.",
+    "look": "Дивитися",
+    "mailS": "Написати",
+    "menu": "Меню",
+    "nvClose": "Закрити",
+    "ldCap": "Приклад: запис для вашого бізнесу",
+    "plSvc": "Манікюр",
+    "botsH": "Боти й автоматизація",
+    "botsSub": "Короткі ролики. Натисніть, щоб переглянути відео повністю.",
+    "fullVid": "Відео повністю",
+    "stmtK": "Що ви отримуєте"
+  }
+};
+const S3 = {
+  "sk": {
+    "n_a10": "Rezervácie vidíte v paneli na mobile. Upozornenie príde e-mailom alebo do Telegramu.",
+    "n_a1e": "80 €",
+    "n_a1t": "Upozornenie na každý dopyt z webu",
+    "n_a2e": "120 €",
+    "n_a2t": "Ukrajinská alebo ruská verzia stránky",
+    "n_a3e": "200 €",
+    "n_a3t": "Rezervačný bot v Telegrame. Zadarmo vám ukážem bota s vašimi službami.",
+    "n_a4e": "400 €",
+    "n_a4t": "AI asistent na časté otázky",
+    "n_a9": "Zoznam služieb, cenník a fotky. Ak ich nemáte hotové, napíšte mi a poradím, čo treba pripraviť.",
+    "n_add_h": "Pridajte, čo potrebujete",
+    "n_ako1p": "Pár slov o podniku cez WhatsApp alebo e-mail. Ozvem sa s cenou a termínom.",
+    "n_ako1t": "Napíšete",
+    "n_ako2p": "Odkaz na funkčný web pošlem za 5–10 dní. Rezerváciu si sami vyskúšate na mobile.",
+    "n_ako2t": "Ukážem",
+    "n_ako3p": "Zapracujem pripomienky, pripojím vašu doménu a nastavím upozornenia e-mailom alebo cez Telegram.",
+    "n_ako3t": "Doladím",
+    "n_ako4p": "Krátky návod, ako všetko funguje. Web a prístupy zostávajú vám.",
+    "n_ako4t": "Odovzdám",
+    "n_ako_h": "Ako pracujeme",
+    "n_c_h": "Vaša prvá rezervácia.",
+    "n_c_p": "Napíšte pár slov o svojom podniku. Ozvem sa s cenou a termínom.",
+    "n_c_pay": "Najprv uvidíte hotový web. Platíte až potom, keď ste spokojní.",
+    "n_demo": "Ukážka",
+    "n_faq_h": "Časté otázky",
+    "n_foot_sub": "Bratislava · weby, boty, automatizácie",
+    "n_gt": "Zarezervované.",
+    "n_mock_aria": "Ukážka upozornenia z Telegramu",
+    "n_notif": "Nová rezervácia · 18:30 · Manikúra",
+    "n_notif_app": "Telegram",
+    "n_pr1a": "Stránka o vás: služby, ceny, kontakty",
+    "n_pr1b": "Dopytový formulár",
+    "n_pr1c": "Verzie v jazykoch, ktoré potrebujete",
+    "n_pr1d": "Pohodlné používanie aj na mobile",
+    "n_pr1e": "od 250 €",
+    "n_pr1f": "Hotový do 5 dní",
+    "n_pr1t": "Jednoduchý web",
+    "n_pr2a": "Zákazník si sám vyberie službu a čas",
+    "n_pr2b": "Rezervácie si v paneli pozriete aj na mobile",
+    "n_pr2c": "Môžete ich presunúť alebo zrušiť",
+    "n_pr2d": "Upozornenie príde e-mailom alebo do Telegramu",
+    "n_pr2e": "od 350 €",
+    "n_pr2f": "Hotový do 10 dní",
+    "n_pr2t": "Web s online rezerváciou",
+    "n_pr_h": "Koľko to stojí",
+    "n_pr_note": "Presnú cenu poviem pred začiatkom práce. Doména stojí asi 15 € ročne a platíte ju priamo registrátorovi.",
+    "n_q10": "Ako sa dozviem o novej rezervácii?",
+    "n_q9": "Čo vám mám poslať na začiatku?",
+    "n_stmt": "Rezervácia sa zapíše sama. Nemusíte dvíhať telefón ani zapisovať termíny do zošita.",
+    "n_who1": "Bratislava, pracujem na diaľku",
+    "n_who2": "Píšem po slovensky, ukrajinsky, rusky aj anglicky",
+    "n_who3": "Na dohodu o vykonaní práce",
+    "n_who4": "Všetko riešime písomne",
+    "n_who5": "Aj túto stránku som robil ja",
+    "n_who_h": "Kto to robí",
+    "n_who_p": "Píšete priamo mne, Davydovi. Web robím sám, od návrhu po spustenie."
+  },
+  "en": {
+    "n_a10": "You see bookings in a panel on your phone. A notification arrives by email or in Telegram.",
+    "n_a1e": "€80",
+    "n_a1t": "Every website enquiry sent to your email or Telegram",
+    "n_a2e": "€120",
+    "n_a2t": "Ukrainian or Russian version of a page",
+    "n_a3e": "€200",
+    "n_a3t": "A booking bot in Telegram. You first see it free, set up with your own services.",
+    "n_a4e": "€400",
+    "n_a4t": "AI assistant for common questions",
+    "n_a9": "A list of services, a price list and photos. If you don't have them ready, write to me and I'll tell you what to prepare.",
+    "n_add_h": "Add what you need",
+    "n_ako1p": "A few words about your business on WhatsApp or by email. I give you a price and a date.",
+    "n_ako1t": "You write",
+    "n_ako2p": "Within 5–10 days I send a link to a working site. You try the booking yourself on your phone.",
+    "n_ako2t": "I show",
+    "n_ako3p": "I apply your comments and connect your domain, email or Telegram.",
+    "n_ako3t": "I refine",
+    "n_ako4p": "A short guide to how it all works. The site and the logins stay with you.",
+    "n_ako4t": "I hand over",
+    "n_ako_h": "How we work",
+    "n_c_h": "Your first booking.",
+    "n_c_p": "Write a few words about your business. I'll reply with a price and a date.",
+    "n_c_pay": "You see the finished site first. You pay only when you're happy.",
+    "n_demo": "Demo",
+    "n_faq_h": "FAQ",
+    "n_foot_sub": "Bratislava · websites, bots, automation",
+    "n_gt": "Booked.",
+    "n_mock_aria": "Example of a Telegram notification",
+    "n_notif": "New booking · 18:30 · Manicure",
+    "n_notif_app": "Telegram",
+    "n_pr1a": "A page about you: services, prices, contacts",
+    "n_pr1b": "An enquiry form",
+    "n_pr1c": "Versions in the languages you need",
+    "n_pr1d": "Easy to use on a phone",
+    "n_pr1e": "from €250",
+    "n_pr1f": "Ready within 5 days",
+    "n_pr1t": "A simple website",
+    "n_pr2a": "The customer picks a service and a time on their own",
+    "n_pr2b": "You see bookings in a panel on your phone",
+    "n_pr2c": "You can move or cancel them",
+    "n_pr2d": "A notification arrives by email or in Telegram",
+    "n_pr2e": "from €350",
+    "n_pr2f": "Ready within 10 days",
+    "n_pr2t": "A website with online booking",
+    "n_pr_h": "What it costs",
+    "n_pr_note": "I confirm the exact price before I start. A domain costs about €15 a year, paid directly to the registrar.",
+    "n_q10": "How will I find out about a new booking?",
+    "n_q9": "What do I need to send you at the start?",
+    "n_stmt": "The booking writes itself down. You don't pick up the phone or jot anything in a notebook.",
+    "n_who1": "Bratislava, I work remotely",
+    "n_who2": "I write in Slovak, Ukrainian, Russian and English",
+    "n_who3": "Under a dohoda (agreement on work performed)",
+    "n_who4": "Everything is settled in writing",
+    "n_who5": "I built this page too",
+    "n_who_h": "Who does the work",
+    "n_who_p": "You talk to me, Davyd, directly. I build the site myself, from design to launch."
+  },
+  "ru": {
+    "n_a10": "Записи видны в панели на телефоне. Уведомление приходит на почту или в Telegram.",
+    "n_a1e": "80 €",
+    "n_a1t": "Уведомление о каждой заявке с сайта",
+    "n_a2e": "120 €",
+    "n_a2t": "Украинская или русская версия страницы",
+    "n_a3e": "200 €",
+    "n_a3t": "Бот записи в Telegram. Сначала вы бесплатно увидите его на своих услугах.",
+    "n_a4e": "400 €",
+    "n_a4t": "AI-помощник для частых вопросов",
+    "n_a9": "Список услуг, прайс и фото. Если их ещё нет, напишите, подскажу, что подготовить.",
+    "n_add_h": "Добавьте, что нужно",
+    "n_ako1p": "Пара слов о вашем деле в WhatsApp или на почту. Я называю цену и срок.",
+    "n_ako1t": "Вы пишете",
+    "n_ako2p": "За 5–10 дней присылаю ссылку на рабочий сайт. Запись вы пробуете сами на телефоне.",
+    "n_ako2t": "Показываю",
+    "n_ako3p": "Учитываю замечания и подключаю ваш домен, почту или Telegram.",
+    "n_ako3t": "Дорабатываю",
+    "n_ako4p": "Короткая инструкция, как всё работает. Сайт и доступы остаются у вас.",
+    "n_ako4t": "Передаю",
+    "n_ako_h": "Как мы работаем",
+    "n_c_h": "Ваша первая запись.",
+    "n_c_p": "Напишите пару слов о вашем деле. Отвечу ценой и сроком.",
+    "n_c_pay": "Сначала вы видите готовый сайт. Оплата после результата, когда всё нравится.",
+    "n_demo": "Пример",
+    "n_faq_h": "Частые вопросы",
+    "n_foot_sub": "Братислава · сайты, боты, автоматизация",
+    "n_gt": "Записано.",
+    "n_mock_aria": "Пример уведомления из Telegram",
+    "n_notif": "Новая запись · 18:30 · Маникюр",
+    "n_notif_app": "Telegram",
+    "n_pr1a": "Страница о вас: услуги, цены, контакты",
+    "n_pr1b": "Форма для заявок",
+    "n_pr1c": "Версии на нужных вам языках",
+    "n_pr1d": "Удобно и с телефона",
+    "n_pr1e": "от 250 €",
+    "n_pr1f": "Готово до 5 дней",
+    "n_pr1t": "Простой сайт",
+    "n_pr2a": "Клиент сам выбирает услугу и время",
+    "n_pr2b": "Записи видны в панели на телефоне",
+    "n_pr2c": "Их можно перенести или отменить",
+    "n_pr2d": "Уведомление приходит на почту или в Telegram",
+    "n_pr2e": "от 350 €",
+    "n_pr2f": "Готово до 10 дней",
+    "n_pr2t": "Сайт с онлайн-записью",
+    "n_pr_h": "Сколько это стоит",
+    "n_pr_note": "Точную цену назову до начала работы. Домен стоит около 15 € в год, платите регистратору напрямую.",
+    "n_q10": "Как я узнаю о новой записи?",
+    "n_q9": "Что вам прислать в начале?",
+    "n_stmt": "Запись заносится сама. Вы не берёте трубку и ничего не пишете в тетрадь.",
+    "n_who1": "Братислава, работаю удалённо",
+    "n_who2": "Пишу на словацком, украинском, русском и английском",
+    "n_who3": "По договору dohoda о выполнении работы",
+    "n_who4": "Всё решаем перепиской",
+    "n_who5": "Эту страницу тоже сделал я",
+    "n_who_h": "Кто это делает",
+    "n_who_p": "Пишете напрямую мне, Давиду. Сайт делаю сам, от макета до запуска."
+  },
+  "uk": {
+    "n_a10": "Записи видно в панелі на телефоні. Сповіщення приходить на пошту або в Telegram.",
+    "n_a1e": "80 €",
+    "n_a1t": "Сповіщення про кожну заявку із сайту",
+    "n_a2e": "120 €",
+    "n_a2t": "Українська або російська версія сторінки",
+    "n_a3e": "200 €",
+    "n_a3t": "Бот запису в Telegram. Спершу ви безкоштовно побачите його на своїх послугах.",
+    "n_a4e": "400 €",
+    "n_a4t": "AI-помічник для поширених питань",
+    "n_a9": "Перелік послуг, прайс і фото. Якщо їх ще немає, напишіть, підкажу, що підготувати.",
+    "n_add_h": "Додайте, що потрібно",
+    "n_ako1p": "Кілька слів про ваш бізнес у WhatsApp або на пошту. Я називаю ціну і термін.",
+    "n_ako1t": "Ви пишете",
+    "n_ako2p": "За 5–10 днів надсилаю посилання на робочий сайт. Запис ви пробуєте самі на телефоні.",
+    "n_ako2t": "Показую",
+    "n_ako3p": "Враховую зауваження й підключаю ваш домен, пошту або Telegram.",
+    "n_ako3t": "Доопрацьовую",
+    "n_ako4p": "Коротка інструкція, як усе працює. Сайт і доступи лишаються у вас.",
+    "n_ako4t": "Передаю",
+    "n_ako_h": "Як ми працюємо",
+    "n_c_h": "Ваш перший запис.",
+    "n_c_p": "Напишіть кілька слів про ваш бізнес. Відповім ціною і терміном.",
+    "n_c_pay": "Спочатку ви бачите готовий сайт. Оплачуєте після того, як усе подобається.",
+    "n_demo": "Приклад",
+    "n_faq_h": "Часті запитання",
+    "n_foot_sub": "Братислава · сайти, боти, автоматизація",
+    "n_gt": "Записано.",
+    "n_mock_aria": "Приклад сповіщення з Telegram",
+    "n_notif": "Новий запис · 18:30 · Манікюр",
+    "n_notif_app": "Telegram",
+    "n_pr1a": "Сторінка про вас: послуги, ціни, контакти",
+    "n_pr1b": "Форма для заявок",
+    "n_pr1c": "Версії потрібними вам мовами",
+    "n_pr1d": "Зручно й з телефона",
+    "n_pr1e": "від 250 €",
+    "n_pr1f": "Готово до 5 днів",
+    "n_pr1t": "Простий сайт",
+    "n_pr2a": "Клієнт сам обирає послугу і час",
+    "n_pr2b": "Записи видно в панелі на телефоні",
+    "n_pr2c": "Їх можна перенести або скасувати",
+    "n_pr2d": "Сповіщення приходить на пошту або в Telegram",
+    "n_pr2e": "від 350 €",
+    "n_pr2f": "Готово до 10 днів",
+    "n_pr2t": "Сайт з онлайн-записом",
+    "n_pr_h": "Скільки це коштує",
+    "n_pr_note": "Точну ціну назву до початку роботи. Домен коштує близько 15 € на рік, платите реєстраторові напряму.",
+    "n_q10": "Як я дізнаюся про новий запис?",
+    "n_q9": "Що вам надіслати на початку?",
+    "n_stmt": "Запис вноситься сам. Ви не берете слухавку і нічого не пишете в зошит.",
+    "n_who1": "Братислава, працюю віддалено",
+    "n_who2": "Пишу словацькою, українською, російською та англійською",
+    "n_who3": "За договором dohoda про виконання роботи",
+    "n_who4": "Усе вирішуємо листуванням",
+    "n_who5": "Цю сторінку теж зробив я",
+    "n_who_h": "Хто це робить",
+    "n_who_p": "Пишете напряму мені, Давиду. Сайт роблю сам, від макета до запуску."
+  }
+};
+for (const l in S3) Object.assign(T[l], S3[l]);
+const HERO = {
+  sk: {h1: "Zákazník sa objedná sám.", h1end: "Rezerváciu uvidíte v mobile.", lead: "Pre salóny, autoservisy a lektorov robím weby s online rezerváciou a dopytmi. V štyroch jazykoch."},
+  en: {h1: "Customers book themselves.", h1end: "You see it on your phone.", lead: "I build websites with online booking and enquiry forms for salons, car workshops and tutors. In four languages."},
+  ru: {h1: "Клиент записывается сам.", h1end: "Вы видите запись в телефоне.", lead: "Делаю сайты с онлайн-записью и заявками для салонов, автосервисов и репетиторов. На четырёх языках."},
+  uk: {h1: "Клієнт записується сам.", h1end: "Ви бачите запис у телефоні.", lead: "Роблю сайти з онлайн-записом і заявками для салонів, автосервісів і репетиторів. Чотирма мовами."}
+};
+for (const l in HERO) Object.assign(T[l], HERO[l]);
+const translations = [...document.querySelectorAll('[data-i]')];
+const form = document.getElementById('qf');
+const businessField = document.getElementById('qb');
+const needField = document.getElementById('qn');
+const contactField = document.getElementById('qk');
+const sendButton = document.getElementById('send');
+const thanks = document.querySelector('.thanks');
+const sendError = form ? form.querySelector('.send-error') : {hidden: true};
+const copyStatus = document.getElementById('copy-status');
+const currentLanguage = () => document.documentElement.lang;
+
+function whatsappUrl(message) {
+  return 'https://wa.me/421910392871?text=' + encodeURIComponent(message);
+}
+
+function messageFromFields() {
+  const t = T[currentLanguage()];
+  return [t.wat, businessField.value.trim() && t.qL1 + ': ' + businessField.value.trim(),
+    t.qL2 + ': ' + needField.value.trim(), contactField.value.trim() && t.qL3 + ': ' + contactField.value.trim()]
+    .filter(Boolean).join('\n');
+}
+
+function setLang(l) {
+  if (!Object.hasOwn(T, l)) l = 'sk';
+  const t = T[l];
+  document.body.dataset.mode = 'biz';
+  document.documentElement.lang = l;
+  document.title = window.PG ? t[PG.t] + ' · Davyd Konstantinov' : t.title;
+  document.querySelector('meta[name=description]').content = window.PG ? t[PG.d] : t.desc;
+  translations.forEach(el => { const v = t[el.dataset.i] ?? ''; if (el.textContent !== v) el.textContent = v; });   // same text: no repaint
+  document.querySelectorAll('[data-alt]').forEach(el => { el.alt = t[el.dataset.alt]; });
+  document.querySelectorAll('[data-aria]').forEach(el => { el.setAttribute('aria-label', t[el.dataset.aria]); });
+  document.querySelectorAll('[data-cursor-i]').forEach(el => { el.dataset.cursor = t[el.dataset.cursorI]; });
+  document.querySelectorAll('[data-set]').forEach(button => button.setAttribute('aria-pressed', button.dataset.set === l));
+  document.querySelectorAll('[data-cv]').forEach(a => { a.href = 'cv/Davyd_Konstantinov_' + a.dataset.cv + '_' + (l === 'sk' ? 'SK' : 'EN') + '.pdf'; });
+  document.querySelectorAll('img[data-ll]').forEach(i => ['src', 'srcset', 'data-src', 'data-srcset'].forEach(k => {   // 25.11: demo pictures in the page language
+    const v = i.getAttribute(k); if (v) i.setAttribute(k, v.replace(/(-(?:en|ru|uk))?\.webp/g, (l === 'sk' ? '' : '-' + l) + '.webp'));
+  }));
+  document.querySelectorAll('[data-ex]').forEach(a => {
+    const path = a.dataset.ex;
+    a.href = path.startsWith('https://') ? path : path + '?' + (a.dataset.q ? a.dataset.q + '&' : '') + 'lang=' + l + (a.dataset.h || '');
+  });
+  document.querySelectorAll('[data-wa]').forEach(a => { a.href = whatsappUrl(t.wat); });
+  if (!sendError.hidden) sendError.querySelector('a').href = whatsappUrl(messageFromFields());
+  if (copyStatus) copyStatus.textContent = '';
+  try { localStorage.lang = l; } catch {}
+  setTimeout(() => window.wow && wow.resplit(), 0);
+}
+
+const motionOK = matchMedia('(prefers-reduced-motion: no-preference)').matches;
+document.querySelectorAll('[data-set]').forEach(button => button.addEventListener('click', () => {
+  if (motionOK && document.startViewTransition && button.dataset.set !== currentLanguage()) document.startViewTransition(() => setLang(button.dataset.set));
+  else setLang(button.dataset.set);
+  const url = new URL(location.href);
+  url.searchParams.set('lang', currentLanguage());
+  history.replaceState(null, '', url);
+}));
+let saved = '';
+try { saved = localStorage.lang; } catch {}
+setLang(new URLSearchParams(location.search).get('lang') || saved || navigator.language.slice(0, 2));
+
+document.querySelectorAll('[data-write]').forEach(link => link.addEventListener('click', event => {
+  if (!form) return;
+  event.preventDefault();
+  const target = form.hidden ? thanks : [businessField, needField, contactField].find(field => !field.value.trim()) || sendButton;
+  target.focus({preventScroll:true});
+  target.scrollIntoView({block:'center'});
+}));
+
+const projects = document.querySelector('.more-work');
+projects && projects.addEventListener('toggle', () => {
+  if (!projects.open) return;
+  projects.querySelectorAll('.slot[data-video]').forEach(slot => {
+    const video = document.createElement('video');
+    video.controls = true;
+    video.playsInline = true;
+    video.preload = 'none';
+    video.poster = slot.dataset.video.replace('.mp4', '.jpg');
+    video.src = slot.dataset.video;
+    video.setAttribute('aria-labelledby', slot.parentElement.querySelector('h3').id);
+    slot.replaceChildren(video);
+    delete slot.dataset.video;
+  });
+});
+
+function checkField(field, errorId) {
+  const valid = Boolean(field.value.trim());
+  document.getElementById(errorId).hidden = valid;
+  if (valid) field.removeAttribute('aria-invalid');
+  else {
+    field.setAttribute('aria-invalid', 'true');
+    field.focus();
+  }
+  return valid;
+}
+
+form && form.addEventListener('input', event => {
+  const field = event.target;
+  if (field.hasAttribute('aria-invalid') && field.value.trim()) checkField(field, field.getAttribute('aria-describedby'));
+  if (!sendError.hidden) sendError.querySelector('a').href = whatsappUrl(messageFromFields());
+});
+
+function showThanks() {
+  form.hidden = true;
+  thanks.hidden = false;
+  thanks.focus();
+}
+
+const GOOGLE_FORM_URL = 'https://script.google.com/macros/s/AKfycbyOsLmSV9Kj0ZYgOIxL0OS2LYzYCx1-_eLFF7OifK3jkyW1TxHpC3HDI0UPXZ1vk85K1g/exec';
+form && form.addEventListener('submit', async event => {
+  event.preventDefault();
+  if (sendButton.disabled) return;
+  const honey = form.elements._honey.value;
+  if (honey) { showThanks(); return; }
+  if (!checkField(needField, 'qe')) return;
+  if (event.submitter?.dataset.q === 'wa') {
+    window.open(whatsappUrl(messageFromFields()), '_blank', 'noopener');
+    return;
+  }
+  if (!checkField(contactField, 'qke')) return;
+  const l = currentLanguage();
+  const buttons = form.querySelectorAll('button[type=submit]');
+  buttons.forEach(button => { button.disabled = true; });
+  form.setAttribute('aria-busy', 'true');
+  sendButton.dataset.i = 'sending';
+  sendButton.textContent = T[l].sending;
+  sendError.hidden = true;
+  try {
+    // Основной путь: свой Google-скрипт (красивое письмо в Gmail). Запасной: FormSubmit.
+    try {
+      const g = await fetch(GOOGLE_FORM_URL, {
+        method: 'POST',
+        headers: { 'Content-Type': 'text/plain;charset=utf-8' },
+        body: JSON.stringify({ need: needField.value.trim(), contact: contactField.value.trim(), business: businessField.value.trim(), lang: l })
+      });
+      const gd = await g.json();
+      if (gd.ok === true) { showThanks(); return; }
+    } catch {}
+    const res = await fetch('https://formsubmit.co/ajax/davyd@konstantinov.sk', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+      body: JSON.stringify({
+        _subject: 'Новая заявка с сайта' + (businessField.value.trim() ? ': ' + businessField.value.trim().slice(0, 60) : ''),
+        _template: 'box', _captcha: 'false',
+        'Что нужно': needField.value.trim(),
+        'Как связаться': contactField.value.trim(),
+        'Чем занимается': businessField.value.trim() || 'не написал',
+        'Язык сайта': { sk: 'словацкий', en: 'английский', ru: 'русский', uk: 'украинский' }[l] || l,
+        _honey: honey
+      })
+    });
+    const data = await res.json().catch(() => ({}));
+    if (!res.ok || data.success !== 'true') throw new Error('Submission failed');
+    showThanks();
+  } catch {
+    sendError.querySelector('a').href = whatsappUrl(messageFromFields());
+    sendError.hidden = false;
+  } finally {
+    form.removeAttribute('aria-busy');
+    buttons.forEach(button => { button.disabled = false; });
+    sendButton.dataset.i = 'qml';
+    sendButton.textContent = T[currentLanguage()].qml;
+  }
+});
+
+(() => {
+  const demo = document.getElementById('live-demo');
+  if (!demo) return;
+  const times = [...demo.querySelectorAll('.ld-times button')];
+  const book = demo.querySelector('.ld-book');
+  const fresh = demo.querySelector('.ld-new');
+  const list = fresh.parentElement;
+  const picked = () => times.find(b => b.getAttribute('aria-pressed') === 'true');
+  const label = key => { book.dataset.i = key; book.textContent = T[currentLanguage()][key]; };
+  const ghost = demo.querySelector('.ld-ghost');
+  const hint = demo.querySelector('.ld-hint');
+  const hintLabel = key => { hint.dataset.i = key; hint.textContent = T[currentLanguage()][key]; };
+  const at = t => { const [h, m] = t.split(':'); return +h + m / 60; };
+  times.forEach(b => b.addEventListener('click', () => {
+    times.forEach(x => x.setAttribute('aria-pressed', x === b));
+    fresh.classList.add('pend'); fresh.querySelector('time').textContent = b.textContent; book.disabled = false; label('ldBook'); hintLabel('ldHint');
+    ghost.style.setProperty('--s', at(b.textContent)); ghost.hidden = false;
+  }));
+  let touched = false;
+  ['pointerdown', 'keydown'].forEach(e => demo.addEventListener(e, () => { touched = true; }, {once: true}));
+  book.addEventListener('click', () => {
+    const t = picked().textContent;
+    fresh.querySelector('time').textContent = t;
+    fresh.style.setProperty('--s', at(t)); ghost.hidden = true;
+    const after = [...list.children].find(li => li !== fresh && li.querySelector('time').textContent > t);
+    list.insertBefore(fresh, after || null);
+    fresh.classList.remove('pend'); book.disabled = true; label('ldDone'); hintLabel('ldSeen');
+  });
+  if (!motionOK) book.click();   // reduced motion: the result of the demo is visible at once
+})();
+
+(() => {
+  // Scroll progress line, header that hides on the way down, blocks that slide up into view.
+  try { sessionStorage.wowL = 1; } catch (e) {}   // the opening curtain plays once per visit (html.wow-noload)
+  const bar = document.querySelector('.progress');
+  const header = document.querySelector('header');
+  let lastY = scrollY, ticking = false;
+  const update = () => {
+    ticking = false;
+    const max = document.documentElement.scrollHeight - innerHeight;
+    bar.style.transform = 'scaleX(' + (max > 0 ? Math.min(1, scrollY / max) : 0) + ')';
+    if (motionOK) header.classList.toggle('away', scrollY > lastY && scrollY > 240 && !header.contains(document.activeElement));
+    lastY = scrollY;
+  };
+  addEventListener('scroll', () => { if (!ticking) { ticking = true; requestAnimationFrame(update); } }, {passive: true});
+  if (!motionOK || !('IntersectionObserver' in window)) return;
+  const io = new IntersectionObserver(entries => entries.forEach(e => {
+    if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
+  }), {rootMargin: '0px 0px -8% 0px'});
+  // Marked only on the first scroll and only below the fold, so a still full-page shot shows everything in place.
+  addEventListener('scroll', () => {
+    const groups = ['main>section:not(.gtsec)>h2:not([data-split])', '.packages>.prow', '.price-cta'];   // the rest moves with wow.js (data-split, data-reveal, data-clip)
+    groups.forEach(sel => document.querySelectorAll(sel).forEach((el, i) => {
+      if (el.getBoundingClientRect().top < innerHeight) return;
+      el.style.setProperty('--i', i % 4);
+      el.classList.add('rv');
+      io.observe(el);
+    }));
+  }, {once: true, passive: true});
+})();
+
+document.getElementById('copy-email')?.addEventListener('click', async () => {
+  const address = document.getElementById('email-address');
+  let copied = false;
+  try {
+    await navigator.clipboard.writeText(address.textContent);
+    copied = true;
+  } catch {
+    const selection = window.getSelection();
+    const range = document.createRange();
+    range.selectNodeContents(address);
+    selection.removeAllRanges();
+    selection.addRange(range);
+    try { copied = document.execCommand('copy'); } catch {}
+    if (copied) selection.removeAllRanges();
+  }
+  copyStatus.textContent = T[currentLanguage()][copied ? 'copied' : 'copyManual'];
+});
+</script>
+<script>document.documentElement.classList.add('mo-js');setTimeout(()=>document.documentElement.classList.add('mo-safe'),2500)
+/* motion libraries load 1 s after the page: fetched with it they took the slow-4G bandwidth from the first screen (LCP 3.1 s, 23.11). async=false keeps their order */
+addEventListener('load',()=>setTimeout(()=>{['gsap.min.js','ScrollTrigger.min.js','SplitText.min.js','Flip.min.js','lenis.min.js','home.js','wow.js','novy.js','v2.js'].forEach(f=>{const e=document.createElement('script');e.src='lib/'+f+(f=='home.js'||f=='v2.js'?'?v=2':'');e.async=false;if(f=='wow.js')e.onload=e.onerror=()=>{const m=document.createElement('script');m.type='module';m.src='lib/moments/moments.js';document.body.append(m)};document.body.append(e)})},1000),{once:true})</script>
+<script>/* 25.11 LCP: pictures below the first screen get their address once the browser reports the largest paint (H1), or 1.5 s after load where that report is missing (the counter.dev beacon too, so its request does not count in the H1 time); load and the next frame both come before the H1 paint, so they do not compete with the H1 */(()=>{let d=0;const go=()=>{if(d)return;d=1;const c=document.createElement('script');c.src='https://cdn.counter.dev/script.js';c.dataset.id='257df3c8-5256-4c70-addb-07ba1530a824';c.dataset.utcoffset='1';document.head.appendChild(c);document.querySelectorAll('img[data-src]').forEach(i=>{if(i.dataset.srcset)i.srcset=i.dataset.srcset;i.src=i.dataset.src})};try{new PerformanceObserver(()=>setTimeout(go,50)).observe({type:'largest-contentful-paint',buffered:true})}catch(e){}addEventListener('load',()=>setTimeout(go,1500))})()</script>
+<script>/* page transition: yellow + black panels close over the page, the next page opens from under them */
+(()=>{const R=document.documentElement;
+if(R.classList.contains('pt-in')){const go=()=>requestAnimationFrame(()=>requestAnimationFrame(()=>{R.classList.add('pt-go');setTimeout(()=>R.classList.remove('pt-in','pt-go'),900)}));document.readyState==='loading'?addEventListener('DOMContentLoaded',go):go()}
+addEventListener('pageshow',e=>{if(e.persisted)R.classList.remove('pt-out','pt-in','pt-go')});
+if(!matchMedia('(prefers-reduced-motion: no-preference)').matches)return;
+const dir=location.pathname.replace(/[^/]*$/,'');
+addEventListener('click',e=>{const a=e.target.closest&&e.target.closest('a[href]');
+if(!a||e.defaultPrevented||e.button||e.metaKey||e.ctrlKey||e.shiftKey||e.altKey||a.target||a.hasAttribute('download'))return;
+let u;try{u=new URL(a.href)}catch(x){return}
+if(u.origin!==location.origin||u.pathname.replace(/[^/]*$/,'')!==dir)return;
+const f=u.pathname.slice(dir.length);if(f&&!/^(index|ukazky|ceny|o-mne|kontakt)\.html$/.test(f))return;
+if(u.pathname===location.pathname)return;
+e.preventDefault();try{sessionStorage.pt='1'}catch(x){}
+R.classList.remove('pt-in','pt-go');R.classList.add('pt-out');setTimeout(()=>{location.href=u.href},620)})})();
+</script>
+</body>
+</html>

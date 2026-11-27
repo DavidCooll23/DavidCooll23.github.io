@@ -619,6 +619,42 @@ footer .sig i{display:inline-block;font-style:normal}
 </style>
 <link rel="stylesheet" href="lib/novy.css">
 <link rel="stylesheet" href="lib/v2.css?v=2">
+<style>
+/* ===== multi-page: doors, page hero, next link, page transition (build_site.py) ===== */
+.doors{margin-top:clamp(64px,8vw,180px)}
+.drs{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(4,1fr);gap:clamp(12px,1.6vw,32px)}
+.drs li:nth-child(even){margin-top:clamp(0px,7vh,96px)}
+.drs a{display:block;text-decoration:none;color:inherit}
+.dph{display:block;aspect-ratio:4/5;overflow:hidden;border-radius:var(--r-island);background:var(--night)}
+.dph>span{display:block;height:100%}
+.dph img{display:block;width:100%;height:100%;object-fit:cover;transition:transform 1.2s cubic-bezier(.16,1,.3,1)}
+.drs strong{display:flex;justify-content:space-between;align-items:baseline;gap:10px;font:500 clamp(26px,2.6vw,56px)/1.05 var(--sans);letter-spacing:-.03em;margin:clamp(14px,1.4vw,26px) 0 8px}
+.drs strong i{font-style:normal;color:var(--blue);transition:transform .6s cubic-bezier(.2,.8,.2,1)}
+.drs .dl{display:block;color:var(--muted);font:400 clamp(14px,1vw,19px)/1.45 var(--sans);max-width:32ch}
+@media(hover:hover){.drs a:hover img{transform:scale(1.06)}.drs a:hover strong i{transform:translateX(.25em)}}
+@media(max-width:899px){.drs{grid-template-columns:1fr 1fr;gap:30px 14px}.drs li:nth-child(even){margin-top:40px}.drs strong{font-size:24px}.drs .dl{font-size:13.5px}}
+main>section.phero{margin-top:0;padding:clamp(40px,9vh,140px) 0 0}
+main>section.phero h1{font:500 clamp(72px,17vw,340px)/.9 var(--sans);letter-spacing:-.055em;margin:0;overflow-wrap:anywhere}
+main>section.phero.long h1{font-size:clamp(44px,11.5vw,230px)}
+.phero+section,main>.phero+section.work{margin-top:clamp(36px,5vw,110px)}
+.nxt a{display:flex;align-items:baseline;gap:.25em;padding:clamp(22px,3vw,56px) 0;border-top:1px solid var(--rule);border-bottom:1px solid var(--rule);text-decoration:none;color:inherit;font:500 clamp(44px,9vw,190px)/1 var(--sans);letter-spacing:-.045em;transition:color .4s,padding .6s cubic-bezier(.2,.8,.2,1)}
+.nxt small{font:inherit;color:var(--blue);transition:transform .6s cubic-bezier(.2,.8,.2,1)}
+@media(hover:hover){.nxt a:hover{color:var(--blue);padding-left:.35em}.nxt a:hover small{transform:translateX(.15em)}}
+.nb-cta .cta-row{grid-column:1/-1;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:20px 40px}
+.nb-cta .cta-row p{margin:0;max-width:30ch;color:#c9cad3;font:400 var(--fs-lead)/1.3 var(--sans)}
+#contact.nb-cta .btn.main{background:#fff;border-color:#fff;color:#0d0d0d}#contact.nb-cta .btn.main:hover{background:var(--marker);border-color:var(--marker);color:#0d0d0d}
+.page-nav a[aria-current],.nvm-links a[aria-current]{color:var(--blue)}
+html::before,html::after{content:"";position:fixed;inset:0;z-index:99999;pointer-events:none;transform:translateY(101%);will-change:transform}
+html::before{background:var(--marker,#f6df45)}html::after{background:#0d0d0d}
+html.pt-out::before{transform:none;transition:transform .5s cubic-bezier(.7,0,.2,1)}
+html.pt-out::after{transform:none;transition:transform .5s .09s cubic-bezier(.7,0,.2,1)}
+html.pt-in::before,html.pt-in::after{transform:none}
+html.pt-in.pt-go::after{transform:translateY(-101%);transition:transform .6s cubic-bezier(.7,0,.2,1)}
+html.pt-in.pt-go::before{transform:translateY(-101%);transition:transform .6s .1s cubic-bezier(.7,0,.2,1)}
+html.pt-in .curtain{display:none}
+@media(prefers-reduced-motion:reduce){html::before,html::after{display:none}}
+</style>
+<script>try{if(sessionStorage.pt){sessionStorage.removeItem('pt');document.documentElement.classList.add('pt-in','wow-noload')}}catch(e){}</script>
 </head>
 <body data-mode="biz" id="top" data-grain>
 <div class="curtain" aria-hidden="true"><svg class="cu-ring" viewBox="0 0 100 100"><circle cx="50" cy="50" r="49" pathLength="100" transform="rotate(-90 50 50)"/></svg><div class="cu-f"><div class="cu-ph"><span class="cu-p"></span><span class="cu-p"></span><span class="cu-p"></span><span class="cu-p"></span></div><i></i><i></i><i></i><i></i><b class="nv-plate cu-plate"><time>18:30</time><span data-i="plSvc">Manikúra</span></b></div><span class="cu-w">Davyd Konstantinov</span><span class="cu-n">2026</span></div>
@@ -627,25 +663,25 @@ footer .sig i{display:inline-block;font-style:normal}
 <div class="wrap">
 <header>
   <a class="identity" href="#top"><span class="monogram" aria-hidden="true" data-i="monogram">dk</span><span>Davyd Konstantinov<small data-i="studio">Webové štúdio</small></span></a>
-  <nav class="page-nav" data-aria="navigation"><a href="#work" data-i="workNav">Ukážky</a><a href="#prices" data-i="prb">Ceny</a><a class="nav-x" href="#ako" data-i="akh">Ako to prebieha</a><a class="nav-x" href="#faq" data-i="faqh">Časté otázky</a></nav>
+  <nav class="page-nav" data-aria="navigation"><a href="ukazky.html" data-i="workNav">Ukážky</a><a href="ceny.html" data-i="prb">Ceny</a><a class="nav-x" href="o-mne.html" data-i="n_who_h">Kto to robí</a><a class="nav-x" href="kontakt.html#faq" data-i="faqh">Časté otázky</a></nav>
   <div class="lang" role="group" data-aria="lgh">
     <button type="button" data-set="sk" aria-label="Slovenčina" aria-pressed="true">SK</button>
     <button type="button" data-set="en" aria-label="English" aria-pressed="false">EN</button>
     <button type="button" data-set="ru" aria-label="Русский" aria-pressed="false">RU</button>
     <button type="button" data-set="uk" aria-label="Українська" aria-pressed="false">UA</button>
   </div>
-  <a class="header-contact arrow biz" href="#qf" data-write data-magnetic><span class="hc-l" data-i="mailb">Napísať mi</span><span class="hc-s" data-i="mailS">Napísať</span></a>
+  <a class="header-contact arrow biz" href="kontakt.html#qf" data-write data-magnetic><span class="hc-l" data-i="mailb">Napísať mi</span><span class="hc-s" data-i="mailS">Napísať</span></a>
   <button type="button" class="nv-burger" aria-haspopup="dialog" aria-controls="nv-menu" onclick="document.getElementById('nv-menu').showModal()"><span data-i="menu">Menu</span></button>
-  <a class="btn job" href="#qf" data-write data-i="mail">Napísať e-mail</a>
+  <a class="btn job" href="kontakt.html#qf" data-write data-i="mail">Napísať e-mail</a>
 </header>
 <dialog class="nv-menu" id="nv-menu" data-aria="menu" data-lenis-prevent>
   <div class="nvm-top"><span class="monogram" aria-hidden="true">dk</span><form method="dialog"><button class="nv-burger nvm-x" data-i="nvClose">Zavrieť</button></form></div>
   <nav class="nvm-links" data-aria="navigation">
-    <a href="#work" data-i="workNav">Ukážky</a>
-    <a href="#prices" data-i="prb">Ceny</a>
-    <a href="#ako" data-i="akh">Ako to prebieha</a>
-    <a href="#faq" data-i="faqh">Časté otázky</a>
-    <a href="#qf" data-write data-i="mailb">Napísať mi</a>
+    <a href="ukazky.html" data-i="workNav">Ukážky</a>
+    <a href="ceny.html" data-i="prb">Ceny</a>
+    <a href="o-mne.html" data-i="n_who_h">Kto to robí</a>
+    <a href="kontakt.html#faq" data-i="faqh">Časté otázky</a>
+    <a href="kontakt.html#qf" data-write data-i="mailb">Napísať mi</a>
   </nav>
   <div class="lang nvm-lang" role="group" data-aria="lgh">
     <button type="button" data-set="sk" aria-label="Slovenčina" aria-pressed="true">SK</button>
@@ -665,14 +701,14 @@ footer .sig i{display:inline-block;font-style:normal}
     <p class="lead" data-i="lead">Pre salóny, autoservisy a lektorov robím weby s online rezerváciou a dopytmi. V štyroch jazykoch.</p>
     <script>/* 25.11: the first screen gets its language before the first paint, so the H1 (LCP) is not drawn twice */try{var H={"en": ["Customers book themselves.", "You see it on your phone.", "I build websites with online booking and enquiry forms for salons, car workshops and tutors. In four languages."], "ru": ["Клиент записывается сам.", "Вы видите запись в телефоне.", "Делаю сайты с онлайн-записью и заявками для салонов, автосервисов и репетиторов. На четырёх языках."], "uk": ["Клієнт записується сам.", "Ви бачите запис у телефоні.", "Роблю сайти з онлайн-записом і заявками для салонів, автосервісів і репетиторів. Чотирма мовами."]},L=(new URLSearchParams(location.search).get('lang')||localStorage.lang||navigator.language||'').slice(0,2),h=H[L];if(h)['h1','h1end','lead'].forEach(function(k,j){document.querySelector('[data-i="'+k+'"]').textContent=h[j]})}catch(e){}</script>
     <div class="btns job">
-      <a class="btn main" href="#qf" data-write data-i="mail">Napísať e-mail</a>
-      <a class="btn" href="#cv" data-i="cvb">Životopis (PDF)</a>
+      <a class="btn main" href="kontakt.html#qf" data-write data-i="mail">Napísať e-mail</a>
+      <a class="btn" href="o-mne.html#cv" data-i="cvb">Životopis (PDF)</a>
       <a class="btn" href="support-samples.html" data-i="smp">Ukážky práce (EN)</a>
     </div>
     <p class="hero-price-line biz" data-i="hpShort">Web od 250 €, s rezervačným systémom od 350 €</p>
     <ul class="hero-prices biz"><li data-i="hp1">Jednoduchý web od 250 €</li><li data-i="hp2">S online rezerváciou od 350 €</li></ul>
     <div class="btns biz">
-      <a class="btn main arrow" href="#qf" data-write data-magnetic data-roll><span data-i="cta">Zistiť cenu a termín</span></a>
+      <a class="btn main arrow" href="kontakt.html#qf" data-write data-magnetic data-roll><span data-i="cta">Zistiť cenu a termín</span></a>
       <a class="btn nv-wa" href="https://wa.me/421910392871" data-wa><span data-i="waName">WhatsApp</span> <span class="nv-num">+421 910 392 871</span></a>
     </div>
     <div class="hero-risk biz"><img src="media/davyd-sunset-96.webp" width="96" height="96" data-alt="meAlt" alt="Davyd Konstantinov"><p data-i="heroRisk">Najprv uvidíte hotový web. Platíte, až keď ste spokojní.</p></div>
@@ -721,221 +757,19 @@ footer .sig i{display:inline-block;font-style:normal}
   <ul class="facts"><li data-i="priceFact">Hotové za 5–10 dní</li><li data-i="feeFact">Bez mesačných poplatkov</li><li data-i="rb1">Úpravy počas prvého mesiaca zadarmo</li><li data-i="rb2">Stránka v štyroch jazykoch</li><li data-i="f3">Na dohodu o vykonaní práce</li></ul>
 </div></div>
 </div>
-
-<section id="work" class="work">
-  <div class="work-pin" data-hscroll><p class="work-now" aria-hidden="true"><span data-i="work">Vyskúšajte si ukážky</span><b></b></p>
-  <div class="work-track" data-hscroll-track>
-    <div class="work-intro" data-reveal>
-      <p class="kicker"><i>01</i> <span data-i="workNav">Ukážky</span></p>
-      <h2 data-split data-i="work">Vyskúšajte si ukážky</h2>
-      <p class="work-sub" data-i="workSub">Klikajte, rezervujte si termín, prepínajte jazyky. Všetko naozaj funguje.</p>
-      <span class="work-hint" aria-hidden="true"></span>
-    </div>
-    <a class="project nv-p1" href="studio-bella/" data-ex="studio-bella/" data-cursor="Pozrieť" data-cursor-i="look" data-skew>
-      <div class="cover nv-cover" data-clip><img data-ll class="nv-back" data-src="media/shot-bella-desktop-1280.webp" data-srcset="media/shot-bella-desktop-800.webp 800w, media/shot-bella-desktop-1280.webp 1280w" sizes="(max-width:899px) 92vw, 46vw" width="1280" height="800" alt="" loading="lazy"><div class="nv-dev nv-phone"><div class="nv-vid" data-loop="bella-book" data-ll><img data-ll data-src="media/loop/bella-book.webp" data-fb="media/shot-bella-phone-780.webp" onerror="this.onerror=null;this.src=this.dataset.fb" width="360" height="780" alt="" loading="lazy"></div></div></div>
-      <div class="project-title"><h3 data-i="bellaName">Studio Bella</h3><span class="nv-slot" data-plate-slot="work"></span><span class="nv-go"><span data-i="look">Pozrieť</span> ↗</span><span class="circle-arrow" aria-hidden="true"></span></div>
-      <p data-i="w0p">Vyberte si službu, špecialistku a čas. Rezerváciu potom nájdete aj v paneli majiteľa.</p>
-    </a>
-    <a class="project nv-p2" href="garaz-4/" data-ex="garaz-4/" data-cursor="Pozrieť" data-cursor-i="look" data-skew>
-      <div class="cover nv-cover" data-clip><div class="nv-dev nv-browser"><div class="nv-bar" aria-hidden="true"><i></i><i></i><i></i><span>konstantinov.sk/garaz-4</span></div><div class="nv-vid" data-loop="garaz-calc" data-ll><img data-ll data-src="media/loop/garaz-calc.webp" data-fb="media/shot-garage-960.webp" onerror="this.onerror=null;this.src=this.dataset.fb" width="1280" height="800" alt="" loading="lazy"></div></div></div>
-      <div class="project-title"><h3 data-i="garageName">Garáž 4</h3><span class="nv-go"><span data-i="look">Pozrieť</span> ↗</span><span class="circle-arrow" aria-hidden="true"></span></div>
-      <p data-i="garageDesc">Web autoservisu. Kalkulačka ukáže cenu prezutia vopred a zákazník si hneď vyberie deň a čas.</p>
-    </a>
-    <a class="project nv-p3" href="preklad/" data-ex="preklad/" data-cursor="Pozrieť" data-cursor-i="look" data-skew>
-      <div class="cover nv-cover" data-clip><div class="nv-dev nv-browser"><div class="nv-bar" aria-hidden="true"><i></i><i></i><i></i><span>konstantinov.sk/preklad</span></div><div class="nv-vid" data-loop="preklad-lang" data-ll><img data-ll data-src="media/loop/preklad-lang.webp" data-fb="media/loop/shot-preklad.webp" onerror="this.onerror=null;this.src=this.dataset.fb" width="1280" height="800" alt="" loading="lazy"></div></div></div>
-      <div class="project-title"><h3 data-i="translationName">Pred a po</h3><span class="nv-go"><span data-i="look">Pozrieť</span> ↗</span><span class="circle-arrow" aria-hidden="true"></span></div>
-      <p data-i="translationDesc">Porovnajte pôvodnú stránku s ukrajinskou a ruskou verziou.</p>
-    </a>
-  </div>
-  </div>
-</section>
-<section class="nv-bots" id="boty">
-  <div class="nvb-head"><h2 data-i="botsH">Boty a automatizácie</h2><p data-i="botsSub">Krátke ukážky. Ťuknite a pozrite si celé video.</p></div>
-  <div class="nvb-grid">
-    <article class="card nv-bot"><button type="button" class="slot nv-vid" data-loop="bot-salon" data-full="media/salon.mp4" aria-labelledby="project-1 nv-fv1"><img data-src="media/loop/bot-salon.webp" data-fb="media/salon.jpg" onerror="this.onerror=null;this.src=this.dataset.fb" width="1280" height="720" alt="" loading="lazy"><span class="nv-play" id="nv-fv1" data-i="fullVid">Celé video</span></button>
-      <div class="body"><h3 id="project-1" data-i="w1t">Rezervačný bot pre salón</h3><p data-i="w1p">Zákazník napíše „Máte voľno v piatok po 17:00?“, bot ponúkne voľné časy a zapíše ho. Majiteľ potvrdí jedným kliknutím, bot pripomenie návštevu. 4 jazyky.</p>
-      <a class="demo" href="https://t.me/StudioBellaBookingBot" target="_blank" rel="noopener noreferrer" data-i="demo">Otvoriť ukážku v Telegrame</a></div></article>
-    <article class="card nv-bot"><button type="button" class="slot nv-vid" data-loop="bot-monitor" data-full="media/monitor.mp4" aria-labelledby="project-2 nv-fv2"><img data-src="media/loop/bot-monitor.webp" data-fb="media/monitor.jpg" onerror="this.onerror=null;this.src=this.dataset.fb" width="1280" height="720" alt="" loading="lazy"><span class="nv-play" id="nv-fv2" data-i="fullVid">Celé video</span></button>
-      <div class="body"><h3 id="project-2" data-i="w2t">Monitor inzerátov a cien</h3><p data-i="w2p">Sleduje bazos.sk, nové inzeráty ukladá do tabuľky Google a hneď pošle upozornenie do Telegramu.</p></div></article>
-    <article class="card nv-bot"><button type="button" class="slot nv-vid" data-loop="bot-shop" data-full="media/shop.mp4" aria-labelledby="project-3 nv-fv3"><img data-src="media/loop/bot-shop.webp" data-fb="media/shop.jpg" onerror="this.onerror=null;this.src=this.dataset.fb" width="1280" height="720" alt="" loading="lazy"><span class="nv-play" id="nv-fv3" data-i="fullVid">Celé video</span></button>
-      <div class="body"><h3 id="project-3" data-i="w3t">Obchod v Telegrame</h3><p data-i="w3p">Katalóg, košík a objednávka priamo v chate.</p></div></article>
-    <article class="card nv-bot"><button type="button" class="slot nv-vid" data-loop="bot-n8n" data-full="media/n8n.mp4" aria-labelledby="project-4 nv-fv4"><img data-src="media/loop/bot-n8n.webp" data-fb="media/n8n.jpg" onerror="this.onerror=null;this.src=this.dataset.fb" width="1280" height="720" alt="" loading="lazy"><span class="nv-play" id="nv-fv4" data-i="fullVid">Celé video</span></button>
-      <div class="body"><h3 id="project-4" data-i="w4t">Dopyty z webu</h3><p data-i="w4p">Dopyt z formulára sa uloží do tabuľky a majiteľovi príde správa do Telegramu.</p></div></article>
-  </div>
-</section>
-
-<!-- 5. CENY -->
-<section id="prices" class="biz nb-prices">
-  <h2 data-split data-i="n_pr_h">Koľko to stojí</h2>
-  <div class="nb-cards">
-    <article class="nb-card nb-card--sky">
-      <div class="nb-card__vis" data-clip><img data-ll data-src="media/shot-garage-960.webp" width="960" height="640" loading="lazy" alt=""></div>
-      <div class="nb-card__body">
-        <span class="nb-tag" data-i="n_demo">Ukážka</span>
-        <h3 data-i="n_pr1t">Jednoduchý web</h3>
-        <b class="nb-eur" data-i="n_pr1e">od 250 €</b>
-        <ul class="nb-list">
-          <li data-i="n_pr1a">Stránka o vás: služby, ceny, kontakty</li>
-          <li data-i="n_pr1b">Dopytový formulár</li>
-          <li data-i="n_pr1c">Verzie v jazykoch, ktoré potrebujete</li>
-          <li data-i="n_pr1d">Pohodlné používanie aj na mobile</li>
-          <li data-i="n_pr1f">Hotový do 5 dní</li>
-        </ul>
-        <a class="ex nb-ex" href="garaz-4/" data-ex="garaz-4/" data-q="" data-h="" data-i="exG">Ukážka: autoservis Garáž 4</a>
-      </div>
-    </article>
-    <article class="nb-card nb-card--deep">
-      <div class="nb-card__vis" data-clip><div class="nv-vid nb-vid" data-loop="bella-owner" data-ll><img data-ll data-src="media/loop/bella-owner.webp" width="360" height="780" alt="" loading="lazy"></div></div>
-      <div class="nb-card__body">
-        <span class="nb-tag" data-i="n_demo">Ukážka</span>
-        <h3 data-i="n_pr2t">Web s online rezerváciou</h3>
-        <b class="nb-eur" data-i="n_pr2e">od 350 €</b>
-        <ul class="nb-list">
-          <li data-i="n_pr2a">Zákazník si sám vyberie službu a čas</li>
-          <li data-i="n_pr2b">Rezervácie si v paneli pozriete aj na mobile</li>
-          <li data-i="n_pr2c">Môžete ich presunúť alebo zrušiť</li>
-          <li data-i="n_pr2d">Upozornenie príde e-mailom alebo do Telegramu</li>
-          <li data-i="n_pr2f">Hotový do 10 dní</li>
-        </ul>
-        <a class="ex nb-ex" href="studio-bella/" data-ex="studio-bella/" data-q="" data-h="" data-i="exB">Rezervovať si termín v salóne Studio Bella</a>
-      </div>
-    </article>
-  </div>
-  <div class="btns price-cta"><a class="btn main arrow" href="#qf" data-write data-magnetic data-roll><span data-i="cta">Zistiť cenu a termín</span></a></div>
-  <p class="fine nb-note" data-reveal="self" data-i="n_pr_note">Presnú cenu poviem pred začiatkom práce. Doména stojí asi 15 € ročne a platíte ju priamo registrátorovi.</p>
-  <div class="nb-add">
-    <h3 data-i="n_add_h">Pridajte, čo potrebujete</h3>
-    <ul class="nb-add__list">
-      <li><b data-i="n_a1e">80 €</b><span data-i="n_a1t">Upozornenie na každý dopyt z webu</span></li>
-      <li><b data-i="n_a2e">120 €</b><span data-i="n_a2t">Ukrajinská alebo ruská verzia stránky</span></li>
-      <li><b data-i="n_a3e">200 €</b><span data-i="n_a3t">Rezervačný bot v Telegrame. Zadarmo vám ukážem bota s vašimi službami.</span></li>
-      <li><b data-i="n_a4e">400 €</b><span data-i="n_a4t">AI asistent na časté otázky</span></li>
-    </ul>
-  </div>
-</section>
-
-<!-- 6. FRAZA + MOKAP BOTA -->
-<section class="stmtsec biz nb-stmt">
-  <p class="kicker" data-reveal="self"><i>03</i> <span data-i="stmtK">Čo dostanete</span></p>
-  <p class="stmt" data-highlight data-i="n_stmt">Rezervácia sa zapíše sama. Nemusíte dvíhať telefón ani zapisovať termíny do zošita.</p>
-  <div class="nb-stage">
-  <div class="nb-phone" role="group" data-aria="n_mock_aria">
-    <div class="nb-phone__screen">
-      <span class="nb-phone__clock" aria-hidden="true">18:30</span>
-      <div class="nb-notif">
-        <i class="nb-notif__ico" aria-hidden="true"></i>
-        <div class="nb-notif__txt">
-          <span class="nb-notif__app"><span data-i="n_notif_app">Telegram</span> <em data-i="n_demo">Ukážka</em></span>
-          <b data-i="n_notif">Nová rezervácia · 18:30 · Manikúra</b>
-        </div>
-      </div>
-    </div>
-  </div>
-  </div>
-</section>
-
-<!-- 7. AKO PRACUJEME -->
-<section id="ako" class="pcsec biz nb-ako" data-moment="pinned-chapters"><div class="mo-pc__grid">
-  <div class="mo-pc__text">
-    <h2 data-i="n_ako_h">Ako pracujeme</h2>
-    <ol class="mo-pc__steps">
-      <li class="mo-pc__step"><h3><i>01</i> <span data-i="n_ako1t">Napíšete</span></h3><p><span data-i="n_ako1p">Pár slov o podniku cez WhatsApp alebo e-mail. Ozvem sa s cenou a termínom.</span></p><figure class="mo-pc__visual"><img data-src="media/loop/bot-n8n.webp" width="1280" height="720" loading="lazy" alt=""></figure></li>
-      <li class="mo-pc__step"><h3><i>02</i> <span data-i="n_ako2t">Ukážem</span></h3><p><span data-i="n_ako2p">Odkaz na funkčný web pošlem za 5–10 dní. Rezerváciu si sami vyskúšate na mobile.</span></p><figure class="mo-pc__visual"><img data-ll data-src="media/shot-bella-desktop-1280.webp" width="1280" height="800" loading="lazy" alt="" data-alt="desktopAlt"></figure></li>
-      <li class="mo-pc__step"><h3><i>03</i> <span data-i="n_ako3t">Doladím</span></h3><p><span data-i="n_ako3p">Zapracujem pripomienky, pripojím vašu doménu a nastavím upozornenia e-mailom alebo cez Telegram.</span></p><figure class="mo-pc__visual"><img data-ll data-src="media/panel-owner.webp" width="1200" height="1000" loading="lazy" alt="" data-alt="panelAlt"></figure></li>
-      <li class="mo-pc__step"><h3><i>04</i> <span data-i="n_ako4t">Odovzdám</span></h3><p><span data-i="n_ako4p">Krátky návod, ako všetko funguje. Web a prístupy zostávajú vám.</span></p><figure class="mo-pc__visual"><img data-src="media/loop/bot-salon.webp" width="1280" height="720" loading="lazy" alt=""></figure></li>
-    </ol>
-  </div>
-  <div class="mo-pc__visuals"></div>
-</div></section>
-
-<section id="roles" class="job">
-  <h2 data-i="rh">Na aké pozície sa hlásim</h2>
-  <div class="trio">
-    <div class="box"><h3 data-i="r1t">Zákaznícka a technická podpora</h3><p data-i="r1p">Chat, e-mail aj telefón v angličtine a slovenčine. Trpezlivo zistím, čo sa stalo, a riešenie vysvetlím jednoducho.</p></div>
-    <div class="box"><h3 data-i="r2t">Tester / QA junior</h3><p data-i="r2p">Manuálne testovanie botov, formulárov a prepojení. Hlásenia chýb s krokmi, očakávaným výsledkom a logmi.</p></div>
-    <div class="box"><h3 data-i="r3t">AI automatizácia</h3><p data-i="r3p">Telegram boty, n8n workflowy a Python skripty, ktoré berú rutinu z rúk tímu. AI je môj hlavný nástroj.</p></div>
-  </div>
-</section>
-
-
-
-<section class="job">
-  <div class="band"><h2 data-i="lgh">Jazyk</h2><p data-i="lgp">Angličtina na úrovni B2, písomne sa dohovorím isto. Slovenčine dobre rozumiem a bežne sa dohovorím.</p></div>
-</section>
-
-<section id="cv" class="job">
-  <h2 data-i="cvh">Životopisy</h2>
-  <div class="cvs">
-    <a class="cvl" data-cv="Support" target="_blank" rel="noopener"><b data-i="r1t">Zákaznícka a technická podpora</b><span>PDF</span></a>
-    <a class="cvl" data-cv="QA" target="_blank" rel="noopener"><b data-i="r2t">Tester / QA junior</b><span>PDF</span></a>
-    <a class="cvl" data-cv="Automation" target="_blank" rel="noopener"><b data-i="r3t">AI automatizácia</b><span>PDF</span></a>
-  </div>
-</section>
-
-<!-- 8. KTO TO ROBI -->
-<section id="kto" class="biz nb-who">
-  <div class="nb-who__photo" data-clip><img data-src="media/davyd-sunset-640.webp" data-srcset="media/davyd-sunset-360.webp 360w, media/davyd-sunset-640.webp 640w" sizes="(max-width:760px) 320px, 400px" width="640" height="640" loading="lazy" decoding="async" alt="Davyd Konstantinov" data-alt="meAlt"></div>
-  <div class="nb-who__text">
-    <h2 data-split data-i="n_who_h">Kto to robí</h2>
-    <p class="nb-who__lead" data-i="n_who_p">Píšete priamo mne, Davydovi. Web robím sám, od návrhu po spustenie.</p>
-    <ul class="nb-who__facts">
-      <li data-i="n_who1">Bratislava, pracujem na diaľku</li>
-      <li data-i="n_who2">Píšem po slovensky, ukrajinsky, rusky aj anglicky</li>
-      <li data-i="n_who3">Na dohodu o vykonaní práce</li>
-      <li data-i="n_who4">Všetko riešime písomne</li>
-      <li data-i="n_who5">Aj túto stránku som robil ja</li>
-    </ul>
-  </div>
-</section>
-
-<!-- 9. OBRI PISMO (bez textu na fotke) -->
+<section id="doors" class="doors biz"><ul class="drs" data-reveal>
+<li><a href="ukazky.html" data-cursor="→"><span class="dph" data-clip><span data-parallax="0.08"><img src="media/shot-bella-phone-780.webp" width="640" height="800" loading="lazy" decoding="async" alt="" style="object-position:50% 0"></span></span><strong><span data-i="workNav"></span><i aria-hidden="true">→</i></strong><span class="dl" data-i="workSub"></span></a></li>
+<li><a href="ceny.html" data-cursor="→"><span class="dph" data-clip><span data-parallax="0.08"><img src="media/shot-garage-phone-780.webp" width="640" height="800" loading="lazy" decoding="async" alt="" style="object-position:50% 0"></span></span><strong><span data-i="prb"></span><i aria-hidden="true">→</i></strong><span class="dl" data-i="gtp"></span></a></li>
+<li><a href="o-mne.html" data-cursor="→"><span class="dph" data-clip><span data-parallax="0.08"><img src="media/davyd-sunset-640.webp" width="640" height="800" loading="lazy" decoding="async" alt="" style="object-position:50% 50%"></span></span><strong><span data-i="n_who_h"></span><i aria-hidden="true">→</i></strong><span class="dl" data-i="n_who_p"></span></a></li>
+<li><a href="kontakt.html#qf" data-cursor="→"><span class="dph" data-clip><span data-parallax="0.08"><img src="media/shopfront.webp" width="640" height="800" loading="lazy" decoding="async" alt="" style="object-position:50% 50%"></span></span><strong><span data-i="mailb"></span><i aria-hidden="true">→</i></strong><span class="dl" data-i="n_c_p"></span></a></li>
+</ul></section>
 <section class="gtsec biz nb-gt" data-moment="giant-type-pass" data-moment-opts='{"image":"media/shopfront.webp","travel":40,"focusY":55}'>
   <h2 class="mo-gt__type" data-i="n_gt">Zarezervované.</h2>
-  <div class="mo-gt__row"><p data-i="gtp">Hotový za 5–10 dní. Bez mesačných poplatkov.</p><a class="btn main arrow" href="#qf" data-write data-magnetic data-roll><span data-i="cta">Zistiť cenu a termín</span></a></div>
+  <div class="mo-gt__row"><p data-i="gtp">Hotový za 5–10 dní. Bez mesačných poplatkov.</p><a class="btn main arrow" href="kontakt.html#qf" data-write data-magnetic data-roll><span data-i="cta">Zistiť cenu a termín</span></a></div>
 </section>
-
-<!-- 10 + 11. FAQ (vlavo) a jediny FINAL #contact (formular vpravo) -->
-<section id="contact" class="nb-contact"><i class="arc" aria-hidden="true"></i><i class="glow" data-speed="0.75" aria-hidden="true"></i>
+<section id="contact" class="nb-contact nb-cta"><i class="arc" aria-hidden="true"></i><i class="glow" data-speed="0.75" aria-hidden="true"></i>
   <div class="final-top" data-reveal><h2 data-split data-i="n_c_h">Vaša prvá rezervácia.</h2><a class="bigbtn" href="https://wa.me/421910392871" data-wa data-magnetic data-cursor="WhatsApp"><span data-i="waName">WhatsApp</span></a></div>
-  <div class="nb-split">
-    <section id="faq" class="nb-faq">
-      <h2 data-split data-i="n_faq_h">Časté otázky</h2>
-      <div class="faq" data-reveal>
-        <details class="qa" open><summary><h3 data-i="q1">Koľko stojí web?</h3></summary><p data-i="a1">Jednoduchý web alebo landing page od 250 €, web s online rezerváciou a panelom od 350 €. Presnú cenu poviem pred začiatkom práce.</p></details>
-        <details class="qa"><summary><h3 data-i="q5">Za aký čas bude web hotový?</h3></summary><p data-i="a5">Jednoduchý web do 5 dní, web s online rezerváciou do 10 dní. Počítam od chvíle, keď mi pošlete zoznam služieb, cenník a fotky.</p></details>
-        <details class="qa"><summary><h3 data-i="q6">Čo ak sa mi web nebude páčiť?</h3></summary><p data-i="a6">Najprv vám pošlem odkaz na hotový web a upravím ho podľa vašich pripomienok. Platíte, až keď sa vám páči.</p></details>
-        <details class="qa"><summary><h3 data-i="q7">Platí sa niečo mesačne?</h3></summary><p data-i="a7">Mne nie. Platíte len doménu, asi 15 € ročne, a to priamo registrátorovi.</p></details>
-        <details class="qa"><summary><h3 data-i="q8">Kto bude meniť texty a ceny?</h3></summary><p data-i="a8">Prvý mesiac po spustení ich zmením ja, zadarmo. Stačí mi napísať. Neskôr sa dohodneme na cene.</p></details>
-        <details class="qa"><summary><h3 data-i="q2">Ako to riešime zmluvne?</h3></summary><p data-i="a2">Oficiálne, na dohodu o vykonaní práce s vašou firmou na Slovensku.</p></details>
-        <details class="qa"><summary><h3 data-i="q3">V ktorých jazykoch robíte weby?</h3></summary><p data-i="a3">Slovenčina, ukrajinčina, ruština a angličtina. Písať si môžeme v ktoromkoľvek z nich.</p></details>
-        <details class="qa"><summary><h3 data-i="q4">Sú potrebné telefonáty?</h3></summary><p data-i="a4">Nie, všetko vyriešime písomne cez WhatsApp alebo e-mail. Ak vám viac vyhovuje hovor, stačí jeden krátky na začiatku.</p></details>
-        <details class="qa"><summary><h3 data-i="n_q9">Čo vám mám poslať na začiatku?</h3></summary><p data-i="n_a9">Zoznam služieb, cenník a fotky. Ak ich nemáte hotové, napíšte mi a poradím, čo treba pripraviť.</p></details>
-        <details class="qa"><summary><h3 data-i="n_q10">Ako sa dozviem o novej rezervácii?</h3></summary><p data-i="n_a10">Rezervácie vidíte v paneli na mobile. Upozornenie príde e-mailom alebo do Telegramu.</p></details>
-      </div>
-    </section>
-    <div class="nb-formcol">
-      <div class="contact-intro" data-reveal><p data-i="n_c_p">Napíšte pár slov o svojom podniku. Ozvem sa s cenou a termínom.</p><p class="paynote" data-i="n_c_pay">Najprv uvidíte hotový web. Platíte až potom, keď ste spokojní.</p>
-        <figure class="nb-fig" data-moment="liquid-hover" data-moment-opts='{"strength":0.5,"radius":0.18}'><img data-src="media/garage-headlamp.webp" width="960" height="640" decoding="async" loading="lazy" fetchpriority="low" alt=""></figure>
-        <div class="address"><span id="email-address">davyd@konstantinov.sk</span><button type="button" id="copy-email" data-i="copy">Kopírovať</button></div>
-        <small id="copy-status" role="status"></small>
-        <div class="channels"><a href="https://wa.me/421910392871" data-wa><span data-i="waName">WhatsApp</span> <span>+421 910 392 871</span></a><a href="tel:+421910392871" data-i="callName">Zavolať</a><a href="https://t.me/+421910392871" data-i="tgName">Telegram</a></div>
-      </div>
-  <div class="form-panel" data-reveal>
-    <form class="qf biz" id="qf" method="post" novalidate>
-      <label for="qb" data-i="qb">Aký máte podnik? (nepovinné)</label><input id="qb" name="business" maxlength="120" autocomplete="organization">
-      <label for="qn" data-i="qn">Čo potrebujete?</label><textarea id="qn" name="need" rows="3" maxlength="800" required aria-describedby="qe"></textarea>
-      <small class="error" id="qe" data-i="qe" hidden>Napíšte aspoň pár slov, čo potrebujete.</small>
-      <label for="qk" data-i="qk">Váš telefón alebo e-mail</label><input id="qk" name="contact" maxlength="120" required aria-describedby="qke">
-      <small class="error" id="qke" data-i="contactError" hidden>Zadajte telefón alebo e-mail, aby som vám mohol odpovedať.</small>
-      <input name="_honey" type="text" tabindex="-1" autocomplete="off" hidden>
-      <div class="send-error" role="alert" hidden><span data-i="sendError">Správu sa nepodarilo odoslať. Skúste to znova alebo mi napíšte cez WhatsApp.</span> <a href="https://wa.me/421910392871" data-wa data-i="qwa">Poslať cez WhatsApp</a></div>
-      <div class="btns"><button class="btn main arrow" id="send" type="submit" data-i="qml">Odoslať</button>
-        <button class="btn" type="submit" data-q="wa" data-i="qwa">Poslať cez WhatsApp</button></div>
-    </form>
-    <div class="thanks" hidden tabindex="-1"><h3 data-i="thankTitle">Ďakujem za správu.</h3><p data-i="thankText">Ozvem sa vám do jedného dňa.</p></div>
-  </div>
-    </div>
-  </div>
+  <div class="cta-row" data-reveal><p data-i="n_c_p"></p><a class="btn main arrow" href="kontakt.html#qf" data-magnetic data-roll><span data-i="cta"></span></a></div>
 </section>
 </main>
 
@@ -2021,7 +1855,7 @@ const needField = document.getElementById('qn');
 const contactField = document.getElementById('qk');
 const sendButton = document.getElementById('send');
 const thanks = document.querySelector('.thanks');
-const sendError = form.querySelector('.send-error');
+const sendError = form ? form.querySelector('.send-error') : {hidden: true};
 const copyStatus = document.getElementById('copy-status');
 const currentLanguage = () => document.documentElement.lang;
 
@@ -2041,8 +1875,8 @@ function setLang(l) {
   const t = T[l];
   document.body.dataset.mode = 'biz';
   document.documentElement.lang = l;
-  document.title = t.title;
-  document.querySelector('meta[name=description]').content = t.desc;
+  document.title = window.PG ? t[PG.t] + ' · Davyd Konstantinov' : t.title;
+  document.querySelector('meta[name=description]').content = window.PG ? t[PG.d] : t.desc;
   translations.forEach(el => { const v = t[el.dataset.i] ?? ''; if (el.textContent !== v) el.textContent = v; });   // same text: no repaint
   document.querySelectorAll('[data-alt]').forEach(el => { el.alt = t[el.dataset.alt]; });
   document.querySelectorAll('[data-aria]').forEach(el => { el.setAttribute('aria-label', t[el.dataset.aria]); });
@@ -2058,7 +1892,7 @@ function setLang(l) {
   });
   document.querySelectorAll('[data-wa]').forEach(a => { a.href = whatsappUrl(t.wat); });
   if (!sendError.hidden) sendError.querySelector('a').href = whatsappUrl(messageFromFields());
-  copyStatus.textContent = '';
+  if (copyStatus) copyStatus.textContent = '';
   try { localStorage.lang = l; } catch {}
   setTimeout(() => window.wow && wow.resplit(), 0);
 }
@@ -2076,6 +1910,7 @@ try { saved = localStorage.lang; } catch {}
 setLang(new URLSearchParams(location.search).get('lang') || saved || navigator.language.slice(0, 2));
 
 document.querySelectorAll('[data-write]').forEach(link => link.addEventListener('click', event => {
+  if (!form) return;
   event.preventDefault();
   const target = form.hidden ? thanks : [businessField, needField, contactField].find(field => !field.value.trim()) || sendButton;
   target.focus({preventScroll:true});
@@ -2109,7 +1944,7 @@ function checkField(field, errorId) {
   return valid;
 }
 
-form.addEventListener('input', event => {
+form && form.addEventListener('input', event => {
   const field = event.target;
   if (field.hasAttribute('aria-invalid') && field.value.trim()) checkField(field, field.getAttribute('aria-describedby'));
   if (!sendError.hidden) sendError.querySelector('a').href = whatsappUrl(messageFromFields());
@@ -2122,7 +1957,7 @@ function showThanks() {
 }
 
 const GOOGLE_FORM_URL = 'https://script.google.com/macros/s/AKfycbyOsLmSV9Kj0ZYgOIxL0OS2LYzYCx1-_eLFF7OifK3jkyW1TxHpC3HDI0UPXZ1vk85K1g/exec';
-form.addEventListener('submit', async event => {
+form && form.addEventListener('submit', async event => {
   event.preventDefault();
   if (sendButton.disabled) return;
   const honey = form.elements._honey.value;
@@ -2180,6 +2015,7 @@ form.addEventListener('submit', async event => {
 
 (() => {
   const demo = document.getElementById('live-demo');
+  if (!demo) return;
   const times = [...demo.querySelectorAll('.ld-times button')];
   const book = demo.querySelector('.ld-book');
   const fresh = demo.querySelector('.ld-new');
@@ -2238,7 +2074,7 @@ form.addEventListener('submit', async event => {
   }, {once: true, passive: true});
 })();
 
-document.getElementById('copy-email').addEventListener('click', async () => {
+document.getElementById('copy-email')?.addEventListener('click', async () => {
   const address = document.getElementById('email-address');
   let copied = false;
   try {
@@ -2260,5 +2096,20 @@ document.getElementById('copy-email').addEventListener('click', async () => {
 /* motion libraries load 1 s after the page: fetched with it they took the slow-4G bandwidth from the first screen (LCP 3.1 s, 23.11). async=false keeps their order */
 addEventListener('load',()=>setTimeout(()=>{['gsap.min.js','ScrollTrigger.min.js','SplitText.min.js','Flip.min.js','lenis.min.js','home.js','wow.js','novy.js','v2.js'].forEach(f=>{const e=document.createElement('script');e.src='lib/'+f+(f=='home.js'||f=='v2.js'?'?v=2':'');e.async=false;if(f=='wow.js')e.onload=e.onerror=()=>{const m=document.createElement('script');m.type='module';m.src='lib/moments/moments.js';document.body.append(m)};document.body.append(e)})},1000),{once:true})</script>
 <script>/* 25.11 LCP: pictures below the first screen get their address once the browser reports the largest paint (H1), or 1.5 s after load where that report is missing (the counter.dev beacon too, so its request does not count in the H1 time); load and the next frame both come before the H1 paint, so they do not compete with the H1 */(()=>{let d=0;const go=()=>{if(d)return;d=1;const c=document.createElement('script');c.src='https://cdn.counter.dev/script.js';c.dataset.id='257df3c8-5256-4c70-addb-07ba1530a824';c.dataset.utcoffset='1';document.head.appendChild(c);document.querySelectorAll('img[data-src]').forEach(i=>{if(i.dataset.srcset)i.srcset=i.dataset.srcset;i.src=i.dataset.src})};try{new PerformanceObserver(()=>setTimeout(go,50)).observe({type:'largest-contentful-paint',buffered:true})}catch(e){}addEventListener('load',()=>setTimeout(go,1500))})()</script>
+<script>/* page transition: yellow + black panels close over the page, the next page opens from under them */
+(()=>{const R=document.documentElement;
+if(R.classList.contains('pt-in')){const go=()=>requestAnimationFrame(()=>requestAnimationFrame(()=>{R.classList.add('pt-go');setTimeout(()=>R.classList.remove('pt-in','pt-go'),900)}));document.readyState==='loading'?addEventListener('DOMContentLoaded',go):go()}
+addEventListener('pageshow',e=>{if(e.persisted)R.classList.remove('pt-out','pt-in','pt-go')});
+if(!matchMedia('(prefers-reduced-motion: no-preference)').matches)return;
+const dir=location.pathname.replace(/[^/]*$/,'');
+addEventListener('click',e=>{const a=e.target.closest&&e.target.closest('a[href]');
+if(!a||e.defaultPrevented||e.button||e.metaKey||e.ctrlKey||e.shiftKey||e.altKey||a.target||a.hasAttribute('download'))return;
+let u;try{u=new URL(a.href)}catch(x){return}
+if(u.origin!==location.origin||u.pathname.replace(/[^/]*$/,'')!==dir)return;
+const f=u.pathname.slice(dir.length);if(f&&!/^(index|ukazky|ceny|o-mne|kontakt)\.html$/.test(f))return;
+if(u.pathname===location.pathname)return;
+e.preventDefault();try{sessionStorage.pt='1'}catch(x){}
+R.classList.remove('pt-in','pt-go');R.classList.add('pt-out');setTimeout(()=>{location.href=u.href},620)})})();
+</script>
 </body>
 </html>
