@@ -635,6 +635,7 @@ footer .sig i{display:inline-block;font-style:normal}
 main>section.phero{margin-top:0;padding:clamp(40px,9vh,140px) 0 0}
 main>section.phero h1{font:500 clamp(72px,17vw,340px)/.9 var(--sans);letter-spacing:-.055em;margin:0;overflow-wrap:anywhere}
 main>section.phero.long h1{font-size:clamp(44px,11.5vw,230px)}
+main>section.phero .pdeal{margin:clamp(18px,2.2vw,40px) 0 0;max-width:44ch;font:500 clamp(15px,1.25vw,20px)/1.45 var(--sans);color:var(--muted)}
 .phero+section,main>.phero+section.work{margin-top:clamp(36px,5vw,110px)}
 .nxt a{display:flex;align-items:baseline;gap:.25em;padding:clamp(22px,3vw,56px) 0;border-top:1px solid var(--rule);border-bottom:1px solid var(--rule);text-decoration:none;color:inherit;font:500 clamp(44px,9vw,190px)/1 var(--sans);letter-spacing:-.045em;transition:color .4s,padding .6s cubic-bezier(.2,.8,.2,1)}
 .nxt small{font:inherit;color:var(--blue);transition:transform .6s cubic-bezier(.2,.8,.2,1)}
@@ -694,11 +695,19 @@ html.pt-in .curtain{display:none}
 <script>(()=>{const m=document.getElementById('nv-menu');m.addEventListener('click',e=>{if(e.target.closest('a'))m.close()},true)})()/* a menu link closes the menu first, then does its own job */</script>
 <script>window.PG={t:"mailb",d:"n_c_p"}</script>
 <main>
-<section class="phero biz"><p class="kicker"><i>04</i> <span>Davyd Konstantinov</span></p><h1 data-split data-i="mailb">Napísať mi</h1></section>
+<section class="phero biz"><p class="kicker"><i>04</i> <span>Davyd Konstantinov</span></p><h1 data-split data-i="mailb">Napísať mi</h1><p class="pdeal" data-i="deal">Web od 250 € · bez mesačných poplatkov · platíte až po tom, čo uvidíte hotový web</p></section>
 <section id="contact" class="nb-contact"><i class="arc" aria-hidden="true"></i><i class="glow" data-speed="0.75" aria-hidden="true"></i>
   <div class="final-top" data-reveal><h2 data-split data-i="n_c_h">Vaša prvá rezervácia.</h2><a class="bigbtn" href="https://wa.me/421910392871" data-wa data-magnetic data-cursor="WhatsApp"><span data-i="waName">WhatsApp</span></a></div>
   <div class="nb-split">
-    
+    <section id="faq" class="nb-faq">
+      <h2 data-split data-i="n_faq_h">Časté otázky</h2>
+      <div class="faq" data-reveal>
+        <details class="qa" open><summary><h3 data-i="q1">Koľko stojí web?</h3></summary><p data-i="a1">Jednoduchý web alebo landing page od 250 €, web s online rezerváciou a panelom od 350 €. Presnú cenu poviem pred začiatkom práce.</p></details>
+        <details class="qa"><summary><h3 data-i="q5">Za aký čas bude web hotový?</h3></summary><p data-i="a5">Jednoduchý web do 5 dní, web s online rezerváciou do 10 dní. Počítam od chvíle, keď mi pošlete zoznam služieb, cenník a fotky.</p></details>
+        <details class="qa"><summary><h3 data-i="q6">Čo ak sa mi web nebude páčiť?</h3></summary><p data-i="a6">Najprv vám pošlem odkaz na hotový web a upravím ho podľa vašich pripomienok. Platíte, až keď sa vám páči.</p></details>
+        <details class="qa"><summary><h3 data-i="q7">Platí sa niečo mesačne?</h3></summary><p data-i="a7">Mne nie. Platíte len doménu, asi 15 € ročne, a to priamo registrátorovi.</p></details>
+      </div>
+    </section>
     <div class="nb-formcol">
       <div class="contact-intro" data-reveal><p data-i="n_c_p">Napíšte pár slov o svojom podniku. Ozvem sa s cenou a termínom.</p><p class="paynote" data-i="n_c_pay">Najprv uvidíte hotový web. Platíte až potom, keď ste spokojní.</p>
         <figure class="nb-fig" data-moment="liquid-hover" data-moment-opts='{"strength":0.5,"radius":0.18}'><img data-src="media/garage-headlamp.webp" width="960" height="640" decoding="async" loading="lazy" fetchpriority="low" alt=""></figure>
