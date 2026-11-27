@@ -140,6 +140,8 @@ footer a{color:var(--tape)}.legal{opacity:.8}
 }
 @media(min-width:861px){.stage{align-items:start;grid-template-columns:minmax(0,1fr) 380px}.scr{height:clamp(480px,calc(100vh - 204px),660px)}.tape{padding:26px 0 14px}.tape span{font-size:clamp(1.5rem,2.2vw,2.1rem)}.cards{gap:28px}}
 .cta .go{position:relative}
+.wow-js .lead[data-reveal=self]>span{opacity:1;transform:none}.lead .ls{display:none}.acts{margin:28px 0 0;display:flex;flex-wrap:wrap;align-items:center;gap:12px 18px}.acts small{color:var(--sec);font-size:.875rem;max-width:30ch}.btnp{display:inline-flex;align-items:center;justify-content:center;min-height:54px;padding:0 28px;border-radius:999px;background:var(--red);color:#fff;font:600 1.0625rem/1 var(--font);text-decoration:none;box-shadow:0 10px 24px rgba(168,64,42,.22);transition:background-color .2s var(--ease)}.btnp:hover{background:var(--red-press)}.acts+.price{margin-top:16px}.cta .alt{margin:22px 0 0;color:rgba(243,237,227,.72);font-size:1rem}.cta .alt a{color:#f3ede3}.hands img{height:116%}
+@media(max-width:600px){h1{font-size:2.2rem;max-width:none}.lead{margin:16px 0 22px;font-size:1.0625rem}.lead .ll{display:none}.lead .ls{display:inline}.ph-img{height:124px}.stage>.acts{margin-top:26px}.btnp{width:100%}.cards{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:0;padding:0;overflow:visible}.mini{flex:none;padding:16px 14px 14px;gap:8px;border-radius:18px}.mini .lc{font-size:2.3rem}.mini h3{font-size:1.0625rem}.mini p,.mini .row{font-size:.78rem}.mini .fake{font-size:.8125rem;padding:9px}}
 .cta .go::before{content:"";position:absolute;inset:7px;border-radius:50%;background:repeating-conic-gradient(rgba(36,28,22,.62) 0 .9deg,transparent .9deg 6deg);-webkit-mask:radial-gradient(farthest-side,transparent calc(100% - 9px),#000 calc(100% - 9px));mask:radial-gradient(farthest-side,transparent calc(100% - 9px),#000 calc(100% - 9px));pointer-events:none}
 @media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.phone .wipe{display:none}}
 </style>
@@ -155,13 +157,14 @@ footer a{color:var(--tape)}.legal{opacity:.8}
   <main class="stage">
     <div data-intro>
       <h1 data-split data-i="h1"></h1>
-      <p class="lead" data-reveal="self" data-i="lead"></p>
+      <p class="lead" data-reveal="self"><span class="ll" data-i="lead"></span><span class="ls" data-i="leads"></span></p>
       <div data-reveal><p class="chip"><span data-i="ct"></span> · <b>120 €</b> · <span data-i="cd"></span></p></div>
       <div data-reveal><div class="ab" role="group" data-al="abl">
         <button type="button" id="bBefore" aria-pressed="true"><span data-i="b0"></span><small data-i="b0s"></small></button>
         <button type="button" id="bAfter" aria-pressed="false" data-magnetic><span data-i="b1"></span><small data-i="b1s"></small></button>
       </div></div>
       <ul class="notes" id="notes" aria-live="polite"></ul>
+      <p class="acts"><a class="btnp" data-wa href="https://wa.me/421910392871" target="_blank" rel="noopener" data-magnetic><span data-i="go"></span></a><small data-i="gon"></small></p>
       <p class="price"><span data-i="pr"></span> <a data-back href="../" data-i="prl"></a></p>
     </div>
     <div class="phone" id="phone" data-reveal="self"><i class="wipe" aria-hidden="true"></i><div class="scr" id="scr">
@@ -199,8 +202,8 @@ footer a{color:var(--tape)}.legal{opacity:.8}
 <section class="steps"><div class="wrap"><h2 data-i="sth" data-reveal="self"></h2><ol class="st" data-reveal><li><b data-i="s1t"></b><p data-i="s1p"></p></li><li><b data-i="s2t"></b><p data-i="s2p"></p></li><li><b data-i="s3t"></b><p data-i="s3p"></p></li><li><b data-i="s4t"></b><p data-i="s4p"></p></li></ol></div></section>
 <section class="faqs"><div class="wrap"><h2 data-i="faqh" data-reveal="self"></h2><div class="faq" data-reveal><details><summary data-i="q1"></summary><p data-i="a1"></p></details><details><summary data-i="q2"></summary><p data-i="a2"></p></details><details><summary data-i="q3"></summary><p data-i="a3"></p></details><details><summary data-i="q4"></summary><p data-i="a4"></p></details><details><summary data-i="q5"></summary><p data-i="a5"></p></details></div></div></section>
 <section class="cta"><div class="wrap price">
-  <h2 data-i="pr"></h2>
-  <a class="go" data-back href="../" data-magnetic data-cursor="→"><span data-i="prl"></span></a>
+  <div><h2 data-i="fin"></h2><p class="alt"><span data-i="pr"></span> <a data-back href="../" data-i="prl"></a></p></div>
+  <a class="go" data-wa href="https://wa.me/421910392871" target="_blank" rel="noopener" data-magnetic data-cursor="→"><span data-i="gos"></span></a>
 </div></section>
 <footer><div class="wrap"><span data-i="foot"></span> <a data-back href="../" data-i="back"></a><br><span data-i="want"></span> <a href="https://wa.me/421910392871" target="_blank" rel="noopener">WhatsApp</a> · <a href="tel:+421910392871">+421 910 392 871</a><br>© 2026 Davyd Konstantinov<br><span data-i="dh"></span><br><span class="legal"><a href="../ochrana-udajov.html" data-i="priv"></a></span></div></footer>
 <script defer src="../lib/gsap.min.js"></script>
@@ -255,11 +258,12 @@ Object.assign(T.sk,{"ct": "Ukrajinská alebo ruská verzia stránky", "cd": "3 d
 Object.assign(T.uk,{"ct": "Українська або російська версія сторінки", "cd": "3 дні", "sth": "Як це відбувається", "s1t": "Ви пишете", "s1p": "Надсилаєте посилання на свій сайт у WhatsApp або на e-mail. Я відповідаю з ціною і терміном.", "s2t": "Перекладаю", "s2p": "За 3 дні переклад уже на вашому сайті, разом із перемикачем мов.", "s3t": "Доопрацьовую", "s3p": "Ви дивитеся і пишете зауваження. Я їх виправляю.", "s4t": "Ви платите", "s4p": "Тільки коли переклад вас влаштовує.", "q5": "Чи є щомісячна плата?", "a5": "Ні. За переклад ви платите один раз, щомісячних платежів немає.", "dh": "Співпраця офіційно, за договором dohoda про виконання роботи."});
 Object.assign(T.ru,{"ct": "Украинская или русская версия страницы", "cd": "3 дня", "sth": "Как это проходит", "s1t": "Вы пишете", "s1p": "Присылаете ссылку на свой сайт в WhatsApp или на e-mail. Я отвечаю с ценой и сроком.", "s2t": "Перевожу", "s2p": "За 3 дня перевод уже на вашем сайте, вместе с переключателем языков.", "s3t": "Дорабатываю", "s3p": "Вы смотрите и пишете замечания. Я их исправляю.", "s4t": "Вы платите", "s4p": "Только когда перевод вас устраивает.", "q5": "Есть ежемесячная плата?", "a5": "Нет. За перевод вы платите один раз, ежемесячных платежей нет.", "dh": "Сотрудничество официально, по договору dohoda о выполнении работы."});
 Object.assign(T.en,{"ct": "Ukrainian or Russian version of a page", "cd": "3 days", "sth": "How it works", "s1t": "You write", "s1p": "Send me a link to your website via WhatsApp or e-mail. I reply with the price and the date.", "s2t": "I translate", "s2p": "Within 3 days the translation is on your website, with a language switch.", "s3t": "I polish", "s3p": "You take a look and send your comments. I fix them.", "s4t": "You pay", "s4p": "Only when you're happy with the translation.", "q5": "Are there monthly fees?", "a5": "No. You pay once for the translation, there are no monthly fees.", "dh": "Official cooperation under a dohoda (agreement on work performed)."});
+Object.assign(T.sk,{"go": "Poslať odkaz na svoj web", "gon": "Cez WhatsApp. Platíte, až keď ste s prekladom spokojní.", "fin": "Pošlite odkaz na svoj web. Ozvem sa s cenou a termínom.", "gos": "Poslať odkaz", "wat": "Dobrý deň, mám záujem o ukrajinskú alebo ruskú verziu stránky. Môj web: ", "leads": "Prepínajte medzi „Pred“ a „Po“ a sledujte, čo sa mení na displeji."});Object.assign(T.uk,{"go": "Надіслати посилання на свій сайт", "gon": "У WhatsApp. Платите, лише коли переклад вас влаштовує.", "fin": "Надішліть посилання на свій сайт. Я відповім із ціною і терміном.", "gos": "Надіслати посилання", "wat": "Добрий день, мене цікавить українська або російська версія сторінки. Мій сайт: ", "leads": "Перемкніть «До» і «Після» та подивіться на телефон."});Object.assign(T.ru,{"go": "Прислать ссылку на свой сайт", "gon": "В WhatsApp. Платите, только когда перевод вас устраивает.", "fin": "Пришлите ссылку на свой сайт. Я отвечу с ценой и сроком.", "gos": "Прислать ссылку", "wat": "Здравствуйте, меня интересует украинская или русская версия страницы. Мой сайт: ", "leads": "Переключите «До» и «После» и посмотрите на телефон."});Object.assign(T.en,{"go": "Send a link to your website", "gon": "Via WhatsApp. You pay only when you're happy with the translation.", "fin": "Send me a link to your website. I'll reply with the price and the delivery date.", "gos": "Send the link", "wat": "Hello, I'm interested in a Ukrainian or Russian version of my website. My site: ", "leads": "Switch between Before and After and watch the phone."});
 let cur='sk',after=false,pcur='sk',swapT=0,first=true;
 const $=id=>document.getElementById(id),pf=$('pf');
 /* phone: the Pred/Po switch sits right above the mock-up, the notes go under it */
-{const mq=matchMedia('(max-width:860px)'),stg=document.querySelector('.stage'),intr=stg.querySelector('[data-intro]'),nt=$('notes'),prc=intr.querySelector('.price');
- const place=()=>mq.matches?stg.append(nt,prc):intr.append(nt,prc);place();mq.addEventListener('change',place)}
+{const mq=matchMedia('(max-width:860px)'),stg=document.querySelector('.stage'),intr=stg.querySelector('[data-intro]'),nt=$('notes'),prc=intr.querySelector('.price'),act=intr.querySelector('.acts');
+ const place=()=>mq.matches?stg.append(nt,act,prc):intr.append(nt,act,prc);place();mq.addEventListener('change',place)}
 function fill(l){
   const d=P[l];
   document.querySelectorAll('[data-q]').forEach(e=>e.textContent=d[e.dataset.q]);
@@ -298,6 +302,7 @@ function setLang(l){
   document.querySelectorAll('[data-i]').forEach(e=>{const v=T[l][e.dataset.i]??'';if(e.textContent!==v)e.textContent=v});
   document.querySelectorAll('[data-al]').forEach(e=>e.setAttribute('aria-label',T[l][e.dataset.al]));
   document.querySelectorAll('[data-back]').forEach(a=>a.href='../?lang='+l+(a.closest('.price')?'#prices':''));
+  document.querySelectorAll('[data-wa]').forEach(a=>a.href='https://wa.me/421910392871?text='+encodeURIComponent(T[l].wat));
   document.documentElement.lang=l;document.title=T[l].title;document.querySelector('meta[name=description]').content=T[l].desc;
   document.querySelectorAll('[data-set]').forEach(b=>b.setAttribute('aria-pressed',b.dataset.set===l));
   mode(after);

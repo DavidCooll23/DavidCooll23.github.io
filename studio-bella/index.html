@@ -272,7 +272,7 @@ html,body{overflow-x:clip}
  body:not(.past) .bar{transform:translateY(110%)}
  body:not(.past) .fab{opacity:0;pointer-events:none;transform:translateY(16px)}
 }
-.demo .ds{display:none}@media(max-width:640px){.demo .dl{display:none}.demo .ds{display:inline}}
+.demo .ds,.demo .bs{display:none}.demo .dr{display:inline-flex;align-items:center;gap:8px 18px}.demo a.wantb{background:var(--cream);color:var(--night);padding:3px 13px;border-radius:999px;text-decoration:none;white-space:nowrap;transition:background-color .2s}.demo a.wantb:hover{background:#fff}@media(max-width:640px){.demo .dl,.demo .bl{display:none}.demo .ds,.demo .bs{display:inline}.demo .dr{width:100%;justify-content:space-between}.eyebrow{font-size:.6875rem;letter-spacing:.08em;gap:10px;white-space:nowrap}.eyebrow::before{width:26px}}@media(min-width:900px){.faq{max-width:none;display:grid;grid-template-columns:1.12fr .88fr;gap:0 48px}.faq>*{grid-column:1}}
 @media(min-width:900px){#dopyt .ask{grid-template-columns:1.12fr .88fr}}
 .owner{background:rgba(43,33,27,.035);border:1px dashed var(--line);border-radius:24px;padding:22px}
 .owner h3{font:600 .9375rem/1.4 var(--sans);color:var(--sec)}
@@ -284,7 +284,7 @@ html,body{overflow-x:clip}
 </head>
 <body data-progress data-grain>
 <div class="wow-loader" data-loader aria-hidden="true"><span class="ld-w">Studio <i>Bella</i></span><span class="ld-n" data-loader-n>0</span></div>
-<div class="demo"><div class="wrap"><span class="dl" data-i="demo"></span><span class="ds" data-i="demos"></span><a data-back href="../"><img class="me" src="../media/davyd-sunset-96.webp" width="96" height="96" alt="Davyd Konstantinov"><span data-i="back"></span></a></div></div>
+<div class="demo"><div class="wrap"><span class="dl" data-i="demo"></span><span class="ds" data-i="demos"></span><span class="dr"><a data-back href="../"><img class="me" src="../media/davyd-sunset-96.webp" width="96" height="96" alt="Davyd Konstantinov"><span class="bl" data-i="back"></span><span class="bs" data-i="backs"></span></a><a class="wantb" data-back data-want href="../#qf" data-i="wantb"></a></span></div></div>
 <header data-hide-header><div class="wrap">
   <a class="mark" href="#top">Studio Bella</a>
   <nav><a class="wow-line" href="#services" data-i="n1"></a><a class="wow-line" href="#team" data-i="n2"></a><a class="wow-line" href="#visit" data-i="n3"></a></nav>
@@ -563,6 +563,7 @@ Object.assign(T.sk,{"gh": "Ako to u nás vyzerá", "gs": "Svetlý salón s dvoma
 Object.assign(T.uk,{"gh": "Як у нас", "gs": "Світлий салон на два робочі місця. Фото ілюстративні.", "g1": "Салон із дзеркалом і кріслом", "g2": "Рівна стрижка до плечей", "g3": "Підготовка фарби для фарбування", "g4": "Інструменти для оформлення брів", "v4": "Телефон", "v5": "Скасування", "canc": "Будь-коли, за посиланням із підтвердження", "map": "Відкрити на мапі", "firm": "Зразок реквізитів: Studio Bella s. r. o., IČO 00 000 000, Hlavná 1, 811 01 Bratislava", "priv": "Захист персональних даних"});
 Object.assign(T.ru,{"gh": "Как у нас", "gs": "Светлый салон на два рабочих места. Фото иллюстративные.", "g1": "Салон с зеркалом и креслом", "g2": "Ровная стрижка до плеч", "g3": "Подготовка краски для окрашивания", "g4": "Инструменты для оформления бровей", "v4": "Телефон", "v5": "Отмена", "canc": "В любой момент, по ссылке из подтверждения", "map": "Открыть в картах", "firm": "Образец реквизитов: Studio Bella s. r. o., IČO 00 000 000, Hlavná 1, 811 01 Bratislava", "priv": "Защита персональных данных"});
 Object.assign(T.en,{"gh": "Inside the salon", "gs": "A bright salon with two workstations. The photos are illustrative.", "g1": "The salon with a mirror and a styling chair", "g2": "A straight shoulder-length cut", "g3": "Hair colour being mixed", "g4": "Brow tools", "v4": "Phone", "v5": "Cancelling", "canc": "Any time, via the link in your confirmation", "map": "Open in maps", "firm": "Sample company details: Studio Bella s. r. o., IČO 00 000 000, Hlavná 1, 811 01 Bratislava", "priv": "Privacy policy"});
+Object.assign(T.sk,{"backs": "Davyd Konstantinov", "wantb": "Chcem takýto web"});Object.assign(T.uk,{"backs": "Давид Константінов", "wantb": "Хочу такий сайт"});Object.assign(T.ru,{"backs": "Давид Константинов", "wantb": "Хочу такой сайт"});Object.assign(T.en,{"backs": "Davyd Konstantinov", "wantb": "I want a site like this"});
 const A={
 sk:{cut:"Strih stojí 25 € a trvá 60 minút. Strihá Anna.",color:"Farbenie stojí 60 € a trvá 120 minút. Robí ho Anna.",nails:"Manikúra stojí 30 € a trvá 90 minút. Robí ju Oľga.",brows:"Úprava obočia u Oľgy stojí 15 € a trvá 30 minút.",
 list:"Strih 25 €, farbenie 60 €, manikúra 30 €, úprava obočia 15 €. Ceny sú konečné.",hours:"Otvorené máme od pondelka do soboty, 9:00–19:00. V nedeľu je zatvorené.",
@@ -604,7 +605,7 @@ function setLang(l){
   const tc=document.getElementById('tc');if(tc.dataset.none)tc.textContent=T[l].onone;
   document.querySelectorAll('[data-alt]').forEach(e=>e.alt=T[l][e.dataset.alt]);
   document.querySelectorAll('[data-al]').forEach(e=>e.setAttribute('aria-label',T[l][e.dataset.al]));
-  document.querySelectorAll('[data-back]').forEach(a=>a.href='../?lang='+l);
+  document.querySelectorAll('[data-back]').forEach(a=>a.href='../?lang='+l+(a.dataset.want!=null?'#qf':''));
   document.documentElement.lang=l;document.title=T[l].title;
   document.querySelector('meta[name=description]').content=T[l].desc;
   document.querySelectorAll('[data-set]').forEach(b=>b.setAttribute('aria-pressed',b.dataset.set===l));

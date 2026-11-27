@@ -24,10 +24,10 @@
   "h": 800,
   "m_w": 854,
   "m_h": 534,
-  "dur": 6.29,
-  "bytes": 62335,
-  "m_bytes": 35380,
-  "poster_bytes": 32788
+  "dur": 6.33,
+  "bytes": 99186,
+  "m_bytes": 59850,
+  "poster_bytes": 46684
  },
  "preklad-lang": {
   "w": 1280,
@@ -93,7 +93,7 @@
   "shot-garaz-calc": {
    "w": 1280,
    "h": 800,
-   "bytes": 47818
+   "bytes": 70256
   },
   "shot-preklad": {
    "w": 1280,
