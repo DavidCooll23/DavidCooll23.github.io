@@ -30,12 +30,11 @@ header.wow-up{transform:translateY(-100%)}
 .top{display:flex;align-items:center;gap:16px;height:64px}
 .top a{font-size:.9375rem;text-decoration:none;font-weight:600}
 .lang{display:flex;gap:2px;margin-left:auto}
-.lang button{font:600 .8125rem/1 var(--font);color:var(--sec);background:none;border:0;padding:9px 8px;border-radius:8px;cursor:pointer}
+.lang button{font:600 .8125rem/1 var(--font);color:var(--sec);background:none;border:0;padding:9px 12px;border-radius:8px;cursor:pointer}
 .lang button[aria-pressed=true]{background:var(--ink);color:#fff}
 .demo{font-size:.875rem;color:var(--sec);padding:14px 0 0}
 /* hero: big serif claim, before/after switch, the client's phone */
 .stage{display:grid;grid-template-columns:minmax(0,1fr) 400px;gap:72px;align-items:center;padding:40px 0 96px;position:relative}
-.stage::before{content:"SK · UA · RU · EN";position:absolute;left:-6px;right:0;overflow:hidden;bottom:6px;font:italic 400 clamp(4rem,11vw,10rem)/1 var(--serif);color:transparent;-webkit-text-stroke:1px rgba(36,28,22,.1);white-space:nowrap;pointer-events:none;z-index:-1}
 h1{font:400 clamp(2.6rem,5.6vw,5.4rem)/1.02 var(--serif);letter-spacing:-.02em;max-width:13ch}
 .lead{color:var(--sec);font-size:1.1875rem;margin:24px 0 32px;max-width:44ch}
 .ab{position:relative;display:inline-grid;grid-template-columns:1fr 1fr;background:#e6ddcf;border-radius:16px;padding:5px;gap:5px}
@@ -115,10 +114,34 @@ h1{font:400 clamp(2.6rem,5.6vw,5.4rem)/1.02 var(--serif);letter-spacing:-.02em;m
 .cta .wrap.price{margin-top:0;color:inherit}
 .cta .go{flex:none;display:grid;place-items:center;width:200px;height:200px;border-radius:50%;background:var(--tape);color:var(--ink);text-decoration:none;font:600 1.0625rem/1.2 var(--font);text-align:center;padding:24px;transition:background-color .2s var(--ease)}
 .cta .go:hover{background:#f2c94a}
+/* 28.11: first screen «Телефон в центре» (the owner chose C, mockup proof/varianty-2026-11-27/preklad/C.css) */
+main.stage{display:block;padding:0}
+.vh{position:relative;min-height:calc(100svh - 120px);display:grid;grid-template-columns:1fr 340px 1fr;gap:clamp(20px,3vw,48px);align-items:center;padding:0 0 30px}
+.vh .tp{position:absolute;left:calc(50% - 50vw);right:calc(50% - 50vw);top:38%;height:clamp(54px,7vw,104px);background:var(--tape);transform:rotate(-4deg);display:flex;align-items:center;overflow:hidden;font:600 clamp(1.2rem,2.6vw,2.6rem)/1 var(--font);letter-spacing:.3em;white-space:nowrap;color:#241c16;z-index:0;box-shadow:0 10px 30px -10px #241c1655;margin:0}
+.vh>div{position:relative;z-index:1}
+.vh h1,.vh .hb{font:400 clamp(2.4rem,4.5vw,5.2rem)/.98 var(--serif);letter-spacing:-.03em;max-width:none;margin:0}
+.vh .l{align-self:start;padding-top:clamp(10px,6vh,70px)}
+.vh .r{align-self:end;text-align:right;padding-bottom:clamp(10px,4vh,50px)}
+.vh .hb{font-style:italic;color:var(--red)}
+.vh .l p{font:400 1rem/1.5 var(--font);color:var(--sec);max-width:30ch;margin:22px 0 0}
+.vh .r a{display:inline-block;white-space:nowrap;background:var(--red);color:#fff;font:600 1rem/1 var(--font);padding:19px 28px;border-radius:999px;text-decoration:none;margin-top:24px}
+.vh .r small{display:block;font:400 1.4rem/1.2 var(--serif);color:var(--ink);margin-top:14px}
+.vh .phone{margin:0;zoom:.8;transform:rotate(2deg)}
+@media(max-width:900px){
+ .vh{grid-template-columns:1fr;gap:16px;min-height:0}
+ .vh h1,.vh .hb{font-size:11.6vw}
+ .vh .l{padding-top:6px}.vh .l p{display:none}
+ .vh .r{text-align:left;padding:0;order:2}
+ .vh .slot{order:3}
+ .vh .r a{display:block;text-align:center;margin-top:16px}
+ .vh .tp{top:auto;bottom:38%}
+ .vh .phone{zoom:1;max-width:320px;margin:10px auto 0}
+}
 footer{padding:28px 0 52px;font-size:.875rem;color:#b9ab9c;background:#211a15;border-top:1px solid rgba(243,237,227,.12)}
 footer a{color:var(--tape)}.legal{opacity:.8}
 /* LCP: the first-screen lead paints at once (0.01 = invisible), the intro still fades it in */
 .wow-js [data-intro] .lead[data-reveal=self]{opacity:.01}
+.wow-js [data-intro] .hb[data-reveal=self]{opacity:.01}
 .top>a[data-back]{display:inline-flex;align-items:center;gap:8px}.top .me{width:28px;height:28px;border-radius:50%;object-fit:cover;flex:none}
 .chip{display:inline-block;margin:-12px 0 26px;padding:9px 16px;border-radius:14px;background:var(--card);border:1px solid var(--line);font-size:.9375rem;color:var(--ink);box-shadow:0 6px 18px rgba(36,28,22,.06)}.chip b{color:var(--red);white-space:nowrap}.chip span:last-child{white-space:nowrap}
 .steps{padding:100px 0 10px}.steps h2{font:400 clamp(2.4rem,5vw,4.6rem)/1.04 var(--serif);letter-spacing:-.02em}
@@ -148,42 +171,37 @@ footer a{color:var(--tape)}.legal{opacity:.8}
 </head>
 <body class="before" data-progress data-grain>
 <header data-hide-header><div class="wrap">
-  <div class="top"><a data-back href="../"><img class="me" src="../media/davyd-sunset-96.webp" width="96" height="96" alt="Davyd Konstantinov"><span data-i="back"></span></a>
+  <div class="top"><a data-back data-magnetic href="../"><img class="me" src="../media/davyd-sunset-96.webp" width="96" height="96" alt="Davyd Konstantinov"><span data-i="back"></span></a>
     <div class="lang" role="group" aria-label="Language"><button type="button" data-set="sk">SK</button><button type="button" data-set="uk">UA</button><button type="button" data-set="ru">RU</button><button type="button" data-set="en">EN</button></div>
   </div>
 </div></header>
 <div class="wrap">
-  <p class="demo" data-i="demo"></p>
+  <p class="demo" data-reveal="self" data-i="demo"></p>
   <main class="stage">
-    <div data-intro>
-      <h1 data-split data-i="h1"></h1>
-      <p class="lead" data-reveal="self"><span class="ll" data-i="lead"></span><span class="ls" data-i="leads"></span></p>
-      <div data-reveal><p class="chip"><span data-i="ct"></span><span class="cs"> · </span><span class="c2"><b>120 €</b> · <span data-i="cd"></span></span></p></div>
-      <div data-reveal><div class="ab" role="group" data-al="abl">
-        <button type="button" id="bBefore" aria-pressed="true"><span data-i="b0"></span><small data-i="b0s"></small></button>
-        <button type="button" id="bAfter" aria-pressed="false" data-magnetic><span data-i="b1"></span><small data-i="b1s"></small></button>
+    <div class="vh" data-intro>
+      <p class="tp" data-reveal="self" aria-hidden="true">SK · UA · RU · EN · SK · UA · RU · EN · SK · UA · RU · EN · SK · UA · RU · EN · SK · UA · RU · EN · SK · UA · RU · EN · SK · UA · RU · EN · SK · UA · RU · EN · SK · UA · RU · EN · SK · UA · RU · EN · SK · UA · RU · EN · SK · UA · RU · EN · SK · UA · RU · EN · SK · UA · RU · EN · </p>
+      <div class="l"><h1 data-split data-i="vhA"></h1><p data-reveal="self" data-i="vhP"></p></div>
+      <div class="slot" data-reveal>
+      <div class="phone" id="phone"><i class="wipe" aria-hidden="true"></i><div class="scr" id="scr">
+        <div class="bar"><span class="logo">Krajčírstvo Hana</span>
+          <div class="pl" role="group" aria-label="Language"><button type="button" data-p="sk">SK</button><button type="button" data-p="uk">UA</button><button type="button" data-p="ru">RU</button><button type="button" data-p="en">EN</button></div>
+        </div>
+        <img class="ph-img" src="img/p-shop.webp" alt="" width="720" height="405" decoding="async" fetchpriority="low">
+        <div class="ph-hero"><h2 data-q="h"></h2><p data-q="s"></p></div>
+        <div class="ph-sec"><h3 data-q="ph"></h3>
+          <div class="row"><span data-q="r1"></span><b>8 €</b></div>
+          <div class="row"><span data-q="r2"></span><b>12 €</b></div>
+          <div class="row"><span data-q="r3"></span><b data-q="r3v"></b></div>
+          <div class="row"><span data-q="r4"></span><b data-q="r4v"></b></div>
+        </div>
+        <div class="ph-sec"><h3 data-q="wh"></h3><p data-q="hrs"></p><p>Záhradnícka 18, Bratislava</p><p class="call" data-q="call"></p></div>
+        <div class="ph-sec form"><h3 data-q="fh"></h3>
+          <form class="pf" id="pf" novalidate><input name="n" data-qp="fn" autocomplete="off"><input name="t" data-qp="ft" autocomplete="off"><input name="w" data-qp="fw" autocomplete="off"><button data-q="fb"></button><p class="sent" data-q="ok"></p></form>
+        </div>
       </div></div>
-      <ul class="notes" id="notes" aria-live="polite"></ul>
-      <p class="acts"><a class="btnp" data-wa href="https://wa.me/421910392871" target="_blank" rel="noopener" data-magnetic><span data-i="go"></span></a><small data-i="gon"></small></p>
-      <p class="price"><span data-i="pr"></span> <a data-back href="../" data-i="prl"></a></p>
+      </div>
+      <div class="r"><p class="hb" data-reveal="self" data-i="vhB"></p><a data-wa data-magnetic data-reveal="self" href="https://wa.me/421910392871" target="_blank" rel="noopener"><span data-i="go"></span> <span aria-hidden="true">→</span></a><small data-reveal="self"><span>120 €</span> · <span data-i="cd"></span></small></div>
     </div>
-    <div class="phone" id="phone" data-reveal="self"><i class="wipe" aria-hidden="true"></i><div class="scr" id="scr">
-      <div class="bar"><span class="logo">Krajčírstvo Hana</span>
-        <div class="pl" role="group" aria-label="Language"><button type="button" data-p="sk">SK</button><button type="button" data-p="uk">UA</button><button type="button" data-p="ru">RU</button><button type="button" data-p="en">EN</button></div>
-      </div>
-      <img class="ph-img" src="img/p-shop.webp" alt="" width="720" height="405" decoding="async" fetchpriority="low">
-      <div class="ph-hero"><h2 data-q="h"></h2><p data-q="s"></p></div>
-      <div class="ph-sec"><h3 data-q="ph"></h3>
-        <div class="row"><span data-q="r1"></span><b>8 €</b></div>
-        <div class="row"><span data-q="r2"></span><b>12 €</b></div>
-        <div class="row"><span data-q="r3"></span><b data-q="r3v"></b></div>
-        <div class="row"><span data-q="r4"></span><b data-q="r4v"></b></div>
-      </div>
-      <div class="ph-sec"><h3 data-q="wh"></h3><p data-q="hrs"></p><p>Záhradnícka 18, Bratislava</p><p class="call" data-q="call"></p></div>
-      <div class="ph-sec form"><h3 data-q="fh"></h3>
-        <form class="pf" id="pf" novalidate><input name="n" data-qp="fn" autocomplete="off"><input name="t" data-qp="ft" autocomplete="off"><input name="w" data-qp="fw" autocomplete="off"><button data-q="fb"></button><p class="sent" data-q="ok"></p></form>
-      </div>
-    </div></div>
   </main>
 </div>
 
@@ -259,12 +277,12 @@ Object.assign(T.uk,{"ct": "Українська або російська вер
 Object.assign(T.ru,{"ct": "Украинская или русская версия страницы", "cd": "3 дня", "sth": "Как это проходит", "s1t": "Вы пишете", "s1p": "Присылаете ссылку на свой сайт в WhatsApp или на e-mail. Я отвечаю с ценой и сроком.", "s2t": "Перевожу", "s2p": "За 3 дня перевод уже на вашем сайте, вместе с переключателем языков.", "s3t": "Дорабатываю", "s3p": "Вы смотрите и пишете замечания. Я их исправляю.", "s4t": "Вы платите", "s4p": "Только когда перевод вас устраивает.", "q5": "Есть ежемесячная плата?", "a5": "Нет. За перевод вы платите один раз, ежемесячных платежей нет.", "dh": "Сотрудничество официально, по договору dohoda о выполнении работы."});
 Object.assign(T.en,{"ct": "Ukrainian or Russian version of a page", "cd": "3 days", "sth": "How it works", "s1t": "You write", "s1p": "Send me a link to your website via WhatsApp or e-mail. I reply with the price and the date.", "s2t": "I translate", "s2p": "Within 3 days the translation is on your website, with a language switch.", "s3t": "I polish", "s3p": "You take a look and send your comments. I fix them.", "s4t": "You pay", "s4p": "Only when you're happy with the translation.", "q5": "Are there monthly fees?", "a5": "No. You pay once for the translation, there are no monthly fees.", "dh": "Official cooperation under a dohoda (agreement on work performed)."});
 Object.assign(T.sk,{"go": "Poslať odkaz na svoj web", "gon": "Cez WhatsApp. Platíte, až keď ste s prekladom spokojní.", "fin": "Pošlite odkaz na svoj web. Ozvem sa s cenou a termínom.", "gos": "Poslať odkaz", "wat": "Dobrý deň, mám záujem o ukrajinskú alebo ruskú verziu stránky. Môj web: ", "leads": "Prepínajte medzi „Pred“ a „Po“ a sledujte, čo sa mení na displeji."});Object.assign(T.uk,{"go": "Надіслати посилання на свій сайт", "gon": "У WhatsApp. Платите, лише коли переклад вас влаштовує.", "fin": "Надішліть посилання на свій сайт. Я відповім із ціною і терміном.", "gos": "Надіслати посилання", "wat": "Добрий день, мене цікавить українська або російська версія сторінки. Мій сайт: ", "leads": "Перемкніть «До» і «Після» та подивіться на телефон."});Object.assign(T.ru,{"go": "Прислать ссылку на свой сайт", "gon": "В WhatsApp. Платите, только когда перевод вас устраивает.", "fin": "Пришлите ссылку на свой сайт. Я отвечу с ценой и сроком.", "gos": "Прислать ссылку", "wat": "Здравствуйте, меня интересует украинская или русская версия страницы. Мой сайт: ", "leads": "Переключите «До» и «После» и посмотрите на телефон."});Object.assign(T.en,{"go": "Send a link to your website", "gon": "Via WhatsApp. You pay only when you're happy with the translation.", "fin": "Send me a link to your website. I'll reply with the price and the delivery date.", "gos": "Send the link", "wat": "Hello, I'm interested in a Ukrainian or Russian version of my website. My site: ", "leads": "Switch between Before and After and watch the phone."});
-let cur='sk',after=false,pcur='sk',swapT=0,first=true;
+Object.assign(T.sk,{"vhA": "Rovnaká stránka,", "vhB": "ktorej rozumie viac zákazníkov", "vhP": "Takto vyzerá služba „Ukrajinská alebo ruská verzia stránky“. Prepínajte jazyky priamo v telefóne."});
+Object.assign(T.uk,{"vhA": "Та сама сторінка,", "vhB": "яку розуміє більше клієнтів", "vhP": "Ось як виглядає послуга «Українська або російська версія сторінки». Перемикайте мови прямо в телефоні."});
+Object.assign(T.ru,{"vhA": "Та же страница,", "vhB": "которую понимает больше клиентов", "vhP": "Так выглядит услуга «Украинская или русская версия страницы». Переключайте языки прямо в телефоне."});
+Object.assign(T.en,{"vhA": "The same page,", "vhB": "understood by more customers", "vhP": "This is what the “Ukrainian or Russian version of a page” service looks like. Switch languages right in the phone."});
+let cur='sk',after=true,pcur='sk',swapT=0,first=true;
 const $=id=>document.getElementById(id),pf=$('pf');
-/* phone: the Pred/Po switch sits right above the mock-up, the notes go under it */
-{const mq=matchMedia('(max-width:860px)'),stg=document.querySelector('.stage'),intr=stg.querySelector('[data-intro]'),nt=$('notes'),prc=intr.querySelector('.price'),act=intr.querySelector('.acts');
- const chw=intr.querySelector('.chip').parentNode;
- const place=()=>{if(mq.matches){chw.after(act);stg.append(nt,prc)}else intr.append(nt,act,prc)};place();mq.addEventListener('change',place)}
 function fill(l){
   const d=P[l];
   document.querySelectorAll('[data-q]').forEach(e=>e.textContent=d[e.dataset.q]);
@@ -283,11 +301,8 @@ function phone(l,flash){
 }
 function mode(a){
   after=a;document.body.classList.toggle('after',a);document.body.classList.toggle('before',!a);
-  $('bBefore').setAttribute('aria-pressed',!a);$('bAfter').setAttribute('aria-pressed',a);
-  $('notes').replaceChildren(...T[cur][a?'n1':'n0'].map(t=>{const li=document.createElement('li');li.textContent=t;return li}));
   pf.classList.remove('done');phone(a?cur:'sk',true);
 }
-$('bBefore').onclick=()=>mode(false);$('bAfter').onclick=()=>mode(true);
 document.querySelectorAll('[data-p]').forEach(b=>b.onclick=()=>{pf.classList.remove('done');phone(b.dataset.p,true)});
 pf.addEventListener('submit',e=>{e.preventDefault();pf.classList.add('done');pf.reset()});
 /* the same client page in all four languages: tape headlines and four mini pages, built from P */

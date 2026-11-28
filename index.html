@@ -24,7 +24,9 @@
 <link rel="preload" href="fonts/inter-tight-latin-500-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="fonts/inter-tight-sk-500.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="fonts/inter-tight-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
-<script>try{var L=new URLSearchParams(location.search).get('lang')||localStorage.lang||navigator.language||'';if(/^(ru|uk)/.test(L))['500','400'].forEach(function(w){var f=document.createElement('link');f.rel='preload';f.as='font';f.type='font/woff2';f.crossOrigin='';f.href='fonts/inter-tight-cyrillic-'+w+'-normal.woff2';document.head.appendChild(f)})}catch(e){}/* ru/uk: the Cyrillic faces are fetched with the page */</script>
+<link rel="preload" href="fonts/unbounded-latin-500.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/unbounded-sk-500.woff2" as="font" type="font/woff2" crossorigin>
+<script>try{var L=new URLSearchParams(location.search).get('lang')||localStorage.lang||navigator.language||'';if(/^(ru|uk)/.test(L))['500','400','u'].forEach(function(w){var f=document.createElement('link');f.rel='preload';f.as='font';f.type='font/woff2';f.crossOrigin='';f.href=w=='u'?'fonts/unbounded-cyrillic-500.woff2':'fonts/inter-tight-cyrillic-'+w+'-normal.woff2';document.head.appendChild(f)})}catch(e){}/* ru/uk: the Cyrillic faces are fetched with the page */</script>
 <script>document.documentElement.classList.add('wow-js');try{sessionStorage.wowL&&document.documentElement.classList.add('wow-noload')}catch(e){};window.__wowT=setTimeout(()=>document.documentElement.classList.add('wow-safe'),3000)</script>
 <link rel="stylesheet" href="lib/wow.css?v=2">
 <style>
@@ -620,6 +622,50 @@ footer .sig i{display:inline-block;font-style:normal}
 <link rel="stylesheet" href="lib/novy.css">
 <link rel="stylesheet" href="lib/v2.css?v=3">
 <style>
+/* 28.11: first screen «Плакат» (the owner chose B, mockup proof/varianty-2026-11-27/main/B.css). Unbounded: one family, three files by letters */
+@font-face{font-family:"Unbounded";src:url(fonts/unbounded-latin-500.woff2) format("woff2");font-weight:500;font-display:block;unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+@font-face{font-family:"Unbounded";src:url(fonts/unbounded-sk-500.woff2) format("woff2");font-weight:500;font-display:block;unicode-range:U+0104-0107,U+010C-010F,U+0118-011B,U+0139-013E,U+0141-0144,U+0147-0148,U+0150-0151,U+0154-0155,U+0158-0161,U+0164-0165,U+016E-0171,U+0179-017E}
+@font-face{font-family:"Unbounded";src:url(fonts/unbounded-cyrillic-500.woff2) format("woff2");font-weight:500;font-display:block;unicode-range:U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116}
+.stage>.hero{display:block;padding:0}
+.vh{padding:clamp(14px,2vw,34px) 0 clamp(20px,2.4vw,40px);min-height:calc(100svh - 160px);display:flex;flex-direction:column}
+.vh .k{font:500 12px/1 var(--mono);letter-spacing:.16em;text-transform:uppercase;color:#9c9eae;display:flex;justify-content:space-between;border-bottom:1px solid #ffffff1f;padding-bottom:14px;margin:0}
+.vh h1{font:500 clamp(40px,7.5vw,116px)/.95 "Unbounded",var(--display)!important;letter-spacing:-.055em!important;margin:clamp(18px,2.6vw,44px) 0 0!important;color:#f2f2f6}
+.vh h1>span:first-child{display:inline;white-space:pre-line}
+@media(min-width:901px){html:lang(ru) .vh h1,html:lang(uk) .vh h1{font-size:clamp(40px,5.6vw,88px)!important}}   /* Cyrillic Unbounded is wider: keeps the card on the first screen */
+.vh h1 b{font-weight:500;color:#f6df45}
+.vh .h2{font:500 clamp(20px,2.5vw,40px)/1.05 "Unbounded",var(--display);letter-spacing:-.04em;color:#8f97ff;margin:clamp(12px,1.4vw,22px) 0 0}
+.vh .row{margin-top:auto;padding-top:clamp(22px,3vw,48px);display:grid;grid-template-columns:minmax(0,1fr) auto minmax(0,360px);gap:clamp(20px,4vw,72px);align-items:end}
+.vh .lead{font-size:clamp(16px,1.3vw,20px);line-height:1.4;color:#b9bbc9;max-width:38ch;margin:0 0 20px}
+.vh .cta{display:flex;gap:10px;flex-wrap:wrap;margin:0}
+.vh .cta a{display:inline-flex;align-items:center;gap:8px;height:56px;padding:0 26px;border-radius:999px;font:500 16px/1 var(--sans);text-decoration:none;border:1px solid #ffffff33;color:#fff}
+.vh .cta a.m{background:#f6df45;color:#14151c;border-color:#f6df45}
+.vh .price{font:500 13px/1.5 var(--mono);color:#9c9eae;text-transform:uppercase;letter-spacing:.08em;margin:0}
+.vh .price b{display:block;font:500 clamp(44px,5vw,84px)/.9 "Unbounded",var(--display);letter-spacing:-.05em;color:#f2f2f6;margin:6px 0}
+.vh-demo{position:relative}
+.vh-demo{isolation:isolate}.vh-demo .glow{right:-18%;top:-30%;width:clamp(300px,52vw,900px)}@media(max-width:900px){.vh-demo .glow{right:8%;width:280px}}
+.vh-demo .ld-client{display:block;border-radius:22px;transform:rotate(2deg);box-shadow:0 40px 90px -30px #2b35c4;margin:0}
+/* the owner's calendar stays in the page for the demo script and the flying plate, but is not drawn: it sits invisible under the card */
+.vh-demo .ld-owner{position:absolute;inset:0;margin:0;padding:0;opacity:0;pointer-events:none;overflow:hidden}
+@media(max-width:900px){
+ .vh{min-height:0;padding-top:10px}
+ .vh .k span:last-child{display:none}
+ .vh h1{font-size:11.4vw!important;margin-top:18px!important}
+ .vh .h2{font-size:5.6vw}
+ .vh .row{grid-template-columns:1fr;gap:22px;padding-top:22px}
+ .vh .cta a{flex:1;justify-content:center;height:54px;padding:0 10px;font-size:15px;white-space:nowrap}
+ .vh .price b{font-size:52px}
+ .vh-demo .ld-client{transform:none}
+}
+/* the first screen plays as before: lines rise, the card after the curtain */
+@media(prefers-reduced-motion:no-preference){
+ .vh>*{animation:rise .9s cubic-bezier(.2,.8,.2,1) both}
+ .vh>h1{animation-delay:.06s}.vh>.h2{animation-delay:.14s}.vh>.row{animation-delay:.28s}
+ html:not(.wow-noload) .vh>*{animation-delay:1.2s}
+ html:not(.wow-noload) .vh>h1{animation-delay:1.26s}html:not(.wow-noload) .vh>.h2{animation-delay:1.34s}html:not(.wow-noload) .vh>.row{animation-delay:1.46s}
+ html:not(.wow-noload) .vh-demo .ld-client{animation-delay:1.45s}
+}
+</style>
+<style>
 /* ===== multi-page: doors, page hero, next link, page transition (build_site.py) ===== */
 .doors{margin-top:clamp(64px,8vw,180px)}
 .drs{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(4,1fr);gap:clamp(12px,1.6vw,32px)}
@@ -695,28 +741,21 @@ html.pt-in .curtain{display:none}
 </dialog>
 <script>(()=>{const m=document.getElementById('nv-menu');m.addEventListener('click',e=>{if(e.target.closest('a'))m.close()},true)})()/* a menu link closes the menu first, then does its own job */</script>
 <main>
-<div class="stage"><div class="v2-hours" aria-hidden="true"><span>9:00</span><span>10:00</span><span>11:00</span><span>12:00</span><span>13:00</span><span>14:00</span><span>15:00</span><span>16:00</span><span>17:00</span><span>18:00</span><span>19:00</span><span>20:00</span></div>
+<div class="stage">
 <div class="hero">
-  <div class="intro">
-    <p class="location" data-i="location">Bratislava, Slovensko</p>
-    <h1><span data-i="h1">Zákazník sa objedná sám.</span> <em data-i="h1end">Rezerváciu uvidíte v mobile.</em></h1>
-    <p class="lead" data-i="lead">Pre salóny, autoservisy a lektorov robím weby s online rezerváciou a dopytmi. V štyroch jazykoch.</p>
-    <script>/* 25.11: the first screen gets its language before the first paint, so the H1 (LCP) is not drawn twice */try{var H={"en": ["Customers book themselves.", "You see it on your phone.", "I build websites with online booking and enquiry forms for salons, car workshops and tutors. In four languages."], "ru": ["Клиент записывается сам.", "Вы видите запись в телефоне.", "Делаю сайты с онлайн-записью и заявками для салонов, автосервисов и репетиторов. На четырёх языках."], "uk": ["Клієнт записується сам.", "Ви бачите запис у телефоні.", "Роблю сайти з онлайн-записом і заявками для салонів, автосервісів і репетиторів. Чотирма мовами."]},L=(new URLSearchParams(location.search).get('lang')||localStorage.lang||navigator.language||'').slice(0,2),h=H[L];if(h)['h1','h1end','lead'].forEach(function(k,j){document.querySelector('[data-i="'+k+'"]').textContent=h[j]})}catch(e){}</script>
-    <div class="btns job">
-      <a class="btn main" href="kontakt.html#qf" data-write data-i="mail">Napísať e-mail</a>
-      <a class="btn" href="o-mne.html#cv" data-i="cvb">Životopis (PDF)</a>
-      <a class="btn" href="support-samples.html" data-i="smp">Ukážky práce (EN)</a>
-    </div>
-    <p class="hero-price-line biz" data-i="hpShort">Web od 250 €, s rezervačným systémom od 350 €</p>
-    <ul class="hero-prices biz"><li data-i="hp1">Jednoduchý web od 250 €</li><li data-i="hp2">S online rezerváciou od 350 €</li></ul>
-    <div class="btns biz">
-      <a class="btn main arrow" href="kontakt.html#qf" data-write data-magnetic data-roll><span data-i="cta">Zistiť cenu a termín</span></a>
-      <a class="btn nv-wa" href="https://wa.me/421910392871" data-wa><span data-i="waName">WhatsApp</span> <span class="nv-num">+421 910 392 871</span></a>
-    </div>
-    <div class="hero-risk biz"><img src="media/davyd-sunset-96.webp" width="96" height="96" data-alt="meAlt" alt="Davyd Konstantinov"><p data-i="heroRisk">Najprv uvidíte hotový web. Platíte, až keď ste spokojní.</p></div>
-  </div>
-  <div class="live-demo biz" id="live-demo"><i class="glow" data-speed="0.8" aria-hidden="true"></i>
-    <p class="ld-cap" data-i="ldCap">Ukážka: rezervácia pre váš podnik</p>
+  <div class="vh">
+    <p class="k"><span data-i="vhK1">Davyd Konstantinov · Bratislava</span><span data-i="vhK2">Weby s online rezerváciou · SK / EN / RU / UA</span></p>
+    <h1><span data-i="vhH1a">Zákazník
+sa objedná</span> <b data-i="vhH1b">sám.</b></h1>
+    <p class="h2" data-i="h1end">Rezerváciu uvidíte v mobile.</p>
+    <script>/* 28.11: the first screen gets its language before the first paint, so the H1 (LCP) is not drawn twice */try{var H={"en":["Customers\nbook","themselves.","You see it on your phone.","I build websites with online booking and enquiry forms for salons, car workshops and tutors. You see the finished site first. You pay only when you're happy."],"ru":["Клиент\nзаписывается","сам.","Вы видите запись в телефоне.","Делаю сайты с онлайн-записью и заявками для салонов, автосервисов и репетиторов. Сначала вы видите готовый сайт. Платите, только когда всё нравится."],"uk":["Клієнт\nзаписується","сам.","Ви бачите запис у телефоні.","Роблю сайти з онлайн-записом і заявками для салонів, автосервісів і репетиторів. Спочатку ви бачите готовий сайт. Платите, лише коли все подобається."]},L=(new URLSearchParams(location.search).get('lang')||localStorage.lang||navigator.language||'').slice(0,2),h=H[L];if(h)['vhH1a','vhH1b','h1end','vhLead'].forEach(function(k,j){document.querySelector('[data-i="'+k+'"]').textContent=h[j]})}catch(e){}</script>
+    <div class="row">
+      <div>
+        <p class="lead" data-i="vhLead">Pre salóny, autoservisy a lektorov robím weby s online rezerváciou a dopytmi. Najprv uvidíte hotový web. Platíte, až keď ste spokojní.</p>
+        <p class="cta"><a class="m" href="kontakt.html#qf" data-write data-magnetic data-roll><span data-i="cta">Zistiť cenu a termín</span><span aria-hidden="true">→</span></a><a href="https://wa.me/421910392871" data-wa data-i="waName">WhatsApp</a></p>
+      </div>
+      <p class="price"><span data-i="vhPa">Web od</span><b data-i="vhPn">250 €</b><span data-i="vhPb">s rezerváciou od 350 €</span></p>
+      <div class="vh-demo" id="live-demo"><i class="glow" data-speed="0.8" aria-hidden="true"></i>
     <div class="ld-card ld-client">
       <small class="ld-tag" data-i="ldC">Zákazník na webe</small>
       <b data-i="ldSvc">Manikúra, 45 min</b>
@@ -741,19 +780,10 @@ html.pt-in .curtain{display:none}
         <div class="ld-ghost" aria-hidden="true" style="--s:18.5;--d:.75"></div>
       </div>
     </div>
-    <a class="ld-try outward" href="studio-bella/" data-ex="studio-bella/" data-i="site2">Vyskúšať web salónu</a>
+      </div>
+    </div>
   </div>
   <script>(()=>{const c=document.querySelector('.curtain'),d=document.getElementById('live-demo');if(!c||!d)return;const m=()=>{const r=d.getBoundingClientRect(),E=document.documentElement,W=E.clientWidth,H=E.clientHeight;c.style.setProperty('--cu-end',`${r.top}px ${W-r.right}px ${H-r.bottom}px ${r.left}px`)};m();document.fonts&&document.fonts.ready.then(m)})()/* opener frame lands exactly on the dark card */</script>
-  <div class="chat job" aria-hidden="true">
-    <div class="top"><span class="av">SB</span><div><b>Studio Bella</b><span data-i="c0">Rezervačný bot</span></div></div>
-    <div class="msgs">
-      <div class="b me"><span data-i="c1">Ahoj! Strih zajtra po piatej?</span><small>17:02</small></div>
-      <div class="b bot"><span data-i="c2">Voľné: 17:00, 18:30, 19:00. Ktorý termín?</span><small>17:02</small></div>
-      <div class="b me"><span data-i="c3">18:30</span><small>17:03</small></div>
-      <div class="b bot"><span data-i="c4">Zarezervované. Pripomeniem 2 hodiny vopred.</span><small>17:03</small></div>
-    </div>
-    <div class="note" data-i="cn">Ukážka z môjho projektu, nie skutočná konverzácia</div>
-  </div>
 </div>
 <div class="ribbon biz" data-marquee="46"><div class="rb-track">
   <ul class="facts"><li data-i="priceFact">Hotové za 5–10 dní</li><li data-i="feeFact">Bez mesačných poplatkov</li><li data-i="rb1">Úpravy počas prvého mesiaca zadarmo</li><li data-i="rb2">Stránka v štyroch jazykoch</li><li data-i="f3">Na dohodu o vykonaní práce</li></ul>
@@ -1894,6 +1924,21 @@ const HERO = {
   uk: {h1: "Клієнт записується сам.", h1end: "Ви бачите запис у телефоні.", lead: "Роблю сайти з онлайн-записом і заявками для салонів, автосервісів і репетиторів. Чотирма мовами."}
 };
 for (const l in HERO) Object.assign(T[l], HERO[l]);
+const VH = {   // 28.11: first screen «Плакат» (the owner chose B); the texts are the existing hero lines, the price from hpShort
+  sk: {vhK1: "Davyd Konstantinov · Bratislava", vhK2: "Weby s online rezerváciou · SK / EN / RU / UA", vhH1a: "Zákazník\nsa objedná", vhH1b: "sám.",
+    vhLead: "Pre salóny, autoservisy a lektorov robím weby s online rezerváciou a dopytmi. Najprv uvidíte hotový web. Platíte, až keď ste spokojní.",
+    vhPa: "Web od", vhPn: "250 €", vhPb: "s rezerváciou od 350 €"},
+  en: {vhK1: "Davyd Konstantinov · Bratislava", vhK2: "Websites with online booking · SK / EN / RU / UA", vhH1a: "Customers\nbook", vhH1b: "themselves.",
+    vhLead: "I build websites with online booking and enquiry forms for salons, car workshops and tutors. You see the finished site first. You pay only when you're happy.",
+    vhPa: "Website from", vhPn: "€250", vhPb: "with booking from €350"},
+  ru: {vhK1: "Davyd Konstantinov · Братислава", vhK2: "Сайты с онлайн-записью · SK / EN / RU / UA", vhH1a: "Клиент\nзаписывается", vhH1b: "сам.",
+    vhLead: "Делаю сайты с онлайн-записью и заявками для салонов, автосервисов и репетиторов. Сначала вы видите готовый сайт. Платите, только когда всё нравится.",
+    vhPa: "Сайт от", vhPn: "250 €", vhPb: "с записью от 350 €"},
+  uk: {vhK1: "Davyd Konstantinov · Братислава", vhK2: "Сайти з онлайн-записом · SK / EN / RU / UA", vhH1a: "Клієнт\nзаписується", vhH1b: "сам.",
+    vhLead: "Роблю сайти з онлайн-записом і заявками для салонів, автосервісів і репетиторів. Спочатку ви бачите готовий сайт. Платите, лише коли все подобається.",
+    vhPa: "Сайт від", vhPn: "250 €", vhPb: "із записом від 350 €"}
+};
+for (const l in VH) Object.assign(T[l], VH[l]);
 const translations = [...document.querySelectorAll('[data-i]')];
 const form = document.getElementById('qf');
 const businessField = document.getElementById('qb');
